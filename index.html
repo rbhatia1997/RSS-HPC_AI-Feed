@@ -5,7 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AWS HPC Blog Display</title>
     <style>
-      /* Add some styling here if needed */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      #aws-blog-content {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-top: 1rem;
+      }
+
+      h2 a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e1e1e1;
+        margin: 2rem 0;
+      }
     </style>
   </head>
 
@@ -32,7 +66,16 @@
             const description =
               item.getElementsByTagName("description")[0].textContent;
 
+            let imageURL = "";
+            const mediaContent = item.getElementsByTagName("media:content")[0];
+            if (mediaContent) {
+              imageURL = mediaContent.getAttribute("url") || "";
+            }
+
             htmlContent += `<h2><a href="${link}" target="_blank">${title}</a></h2>`;
+            if (imageURL) {
+              htmlContent += `<img src="${imageURL}" alt="${title}" />`;
+            }
             htmlContent += `<div>${description}</div><hr>`;
           }
 
