@@ -3,57 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RSS Feed Display</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>AWS HPC Blog Display</title>
     <style>
-      #rss-feed {
-        width: 80%;
-        margin: 0 auto;
-        font-family: Arial, sans-serif;
-      }
-
-      #rss-feed h2 {
-        color: #333;
-      }
-
-      #rss-feed a {
-        text-decoration: none;
-      }
-
-      #rss-feed p {
-        color: #666;
-      }
+      /* Add some styling here if needed */
     </style>
   </head>
 
   <body>
-    <div id="rss-feed">
-      <!-- RSS Feed items will be displayed here -->
+    <div id="aws-blog-content">
+      <!-- AWS blog content will be displayed here -->
     </div>
 
     <script>
-      fetch(
-        "https://api.allorigins.win/get?url=http://fetchrss.com/rss/64f1f2013f333c4a7675d53264f1f1e0fa73846c8e42e4f2.atom"
-      )
-        .then((response) => response.json())
+      const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+      const RSS_FEED_URL = "https://aws.amazon.com/blogs/hpc/feed/";
+
+      fetch(`${CORS_PROXY}${RSS_FEED_URL}`)
+        .then((response) => response.text())
         .then((data) => {
           const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(data.contents, "text/xml");
-          let html = "";
-          const items = xmlDoc.getElementsByTagName("entry");
+          const xmlDoc = parser.parseFromString(data, "text/xml");
+          let htmlContent = "";
+
+          const items = xmlDoc.getElementsByTagName("item");
           for (let item of items) {
             const title = item.getElementsByTagName("title")[0].textContent;
-            const link = item
-              .getElementsByTagName("link")[0]
-              .getAttribute("href");
+            const link = item.getElementsByTagName("link")[0].textContent;
             const description =
-              item.getElementsByTagName("content")[0].textContent; // Changed 'summary' to 'content'
-            html += `<h2><a href="${link}" target="_blank">${title}</a></h2>`;
-            html += `<p>${description}</p><hr>`;
+              item.getElementsByTagName("description")[0].textContent;
+
+            htmlContent += `<h2><a href="${link}" target="_blank">${title}</a></h2>`;
+            htmlContent += `<div>${description}</div><hr>`;
           }
-          document.getElementById("rss-feed").innerHTML = html;
+
+          document.getElementById("aws-blog-content").innerHTML = htmlContent;
         })
-        .catch((error) => console.error("Error fetching RSS:", error));
+        .catch((error) =>
+          console.error("Error fetching AWS blog content:", error)
+        );
     </script>
   </body>
 </html>
