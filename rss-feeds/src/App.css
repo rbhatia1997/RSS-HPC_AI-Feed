@@ -33,3 +33,8 @@ hr {
   border-top: 1px solid #e1e1e1;
   margin: 2rem 0;
 }
+
+img.blog-image {
+  max-width: 100%; /* Ensures the image does not exceed the container's width */
+  height: auto; /* Maintains the image's aspect ratio */
+}
