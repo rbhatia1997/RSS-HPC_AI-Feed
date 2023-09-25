@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import NvidiaFeed from './NvidiaFeed';
 
 const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/";
 const RSS_FEED_URL = "https://aws.amazon.com/blogs/hpc/feed/";
 const FETCH_DELAY = 600000;  // 10 minutes in milliseconds
 
 function App() {
+    const [feedType, setFeedType] = useState('aws'); // This will be either 'aws' or 'nvidia'
     const [blogData, setBlogData] = useState([]);
 
     useEffect(() => {
@@ -49,17 +51,28 @@ function App() {
     }, []);
 
     return (
-        <div id="aws-blog-content">
-            {blogData.map((blog, index) => (
-                <React.Fragment key={index}>
-                    <h2><a href={blog.link} target="_blank" rel="noopener noreferrer">{blog.title}</a></h2>
-                    {blog.imageURL && <img src={blog.imageURL} alt={blog.title} />}
-                    <div dangerouslySetInnerHTML={{ __html: blog.description }}></div>
-                    <hr />
-                </React.Fragment>
-            ))}
-        </div>
-    );
+      <div>
+          <button onClick={() => setFeedType(feedType === 'aws' ? 'nvidia' : 'aws')}>
+              Switch to {feedType === 'aws' ? 'NVIDIA' : 'AWS'} Feed
+          </button>
+
+          {feedType === 'aws' 
+           ? (
+               <div id="aws-blog-content">
+                   {blogData.map((blog, index) => (
+                       <React.Fragment key={index}>
+                           <h2><a href={blog.link} target="_blank" rel="noopener noreferrer">{blog.title}</a></h2>
+                           {blog.imageURL && <img src={blog.imageURL} alt={blog.title} />}
+                           <div dangerouslySetInnerHTML={{ __html: blog.description }}></div>
+                           <hr />
+                       </React.Fragment>
+                   ))}
+               </div>
+             )
+           : <NvidiaFeed />
+          }
+      </div>
+  );
 }
 
 export default App;
