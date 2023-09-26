@@ -1,15 +1,11 @@
-// # For deployment: npm run deploy
-
-
-
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import './App.css';
 import NvidiaFeed from './NvidiaFeed';
+import axios from 'axios';
 
-const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/";
-const RSS_FEED_URL = "https://aws.amazon.com/blogs/hpc/feed/";
-const FETCH_DELAY = 600000;  // 10 minutes in milliseconds
+
+const RSS_FEED_URL = "/aws-feed.xml";
+const RSS_FEED_FILE = feedType => feedType === 'aws' ? "/aws-feed.xml" : "/nvidia-feed.xml";
 
 function App() {
     const [feedType, setFeedType] = useState('aws'); // This will be either 'aws' or 'nvidia'
@@ -17,7 +13,7 @@ function App() {
 
     useEffect(() => {
         const fetchData = () => {
-            axios.get(`${CORS_PROXY}${RSS_FEED_URL}`)
+            axios.get(RSS_FEED_FILE(feedType))
                 .then((response) => {
                     const parser = new DOMParser();
                     const xmlDoc = parser.parseFromString(response.data, "text/xml");
@@ -32,7 +28,6 @@ function App() {
                         let imageURL = "";
                         const encodedContent = item.getElementsByTagName("content:encoded")[0]?.textContent;
                         if (encodedContent) {
-                            // Parsing the encoded content to extract the image URL
                             const contentDoc = parser.parseFromString(encodedContent, "text/html");
                             const imgElement = contentDoc.querySelector('img');
                             if (imgElement) {
@@ -45,14 +40,11 @@ function App() {
 
                     setBlogData(blogs);
                 })
-                .catch((error) => console.error("Error fetching AWS blog content:", error));
+                .catch((error) => console.error("Error fetching blog content:", error));
         };
 
-        fetchData();  // Call immediately on first load
-        const intervalId = setInterval(fetchData, FETCH_DELAY);
-
-        return () => clearInterval(intervalId); // Cleanup when component unmounts
-    }, []);
+        fetchData(); 
+    }, [feedType]);  // This dependency ensures the fetchData re-runs when feedType changes
 
     return (
       <div>

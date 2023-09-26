@@ -1,19 +1,14 @@
-// NvidiaFeed.js
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
-const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/";
-const NVIDIA_FEED_URL_1 = "https://feeds.feedburner.com/nvidiablog";
-const NVIDIA_FEED_URL_2 = "https://nvidianews.nvidia.com/releases.xml";
-const FETCH_DELAY = 600000;  // 10 minutes in milliseconds
+const NVIDIA_FEED_URL_1 = "/nvidia-feed1.xml";
+const NVIDIA_FEED_URL_2 = "/nvidia-feed2.xml";
 
 function NvidiaFeed() {
     const [blogData, setBlogData] = useState([]);
 
     useEffect(() => {
         const fetchData = (url) => {
-            axios.get(`${CORS_PROXY}${url}`)
+            axios.get(url)
                 .then((response) => {
                     const parser = new DOMParser();
                     const xmlDoc = parser.parseFromString(response.data, "text/xml");
@@ -25,8 +20,6 @@ function NvidiaFeed() {
                         const link = item.getElementsByTagName("link")[0]?.textContent;
                         const description = item.getElementsByTagName("description")[0]?.textContent;
 
-                        // ... you can add image extraction similar to AWS feed here...
-
                         blogs.push({ title, link, description });
                     }
 
@@ -36,14 +29,7 @@ function NvidiaFeed() {
         };
 
         fetchData(NVIDIA_FEED_URL_1);
-        fetchData(NVIDIA_FEED_URL_2);
-
-        const intervalId = setInterval(() => {
-            fetchData(NVIDIA_FEED_URL_1);
-            fetchData(NVIDIA_FEED_URL_2);
-        }, FETCH_DELAY);
-
-        return () => clearInterval(intervalId); // Cleanup when component unmounts
+        fetchData(NVIDIA_FEED_URL_2);        
     }, []);
 
     return (
