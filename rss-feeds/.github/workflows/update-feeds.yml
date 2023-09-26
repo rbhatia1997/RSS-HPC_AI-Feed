@@ -1,0 +1,30 @@
+name: Update RSS Feeds
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # This runs the action every 6 hours. Adjust as needed.
+
+jobs:
+  fetch-feeds:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Fetch AWS Feed
+      run: curl "https://aws.amazon.com/blogs/hpc/feed/" > rss-feeds/public/aws-feed.xml
+
+    - name: Fetch NVIDIA Feed 1
+      run: curl "https://feeds.feedburner.com/nvidiablog" > rss-feeds/public/nvidia-feed1.xml
+
+    - name: Fetch NVIDIA Feed 2
+      run: curl "https://nvidianews.nvidia.com/releases.xml" > rss-feeds/public/nvidia-feed2.xml
+
+    - name: Commit and Push
+      run: |
+        git config user.name "GitHub Action"
+        git config user.email "action@github.com"
+        git add rss-feeds/public/*.xml
+        git commit -m "Updated RSS Feeds" || echo "No changes to commit"
+        git push
