@@ -11,7 +11,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.MY_GH_TOKEN }}
 
     - name: Fetch AWS Feed
       run: curl "https://aws.amazon.com/blogs/hpc/feed/" > rss-feeds/public/aws-feed.xml
@@ -28,4 +28,4 @@ jobs:
         git config user.email "action@github.com"
         git add rss-feeds/public/*.xml
         git commit -m "Updated RSS Feeds" || echo "No changes to commit"
-        git push
+        git push https://${{ secrets.MY_GH_TOKEN }}@github.com/rbhatia1997/RSS-HPC_AI-Feed.git
