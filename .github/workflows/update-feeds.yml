@@ -2,6 +2,8 @@ name: Final Version RSS Feed Update
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # This runs the action every 6 hours.
 
 jobs:
   fetch-feeds:
