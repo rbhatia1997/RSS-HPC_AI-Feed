@@ -1,4 +1,4 @@
-name: Update RSS Feeds Step1
+name: Update RSS Feeds Step2
 
 on:
   workflow_dispatch:
@@ -13,6 +13,9 @@ jobs:
 
     - name: Fetch AWS Feed
       run: curl "https://aws.amazon.com/blogs/hpc/feed/" > rss-feeds/public/aws-feed.xml
+
+    - name: Fetch NVIDIA Feed 1
+      run: curl "https://feeds.feedburner.com/nvidiablog" > rss-feeds/public/nvidia-feed1.xml
 
     - name: Commit and Push
       run: |
