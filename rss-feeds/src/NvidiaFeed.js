@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-const NVIDIA_FEED_URL_1 = "/nvidia-feed1.xml";
-const NVIDIA_FEED_URL_2 = "/nvidia-feed2.xml";
+const NVIDIA_FEED_URL_1 = "/RSS-HPC_AI-Feed/public/nvidia-feed1.xml";
+const NVIDIA_FEED_URL_2 = "/RSS-HPC_AI-Feed/public/nvidia-feed2.xml";
+
 
 function NvidiaFeed() {
     const [blogData, setBlogData] = useState([]);

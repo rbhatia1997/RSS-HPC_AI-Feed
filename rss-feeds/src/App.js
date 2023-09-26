@@ -4,8 +4,8 @@ import NvidiaFeed from './NvidiaFeed';
 import axios from 'axios';
 
 
-const RSS_FEED_URL = "/aws-feed.xml";
-const RSS_FEED_FILE = feedType => feedType === 'aws' ? "/aws-feed.xml" : "/nvidia-feed.xml";
+const RSS_FEED_URL = "/RSS-HPC_AI-Feed/public/aws-feed.xml";
+const RSS_FEED_FILE = feedType => feedType === 'aws' ? "/RSS-HPC_AI-Feed/public/aws-feed.xml" : "/RSS-HPC_AI-Feed/public/nvidia-feed.xml";
 
 function App() {
     const [feedType, setFeedType] = useState('aws'); // This will be either 'aws' or 'nvidia'
