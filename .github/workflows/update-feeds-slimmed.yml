@@ -1,0 +1,15 @@
+name: Update RSS Feeds Slimmed
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch-feeds:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Print Test Message
+      run: echo "This is a test message."
