@@ -1,4 +1,4 @@
-name: Update RSS Feeds Slimmed
+name: Update RSS Feeds Step1
 
 on:
   workflow_dispatch:
@@ -11,5 +11,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Print Test Message
-      run: echo "This is a test message."
+    - name: Fetch AWS Feed
+      run: curl "https://aws.amazon.com/blogs/hpc/feed/" > rss-feeds/public/aws-feed.xml
+
+    - name: Commit and Push
+      run: |
+        git config user.name "GitHub Action"
+        git config user.email "action@github.com"
+        git add rss-feeds/public/*.xml
+        git commit -m "Updated RSS Feeds" || echo "No changes to commit"
+        git push
