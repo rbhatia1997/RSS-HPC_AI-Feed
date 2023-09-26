@@ -1,4 +1,4 @@
-name: Update RSS Feeds Step2
+name: Update RSS Feeds Step3
 
 on:
   workflow_dispatch:
@@ -16,6 +16,9 @@ jobs:
 
     - name: Fetch NVIDIA Feed 1
       run: curl "https://feeds.feedburner.com/nvidiablog" > rss-feeds/public/nvidia-feed1.xml
+
+    - name: Fetch NVIDIA Feed 2
+      run: curl "https://nvidianews.nvidia.com/releases.xml" > rss-feeds/public/nvidia-feed2.xml
 
     - name: Commit and Push
       run: |
