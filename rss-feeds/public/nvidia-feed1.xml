@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 26 Sep 2023 20:37:19 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 27 Sep 2023 00:02:10 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,7 +20,58 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3</generator>
 	<item>
-		<title>NVIDIA CEO and Founder Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision</title>
+		<title>NVIDIA Works With NTT DOCOMO to Launch World’s First GPU-Accelerated 5G Network</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/26/ntt-docomo-gpu-accelerated-5g-network/</link>
+		
+		<dc:creator><![CDATA[Soma Velayutham]]></dc:creator>
+		<pubDate>Wed, 27 Sep 2023 00:00:03 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[5G]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[NVIDIA BlueField]]></category>
+		<category><![CDATA[Telecommunications]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67153</guid>
+
+					<description><![CDATA[As generative AI sweeps across corporate boardrooms around the world, global telecommunications companies are exploring how to cost-effectively deliver many of these new AI applications to the edge over 5G and upcoming 6G networks. Telcos plan to deploy over 17 million 5G microcells and towers worldwide by 2025. Building, managing and optimizing this new infrastructure <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/26/ntt-docomo-gpu-accelerated-5g-network/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>As generative AI sweeps across corporate boardrooms around the world, global telecommunications companies are exploring how to cost-effectively deliver many of these new AI applications to the edge over 5G and upcoming 6G networks.</p>
+<p>Telcos plan to deploy over 17 million 5G microcells and towers worldwide by 2025. Building, managing and optimizing this new infrastructure while maintaining quality-of-service delivery and maximizing the customer experience is the industry’s next big challenge.</p>
+<p>Today, <a href="https://www.docomo.ne.jp/english/info/media_center/pr/2023/0927_00.html" target="_blank" rel="noopener">NTT DOCOMO announced</a> it is deploying a GPU-accelerated wireless solution in its network in Japan. This makes it the first-ever telco in the world to deploy a GPU-accelerated commercial 5G network.</p>
+<p>DOCOMO’s move aims to address the multibillion dollar problem of driving improvements in performance, total cost of ownership and energy efficiency while unlocking the flexibility, scalability and supply chain diversity promise of <a href="https://www.o-ran.org/" target="_blank" rel="noopener">Open RAN</a>.</p>
+<p>The 5G Open RAN solution uses a high-performance 5G virtual radio access network (vRAN) from Fujitsu built on the <a href="https://developer.nvidia.com/aerial-sdk" target="_blank" rel="noopener">NVIDIA Aerial vRAN stack</a> and <a href="https://www.nvidia.com/en-us/data-center/products/converged-accelerator/" target="_blank" rel="noopener">NVIDIA Converged Accelerators</a>. This combination enables telcos to create a fully software- and cloud-defined network that can dynamically allocate resources using industry-standard equipment.</p>
+<p>“Open RAN offers the opportunity to build next-generation 5G networks with unprecedented flexibility and scalability thanks to multivendor connections,” said Sadayuki Abeta, global head of Open RAN solutions at NTT DOCOMO. “We look forward to continuing working with NVIDIA on infrastructure solutions that meet those needs.”</p>
+<p>The 5G Open RAN solution is the first 5G vRAN for telco commercial deployment using the NVIDIA Aerial platform, with a hardened, carrier-grade vRAN stack. The platform brings together the NVIDIA Aerial vRAN stack for 5G, AI frameworks, accelerated compute infrastructure and long-term software support and maintenance.</p>
+<h2><strong>Cost and Energy-Efficiency Benefits of GPU Acceleration</strong></h2>
+<p>Working with offerings from Fujitsu and Wind River, the new 5G solution uses the NVIDIA Aerial platform to lower costs and reduce power consumption. Compared to its existing 5G network deployments, DOCOMO says the solution reduces total costs by up to 30%, network design utilization by up to 50%, and power consumption at base stations by up to 50%.</p>
+<p>“Delivering a 5G Open RAN network that meets stringent performance requirements of operators is a significant accomplishment,” said Masaki Taniguchi, senior vice president and head of the Mobile System Business Unit at Fujitsu Limited. “Using our Fujitsu vCU/vDU, in combination with NVIDIA Aerial platform, will help network operators to efficiently build high-performance 5G networks for consumers and businesses alike.”</p>
+<p>NVIDIA’s contribution to the DOCOMO rollout is part of a growing portfolio of 5G solutions that are driving transformation in the telecommunications industry. Anchored on NVIDIA Aerial vRAN stack and NVIDIA Converged Accelerators — combined with <a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/" target="_blank" rel="noopener">NVIDIA BlueField data processing units (DPUs)</a> and a suite of AI frameworks — NVIDIA provides a high-performance, software-defined, cloud-native, AI-enabled 5G for on-premises and telco operators’ RAN.</p>
+<p>Fujitsu, NVIDIA and Wind River have been working under the OREX (5G Open RAN service brand), which was launched by DOCOMO in February 2021, to develop the Open RAN 5G vRAN. OREX has been deployed in Japan based on Fujitsu’s virtualized DU (vDU) and virtualized CU (vCU) and leverages commercial off-the-shelf servers, the Wind River cloud platform, Fujitsu’s 5G vRAN software and the NVIDIA Aerial vRAN stack and NVIDIA Converged Accelerators.</p>
+<p>“Wind River is delighted to work with NTT DOCOMO, Fujitsu and NVIDIA towards a vision of improved efficiency of RAN deployments and operations,” said Paul Miller, chief technology officer at Wind River. “Wind River Studio provides a cloud-native, distributed cloud, automation, and analytics solution based on open source, so that operators can deploy and manage their 5G edge networks globally at high scale with faster innovation. This solution is proven in highly scaled production deployments today.”</p>
+<h2><strong>OREX: Building Out From Japan and Beyond</strong></h2>
+<p>DOCOMO and its partners in OREX are promoting a multivendor, Open RAN-compliant 5G vRAN to the global operator community. The commercial deployment in Japan is a first step in the vision of OREX, where members can commercially validate their solutions and then promote them to other operators globally.</p>
+<p>NVIDIA is working with DOCOMO and other partners to support operators around the world to deploy high-performance, energy-efficient, software-defined, commercial 5G vRAN.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/docomo2.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/docomo2-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Works With NTT DOCOMO to Launch World’s First GPU-Accelerated 5G Network]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Founder and CEO Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision</title>
 		<link>https://blogs.nvidia.com/blog/2023/09/26/nvidia-dennys-trillion/</link>
 		
 		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
@@ -28,34 +79,33 @@
 				<category><![CDATA[Corporate]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67152</guid>
 
-					<description><![CDATA[Talk about a Grand Slam. Denny’s CEO Kelli Valade was joined Tuesday by NVIDIA CEO Jensen Huang Tuesday to unveil a plaque at the Silicon Valley Denny’s where NVIDIA’s founders hatched their idea for a chip that would enable realistic 3D graphics on personal computers. “This is a place where we fuel ideas, your story <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/26/nvidia-dennys-trillion/">Read article &#62;</a>]]></description>
+					<description><![CDATA[Talk about a Grand Slam. Denny’s CEO Kelli Valade was joined Tuesday by NVIDIA CEO Jensen Huang to unveil a plaque at the Silicon Valley Denny’s where NVIDIA’s founders hatched their idea for a chip that would enable realistic 3D graphics on personal computers. “This is a place where we fuel ideas. Your story is <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/26/nvidia-dennys-trillion/">Read article &#62;</a>]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Talk about a Grand Slam.</p>
-<p>Denny’s CEO Kelli Valade was joined Tuesday by NVIDIA CEO Jensen Huang Tuesday to unveil a plaque at the Silicon Valley Denny’s where NVIDIA’s founders hatched their idea for a chip that would enable realistic 3D graphics on personal computers.</p>
-<p>“This is a place where we fuel ideas, your story is so inspiring it will continue to inspire people at Dennny’s,” Valade said, as she presented the plaque to Huang.</p>
+<p>Denny’s CEO Kelli Valade was joined Tuesday by NVIDIA CEO Jensen Huang to unveil a plaque at the Silicon Valley Denny’s where NVIDIA’s founders hatched their idea for a chip that would enable realistic 3D graphics on personal computers.</p>
+<p>“This is a place where we fuel ideas. Your story is so inspiring it will continue to inspire people at Denny’s,” Valade said, as she presented the plaque to Huang.</p>
 <p>“Denny’s has taught me so many lessons,” Huang said.</p>
 <p>Both CEOs got their start working in diners. Valade got her first job as a waitress at a diner when she was 16. Huang got his first job at Denny’s in Portland when he was 15.</p>
 <p>“I was a dishwasher, I was a busboy, I waited tables,” Huang said. “No one can carry more coffee cups than I can.”</p>
 <p>To fuel even more great ideas, Valade announced the Denny’s Trillion-Dollar Incubator Contest — offering $25,000 in seed money for the next $1 trillion idea.</p>
 <p><img decoding="async" fetchpriority="high" class="alignleft wp-image-67166 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg" alt="https://apimages.photoshelter.com/galleries/C0000IW9ydIWWwzE/2023-09-30-Denny-s-Trillion-Dollar-Incubator" width="278" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg 278w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-347x500.jpg 347w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-768x1106.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1067x1536.jpg 1067w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-scaled.jpg 1422w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-312x450.jpg 312w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-149x215.jpg 149w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-69x100.jpg 69w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1280x1843.jpg 1280w" sizes="(max-width: 278px) 100vw, 278px" />The contest is open to anyone with a creative and innovative idea that could impact the world. The only catch? The idea must originate — like NVIDIA — in a Denny’s booth.</p>
-<p>NVIDIA, the leading accelerated computing and AI company, got its start at the 24-hour diner chain known for favorites such as its signature Grand Slam combo.</p>
+<p>NVIDIA, the leading accelerated computing and AI company, got its start at the 24-hour diner chain known for favorites such as its signature Grand Slam breakfast combo.</p>
 <p>In 1993, three friends — Huang, Chris Malachowsky and Curtis Priem — met at Denny’s to discuss creating a chip that would enable realistic 3D graphics on personal computers.</p>
 <p>The Denny’s just off a busy thoroughfare in the heart of Silicon Valley was the perfect place to start a business, said Huang, who lived nearby at the time with his wife and kids.</p>
 <p>“It had all the coffee you could drink and no one could chase you out,” Huang told Valade.</p>
-<p>Tuesday’s event took place in a corner of the bustling restaurant — one of the most popular Denny’s locations in Northern California — as families, retirees, and workers coming off the night shift piled in for plates piled high with eggs and pancakes, sausage and bacon.</p>
-<p>Huang was among them, starting the day with a meeting where he and his table polished off a Lumberjack Slam, Moons Over My Hammy, and a Super Bird sandwich — washed down with plenty of coffee.  <b><br />
+<p>Tuesday’s event took place in a corner of the bustling restaurant — one of the most popular Denny’s locations in Northern California — as families, retirees and workers coming off the night shift piled in for plates piled high with eggs and pancakes, sausage and bacon.</p>
+<p>Huang was among them, starting the day with a meeting where he and his table polished off a Lumberjack Slam, Moons Over My Hammy and a Super Bird sandwich — washed down with plenty of coffee.  <b><br />
 </b><br />
-Huang, whose family immigrated to the United States from Taiwan when he was a child, told Valade he had his first hamburger at Dennys and his first milkshake.</p>
+Huang, whose family immigrated to the United States from Taiwan when he was a child, told Valade he had his first hamburger at Denny’s and his first milkshake.</p>
 <p>“We make the best pancakes here,” Huang said.</p>
 <p>“I love how you still say ‘we,’” Valade said.</p>
 <p>“Made fresh every day,” Huang added with a grin.</p>
 <p>Valade and Huang said Denny’s can be a great launching pad, not just for great ideas, but for great careers.</p>
 <p>“Start your first job in the restaurant business,” Huang said. “It teaches you humility, it teaches you hard work, it teaches you hospitality.”</p>
-<p>Valade agreed wholeheartedly, who, after talking shop with Huang, checked in with diners like Alfred, who was tucking into a stack of pancakes amid the morning rush.</p>
-<p>For people across Silicon Valley, it&#8217;s the place to be. “I come here every day,” the retired roofer said.</p>
-<p><b>Full contest details for the Denny’s Trillion Dollar Incubator Contest can be found at </b><a href="http://www.dennys.com/trilliondollarincubator"><b>www.dennys.com/trilliondollarincubator</b></a><b>. Contestants can submit their ideas online or at Denny’s restaurant by Nov. 21st at 8:59 am. The winner will be announced early next year.</b></p>
+<p>Valade agreed wholeheartedly. After talking shop with Huang, she checked in with diners like Alfred, who was tucking into a stack of pancakes amid the morning rush.</p>
+<p>For people across Silicon Valley, it’s the place to be. “I come here every day,” the retired roofer said.</p>
+<p><b>Full contest details for the Denny’s Trillion Dollar Incubator Contest can be found at </b><a href="http://www.dennys.com/trilliondollarincubator"><b>www.dennys.com/trilliondollarincubator</b></a><b>. Contestants can submit their ideas online or at a Denny’s restaurant by Nov. 21 at 8:59 a.m. The winner will be announced early next year.</b></p>
 <p>&nbsp;</p>
-<p>IMAGE CREDIT: Don Feria/AP Images for Denny&#8217;s</p>
-<p><b> </b></p>
+<p><em>Image credit: Don Feria/AP Images for Denny&#8217;s</em></p>
 </div>]]></content:encoded>
 					
 		
@@ -72,7 +122,7 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			width="842"
 			height="450"
 			/>
-			<media:title type="html"><![CDATA[NVIDIA CEO and Founder Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision]]></media:title>
+			<media:title type="html"><![CDATA[NVIDIA Founder and CEO Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
@@ -1182,88 +1232,6 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			/>
 			<media:title type="html"><![CDATA[A Quantum Boost: cuQuantum With PennyLane Lets Simulations Ride Supercomputers]]></media:title>
 			<media:description type="html">PennyLane software with cuQuantum for quantum simulations on supercomputers</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>One Small Step for Artists, One Giant Leap for Creative-Kind</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/12/aendom-blender-adobe-substance-3d-painter/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Tue, 12 Sep 2023 13:00:35 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66825</guid>
-
-					<description><![CDATA[Editor’s note: This post is part of our weekly In the NVIDIA Studio series, which celebrates featured artists, offers creative tips and tricks and demonstrates how NVIDIA Studio technology improves creative workflows.  When it comes to converting 2D concepts into 3D masterpieces, self-taught visual development artist Alex Treviño has confidence in the potential of all <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/12/aendom-blender-adobe-substance-3d-painter/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. </i></p>
-<p>When it comes to converting 2D concepts into 3D masterpieces, self-taught visual development artist Alex Treviño has confidence in the potential of all aspiring creators.</p>
-<p>“You may think it’s a complicated process, but trust me, it’s easier than you think,” he said.</p>
-<p>The featured content creator of this week’s <i>In the NVIDIA Studio </i>installment, Treviño is the founder of <a href="https://www.aendom.com/en/about/">AENDOM</a>, a project with the mission of creating artwork rooted in storytelling elements and sharing creative processes to educate and inspire the next generation of artists.</p>
-<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-66825-1" width="1280" height="720" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/360-textured.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/360-textured.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/09/360-textured.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>From this initiative, the Lunar Rover collection was born.</p>
-<h2><b>Shooting for the Moon</b></h2>
-<p>The story behind the <i>Lunar Rover</i> collection comes from an exploration of grief and inspired by the work of artist <a href="https://mattiasadolfsson.com/">Mattias Adolfsson</a>.</p>
-<p>However, Treviño wanted to translate Adolfsson’s detailed and playful caricature style into his own 3D design.</p>
-<figure id="attachment_66829" aria-describedby="caption-attachment-66829" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_.png"><img decoding="async" loading="lazy" class="size-full wp-image-66829" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_.png" alt="" width="1280" height="683" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-672x359.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-768x410.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-842x450.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-403x215.png 403w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-188x100.png 188w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66829" class="wp-caption-text">Treviño’s inspiration, credit Mattias Adolfsson.</figcaption></figure>
-<p>Treviño started gathering reference imagery and creating mood boards with the standalone program PureRef, which allowed him to play with different perspectives and styles while in the conceptual phase.</p>
-<p>“I wanted the character to explore a desolate landscape where it is clear that, despite loneliness and abandonment, he continues to explore in allusion to the emotions of grief,” Treviño said.</p>
-<figure id="attachment_66832" aria-describedby="caption-attachment-66832" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_.png"><img decoding="async" loading="lazy" class="wp-image-66832 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_.png" alt="" width="1280" height="800" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-400x250.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-672x420.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-768x480.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-720x450.png 720w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-344x215.png 344w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-160x100.png 160w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66832" class="wp-caption-text">Advanced sculpting in Blender.</figcaption></figure>
-<p>He then shaped and sculpted models in his preferred 3D app, Blender. Using its Cycles’ RTX-accelerated OptiX ray tracing in the viewport, powered by his <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/">GeForce RTX 3080 Ti GPU</a>-equipped PC, Treviño unlocked interactive, photorealistic modeling with smooth movement in the viewport.</p>
-<p>“NVIDIA GPUs have a wide range of support and powerful performance, which ensures that I can rely on my GPU to work correctly and render images faster and with higher quality,” said Treviño.</p>
-<p>Next, Treviño applied UV mapping to his models, which allowed him to texture them in Adobe Substance 3D Painter to create realistic, detailed textures.</p>
-<figure id="attachment_66835" aria-describedby="caption-attachment-66835" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66835" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w.png" alt="" width="1280" height="800" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-400x250.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-672x420.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-768x480.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-720x450.png 720w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-344x215.png 344w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-160x100.png 160w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66835" class="wp-caption-text">UV mapping in Blender.</figcaption></figure>
-<p>RTX-accelerated <a href="https://blogs.nvidia.com/blog/2022/08/04/direct-indirect-lighting/">light and ambient occlusion</a> baking optimized assets in mere moments.</p>
-<figure id="attachment_66838" aria-describedby="caption-attachment-66838" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66838" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w.png" alt="" width="1280" height="800" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-400x250.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-672x420.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-768x480.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-720x450.png 720w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-344x215.png 344w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-160x100.png 160w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66838" class="wp-caption-text">Textures created in Adobe Substance 3D Painter.</figcaption></figure>
-<p>“My GeForce RTX GPU’s capabilities were essential while texturing,” Treviño said. “Movement without lag and the ability to make speedy material changes effortlessly were especially helpful while swapping looks.”</p>
-<p>Treviño moved to Adobe Illustrator to create alphas — color components that represent degrees of transparency or opacity of colors — as well as masks and patterns.</p>
-<p>“GPU acceleration and AI-enabled features are essential tools, as they allow me to work more efficiently and produce higher-quality results,” said Treviño.</p>
-<p>He returned to Blender, taking advantage of RTX-accelerated OptiX ray tracing in Blender Cycles for the fastest final-frame render.</p>
-<p>Finally, Treviño imported the project into Adobe Photoshop for postproduction work, including adjusting color grading, sharpness, noise and chromatic aberration, and using look-up tables for retouching — just a few of the 30+ GPU-accelerated features at his disposal.</p>
-<figure id="attachment_66841" aria-describedby="caption-attachment-66841" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66841" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w.png" alt="" width="1280" height="508" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-400x159.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-672x267.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-768x305.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-842x334.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-406x161.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-188x75.png 188w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66841" class="wp-caption-text">Stunning details in post-production and color correction thanks to Adobe Photoshop.</figcaption></figure>
-<p>The end result achieved Treviño’s goal of creating a desolate landscape and alluding to the emotions of grief.</p>
-<figure id="attachment_66844" aria-describedby="caption-attachment-66844" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66844" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w.png" alt="" width="1280" height="508" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-400x159.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-672x267.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-768x305.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-842x334.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-406x161.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-188x75.png 188w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66844" class="wp-caption-text">Beautiful yet desolate.</figcaption></figure>
-<p>For a more detailed look at Treviño’s creative process, check out his five-part tutorial series, <i>Creating 3D Lunar Rover w/ Alex Treviño,</i> live on the NVIDIA Studio <a href="https://www.youtube.com/@NVIDIA-Studio/featured">YouTube channel</a>.</p>
-<p><a href="https://www.youtube.com/playlist?list=PL4w6jm6S2lzvy-mfeIHJiAmqN6ARz-DJt"><i>https://www.youtube.com/playlist?list=PL4w6jm6S2lzvy-mfeIHJiAmqN6ARz-DJt</i></a></p>
-<p>Discover exclusive step-by-step tutorials from industry-leading artists, inspiring community showcases and more, powered by <a href="https://www.nvidia.com/en-us/studio/laptops-desktops/">NVIDIA Studio hardware</a> and <a href="https://www.nvidia.com/en-us/studio/">software</a>.</p>
-<h2>Lunar Lessons Learned</h2>
-<p>Treviño has three monumental pieces of advice for aspiring artists:</p>
-<ol>
-<li><b>Learn the basics of the entire pipeline process</b>. Learn about modeling, texturing, rendering, post-production, marketing and promotion. Expertise across the board isn’t required but general understanding of each step is.</li>
-<li><b>Don’t be afraid to experiment</b>. The best way to learn is by doing. Try new things and experiment with different techniques. Mistakes will lead to growth and evolved artistry.</li>
-<li><b>Find a community of like-minded artists</b>. Connect in multiple communities to learn from others, share work and get valuable feedback.</li>
-</ol>
-<figure id="attachment_66847" aria-describedby="caption-attachment-66847" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66847" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w.png" alt="" width="1280" height="403" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-400x126.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-672x212.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-768x242.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-842x265.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-406x128.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-188x59.png 188w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66847" class="wp-caption-text">3D visual development artist Alex Treviño.</figcaption></figure>
-<p>Check out Treviño’s portfolio on <a href="https://www.instagram.com/aendom/">Instagram</a>.</p>
-<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/09/360-textured.mp4" length="1994733" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/nv-blog-header-preview-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/nv-blog-header-preview-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[One Small Step for Artists, One Giant Leap for Creative-Kind]]></media:title>
-			<media:description type="html"></media:description>
 			</media:content>
 			</item>
 	</channel>
