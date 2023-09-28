@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 26 Sep 2023 20:37:19 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 27 Sep 2023 20:04:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,7 +20,324 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3</generator>
 	<item>
-		<title>NVIDIA CEO and Founder Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision</title>
+		<title>Kicking Games Up a Notch: Startup Sports Vision AI to Broadcast Athletics Across the Globe</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/28/pixellot-vision-ai-sports-broadcasting/</link>
+		
+		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
+		<pubDate>Thu, 28 Sep 2023 15:00:07 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Jetson]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Metropolis]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67151</guid>
+
+					<description><![CDATA[Pixellot is scoring with vision AI — making it easier for organizations to deliver real-time sports broadcasting and analytics to viewers across the globe. A member of the NVIDIA Metropolis vision AI partner ecosystem, the company based near Tel Aviv offers an AI-powered platform that automates the capturing, streaming and analysis of sporting events. It’s <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/28/pixellot-vision-ai-sports-broadcasting/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Pixellot is scoring with vision AI — making it easier for organizations to deliver real-time sports broadcasting and analytics to viewers across the globe.</p>
+<p>A member of the <a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/" target="_blank" rel="noopener">NVIDIA Metropolis</a> vision AI partner ecosystem, the company based near Tel Aviv offers an AI-powered platform that automates the capturing, streaming and analysis of sporting events.</p>
+<p>It’s changing the game for fans, coaches and players of nearly 20 different sports — not just basketball and soccer but also rugby and handball — as it broadcasts events and provides analytics from more than 30,000 venues across 70+ countries. In the U.S., Pixellot powers the broadcasting of over a million games every year through its partnership with the NFHS Network, a leader in streaming live and on-demand high school sports.</p>
+<p>Through its broadcasting partners like the NFHS Network, MLB and others, Pixellot provides professional analytics, post-match breakdowns and highlights based on jersey numbers with shot charts and heat maps — which can be especially useful for coaches and players of school and pro sports alike as they study their moves to up their game. It also enables interactive experiences for users, who can manipulate viewframes and cut their own highlights for a game.</p>
+<p>Recently, <a href="https://supersportschools.com/" target="_blank" rel="noopener">SuperSport Schools</a>, a company based in Cape Town, South Africa, deployed the Pixellot platform to power an app that broadcasts student athletics across the nation, where more than 1,500 high schools are active in sports.</p>
+<p>“Our goal is to democratize the coverage of sports with the help of AI and automation,” said Yossi Tarablus, who leads marketing at Pixellot, a member of the <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener">NVIDIA Inception</a> program for cutting-edge startups. “Using the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/" target="_blank" rel="noopener">NVIDIA Jetson</a> platform for edge AI, Pixellot brings powerful technology for sports broadcasting and analytics to some of the world’s most remote areas.”</p>
+<p><iframe title="Introducing Show S3 | The best automated sports camera ever made" width="500" height="281" src="https://www.youtube.com/embed/OWiU1-isCcw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>How Pixellot Works</b></h2>
+<p>During peak sports seasons, about 200,000 games a month are broadcasted across the globe using the Pixellot platform, according to Tarablus.</p>
+<p>Lightweight Pixellot cameras powered by NVIDIA Jetson capture high-quality video of games, matches and even practices — and livestream them in high definition to users through an app in real time with an overlaid scoreboard, live stats, commentary and more.</p>
+<p><img decoding="async" fetchpriority="high" class="aligncenter wp-image-67187 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-667x500.jpg" alt="" width="667" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-667x500.jpg 667w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-400x300.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-768x576.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-600x450.jpg 600w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-287x215.jpg 287w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-133x100.jpg 133w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured.jpg 1024w" sizes="(max-width: 667px) 100vw, 667px" /></p>
+<p>The platform creates an automatic viewframe that simulates a camera operator, optimizes videos and corrects scene lighting using <a href="https://www.nvidia.com/en-us/geforce/rtx/" target="_blank" rel="noopener">NVIDIA RTX</a> ray-tracing technology.</p>
+<p>In addition, the platform helps organizations and companies monetize sports while making them more accessible to viewers, as it enables over-the-top, or OTT, streaming — direct streaming over the internet without the need for a traditional cable or satellite TV provider.</p>
+<p>In all of its camera setups, the Metropolis member runs the <a href="https://developer.nvidia.com/deepstream-sdk" target="_blank" rel="noopener">NVIDIA DeepStream</a> software development kit for AI-powered video streaming analytics. And the company relies on the <a href="https://developer.nvidia.com/tensorrt" target="_blank" rel="noopener">NVIDIA TensorRT SDK</a> for high-performance deep learning inference.</p>
+<p>“NVIDIA Jetson made it possible for Pixellot to create the most accurate and affordable AI-powered camera solution for broadcasting live sporting events,” said Gal Oz, chief technology officer and cofounder of Pixellot. “The versatility of Jetson modules in terms of camera pipeline, encoders and AI capabilities enabled Pixellot to develop multiple products based on the same hardware and software platform.”</p>
+<h2><b>Broadcasting South African School Sports</b></h2>
+<p>High-quality, real-time broadcasts of athletics are difficult to produce without access to a slew of graphics and data.</p>
+<p>As the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/" target="_blank" rel="noopener">NVIDIA Jetson Orin NX</a> module enables AI-powered video processing and GPU-accelerated computing right at the edge — on the field or at courtside — Pixellot lets organizations broadcast sports from anywhere.</p>
+<p>“It’s amazing how many people have told us stories about a moment they were empowered to share with their children thanks to SuperSport Schools and Pixellot, because they couldn’t be there physically but were present through live or on-demand video,” said Kelvin Watt, managing director of Capitalize Media and SuperSport Schools, on the Pixellot deployment in South Africa.</p>
+<p>The SuperSport Schools app, which is free and recently reached 600,000 subscribers, was the first to broadcast a junior nationals track race in the country.</p>
+<p>At the event last year, a student named Viwe Jingqi broke 50-plus-year national records for both the 100- and 200-meter races for South African girls under 18 years old. People all over the world could easily witness these historic victories through the SuperSport Schools app, powered by Pixellot.</p>
+<p><iframe title="Changing the game for THOUSANDS of African athletes &#x1f30d;&#x26bd;&#x1f3c0;" width="500" height="281" src="https://www.youtube.com/embed/1rGbHWLIReQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Building a Smart Sports City in China</b></h2>
+<p>In China, tech giant Baidu and the Chengdu Sports Authority are using Pixellot technology in an initiative to develop a smart sports city, with an initial focus on broadcasting community soccer.</p>
+<p>Chengdu, the capital of southwestern China’s Sichuan province, is a sports-oriented city and was the host of this year’s <a href="https://olympics.com/en/sport-events/2023-fisu-world-university-games-chengdu" target="_blank" rel="noopener">World University Games</a>, an event sanctioned by the International University Sports Federation.</p>
+<p>“Pixellot’s AI-driven sports production solutions are a perfect fit for our strategic vision of delivering innovative technology solutions to communities,” said Liu Chuan, solution director of the intelligent cloud sports industry at <a href="https://www.sportsvideo.org/2023/03/13/pixellot-inks-new-partnership-with-chinas-baidu-to-transform-local-sports-through-ai/" target="_blank" rel="noopener">Baidu</a>.</p>
+<p>“Broadcasting community soccer with vision AI is part of the Chengdu initiative’s efforts to emphasize the health benefits of engaging in sports recreationally,” said Tarablus. “It moves the spotlight from pro or Olympic sports to the importance of athletics for all.”</p>
+<p><i>Learn more about the </i><a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/" target="_blank" rel="noopener"><i>NVIDIA Metropolis</i></a><i> application framework, developer tools and partner ecosystem.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Kicking Games Up a Notch: Startup Sports Vision AI to Broadcast Athletics Across the Globe]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>V for Victory: ‘Cyberpunk 2077: Phantom Liberty’ Comes to GeForce NOW</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/28/geforce-now-thursday-sep-28/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 28 Sep 2023 13:00:45 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67195</guid>
+
+					<description><![CDATA[The wait is over. GeForce NOW Ultimate members can experience Cyberpunk 2077: Phantom Liberty on GOG.com at full GeForce RTX 4080 quality, with support for NVIDIA DLSS 3.5 technology. It’s part of an action-packed GFN Thursday, with 26 more games joining the cloud gaming platform’s library, including Quake II from id Software. A New Look <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/28/geforce-now-thursday-sep-28/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The wait is over. GeForce NOW <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate</a> members can experience <i>Cyberpunk 2077:</i> <i>Phantom Liberty</i> on GOG.com at full <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080/">GeForce RTX 4080</a> quality, with support for <a href="https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-3-5-ray-reconstruction/">NVIDIA DLSS 3.5</a> technology.</p>
+<p>It’s part of an action-packed GFN Thursday, with 26 more games joining the cloud gaming platform’s library, including <i>Quake II</i> from id Software.</p>
+<h2><b>A New Look for Night City</b></h2>
+<figure id="attachment_67205" aria-describedby="caption-attachment-67205" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-scaled.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67205" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-672x378.jpg" alt="Cyberpunk 2077: Phantom Liberty on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67205" class="wp-caption-text">Experience NVIDIA DLSS 3.5 in <em>Cyberpunk 2077’s</em> spy-thriller expansion.</figcaption></figure>
+<p>Take on a thrilling challenge with <i>Phantom Liberty</i>, an all-new adventure for <i>Cyberpunk 2077</i>. When the orbital shuttle of the President of the New United States of America is shot down over the deadliest district of Night City, there’s only one person who can save her. Become V, a cyberpunk for hire, and dive into a tangled web of espionage and political intrigue, unraveling a story that connects the highest echelons of power with the brutal world of black-market mercenaries.</p>
+<p>Ultimate members can return to the neon lights of Night City and experience the benefits of NVIDIA DLSS 3.5 and its new Ray Reconstruction technology. These updates enhance the quality of full ray tracing in <i>Cyberpunk 2077</i>’s Ray Tracing: Overdrive Mode, as part of the game’s 2.0 update available for the base game for free and included with the <i>Phantom Liberty</i> expansion. Upgrade to a GeForce NOW Ultimate membership today to see Night City at its best.</p>
+<h2><b>Prepare for War</b></h2>
+<figure id="attachment_67202" aria-describedby="caption-attachment-67202" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67202" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-672x336.jpg" alt="Quake II on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67202" class="wp-caption-text">id Software’s classic first-person shooter is better than ever, streaming from the cloud.</figcaption></figure>
+<p>Experience the authentic, enhanced and complete version of id Software’s critically acclaimed first-person shooter, <i>Quake II</i>, now streaming from the cloud.</p>
+<p>Humankind is at war with the Strogg, a hostile alien race that’s attacked Earth. In response, humanity launched a strike on the Strogg homeworld — which failed. Outnumbered and outgunned, battle through fortified military installations to shut down the enemy’s war machine. Only then will the fate of humanity be decided.</p>
+<p><i>Quake II</i> includes a new, enhanced version of id Software’s classic, along with both original mission packs: “The Reckoning” and “Ground Zero.” Plus, battle through 28 campaign levels in MachineGames’ all-new “Call of the Machine” expansion and play through the exclusive levels from <i>Quake II 64</i> for the first time on PC. Blast the Stroggs or friends in classic multiplayer modes at up to 4K and 120 frames per second or with ultrawide resolutions for GeForce NOW Ultimate members.</p>
+<h2><b>Nice Shootin,’ Tex</b></h2>
+<figure id="attachment_67199" aria-describedby="caption-attachment-67199" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67199" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-672x354.jpg" alt="GeForce NOW Kovaaks Ultimate Challenge" width="672" height="354" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-672x354.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-400x211.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-768x404.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-842x443.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard.jpg 1126w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67199" class="wp-caption-text">Ultimate leads the way.</figcaption></figure>
+<p>The <a href="https://blogs.nvidia.com/blog/2023/08/10/geforce-now-thursday-aug-10/">GeForce NOW Ultimate KovaaK’s challenge</a> is complete, and the results are in: Ultimate power means more ultimate wins. Members worked to sharpen their skills and win amazing prizes during the challenge while experiencing the power of Ultimate for themselves. With up to 240 fps streaming at ultra-low latency, gamers are playing up to their ultimate potential, just by upgrading to an Ultimate membership.</p>
+<p>The proof is in the data. Check out some powerful stats showing what Ultimate members accomplished:</p>
+<ul>
+<li>Nearly <b>15,000</b> people took on the challenge, playing over <b>120,000 sessions</b>.</li>
+<li>Members saw a <b>2x boost</b> in scores when playing on Ultimate over a Free membership.</li>
+<li>All of the leaderboard’s <b>top 25 slots</b> were filled with those playing on Ultimate.</li>
+</ul>
+<p>But don’t just take our word for it. Here’s what it felt like for TinooQ, who placed third overall in the challenge:</p>
+<blockquote><p><i>“As a long-time KovaaK’s user, transitioning to this platform was seamless, as the precision and responsiveness was nothing short of extraordinary. </i></p>
+<p><i>“The minimal latency and the consistent 240 fps made me think that many people could rely solely on the GeForce NOW Ultimate plan and a monitor, that’s all. I found it perfect for top gaming, saving a lot of money and the PC hardware headaches I suffered when building mine.” — TinooQ</i></p></blockquote>
+<p>And check out what the press had to say about the Ultimate membership tier:</p>
+<blockquote><p>“GeForce NOW KovaaK&#8217;s Challenge Proves Gaming At Glorious 240 FPS Matters” – <a href="https://hothardware.com/news/geforce-now-kovaaks-challenge-240-fps-matters">Hot Hardware</a></p>
+<p>“Hot dang does GeForce Now Ultimate ever deliver.” – <a href="https://www.tomsguide.com/opinion/i-just-played-cyberpunk-2077-at-60-fps-on-a-dollar120-laptop-heres-how">Tom’s Guide</a></p>
+<p>“NVIDIA GeForce NOW has held the crown for cloud gaming performance for a while now, and it’s just getting better.” – <a href="https://9to5google.com/2023/08/10/geforce-now-ultimate-rtx-4080-upgrade/">9to5Google</a></p>
+<p>“Unsurprisingly, NVIDIA says 98% of the users who tried Kovaak’s Challenge on the GeForce NOW Ultimate tier have seen improvements in their test results over the free tier.” – <a href="https://wccftech.com/geforce-now-adds-gord-shadow-gambit-texas-chainsaw-massacre-wayfinder-and-more-this-week/">Wccftech</a></p>
+<p>“Nvidia has taken a different approach to cloud gaming: Instead of boosting their library and settling for 1080p 60fps, Nvidia’s GeForce Now service prioritizes performance, implementing faster graphics cards for players to use.” – <a href="https://www.slashgear.com/1363048/geforce-now-4080-servers-ultimate/">SlashGear</a></p>
+<p>“One of the distinguishing factors of GeForce Now is its superior image quality and lack of noticeable input delay. ” –<a href="https://gameishard.gg/news/geforce-now-game-streaming-is-like-magic-and-it-puts-xboxs-cloud-effort-to-shame/39297/"> Game Is Hard</a></p>
+<p>“NVIDIA’s GeForce NOW is widely considered one of the best cloud gaming platforms in terms of latency, visual fidelity, and overall experience.” — <a href="https://www.tweaktown.com/news/93300/starfield-is-available-to-stream-in-4k-via-nvidia-geforce-now-supporting-steam-and-game-pass/index.html">TweakTown</a></p></blockquote>
+<p>Everyone’s a winner when they play on Ultimate. Upgrade today for the best performance in the cloud, even when streaming popular shooters like <i>Counter Strike, Destiny 2, Tom Clancy’s Rainbow Six Siege </i>and more, where every frame counts.</p>
+<p>Even better, Ultimate members get a free copy of <i>KovaaK</i>’<i>s</i> – the world’s best aim trainer. Don’t miss this chance to claim the reward, starting today, only for Ultimate members. Be on the lookout for an email starting today, available only for a limited time.</p>
+<h2><b>Challenge Accepted</b></h2>
+<figure id="attachment_67196" aria-describedby="caption-attachment-67196" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67196" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-672x336.jpg" alt="Infinity Strash DRAGON QUEST The Adventure of Dai on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67196" class="wp-caption-text">Be a hero. Be Dai.</figcaption></figure>
+<p>Square Enix’s <i>Infinity Strash: DRAGON QUEST The Adventure of Dai</i> leads 26 new titles in the GeForce NOW library this week. In this action role-playing game based on the popular anime and manga series of the same name, Dai and his friends must fight the Dark Lord Hadlar and his evil army of monsters. Fulfill Dai’s dream of becoming a hero in this game, which features fast-paced, dynamic combat, stunning anime-style graphics and a rich storyline.</p>
+<p>Here’s the full list of what’s joining this week:</p>
+<ul>
+<li><i>These Doomed Isles</i> (New release on <a href="https://store.steampowered.com/app/1840710?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 25)</li>
+<li><i>Paleo Pines </i>(New release on <a href="https://store.steampowered.com/app/1202200?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 26)</li>
+<li><i>Infinity Strash: DRAGON QUEST The Adventure of Dai </i>(New release on <a href="https://store.steampowered.com/app/1895810?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>Pizza Possum </i>(New release on <a href="https://store.steampowered.com/app/1951230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>Wildmender </i>(New release on <a href="https://store.steampowered.com/app/1599330?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>Overpass 2 </i>(New release on <a href="https://store.steampowered.com/app/1830630?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>Soulstice </i>(New release on <a href="https://www.epicgames.com/store/p/soulstice?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, Free on Sept. 28)</li>
+<li><i>Amnesia: Rebirth </i>(<a href="https://www.xbox.com/games/store/amnesia-rebirth/9PMM21KVRD72?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>BlazBlue: Cross Tag Battle </i>(<a href="https://www.xbox.com/games/store/blazblue-cross-tag-battle-special-edition/9NFWDRBZXDL9?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Bramble: The Mountain King </i>(<a href="https://www.xbox.com/games/store/bramble-the-mountain-king/9NHDFTCL691C?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Broforce (</i><a href="https://store.steampowered.com/app/274190?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a><i>)</i></li>
+<li><i>Don Duality (</i><a href="https://store.steampowered.com/app/2247570?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a><i>)</i></li>
+<li><i>Doom Eternal </i>(<a href="https://www.xbox.com/games/store/Doom-eternal-standard-edition-pc/9PK09BL31FK1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Dordogne </i>(<a href="https://www.xbox.com/games/store/dordogne/9pbc65kxpv5v?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Dust Fleet </i>(<a href="https://store.steampowered.com/app/406160?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Eastern Exorcist </i>(<a href="https://www.xbox.com/games/store/eastern-exorcist/9NQCJ132C6KW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Figment 2: Creed Valley </i>(<a href="https://www.xbox.com/games/store/figment-2-creed-valley/9NZWW8K1KX6S?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>I Am Fish </i>(<a href="https://www.xbox.com/games/store/i-am-fish/9mxgj8jzl0lk?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Necesse </i>(<a href="https://store.steampowered.com/app/1169040?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>A Plague Tale: Innocence </i>(<a href="https://www.xbox.com/games/store/a-plague-tale-innocence-windows-10/9ND0CG3LM22K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Quake II </i>(<a href="https://store.steampowered.com/app/2320?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/quake-ii?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a> and <a href="https://www.xbox.com/games/store/quake-ii/9P7L9H478GGV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Road 96 </i>(<a href="https://www.xbox.com/games/store/road-96/9NVBKDF85W8T?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Spacelines from the Far Out </i>(<a href="https://www.xbox.com/games/store/spacelines-from-the-far-out/9N23WV1HGLTQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Totally Reliable Delivery Service </i>(<a href="https://www.xbox.com/games/store/totally-reliable-delivery-service/9NZG72SH3H4W?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Warhammer 40,000: Battlesector </i>(<a href="https://www.xbox.com/games/store/warhammer-40000-battlesector/9PFLW6WZVJC7?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Yooka-Laylee and the Impossible Lair </i>(<a href="https://www.xbox.com/games/store/yooka-laylee-and-the-impossible-lair/9NB1LCQDPPM1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+</ul>
+<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/gfn-thursday-9-28-nv-blog-1280x680-no-cta.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/gfn-thursday-9-28-nv-blog-1280x680-no-cta-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[V for Victory: ‘Cyberpunk 2077: Phantom Liberty’ Comes to GeForce NOW]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>DENZA Unwraps Smart Driving Options for N7 Model Lineup, Powered by NVIDIA DRIVE Orin</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/27/denza-smart-driving-n7-model-nvidia-drive-orin/</link>
+		
+		<dc:creator><![CDATA[Calisa Cole]]></dc:creator>
+		<pubDate>Wed, 27 Sep 2023 16:41:47 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Driving]]></category>
+		<category><![CDATA[NVIDIA DRIVE]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67180</guid>
+
+					<description><![CDATA[DENZA, the luxury electric-vehicle brand and joint venture between BYD and Mercedes-Benz, is debuting new intelligent driving features for its entire N7 model lineup, powered by the NVIDIA DRIVE Orin system-on-a-chip (SoC). The N7 series was introduced earlier this year as a family of spacious five-seater SUVs for commuters looking to sport a deluxe EV <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/27/denza-smart-driving-n7-model-nvidia-drive-orin/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>DENZA, the luxury electric-vehicle brand and joint venture between BYD and Mercedes-Benz, is debuting new intelligent driving features for its entire N7 model lineup, powered by the <a href="https://www.nvidia.com/en-us/self-driving-cars/hardware/" target="_blank" rel="noopener">NVIDIA DRIVE Orin</a> system-on-a-chip (SoC).</p>
+<p>The N7 series was introduced earlier this year as a family of spacious five-seater SUVs for commuters looking to sport a deluxe EV with advanced driving functionality.</p>
+<p>All N7 models can be equipped with the NVIDIA DRIVE Orin SoC for high-performance compute to simultaneously run in-vehicle applications and deep neural networks for automated driving.</p>
+<p>NVIDIA DRIVE Orin serves as the brain behind DENZA’s proprietary Commuter Smart Driving system, which offers an array of smart features, including:</p>
+<ul>
+<li>Navigate on autopilot for high-speed, all-scenario assisted driving.</li>
+<li>Intelligent speed-limit control and emergency lane-keeping aid, for safer commutes on urban roads and highways.</li>
+<li>Enhanced automatic emergency braking and front cross-traffic alert for increased safety at intersections and on narrow streets.</li>
+<li>Automated parking assist, which scouts for parking spots, identifying horizontal, vertical and diagonal spaces to ease the challenge of parking in crowded areas.</li>
+</ul>
+<h2><strong>Next-Gen Car Configuration</strong></h2>
+<p>In addition to adopting accelerated computing in the car, DENZA is one of the flagship automotive trailblazers using the <a href="https://www.nvidia.com/en-us/omniverse/cloud/" target="_blank" rel="noopener">NVIDIA Omniverse Cloud</a> platform to build and deploy next-generation car configurators to deliver greater personalization options for the consumer’s vehicle-purchasing experience.</p>
+<p><i>Learn more about the </i><a href="https://blogs.nvidia.com/blog/2023/08/08/denza-wpp-car-configurators-nvidia-omniverse-cloud/" target="_blank" rel="noopener"><i>DENZA N7 3D configurator</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/denzfinal2.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/denzfinal2-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[DENZA Unwraps Smart Driving Options for N7 Model Lineup, Powered by NVIDIA DRIVE Orin]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>The Fastest Path: Healthcare Startup Uses AI to Analyze Cancer Cells in the Operating Room</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/27/healthcare-ai-startup-analyzes-cancer-cells-in-the-operating-room/</link>
+		
+		<dc:creator><![CDATA[Renee Yao]]></dc:creator>
+		<pubDate>Wed, 27 Sep 2023 13:00:40 +0000</pubDate>
+				<category><![CDATA[Autonomous Machines]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Embedded Computing]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Jetson]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67110</guid>
+
+					<description><![CDATA[Medical-device company Invenio Imaging is developing technology that enables surgeons to evaluate tissue biopsies in the operating room, immediately after samples are collected — providing in just three minutes AI-accelerated insights that would otherwise take weeks to obtain from a pathology lab. In a surgical biopsy, a medical professional removes samples of cells or tissue <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/27/healthcare-ai-startup-analyzes-cancer-cells-in-the-operating-room/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Medical-device company Invenio Imaging is developing technology that enables surgeons to evaluate tissue biopsies in the operating room, immediately after samples are collected — providing in just three minutes AI-accelerated insights that would otherwise take weeks to obtain from a pathology lab.</p>
+<p>In a surgical biopsy, a medical professional removes samples of cells or tissue that pathologists analyze for diseases such as cancer. By delivering these capabilities through a compact, AI-powered imaging system within the treatment room, Invenio aims to support rapid clinical decision-making.</p>
+<p>“This technology will help surgeons make intraoperative decisions when performing a biopsy or surgery,” said Chris Freudiger, chief technology officer of Silicon Valley-based Invenio. “They’ll be able to rapidly evaluate whether the tissue sample contains cancerous cells, decide whether they need to take another tissue sample and, with the AI models Invenio is developing, potentially make a molecular diagnosis for personalized medical treatment within minutes.”</p>
+<p>Quicker diagnosis enables quicker treatment. It’s especially critical for aggressive types of cancer that could grow or spread significantly in the weeks it takes for biopsy results to return from a dedicated pathology lab.</p>
+<p>Invenio is a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, a program that provides cutting-edge startups with technological support and AI platform guidance. The company accelerates AI training and inference using NVIDIA GPUs and software libraries.</p>
+<h2><b>Laser Focus on Cancer Care</b></h2>
+<figure id="attachment_67119" aria-describedby="caption-attachment-67119" style="width: 279px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001.png"><img decoding="async" loading="lazy" class="wp-image-67119 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-279x400.png" alt="" width="279" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-279x400.png 279w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-349x500.png 349w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-314x450.png 314w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-150x215.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001.png 693w" sizes="(max-width: 279px) 100vw, 279px" /></a><figcaption id="caption-attachment-67119" class="wp-caption-text">The NIO Laser Imaging System accelerates the imaging of fresh tissue biopsies.</figcaption></figure>
+<p>Invenio’s NIO Laser Imaging System is a digital pathology tool that accelerates the imaging of fresh tissue biopsies. It’s been used in thousands of procedures in the U.S. and Europe. In 2021, it received the CE Mark of regulatory approval in Europe.</p>
+<p>The company plans to adopt the <a href="https://www.nvidia.com/en-us/lp/embedded-computing/robotics-edge-ai-tech-brief/">NVIDIA Jetson Orin series of edge AI modules</a> for its next-generation imaging system, which will feature near real-time AI inference accelerated by the <a href="https://developer.nvidia.com/tensorrt#:~:text=TensorRT%20provides%20INT8%20using%20quantization,detection%2C%20and%20natural%20language%20processing.">NVIDIA TensorRT SDK</a>.</p>
+<p>“We’re building a layer of AI models on top of our imaging capabilities to provide physicians with not just the diagnostic image but also an analysis of what they’re seeing,” Freudiger said. “With the AI performance provided by NVIDIA Jetson at the edge, they’ll be able to quickly determine what kinds of cancer cells are present in a biopsy image.”</p>
+<p>Invenio uses a cluster of <a href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">NVIDIA RTX A6000 GPUs</a> to train neural networks with tens of millions of parameters on pathologist-annotated images. The models were developed using the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow">TensorFlow deep learning framework</a> and trained on images acquired with NIO imaging systems.</p>
+<p>“The most powerful capability for us is the expanded VRAM on the RTX A6000 GPUs, which allows us to load large batches of images and capture the variability of features,” Freudiger said. “It makes a big difference for AI training.”</p>
+<h2><b>On the Path to Clinical Deployment</b></h2>
+<p>One of Invenio’s AI products, NIO Glioma Reveal, is approved for clinical use in Europe and available for research use in the U.S. to help identify areas of cancerous cells in brain tissue.</p>
+<p>A team of Invenio’s collaborators from the University of Michigan, New York University, University of California San Francisco, the Medical University of Vienna and University Hospital of Cologne recently developed a <a href="https://deepglioma.mlins.org/" target="_blank" rel="noopener">deep learning model</a> that can find biomarkers of cancerous tumors with <a href="https://www.nature.com/articles/s41591-023-02252-4" target="_blank" rel="noopener">93% accuracy</a> in 90 seconds.</p>
+<p>With this ability to analyze different molecular subtypes of cancer within a tissue sample, doctors can predict how well a patient will respond to chemotherapy — or determine whether a tumor has been successfully removed during surgery.</p>
+<p>Beyond its work on brain tissue analysis, Invenio this year announced a clinical research <a href="https://www.prnewswire.com/news-releases/invenio-imaging-announces-clinical-research-collaboration-agreement-301712598.html" target="_blank" rel="noopener">collaboration with Johnson &amp; Johnson’s Lung Cancer Initiative</a> to develop and validate an AI solution that can help evaluate lung biopsies. The AI model will help doctors rapidly determine whether collected tissue samples contain cancer.</p>
+<p>Lung cancer is the world’s <a href="https://www.who.int/news-room/fact-sheets/detail/cancer" target="_blank" rel="noopener">deadliest form of cancer</a>, and in the U.S. alone, lung nodules are found in <a href="https://pubmed.ncbi.nlm.nih.gov/35040882/#:~:text=Importance%3A%20Pulmonary%20nodules%20are%20identified,CT)%20images%20of%20the%20chest.">over 1.5 million</a> patients each year. Once approved for clinical use, Invenio’s NIO Lung Cancer Reveal tool aims to shorten the time needed to analyze tissue biopsies for these patients.</p>
+<p>As part of this initiative, Invenio will run a clinical study before submitting the NVIDIA Jetson-powered AI solution for FDA approval.</p>
+<p><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>Subscribe to NVIDIA healthcare news</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Ambra_1_blogsize.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Ambra_1_blogsize-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[The Fastest Path: Healthcare Startup Uses AI to Analyze Cancer Cells in the Operating Room]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Works With NTT DOCOMO to Launch World’s First GPU-Accelerated 5G Network</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/26/ntt-docomo-gpu-accelerated-5g-network/</link>
+		
+		<dc:creator><![CDATA[Soma Velayutham]]></dc:creator>
+		<pubDate>Wed, 27 Sep 2023 00:00:03 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[5G]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[NVIDIA BlueField]]></category>
+		<category><![CDATA[Telecommunications]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67153</guid>
+
+					<description><![CDATA[As generative AI sweeps across corporate boardrooms around the world, global telecommunications companies are exploring how to cost-effectively deliver many of these new AI applications to the edge over 5G and upcoming 6G networks. Telcos plan to deploy over 17 million 5G microcells and towers worldwide by 2025. Building, managing and optimizing this new infrastructure <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/26/ntt-docomo-gpu-accelerated-5g-network/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>As generative AI sweeps across corporate boardrooms around the world, global telecommunications companies are exploring how to cost-effectively deliver many of these new AI applications to the edge over 5G and upcoming 6G networks.</p>
+<p>Telcos plan to deploy over 17 million 5G microcells and towers worldwide by 2025. Building, managing and optimizing this new infrastructure while maintaining quality-of-service delivery and maximizing the customer experience is the industry’s next big challenge.</p>
+<p>Today, <a href="https://www.docomo.ne.jp/english/info/media_center/pr/2023/0927_00.html" target="_blank" rel="noopener">NTT DOCOMO announced</a> it is deploying a <a href="https://developer.nvidia.com/blog/enabling-the-worlds-first-gpu-accelerated-5g-open-ran-for-ntt-docomo-with-nvidia-aerial/">GPU-accelerated wireless solution</a> in its network in Japan. This makes it the first-ever telco in the world to deploy a GPU-accelerated commercial 5G network.</p>
+<p>DOCOMO’s move aims to address the multibillion-dollar problem of driving improvements in performance, total cost of ownership and energy efficiency while unlocking the flexibility, scalability and supply chain diversity promise of <a href="https://www.o-ran.org/" target="_blank" rel="noopener">Open RAN</a>.</p>
+<p>The 5G Open RAN solution uses a high-performance 5G virtual radio access network (vRAN) from Fujitsu built on the <a href="https://developer.nvidia.com/aerial-sdk" target="_blank" rel="noopener">NVIDIA Aerial vRAN stack</a> and <a href="https://www.nvidia.com/en-us/data-center/products/converged-accelerator/" target="_blank" rel="noopener">NVIDIA Converged Accelerators</a>. This combination enables telcos to create a fully software- and cloud-defined network that can dynamically allocate resources using industry-standard equipment.</p>
+<p>“Open RAN offers the opportunity to build next-generation 5G networks with unprecedented flexibility and scalability thanks to multivendor connections,” said Sadayuki Abeta, global head of Open RAN solutions at NTT DOCOMO. “We look forward to continuing working with NVIDIA on infrastructure solutions that meet those needs.”</p>
+<p>The 5G Open RAN solution is the first 5G vRAN for telco commercial deployment using the NVIDIA Aerial platform, with a hardened, carrier-grade vRAN stack. The platform brings together the NVIDIA Aerial vRAN stack for 5G, AI frameworks, accelerated compute infrastructure and long-term software support and maintenance.</p>
+<h2><strong>Cost and Energy-Efficiency Benefits of GPU Acceleration</strong></h2>
+<p>Working with offerings from Fujitsu and Wind River, the new 5G solution uses the NVIDIA Aerial platform to lower costs and reduce power consumption. Compared to its existing 5G network deployments, DOCOMO says the solution reduces total costs by up to 30%, network design utilization by up to 50%, and power consumption at base stations by up to 50%.</p>
+<p>“Delivering a 5G Open RAN network that meets stringent performance requirements of operators is a significant accomplishment,” said Masaki Taniguchi, senior vice president and head of the Mobile System Business Unit at Fujitsu Limited. “Using our Fujitsu vCU/vDU, in combination with NVIDIA Aerial platform, will help network operators to efficiently build high-performance 5G networks for consumers and businesses alike.”</p>
+<p>NVIDIA’s contribution to the DOCOMO rollout is part of a growing portfolio of 5G solutions that are driving transformation in the telecommunications industry. Anchored on NVIDIA Aerial vRAN stack and NVIDIA Converged Accelerators — combined with <a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/" target="_blank" rel="noopener">NVIDIA BlueField data processing units (DPUs)</a> and a suite of AI frameworks — NVIDIA provides a high-performance, software-defined, cloud-native, AI-enabled 5G for on-premises and telco operators’ RAN.</p>
+<p>Fujitsu, NVIDIA and Wind River have been working under the OREX (5G Open RAN service brand), which was launched by DOCOMO in February 2021, to develop the Open RAN 5G vRAN. OREX has been deployed in Japan based on Fujitsu’s virtualized DU (vDU) and virtualized CU (vCU) and leverages commercial off-the-shelf servers, the Wind River cloud platform, Fujitsu’s 5G vRAN software and the NVIDIA Aerial vRAN stack and NVIDIA Converged Accelerators.</p>
+<p>“Wind River is delighted to work with NTT DOCOMO, Fujitsu and NVIDIA towards a vision of improved efficiency of RAN deployments and operations,” said Paul Miller, chief technology officer at Wind River. “Wind River Studio provides a cloud-native, distributed cloud, automation, and analytics solution based on open source, so that operators can deploy and manage their 5G edge networks globally at high scale with faster innovation. This solution is proven in highly scaled production deployments today.”</p>
+<h2><strong>OREX: Building Out From Japan and Beyond</strong></h2>
+<p>DOCOMO and its partners in OREX are promoting a multivendor, Open RAN-compliant 5G vRAN to the global operator community. The commercial deployment in Japan is a first step in the vision of OREX, where members can commercially validate their solutions and then promote them to other operators globally.</p>
+<p>NVIDIA is working with DOCOMO and other partners to support operators around the world to deploy high-performance, energy-efficient, software-defined, commercial 5G vRAN.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/docomo2.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/docomo2-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Works With NTT DOCOMO to Launch World’s First GPU-Accelerated 5G Network]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Founder and CEO Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision</title>
 		<link>https://blogs.nvidia.com/blog/2023/09/26/nvidia-dennys-trillion/</link>
 		
 		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
@@ -28,34 +345,33 @@
 				<category><![CDATA[Corporate]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67152</guid>
 
-					<description><![CDATA[Talk about a Grand Slam. Denny’s CEO Kelli Valade was joined Tuesday by NVIDIA CEO Jensen Huang Tuesday to unveil a plaque at the Silicon Valley Denny’s where NVIDIA’s founders hatched their idea for a chip that would enable realistic 3D graphics on personal computers. “This is a place where we fuel ideas, your story <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/26/nvidia-dennys-trillion/">Read article &#62;</a>]]></description>
+					<description><![CDATA[Talk about a Grand Slam. Denny’s CEO Kelli Valade was joined Tuesday by NVIDIA CEO Jensen Huang to unveil a plaque at the Silicon Valley Denny’s where NVIDIA’s founders hatched their idea for a chip that would enable realistic 3D graphics on personal computers. “This is a place where we fuel ideas. Your story is <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/26/nvidia-dennys-trillion/">Read article &#62;</a>]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Talk about a Grand Slam.</p>
-<p>Denny’s CEO Kelli Valade was joined Tuesday by NVIDIA CEO Jensen Huang Tuesday to unveil a plaque at the Silicon Valley Denny’s where NVIDIA’s founders hatched their idea for a chip that would enable realistic 3D graphics on personal computers.</p>
-<p>“This is a place where we fuel ideas, your story is so inspiring it will continue to inspire people at Dennny’s,” Valade said, as she presented the plaque to Huang.</p>
+<p>Denny’s CEO Kelli Valade was joined Tuesday by NVIDIA CEO Jensen Huang to unveil a plaque at the Silicon Valley Denny’s where NVIDIA’s founders hatched their idea for a chip that would enable realistic 3D graphics on personal computers.</p>
+<p>“This is a place where we fuel ideas. Your story is so inspiring it will continue to inspire people at Denny’s,” Valade said, as she presented the plaque to Huang.</p>
 <p>“Denny’s has taught me so many lessons,” Huang said.</p>
 <p>Both CEOs got their start working in diners. Valade got her first job as a waitress at a diner when she was 16. Huang got his first job at Denny’s in Portland when he was 15.</p>
 <p>“I was a dishwasher, I was a busboy, I waited tables,” Huang said. “No one can carry more coffee cups than I can.”</p>
 <p>To fuel even more great ideas, Valade announced the Denny’s Trillion-Dollar Incubator Contest — offering $25,000 in seed money for the next $1 trillion idea.</p>
-<p><img decoding="async" fetchpriority="high" class="alignleft wp-image-67166 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg" alt="https://apimages.photoshelter.com/galleries/C0000IW9ydIWWwzE/2023-09-30-Denny-s-Trillion-Dollar-Incubator" width="278" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg 278w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-347x500.jpg 347w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-768x1106.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1067x1536.jpg 1067w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-scaled.jpg 1422w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-312x450.jpg 312w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-149x215.jpg 149w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-69x100.jpg 69w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1280x1843.jpg 1280w" sizes="(max-width: 278px) 100vw, 278px" />The contest is open to anyone with a creative and innovative idea that could impact the world. The only catch? The idea must originate — like NVIDIA — in a Denny’s booth.</p>
-<p>NVIDIA, the leading accelerated computing and AI company, got its start at the 24-hour diner chain known for favorites such as its signature Grand Slam combo.</p>
+<p><img decoding="async" loading="lazy" class="alignleft wp-image-67166 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg" alt="https://apimages.photoshelter.com/galleries/C0000IW9ydIWWwzE/2023-09-30-Denny-s-Trillion-Dollar-Incubator" width="278" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg 278w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-347x500.jpg 347w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-768x1106.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1067x1536.jpg 1067w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-scaled.jpg 1422w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-312x450.jpg 312w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-149x215.jpg 149w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-69x100.jpg 69w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1280x1843.jpg 1280w" sizes="(max-width: 278px) 100vw, 278px" />The contest is open to anyone with a creative and innovative idea that could impact the world. The only catch? The idea must originate — like NVIDIA — in a Denny’s booth.</p>
+<p>NVIDIA, the leading accelerated computing and AI company, got its start at the 24-hour diner chain known for favorites such as its signature Grand Slam breakfast combo.</p>
 <p>In 1993, three friends — Huang, Chris Malachowsky and Curtis Priem — met at Denny’s to discuss creating a chip that would enable realistic 3D graphics on personal computers.</p>
 <p>The Denny’s just off a busy thoroughfare in the heart of Silicon Valley was the perfect place to start a business, said Huang, who lived nearby at the time with his wife and kids.</p>
 <p>“It had all the coffee you could drink and no one could chase you out,” Huang told Valade.</p>
-<p>Tuesday’s event took place in a corner of the bustling restaurant — one of the most popular Denny’s locations in Northern California — as families, retirees, and workers coming off the night shift piled in for plates piled high with eggs and pancakes, sausage and bacon.</p>
-<p>Huang was among them, starting the day with a meeting where he and his table polished off a Lumberjack Slam, Moons Over My Hammy, and a Super Bird sandwich — washed down with plenty of coffee.  <b><br />
+<p>Tuesday’s event took place in a corner of the bustling restaurant — one of the most popular Denny’s locations in Northern California — as families, retirees and workers coming off the night shift piled in for plates piled high with eggs and pancakes, sausage and bacon.</p>
+<p>Huang was among them, starting the day with a meeting where he and his table polished off a Lumberjack Slam, Moons Over My Hammy and a Super Bird sandwich — washed down with plenty of coffee.  <b><br />
 </b><br />
-Huang, whose family immigrated to the United States from Taiwan when he was a child, told Valade he had his first hamburger at Dennys and his first milkshake.</p>
+Huang, whose family immigrated to the United States from Taiwan when he was a child, told Valade he had his first hamburger at Denny’s and his first milkshake.</p>
 <p>“We make the best pancakes here,” Huang said.</p>
 <p>“I love how you still say ‘we,’” Valade said.</p>
 <p>“Made fresh every day,” Huang added with a grin.</p>
 <p>Valade and Huang said Denny’s can be a great launching pad, not just for great ideas, but for great careers.</p>
 <p>“Start your first job in the restaurant business,” Huang said. “It teaches you humility, it teaches you hard work, it teaches you hospitality.”</p>
-<p>Valade agreed wholeheartedly, who, after talking shop with Huang, checked in with diners like Alfred, who was tucking into a stack of pancakes amid the morning rush.</p>
-<p>For people across Silicon Valley, it&#8217;s the place to be. “I come here every day,” the retired roofer said.</p>
-<p><b>Full contest details for the Denny’s Trillion Dollar Incubator Contest can be found at </b><a href="http://www.dennys.com/trilliondollarincubator"><b>www.dennys.com/trilliondollarincubator</b></a><b>. Contestants can submit their ideas online or at Denny’s restaurant by Nov. 21st at 8:59 am. The winner will be announced early next year.</b></p>
+<p>Valade agreed wholeheartedly. After talking shop with Huang, she checked in with diners like Alfred, who was tucking into a stack of pancakes amid the morning rush.</p>
+<p>For people across Silicon Valley, it’s the place to be. “I come here every day,” the retired roofer said.</p>
+<p><b>Full contest details for the Denny’s Trillion Dollar Incubator Contest can be found at </b><a href="http://www.dennys.com/trilliondollarincubator"><b>www.dennys.com/trilliondollarincubator</b></a><b>. Contestants can submit their ideas online or at a Denny’s restaurant by Nov. 21 at 8:59 a.m. The winner will be announced early next year.</b></p>
 <p>&nbsp;</p>
-<p>IMAGE CREDIT: Don Feria/AP Images for Denny&#8217;s</p>
-<p><b> </b></p>
+<p><em>Image credit: Don Feria/AP Images for Denny&#8217;s</em></p>
 </div>]]></content:encoded>
 					
 		
@@ -72,7 +388,7 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			width="842"
 			height="450"
 			/>
-			<media:title type="html"><![CDATA[NVIDIA CEO and Founder Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision]]></media:title>
+			<media:title type="html"><![CDATA[NVIDIA Founder and CEO Jensen Huang Returns to Denny’s Where NVIDIA Launched a Trillion-Dollar Vision]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
@@ -99,20 +415,20 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 <p>Improving gaming, creating and everyday productivity, NVIDIA RTX graphics cards feature specialized Tensor Cores that deliver cutting-edge performance and transformative capabilities for AI.</p>
 <p>An arsenal of 100 million AI-ready, RTX-powered Windows 11 PCs and workstations are primed to excel in AI workflows and help launch a new wave of training models and apps.</p>
 <p>This week <i>In the NVIDIA Studio</i>, learn more about these AI power-players and read about Victor de Martrin, a self-taught 3D artist who shares the creative process behind his viral video <i>Ascension</i>, which features an assist from AI and uses a new visual effect process involving point clouds.</p>
-<p><iframe title="3D TRANSITION with Point Clouds" width="500" height="281" src="https://www.youtube.com/embed/S_zKwzaVsP4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="3D TRANSITION with Point Clouds" width="500" height="281" src="https://www.youtube.com/embed/S_zKwzaVsP4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <h2><b>AI on the Prize</b></h2>
 <p>AI can elevate both work and play.</p>
 <p>Content creators with <a href="https://www.nvidia.com/en-us/studio/laptops-desktops/">NVIDIA Studio hardware</a> can access over 100 AI-enabled and RTX-accelerated creative apps, including the Adobe Creative Cloud suite, Blender, Blackmagic Design’s DaVinci Resolve, OBS Studio and more.</p>
 <p>This includes the NVIDIA Studio suite of AI tools and exclusive next-generation technology such as NVIDIA DLSS 3.5, featuring <a href="https://www.nvidia.com/en-us/geforce/news/dlss-3-5-available-september-21/">Ray Reconstruction</a> and <a href="https://developer.nvidia.com/rtx/ray-tracing/optix">OptiX</a>. AI image generation on a GeForce RTX 4090-powered PC can be completed at lightning speed — the same task would take 8x longer with an Apple M2 Ultra.</p>
 <p>3D modelers can benefit immensely from AI, with dramatic improvements in real-time viewport rendering and upscaling with DLSS in NVIDIA Omniverse, Adobe Substance, Adobe Painter, Blender, D5 Render, Unreal Engine and more.</p>
-<figure id="attachment_67139" aria-describedby="caption-attachment-67139" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1.png"><img decoding="async" class="size-large wp-image-67139" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-672x383.png" alt="" width="672" height="383" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-672x383.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-400x228.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-768x437.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-790x450.png 790w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-378x215.png 378w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-176x100.png 176w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67139" class="wp-caption-text">D5 Render full ray-tracing preview with Ray Reconstruction.</figcaption></figure>
+<figure id="attachment_67139" aria-describedby="caption-attachment-67139" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1.png"><img decoding="async" loading="lazy" class="size-large wp-image-67139" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-672x383.png" alt="" width="672" height="383" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-672x383.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-400x228.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-768x437.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-790x450.png 790w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-378x215.png 378w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1-176x100.png 176w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67139" class="wp-caption-text">D5 Render full ray-tracing preview with Ray Reconstruction.</figcaption></figure>
 <p>Gamers are primed for AI boosts with <a href="https://www.nvidia.com/en-us/geforce/news/dlss-3-5-available-september-21/">DLSS</a> in over 300 games, including <i>Alan Wake 2</i>, coming soon, and <i>Cyberpunk 2077: Phantom Liberty</i>, available for download today.</p>
 <p><iframe loading="lazy" title="Cyberpunk 2077: Phantom Liberty | NVIDIA DLSS 3.5 &amp; Full Ray Tracing Technology Overview" width="500" height="281" src="https://www.youtube.com/embed/DbuKZgZpDP8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Modders can breathe new life into classic games with <a href="https://www.nvidia.com/en-us/geforce/rtx-remix/">NVIDIA RTX Remix’s</a> revolutionary AI upscaling and texture enhancements. Game studios deploying the NVIDIA Avatar Cloud Engine (ACE) can build intelligent game characters, interactive avatars and digital humans in apps at scale — saving time and money.</p>
 <p><iframe loading="lazy" title="NVIDIA ACE for Games Sparks Life Into Virtual Characters With Generative AI" width="500" height="281" src="https://www.youtube.com/embed/5R8xZb6J3r0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Everyday tasks also get a boost. AI can draft emails, summarize content and upscale video to stunning 4K on YouTube and Netflix with RTX Video Super Resolution. Frequent video chat users can harness the power of <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast</a> for AI-enhanced voice and video features. And livestreamers can take advantage of AI-powered features like virtual backgrounds, noise removal and eye contact, which moves the eyes of the speaker to simulate eye contact with the camera.</p>
 <p>NVIDIA hardware powers AI natively and in the cloud — including for the world’s leading cloud AIs like ChatGPT, Midjourney, Microsoft 365 Copilot, Adobe Firefly and more.</p>
-<p>Get further with AI — faster on RTX — and <a href="https://blogs.nvidia.com/blog/2023/09/21/ai-on-local-rtx-windows-pc/">learn more</a> to get started.</p>
+<p>Get <a href="https://www.nvidia.com/en-us/ai-on-rtx/">further with AI — faster on RTX</a> — and <a href="https://blogs.nvidia.com/blog/2023/09/21/ai-on-local-rtx-windows-pc/">learn more</a> to get started.</p>
 <h2><b>AI on Windows</b></h2>
 <p>NVIDIA AI, the world’s leading AI development platform, is supported by <a href="https://blogs.nvidia.com/blog/2023/05/28/computex-generative-ai-rtx/#:~:text=NVIDIA%20Brings%20New%20Generative%20AI,is%20set%20to%20improve%20efficiency.">100 million AI-ready RTX-powered Windows 11 PCs and workstations</a>.</p>
 <p>State-of-the-art technologies behind the Windows platform and NVIDIA’s AI hardware and software enable GPU-accelerated workflows for training and deploying AI models, exclusive tools, containers, software development kits and new open-source models optimized for RTX.</p>
@@ -919,350 +1235,6 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Shout at the Devil: Capcom’s ‘Devil May Cry 5’ Joins GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Unlocking the Language of Genomes and Climates: Anima Anandkumar on Using Generative AI to Tackle Global Challenges</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/13/anima-anandkumar-generative-ai/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Wed, 13 Sep 2023 13:00:11 +0000</pubDate>
-				<category><![CDATA[The AI Podcast]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66807</guid>
-
-					<description><![CDATA[Generative AI-based models can not only learn and understand natural languages — they can learn the very language of nature itself, presenting new possibilities for scientific research. Anima Anandkumar, Bren Professor at Caltech and senior director of AI research at NVIDIA, was recently invited to speak at the President’s Council of Advisors on Science and <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/13/anima-anandkumar-generative-ai/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Generative AI-based models can not only learn and understand natural languages — they can learn the very language of nature itself, presenting new possibilities for scientific research.</p>
-<p>Anima Anandkumar, Bren Professor at Caltech and senior director of AI research at NVIDIA, was recently invited to speak at the <a href="https://www.youtube.com/watch?v=gZb7Yr4C8po">President’s Council of Advisors on Science and Technology</a>.</p>
-<p>At the talk, Anandkumar said that generative AI was described as “an inflection point in our lives,” with discussions swirling around how to “harness it to benefit society and humanity through scientific applications.”</p>
-<p>On the latest episode of NVIDIA’s <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a>, host Noah Kravitz spoke with Anandkumar on generative AI’s potential to make splashes in the scientific community.</p>
-<p>It can, for example, be fed DNA, RNA, viral and bacterial data to craft a model that understands the language of genomes. That model can help predict dangerous coronavirus variants to accelerate drug and vaccine research.</p>
-<p>Generative AI can also predict extreme weather events like hurricanes or heat waves. Even with an AI boost, trying to predict natural events is challenging because of the sheer number of variables and unknowns.</p>
-<p>“Those are the aspects we’re working on at NVIDIA and Caltech, in collaboration with many other organizations, to say, ‘How do we capture the multitude of scales present in the natural world?’” she said. “With the limited data we have, can we hope to extrapolate to finer scales? Can we hope to embed the right constraints and come up with physically valid predictions that make a big impact?”</p>
-<p>Anandkumar adds that to ensure AI models are responsibly and safely used, existing laws must be strengthened to prevent dangerous downstream applications.</p>
-<p>She also talks about the AI boom, which is transforming the role of humans across industries, and problems yet to be solved.</p>
-<p>“This is the research advice I give to everyone: the most important thing is the question, not the answer,” she said.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1613940966%3Fsecret_token%3Ds-AMzlwyAPES3&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Anima Anandkumar on Using Generative AI to Tackle Global Challenges - Ep. 203" href="https://soundcloud.com/theaipodcast/anima-anandkumar/s-AMzlwyAPES3" target="_blank" rel="noopener">Anima Anandkumar on Using Generative AI to Tackle Global Challenges &#8211; Ep. 203</a></div>
-<h2>You Might Also Like</h2>
-<p><a href="https://soundcloud.com/theaipodcast/jules-anh-tuan-nguyen-explains-how-ai-lets-amputee-control-prosthetic-hand-video-games-ep-149">Jules Anh Tuan Nguyen Explains How AI Lets Amputee Control Prosthetic Hand, Video Games<br />
-</a>A postdoctoral researcher at the University of Minnesota discusses his efforts to allow amputees to control their prosthetic limb — right down to the finger motions — with their minds.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-overjet">Overjet’s Ai Wardah Inam on Bringing AI to Dentistry<br />
-</a>Overjet, a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, is moving fast to bring AI to dentists’ offices. Dr. Wardah Inam, CEO of the company, discusses using AI to improve patient care.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-luis-voloch">Immunai CTO and Co-Founder Luis Voloch on Using Deep Learning to Develop New Drugs<br />
-</a>Luis Voloch talks about tackling the challenges of the immune system with a machine learning and data science mindset.</p>
-<h2>Subscribe to the AI Podcast: Now Available on Amazon Music</h2>
-<p><a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">The AI Podcast is now available through Amazon Music</a>.</p>
-<p>In addition, get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
-<p>Make the AI Podcast better. Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2020/12/20181026-BJ-MB-CC__6881-M-Anima-Anandkumar-US-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1365"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2020/12/20181026-BJ-MB-CC__6881-M-Anima-Anandkumar-US-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Unlocking the Language of Genomes and Climates: Anima Anandkumar on Using Generative AI to Tackle Global Challenges]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Lends Support to Washington’s Efforts to Ensure AI Safety</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/12/ai-safety-washington/</link>
-		
-		<dc:creator><![CDATA[Ned Finkle]]></dc:creator>
-		<pubDate>Tue, 12 Sep 2023 20:35:31 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Corporate Responsibility]]></category>
-		<category><![CDATA[Cybersecurity]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[Public Sector]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66820</guid>
-
-					<description><![CDATA[In an event at the White House today, NVIDIA announced support for voluntary commitments that the Biden Administration developed to ensure advanced AI systems are safe, secure and trustworthy. The news came the same day NVIDIA’s chief scientist, Bill Dally, testified before a U.S. Senate subcommittee seeking input on potential legislation covering generative AI. Separately, <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/12/ai-safety-washington/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>In an event at the White House today, NVIDIA announced support for voluntary commitments that the Biden Administration developed to ensure advanced AI systems are safe, secure and trustworthy.</p>
-<p>The news came the same day NVIDIA’s chief scientist, Bill Dally, testified before a U.S. Senate subcommittee seeking input on potential legislation covering<a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/"> generative AI</a>. Separately, NVIDIA founder and CEO Jensen Huang will join other industry leaders in a closed-door meeting on AI Wednesday with the full Senate.</p>
-<p>Seven companies including Adobe, IBM, Palantir and Salesforce joined NVIDIA in supporting the<a href="https://www.whitehouse.gov/wp-content/uploads/2023/07/Ensuring-Safe-Secure-and-Trustworthy-AI.pdf"> eight agreements</a> the Biden-Harris administration released in July with support from Amazon, Anthropic, Google, Inflection, Meta, Microsoft and OpenAI.</p>
-<p>The commitments are designed to advance common standards and best practices to ensure the safety of generative AI systems until regulations are in place, the White House said. They include:</p>
-<ul>
-<li style="font-weight: 400;" aria-level="1">Testing the safety and capabilities of AI products before they’re deployed,</li>
-<li style="font-weight: 400;" aria-level="1">Safeguarding AI models against cyber and insider threats, and</li>
-<li style="font-weight: 400;" aria-level="1">Using AI to help meet society’s greatest challenges, from cancer to climate change.</li>
-</ul>
-<h2><b>Dally Shares NVIDIA’s Experience</b></h2>
-<p>In his testimony, Dally told the Senate subcommittee that government and industry should balance encouraging innovation in AI with ensuring models are deployed responsibly.</p>
-<p>The subcommittee’s hearing, “Oversight of AI: Rules for Artificial Intelligence,” is among actions from policymakers around the world trying to identify and address potential risks of generative AI.</p>
-<p>Earlier this year, the subcommittee heard testimonies from leaders of Anthropic, IBM and OpenAI, as well as academics such as Yoshua Bengio, a University of Montreal professor considered one of the godfathers of AI.</p>
-<p>Dally, who leads a global team of more than 300 at NVIDIA Research, shared the witness table on Tuesday with Brad Smith, Microsoft’s president and vice chair. Dally’s testimony briefly encapsulated NVIDIA’s unique role in the evolution of AI over the last two decades.</p>
-<h2><b>How Accelerated Computing Sparked AI</b></h2>
-<p>He described how NVIDIA invented the GPU in 1999 as a graphics processing unit, then fit it for a broader role in parallel processing in 2006 with the CUDA programming software. Over time, developers across diverse scientific and technical computing fields found this new form of <a href="https://blogs.nvidia.com/blog/2021/09/01/what-is-accelerated-computing/">accelerated computing</a> could significantly advance their work.</p>
-<p>Along the way, researchers discovered GPUs also were a natural fit for AI’s neural networks, because they require massive parallel processing.</p>
-<p>In 2012, the AlexNet model, trained on two NVIDIA GPUs, demonstrated human-like capabilities in image recognition. That result helped spark a decade of rapid advances using GPUs, leading to ChatGPT and other generative AI models used by hundreds of millions worldwide.</p>
-<p>Today, accelerated computing and generative AI are showing the potential to transform industries, address global challenges and profoundly benefit society, said Dally, who chaired Stanford University’s computer science department before joining NVIDIA.</p>
-<h2><b>AI’s Potential and Limits</b></h2>
-<p>In written testimony, Dally provided examples of how AI is empowering professionals to do their jobs better than they might have imagined in fields as diverse as business, healthcare and climate science.</p>
-<p>Like any technology, AI products and services have risks and are subject to existing laws and regulations that aim to mitigate those risks.</p>
-<p>Industry also has a role to play in deploying AI responsibly. Developers set limits for AI models when they train them and define their outputs.</p>
-<p>Dally noted that NVIDIA released in April<a href="https://blogs.nvidia.com/blog/2023/04/25/ai-chatbot-guardrails-nemo/"> NeMo Guardrails</a>, open-source software developers can use to guide generative AI applications in producing accurate, appropriate and secure text responses. He said that NVIDIA also maintains internal risk-management guidelines for AI models.</p>
-<h2><b>Eyes on the Horizon</b></h2>
-<p>Making sure that new and exceptionally large AI models are accurate and safe is a natural role for regulators, Dally suggested.</p>
-<figure id="attachment_66896" aria-describedby="caption-attachment-66896" style="width: 400px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP.jpg"><img decoding="async" loading="lazy" class="wp-image-66896 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-400x289.jpg" alt="Picture of Sen Blumenthal welcoming Dally to the hearing" width="400" height="289" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-400x289.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-672x486.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-768x555.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-622x450.jpg 622w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-297x215.jpg 297w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-138x100.jpg 138w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP.jpg 777w" sizes="(max-width: 400px) 100vw, 400px" /></a><figcaption id="caption-attachment-66896" class="wp-caption-text">Subcommittee chair Sen. Richard Blumenthal welcomed Dally to the hearing.</figcaption></figure>
-<p>He said that these “frontier” models are being developed at a gigantic scale. They exceed the capabilities of ChatGPT and other existing models that have already been well-explored by developers and users.</p>
-<p>Dally urged the subcommittee to balance thoughtful regulation with the need to encourage innovation in an AI developer community that includes thousands of startups, researchers and enterprises worldwide. AI tools should be widely available to ensure a level playing field, he said.</p>
-<p>During questioning, Senator Amy Klobuchar asked Dally why NVIDIA announced<a href="https://blogs.nvidia.com/blog/2023/03/21/generative-ai-getty-images/"> in March</a> it’s working with Getty Images.</p>
-<p>“At NVIDIA, we believe in respecting people’s intellectual property rights,” Dally replied. “We partnered with Getty to train large language models with a service called<a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/"> Picasso</a>, so people who provided the original content got remunerated.”</p>
-<p>In closing, Dally reaffirmed NVIDIA’s dedication to innovating generative AI and accelerated computing in ways that serve the best interests of all.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dally-in-Senate-QA-best-x1280.jpg"
-			type="image/jpeg"
-			width="1547"
-			height="823"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dally-in-Senate-QA-best-x1280-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Lends Support to Washington’s Efforts to Ensure AI Safety]]></media:title>
-			<media:description type="html">Dally testifies at Senate hearing on AI</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Mobility Gets Amped: IAA Show Floor Energized by Surge in EV Reveals, Generative AI</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/12/iaa-drive-ecosystem-roundup/</link>
-		
-		<dc:creator><![CDATA[Marie Labrie]]></dc:creator>
-		<pubDate>Tue, 12 Sep 2023 18:08:26 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Industrial and Manufacturing]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66802</guid>
-
-					<description><![CDATA[Generative AI’s transformative effect on the auto industry took center stage last week at the International Motor Show Germany, known as IAA, in Munich. NVIDIA’s Danny Shapiro, VP of automotive marketing, explained in his IAA keynote how this driving force is accelerating innovation and streamlining processes — from advancing design, engineering and digital-twin deployment for <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/12/iaa-drive-ecosystem-roundup/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Generative AI’s transformative effect on the auto industry took center stage last week at the International Motor Show Germany, known as IAA, in Munich.</p>
-<p>NVIDIA’s Danny Shapiro, VP of automotive marketing, explained in <a href="https://www.youtube.com/watch?v=f1Emp-SjDvk&amp;t=2s&amp;ab_channel=IAAMOBILITY" target="_blank" rel="noopener">his IAA keynote</a> how this driving force is accelerating innovation and streamlining processes — from advancing design, engineering and digital-twin deployment for optimizing manufacturing…to accelerating AV development with simulation…to enhancing retail experiences.</p>
-<p>The gen AI message was also shared just ahead of the show in a <a href="https://www.youtube.com/watch?v=u8DVEIqo89s&amp;ab_channel=IAAMOBILITY" target="_blank" rel="noopener">fireside chat</a> at NVIDIA headquarters with NVIDIA VP of Automotive Ali Kani and Aakash Arora, managing director and partner at Boston Consulting Group, who discussed the rapid pace of innovation, and how genAI will improve in-car experiences and transform the way vehicles are designed, manufactured and sold.</p>
-<h2><strong>Electric Vehicles Dominate the Show Floor </strong></h2>
-<p>The auto industry’s move toward electrification was on full display at IAA, with a number of global automakers showcasing their current and upcoming electric mobility lineup.</p>
-<p><b>Mercedes-Benz</b> took the wraps off its Concept CLA Class, giving visitors insight into the brand’s future vision for the entry-level segment.</p>
-<p>Designed on the upcoming Mercedes-Benz Modular Architecture (MMA) platform, the exterior of the Concept CLA Class teases an iconic design and evokes dynamic performance. Its interior provides the ultimate customer experience with exceptional comfort and convenience.</p>
-<p>The combination of high performance, sustainability, safety and comfort paired with an outstanding digital experience will help Mercedes-Benz realize its Ambition 2039 vision to be net carbon neutral across its entire fleet of new vehicles by the end of the next decade.</p>
-<p>As the first car to be developed on the MMA platform, the Concept CLA Class paves the way for next-gen electric-drive technology, and features Mercedes-Benz’s new operating system, MB.OS, with automated driving capabilities powered by <a href="https://www.nvidia.com/en-us/self-driving-cars/" target="_blank" rel="noopener">NVIDIA DRIVE</a>. With an anticipated range of more than 466 miles, the CLA Class has an 800V electric architecture to maximize efficiency and performance and rapid charging. Configured for a sporty, rear-wheel drive, its modular design will also be scalable for other vehicle segments.</p>
-<p><b>Lotus </b>conducted test drives at IAA of its <a href="https://blogs.nvidia.com/blog/2022/10/31/lotus-eletre-ai-drive-orin/" target="_blank" rel="noopener">Lotus Eletre Hyper-SUV</a>, which features an immersive digital cockpit, a battery range of up to 370 miles and autonomous-driving capabilities powered by the <a href="https://www.nvidia.com/en-us/self-driving-cars/hardware/" target="_blank" rel="noopener">NVIDIA DRIVE Orin</a> system-on-a-chip. With DRIVE at the wheel, the all-electric car offers server-level computing power that can be continuously enhanced during the car’s lifetime through over-the-air updates.</p>
-<figure id="attachment_66872" aria-describedby="caption-attachment-66872" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="wp-image-66872 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image6-672x336.png" alt="" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image6-672x336.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image6-400x200.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image6-768x384.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image6-842x421.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image6-406x203.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image6-188x94.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image6-1280x640.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image6.png 1400w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-66872" class="wp-caption-text">Lotus Eletre Hyper-SUV. Image courtesy of Lotus.</figcaption></figure>
-<p>U.S.-based<b> Lucid Motors</b> premiered during IAA its limited-production Lucid Air Midnight Dream Edition electric sedan, which provides up to 496 miles of range. The sedan was created with the European market in mind.</p>
-<p>The automaker also showcased <a href="https://blogs.nvidia.com/blog/2022/11/17/lucid-gravity-suv-nvidia-drive/" target="_blank" rel="noopener">other models</a>, including its Lucid Air Pure, Air Touring and Air Grand Touring, which come with the DreamDrive Pro advanced driver-assistance system (ADAS) powered by the high-performance compute of <a href="https://developer.nvidia.com/drive" target="_blank" rel="noopener">NVIDIA DRIVE</a> for a seamless automated driving experience.</p>
-<figure id="attachment_66875" aria-describedby="caption-attachment-66875" style="width: 672px" class="wp-caption alignnone"><img decoding="async" loading="lazy" class="wp-image-66875 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-672x448.png" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-672x448.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-400x267.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-768x513.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-1536x1025.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-674x450.png 674w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-322x215.png 322w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-150x100.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image2-1280x854.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image2.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-66875" class="wp-caption-text">Lucid Air Midnight Dream. Image courtesy of Lucid Motors.</figcaption></figure>
-<p>China’s emerging EV makers — which have been quick to embrace the shift to electric powertrains and software-defined strategies — were also in force at IAA as they set their sights on the European market.</p>
-<p>Auto giant <b>BYD</b> presented a diverse lineup of five EVs targeting the European market, along with the seven-seater <b>DENZA</b> D9 MPV, or multi-purpose vehicle, which features significant safety, performance and convenience options for drivers and passengers. <a href="https://blogs.nvidia.com/blog/2023/08/08/denza-wpp-car-configurators-nvidia-omniverse-cloud/" target="_blank" rel="noopener">DENZA</a> is a joint venture brand between BYD and Mercedes-Benz.</p>
-<p>The eco-friendly EVs demonstrate the latest in next-gen electric technology and underscore BYD’s position as a leading global car brand.</p>
-<figure id="attachment_66878" aria-describedby="caption-attachment-66878" style="width: 672px" class="wp-caption alignnone"><img decoding="async" loading="lazy" class="wp-image-66878 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-672x448.png" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-672x448.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-400x267.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-768x512.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1536x1024.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-675x450.png 675w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-322x215.png 322w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-150x100.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3-1280x854.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image3.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-66878" class="wp-caption-text">BYD booth at IAA. Image courtesy of BYD.</figcaption></figure>
-<p><b>LeapMotor</b> unveiled its new model, the C10 SUV, built on its LEAP 3.0 architecture. The vehicle is equipped with 30 high-resolution sensors, including lidar and 8-megapixel high-definition cameras, for accurate surround-perception capabilities. It’s powered by NVIDIA DRIVE Orin, which delivers 254 TOPS of compute to enable safe, high-speed and urban intelligent-driving capabilities.</p>
-<figure id="attachment_66881" aria-describedby="caption-attachment-66881" style="width: 672px" class="wp-caption alignnone"><img decoding="async" loading="lazy" class="wp-image-66881 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-672x389.png" alt="" width="672" height="389" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-672x389.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-400x231.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-768x444.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-1536x889.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-778x450.png 778w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-372x215.png 372w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-173x100.png 173w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image4-1280x741.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image4.png 1628w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-66881" class="wp-caption-text">LeapMotor C10 SUV. Image courtesy of LeapMotor.</figcaption></figure>
-<p><b>XPENG’s</b> inaugural presence at IAA served as the ideal opportunity to introduce its latest models to Europe, including its <a href="https://blogs.nvidia.com/blog/2022/09/23/xpeng-g9-ev-innovation-drive-orin/" target="_blank" rel="noopener">G9</a> and <a href="https://blogs.nvidia.com/blog/2020/04/27/xpeng-p7-intelligent-transportation/" target="_blank" rel="noopener">P7</a> EVs, with NVIDIA DRIVE Orin under the hood. Deliveries of the P7 recently commenced, with the vehicles now available in<a href="https://blogs.nvidia.com/blog/2023/02/09/xpeng-electric-vehicles-expand-in-europe/" target="_blank" rel="noopener"> Norway, Sweden, Denmark and the Netherlands</a>. The automaker’s intelligent <a href="https://blogs.nvidia.com/blog/2023/07/05/xpeng-g6-coupe-suv-drive-orin/" target="_blank" rel="noopener">G6</a> Coupe SUV, also powered by NVIDIA DRIVE Orin, will be made available to the European market next year.</p>
-<figure id="attachment_66884" aria-describedby="caption-attachment-66884" style="width: 672px" class="wp-caption alignnone"><img decoding="async" loading="lazy" class="wp-image-66884 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-672x448.png" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-672x448.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-400x267.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-768x512.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-1536x1024.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-675x450.png 675w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-322x215.png 322w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-150x100.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image7-1280x854.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image7.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-66884" class="wp-caption-text">XPENG G9 and P7. Image courtesy of XPENG.</figcaption></figure>
-<h2><strong>Ecosystem Partners Paint IAA Show Floor Green</strong></h2>
-<p>In addition to automakers, NVIDIA ecosystem partners at IAA showcased their latest innovations and developments in the mobility space:</p>
-<ul>
-<li><b>DeepRoute.ai</b> showed its Driver 3.0 HD Map-Free solution built on NVIDIA DRIVE Orin and designed to offer a non-geofenced solution for mass-produced ADAS vehicles. The company plans to bring this NVIDIA-powered solution to the European market and expand beyond later next year.</li>
-<li><b>DeepScenario </b>showed how it’s using NVIDIA hardware for training and inference on its AI models.</li>
-<li><b>dRISK</b>, an NVIDIA DRIVE Sim ecosystem member, demonstrated its full-stack solution for training, testing and validating on <a href="https://blogs.nvidia.com/blog/2019/02/06/what-is-level-2-automated-driving/" target="_blank" rel="noopener">level 2-level 5</a> ADAS/AV/ADS software, preparing autonomy to handle regulatory requirements and the full complexity of the real world for the next generation of highly effective and commercially viable autonomous solutions.</li>
-<li><b>NODAR</b> introduced GridDetect, its latest 3D vision product for level 3 driving. Using off-the-shelf cameras and NVIDIA DRIVE Orin, NODAR’s latest system provides high-resolution, real-time 3D sensing at up to 1,000m and can detect objects as small as 10cm at 150m. GridDetect also provides a comprehensive bird’s-eye view of objects in all conditions — including in challenging scenarios like nighttime, adverse weather and severe fog.</li>
-<li><b>SafeAD</b> demonstrated its perception technology for mapless driving, fleet map updates and validation processes.</li>
-</ul>
-<figure id="attachment_66887" aria-describedby="caption-attachment-66887" style="width: 652px" class="wp-caption alignnone"><img decoding="async" loading="lazy" class="wp-image-66887 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-652x500.png" alt="" width="652" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-652x500.png 652w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-400x307.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-768x589.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-1536x1177.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-587x450.png 587w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-280x215.png 280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-130x100.png 130w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image1-1280x981.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image1.png 2000w" sizes="(max-width: 652px) 100vw, 652px" /><figcaption id="caption-attachment-66887" class="wp-caption-text">NODAR GridDetect system for high-resolution, real-time 3D sensing. Image courtesy of NODAR.</figcaption></figure>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/new-iaa-feature.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/new-iaa-feature-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Mobility Gets Amped: IAA Show Floor Energized by Surge in EV Reveals, Generative AI]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>A Quantum Boost: cuQuantum With PennyLane Lets Simulations Ride Supercomputers</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/12/quantum-supercomputers-pennylane/</link>
-		
-		<dc:creator><![CDATA[Sam Stanwyck]]></dc:creator>
-		<pubDate>Tue, 12 Sep 2023 15:00:56 +0000</pubDate>
-				<category><![CDATA[Research]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<category><![CDATA[Customer Stories]]></category>
-		<category><![CDATA[GPU Computing]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[New GPU Uses]]></category>
-		<category><![CDATA[NVIDIA Ampere Architecture]]></category>
-		<category><![CDATA[Open Source]]></category>
-		<category><![CDATA[Parallel Computing]]></category>
-		<category><![CDATA[Science]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66694</guid>
-
-					<description><![CDATA[Ten miles in from Long Island’s Atlantic coast, Shinjae Yoo is revving his engine. The computational scientist and machine learning group lead at the U.S. Department of Energy’s Brookhaven National Laboratory is one of many researchers gearing up to run quantum computing simulations on a supercomputer for the first time, thanks to new software. Yoo’s <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/12/quantum-supercomputers-pennylane/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Ten miles in from Long Island’s Atlantic coast, Shinjae Yoo is revving his engine.</p>
-<p>The computational scientist and machine learning group lead at the U.S. Department of Energy’s Brookhaven National Laboratory is one of many researchers gearing up to run quantum computing simulations on a supercomputer for the first time, thanks to new software.</p>
-<p>Yoo’s engine, <a href="https://blogs.nvidia.com/blog/2021/05/27/nersc-perlmutter-ai-supercomputer/">the Perlmutter supercomputer</a> at the National Energy Research Scientific Computing Center (NERSC), is using the latest version of <a href="https://pennylane.ai/">PennyLane</a>, a quantum programming framework from Toronto-based Xanadu. The open-source software, which builds on the <a href="https://developer.nvidia.com/cuquantum-sdk">NVIDIA cuQuantum software development kit</a>, lets simulations run on high-performance clusters of NVIDIA GPUs.</p>
-<p>The performance is key because researchers like Yoo need to process ocean-size datasets. He’ll run his programs across as many as 256 <a href="https://www.nvidia.com/en-us/data-center/a100/">NVIDIA A100 Tensor Core GPUs</a> on Perlmutter to simulate about three dozen <a href="https://blogs.nvidia.com/blog/2022/07/29/what-is-a-qpu/">qubits</a> — the powerful calculators quantum computers use.</p>
-<p>That’s about twice the number of qubits most researchers can model these days.</p>
-<h2><b>Powerful, Yet Easy to Use</b></h2>
-<p>The so-called multi-node version of PennyLane, used in tandem with the NVIDIA cuQuantum SDK, simplifies the complex job of accelerating massive simulations of quantum systems.</p>
-<p>“This opens the door to letting even my interns run some of the largest simulations — that’s why I’m so excited,” said Yoo, whose team has six projects using PennyLane in the pipeline.</p>
-<figure id="attachment_66812" aria-describedby="caption-attachment-66812" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-scaled.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-66812" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-672x443.jpg" alt="Pic of Brookhaven’s Shinjae Yoo prepares to scale up his quantum work on the Perlmutter supercomputer." width="672" height="443" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-672x443.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-400x264.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-768x507.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-1536x1013.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-682x450.jpg 682w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-326x215.jpg 326w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-152x100.jpg 152w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Shinjae-Yoo-Brookhaven-crop-1280x844.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-66812" class="wp-caption-text">Brookhaven’s Shinjae Yoo prepares to scale up his quantum work on the Perlmutter supercomputer.</figcaption></figure>
-<p>His work aims to advance high-energy physics and machine learning. Other researchers use quantum simulations to take chemistry and materials science to new levels.</p>
-<p>Quantum computing is alive in corporate R&amp;D centers, too.</p>
-<p>For example, Xanadu is helping companies like <a href="https://www.prnewswire.com/news-releases/xanadu-and-rolls-royce-to-build-quantum-computing-tools-with-pennylane-301723158.html">Rolls-Royce</a> develop quantum algorithms to design state-of-the-art jet engines for sustainable aviation and <a href="https://www.volkswagen-newsroom.com/en/press-releases/volkswagen-group-and-xanadu-establish-quantum-simulation-program-for-battery-materials-15253">Volkswagen Group</a> invent more powerful batteries for electric cars.</p>
-<p><b>Four More Projects on Perlmutter</b></p>
-<p>Meanwhile, at NERSC, at least four other projects are in the works this year using multi-node Pennylane, according to Katherine Klymko, who leads the quantum computing program there. They include efforts from NASA Ames and the University of Alabama.</p>
-<p>“Researchers in my field of chemistry want to study molecular complexes too large for classical computers to handle,&#8221; she said. &#8220;Tools like Pennylane let them extend what they can currently do classically to prepare for eventually running algorithms on large-scale quantum computers.”</p>
-<h2><b>Blending AI, Quantum Concepts</b></h2>
-<p>PennyLane is the product of a novel idea. It adapts popular deep learning techniques like backpropagation and tools like PyTorch to programming quantum computers.</p>
-<p>Xanadu designed the code to run across as many types of quantum computers as possible, so the software got traction in the quantum community soon after its introduction in <a href="https://arxiv.org/pdf/2207.14734.pdf">a 2018 paper</a>.</p>
-<p>“There was engagement with our content, making cutting-edge research accessible, and people got excited,” recalled Josh Izaac, director of product at Xanadu and a quantum physicist who was an author of the paper and a developer of PennyLane.</p>
-<h2><b>Calls for More Qubits</b></h2>
-<p>A common comment on the PennyLane forum these days is, “I want more qubits,” said Lee J. O’Riordan, a senior quantum software developer at Xanadu, responsible for PennyLane’s performance.</p>
-<p>“When we started work in 2022 with cuQuantum on a single GPU, we got 10x speedups pretty much across the board … we hope to scale by the end of the year to 1,000 nodes — that’s 4,000 GPUs — and that could mean simulating more than 40 qubits,” O’Riordan said.</p>
-<p>Scientists are still formulating the questions they’ll address with that performance — the kind of problem they like to have.</p>
-<p>Companies designing quantum computers will use the boost to test ideas for building better systems. Their work feeds a virtuous circle, enabling new software features in PennyLane that, in turn, enable more system performance.</p>
-<h2><b>Scaling Well With GPUs</b></h2>
-<p>O’Riordan saw early on that GPUs were the best vehicle for scaling PennyLane’s performance. He co-authored last year <a href="https://arxiv.org/abs/2207.14734">a paper</a> on a method for splitting a quantum program across more than 100 GPUs to simulate more than 60 qubits, split into many 30 qubit sub-circuits.</p>
-<figure id="attachment_66815" aria-describedby="caption-attachment-66815" style="width: 381px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/Lee-ORiordan.jpg"><img decoding="async" loading="lazy" class="size-medium wp-image-66815" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Lee-ORiordan-381x400.jpg" alt="Picture of Lee J. O’Riordan, PennyLane developer at Xanadu" width="381" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Lee-ORiordan-381x400.jpg 381w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Lee-ORiordan-476x500.jpg 476w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Lee-ORiordan-429x450.jpg 429w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Lee-ORiordan-205x215.jpg 205w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Lee-ORiordan-95x100.jpg 95w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Lee-ORiordan.jpg 520w" sizes="(max-width: 381px) 100vw, 381px" /></a><figcaption id="caption-attachment-66815" class="wp-caption-text">Lee J. O’Riordan</figcaption></figure>
-<p>“We wanted to extend our work to even larger workloads, so when we heard NVIDIA was adding multi-node capability to cuQuantum, we wanted to support it as soon as possible,” he said.</p>
-<p>Within four months, multi-node PennyLane was born.</p>
-<p>“For a big, distributed GPU project, that was a great turnaround time. Everyone working on cuQuantum helped make the integration as easy as possible,” O’Riordan said.</p>
-<p>A <a href="https://pennylane.ai/blog/2023/09/distributing-quantum-simulations-using-lightning-gpu-with-NVIDIA-cuQuantum/">Xanadu blog</a> details how developers can simulate large-scale systems with more than 30 qubits using PennyLane and cuQuantum.</p>
-<p>The team is still collecting data, but so far on “sample-based workloads, we see almost linear scaling,” he said.</p>
-<p>Or, as NVIDIA founder and CEO Jensen Huang might say, “<a href="https://www.youtube.com/live/3qSQjRaseos?feature=share&amp;t=3062">The more you buy, the more you save</a>.”</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Pennylane-KV-Final.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Pennylane-KV-Final-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[A Quantum Boost: cuQuantum With PennyLane Lets Simulations Ride Supercomputers]]></media:title>
-			<media:description type="html">PennyLane software with cuQuantum for quantum simulations on supercomputers</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>One Small Step for Artists, One Giant Leap for Creative-Kind</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/12/aendom-blender-adobe-substance-3d-painter/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Tue, 12 Sep 2023 13:00:35 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66825</guid>
-
-					<description><![CDATA[Editor’s note: This post is part of our weekly In the NVIDIA Studio series, which celebrates featured artists, offers creative tips and tricks and demonstrates how NVIDIA Studio technology improves creative workflows.  When it comes to converting 2D concepts into 3D masterpieces, self-taught visual development artist Alex Treviño has confidence in the potential of all <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/12/aendom-blender-adobe-substance-3d-painter/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. </i></p>
-<p>When it comes to converting 2D concepts into 3D masterpieces, self-taught visual development artist Alex Treviño has confidence in the potential of all aspiring creators.</p>
-<p>“You may think it’s a complicated process, but trust me, it’s easier than you think,” he said.</p>
-<p>The featured content creator of this week’s <i>In the NVIDIA Studio </i>installment, Treviño is the founder of <a href="https://www.aendom.com/en/about/">AENDOM</a>, a project with the mission of creating artwork rooted in storytelling elements and sharing creative processes to educate and inspire the next generation of artists.</p>
-<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-66825-1" width="1280" height="720" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/360-textured.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/360-textured.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/09/360-textured.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>From this initiative, the Lunar Rover collection was born.</p>
-<h2><b>Shooting for the Moon</b></h2>
-<p>The story behind the <i>Lunar Rover</i> collection comes from an exploration of grief and inspired by the work of artist <a href="https://mattiasadolfsson.com/">Mattias Adolfsson</a>.</p>
-<p>However, Treviño wanted to translate Adolfsson’s detailed and playful caricature style into his own 3D design.</p>
-<figure id="attachment_66829" aria-describedby="caption-attachment-66829" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_.png"><img decoding="async" loading="lazy" class="size-full wp-image-66829" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_.png" alt="" width="1280" height="683" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-672x359.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-768x410.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-842x450.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-403x215.png 403w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-alex-trevino-concept-1280w_-188x100.png 188w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66829" class="wp-caption-text">Treviño’s inspiration, credit Mattias Adolfsson.</figcaption></figure>
-<p>Treviño started gathering reference imagery and creating mood boards with the standalone program PureRef, which allowed him to play with different perspectives and styles while in the conceptual phase.</p>
-<p>“I wanted the character to explore a desolate landscape where it is clear that, despite loneliness and abandonment, he continues to explore in allusion to the emotions of grief,” Treviño said.</p>
-<figure id="attachment_66832" aria-describedby="caption-attachment-66832" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_.png"><img decoding="async" loading="lazy" class="wp-image-66832 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_.png" alt="" width="1280" height="800" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-400x250.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-672x420.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-768x480.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-720x450.png 720w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-344x215.png 344w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-secondphase-1280w_-160x100.png 160w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66832" class="wp-caption-text">Advanced sculpting in Blender.</figcaption></figure>
-<p>He then shaped and sculpted models in his preferred 3D app, Blender. Using its Cycles’ RTX-accelerated OptiX ray tracing in the viewport, powered by his <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/">GeForce RTX 3080 Ti GPU</a>-equipped PC, Treviño unlocked interactive, photorealistic modeling with smooth movement in the viewport.</p>
-<p>“NVIDIA GPUs have a wide range of support and powerful performance, which ensures that I can rely on my GPU to work correctly and render images faster and with higher quality,” said Treviño.</p>
-<p>Next, Treviño applied UV mapping to his models, which allowed him to texture them in Adobe Substance 3D Painter to create realistic, detailed textures.</p>
-<figure id="attachment_66835" aria-describedby="caption-attachment-66835" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66835" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w.png" alt="" width="1280" height="800" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-400x250.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-672x420.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-768x480.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-720x450.png 720w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-344x215.png 344w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-uvs-1280w-160x100.png 160w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66835" class="wp-caption-text">UV mapping in Blender.</figcaption></figure>
-<p>RTX-accelerated <a href="https://blogs.nvidia.com/blog/2022/08/04/direct-indirect-lighting/">light and ambient occlusion</a> baking optimized assets in mere moments.</p>
-<figure id="attachment_66838" aria-describedby="caption-attachment-66838" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66838" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w.png" alt="" width="1280" height="800" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-400x250.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-672x420.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-768x480.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-720x450.png 720w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-344x215.png 344w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-textured-1280w-160x100.png 160w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66838" class="wp-caption-text">Textures created in Adobe Substance 3D Painter.</figcaption></figure>
-<p>“My GeForce RTX GPU’s capabilities were essential while texturing,” Treviño said. “Movement without lag and the ability to make speedy material changes effortlessly were especially helpful while swapping looks.”</p>
-<p>Treviño moved to Adobe Illustrator to create alphas — color components that represent degrees of transparency or opacity of colors — as well as masks and patterns.</p>
-<p>“GPU acceleration and AI-enabled features are essential tools, as they allow me to work more efficiently and produce higher-quality results,” said Treviño.</p>
-<p>He returned to Blender, taking advantage of RTX-accelerated OptiX ray tracing in Blender Cycles for the fastest final-frame render.</p>
-<p>Finally, Treviño imported the project into Adobe Photoshop for postproduction work, including adjusting color grading, sharpness, noise and chromatic aberration, and using look-up tables for retouching — just a few of the 30+ GPU-accelerated features at his disposal.</p>
-<figure id="attachment_66841" aria-describedby="caption-attachment-66841" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66841" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w.png" alt="" width="1280" height="508" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-400x159.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-672x267.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-768x305.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-842x334.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-406x161.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-03-tele-1280w-188x75.png 188w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66841" class="wp-caption-text">Stunning details in post-production and color correction thanks to Adobe Photoshop.</figcaption></figure>
-<p>The end result achieved Treviño’s goal of creating a desolate landscape and alluding to the emotions of grief.</p>
-<figure id="attachment_66844" aria-describedby="caption-attachment-66844" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66844" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w.png" alt="" width="1280" height="508" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-400x159.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-672x267.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-768x305.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-842x334.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-406x161.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week74-05-tele-1280w-188x75.png 188w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66844" class="wp-caption-text">Beautiful yet desolate.</figcaption></figure>
-<p>For a more detailed look at Treviño’s creative process, check out his five-part tutorial series, <i>Creating 3D Lunar Rover w/ Alex Treviño,</i> live on the NVIDIA Studio <a href="https://www.youtube.com/@NVIDIA-Studio/featured">YouTube channel</a>.</p>
-<p><a href="https://www.youtube.com/playlist?list=PL4w6jm6S2lzvy-mfeIHJiAmqN6ARz-DJt"><i>https://www.youtube.com/playlist?list=PL4w6jm6S2lzvy-mfeIHJiAmqN6ARz-DJt</i></a></p>
-<p>Discover exclusive step-by-step tutorials from industry-leading artists, inspiring community showcases and more, powered by <a href="https://www.nvidia.com/en-us/studio/laptops-desktops/">NVIDIA Studio hardware</a> and <a href="https://www.nvidia.com/en-us/studio/">software</a>.</p>
-<h2>Lunar Lessons Learned</h2>
-<p>Treviño has three monumental pieces of advice for aspiring artists:</p>
-<ol>
-<li><b>Learn the basics of the entire pipeline process</b>. Learn about modeling, texturing, rendering, post-production, marketing and promotion. Expertise across the board isn’t required but general understanding of each step is.</li>
-<li><b>Don’t be afraid to experiment</b>. The best way to learn is by doing. Try new things and experiment with different techniques. Mistakes will lead to growth and evolved artistry.</li>
-<li><b>Find a community of like-minded artists</b>. Connect in multiple communities to learn from others, share work and get valuable feedback.</li>
-</ol>
-<figure id="attachment_66847" aria-describedby="caption-attachment-66847" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w.png"><img decoding="async" loading="lazy" class="size-full wp-image-66847" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w.png" alt="" width="1280" height="403" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-400x126.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-672x212.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-768x242.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-842x265.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-406x128.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/week70-jiffyvfx-artist-feature-gallery-1280w-188x59.png 188w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-66847" class="wp-caption-text">3D visual development artist Alex Treviño.</figcaption></figure>
-<p>Check out Treviño’s portfolio on <a href="https://www.instagram.com/aendom/">Instagram</a>.</p>
-<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/09/360-textured.mp4" length="1994733" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/nv-blog-header-preview-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/nv-blog-header-preview-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[One Small Step for Artists, One Giant Leap for Creative-Kind]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
