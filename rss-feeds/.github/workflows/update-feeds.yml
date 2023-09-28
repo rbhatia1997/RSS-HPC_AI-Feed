@@ -2,16 +2,18 @@ name: Update RSS Feeds Final Version
 
 on:
   workflow_dispatch:
-    
+  push:
+    branches:
+      - main
+      - gh-pages
+
 jobs:
   fetch-feeds:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout gh-pages branch
+    - name: Checkout code
       uses: actions/checkout@v2
-      with:
-        ref: gh-pages
 
     - name: Fetch AWS Feed
       run: curl "https://aws.amazon.com/blogs/hpc/feed/" > rss-feeds/public/aws-feed.xml
@@ -28,4 +30,4 @@ jobs:
         git config user.email "action@github.com"
         git add rss-feeds/public/*.xml
         git commit -m "Updated RSS Feeds" || echo "No changes to commit"
-        git push origin gh-pages
+        git push
