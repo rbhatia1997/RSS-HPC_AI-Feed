@@ -2,38 +2,33 @@ name: Update RSS Feeds for GH-Pages
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '0 */6 * * *'  # This runs the action every 6 hours.
 
 jobs:
   fetch-feeds:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout main branch
+    - name: Checkout gh-pages branch
       uses: actions/checkout@v2
       with:
-        ref: main
-
-    - name: Checkout gh-pages branch
-      run: |
-        git fetch
-        git checkout -b gh-pages origin/gh-pages
+        ref: gh-pages
+        token: ${{ secrets.MY_GH_TOKEN }}
 
     - name: Fetch AWS Feed
-      run: curl "https://aws.amazon.com/blogs/hpc/feed/" > rss-feeds/public/aws-feed.xml
+      run: curl "https://aws.amazon.com/blogs/hpc/feed/" > aws-feed.xml
 
     - name: Fetch NVIDIA Feed 1
-      run: curl "https://feeds.feedburner.com/nvidiablog" > rss-feeds/public/nvidia-feed1.xml
+      run: curl "https://feeds.feedburner.com/nvidiablog" > nvidia-feed1.xml
 
     - name: Fetch NVIDIA Feed 2
-      run: curl "https://nvidianews.nvidia.com/releases.xml" > rss-feeds/public/nvidia-feed2.xml
+      run: curl "https://nvidianews.nvidia.com/releases.xml" > nvidia-feed2.xml
 
     - name: Commit and Push
       run: |
         git config user.name "GitHub Action"
         git config user.email "action@github.com"
-        git add rss-feeds/public/*.xml
+        git add *.xml
         git commit -m "Updated RSS Feeds for GH-Pages" || echo "No changes to commit"
-        git push origin gh-pages
+        git push
