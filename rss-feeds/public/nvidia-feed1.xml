@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 27 Sep 2023 19:00:27 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 27 Sep 2023 20:04:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,169 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3</generator>
 	<item>
+		<title>Kicking Games Up a Notch: Startup Sports Vision AI to Broadcast Athletics Across the Globe</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/28/pixellot-vision-ai-sports-broadcasting/</link>
+		
+		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
+		<pubDate>Thu, 28 Sep 2023 15:00:07 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Jetson]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Metropolis]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67151</guid>
+
+					<description><![CDATA[Pixellot is scoring with vision AI — making it easier for organizations to deliver real-time sports broadcasting and analytics to viewers across the globe. A member of the NVIDIA Metropolis vision AI partner ecosystem, the company based near Tel Aviv offers an AI-powered platform that automates the capturing, streaming and analysis of sporting events. It’s <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/28/pixellot-vision-ai-sports-broadcasting/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Pixellot is scoring with vision AI — making it easier for organizations to deliver real-time sports broadcasting and analytics to viewers across the globe.</p>
+<p>A member of the <a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/" target="_blank" rel="noopener">NVIDIA Metropolis</a> vision AI partner ecosystem, the company based near Tel Aviv offers an AI-powered platform that automates the capturing, streaming and analysis of sporting events.</p>
+<p>It’s changing the game for fans, coaches and players of nearly 20 different sports — not just basketball and soccer but also rugby and handball — as it broadcasts events and provides analytics from more than 30,000 venues across 70+ countries. In the U.S., Pixellot powers the broadcasting of over a million games every year through its partnership with the NFHS Network, a leader in streaming live and on-demand high school sports.</p>
+<p>Through its broadcasting partners like the NFHS Network, MLB and others, Pixellot provides professional analytics, post-match breakdowns and highlights based on jersey numbers with shot charts and heat maps — which can be especially useful for coaches and players of school and pro sports alike as they study their moves to up their game. It also enables interactive experiences for users, who can manipulate viewframes and cut their own highlights for a game.</p>
+<p>Recently, <a href="https://supersportschools.com/" target="_blank" rel="noopener">SuperSport Schools</a>, a company based in Cape Town, South Africa, deployed the Pixellot platform to power an app that broadcasts student athletics across the nation, where more than 1,500 high schools are active in sports.</p>
+<p>“Our goal is to democratize the coverage of sports with the help of AI and automation,” said Yossi Tarablus, who leads marketing at Pixellot, a member of the <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener">NVIDIA Inception</a> program for cutting-edge startups. “Using the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/" target="_blank" rel="noopener">NVIDIA Jetson</a> platform for edge AI, Pixellot brings powerful technology for sports broadcasting and analytics to some of the world’s most remote areas.”</p>
+<p><iframe title="Introducing Show S3 | The best automated sports camera ever made" width="500" height="281" src="https://www.youtube.com/embed/OWiU1-isCcw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>How Pixellot Works</b></h2>
+<p>During peak sports seasons, about 200,000 games a month are broadcasted across the globe using the Pixellot platform, according to Tarablus.</p>
+<p>Lightweight Pixellot cameras powered by NVIDIA Jetson capture high-quality video of games, matches and even practices — and livestream them in high definition to users through an app in real time with an overlaid scoreboard, live stats, commentary and more.</p>
+<p><img decoding="async" fetchpriority="high" class="aligncenter wp-image-67187 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-667x500.jpg" alt="" width="667" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-667x500.jpg 667w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-400x300.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-768x576.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-600x450.jpg 600w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-287x215.jpg 287w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-133x100.jpg 133w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured.jpg 1024w" sizes="(max-width: 667px) 100vw, 667px" /></p>
+<p>The platform creates an automatic viewframe that simulates a camera operator, optimizes videos and corrects scene lighting using <a href="https://www.nvidia.com/en-us/geforce/rtx/" target="_blank" rel="noopener">NVIDIA RTX</a> ray-tracing technology.</p>
+<p>In addition, the platform helps organizations and companies monetize sports while making them more accessible to viewers, as it enables over-the-top, or OTT, streaming — direct streaming over the internet without the need for a traditional cable or satellite TV provider.</p>
+<p>In all of its camera setups, the Metropolis member runs the <a href="https://developer.nvidia.com/deepstream-sdk" target="_blank" rel="noopener">NVIDIA DeepStream</a> software development kit for AI-powered video streaming analytics. And the company relies on the <a href="https://developer.nvidia.com/tensorrt" target="_blank" rel="noopener">NVIDIA TensorRT SDK</a> for high-performance deep learning inference.</p>
+<p>“NVIDIA Jetson made it possible for Pixellot to create the most accurate and affordable AI-powered camera solution for broadcasting live sporting events,” said Gal Oz, chief technology officer and cofounder of Pixellot. “The versatility of Jetson modules in terms of camera pipeline, encoders and AI capabilities enabled Pixellot to develop multiple products based on the same hardware and software platform.”</p>
+<h2><b>Broadcasting South African School Sports</b></h2>
+<p>High-quality, real-time broadcasts of athletics are difficult to produce without access to a slew of graphics and data.</p>
+<p>As the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/" target="_blank" rel="noopener">NVIDIA Jetson Orin NX</a> module enables AI-powered video processing and GPU-accelerated computing right at the edge — on the field or at courtside — Pixellot lets organizations broadcast sports from anywhere.</p>
+<p>“It’s amazing how many people have told us stories about a moment they were empowered to share with their children thanks to SuperSport Schools and Pixellot, because they couldn’t be there physically but were present through live or on-demand video,” said Kelvin Watt, managing director of Capitalize Media and SuperSport Schools, on the Pixellot deployment in South Africa.</p>
+<p>The SuperSport Schools app, which is free and recently reached 600,000 subscribers, was the first to broadcast a junior nationals track race in the country.</p>
+<p>At the event last year, a student named Viwe Jingqi broke 50-plus-year national records for both the 100- and 200-meter races for South African girls under 18 years old. People all over the world could easily witness these historic victories through the SuperSport Schools app, powered by Pixellot.</p>
+<p><iframe title="Changing the game for THOUSANDS of African athletes &#x1f30d;&#x26bd;&#x1f3c0;" width="500" height="281" src="https://www.youtube.com/embed/1rGbHWLIReQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Building a Smart Sports City in China</b></h2>
+<p>In China, tech giant Baidu and the Chengdu Sports Authority are using Pixellot technology in an initiative to develop a smart sports city, with an initial focus on broadcasting community soccer.</p>
+<p>Chengdu, the capital of southwestern China’s Sichuan province, is a sports-oriented city and was the host of this year’s <a href="https://olympics.com/en/sport-events/2023-fisu-world-university-games-chengdu" target="_blank" rel="noopener">World University Games</a>, an event sanctioned by the International University Sports Federation.</p>
+<p>“Pixellot’s AI-driven sports production solutions are a perfect fit for our strategic vision of delivering innovative technology solutions to communities,” said Liu Chuan, solution director of the intelligent cloud sports industry at <a href="https://www.sportsvideo.org/2023/03/13/pixellot-inks-new-partnership-with-chinas-baidu-to-transform-local-sports-through-ai/" target="_blank" rel="noopener">Baidu</a>.</p>
+<p>“Broadcasting community soccer with vision AI is part of the Chengdu initiative’s efforts to emphasize the health benefits of engaging in sports recreationally,” said Tarablus. “It moves the spotlight from pro or Olympic sports to the importance of athletics for all.”</p>
+<p><i>Learn more about the </i><a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/" target="_blank" rel="noopener"><i>NVIDIA Metropolis</i></a><i> application framework, developer tools and partner ecosystem.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Kicking Games Up a Notch: Startup Sports Vision AI to Broadcast Athletics Across the Globe]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>V for Victory: ‘Cyberpunk 2077: Phantom Liberty’ Comes to GeForce NOW</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/28/geforce-now-thursday-sep-28/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 28 Sep 2023 13:00:45 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67195</guid>
+
+					<description><![CDATA[The wait is over. GeForce NOW Ultimate members can experience Cyberpunk 2077: Phantom Liberty on GOG.com at full GeForce RTX 4080 quality, with support for NVIDIA DLSS 3.5 technology. It’s part of an action-packed GFN Thursday, with 26 more games joining the cloud gaming platform’s library, including Quake II from id Software. A New Look <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/28/geforce-now-thursday-sep-28/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The wait is over. GeForce NOW <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate</a> members can experience <i>Cyberpunk 2077:</i> <i>Phantom Liberty</i> on GOG.com at full <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080/">GeForce RTX 4080</a> quality, with support for <a href="https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-3-5-ray-reconstruction/">NVIDIA DLSS 3.5</a> technology.</p>
+<p>It’s part of an action-packed GFN Thursday, with 26 more games joining the cloud gaming platform’s library, including <i>Quake II</i> from id Software.</p>
+<h2><b>A New Look for Night City</b></h2>
+<figure id="attachment_67205" aria-describedby="caption-attachment-67205" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-scaled.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67205" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-672x378.jpg" alt="Cyberpunk 2077: Phantom Liberty on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Cyberpunk_2077_Phantom_Liberty-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67205" class="wp-caption-text">Experience NVIDIA DLSS 3.5 in <em>Cyberpunk 2077’s</em> spy-thriller expansion.</figcaption></figure>
+<p>Take on a thrilling challenge with <i>Phantom Liberty</i>, an all-new adventure for <i>Cyberpunk 2077</i>. When the orbital shuttle of the President of the New United States of America is shot down over the deadliest district of Night City, there’s only one person who can save her. Become V, a cyberpunk for hire, and dive into a tangled web of espionage and political intrigue, unraveling a story that connects the highest echelons of power with the brutal world of black-market mercenaries.</p>
+<p>Ultimate members can return to the neon lights of Night City and experience the benefits of NVIDIA DLSS 3.5 and its new Ray Reconstruction technology. These updates enhance the quality of full ray tracing in <i>Cyberpunk 2077</i>’s Ray Tracing: Overdrive Mode, as part of the game’s 2.0 update available for the base game for free and included with the <i>Phantom Liberty</i> expansion. Upgrade to a GeForce NOW Ultimate membership today to see Night City at its best.</p>
+<h2><b>Prepare for War</b></h2>
+<figure id="attachment_67202" aria-describedby="caption-attachment-67202" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67202" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-672x336.jpg" alt="Quake II on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Quake_II.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67202" class="wp-caption-text">id Software’s classic first-person shooter is better than ever, streaming from the cloud.</figcaption></figure>
+<p>Experience the authentic, enhanced and complete version of id Software’s critically acclaimed first-person shooter, <i>Quake II</i>, now streaming from the cloud.</p>
+<p>Humankind is at war with the Strogg, a hostile alien race that’s attacked Earth. In response, humanity launched a strike on the Strogg homeworld — which failed. Outnumbered and outgunned, battle through fortified military installations to shut down the enemy’s war machine. Only then will the fate of humanity be decided.</p>
+<p><i>Quake II</i> includes a new, enhanced version of id Software’s classic, along with both original mission packs: “The Reckoning” and “Ground Zero.” Plus, battle through 28 campaign levels in MachineGames’ all-new “Call of the Machine” expansion and play through the exclusive levels from <i>Quake II 64</i> for the first time on PC. Blast the Stroggs or friends in classic multiplayer modes at up to 4K and 120 frames per second or with ultrawide resolutions for GeForce NOW Ultimate members.</p>
+<h2><b>Nice Shootin,’ Tex</b></h2>
+<figure id="attachment_67199" aria-describedby="caption-attachment-67199" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67199" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-672x354.jpg" alt="GeForce NOW Kovaaks Ultimate Challenge" width="672" height="354" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-672x354.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-400x211.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-768x404.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-842x443.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Ultimate_KovaaKs_Challenge_Leaderboard.jpg 1126w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67199" class="wp-caption-text">Ultimate leads the way.</figcaption></figure>
+<p>The <a href="https://blogs.nvidia.com/blog/2023/08/10/geforce-now-thursday-aug-10/">GeForce NOW Ultimate KovaaK’s challenge</a> is complete, and the results are in: Ultimate power means more ultimate wins. Members worked to sharpen their skills and win amazing prizes during the challenge while experiencing the power of Ultimate for themselves. With up to 240 fps streaming at ultra-low latency, gamers are playing up to their ultimate potential, just by upgrading to an Ultimate membership.</p>
+<p>The proof is in the data. Check out some powerful stats showing what Ultimate members accomplished:</p>
+<ul>
+<li>Nearly <b>15,000</b> people took on the challenge, playing over <b>120,000 sessions</b>.</li>
+<li>Members saw a <b>2x boost</b> in scores when playing on Ultimate over a Free membership.</li>
+<li>All of the leaderboard’s <b>top 25 slots</b> were filled with those playing on Ultimate.</li>
+</ul>
+<p>But don’t just take our word for it. Here’s what it felt like for TinooQ, who placed third overall in the challenge:</p>
+<blockquote><p><i>“As a long-time KovaaK’s user, transitioning to this platform was seamless, as the precision and responsiveness was nothing short of extraordinary. </i></p>
+<p><i>“The minimal latency and the consistent 240 fps made me think that many people could rely solely on the GeForce NOW Ultimate plan and a monitor, that’s all. I found it perfect for top gaming, saving a lot of money and the PC hardware headaches I suffered when building mine.” — TinooQ</i></p></blockquote>
+<p>And check out what the press had to say about the Ultimate membership tier:</p>
+<blockquote><p>“GeForce NOW KovaaK&#8217;s Challenge Proves Gaming At Glorious 240 FPS Matters” – <a href="https://hothardware.com/news/geforce-now-kovaaks-challenge-240-fps-matters">Hot Hardware</a></p>
+<p>“Hot dang does GeForce Now Ultimate ever deliver.” – <a href="https://www.tomsguide.com/opinion/i-just-played-cyberpunk-2077-at-60-fps-on-a-dollar120-laptop-heres-how">Tom’s Guide</a></p>
+<p>“NVIDIA GeForce NOW has held the crown for cloud gaming performance for a while now, and it’s just getting better.” – <a href="https://9to5google.com/2023/08/10/geforce-now-ultimate-rtx-4080-upgrade/">9to5Google</a></p>
+<p>“Unsurprisingly, NVIDIA says 98% of the users who tried Kovaak’s Challenge on the GeForce NOW Ultimate tier have seen improvements in their test results over the free tier.” – <a href="https://wccftech.com/geforce-now-adds-gord-shadow-gambit-texas-chainsaw-massacre-wayfinder-and-more-this-week/">Wccftech</a></p>
+<p>“Nvidia has taken a different approach to cloud gaming: Instead of boosting their library and settling for 1080p 60fps, Nvidia’s GeForce Now service prioritizes performance, implementing faster graphics cards for players to use.” – <a href="https://www.slashgear.com/1363048/geforce-now-4080-servers-ultimate/">SlashGear</a></p>
+<p>“One of the distinguishing factors of GeForce Now is its superior image quality and lack of noticeable input delay. ” –<a href="https://gameishard.gg/news/geforce-now-game-streaming-is-like-magic-and-it-puts-xboxs-cloud-effort-to-shame/39297/"> Game Is Hard</a></p>
+<p>“NVIDIA’s GeForce NOW is widely considered one of the best cloud gaming platforms in terms of latency, visual fidelity, and overall experience.” — <a href="https://www.tweaktown.com/news/93300/starfield-is-available-to-stream-in-4k-via-nvidia-geforce-now-supporting-steam-and-game-pass/index.html">TweakTown</a></p></blockquote>
+<p>Everyone’s a winner when they play on Ultimate. Upgrade today for the best performance in the cloud, even when streaming popular shooters like <i>Counter Strike, Destiny 2, Tom Clancy’s Rainbow Six Siege </i>and more, where every frame counts.</p>
+<p>Even better, Ultimate members get a free copy of <i>KovaaK</i>’<i>s</i> – the world’s best aim trainer. Don’t miss this chance to claim the reward, starting today, only for Ultimate members. Be on the lookout for an email starting today, available only for a limited time.</p>
+<h2><b>Challenge Accepted</b></h2>
+<figure id="attachment_67196" aria-describedby="caption-attachment-67196" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67196" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-672x336.jpg" alt="Infinity Strash DRAGON QUEST The Adventure of Dai on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Infinity_Strash_DRAGON_QUEST_The_Adventures_Of_Dai.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67196" class="wp-caption-text">Be a hero. Be Dai.</figcaption></figure>
+<p>Square Enix’s <i>Infinity Strash: DRAGON QUEST The Adventure of Dai</i> leads 26 new titles in the GeForce NOW library this week. In this action role-playing game based on the popular anime and manga series of the same name, Dai and his friends must fight the Dark Lord Hadlar and his evil army of monsters. Fulfill Dai’s dream of becoming a hero in this game, which features fast-paced, dynamic combat, stunning anime-style graphics and a rich storyline.</p>
+<p>Here’s the full list of what’s joining this week:</p>
+<ul>
+<li><i>These Doomed Isles</i> (New release on <a href="https://store.steampowered.com/app/1840710?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 25)</li>
+<li><i>Paleo Pines </i>(New release on <a href="https://store.steampowered.com/app/1202200?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 26)</li>
+<li><i>Infinity Strash: DRAGON QUEST The Adventure of Dai </i>(New release on <a href="https://store.steampowered.com/app/1895810?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>Pizza Possum </i>(New release on <a href="https://store.steampowered.com/app/1951230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>Wildmender </i>(New release on <a href="https://store.steampowered.com/app/1599330?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>Overpass 2 </i>(New release on <a href="https://store.steampowered.com/app/1830630?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>Soulstice </i>(New release on <a href="https://www.epicgames.com/store/p/soulstice?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, Free on Sept. 28)</li>
+<li><i>Amnesia: Rebirth </i>(<a href="https://www.xbox.com/games/store/amnesia-rebirth/9PMM21KVRD72?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>BlazBlue: Cross Tag Battle </i>(<a href="https://www.xbox.com/games/store/blazblue-cross-tag-battle-special-edition/9NFWDRBZXDL9?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Bramble: The Mountain King </i>(<a href="https://www.xbox.com/games/store/bramble-the-mountain-king/9NHDFTCL691C?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Broforce (</i><a href="https://store.steampowered.com/app/274190?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a><i>)</i></li>
+<li><i>Don Duality (</i><a href="https://store.steampowered.com/app/2247570?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a><i>)</i></li>
+<li><i>Doom Eternal </i>(<a href="https://www.xbox.com/games/store/Doom-eternal-standard-edition-pc/9PK09BL31FK1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Dordogne </i>(<a href="https://www.xbox.com/games/store/dordogne/9pbc65kxpv5v?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Dust Fleet </i>(<a href="https://store.steampowered.com/app/406160?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Eastern Exorcist </i>(<a href="https://www.xbox.com/games/store/eastern-exorcist/9NQCJ132C6KW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Figment 2: Creed Valley </i>(<a href="https://www.xbox.com/games/store/figment-2-creed-valley/9NZWW8K1KX6S?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>I Am Fish </i>(<a href="https://www.xbox.com/games/store/i-am-fish/9mxgj8jzl0lk?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Necesse </i>(<a href="https://store.steampowered.com/app/1169040?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>A Plague Tale: Innocence </i>(<a href="https://www.xbox.com/games/store/a-plague-tale-innocence-windows-10/9ND0CG3LM22K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Quake II </i>(<a href="https://store.steampowered.com/app/2320?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/quake-ii?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a> and <a href="https://www.xbox.com/games/store/quake-ii/9P7L9H478GGV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Road 96 </i>(<a href="https://www.xbox.com/games/store/road-96/9NVBKDF85W8T?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Spacelines from the Far Out </i>(<a href="https://www.xbox.com/games/store/spacelines-from-the-far-out/9N23WV1HGLTQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Totally Reliable Delivery Service </i>(<a href="https://www.xbox.com/games/store/totally-reliable-delivery-service/9NZG72SH3H4W?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Warhammer 40,000: Battlesector </i>(<a href="https://www.xbox.com/games/store/warhammer-40000-battlesector/9PFLW6WZVJC7?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Yooka-Laylee and the Impossible Lair </i>(<a href="https://www.xbox.com/games/store/yooka-laylee-and-the-impossible-lair/9NB1LCQDPPM1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+</ul>
+<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/gfn-thursday-9-28-nv-blog-1280x680-no-cta.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/gfn-thursday-9-28-nv-blog-1280x680-no-cta-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[V for Victory: ‘Cyberpunk 2077: Phantom Liberty’ Comes to GeForce NOW]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>DENZA Unwraps Smart Driving Options for N7 Model Lineup, Powered by NVIDIA DRIVE Orin</title>
 		<link>https://blogs.nvidia.com/blog/2023/09/27/denza-smart-driving-n7-model-nvidia-drive-orin/</link>
 		
@@ -88,7 +251,7 @@
 <p>Quicker diagnosis enables quicker treatment. It’s especially critical for aggressive types of cancer that could grow or spread significantly in the weeks it takes for biopsy results to return from a dedicated pathology lab.</p>
 <p>Invenio is a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, a program that provides cutting-edge startups with technological support and AI platform guidance. The company accelerates AI training and inference using NVIDIA GPUs and software libraries.</p>
 <h2><b>Laser Focus on Cancer Care</b></h2>
-<figure id="attachment_67119" aria-describedby="caption-attachment-67119" style="width: 279px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001.png"><img decoding="async" fetchpriority="high" class="wp-image-67119 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-279x400.png" alt="" width="279" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-279x400.png 279w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-349x500.png 349w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-314x450.png 314w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-150x215.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001.png 693w" sizes="(max-width: 279px) 100vw, 279px" /></a><figcaption id="caption-attachment-67119" class="wp-caption-text">The NIO Laser Imaging System accelerates the imaging of fresh tissue biopsies.</figcaption></figure>
+<figure id="attachment_67119" aria-describedby="caption-attachment-67119" style="width: 279px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001.png"><img decoding="async" loading="lazy" class="wp-image-67119 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-279x400.png" alt="" width="279" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-279x400.png 279w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-349x500.png 349w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-314x450.png 314w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-150x215.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001.png 693w" sizes="(max-width: 279px) 100vw, 279px" /></a><figcaption id="caption-attachment-67119" class="wp-caption-text">The NIO Laser Imaging System accelerates the imaging of fresh tissue biopsies.</figcaption></figure>
 <p>Invenio’s NIO Laser Imaging System is a digital pathology tool that accelerates the imaging of fresh tissue biopsies. It’s been used in thousands of procedures in the U.S. and Europe. In 2021, it received the CE Mark of regulatory approval in Europe.</p>
 <p>The company plans to adopt the <a href="https://www.nvidia.com/en-us/lp/embedded-computing/robotics-edge-ai-tech-brief/">NVIDIA Jetson Orin series of edge AI modules</a> for its next-generation imaging system, which will feature near real-time AI inference accelerated by the <a href="https://developer.nvidia.com/tensorrt#:~:text=TensorRT%20provides%20INT8%20using%20quantization,detection%2C%20and%20natural%20language%20processing.">NVIDIA TensorRT SDK</a>.</p>
 <p>“We’re building a layer of AI models on top of our imaging capabilities to provide physicians with not just the diagnostic image but also an analysis of what they’re seeing,” Freudiger said. “With the AI performance provided by NVIDIA Jetson at the edge, they’ll be able to quickly determine what kinds of cancer cells are present in a biopsy image.”</p>
@@ -190,7 +353,7 @@
 <p>Both CEOs got their start working in diners. Valade got her first job as a waitress at a diner when she was 16. Huang got his first job at Denny’s in Portland when he was 15.</p>
 <p>“I was a dishwasher, I was a busboy, I waited tables,” Huang said. “No one can carry more coffee cups than I can.”</p>
 <p>To fuel even more great ideas, Valade announced the Denny’s Trillion-Dollar Incubator Contest — offering $25,000 in seed money for the next $1 trillion idea.</p>
-<p><img decoding="async" class="alignleft wp-image-67166 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg" alt="https://apimages.photoshelter.com/galleries/C0000IW9ydIWWwzE/2023-09-30-Denny-s-Trillion-Dollar-Incubator" width="278" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg 278w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-347x500.jpg 347w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-768x1106.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1067x1536.jpg 1067w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-scaled.jpg 1422w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-312x450.jpg 312w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-149x215.jpg 149w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-69x100.jpg 69w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1280x1843.jpg 1280w" sizes="(max-width: 278px) 100vw, 278px" />The contest is open to anyone with a creative and innovative idea that could impact the world. The only catch? The idea must originate — like NVIDIA — in a Denny’s booth.</p>
+<p><img decoding="async" loading="lazy" class="alignleft wp-image-67166 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg" alt="https://apimages.photoshelter.com/galleries/C0000IW9ydIWWwzE/2023-09-30-Denny-s-Trillion-Dollar-Incubator" width="278" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-278x400.jpg 278w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-347x500.jpg 347w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-768x1106.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1067x1536.jpg 1067w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-scaled.jpg 1422w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-312x450.jpg 312w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-149x215.jpg 149w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-69x100.jpg 69w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Dennys-Plaque-1280x1843.jpg 1280w" sizes="(max-width: 278px) 100vw, 278px" />The contest is open to anyone with a creative and innovative idea that could impact the world. The only catch? The idea must originate — like NVIDIA — in a Denny’s booth.</p>
 <p>NVIDIA, the leading accelerated computing and AI company, got its start at the 24-hour diner chain known for favorites such as its signature Grand Slam breakfast combo.</p>
 <p>In 1993, three friends — Huang, Chris Malachowsky and Curtis Priem — met at Denny’s to discuss creating a chip that would enable realistic 3D graphics on personal computers.</p>
 <p>The Denny’s just off a busy thoroughfare in the heart of Silicon Valley was the perfect place to start a business, said Huang, who lived nearby at the time with his wife and kids.</p>
@@ -252,7 +415,7 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 <p>Improving gaming, creating and everyday productivity, NVIDIA RTX graphics cards feature specialized Tensor Cores that deliver cutting-edge performance and transformative capabilities for AI.</p>
 <p>An arsenal of 100 million AI-ready, RTX-powered Windows 11 PCs and workstations are primed to excel in AI workflows and help launch a new wave of training models and apps.</p>
 <p>This week <i>In the NVIDIA Studio</i>, learn more about these AI power-players and read about Victor de Martrin, a self-taught 3D artist who shares the creative process behind his viral video <i>Ascension</i>, which features an assist from AI and uses a new visual effect process involving point clouds.</p>
-<p><iframe title="3D TRANSITION with Point Clouds" width="500" height="281" src="https://www.youtube.com/embed/S_zKwzaVsP4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="3D TRANSITION with Point Clouds" width="500" height="281" src="https://www.youtube.com/embed/S_zKwzaVsP4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <h2><b>AI on the Prize</b></h2>
 <p>AI can elevate both work and play.</p>
 <p>Content creators with <a href="https://www.nvidia.com/en-us/studio/laptops-desktops/">NVIDIA Studio hardware</a> can access over 100 AI-enabled and RTX-accelerated creative apps, including the Adobe Creative Cloud suite, Blender, Blackmagic Design’s DaVinci Resolve, OBS Studio and more.</p>
@@ -1073,129 +1236,6 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			/>
 			<media:title type="html"><![CDATA[Shout at the Devil: Capcom’s ‘Devil May Cry 5’ Joins GeForce NOW]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Unlocking the Language of Genomes and Climates: Anima Anandkumar on Using Generative AI to Tackle Global Challenges</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/13/anima-anandkumar-generative-ai/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Wed, 13 Sep 2023 13:00:11 +0000</pubDate>
-				<category><![CDATA[The AI Podcast]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66807</guid>
-
-					<description><![CDATA[Generative AI-based models can not only learn and understand natural languages — they can learn the very language of nature itself, presenting new possibilities for scientific research. Anima Anandkumar, Bren Professor at Caltech and senior director of AI research at NVIDIA, was recently invited to speak at the President’s Council of Advisors on Science and <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/13/anima-anandkumar-generative-ai/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Generative AI-based models can not only learn and understand natural languages — they can learn the very language of nature itself, presenting new possibilities for scientific research.</p>
-<p>Anima Anandkumar, Bren Professor at Caltech and senior director of AI research at NVIDIA, was recently invited to speak at the <a href="https://www.youtube.com/watch?v=gZb7Yr4C8po">President’s Council of Advisors on Science and Technology</a>.</p>
-<p>At the talk, Anandkumar said that generative AI was described as “an inflection point in our lives,” with discussions swirling around how to “harness it to benefit society and humanity through scientific applications.”</p>
-<p>On the latest episode of NVIDIA’s <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a>, host Noah Kravitz spoke with Anandkumar on generative AI’s potential to make splashes in the scientific community.</p>
-<p>It can, for example, be fed DNA, RNA, viral and bacterial data to craft a model that understands the language of genomes. That model can help predict dangerous coronavirus variants to accelerate drug and vaccine research.</p>
-<p>Generative AI can also predict extreme weather events like hurricanes or heat waves. Even with an AI boost, trying to predict natural events is challenging because of the sheer number of variables and unknowns.</p>
-<p>“Those are the aspects we’re working on at NVIDIA and Caltech, in collaboration with many other organizations, to say, ‘How do we capture the multitude of scales present in the natural world?’” she said. “With the limited data we have, can we hope to extrapolate to finer scales? Can we hope to embed the right constraints and come up with physically valid predictions that make a big impact?”</p>
-<p>Anandkumar adds that to ensure AI models are responsibly and safely used, existing laws must be strengthened to prevent dangerous downstream applications.</p>
-<p>She also talks about the AI boom, which is transforming the role of humans across industries, and problems yet to be solved.</p>
-<p>“This is the research advice I give to everyone: the most important thing is the question, not the answer,” she said.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1613940966%3Fsecret_token%3Ds-AMzlwyAPES3&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Anima Anandkumar on Using Generative AI to Tackle Global Challenges - Ep. 203" href="https://soundcloud.com/theaipodcast/anima-anandkumar/s-AMzlwyAPES3" target="_blank" rel="noopener">Anima Anandkumar on Using Generative AI to Tackle Global Challenges &#8211; Ep. 203</a></div>
-<h2>You Might Also Like</h2>
-<p><a href="https://soundcloud.com/theaipodcast/jules-anh-tuan-nguyen-explains-how-ai-lets-amputee-control-prosthetic-hand-video-games-ep-149">Jules Anh Tuan Nguyen Explains How AI Lets Amputee Control Prosthetic Hand, Video Games<br />
-</a>A postdoctoral researcher at the University of Minnesota discusses his efforts to allow amputees to control their prosthetic limb — right down to the finger motions — with their minds.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-overjet">Overjet’s Ai Wardah Inam on Bringing AI to Dentistry<br />
-</a>Overjet, a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, is moving fast to bring AI to dentists’ offices. Dr. Wardah Inam, CEO of the company, discusses using AI to improve patient care.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-luis-voloch">Immunai CTO and Co-Founder Luis Voloch on Using Deep Learning to Develop New Drugs<br />
-</a>Luis Voloch talks about tackling the challenges of the immune system with a machine learning and data science mindset.</p>
-<h2>Subscribe to the AI Podcast: Now Available on Amazon Music</h2>
-<p><a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">The AI Podcast is now available through Amazon Music</a>.</p>
-<p>In addition, get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
-<p>Make the AI Podcast better. Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2020/12/20181026-BJ-MB-CC__6881-M-Anima-Anandkumar-US-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1365"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2020/12/20181026-BJ-MB-CC__6881-M-Anima-Anandkumar-US-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Unlocking the Language of Genomes and Climates: Anima Anandkumar on Using Generative AI to Tackle Global Challenges]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Lends Support to Washington’s Efforts to Ensure AI Safety</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/12/ai-safety-washington/</link>
-		
-		<dc:creator><![CDATA[Ned Finkle]]></dc:creator>
-		<pubDate>Tue, 12 Sep 2023 20:35:31 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Corporate Responsibility]]></category>
-		<category><![CDATA[Cybersecurity]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[Public Sector]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66820</guid>
-
-					<description><![CDATA[In an event at the White House today, NVIDIA announced support for voluntary commitments that the Biden Administration developed to ensure advanced AI systems are safe, secure and trustworthy. The news came the same day NVIDIA’s chief scientist, Bill Dally, testified before a U.S. Senate subcommittee seeking input on potential legislation covering generative AI. Separately, <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/12/ai-safety-washington/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>In an event at the White House today, NVIDIA announced support for voluntary commitments that the Biden Administration developed to ensure advanced AI systems are safe, secure and trustworthy.</p>
-<p>The news came the same day NVIDIA’s chief scientist, Bill Dally, testified before a U.S. Senate subcommittee seeking input on potential legislation covering<a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/"> generative AI</a>. Separately, NVIDIA founder and CEO Jensen Huang will join other industry leaders in a closed-door meeting on AI Wednesday with the full Senate.</p>
-<p>Seven companies including Adobe, IBM, Palantir and Salesforce joined NVIDIA in supporting the<a href="https://www.whitehouse.gov/wp-content/uploads/2023/07/Ensuring-Safe-Secure-and-Trustworthy-AI.pdf"> eight agreements</a> the Biden-Harris administration released in July with support from Amazon, Anthropic, Google, Inflection, Meta, Microsoft and OpenAI.</p>
-<p>The commitments are designed to advance common standards and best practices to ensure the safety of generative AI systems until regulations are in place, the White House said. They include:</p>
-<ul>
-<li style="font-weight: 400;" aria-level="1">Testing the safety and capabilities of AI products before they’re deployed,</li>
-<li style="font-weight: 400;" aria-level="1">Safeguarding AI models against cyber and insider threats, and</li>
-<li style="font-weight: 400;" aria-level="1">Using AI to help meet society’s greatest challenges, from cancer to climate change.</li>
-</ul>
-<h2><b>Dally Shares NVIDIA’s Experience</b></h2>
-<p>In his testimony, Dally told the Senate subcommittee that government and industry should balance encouraging innovation in AI with ensuring models are deployed responsibly.</p>
-<p>The subcommittee’s hearing, “Oversight of AI: Rules for Artificial Intelligence,” is among actions from policymakers around the world trying to identify and address potential risks of generative AI.</p>
-<p>Earlier this year, the subcommittee heard testimonies from leaders of Anthropic, IBM and OpenAI, as well as academics such as Yoshua Bengio, a University of Montreal professor considered one of the godfathers of AI.</p>
-<p>Dally, who leads a global team of more than 300 at NVIDIA Research, shared the witness table on Tuesday with Brad Smith, Microsoft’s president and vice chair. Dally’s testimony briefly encapsulated NVIDIA’s unique role in the evolution of AI over the last two decades.</p>
-<h2><b>How Accelerated Computing Sparked AI</b></h2>
-<p>He described how NVIDIA invented the GPU in 1999 as a graphics processing unit, then fit it for a broader role in parallel processing in 2006 with the CUDA programming software. Over time, developers across diverse scientific and technical computing fields found this new form of <a href="https://blogs.nvidia.com/blog/2021/09/01/what-is-accelerated-computing/">accelerated computing</a> could significantly advance their work.</p>
-<p>Along the way, researchers discovered GPUs also were a natural fit for AI’s neural networks, because they require massive parallel processing.</p>
-<p>In 2012, the AlexNet model, trained on two NVIDIA GPUs, demonstrated human-like capabilities in image recognition. That result helped spark a decade of rapid advances using GPUs, leading to ChatGPT and other generative AI models used by hundreds of millions worldwide.</p>
-<p>Today, accelerated computing and generative AI are showing the potential to transform industries, address global challenges and profoundly benefit society, said Dally, who chaired Stanford University’s computer science department before joining NVIDIA.</p>
-<h2><b>AI’s Potential and Limits</b></h2>
-<p>In written testimony, Dally provided examples of how AI is empowering professionals to do their jobs better than they might have imagined in fields as diverse as business, healthcare and climate science.</p>
-<p>Like any technology, AI products and services have risks and are subject to existing laws and regulations that aim to mitigate those risks.</p>
-<p>Industry also has a role to play in deploying AI responsibly. Developers set limits for AI models when they train them and define their outputs.</p>
-<p>Dally noted that NVIDIA released in April<a href="https://blogs.nvidia.com/blog/2023/04/25/ai-chatbot-guardrails-nemo/"> NeMo Guardrails</a>, open-source software developers can use to guide generative AI applications in producing accurate, appropriate and secure text responses. He said that NVIDIA also maintains internal risk-management guidelines for AI models.</p>
-<h2><b>Eyes on the Horizon</b></h2>
-<p>Making sure that new and exceptionally large AI models are accurate and safe is a natural role for regulators, Dally suggested.</p>
-<figure id="attachment_66896" aria-describedby="caption-attachment-66896" style="width: 400px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP.jpg"><img decoding="async" loading="lazy" class="wp-image-66896 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-400x289.jpg" alt="Picture of Sen Blumenthal welcoming Dally to the hearing" width="400" height="289" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-400x289.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-672x486.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-768x555.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-622x450.jpg 622w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-297x215.jpg 297w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP-138x100.jpg 138w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Bluemnthal-greets-Dally-before-hearing-CROP.jpg 777w" sizes="(max-width: 400px) 100vw, 400px" /></a><figcaption id="caption-attachment-66896" class="wp-caption-text">Subcommittee chair Sen. Richard Blumenthal welcomed Dally to the hearing.</figcaption></figure>
-<p>He said that these “frontier” models are being developed at a gigantic scale. They exceed the capabilities of ChatGPT and other existing models that have already been well-explored by developers and users.</p>
-<p>Dally urged the subcommittee to balance thoughtful regulation with the need to encourage innovation in an AI developer community that includes thousands of startups, researchers and enterprises worldwide. AI tools should be widely available to ensure a level playing field, he said.</p>
-<p>During questioning, Senator Amy Klobuchar asked Dally why NVIDIA announced<a href="https://blogs.nvidia.com/blog/2023/03/21/generative-ai-getty-images/"> in March</a> it’s working with Getty Images.</p>
-<p>“At NVIDIA, we believe in respecting people’s intellectual property rights,” Dally replied. “We partnered with Getty to train large language models with a service called<a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/"> Picasso</a>, so people who provided the original content got remunerated.”</p>
-<p>In closing, Dally reaffirmed NVIDIA’s dedication to innovating generative AI and accelerated computing in ways that serve the best interests of all.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dally-in-Senate-QA-best-x1280.jpg"
-			type="image/jpeg"
-			width="1547"
-			height="823"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Dally-in-Senate-QA-best-x1280-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Lends Support to Washington’s Efforts to Ensure AI Safety]]></media:title>
-			<media:description type="html">Dally testifies at Senate hearing on AI</media:description>
 			</media:content>
 			</item>
 	</channel>
