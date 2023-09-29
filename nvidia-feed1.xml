@@ -12,14 +12,82 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 29 Sep 2023 07:45:00 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 29 Sep 2023 16:18:19 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.3</generator>
+	<generator>https://wordpress.org/?v=6.3.1</generator>
 	<item>
+		<title>Heeding Huang’s Law: Video Shows How Engineers Keep the Speedups Coming</title>
+		<link>https://blogs.nvidia.com/blog/2023/09/29/huangs-law-dally-hot-chips/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Fri, 29 Sep 2023 15:00:00 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[NVIDIA Life]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[NVIDIA Ampere Architecture]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[NVIDIA Research]]></category>
+		<category><![CDATA[NVLink]]></category>
+		<category><![CDATA[Parallel Computing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67172</guid>
+
+					<description><![CDATA[In a talk, now available online, NVIDIA Chief Scientist Bill Dally describes a tectonic shift in how computer performance gets delivered in a post-Moore’s law era. Each new processor requires ingenuity and effort inventing and validating fresh ingredients, he said in a recent keynote address at Hot Chips, an annual gathering of chip and systems <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/29/huangs-law-dally-hot-chips/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>In a talk, now available <a href="https://youtu.be/rsxCZAE8QNA">online</a>, NVIDIA Chief Scientist Bill Dally describes a tectonic shift in how computer performance gets delivered in a post-Moore’s law era.</p>
+<p>Each new processor requires ingenuity and effort inventing and validating fresh ingredients, he said in a recent keynote address at Hot Chips, an annual gathering of chip and systems engineers. That’s radically different from a generation ago, when engineers essentially relied on the physics of ever smaller, faster chips.</p>
+<p>The team of more than 300 that Dally leads at NVIDIA Research helped deliver a whopping 1,000x improvement in single GPU performance on AI inference over the past decade (see chart below).</p>
+<p>It’s an astounding increase that <a href="https://spectrum.ieee.org/move-over-moores-law-make-way-for-huangs-law">IEEE Spectrum</a> was the first to dub “Huang’s Law” after NVIDIA founder and CEO Jensen Huang. The label was later popularized by <a href="https://www.wsj.com/articles/huangs-law-is-the-new-moores-law-and-explains-why-nvidia-wants-arm-11600488001">a column</a> in the Wall Street Journal.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years.jpg"><img decoding="async" fetchpriority="high" class="aligncenter size-large wp-image-67174" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-672x372.jpg" alt="1000x leap in GPU performance in a decade" width="672" height="372" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-672x372.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-400x221.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-768x425.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-1536x850.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-813x450.jpg 813w, https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-388x215.jpg 388w, https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-181x100.jpg 181w, https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years-1280x709.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/1000x-GPU-Gains-in-10-Years.jpg 2014w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>The advance was a response to the equally phenomenal rise of <a href="https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/">large language models</a> used for <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> that are growing by an order of magnitude every year.</p>
+<p>“That’s been setting the pace for us in the hardware industry because we feel we have to provide for this demand,” Dally said.</p>
+<p>In his talk, Dally detailed the elements that drove the 1,000x gain.</p>
+<p>The largest of all, a sixteen-fold gain, came from finding simpler ways to represent the numbers computers use to make their calculations.</p>
+<h2><b>The New Math</b></h2>
+<p>The latest <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">NVIDIA Hopper architecture</a> with its <a href="https://blogs.nvidia.com/blog/2022/03/22/h100-transformer-engine/">Transformer Engine</a> uses a dynamic mix of eight- and 16-bit floating point and integer math. It’s tailored to the needs of today’s generative AI models. Dally detailed both the performance gains and the energy savings the new math delivers.</p>
+<p>Separately, his team helped achieve a 12.5x leap by crafting advanced instructions that tell the GPU how to organize its work. These complex commands help execute more work with less energy.</p>
+<p>As a result, computers can be “as efficient as dedicated accelerators, but retain all the programmability of GPUs,” he said.</p>
+<p>In addition, the <a href="https://www.nvidia.com/en-us/data-center/ampere-architecture/">NVIDIA Ampere architecture</a> added <a href="https://blogs.nvidia.com/blog/2020/05/14/sparsity-ai-inference/">structural sparsity</a>, an innovative way to simplify the weights in AI models without compromising the model’s accuracy. The technique brought another 2x performance increase and promises future advances, too, he said.</p>
+<p>Dally described how <a href="https://www.nvidia.com/en-us/data-center/nvlink/">NVLink</a> interconnects between GPUs in a system and <a href="https://www.nvidia.com/en-us/networking/">NVIDIA networking</a> among systems compound the 1,000x gains in single GPU performance.</p>
+<h2><b>No Free Lunch  </b></h2>
+<p>Though NVIDIA migrated GPUs from 28nm to 5nm semiconductor nodes over the decade, that technology only accounted for 2.5x of the total gains, Dally noted.</p>
+<p>That’s a huge change from computer design a generation ago under Moore’s law, an observation that performance should double every two years as chips become ever smaller and faster.</p>
+<p>Those gains were described in part by Denard scaling, essentially a physics formula defined in <a href="https://ieeexplore.ieee.org/document/1050511">a 1974 paper</a> co-authored by IBM scientist Robert Denard. Unfortunately, the physics of shrinking hit natural limits such as the amount of heat the ever smaller and faster devices could tolerate.</p>
+<h2><b>An Upbeat Outlook</b></h2>
+<p>Dally expressed confidence that Huang’s law will continue despite diminishing gains from Moore’s law.</p>
+<p>For example, he outlined several opportunities for future advances in further simplifying how numbers are represented, creating more sparsity in AI models and designing better memory and communications circuits.</p>
+<p>Because each new chip and system generation demands new innovations, “it’s a fun time to be a computer engineer,” he said.</p>
+<p>Dally believes the new dynamic in computer design is giving NVIDIA’s engineers the three opportunities they desire most: to be part of a winning team, to work with smart people and to work on designs that have impact.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/HotChips-2023-2292-Dally-KV-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1091"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/HotChips-2023-2292-Dally-KV-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Heeding Huang’s Law: Video Shows How Engineers Keep the Speedups Coming]]></media:title>
+			<media:description type="html">Bill Dally speaking at Hot Chjps 2023</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Kicking Games Up a Notch: Startup Sports Vision AI to Broadcast Athletics Across the Globe</title>
 		<link>https://blogs.nvidia.com/blog/2023/09/28/pixellot-vision-ai-sports-broadcasting/</link>
 		
@@ -46,7 +114,7 @@
 <h2><b>How Pixellot Works</b></h2>
 <p>During peak sports seasons, about 200,000 games a month are broadcasted across the globe using the Pixellot platform, according to Tarablus.</p>
 <p>Lightweight Pixellot cameras powered by NVIDIA Jetson capture high-quality video of games, matches and even practices — and livestream them in high definition to users through an app in real time with an overlaid scoreboard, live stats, commentary and more.</p>
-<p><img decoding="async" fetchpriority="high" class="aligncenter wp-image-67187 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-667x500.jpg" alt="" width="667" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-667x500.jpg 667w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-400x300.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-768x576.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-600x450.jpg 600w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-287x215.jpg 287w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-133x100.jpg 133w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured.jpg 1024w" sizes="(max-width: 667px) 100vw, 667px" /></p>
+<p><img decoding="async" class="aligncenter wp-image-67187 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-667x500.jpg" alt="" width="667" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-667x500.jpg 667w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-400x300.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-768x576.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-600x450.jpg 600w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-287x215.jpg 287w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured-133x100.jpg 133w, https://blogs.nvidia.com/wp-content/uploads/2023/09/pixellot-featured.jpg 1024w" sizes="(max-width: 667px) 100vw, 667px" /></p>
 <p>The platform creates an automatic viewframe that simulates a camera operator, optimizes videos and corrects scene lighting using <a href="https://www.nvidia.com/en-us/geforce/rtx/" target="_blank" rel="noopener">NVIDIA RTX</a> ray-tracing technology.</p>
 <p>In addition, the platform helps organizations and companies monetize sports while making them more accessible to viewers, as it enables over-the-top, or OTT, streaming — direct streaming over the internet without the need for a traditional cable or satellite TV provider.</p>
 <p>In all of its camera setups, the Metropolis member runs the <a href="https://developer.nvidia.com/deepstream-sdk" target="_blank" rel="noopener">NVIDIA DeepStream</a> software development kit for AI-powered video streaming analytics. And the company relies on the <a href="https://developer.nvidia.com/tensorrt" target="_blank" rel="noopener">NVIDIA TensorRT SDK</a> for high-performance deep learning inference.</p>
@@ -57,7 +125,7 @@
 <p>“It’s amazing how many people have told us stories about a moment they were empowered to share with their children thanks to SuperSport Schools and Pixellot, because they couldn’t be there physically but were present through live or on-demand video,” said Kelvin Watt, managing director of Capitalize Media and SuperSport Schools, on the Pixellot deployment in South Africa.</p>
 <p>The SuperSport Schools app, which is free and recently reached 600,000 subscribers, was the first to broadcast a junior nationals track race in the country.</p>
 <p>At the event last year, a student named Viwe Jingqi broke 50-plus-year national records for both the 100- and 200-meter races for South African girls under 18 years old. People all over the world could easily witness these historic victories through the SuperSport Schools app, powered by Pixellot.</p>
-<p><iframe title="Changing the game for THOUSANDS of African athletes &#x1f30d;&#x26bd;&#x1f3c0;" width="500" height="281" src="https://www.youtube.com/embed/1rGbHWLIReQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Changing the game for THOUSANDS of African athletes &#x1f30d;&#x26bd;&#x1f3c0;" width="500" height="281" src="https://www.youtube.com/embed/1rGbHWLIReQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <h2><b>Building a Smart Sports City in China</b></h2>
 <p>In China, tech giant Baidu and the Chengdu Sports Authority are using Pixellot technology in an initiative to develop a smart sports city, with an initial focus on broadcasting community soccer.</p>
 <p>Chengdu, the capital of southwestern China’s Sichuan province, is a sports-oriented city and was the host of this year’s <a href="https://olympics.com/en/sport-events/2023-fisu-world-university-games-chengdu" target="_blank" rel="noopener">World University Games</a>, an event sanctioned by the International University Sports Federation.</p>
@@ -1160,77 +1228,6 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			/>
 			<media:title type="html"><![CDATA[Ray Shines With NVIDIA AI: Anyscale Collaboration to Help Developers Build, Tune, Train and Scale Production LLMs]]></media:title>
 			<media:description type="html">NVIDIA and Anyscale logos</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Shout at the Devil: Capcom’s ‘Devil May Cry 5’ Joins GeForce NOW</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/14/geforce-now-thursday-sep-14/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 14 Sep 2023 13:00:20 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66903</guid>
-
-					<description><![CDATA[GFN Thursday is downright demonic, as Devil May Cry 5 comes to GeForce NOW. Capcom’s action-packed third-person brawler leads 15 titles joining the GeForce NOW library this week, including Gears Tactics and The Crew Motorfest. It’s also the last week to take on the Ultimate KovaaK’s Challenge. Get on the leaderboard today for a chance <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/14/geforce-now-thursday-sep-14/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>GFN Thursday is downright demonic, as <i>Devil May Cry 5</i> comes to <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a>.</p>
-<p>Capcom’s action-packed third-person brawler leads 15 titles joining the GeForce NOW library this week, including <i>Gears Tactics</i> and <i>The Crew Motorfest</i>.</p>
-<p>It’s also the last week to take on the <a href="https://www.nvidia.com/en-us/geforce-now/ultimate-challenge/">Ultimate KovaaK’s Challenge</a>. Get on the leaderboard today for a chance to win a 240Hz gaming monitor, a gaming Chromebook, GeForce NOW memberships or other prizes. The challenge ends on Thursday, Sept. 21.</p>
-<h2><b>The Devil Returns</b></h2>
-<figure id="attachment_66907" aria-describedby="caption-attachment-66907" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-66907" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-672x378.jpg" alt="Devil May Cry 5 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Devil_May_Cry_5.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-66907" class="wp-caption-text"><i>Jackpot!</i></figcaption></figure>
-<p><i>Devil May Cry 5</i> is the next title from Capcom’s catalog to come to GeForce NOW. Members can stream all of its high-octane, stylish action at GeForce RTX quality to nearly any device, thanks to the power of GeForce NOW cloud gaming servers.</p>
-<p>The threat of demonic power has returned to menace the world once again. Take on hordes of enemies as Nero, V or the legendary Dante with the ramped-up sword-and-gun gameplay that the series is known for. Battle epic bosses in adrenaline-fueled fights across the overrun Red Grave City — all to the beat of a truly killer soundtrack.</p>
-<p>Take the action on the go thanks to the power of the cloud. <a href="http://geforcenow.com/membership">GeForce NOW Priority members</a> can take the fight with them across nearly any device at up to 1080p and 60 frames per second.</p>
-<h2><b>Kickin’ It Into High Gear</b></h2>
-<figure id="attachment_66910" aria-describedby="caption-attachment-66910" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-66910" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-672x336.jpg" alt="Gears Tactics on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gears_Tactics.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-66910" class="wp-caption-text"><i>A squad of survivors is all it takes to stop the Locust threat.</i></figcaption></figure>
-<p>Rise up and fight, members. <i>Gears Tactics</i> is the next PC Game Pass title to arrive in the cloud.</p>
-<p><i>Gears Tactics</i> is a fast-paced, turn-based strategy game from one of the most acclaimed video game franchises — <i>Gears of War</i>. Set a dozen years before the first <i>Gears of War</i> game, the <i>Gears Tactics </i>story opens as cities on the planet Sera begin falling to the monstrous threat rising from underground: the Locust Horde. With the government in disarray, a squad of survivors emerges as humanity’s last hope. Play as the defiant soldier Gabe Diaz to recruit, develop and command squads on a desperate mission to hunt down the relentless and powerful leader of the Locust army, Ukkon, the group’s monster-making mastermind.</p>
-<p>Fight for survival and outsmart the enemy with the sharpness of 4K resolution streaming from the cloud with a <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">GeForce NOW Ultimate membership</a>.</p>
-<h2><b>Hit the Road, Jack</b></h2>
-<figure id="attachment_66913" aria-describedby="caption-attachment-66913" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-66913" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-672x336.jpg" alt="The Crew Motorfest on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-The_Crew_Motorfest.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-66913" class="wp-caption-text"><i>The best way to see Hawaii is by car, at 100 mph.</i></figcaption></figure>
-<p><i>The Crew Motorfest</i> also comes to GeForce NOW this week. The latest entry in Ubisoft’s racing franchise drops drivers into the open roads of Oahu, Hawaii. Get behind the wheel of 600+ iconic vehicles from the past, present and future, including sleek sports cars, rugged off-road vehicles and high-performance racing machines. Race alone or with friends through the bustling city of Honolulu, test off-roading skills on the ashy slopes of a volcano or kick back on the sunny beaches behind the wheel of a buggy.</p>
-<p>Members can take a test drive from Sept. 14-17 with a five-hour free trial. Explore the vibrant Hawaiian open world, participate in thrilling driving activities and collect prestigious cars, with all progress carrying over to the full game purchase.</p>
-<p>Take the pole position with a GeForce NOW Ultimate membership to stream <i>The Crew</i> <i>Motorfest</i> and more than 1,600 other titles at the highest frame rates. <a href="http://geforcenow.com/">Upgrade</a> today.</p>
-<h2><b>A New Challenge</b></h2>
-<figure id="attachment_66916" aria-describedby="caption-attachment-66916" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-66916" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-672x336.jpg" alt="Gunbrella on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Gunbrella.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-66916" class="wp-caption-text"><i>Rain, rain, go away. The umbrella is also a gun today.</i></figcaption></figure>
-<p>With GeForce NOW, there’s always something new to play. Here’s what’s hitting the playlist this week:</p>
-<ul>
-<li><i>Tavernacle!</i> (New release on <a href="https://store.steampowered.com/app/1937820?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 11)</li>
-<li><i>Gunbrella</i> (New release on <a href="https://store.steampowered.com/app/1580180?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 13)</li>
-<li><i>The Crew Motorfest</i> (New release on <a href="https://store.ubi.com/63bc67dbd406ab22f1174305.html#ucid=AFL-ID_152062&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;addinfo=">Ubisoft Connect</a>, Sept. 14)</li>
-<li><i>Amnesia: The Bunker </i>(<a href="https://www.xbox.com/games/store/amnesia-the-bunker/9PC15H56NGJK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Descenders </i>(<a href="https://www.xbox.com/games/store/descenders/C37XBX7DCBZ0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Devil May Cry 5 </i>(<a href="https://store.steampowered.com/app/601150?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Gears Tactics </i>(<a href="https://store.steampowered.com/app/1184050?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/gears-tactics/9NN3HCKW5TPC?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Last Call BBS</i> (<a href="https://www.xbox.com/games/store/last-call-bbs/9NF0SNBQWN63?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>The Matchless Kungfu</i> (<a href="https://store.steampowered.com/app/1696440?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Mega City Police</i> (<a href="https://store.steampowered.com/app/2259210?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Opus Magnum</i> (<a href="https://www.xbox.com/games/store/opus-magnum/9P5QNLWDKHPF?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Remnant II</i> (<a href="https://www.epicgames.com/store/p/remnant-2?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Space Hulk: Deathwing &#8211; Enhanced Edition</i> (<a href="https://www.xbox.com/games/store/space-hulk-deathwing-enhanced-edition-windows-10/9N8DKG2R0HKZ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Superhot </i>(<a href="https://www.xbox.com/games/store/superhot-windows-10/9NV17MJB26PG?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Vampyr</i> (<a href="https://www.xbox.com/games/store/vampyr/9NT2QNP382V6?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-</ul>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/gfn-thursday-9-14-nv-blog-1280x680-no-copy.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/gfn-thursday-9-14-nv-blog-1280x680-no-copy-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Shout at the Devil: Capcom’s ‘Devil May Cry 5’ Joins GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
 			</media:content>
 			</item>
 	</channel>
