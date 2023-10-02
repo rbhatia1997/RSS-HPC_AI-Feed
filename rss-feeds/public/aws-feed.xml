@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 26 Sep 2023 15:11:47 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 02 Oct 2023 14:19:33 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,118 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Conceptual design using generative AI and CFD simulations on AWS</title>
+		<link>https://aws.amazon.com/blogs/hpc/conceptual-design-using-generative-ai-and-cfd-simulations-on-aws/</link>
+		
+		<dc:creator><![CDATA[Vidyasagar Ananthan]]></dc:creator>
+		<pubDate>Mon, 02 Oct 2023 14:19:33 +0000</pubDate>
+				<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">ebf53bce2be2ea1f1b340e195b5361045a4f1f7f</guid>
+
+					<description>In this post we’ll show how generative AI, combined with conventional physics-based CFD can create a rapid design process to explore new design concepts in automotive and aerospace from just a single image.</description>
+										<content:encoded>&lt;p&gt;In this post we’ll demonstrate how &lt;a href="https://aws.amazon.com/generative-ai/"&gt;generative AI&lt;/a&gt; techniques can be combined with conventional physics-based&amp;nbsp;&lt;a href="https://aws.amazon.com/hpc/cfd/"&gt;computational fluid dynamics&lt;/a&gt;&amp;nbsp;(CFD) simulations to create a rapid conceptual design process that can be used to explore new design concepts in the automotive, motorsport, and aerospace sectors from just a single image.&lt;/p&gt; 
+&lt;p&gt;Thanks to AWS services like &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, and the open-source&amp;nbsp;&lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph&lt;/a&gt;&amp;nbsp;framework, this can all be combined into an event-driven workflow on AWS that could scale to explore millions of possible scenarios.&lt;/p&gt; 
+&lt;p&gt;The generative capability of machine learning (ML) algorithms holds significant promise across diverse industries. Generative AI techniques are powered by large machine learning models, pre-trained on very large amounts of data. We’re seeing the impact of these models in several areas, including transformer models for natural language processing, text-to-image models like &lt;a href="https://en.wikipedia.org/wiki/Stable_Diffusion"&gt;Stable Diffusion&lt;/a&gt; for image manipulation, and generative adversarial networks for zero-shot classifiers.&lt;/p&gt; 
+&lt;h2&gt;Why is this important?&lt;/h2&gt; 
+&lt;p&gt;Today, an AI image generator like Stable Diffusion can be employed to generate conceptual designs for cars, planes, and other vehicles. However, these methods lack a foundation in understanding performance factors like aerodynamic drag because they don’t consider the underlying physical laws and the design constraints like noise levels and the extra energy usage they drive. In an era of increased emphasis on energy efficiency and sustainability, conceptual designs must extend beyond just adhering to style guidelines.&lt;/p&gt; 
+&lt;p&gt;Over past decades, CFD-driven design optimization grew significantly across a number of industries. A general workflow typically involves simulating complex geometries using conventional physics-based solvers for different sets of individual parameters (e.g. &lt;em&gt;wing chord length&lt;/em&gt;, or &lt;em&gt;rear window angle&lt;/em&gt;) and finding the optimal setting across an entire parameter space.&lt;/p&gt; 
+&lt;p&gt;While these solvers offer a lot of accuracy, they’re computationally intensive and time-consuming, which slows down the pace of engineering design. There’s been a growing interest in combining conventional CFD models with ML approaches to try to overcome these computational challenges. Using generative AI in the design process allows efficient sweeping of the parameter space in a non-parametric manner, based on physically meaningful design configurations of the system being examined.&lt;/p&gt; 
+&lt;p&gt;We want to show you how generative AI can be applied to design optimization. In this post we’ll focus on its effectiveness in finding better solutions for drag reduction. Our approach combines generative AI for the initial design phase with &lt;a href="https://www.openfoam.com/"&gt;OpenFOAM&lt;/a&gt; CFD simulations for the evaluation of vehicle aerodynamics.&lt;/p&gt; 
+&lt;p&gt;Through this process, we’ve developed a workflow that empowers users to define a non-parametric design optimization problem as an algorithm suitable for execution on AWS – at scale with robust infrastructure. This is underpinned by the &lt;a href="https://github.com/aws-samples/twingraph"&gt;Twingraph orchestration framework&lt;/a&gt; that does the undifferentiated heavy lifting of dynamic task orchestration, gathering provenance information, and scaling.&lt;/p&gt; 
+&lt;div id="attachment_2896" style="width: 1860px" class="wp-caption alignright"&gt;
+ &lt;img aria-describedby="caption-attachment-2896" class="wp-image-2896 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/CleanShot-2023-09-26-at-11.25.21@2x.png" alt="Figure 1: Overall workflow for iterative design optimization of car aerodynamics by combining Generative AI techniques and Computational Fluid Dynamics simulations" width="1850" height="576"&gt;
+ &lt;p id="caption-attachment-2896" class="wp-caption-text"&gt;Figure 1: Overall workflow for iterative design optimization of car aerodynamics by combining Generative AI techniques and Computational Fluid Dynamics simulations&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Design iterations through Stable Diffusion&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://github.com/CompVis/stable-diffusion"&gt;Stable Diffusion&amp;nbsp;&lt;/a&gt;is a generative AI model which enables image generation through text-driven manipulation. The underlying architecture of Stable Diffusion comprises of three key phases:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;obtaining a latent representation of the image, which captures the meaning of objects/people depicted in the image&lt;/li&gt; 
+ &lt;li&gt;progressively adding Gaussian noise to this representation&lt;/li&gt; 
+ &lt;li&gt;reconstructing the image through removing the noise, resulting in a modified variant of the original image which reflects the semantics of the text prompt.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;As an example, in Figure 2 we show the results from using Stable Diffusion to modify an automotive design, starting from a stock image of a sedan to convert it into a sporty aerodynamic design. This resulted in a series of transformations from the original to a modified image. For this exercise, the pre-trained Stable Diffusion model was used for the image generation, but this can be fine-tuned to match the design philosophy of the individual car manufacturer.&lt;/p&gt; 
+&lt;div id="attachment_2906" style="width: 490px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2906" loading="lazy" class="wp-image-2906 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/Figure2-converted.gif" alt="Figure 2: Sequential transformation of a car design, given an appropriate prompt to improve aerodynamics and make the car sportier, using an image-to-image pipeline with Stable Diffusion 2.1" width="480" height="360"&gt;
+ &lt;p id="caption-attachment-2906" class="wp-caption-text"&gt;Figure 2: Sequential transformation of a car design, given an appropriate prompt to improve aerodynamics and make the car sportier, using an image-to-image pipeline with Stable Diffusion 2.1&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;But this transformation &lt;em&gt;isn’t based on the underlying physics&lt;/em&gt; – it’s an interpretation of the prompts alongside the latent space embedding, which is a condensed mathematical representation of the image, within the Stable Diffusion algorithm. In turn, this interpretation is really driven by training data that exposed the model to sports cars, leading to a predisposition for similar looking designs. To accurately evaluate if the transformation path is an improvement in the aerodynamics of the vehicle, the natural step would be to convert the image into a 3D representation that can be used &amp;nbsp;for high-fidelity CFD simulations.&lt;/p&gt; 
+&lt;h2&gt;Generation of point-cloud using neural radiance fields&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://arxiv.org/abs/2012.02190"&gt;Neural radiance fields&lt;/a&gt;&amp;nbsp;(NeRF) are algorithms showing great promise for converting one or more images into full 3D representations. Combining&amp;nbsp;&lt;a href="https://arxiv.org/abs/2211.11674"&gt;bootstrapped NeRF&amp;nbsp;&lt;/a&gt;with &lt;em&gt;generative adversarial networks&lt;/em&gt; (GANs), we can reconstruct multiple poses of objects to augment and improve the predictions.&lt;/p&gt; 
+&lt;p&gt;To make this work, we feed images of the car into NeRFs to obtain &lt;em&gt;signed-distance functions&lt;/em&gt; (SDFs) and construct point-cloud representations like we’ve shown in Figure 3. We fine-tuned the NeRF model using the &lt;a href="https://cvgl.stanford.edu/projects/pascal3d.html"&gt;Pascal3D&lt;/a&gt; data set for 3D object reconstruction.&lt;/p&gt; 
+&lt;p&gt;&lt;iframe loading="lazy" title="Figure 3: Point-cloud of car (bottom) obtained using NeRF." width="500" height="375" src="https://www.youtube-nocookie.com/embed/3NtY7eTLVTs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 3: Point-cloud of car (bottom) obtained using NeRF by using the base image (top), transforming the image into a 3D structure representing the car.&lt;/em&gt;&lt;/p&gt; 
+&lt;h2&gt;Reconstruction of surface topology from point-cloud&lt;/h2&gt; 
+&lt;p&gt;The point-cloud representation lacks the crucial connectivity or surface topology information that’s required for understanding the behavior of air flow around the vehicle.&lt;/p&gt; 
+&lt;p&gt;To reconstruct the surface from the point-cloud, we first generated an &lt;em&gt;unstructured polygonal Alpha shape mesh&lt;/em&gt; (for a non-convex hull). We achieved this through a coarse Delaunay triangulation using the &lt;a href="http://www.open3d.org/"&gt;Open3D&lt;/a&gt; library. This computational geometric technique identifies the encompassing surface including the points presented in the point-cloud, generated from NeRF.&lt;/p&gt; 
+&lt;p&gt;To further refine the mesh, we extracted the points generated on the surface (nodes of the initial triangulation) together with estimated normals from the Alpha shapes. This surface point-cloud is ingested into a&amp;nbsp;&lt;a href="https://research.nvidia.com/labs/toronto-ai/NKSR/"&gt;Neural Kernel Surface Reconstruction&lt;/a&gt;&amp;nbsp;(NKSR) algorithm, which is a machine learning technique that can perform fast surface reconstructions from sparse data. The final result is displayed in Figure 4. While this technique doesn’t capture finer surface details, the overall shape of the car is approximately modeled by the resulting mesh.&lt;/p&gt; 
+&lt;p&gt;&lt;iframe loading="lazy" title="Figure 4: Surface mesh generated using Neural Kernel Surface Reconstruction" width="500" height="375" src="https://www.youtube-nocookie.com/embed/sgHBGi5kMN0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 4: Surface mesh generated using Neural Kernel Surface Reconstruction, with the original point cloud (top) and the triangulated mesh (bottom) showing a good match in general topographic features.&lt;/em&gt;&lt;/p&gt; 
+&lt;h2&gt;Running CFD simulations on OpenFOAM&lt;/h2&gt; 
+&lt;p&gt;We used &lt;a href="https://www.openfoam.com/"&gt;OpenFoam&lt;/a&gt; to compute the flow field around the vehicle. We build an unstructured hex-dominate mesh with prismatic boundary layer cells using blockMesh and SnappyHexMesh from the .obj file we generated in the previous step.&lt;/p&gt; 
+&lt;p&gt;For this post, we intentionally opted for much lower refinement levels than what is typically employed in the industry (we can increase these levels as required). Our mesh count was approximately one million cells, on average – this changes slightly depending on the geometry itself. To accelerate the CFD part of the process we restricted ourselves to steady-state RANS simulations using the k-omega SST model (for industrial applications you could extend this to use hybrid RANS-LES or WMLES methods, which have a higher fidelity).&lt;/p&gt; 
+&lt;p&gt;Finally, in our setup we used the &lt;em&gt;simpleFoam&lt;/em&gt; solver based upon the semi-implicit method for pressure-linked equations (SIMPLE) algorithm. Table 1 shows the parameters.&lt;/p&gt; 
+&lt;div id="attachment_2924" style="width: 410px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2924" loading="lazy" class="wp-image-2924 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/CleanShot-2023-09-26-at-11.37.31@2x-1.png" alt="Table 1: Constants used for computational fluid dynamics simulations" width="400" height="155"&gt;
+ &lt;p id="caption-attachment-2924" class="wp-caption-text"&gt;Table 1: Constants used for computational fluid dynamics simulations&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The image in Figure 5 displays the streamlines as well as surface pressure over the initial car design. For this illustrative simulation, we used 425,045 cells for the mesh.&lt;/p&gt; 
+&lt;p&gt;&lt;iframe loading="lazy" title="Figure 5: Streamlines visualizing flow field around a generated car mesh." width="500" height="281" src="https://www.youtube-nocookie.com/embed/EUzvYkivaZo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 5: Streamlines visualizing flow field around a generated car mesh – these are indicative of the fluid velocities, while the colors on the car surface represent the surface pressure magnitude.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;To compute the drag coefficient (C&lt;sub&gt;d&lt;/sub&gt;) &amp;nbsp;values during post-processing, we derived a reference wheelbase length and frontal surface areas based on the initial designs – these reference values remain relatively constant across all observations. We used the final drag coefficient (C&lt;sub&gt;d&lt;/sub&gt;) &amp;nbsp;values in the pipeline to evaluate and rank the generated design options to find the best intermediate choices.&lt;/p&gt; 
+&lt;h2&gt;Integration into Simulation-Guided Design Workflow on AWS&lt;/h2&gt; 
+&lt;p&gt;The overall workflow has five key components: image generation, Stable Diffusion, point-cloud with NeRF, mesh generation with Open3d and NKSR, and finally the OpenFoam CFD simulation. Each of these are containerized and orchestrated by the&amp;nbsp;&lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph&lt;/a&gt;&amp;nbsp;orchestration framework.&lt;/p&gt; 
+&lt;p&gt;We deployed this workflow by using&amp;nbsp;&lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;&amp;nbsp;and scaled it as needed to find the optimal designs. We achieved the necessary scale by leveraging both CPU &lt;em&gt;and&lt;/em&gt; GPU architectures depending on the specific requirements of each workflow component.&lt;/p&gt; 
+&lt;div id="attachment_2899" style="width: 1720px" class="wp-caption alignright"&gt;
+ &lt;img aria-describedby="caption-attachment-2899" loading="lazy" class="size-full wp-image-2899" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/CleanShot-2023-09-26-at-11.32.19@2x.png" alt="Figure 6: AWS Architecture diagram for a running workflow from connecting with a remote client, to launching the algorithmic pipeline on TwinGraph and executing jobs on AWS Batch, and visualizing results." width="1710" height="974"&gt;
+ &lt;p id="caption-attachment-2899" class="wp-caption-text"&gt;Figure 6: AWS Architecture diagram for a running workflow from connecting with a remote client, to launching the algorithmic pipeline on TwinGraph and executing jobs on AWS Batch, and visualizing results.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We repeated the experiment for a number of generated images across multiple cycles, and uploaded the results from each experiment automatically to&amp;nbsp;&lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Service (Amazon S3)&lt;/a&gt;. This ensured persistent storage of our results. The necessary meta-data provenance information from each experiment was automatically uploaded to an&amp;nbsp;&lt;a href="https://aws.amazon.com/neptune/"&gt;Amazon Neptune&lt;/a&gt;&amp;nbsp;graph database for the subsequent analysis.&lt;/p&gt; 
+&lt;p&gt;Once the results were generated, we could retrieve the specific outcomes we were interested in from Amazon S3 using a GPU instance – we ran our visualization interface thought a high-performance remote desktop protocol called &lt;a href="https://aws.amazon.com/hpc/dcv/"&gt;NICE DCV&lt;/a&gt; (an AWS product).&lt;/p&gt; 
+&lt;p&gt;Overall,&amp;nbsp;&lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph&lt;/a&gt;&amp;nbsp;orchestrates tasks in an asynchronous manner, which means we can execute multiple experiments concurrently, at scale using AWS Batch.&lt;/p&gt; 
+&lt;h2&gt;Results&lt;/h2&gt; 
+&lt;p&gt;As part of the numerical experiments, we ran 10 different instances (10 &lt;em&gt;variants&lt;/em&gt;) of the Stable Diffusion image-to-image generation, surface reconstruction, &lt;em&gt;and&lt;/em&gt; CFD simulations with the same initialization as in Figure 1 with a generic sedan.&lt;/p&gt; 
+&lt;p&gt;We used the variant image corresponding to the lowest drag coefficient (C&lt;sub&gt;d&lt;/sub&gt;) &amp;nbsp;value, to seed the &lt;em&gt;next&lt;/em&gt; image generation sequence cycle. To guide the design iteration process at a fine level, we reduced the strength of image-to-image changes significantly, compared to Figure 1.&lt;br&gt; We repeated this cycle 20 times (or 20 &lt;em&gt;generations&lt;/em&gt;) and the results are plotted in Figure 7 as the minimum drag coefficient (C&lt;sub&gt;d&lt;/sub&gt;) &amp;nbsp;per generation and in Figure 8 as a heat map of the drag coefficient (C&lt;sub&gt;d&lt;/sub&gt;) &amp;nbsp;&amp;nbsp;values for each of the generated designs.&lt;/p&gt; 
+&lt;div id="attachment_2900" style="width: 1608px" class="wp-caption alignright"&gt;
+ &lt;img aria-describedby="caption-attachment-2900" loading="lazy" class="size-full wp-image-2900" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/CleanShot-2023-09-26-at-11.33.34@2x.png" alt="Figure 7: Minimum drag coefficients per generation, corresponding to the image variants used to create the subsequent generation of variants. The general downward trend, though non-monotonic due to intermediate car configurations, is indicative that the pipeline improves the drag performance of the best variant through the generations." width="1598" height="968"&gt;
+ &lt;p id="caption-attachment-2900" class="wp-caption-text"&gt;Figure 7: Minimum drag coefficients per generation, corresponding to the image variants used to create the subsequent generation of variants. The general downward trend, though non-monotonic due to intermediate car configurations, is indicative that the pipeline improves the drag performance of the best variant through the generations.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 7 shows that the averaged drag coefficient (C&lt;sub&gt;d&lt;/sub&gt;) decreases gradually from an initial value of 0.46 to approximately 0.4. During the sequential generations, the decrease is non-monotonic. This is due to the non-parametric and non-linear nature of the optimization procedure – allowing the image generation process to arbitrarily morph the car design with a final goal of reducing drag.&lt;/p&gt; 
+&lt;p&gt;Moreover, the intermediate design configurations have incomplete components which result in increased drag for several generations until the image generation process resolves the features. We investigated this further through drag coefficients corresponding to &lt;em&gt;each variant&lt;/em&gt; in the 20 generations we show in Figure 8. The average drag coefficient (C&lt;sub&gt;d&lt;/sub&gt;) slightly &lt;em&gt;increases&lt;/em&gt; in the intermediate generations but then gradually &lt;em&gt;decreases&lt;/em&gt; towards the end of the 20 generations.&lt;/p&gt; 
+&lt;div id="attachment_2901" style="width: 1632px" class="wp-caption alignright"&gt;
+ &lt;img aria-describedby="caption-attachment-2901" loading="lazy" class="size-full wp-image-2901" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/CleanShot-2023-09-26-at-11.34.33@2x.png" alt="Figure 8: Illustration of drag coefficients associated with each of 10 variants (vertical axes) during each of generations (horizontal axes, sequences consisting of image generation, mesh reconstruction and simulation). The blue regions indicate lower drag, and we can observe a trend of increased blue regions going across the generations." width="1622" height="904"&gt;
+ &lt;p id="caption-attachment-2901" class="wp-caption-text"&gt;Figure 8: Illustration of drag coefficients associated with each of 10 variants (vertical axes) during each of generations (horizontal axes, sequences consisting of image generation, mesh reconstruction and simulation). The blue regions indicate lower drag, and we can observe a trend of increased blue regions going across the generations.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_2918" style="width: 482px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2918" loading="lazy" class="size-full wp-image-2918" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/Figure9-converted.gif" alt="Figure 9: Sequence of transitions through the generations for the optimal variant in drag coefficient, demonstrating a smoothing of the hood of the car, a reduced angle of windshield." width="472" height="346"&gt;
+ &lt;p id="caption-attachment-2918" class="wp-caption-text"&gt;Figure 9: Sequence of transitions through the generations for the optimal variant in drag coefficient, demonstrating a smoothing of the hood of the car, a reduced angle of windshield.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 9 provides insights into the evolution of car design across generations. The hood of the car adapts to a curved shape with considerable removal of material. Also, the angle of the windshield to the horizon reduces and there are slight changes in the curvature of the car’s rear section. Overall these are subtle, yet significant, changes driven by a generative AI process demonstrating the potential for guiding and making informed design choices through an automated &lt;em&gt;physics-informed&lt;/em&gt; pipeline.&lt;/p&gt; 
+&lt;h2&gt;Limitations and future work&lt;/h2&gt; 
+&lt;p&gt;The approaches presented here hold promise for accelerating aesthetically and sustainability-focused non-parametric design optimization. But there are limits at each stage that will need to be overcome.&lt;/p&gt; 
+&lt;p&gt;As pre-trained Stable Diffusion network weights change and evolve (due to further training), the predictions will change in an unpredictable manner – making repeatability an issue. Also, capturing surface topology and roughness accurately using this method is complex due to the lossy reconstruction from point-clouds compared to full resolution computer-aided design (CAD) meshes. This is important for accurate drag calculations.&lt;/p&gt; 
+&lt;p&gt;However, with improvements in generative AI algorithms, we can expect workflows that couple machine learning to classic physics-based simulations to provide practical benefits. We can integrate multiple components into a single algorithmic pipeline that can scale agnostically with respect to the underlying infrastructure, computer architecture and choice of programming models. This provides a template to deploy &lt;em&gt;future&lt;/em&gt; design optimization concepts across multiple domains more easily and reliably.&lt;/p&gt; 
+&lt;h2&gt;Conclusions&lt;/h2&gt; 
+&lt;p&gt;In this post, we discussed the potential for integrating generative AI techniques with physics-based CFD simulations. We demonstrated a methodology that has the capability to guide the image generation process with physics-informed drag coefficients (C&lt;sub&gt;d&lt;/sub&gt;) using CFD simulations.&lt;/p&gt; 
+&lt;p&gt;We also showcased how to turn these images into 3D meshes. These meshes were used for the CFD simulations, but can &lt;em&gt;also &lt;/em&gt;be imported into CAD programs so they can be used in real design processes.&lt;/p&gt; 
+&lt;p&gt;Best of all, we combined this into a single event-driven workflow thanks to &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;&amp;nbsp;and the&amp;nbsp;&lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph&lt;/a&gt; framework – which allows for scaling out machine learning and simulation tasks.&lt;/p&gt; 
+&lt;p&gt;This work has been focused on running inference using generative AI models, but we could use &lt;a href="https://aws.amazon.com/bedrock/"&gt;Amazon Bedrock&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-jumpstart.html"&gt;Amazon SageMaker JumpStart&lt;/a&gt; to improve the developer experience when fine-tuning the &amp;nbsp;models. Amazon Bedrock is a fully managed service that provides foundation models from a collection of leading AI startups (and from Amazon itself) via an API. Bedrock allows you to speed up your development of generative AI applications that you can privately customize and scale using secure and reliable infrastructure in AWS. SageMaker Jumpstart offers you the capability to train and fine tune those foundation models in a managed environment.&lt;/p&gt; 
+&lt;p&gt;This approach still requires further development to be applicable to industry, but it demonstrates the potential of integrating generative AI techniques with physics-based simulations. This potential extends beyond automotive CFD design and holds promise to a lot of other scientific and engineering fields.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Implementing AWS ParallelCluster in a Shared VPC</title>
 		<link>https://aws.amazon.com/blogs/hpc/implementing-aws-parallelcluster-in-a-shared-vpc/</link>
 		
@@ -35,7 +147,7 @@
 &lt;h2&gt;Overview of our solution&lt;/h2&gt; 
 &lt;p&gt;We’ll show you how to deploy ParallelCluster into Account B using a shared VPC from infrastructure in Account A.&lt;/p&gt; 
 &lt;div id="attachment_2808" style="width: 1624px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2808" class="size-full wp-image-2808" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/24/CleanShot-2023-08-24-at-16.41.52@2x.png" alt="Figure 1 – VPC Resource Share created on Account A (VPC infrastructure account) and shared to Account B (ParallelCluster creation account) using AWS Resource Access Manager." width="1614" height="1400"&gt;
+ &lt;img aria-describedby="caption-attachment-2808" loading="lazy" class="size-full wp-image-2808" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/24/CleanShot-2023-08-24-at-16.41.52@2x.png" alt="Figure 1 – VPC Resource Share created on Account A (VPC infrastructure account) and shared to Account B (ParallelCluster creation account) using AWS Resource Access Manager." width="1614" height="1400"&gt;
  &lt;p id="caption-attachment-2808" class="wp-caption-text"&gt;Figure 1 – VPC Resource Share created on Account A (VPC infrastructure account) and shared to Account B (ParallelCluster creation account) using AWS Resource Access Manager.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;These are the steps we’ll take for the solution:&lt;/p&gt; 
@@ -2222,162 +2334,6 @@ Outputs:
 &lt;p&gt;In this post we provided an overview of the different Hpc7g instance sizes along with their instance specifications. We used a known memory bandwidth-sensitive CFD workload (using OpenFOAM) and explained how customers can benefit from using the different instance sizes to maximize the performance per core by choosing the smaller instance sizes, while keeping all the other engineering specs (and the price per instance) the same.&lt;/p&gt; 
 &lt;p&gt;This led to a modest increase in cost&amp;nbsp;but&amp;nbsp;a disproportionately significant improvement in the overall performance,&amp;nbsp;which means you get the result sooner, and net-net, with a better price-performance ratio.&amp;nbsp;This is meaningful for&amp;nbsp;memory-intensive and license-constrained use cases,&amp;nbsp;&lt;strong&gt;so we think this is a feature you should be paying attention to&lt;/strong&gt;.&lt;/p&gt; 
 &lt;p&gt;The result only &lt;em&gt;sounds&lt;/em&gt; unintuitive. If you have any thoughts about this, or you want to discuss this in depth, reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;. We’d love to know how this helps you.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Application deep-dive into the AWS Graviton3E-based Amazon EC2 Hpc7g instance</title>
-		<link>https://aws.amazon.com/blogs/hpc/application-deep-dive-into-the-graviton3e-based-amazon-ec2-hpc7g-instance/</link>
-		
-		<dc:creator><![CDATA[Neil Ashton]]></dc:creator>
-		<pubDate>Thu, 29 Jun 2023 14:36:54 +0000</pubDate>
-				<category><![CDATA[Amazon EC2]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[CFD]]></category>
-		<category><![CDATA[Computational Fluid Dynamics]]></category>
-		<category><![CDATA[Cryo-EM]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Finite Element Analysis]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[MPI]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">f84d405e93b8ee3b8783b977d95d82aeba8f30cf</guid>
-
-					<description>In this post we’ll show you application performance and scaling results from Hpc7g, a new instance powered by AWS Graviton3E across a wide range of HPC workloads and disciplines.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-2558" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/28/grav3eperf.png" alt="Application deep-dive into the AWS Graviton3E-based Amazon EC2 Hpc7g instance" width="380" height="380"&gt;This post was created by Neil Ashton, Karthik Raman, Stephen Sachs, and Heidi Poxon, from HPC Engineering, Rami Malladi and Jun Tang from Annapurna Labs, &lt;/em&gt;&lt;em&gt;and Dnyanesh Digraskar from the HPC Partner organization.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Last week &lt;a href="https://aws.amazon.com/blogs/aws/new-amazon-ec2-hpc7g-instances-powered-by-aws-graviton3e-processors-optimized-for-high-performance-computing-workloads/"&gt;we announced&lt;/a&gt; the Amazon EC2 Hpc7g instance type that joins the family of HPC-specific instances in the Amazon Elastic Cloud (Amazon EC2) which started with Hpc6a in January 2022. Moving to Hpc7g offers up to 70% better performance and almost 3x better &lt;em&gt;price-performance&lt;/em&gt; compared to the previous generation AWS Graviton instances for compute-intensive workloads. They also consume up to 60% less energy for the same work than comparable Amazon EC2 instances.&lt;/p&gt; 
-&lt;p&gt;In this post we’ll discuss details of this new instance type powered by the AWS Graviton3E, and we’ll show you performance results from our work running some real workloads from computational fluid dynamics (CFD), finite-element analysis (FEA), molecular dynamics, and numerical weather prediction.&lt;/p&gt; 
-&lt;p&gt;We’re thankful for the work Siemens are doing with our teams, which has &lt;a href="https://blogs.sw.siemens.com/simcenter/simcenter-star-ccm-2302-released/"&gt;already resulted&lt;/a&gt; in the latest version of &lt;strong&gt;Siemens Simcenter STAR-CCM+&lt;/strong&gt; ported to AWS Graviton with some really pleasing results – these are also reflected on Hpc7g, too.&lt;/p&gt; 
-&lt;p&gt;We’re also excited to show – &lt;em&gt;for the first time&lt;/em&gt; – results from a beta-release of &lt;strong&gt;Ansys Fluent&lt;/strong&gt; which has very recently been ported to work on Graviton. &lt;a href="https://www.ansys.com/news-center/press-releases/ansys-expands-its-cloud-footprint"&gt;We’ve worked closely&lt;/a&gt; with the team there to port other Ansys applications including Ansys LS-Dyna that we also show results for in this post.&lt;/p&gt; 
-&lt;p&gt;And we’re including a customer use-case here from our friends at &lt;a href="https://aws.amazon.com/solutions/case-studies/flying-whales/"&gt;Flying Whales&lt;/a&gt; to highlight &lt;em&gt;why&lt;/em&gt; we build these things: we want the scientists and engineers who run their HPC workloads on AWS to be &lt;em&gt;the&lt;/em&gt; &lt;em&gt;most productive people in their field &lt;/em&gt;because they have access to amazing tools, any time they need them.&lt;/p&gt; 
-&lt;h2&gt;The path to Hpc7g&lt;/h2&gt; 
-&lt;p&gt;Since the launch of AWS Graviton2 in instances like the c6g, we’ve been hearing from customers doing serious work in CFD, molecular dynamics, and numerical weather prediction. We blogged about how &lt;a href="https://aws.amazon.com/blogs/compute/c6g-openfoam-better-price-performance/"&gt;they offered up to 37% better price performance&lt;/a&gt; than traditional alternatives at the time. But we knew we could do even better, and we worked to improve our Graviton offerings in two dimensions.&lt;/p&gt; 
-&lt;p&gt;Firstly, we designed and built the third generation &lt;em&gt;Graviton3&lt;/em&gt; processor, with several new capabilities that made it great for HPC workloads. It was the first instance type in the fleet to offer DDR5 memory, and it packs a communication mesh connecting all 64 cores on the die.&lt;/p&gt; 
-&lt;p&gt;Second, we embarked on developing an HPC-specific family of instances tailored specifically to the needs of HPC customers. That meant higher network bandwidth between instances, deep capacity pools in placement groups close to other services HPC customers use (to limit the effects of latency), and engineered for a lower price-point. This makes them a true competitive alternative to highly optimized on-premises systems.&lt;/p&gt; 
-&lt;p&gt;The intersection of these two engineering programs is the Hpc7g instance, based upon the AWS Graviton3E processor. Hpc7g instances support 3 configurations (see Table 1) with up to 64 physical cores, 128 GiB of memory, 200 Gbps of network performance through the Elastic Fabric Adapter (EFA), and 20 Gbps of &lt;a href="https://aws.amazon.com/ebs/"&gt;Amazon Elastic Block Store (EBS)&lt;/a&gt; performance. These instances are possible because of the &lt;a href="https://aws.amazon.com/ec2/nitro/"&gt;AWS Nitro System&lt;/a&gt;, a combination of dedicated hardware and a lightweight hypervisor that offloads many of the traditional virtualization functions to dedicated hardware, result in performance that’s &lt;a href="https://aws.amazon.com/blogs/hpc/bare-metal-performance-with-the-aws-nitro-system/"&gt;virtually indistinguishable&lt;/a&gt; from bare metal.&lt;/p&gt; 
-&lt;p&gt;And like we said a minute ago, Hpc7g instances use up to 60% less energy for the same performance than other, comparable Amazon EC2 instances.&lt;/p&gt; 
-&lt;h2&gt;Important specs&lt;/h2&gt; 
-&lt;div id="attachment_2550" style="width: 934px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2550" loading="lazy" class="size-full wp-image-2550" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/28/CleanShot-2023-06-28-at-09.37.56.png" alt="Table 1 – Hpc7g prices, instance sizes at launch, and engineering specifications" width="924" height="247"&gt;
- &lt;p id="caption-attachment-2550" class="wp-caption-text"&gt;Table 1 – Hpc7g prices, instance sizes at launch, and engineering specifications&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Hpc7 instance sizes are different from normal Amazon EC2 instance sizes&lt;/h3&gt; 
-&lt;p&gt;All 7th generation HPC instances will be available in different sizes. Usually in Amazon EC2, a smaller size reflects a smaller slice of the underlying hardware. However, for the HPC instances starting with Hpc7g, each size in the instance family &lt;em&gt;will have the same engineering specs and price&lt;/em&gt;, and will differ only by the number of cores offered.&lt;/p&gt; 
-&lt;p&gt;You have always been able to manually disable cores or use process pinning (affinity) to carefully place threads around the CPU. But doing this optimally needs an in-depth knowledge of the chip architecture like the number of NUMA domains and the memory layout. It also means you have to know MPI well, and have a clear sight to what your job submission scripts do when the scheduler receives them.&lt;/p&gt; 
-&lt;p&gt;By offering instance sizes that already have the right cores turned off, you’ll be able &lt;em&gt;to maximize the performance of your code with less work&lt;/em&gt;. This will be a boost for customers who need to achieve the absolute best performance &lt;em&gt;per core&lt;/em&gt; for their workloads, which often involve commercially-licensed ISV applications. In this case, customers are driven by pricing concerns to get the best possible results from each per-core license they buy. You’ll find a detailed explanation in our other post on this channel in the next few days, along with performance comparisons that will help you understand our methodology.&lt;/p&gt; 
-&lt;p&gt;The cost stays the same across all Hpc7g instance sizes. That’s because you still get access to the entire node’s memory and network, with selected cores turned off to dedicate the memory bandwidth available to the remaining cores. We encourage you to benchmark your own codes and find the right balance for your specific needs.&lt;/p&gt; 
-&lt;h2&gt;Performance&lt;/h2&gt; 
-&lt;p&gt;To illustrate why Hpc7g instances are so appealing, let’s look at six common HPC codes:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Siemens Simcenter STAR-CCM+ for CFD&lt;/li&gt; 
- &lt;li&gt;Ansys Fluent for CFD&lt;/li&gt; 
- &lt;li&gt;Ansys LS-Dyna for FEA&lt;/li&gt; 
- &lt;li&gt;OpenFOAM for CFD (DrivAer and Flying Whales customer case)&lt;/li&gt; 
- &lt;li&gt;GROMACS for molecular dynamics&lt;/li&gt; 
- &lt;li&gt;WRF for numerical weather prediction&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;In Figures 1-14, you’ll see comparisons using c6gn.16xlarge (based on Graviton2) and hpc7g.16xlarge (based on Graviton3E).&lt;/p&gt; 
-&lt;p&gt;The highlight is that for these codes, Hpc7g delivered up to 70% better performance (including a few cases even better than that) and almost 3x better &lt;em&gt;price-performance&lt;/em&gt; due to a combination of the DDR5 memory offering up to 50% more memory bandwidth than DDR4, the Graviton3E processor, and 200Gbps networking from EFA.&lt;/p&gt; 
-&lt;p&gt;Let’s now dive a bit deeper into each of these results so you can see the specific performance and price-performance increases for a range of test-cases and codes.&lt;/p&gt; 
-&lt;h3&gt;Siemens Simcenter STAR-CCM+&lt;/h3&gt; 
-&lt;p&gt;The first code is Siemens Simcenter STAR-CCM+ who have ported their code recently to support Arm-based processors like the Hpc7g instance. To demonstrate the performance we took the AeroSUV 320M cell automotive test-case —&amp;nbsp;a useful public test-case with similar characteristics to production automotive external aerodynamics models. We ran this with Siemens Simcenter STAR-CCM+ 2302, using OpenMPI 4.1.4. The graphs below show the &lt;em&gt;iterations per minute&lt;/em&gt; and the cost in dollars for a complete simulation (1000 iterations) using Amazon EC2 On-Demand pricing (you’ll get a better deal from Reserved Instances or Savings Plans, but On Demand is a simpler benchmark to use and works well for our purposes in this post).&lt;/p&gt; 
-&lt;p&gt;As shown in Figures 1 and 2 the performance improvement from c6gn.16xlarge instances with Graviton2 to hpc7g.16xlarge instances with Graviton3E is between 71% (256 cores) to 74% (1280 cores) and between 2.83x (256 cores) and 2.91x (1280 cores) better price-performance.&lt;/p&gt; 
-&lt;div id="attachment_2491" style="width: 1000px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2491" loading="lazy" class="size-full wp-image-2491" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-17.12.23.png" alt="Figure 1 – Siemens Simcenter STAR-CCM+ - AeroSUV 320M cell - performance with Graviton3E is around 70% better than on Graviton2" width="990" height="427"&gt;
- &lt;p id="caption-attachment-2491" class="wp-caption-text"&gt;Figure 1 – Siemens Simcenter STAR-CCM+ – AeroSUV 320M cell – performance with Graviton3E is 71-74% better than on Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2492" style="width: 1000px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2492" loading="lazy" class="size-full wp-image-2492" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-17.13.01.png" alt="Figure 2 - Siemens Simcenter STAR-CCM+ - AeroSUV 320M - cost per simulation for Graviton3E is 2.8x better than for Graviton2" width="990" height="511"&gt;
- &lt;p id="caption-attachment-2492" class="wp-caption-text"&gt;Figure 2 – Siemens Simcenter STAR-CCM+ – AeroSUV 320M – cost per simulation for Graviton3E is 2.8x better than for Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Ansys Fluent (new to Graviton)&lt;/h3&gt; 
-&lt;p&gt;One of the most widely used CFD codes in the world is Ansys Fluent. We have worked closely with Ansys to help them to port their code to work on Graviton instances. They have recently provided a public beta of this ported version, so we were keen to see the performance and price-performance improvements from Graviton2 to Graviton3E.&lt;/p&gt; 
-&lt;p&gt;To do this we ran Ansys Fluent 2023 R1 on the &lt;em&gt;F1 race-car 140M cell&lt;/em&gt; case, which is a standard steady-state case that gives indicative performance for any external aerodynamics type of case. We used OpenMPI v4.14 for all the runs, we show &lt;em&gt;Solver Rating&lt;/em&gt; for performance and the cost per simulation, too (based on 1000 iterations).&lt;/p&gt; 
-&lt;p&gt;Figures 3 and 4 show that the performance improvement is between 61% (512 cores) to 64% (256 cores) and the price-performance improvement is between 2.64x (512 cores) and 2.7x (256 cores).&lt;/p&gt; 
-&lt;div class="mceTemp"&gt;&lt;/div&gt; 
-&lt;div id="attachment_2581" style="width: 1185px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2581" loading="lazy" class="size-full wp-image-2581" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/29/CleanShot-2023-06-28-at-14.33.38-1.png" alt="Figure 3 – Ansys Fluent F1 race-car 140M cell case – performance for Graviton3E is 61-64% better than for Graviton2" width="1175" height="534"&gt;
- &lt;p id="caption-attachment-2581" class="wp-caption-text"&gt;Figure 3 – Ansys Fluent F1 race-car 140M cell case – performance for Graviton3E is 61-64% better than for Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2582" style="width: 1188px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2582" loading="lazy" class="wp-image-2582 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/29/Price-Perf-F1-race-car-140M.png" alt="Figure 4 - Ansys Fluent race-car 140M cell case – cost per simulation is 2.64-2.7x better on Graviton3E compared to Graviton2." width="1178" height="541"&gt;
- &lt;p id="caption-attachment-2582" class="wp-caption-text"&gt;Figure 4 – Ansys Fluent F1 race-car 140M cell case – cost per simulation is 2.64-2.7x better on Graviton3E compared to Graviton2.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Ansys LS-DYNA&lt;/h3&gt; 
-&lt;p&gt;Ansys LS-DYNA is an explicit simulation software used for modeling vehicle crash, occupant safety, drop tests, and impacts. We work closely with Ansys to optimize their LS-DYNA ARM binaries for Graviton.&lt;/p&gt; 
-&lt;p&gt;To see the performance improvement on Hpc7g, we ran Ansys LS-DYNA R12 on the &lt;em&gt;Offset Deformable Barrier (ODB)&lt;/em&gt; model with 10M elements. ODB is a standard LS-DYNA benchmarking case that simulates frontal impact on a sedan car. We used OpenMPI v4.0 for all the runs.&lt;/p&gt; 
-&lt;p&gt;As you can see from Figure 5 and 6, the performance improvement is between 56% (128 cores) to 59% (320 cores) and the price-performance improvement is between 2.56x (128 cores) and 2.62x (320 cores).&lt;/p&gt; 
-&lt;div id="attachment_2499" style="width: 908px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2499" loading="lazy" class="size-full wp-image-2499" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.22.06.png" alt="Figure 5 - Ansys LS-DYNA ODB 10M – performance for Graviton3E is around 57% better than for Graviton2" width="898" height="465"&gt;
- &lt;p id="caption-attachment-2499" class="wp-caption-text"&gt;Figure 5 – Ansys LS-DYNA ODB 10M – performance for Graviton3E is around 57% better than for Graviton2`&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2500" style="width: 984px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2500" loading="lazy" class="size-full wp-image-2500" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.22.39.png" alt="Figure 6 - Ansys LS-DYNA ODB 10M – cost per simulation for Graviton3E is between 2.5-2.6x better than for Graviton2" width="974" height="461"&gt;
- &lt;p id="caption-attachment-2500" class="wp-caption-text"&gt;Figure 6 – Ansys LS-DYNA ODB 10M – cost per simulation for Graviton3E is between 2.5-2.6x better than for Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;OpenFOAM&lt;/h3&gt; 
-&lt;p&gt;Next, we tested OpenFOAM with the &lt;em&gt;DrivAer fastback vehicle&lt;/em&gt; (from the &lt;a href="http://autocfd.eng.ox.ac.uk/"&gt;AutoCFD workshop&lt;/a&gt;) with 128M cells (generated using the ANSA preprocessing software by BETA-CAE Systems), and ran the case in hybrid RANS-LES mode using the pimpleFoam solver. We used OpenFOAM v2112 compiled with GNU C++ Compiler v9.4 and Open MPI v4.1.4. To schedule these jobs (as well as for the rest of the codes discussed) we used AWS ParallelCluster. We followed the same procedures as the &lt;a href="https://catalog.us-east-1.prod.workshops.aws/workshops/21c996a7-8ec9-42a5-9fd6-00949d151bc2/en-US"&gt;AWS ParallelCluster CFD workshops&lt;/a&gt;, but instead utilized C6gn and Hpc7g instances for running the tests.&lt;/p&gt; 
-&lt;p&gt;We ran the case using 64 MPI ranks per instance (fully-populated) and scaled from 2 instances (128 cores) to 16 instances (1024 cores) across both c6gn and Hpc7g. The graphs below show the &lt;em&gt;iterations per minute&lt;/em&gt; and the cost in dollars for 10,000 time-steps using Amazon EC2 On-Demand pricing.&lt;/p&gt; 
-&lt;p&gt;In Figure 7 below, you can see that for this test case, Hpc7g offers between 60% (256 cores) and 72% (1024 cores) better performance as compared to the previous generation Graviton2 instance.&lt;/p&gt; 
-&lt;div id="attachment_2501" style="width: 977px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2501" loading="lazy" class="size-full wp-image-2501" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.23.11.png" alt="Figure 7 - OpenFOAM DrivAer case 128M cells - performance with Graviton3E is around 60-70% better than on Graviton2" width="967" height="445"&gt;
- &lt;p id="caption-attachment-2501" class="wp-caption-text"&gt;Figure 7 – OpenFOAM DrivAer case 128M cells – performance with Graviton3E is 60-72% better than on Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 8 shows between 2.7x (256 cores) and 2.98x (1024 cores) better price-performance. Much of this is thanks to the increased memory bandwidth between Graviton2 and Graviton3E and the optimized HPC price.&lt;/p&gt; 
-&lt;div id="attachment_2502" style="width: 977px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2502" loading="lazy" class="size-full wp-image-2502" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.23.41.png" alt="Figure 8 - OpenFOAM DrivAer case 128M cells cost per simulation for Graviton3E is around 2.8x better than for Graviton2" width="967" height="504"&gt;
- &lt;p id="caption-attachment-2502" class="wp-caption-text"&gt;Figure 8 – OpenFOAM DrivAer case 128M cells cost per simulation for Graviton3E is 2.7-2.98x better than for Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Our customer’s use case: Flying Whales&lt;/h3&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-2564" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/28/FlyingWhales_Airship.a235dee3ef6eea978cb9ab19ce4bfb6b8e2c9e48.png" alt="A flying whale" width="380" height="252"&gt;Flying Whales is a French company developing a 60-ton payload cargo airship for the heavy lift and outsize cargo market. It’s a remarkable project, born from France’s ambition to provide efficient, environmentally friendly transportation for collecting wood in remote areas. You can read more about them and how they use AWS in &lt;a href="https://aws.amazon.com/solutions/case-studies/flying-whales/"&gt;this case study&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;The Flying Whales team uses OpenFOAM to run complex CFD simulations of their vehicles – and they have a continual focus on driving &lt;em&gt;more accuracy&lt;/em&gt; and efficiency from their CFD simulations. They were naturally very interested in testing the Hpc7g instance.&lt;/p&gt; 
-&lt;p&gt;Their test-case is 31M cells and uses the &lt;em&gt;simpleFoam&lt;/em&gt; solver within OpenFOAM. Like in our previous tests, we used OpenFOAM v2212, compiled with GNU C++ Compiler v9.4 and ran using Open MPI v4.1.4.&lt;/p&gt; 
-&lt;p&gt;They ran the test to 8,000 steady-state iterations. Figures 9 and 10 plot the results, and show that Hpc7g provided a boost in performance over c6gn of between 62% (64 cores) and 75% (640 cores) for the same core-count &lt;em&gt;and&lt;/em&gt; between 2.67x (64 cores) and 2.84x (640 cores) lower cost per simulation.&lt;/p&gt; 
-&lt;p&gt;The scaling efficiency also improved with Hpc7g, which we attribute to the newer generation EFA and an extra 100 Gbps of network bandwidth (200 Gbps vs 100 Gbps).&lt;/p&gt; 
-&lt;div id="attachment_2503" style="width: 980px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2503" loading="lazy" class="size-full wp-image-2503" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.25.39.png" alt="Figure 9 - Flying Whales OpenFOAM case - performance of Graviton3E is around between 60-75% better than for Graviton2" width="970" height="376"&gt;
- &lt;p id="caption-attachment-2503" class="wp-caption-text"&gt;Figure 9 – Flying Whales OpenFOAM case – performance of Graviton3E is 62-75% better than for Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2504" style="width: 1001px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2504" loading="lazy" class="size-full wp-image-2504" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.26.07.png" alt="Figure 10 - Flying Whales OpenFOAM case - cost per simulation for Graviton3 is around 2.7x better than for Graviton2" width="991" height="384"&gt;
- &lt;p id="caption-attachment-2504" class="wp-caption-text"&gt;Figure 10 – Flying Whales OpenFOAM case – cost per simulation for Graviton3 is 2.67-2.84x better than for Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;GROMACS&lt;/h3&gt; 
-&lt;p&gt;Next, we looked at the standard benchRIB case of &lt;a href="https://www.mpinat.mpg.de/grubmueller/bench"&gt;12M atoms for simulating a peptide in water&lt;/a&gt;. We used GROMACS v2023, which we compiled using GNU C++ Compiler v9 and ran with Open MPI v4.1.4 on AWS ParallelCluster.&lt;/p&gt; 
-&lt;p&gt;Like last time, we ran with 64 MPI ranks per node to fully-populate each instance, and scaled from 1 instance to 16 instances for a total of 1024 cores. For these graphs showing Ns of simulated time per day (ns/day), higher is better.&lt;/p&gt; 
-&lt;p&gt;We saw between 39% (1024 cores) and 55% (128 cores) better performance and between 2.28x (1024 cores) and 2.54x (128 cores) better price-performance than the previous generation Graviton2 instances.&lt;/p&gt; 
-&lt;div id="attachment_2505" style="width: 984px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2505" loading="lazy" class="size-full wp-image-2505" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.26.42.png" alt="Figure 11 - GROMACS -benchRIB - performance for Graviton3E is around 40-55% better than for Graviton2" width="974" height="402"&gt;
- &lt;p id="caption-attachment-2505" class="wp-caption-text"&gt;Figure 11 – GROMACS -benchRIB – performance for Graviton3E is 39-55% better than for Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2506" style="width: 991px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2506" loading="lazy" class="size-full wp-image-2506" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.27.12.png" alt="Figure 12 - GROMACS - benchRIB – cost per simulation for Graviton3E is around 2.3x better than for Graviton2" width="981" height="507"&gt;
- &lt;p id="caption-attachment-2506" class="wp-caption-text"&gt;Figure 12 – GROMACS – benchRIB – cost per simulation for Graviton3E is 2.28-2.54x better than for Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;WRF&lt;/h3&gt; 
-&lt;p&gt;Finally, we looked at &lt;a href="https://www2.mmm.ucar.edu/wrf/src/conus2.5km.tar.gz"&gt;CONUS 2.5km benchmark&lt;/a&gt; performance using WRF v4.2.2. We used GCC-11 and OpenMPI 4.1.4 to compile WRF. When running, we used 8 ranks per instance and 8 threads per rank with optimal affinity to use all the 64 cores on each instance.&lt;/p&gt; 
-&lt;p&gt;We ran the benchmark scaling tests up to 32 instances (2,048 cores). We used total elapsed time to calculate the simulation speedup (number of computing steps that can be simulated each day) — higher is better.&lt;/p&gt; 
-&lt;p&gt;We saw between 58% (2048 cores) and 62% (256 cores) better performance and between 2.73x (2048 cores) and 2.8x (256 cores) better price-performance than the previous generation, Graviton2 instances.&lt;/p&gt; 
-&lt;div id="attachment_2507" style="width: 977px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2507" loading="lazy" class="size-full wp-image-2507" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.27.36.png" alt="Figure 13 - WRF Conus 2.5km - Graviton3E outperforms Graviton2 by around 60%" width="967" height="498"&gt;
- &lt;p id="caption-attachment-2507" class="wp-caption-text"&gt;Figure 13 – WRF Conus 2.5km – Graviton3E outperforms Graviton2 by 58-62%&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2508" style="width: 974px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2508" loading="lazy" class="size-full wp-image-2508" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/21/CleanShot-2023-06-21-at-18.28.00.png" alt="Figure 14 - WRF Conus 2.5km - cost per simulation for Graviton3E is around 2.7x better than Graviton2" width="964" height="498"&gt;
- &lt;p id="caption-attachment-2508" class="wp-caption-text"&gt;Figure 14 – WRF Conus 2.5km – cost per simulation for Graviton3E is 2.73-2.8x better than Graviton2&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post we introduced the new Hpc7g instance that joins the Amazon EC2 HPC instances family. We ran several popular HPC applications and showed that it offers up to 70% better performance and almost 3x better &lt;em&gt;price-performance&lt;/em&gt; compared to previous generation Graviton instances.&lt;/p&gt; 
-&lt;p&gt;Graviton3E instances also consume up to 60% less energy for the same work than comparable Amazon EC2 instances, which makes it a more sustainable approach to HPC.&lt;/p&gt; 
-&lt;p&gt;We’ve shown how the core technology improvements delivered for some important workloads from CFD, FEA, molecular dynamics, and weather simulation. And we showed you how this translates to real benefits for customers like Flying Whales and their engineering design simulations.&lt;/p&gt; 
-&lt;p&gt;You can find a list of technical resources to help you move to Graviton for HPC &lt;a href="https://github.com/aws/aws-graviton-getting-started/tree/main/HPC"&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt; and you can learn more about HPC visit the HPC page &lt;a href="https://aws.amazon.com/hpc/"&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;</content:encoded>
 					
 		
 		
