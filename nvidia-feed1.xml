@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 03 Oct 2023 16:52:00 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 03 Oct 2023 20:54:10 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,78 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.1</generator>
 	<item>
+		<title>How AI Helps Fight Wildfires in California</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/04/ai-wildfires-california/</link>
+		
+		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
+		<pubDate>Wed, 04 Oct 2023 15:00:55 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Climate]]></category>
+		<category><![CDATA[GPU]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67306</guid>
+
+					<description><![CDATA[California has a new weapon against the wildfires that have devastated the state: AI. A freshly launched system powered by AI trained on NVIDIA GPUs promises to provide timely alerts to first responders across the Golden State every time a blaze ignites. The ALERTCalifornia initiative, a collaboration between California’s wildfire fighting agency CAL FIRE and <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/04/ai-wildfires-california/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>California has a new weapon against the wildfires that have devastated the state: AI.</p>
+<p>A freshly launched system powered by AI trained on NVIDIA GPUs promises to provide timely alerts to first responders across the Golden State every time a blaze ignites.</p>
+<p>The ALERTCalifornia initiative, a collaboration between California’s wildfire fighting agency CAL FIRE and the University of California, San Diego, uses advanced AI developed by DigitalPath.</p>
+<p>Harnessing the raw power of NVIDIA GPUs and aided by a network of thousands of cameras dotting the Californian landscape, DigitalPath has refined a <a href="https://blogs.nvidia.com/blog/2018/09/05/whats-the-difference-between-a-cnn-and-an-rnn/" target="_blank" rel="noopener">convolutional neural network</a> to spot signs of fire in real time.</p>
+<h2><strong>A Mission That’s Close to Home</strong></h2>
+<p><a href="https://www.digitalpath.net/" target="_blank" rel="noopener">DigitalPath</a> CEO Jim Higgins said it’s a mission that means a lot to the 100-strong technology partner, which is nestled in the Sierra Nevada foothills in Chico, Calif., a short drive from the town of Paradise, where the state’s deadliest wildfire killed 85 people in 2018.</p>
+<p>“It’s one of the main reasons we’re doing this,” Higgins said of the wildfire, the deadliest and most destructive in the history of the most populous U.S. state. “We don’t want people to lose their lives.”</p>
+<p>The ALERTCalifornia initiative is based at UC San Diego’s Jacobs School of Engineering, the Qualcomm Institute and the Scripps Institution of Oceanography.</p>
+<p>The program manages a network of thousands of monitoring cameras and sensor arrays and collects data that provides actionable, real-time information to inform public safety.</p>
+<p>The AI program started in June and was initially deployed in six of Cal Fire’s command centers. This month it expanded to all of CAL FIRE’s 21 command centers.</p>
+<figure id="attachment_67307" aria-describedby="caption-attachment-67307" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1.png"><img decoding="async" fetchpriority="high" class="wp-image-67307 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1.png 1920w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67307" class="wp-caption-text">ALERTCalifornia, powered by DigitalPath, can detect fires from cameras positioned across the golden state.</figcaption></figure>
+<p>DigitalPath began by building out a management platform for a network of cameras used to confirm California wildfires after a 911 call.</p>
+<p>The company quickly realized there would be no way to have people examine images from the thousands of cameras relaying images to the system every ten to fifteen seconds.</p>
+<p>So Ethan Higgins, the company’s system architect, turned to AI.</p>
+<p>The team began by training a convolutional neural network on a cloud-based system running an NVIDIA A100 Tensor Core GPU and later transitioned to a system running on eight A100 GPUs.</p>
+<p>The AI model is crucial to examining a system that sees almost 8 million images a day streaming in from over 1,000 first-party cameras, primarily in California, and thousands more from third-party sources nationwide, he said.</p>
+<h2><strong>Impact of Wildfires</strong></h2>
+<figure id="attachment_67311" aria-describedby="caption-attachment-67311" style="width: 348px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png"><img decoding="async" class="wp-image-67311 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png" alt="" width="348" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png 348w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-278x400.png 278w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-768x1105.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-1068x1536.png 1068w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-313x450.png 313w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-149x215.png 149w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png 1167w" sizes="(max-width: 348px) 100vw, 348px" /></a><figcaption id="caption-attachment-67311" class="wp-caption-text">All anomalies being tracked throughout California as of Sept. 20, 2023. Image Credit: DigitalPath</figcaption></figure>
+<p>It’s arriving just in time.</p>
+<p>Wildfires have ravaged California over the past decade, burning millions of acres of land, destroying thousands of homes and businesses and claiming hundreds of lives.</p>
+<p><a href="https://www.fire.ca.gov/our-impact/statistics" target="_blank" rel="noopener">According to CAL FIRE</a>, in 2020 alone, the state experienced five of its six largest and seven of its 20 most destructive wildfires.</p>
+<p>And the <a href="https://calmatters.org/california-wildfire-map-tracker/" target="_blank" rel="noopener">total dollar damage of wildfires in California from 2019 to 2021 was estimated at over $25 billion</a>.</p>
+<p>The new system promises to give first responders a crucial tool to prevent such conflagrations.</p>
+<p>In fact, during a recent interview with DigitalPath, the system detected two separate fires in Northern California as they ignited.</p>
+<p>Every day, the system detects between 50 and 300 events, offering invaluable real-time information to local first responders.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><strong>Beyond Detection: Enhancing Capabilities</strong></h2>
+<figure id="attachment_67314" aria-describedby="caption-attachment-67314" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3.png"><img decoding="async" class="wp-image-67314 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-672x481.png" alt="" width="672" height="481" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-672x481.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-400x286.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-768x549.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-629x450.png 629w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-301x215.png 301w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-140x100.png 140w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-1280x916.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3.png 1462w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67314" class="wp-caption-text">Example of multiple cameras detecting a single anomaly. Image Credit: DigitalPath.</figcaption></figure>
+<p>But AI is just part of the story.</p>
+<p>The system is also a case study in how innovative companies can use AI to amplify their unique capabilities.</p>
+<p>One of DigitalPath’s breakthroughs is its system’s ability to identify the same fire captured from diverse camera angles. DigitalPath’s system efficiently filters imagery down to a human-digestible level. The system filters 8 million daily images down to just 100 alerts, or 1.25 thousandths of one percent of total images captured.</p>
+<p>“The system was designed from the start with human processing in mind,” Higgins said, ensuring that authorities receive a single, consolidated notification for every incident.</p>
+<p>“We’ve got to catch every fire we can,” he adds.</p>
+<h2><strong>Expanding Horizons</strong></h2>
+<p>DigitalPath eventually hopes to expand its detection technology to help California detect more kinds of natural disasters.</p>
+<p>And having proven its worth in California, DigitalPath is now in talks with state and county officials and university research teams across the fire-prone Western United States under its ALERTWest subsidiary.</p>
+<p>Their goal: to help partners replicate the success of UC San Diego and ALERTCalifornia, potentially shielding countless lives and homes from the wrath of wildfires.</p>
+<p><i>Featured image credit: </i><a href="https://www.flickr.com/photos/slworking/29034137667" target="_blank" rel="noopener"><i>SLworking2, via Flickr</i></a><i>, Creative Commons license, some rights reserved. </i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/29firemain1080.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/29firemain1080-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[How AI Helps Fight Wildfires in California]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Meet the Maker: Robotics Student Rolls Out Autonomous Wheelchair With NVIDIA Jetson</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/03/kabilan-kb-autonomous-wheelchair/</link>
 		
@@ -39,12 +111,12 @@
 
 					<description><![CDATA[With the help of AI, robots, tractors and baby strollers — even skate parks — are becoming autonomous. One developer, Kabilan KB, is bringing autonomous-navigation capabilities to wheelchairs, which could help improve mobility for people with disabilities. The undergraduate from the Karunya Institute of Technology and Sciences in Coimbatore, India, is powering his autonomous wheelchair <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/03/kabilan-kb-autonomous-wheelchair/">Read article &#62;</a>]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>With the help of AI, robots, <a href="https://blogs.nvidia.com/blog/2022/12/01/mondavi-monarch-smart-electric-jetson-tractor/" target="_blank" rel="noopener">tractors</a> and <a href="https://blogs.nvidia.com/blog/2023/01/18/ella-stroller-jetson/" target="_blank" rel="noopener">baby strollers</a> — even <a href="https://blogs.nvidia.com/blog/2023/06/12/kirk-kaiser-jetson-self-driving-skate-park/" target="_blank" rel="noopener">skate parks</a> — are becoming autonomous. One developer, Kabilan KB, is bringing autonomous-navigation capabilities to wheelchairs, which could help improve mobility for people with disabilities.</p>
-<p><img decoding="async" fetchpriority="high" class="wp-image-67283 alignright" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-300x400.png" alt="" width="233" height="311" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-300x400.png 300w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-375x500.png 375w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-768x1023.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-1153x1536.png 1153w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-338x450.png 338w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-161x215.png 161w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-75x100.png 75w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-1280x1706.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1.png 1500w" sizes="(max-width: 233px) 100vw, 233px" /></p>
+<p><img decoding="async" loading="lazy" class="wp-image-67283 alignright" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-300x400.png" alt="" width="233" height="311" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-300x400.png 300w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-375x500.png 375w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-768x1023.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-1153x1536.png 1153w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-338x450.png 338w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-161x215.png 161w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-75x100.png 75w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1-1280x1706.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/image1.png 1500w" sizes="(max-width: 233px) 100vw, 233px" /></p>
 <p>The undergraduate from the Karunya Institute of Technology and Sciences in Coimbatore, India, is powering his autonomous wheelchair project using the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/" target="_blank" rel="noopener">NVIDIA Jetson</a> platform for edge AI and robotics.</p>
 <p>The autonomous motorized wheelchair is connected to depth and lidar sensors — along with USB cameras — which allow it to perceive the environment and plan an obstacle-free path toward a user’s desired destination.</p>
 <p>“A person using the motorized wheelchair could provide the location they need to move to, which would already be programmed in the autonomous navigation system or path-planned with assigned numerical values,” KB said. “For example, they could press ‘one’ for the kitchen or ‘two’ for the bedroom, and the autonomous wheelchair will take them there.”</p>
 <p>An <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit" target="_blank" rel="noopener">NVIDIA Jetson Nano Developer Kit</a> processes data from the cameras and sensors in real time. It then uses deep learning-based computer vision models to detect obstacles in the environment.</p>
-<p><img decoding="async" class="aligncenter wp-image-67274 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-672x422.png" alt="" width="672" height="422" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-672x422.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-400x251.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-768x482.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-1536x964.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-717x450.png 717w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-342x215.png 342w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-159x100.png 159w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-1280x804.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p><img decoding="async" loading="lazy" class="aligncenter wp-image-67274 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-672x422.png" alt="" width="672" height="422" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-672x422.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-400x251.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-768x482.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-1536x964.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-717x450.png 717w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-342x215.png 342w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-159x100.png 159w, https://blogs.nvidia.com/wp-content/uploads/2023/10/diagram-image-1280x804.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
 <p>The developer kit acts as the brain of the autonomous system — generating a 2D map of its surroundings to plan a collision-free path to the destination — and sends updated signals to the motorized wheelchair to help ensure safe navigation along the way.</p>
 <h2><strong>About the Maker</strong></h2>
 <p>KB, who has a background in mechanical engineering, became fascinated with AI and robotics during the pandemic, when he spent his free time searching up educational YouTube videos on the topics.</p>
@@ -104,7 +176,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep-diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources and how they dramatically accelerate content creation.</i></p>
 <p>Releasing a 3D tutorial dubbed <i>The Easiest VFX Tutorial Ever</i> takes supreme confidence and the skills to back it up.</p>
 <p>Steve Lund a.k.a. CG Geek — the featured artist of this week’s <i>In the NVIDIA Studio</i> installment — has both in spades. It’s no surprise that over 1 million people have subscribed to his YouTube channel, which features tutorials on animation and visual effects (VFX) as well as select tech reviews.</p>
-<p><iframe title="the Easiest VFX Tutorial Ever." width="500" height="281" src="https://www.youtube.com/embed/cNbVl6LCEFI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="the Easiest VFX Tutorial Ever." width="500" height="281" src="https://www.youtube.com/embed/cNbVl6LCEFI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>CG Geek has been a content creator for over 13 years, starting with videos on stop-motion animation before moving on to 3D software. Films and movies are his primary sources of inspiration. He grew up creating short films with his family — experimenting with and implementing video effects and 3D characters — which became a critical foundation for his current work.</p>
 <p>Artists can strengthen their creative arsenal with the new <a href="https://www.microsoft.com/en-us/d/surface-laptop-studio-2/8rqr54krf1dz">Microsoft Surface Laptop Studio 2</a>, available for pickup today. It’s powered by <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/">GeForce RTX 4060</a>, GeForce RTX 4050 or <a href="https://www.nvidia.com/en-us/design-visualization/rtx-professional-laptops/?ncid=ref-pr-584767#">NVIDIA RTX 2000 Ada Generation</a> Laptop GPUs with 13th Gen Intel Core processors, up to 64GB of RAM and a 2TB SSD. It features a bright, vibrant 14.4-inch PixelSense Flow touchscreen, a 120Hz refresh rate, and Dolby Vision IQ and HDR to deliver sharper colors.</p>
 <figure id="attachment_67227" aria-describedby="caption-attachment-67227" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1.png"><img decoding="async" loading="lazy" class="size-large wp-image-67227" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1-672x340.png" alt="" width="672" height="340" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1-672x340.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1-400x202.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1-768x388.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1-842x426.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1-406x205.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1-188x95.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/itns-week75-navia-left-1280w-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67227" class="wp-caption-text">The versatile Microsoft Surface Laptop Studio 2.</figcaption></figure>
@@ -1190,57 +1262,6 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Virtually Incredible: Mercedes-Benz Prepares Its Digital Production System for Next-Gen Platform With NVIDIA Omniverse, MB.OS and Generative AI]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Oracle Cloud Infrastructure Offers New NVIDIA GPU-Accelerated Compute Instances</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/19/oracle-cloud-infrastructure-nvidia-gpu-accelerated-compute-instances/</link>
-		
-		<dc:creator><![CDATA[Dave Salvator]]></dc:creator>
-		<pubDate>Tue, 19 Sep 2023 23:40:06 +0000</pubDate>
-				<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Software]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[Inference]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66948</guid>
-
-					<description><![CDATA[With generative AI and large language models (LLMs) driving groundbreaking innovations, the computational demands for training and inference are skyrocketing. These modern-day generative AI applications demand full-stack accelerated compute, starting with state-of-the-art infrastructure that can handle massive workloads with speed and accuracy. To help meet this need, Oracle Cloud Infrastructure today announced general availability of <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/19/oracle-cloud-infrastructure-nvidia-gpu-accelerated-compute-instances/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>With <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/" target="_blank" rel="noopener">generative AI</a> and <a href="https://developer.nvidia.com/blog/tag/large-language-models/" target="_blank" rel="noopener">large language models</a> (LLMs) driving groundbreaking innovations, the computational demands for training and inference are skyrocketing.</p>
-<p>These modern-day generative AI applications demand full-stack accelerated compute, starting with state-of-the-art infrastructure that can handle massive workloads with speed and accuracy. To help meet this need, Oracle Cloud Infrastructure today announced general availability of <a href="https://www.nvidia.com/en-us/data-center/h100/" target="_blank" rel="noopener">NVIDIA H100 Tensor Core GPUs</a> on <a href="https://www.oracle.com/cloud/compute/" target="_blank" rel="noopener">OCI Compute</a>, with <a href="https://www.nvidia.com/en-us/data-center/l40s/" target="_blank" rel="noopener">NVIDIA L40S GPUs</a> coming soon.</p>
-<h2><strong>NVIDIA H100 Tensor Core GPU Instance on OCI</strong></h2>
-<p>The OCI Compute bare-metal instances with NVIDIA H100 GPUs, powered by the <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/" target="_blank" rel="noopener">NVIDIA Hopper architecture</a>, enable an order-of-magnitude leap for large-scale AI and high-performance computing, with unprecedented performance, scalability and versatility for every workload.</p>
-<p>Organizations using NVIDIA H100 GPUs obtain up to a <a href="https://resources.nvidia.com/en-us-tensor-core/nvidia-tensor-core-gpu-datasheet" target="_blank" rel="noopener">30x increase in AI inference performance</a> and a <a href="https://resources.nvidia.com/en-us-tensor-core/nvidia-tensor-core-gpu-datasheet" target="_blank" rel="noopener">4x boost in AI training</a> compared with tapping the <a href="https://www.nvidia.com/en-us/data-center/a100/" target="_blank" rel="noopener">NVIDIA A100 Tensor Core GPU</a>. The H100 GPU is designed for resource-intensive computing tasks, including training LLMs and inference while running them.</p>
-<p>The BM.GPU.H100.8 OCI Compute shape includes eight NVIDIA H100 GPUs, each with 80GB of HBM2 GPU memory. Between the eight GPUs, 3.2TB/s of bisectional bandwidth enables each GPU to communicate directly with all seven other GPUs via NVIDIA <a href="https://www.nvidia.com/en-us/data-center/nvlink/" target="_blank" rel="noopener">NVSwitch and NVLink 4.0 technology</a>. The shape includes 16 local NVMe drives with a capacity of 3.84TB each and also includes 4th Gen Intel Xeon CPU processors with 112 cores, as well as 2TB of system memory.</p>
-<p>In a nutshell, this shape is optimized for organizations’ most challenging workloads.</p>
-<p>Depending on timelines and sizes of workloads, <a href="https://www.oracle.com/ai-infrastructure/" target="_blank" rel="noopener">OCI Supercluster</a> allows organizations to scale their NVIDIA H100 GPU usage from a single node to up to tens of thousands of H100 GPUs over a high-performance, ultra-low-latency network.</p>
-<h2><strong>NVIDIA L40S GPU Instance on OCI</strong></h2>
-<p>The NVIDIA L40S GPU, based on the NVIDIA <a href="https://www.nvidia.com/en-us/geforce/ada-lovelace-architecture/" target="_blank" rel="noopener">Ada Lovelace architecture</a>, is a universal GPU for the data center, delivering breakthrough multi-workload acceleration for LLM inference and training, visual computing and video applications. The OCI Compute bare-metal instances with NVIDIA L40S GPUs will be available for early access later this year, with general availability coming early in 2024.</p>
-<p>These instances will offer an alternative to the NVIDIA H100 and A100 GPU instances for tackling smaller- to medium-sized AI workloads, as well as for graphics and video compute tasks. The NVIDIA L40S GPU achieves up to a <a href="https://resources.nvidia.com/en-us-l40s/l40s-datasheet-28413" target="_blank" rel="noopener">20% performance boost</a> for generative AI workloads and as much as a <a href="https://resources.nvidia.com/en-us-l40s/l40s-datasheet-28413" target="_blank" rel="noopener">70% improvement in fine-tuning AI models</a> compared with the NVIDIA A100.</p>
-<p>The BM.GPU.L40S.4 OCI Compute shape includes four NVIDIA L40S GPUs, along with the latest-generation Intel Xeon CPU with up to 112 cores, 1TB of system memory, 15.36TB of low-latency NVMe local storage for caching data and 400GB/s of cluster network bandwidth. This instance was created to tackle a wide range of use cases, ranging from LLM training, fine-tuning and inference to <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse</a> workloads and industrial digitalization, 3D graphics and rendering, video transcoding and FP32 HPC.</p>
-<h2><strong>NVIDIA and OCI: Enterprise AI</strong></h2>
-<p>This collaboration between OCI and NVIDIA will enable organizations of all sizes to join the generative AI revolution by providing them with state-of-the-art NVIDIA H100 and L40S GPU-accelerated infrastructure.</p>
-<p>Access to NVIDIA GPU-accelerated instances may not be enough, however. Unlocking the maximum potential of NVIDIA GPUs on OCI Compute means having an optimal software layer. <a href="https://blogs.oracle.com/cloud-infrastructure/post/announcing-support-nvidia-ai-enterprise-oci" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> streamlines the development and deployment of enterprise-grade accelerated AI software with open-source containers and frameworks optimized for the underlying NVIDIA GPU infrastructure, all with the help of <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise-suite/support/" target="_blank" rel="noopener">support services</a>.</p>
-<p>To learn more, join <a href="https://www.nvidia.com/en-us/events/oracle-cloudworld/" target="_blank" rel="noopener">NVIDIA at Oracle Cloud World</a> in the AI Pavillion, attend this <a href="https://reg.rf.oracle.com/flow/oracle/cwoh23/catalog/page/catalog/session/1692128535060001je8W" target="_blank" rel="noopener">session</a> on the new OCI instances on Wednesday, Sept. 20, and visit these web pages on <a href="https://www.oracle.com/cloud/" target="_blank" rel="noopener">Oracle Cloud Infrastructure</a>, <a href="https://www.oracle.com/cloud/compute/" target="_blank" rel="noopener">OCI Compute</a>, <a href="https://www.oracle.com/artificial-intelligence/" target="_blank" rel="noopener">how Oracle approaches AI</a> and the <a href="https://www.nvidia.com/en-us/ai-data-science/" target="_blank" rel="noopener">NVIDIA AI Platform</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2022/10/Copy-of-oracle-blog-logo-lockup-promo-package-2508744-1260x680-r3.png"
-			type="image/png"
-			width="1260"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2022/10/Copy-of-oracle-blog-logo-lockup-promo-package-2508744-1260x680-r3-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Oracle Cloud Infrastructure Offers New NVIDIA GPU-Accelerated Compute Instances]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
