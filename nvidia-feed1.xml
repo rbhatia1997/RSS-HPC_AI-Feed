@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 03 Oct 2023 20:54:10 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 04 Oct 2023 22:50:37 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,63 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.1</generator>
 	<item>
+		<title>A Mine-Blowing Breakthrough: Open-Ended AI Agent Voyager Autonomously Plays ‘Minecraft’</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/04/ai-jim-fan/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 04 Oct 2023 21:04:52 +0000</pubDate>
+				<category><![CDATA[The AI Podcast]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67324</guid>
+
+					<description><![CDATA[For NVIDIA Senior AI Scientist Jim Fan, the video game Minecraft served as the “perfect primordial soup” for his research on open-ended AI agents. In the latest AI Podcast episode, host Noah Kravitz spoke with Fan on using large language models to create AI agents — specifically to create Voyager, an AI bot built with <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/04/ai-jim-fan/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>For NVIDIA Senior AI Scientist Jim Fan, the video game <i>Minecraft</i> served as the “perfect primordial soup” for his research on open-ended AI agents.</p>
+<p>In the latest <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> episode, host Noah Kravitz spoke with Fan on using <a href="https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/">large language models</a> to create AI agents — specifically to create Voyager, an AI bot built with Chat GPT-4 that can autonomously play <i>Minecraft</i>.</p>
+<p>AI agents are models that “can proactively take actions and then perceive the world, see the consequences of its actions, and then improve itself,” Fan said. Many current AI agents are programmed to achieve specific objectives, such as beating a game as quickly as possible or answering a question. They can work autonomously toward a particular output but lack a broader decision-making agency.</p>
+<p>Fan wondered if it was possible to have a “truly open-ended agent that can be prompted by arbitrary natural language to do open-ended, even creative things.”</p>
+<p>But he needed a flexible playground in which to test that possibility.</p>
+<p>“And that’s why we found <i>Minecraft </i>to be almost a perfect primordial soup for open-ended agents to emerge, because it sets up the environment so well,” he said. <i>Minecraft </i>at its core, after all, doesn’t set a specific key objective for players other than to survive and freely explore the open world.</p>
+<p>That became the springboard for Fan’s project, MineDojo, which eventually led to the creation of the AI bot Voyager.</p>
+<p>“Voyager leverages the power of Chat GPT-4 to write code in Javascript to execute in the game,” Fan explained. “GPT-4 then looks at the output, and if there’s an error from JavaScript or some feedback from the environment, GPT-4 does a self-reflection and tries to debug the code.”</p>
+<p>The bot learns from its mistakes and stores the correctly implemented programs in a skill library for future use, allowing for “lifelong learning.”</p>
+<p>In-game, Voyager can autonomously explore for hours, adapting its decisions based on its environment and developing skills to combat monsters and find food when needed.</p>
+<p>“We see all these behaviors come from the Voyager setup, the skill library and also the coding mechanism,” Fan explained. “We did not preprogram any of these behaviors.”</p>
+<p>He then spoke more generally about the rise and trajectory of LLMs. He foresees strong applications in software, gaming and robotics and increasingly pressing conversations surrounding AI safety.</p>
+<p>Fan encourages those looking to get involved and work with LLMs to “just do something,” whether that means using <a href="https://www.nvidia.com/en-us/training/">online resources</a> or experimenting with beginner-friendly, CPU-based AI models.</p>
+<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1627125918%3Fsecret_token%3Ds-PgUquX2ckQi&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="NVIDIA’s Jim Fan delves into large language models and their industry impact - Ep. 204" href="https://soundcloud.com/theaipodcast/ai-jim-fan/s-PgUquX2ckQi" target="_blank" rel="noopener">NVIDIA’s Jim Fan delves into large language models and their industry impact &#8211; Ep. 204</a></div>
+<h2>You Might Also Like</h2>
+<p><a href="https://soundcloud.com/theaipodcast/jules-anh-tuan-nguyen-explains-how-ai-lets-amputee-control-prosthetic-hand-video-games-ep-149">Jules Anh Tuan Nguyen Explains How AI Lets Amputee Control Prosthetic Hand, Video Games<br />
+</a>A postdoctoral researcher at the University of Minnesota discusses his efforts to allow amputees to control their prosthetic limb — right down to the finger motions — with their minds.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-overjet">Overjet’s Ai Wardah Inam on Bringing AI to Dentistry<br />
+</a>Overjet, a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, is moving fast to bring AI to dentists’ offices. Dr. Wardah Inam, CEO of the company, discusses using AI to improve patient care.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-luis-voloch">Immunai CTO and Co-Founder Luis Voloch on Using Deep Learning to Develop New Drugs<br />
+</a>Luis Voloch talks about tackling the challenges of the immune system with a machine learning and data science mindset.</p>
+<h2>Subscribe to the AI Podcast: Now Available on Amazon Music</h2>
+<p><a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">The AI Podcast is now available through Amazon Music</a>.</p>
+<p>In addition, get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
+<p>Make the AI Podcast better. Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
+<p>&nbsp;</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast.jpg"
+			type="image/jpeg"
+			width="1400"
+			height="931"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[A Mine-Blowing Breakthrough: Open-Ended AI Agent Voyager Autonomously Plays ‘Minecraft’]]></media:title>
+			<media:description type="html">NVIDIA AI Podcast</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>How AI Helps Fight Wildfires in California</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/04/ai-wildfires-california/</link>
 		
@@ -49,7 +106,7 @@
 <p>The team began by training a convolutional neural network on a cloud-based system running an NVIDIA A100 Tensor Core GPU and later transitioned to a system running on eight A100 GPUs.</p>
 <p>The AI model is crucial to examining a system that sees almost 8 million images a day streaming in from over 1,000 first-party cameras, primarily in California, and thousands more from third-party sources nationwide, he said.</p>
 <h2><strong>Impact of Wildfires</strong></h2>
-<figure id="attachment_67311" aria-describedby="caption-attachment-67311" style="width: 348px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png"><img decoding="async" class="wp-image-67311 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png" alt="" width="348" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png 348w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-278x400.png 278w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-768x1105.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-1068x1536.png 1068w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-313x450.png 313w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-149x215.png 149w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png 1167w" sizes="(max-width: 348px) 100vw, 348px" /></a><figcaption id="caption-attachment-67311" class="wp-caption-text">All anomalies being tracked throughout California as of Sept. 20, 2023. Image Credit: DigitalPath</figcaption></figure>
+<figure id="attachment_67311" aria-describedby="caption-attachment-67311" style="width: 299px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png"><img decoding="async" class="wp-image-67311 " src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png" alt="" width="299" height="430" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png 348w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-278x400.png 278w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-768x1105.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-1068x1536.png 1068w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-313x450.png 313w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-149x215.png 149w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png 1167w" sizes="(max-width: 299px) 100vw, 299px" /></a><figcaption id="caption-attachment-67311" class="wp-caption-text">All anomalies being tracked throughout California as of Sept. 20, 2023. Image Credit: DigitalPath</figcaption></figure>
 <p>It’s arriving just in time.</p>
 <p>Wildfires have ravaged California over the past decade, burning millions of acres of land, destroying thousands of homes and businesses and claiming hundreds of lives.</p>
 <p><a href="https://www.fire.ca.gov/our-impact/statistics" target="_blank" rel="noopener">According to CAL FIRE</a>, in 2020 alone, the state experienced five of its six largest and seven of its 20 most destructive wildfires.</p>
@@ -57,10 +114,8 @@
 <p>The new system promises to give first responders a crucial tool to prevent such conflagrations.</p>
 <p>In fact, during a recent interview with DigitalPath, the system detected two separate fires in Northern California as they ignited.</p>
 <p>Every day, the system detects between 50 and 300 events, offering invaluable real-time information to local first responders.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <h2><strong>Beyond Detection: Enhancing Capabilities</strong></h2>
-<figure id="attachment_67314" aria-describedby="caption-attachment-67314" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3.png"><img decoding="async" class="wp-image-67314 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-672x481.png" alt="" width="672" height="481" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-672x481.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-400x286.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-768x549.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-629x450.png 629w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-301x215.png 301w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-140x100.png 140w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-1280x916.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3.png 1462w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67314" class="wp-caption-text">Example of multiple cameras detecting a single anomaly. Image Credit: DigitalPath.</figcaption></figure>
+<figure id="attachment_67314" aria-describedby="caption-attachment-67314" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3.png"><img decoding="async" loading="lazy" class="wp-image-67314 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-672x481.png" alt="" width="672" height="481" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-672x481.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-400x286.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-768x549.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-629x450.png 629w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-301x215.png 301w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-140x100.png 140w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3-1280x916.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire3.png 1462w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67314" class="wp-caption-text">Example of multiple cameras detecting a single anomaly. Image Credit: DigitalPath.</figcaption></figure>
 <p>But AI is just part of the story.</p>
 <p>The system is also a case study in how innovative companies can use AI to amplify their unique capabilities.</p>
 <p>One of DigitalPath’s breakthroughs is its system’s ability to identify the same fire captured from diverse camera angles. DigitalPath’s system efficiently filters imagery down to a human-digestible level. The system filters 8 million daily images down to just 100 alerts, or 1.25 thousandths of one percent of total images captured.</p>
@@ -1209,59 +1264,6 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Cash In: ‘PAYDAY 3’ Streams on GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Virtually Incredible: Mercedes-Benz Prepares Its Digital Production System for Next-Gen Platform With NVIDIA Omniverse, MB.OS and Generative AI</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/20/mercedes-benz-ev-nvidia-omniverse-generative-ai/</link>
-		
-		<dc:creator><![CDATA[Mike Geyer]]></dc:creator>
-		<pubDate>Wed, 20 Sep 2023 18:08:16 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<category><![CDATA[NVIDIA DRIVE Sim]]></category>
-		<category><![CDATA[Omniverse Enterprise]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66953</guid>
-
-					<description><![CDATA[Mercedes-Benz is using digital twins for production with help from NVIDIA Omniverse, a platform for developing Universal Scene Description (OpenUSD) applications to design, collaborate, plan and operate manufacturing and assembly facilities. Mercedes-Benz’s new production techniques will bring its next-generation vehicle portfolio into its manufacturing facilities operating in Rastatt, Germany; Kecskemét, Hungary; and Beijing, China — <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/20/mercedes-benz-ev-nvidia-omniverse-generative-ai/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Mercedes-Benz is using digital twins for production with help from <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform for developing <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a> applications to design, collaborate, plan and operate manufacturing and assembly facilities.</p>
-<p>Mercedes-Benz’s new production techniques will bring its next-generation vehicle portfolio into its manufacturing facilities operating in Rastatt, Germany; Kecskemét, Hungary; and Beijing, China — and offer a blueprint for its more than 30 factories worldwide. This “Digital First” approach enhances efficiency, avoids defects and saves time, marking a step-change in the flexibility, resilience and intelligence of the Mercedes-Benz MO360 production system.</p>
-<p>The digital twin in production helps ensure Mercedes-Benz assembly lines can be retooled, configured and optimized in physically accurate simulations first. The new assembly lines in the Kecskemét plant will enable production of vehicles based on the newly launched Mercedes Modular Architecture that are developed virtually using digital twins in Omniverse.</p>
-<p>By leveraging Omniverse, Mercedes-Benz can interact directly with its suppliers, reducing coordination processes by 50%. Using a digital twin in production doubles the speed for converting or constructing an assembly hall, while improving the quality of the processes, according to the automaker.</p>
-<p>“Using NVIDIA Omniverse and AI, Mercedes-Benz is building a connected, digital-first approach to optimize its manufacturing processes, ultimately reducing construction time and production costs,” said Rev Lebaredian, vice president of Omniverse and simulation technology at NVIDIA, during a digital event held earlier today.</p>
-<p>In addition, the introduction of AI opens up new areas of energy and cost savings. The Rastatt plant is being used to pioneer digital production in the paint shop. Mercedes-Benz used AI to monitor relevant sub-processes in the pilot testing, which led to energy savings of 20%.</p>
-<h2><b>Supporting State-of-the-Art Software Systems</b></h2>
-<p>Next-generation Mercedes-Benz vehicles will feature its new operating system “MB.OS,” which will be standard across its entire vehicle portfolio and deliver premium software capabilities and experiences across all vehicle domains.</p>
-<p>Mercedes-Benz has <a href="https://blogs.nvidia.com/blog/2020/06/23/mercedes-benz-nvidia-software-defined-vehicles/">partnered with NVIDIA</a> to develop software-defined vehicles. NVIDIA will provide its <a href="https://www.nvidia.com/en-us/self-driving-cars/drive-platform/hardware/">DRIVE Orin</a> system-on-a-chip and DRIVE software, with intelligent driving capabilities tested and validated in the <a href="https://www.nvidia.com/en-us/self-driving-cars/simulation/">NVIDIA DRIVE Sim</a> platform, which is also built on Omniverse.</p>
-<p>The automaker’s MO360 production system will enable it to produce electric, hybrid and gas models on the same production lines and to scale the manufacturing of electric vehicles. The implementation of MB.OS in production will allow its cars to roll off assembly lines with the latest versions of vehicle software.</p>
-<p>“Mercedes-Benz is initiating a new era of automotive manufacturing thanks to the integration of artificial intelligence, MB.OS and the digital twin based on NVIDIA Omniverse into the MO360 ecosystem,” said Jörg Burzer, member of the board of the Mercedes-Benz Group AG, Production, Quality and Supply Chain Management. “With our new ‘Digital First’ approach, we unlock efficiency potential even before the launch of our MMA models in our global production network and can accelerate the ramp-up significantly.”</p>
-<h2><b>Flexible Factories of the Future</b></h2>
-<p>Avoiding costly manufacturing production shutdowns is critical. Running simulations in NVIDIA Omniverse enables factory planners to optimize factory floor and production line layouts for supply routes, and production lines can be validated without having to disrupt production.</p>
-<p>This virtual approach also enables efficient design of new lines and change management for existing lines while reducing downtime and helping improve product quality. For the world’s automakers, much is at stake across the entire software development stack, from chip to cloud.</p>
-<h2><b>Omniverse Collaboration for Efficiencies </b></h2>
-<p>The Kecskemét plant is the first with a full digital twin of the entire factory. This virtual area enables development at the heart of assembly, between its tech and trim lines. And plans are for the new Kecskemét factory hall to launch into full production.</p>
-<p>Collaboration in Omniverse has enabled plant suppliers and planners to interact with each other interactively in the virtual environment, so that layout options and automation changes can be incorporated and validated in real time. This accelerates how quickly new production lines can reach maximum capacity and reduces the risk of re-work or stoppages.</p>
-<p>Virtual collaboration with <a href="https://blogs.nvidia.com/blog/2021/12/14/what-is-a-digital-twin/">digital twins</a> can accelerate planning and implementation of projects by weeks, as well as translate to significant cost savings for launching new manufacturing lines.</p>
-<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/omniverse/"><i>NVIDIA Omniverse</i></a><i> and </i><a href="https://developer.nvidia.com/drive/ecosystem-orin"><i>DRIVE Orin</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/23C0321_004-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1152"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/23C0321_004-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Virtually Incredible: Mercedes-Benz Prepares Its Digital Production System for Next-Gen Platform With NVIDIA Omniverse, MB.OS and Generative AI]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
