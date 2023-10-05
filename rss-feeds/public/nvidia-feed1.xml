@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 04 Oct 2023 22:50:37 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 04 Oct 2023 22:54:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,239 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.1</generator>
 	<item>
+		<title>Brains of the Operation: Atlas Meditech Maps Future of Surgery With AI, Digital Twins</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/05/atlas-meditech-brain-surgery-ai-digital-twins/</link>
+		
+		<dc:creator><![CDATA[Mona Flores]]></dc:creator>
+		<pubDate>Thu, 05 Oct 2023 13:00:43 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Digital Twins]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67294</guid>
+
+					<description><![CDATA[Just as athletes train for a game or actors rehearse for a performance, surgeons prepare ahead of an operation. Now, Atlas Meditech is letting brain surgeons experience a new level of realism in their pre-surgery preparation with AI and physically accurate simulations. Atlas Meditech, a brain-surgery intelligence platform, is adopting tools — including the MONAI <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/05/atlas-meditech-brain-surgery-ai-digital-twins/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Just as athletes train for a game or actors rehearse for a performance, surgeons prepare ahead of an operation.</p>
+<p>Now, Atlas Meditech is letting brain surgeons experience a new level of realism in their pre-surgery preparation with AI and physically accurate simulations.</p>
+<p>Atlas Meditech, a brain-surgery intelligence platform, is adopting tools — including the <a href="https://docs.nvidia.com/monai/index.html">MONAI</a> medical imaging framework and <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> 3D development platform — to build AI-powered decision support and high-fidelity surgery rehearsal platforms. Its mission: improving surgical outcomes and patient safety.</p>
+<p>“The Atlas provides a collection of multimedia tools for brain surgeons, allowing them to mentally rehearse an operation the night before a real surgery,” said Dr. Aaron Cohen-Gadol, founder of Atlas Meditech and its nonprofit counterpart, Neurosurgical Atlas. “With accelerated computing and digital twins, we want to transform this mental rehearsal into a highly realistic rehearsal in simulation.”</p>
+<p>Neurosurgical Atlas offers case studies, surgical videos and 3D models of the brain to more than a million online users. Dr. Cohen-Gadol, also a professor of neurological surgery at Indiana University School of Medicine, estimates that more than 90% of brain surgery training programs in the U.S. — as well as tens of thousands of neurosurgeons in other countries — use the Atlas as a key resource during residency and early in their surgery careers.</p>
+<p>Atlas Meditech’s Pathfinder software is integrating AI algorithms that can suggest safe surgical pathways for experts to navigate through the brain to reach a lesion.</p>
+<p>And with NVIDIA Omniverse, a platform for connecting and building custom 3D pipelines and metaverse applications, the team aims to create custom virtual representations of individual patients’ brains for surgery rehearsal.</p>
+<h2><b>Custom 3D Models of Human Brains</b></h2>
+<p><span>A key benefit of Atlas Meditech’s advanced simulations — either onscreen or in immersive virtual reality — is the ability to customize the simulations, so that surgeons can practice on a virtual brain that matches the patient’s brain in size, shape and lesion position.</span></p>
+<p>“Every patient’s anatomy is a little different,” said Dr. Cohen-Gadol. “What we can do now with physics and advanced graphics is create a patient-specific model of the brain and work with it to see and virtually operate on a tumor. The accuracy of the physical properties helps to recreate the experience we have in the real world during an operation.”</p>
+<p>To create digital twins of patients’ brains, the Atlas Pathfinder tool has adopted MONAI Label, which can support radiologists by automatically annotating MRI and CT scans to segment normal structures and tumors.</p>
+<p>“MONAI Label is the gateway to any healthcare project because it provides us with the opportunity to segment critical structures and protect them,” said Dr. Cohen-Gadol. “For the Atlas, we’re training MONAI Label to act as the eyes of the surgeon, highlighting what is a normal vessel and what’s a tumor in an individual patient’s scan.”</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-scaled.jpg"><img decoding="async" fetchpriority="high" class="aligncenter size-large wp-image-67298" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_040-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>With a segmented view of a patient’s brain, Atlas Pathfinder can adjust its 3D brain model to morph to the patient’s specific anatomy, capturing how the tumor deforms the normal structure of their brain tissue.</p>
+<p>Based on the visualization — which radiologists and surgeons can modify to improve the precision — Atlas Pathfinder suggests the safest surgical approaches to access and remove a tumor without harming other parts of the brain. Each approach links out to the Atlas website, which includes a written tutorial of the operative plan.</p>
+<p>“AI-powered decision support can make a big difference in navigating a highly complex 3D structure where every millimeter is critical,” Dr. Cohen-Gadol said.</p>
+<h2><b>Realistic Rehearsal Environments for Practicing Surgeons </b></h2>
+<p>Atlas Meditech is using NVIDIA Omniverse to develop a virtual operating room that can immerse surgeons into a realistic environment to rehearse upcoming procedures. In the simulation, surgeons can modify how the patient and equipment are positioned.</p>
+<p>Using a VR headset, surgeons will be able to work within this virtual environment, going step by step through the procedure and receiving feedback on how closely they are adhering to the target pathway to reach the tumor. AI algorithms can be used to predict how brain tissue would shift as a surgeon uses medical instruments during the operation, and apply that estimated shift to the simulated brain.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-scaled.jpg"><img decoding="async" class="aligncenter size-large wp-image-67302" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/AppStill_024-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>“The power to enable surgeons to enter a virtual, 3D space, cut a piece of the skull and rehearse the operation with a simulated brain that has very similar physical properties to the patient would be tremendous,” said Dr. Cohen-Gadol.</p>
+<p>To better simulate the brain’s physical properties, the team adopted <a href="https://developer.nvidia.com/physx-sdk">NVIDIA PhysX</a>, an advanced real-time physics simulation engine that’s part of NVIDIA Omniverse. Using haptic devices, they were able to experiment with adding haptic feedback to the virtual environment, mimicking the feeling of working with brain tissue.</p>
+<h2><b>Envisioning AI, Robotics in the Future of Surgery Training</b></h2>
+<p>Dr. Cohen-Gadol believes that in the coming years AI models will be able to further enhance surgery by providing additional insights during a procedure. Examples include warning surgeons about critical brain structures that are adjacent to the area they’re working in, tracking medical instruments during surgery, and providing a guide to next steps in the surgery.</p>
+<p>Atlas Meditech plans to explore the <a href="https://www.nvidia.com/en-us/clara/medical-devices/">NVIDIA Holoscan</a> platform for streaming AI applications to power these real-time, intraoperative insights. <span>Applying AI analysis to a surgeon’s actions during a procedure can provide the surgeon with useful feedback to improve their technique. </span></p>
+<p>In addition to being used for surgeons to rehearse operations, Dr. Cohen-Gadol says that digital twins of the brain and of the operating room could help train intelligent medical instruments such as microscope robots using <a href="https://developer.nvidia.com/isaac-sim">Isaac Sim</a>, a robotics simulation application developed on Omniverse.</p>
+<p>View <a href="https://www.nvidia.com/en-us/on-demand/session/gtcfall22-a41130/">Dr. Cohen-Gadol’s presentation at NVIDIA GTC</a>.</p>
+<p><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>Subscribe to NVIDIA healthcare news</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/AtlasMeditech_featureimage_blogcrop.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/AtlasMeditech_featureimage_blogcrop-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Brains of the Operation: Atlas Meditech Maps Future of Surgery With AI, Digital Twins]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Fall in Line for October With Nearly 60 New Games, Including Latest Game Pass Titles to Join the Cloud</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/05/geforce-now-thursday-oct-5/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 05 Oct 2023 13:00:25 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67333</guid>
+
+					<description><![CDATA[October brings more than falling leaves and pumpkin spice lattes for GeForce NOW members. Get ready for nearly 60 new games to stream, including Forza Motorsport and 16 more PC Game Pass titles. Assassin’s Creed Mirage leads 29 new games to hit the GeForce NOW library this week. In addition, catch a challenge to earn <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/05/geforce-now-thursday-oct-5/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>October brings more than falling leaves and pumpkin spice lattes for <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> members. Get ready for nearly 60 new games to stream, including <i>Forza Motorsport </i>and 16 more PC Game Pass titles.</p>
+<p><i>Assassin’s Creed Mirage</i> leads 29 new games to hit the GeForce NOW library this week. In addition, catch a challenge to earn in-game rewards for <i>World of Warship </i>players.</p>
+<h2><b>Leap Into the Cloud</b></h2>
+<figure id="attachment_67341" aria-describedby="caption-attachment-67341" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-67341" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-672x336.jpg" alt="Assassin's Creed Mirage on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67341" class="wp-caption-text"><em>Nothing is true. Everything is permitted … in the cloud.</em></figcaption></figure>
+<p>It’s not an illusion — Ubisoft’s <i>Assassin’s Creed Mirage </i>launches in the cloud this week. <i>Mirage</i> was created as an homage to the first <i>Assassin’s Creed </i>games and pays tribute to the series’ well-loved roots.</p>
+<p>Join the powerful proto-Assassin order — the Hidden Ones — as a 17-year-old street thief named Basim Ibn Is’haq as he learns to become a master assassin. Stalk the streets of a bustling and historically accurate ninth-century Baghdad — the perfect urban setting to seamlessly parkour across rooftops, scale tall towers and flee guards while uncovering a conspiracy that threatens the city and Basim’s future destiny.</p>
+<p>Take a Leap of Faith into a GeForce NOW Ultimate membership and explore this new open world at up to 4K resolution and 120 frames per second. Ultimate members get exclusive access to GeForce RTX 4080 servers in the cloud, making it the easiest upgrade around.</p>
+<h2><b>No Tricks, Only Treats</b></h2>
+<p>Don’t be spooked — GeForce NOW has plenty of treats for members this month. More PC Game Pass games are coming soon to the cloud, including <i>Forza Motorsport</i> from Turn 10 Studios and Xbox Game Studios and the <i>Dishonored </i>series from Arkane and Bethesda.</p>
+<p>Catch some action (with a little stealth, magic and combat mixed in) with the <i>Dishonored</i> franchise. Dive into a struggle of power and revenge that revolves around the assassination of the Empress of the Isles. Members can follow the whole story starting with the original <i>Dishonored</i> game, up through the latest entry, <i>Dishonored: Death of an Outsider</i>, when the series launches in the cloud this month.</p>
+<p>Jump into all the action with an <a href="http://geforcenow.com/membership">Ultimate or Priority</a> account today, for higher performance and faster access to stream over 1,700 games.</p>
+<p>Check out the spooktacular list for October:</p>
+<ul>
+<li><i>Star Trek: Infinite </i>(New release on <a href="https://store.steampowered.com/app/1622900?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 12)</li>
+<li><i>Lords of the Fallen </i>(New release on <a href="https://store.steampowered.com/app/1501750?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.epicgames.com/store/p/lords-of-the-fallen-2-46fdd6?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, Oct. 13)</li>
+<li><i>Wizard with a Gun </i>(New release on <a href="https://store.steampowered.com/app/1150530?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 17)</li>
+<li><i>Alaskan Road Truckers </i>(New release <a href="https://store.steampowered.com/app/849100?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://store.epicgames.com/en-US/p/alaskan-road-truckers-d31463">Epic Games Store</a>, Oct. 18)</li>
+<li><i>Hellboy: Web of Wyrd </i>(New release on <a href="https://store.steampowered.com/app/2160480?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 18)</li>
+<li><i>HOT WHEELS UNLEASHED 2 &#8211; Turbocharged </i>(New release on <a href="https://store.steampowered.com/app/2051120?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 19)</li>
+<li><i>Laika Aged Through Blood </i>(New release on <a href="https://store.steampowered.com/app/1796220?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 19)</li>
+<li><i>Cities: Skylines II </i>(New release on <a href="https://store.steampowered.com/app/949230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/cities-skylines-ii/9ndntv0l9n87?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass, Oct. 24)</li>
+<li><i>Ripout </i>(New release on <a href="https://store.steampowered.com/app/1558830?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct 24)</li>
+<li><i>War Hospital </i>(New release on <a href="https://store.steampowered.com/app/1553000?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 26)</li>
+<li><i>Alan Wake 2 </i>(New release on <a href="https://store.epicgames.com/en-US/p/alan-wake-2">Epic Games Store</a>, Oct. 26)</li>
+<li><i>Headbangers: Rhythm Royale </i>(New release on <a href="https://store.steampowered.com/app/1761620?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/headbangers-rhythm-royale/9ngrwj03gr1n?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass, Oct. 31)</li>
+<li><i>Jusant </i>(New release on <a href="https://store.steampowered.com/app/1977170?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/jusant/9PJB1ZRJDCBQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass, Oct. 31)</li>
+<li><i>Bad North </i>(<a href="https://www.xbox.com/games/store/bad-north-jotunn-edition/9N4T8VCMQVDT?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Daymare 1994: Sandcastle </i>(<a href="https://store.steampowered.com/app/1530470?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>For The King </i>(<a href="https://www.xbox.com/games/store/for-the-king/9NS1CD1V4BKW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Forza Motorsport </i>(<a href="https://store.steampowered.com/app/2440510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/forza-motorsport-standard-edition/9PLKVSWR299F?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>Heretic’s Fork</i> (<a href="https://store.steampowered.com/app/2181610?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Moonbreaker </i>(<a href="https://store.steampowered.com/app/845890?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Metro Simulator 2 </i>(<a href="https://store.steampowered.com/app/1787480?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Narita Boy </i>(<a href="https://www.xbox.com/games/store/narita-boy/9NT3FGQC1DFR?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Sifu </i>(<a href="https://www.xbox.com/games/store/sifu/9P7PF6ZP3958?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>StalCraft </i>(<a href="https://store.steampowered.com/app/1818450?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Star Renegades</i> (<a href="https://www.xbox.com/games/store/star-renegades/9PK5S1QKV10D?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Streets of Rogue</i> (<a href="https://www.xbox.com/games/store/streets-of-rogue/9NKRBSZXQ2HM?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Supraland </i>(<a href="https://www.xbox.com/games/store/supraland/9P75CZFXMS7N?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>The Surge </i>(<a href="https://www.xbox.com/games/store/the-surge-windows-10-version/9NKLXF5DLBKT?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Tiny Football </i>(<a href="https://store.steampowered.com/app/1887010?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Vampire Survivors </i>(<a href="https://store.steampowered.com/app/1794680?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/vampire-survivors/9PD5BM2Z8C4L?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>VEILED EXPERTS </i>(<a href="https://store.steampowered.com/app/1934780?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Yes, Your Grace</i> (<a href="https://www.xbox.com/games/store/yes-your-grace/9NX14Q0QZD1T?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+</ul>
+<h2><b>Come Sail Away</b></h2>
+<figure id="attachment_67338" aria-describedby="caption-attachment-67338" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67338" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-672x336.jpg" alt="" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67338" class="wp-caption-text"><em>A new challenge awaits on the open sea.</em></figcaption></figure>
+<p><i>World of Warships</i> is launching a new in-game event this week exclusive to GeForce NOW members. From Oct. 5-9, those streaming the game on GeForce NOW will be prompted to complete a special in-game challenge chain, only available from the cloud, to earn economic reward containers and one-day GeForce NOW Priority trials. Aspiring admirals can learn more about these challenges on the <i>World of Warships</i> <a href="https://worldofwarships.com/en/news/sales-and-events/geforce-now-event-2023/">blog</a> and <a href="https://twitter.com/WorldofWarships?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">social channels</a>.</p>
+<p>Those new to <i>World of Warships </i>can activate the invite code “GEFORCENOW” in the game starting today to claim exclusive rewards, including a seven-day Premium <i>World of Warships</i> account, 300 doubloons, credits and economic boosters. Once 15 battles are completed, players can choose one of the following tech tree ships to speed up game progress: Japanese destroyer Isokaze, American cruiser Phoenix, German battleship Moltke or British aircraft carrier Hermes.</p>
+<figure id="attachment_67335" aria-describedby="caption-attachment-67335" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="wp-image-67335 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-672x336.jpg" alt="Age Of Empires II on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67335" class="wp-caption-text"><em>Conquer the cloud.</em></figcaption></figure>
+<p>The leaves may be falling, but new games are always coming to the cloud. Dive into the action now with 29 new games this week:</p>
+<ul>
+<li><i>Battle Shapers </i>(New release on <a href="https://store.steampowered.com/app/1421290?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 3)</li>
+<li><i>Disgaea 7: Vows of the Virtueless </i>(New release on <a href="https://store.steampowered.com/app/2250600?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 3)</li>
+<li><i>Station to Station</i> (New release on <a href="https://store.steampowered.com/app/2272400?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 3)</li>
+<li><i>The Lamplighter’s League </i>(New release on <a href="https://store.steampowered.com/app/1167750?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/the-lamplighters-league-pc-edition/9PG4M7W805RB?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass, Oct. 3)</li>
+<li><i>Thief Simulator 2 </i>(New release on <a href="https://store.steampowered.com/app/1332720?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 4)</li>
+<li><i>Heads Will Roll: Reforged </i>(New release on <a href="https://store.steampowered.com/app/687800?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 4)</li>
+<li><i>Assassin’s Creed Mirage </i>(New release on <a href="https://store.ubi.com/62ea4f8e09372571f2736a71.html#ucid=AFL-ID_152062&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;addinfo=">Ubisoft</a>, Oct. 5)</li>
+<li><i>Age of Empires II: Definitive Edition </i>(<a href="https://www.xbox.com/games/store/age-of-empires-ii-definitive-edition/9n2z748spmtm?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Arcade Paradise </i>(<a href="https://www.xbox.com/games/store/arcade-paradise/9N2FQCGWH32D?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>The Ascent </i>(<a href="https://www.xbox.com/games/store/the-ascent/C27QL5JBKQ8M?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Citizen Sleeper </i>(<a href="https://www.xbox.com/games/store/citizen-sleeper/9N6F97F9WGL0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Dicey Dungeons </i>(<a href="https://www.xbox.com/games/store/dicey-dungeons/9PC4C9NLP3ZD?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Godlike Burger</i> (<a href="https://www.epicgames.com/store/p/godlike-burger-4150a0?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>Greedfall </i>(<a href="https://www.xbox.com/games/store/greedfall-gold-edition-windows-10/9PM3JCK0CXHC?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Hypnospace Outlaw </i>(<a href="https://www.xbox.com/games/store/hypnospace-outlaw/9PM3NVB3PXG0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Killer Frequency </i>(<a href="https://www.xbox.com/games/store/killer-frequency/9mtmss84nw5r?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Lonely Mountains: Downhill </i>(<a href="https://www.xbox.com/games/store/lonely-mountains-downhill/9MV6MCVLT8GR?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Metro 2033 Redux </i>(<a href="https://www.xbox.com/games/store/metro-2033-redux/9NQ387M27TMV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Metro: Last Light Redux </i>(<a href="https://www.xbox.com/games/store/metro-last-light-redux/9NM5W1TDNQZ3?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>MudRunner </i>(<a href="https://www.xbox.com/games/store/mudrunner/9N58J0GM9MRP?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Potion Craft: Alchemist Simulator </i>(<a href="https://www.xbox.com/games/store/potion-craft-alchemist-simulator/9MW7WD7J3PPK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Shadow Gambit: The Cursed Crew </i>(<a href="https://www.epicgames.com/store/p/shadow-gambit-the-cursed-crew-0bca60?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>Slayers X: Terminal Aftermath: Vengance of the Slayer </i>(<a href="https://www.xbox.com/games/store/slayers-x-terminal-aftermath-vengance-of-the-slayer/9P2Q0J0GW1FJ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Soccer Story</i> (<a href="https://www.xbox.com/games/store/soccer-story/9PJ1045MHZJ0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li>SOMA (<a href="https://www.xbox.com/games/store/soma/C23M2TC1ZFPJ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Space Hulk: Tactics </i>(<a href="https://www.xbox.com/games/store/space-hulk-tactics/9PBVRHZT421P?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+<li><i>SpiderHeck</i> (<a href="https://www.xbox.com/games/store/spiderheck/9N0TRF57SMQH?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>SUPERHOT: MIND CONTROL DELETE </i>(<a href="https://www.xbox.com/en-us/games/store/superhot-mind-control-delete/9nrh78b682l8">Xbox</a>, available on Microsoft Store)</li>
+<li><i>Surviving Mars </i>(<a href="https://www.xbox.com/games/store/surviving-mars-digital-deluxe-edition/9N9C8081CZD2?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
+</ul>
+<h2><b>Surprises in September</b></h2>
+<p>On top of the 24 games announced in September, an additional 45 joined the cloud last month:</p>
+<ul>
+<li><i>Void Crew</i> (New release on <a href="https://store.steampowered.com/app/1063420?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 7)</li>
+<li><i>Tavernacle!</i> (New release on <a href="https://store.steampowered.com/app/1937820?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 11)</li>
+<li><i>Gunbrella</i> (New release on <a href="https://store.steampowered.com/app/1580180?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 13)</li>
+<li><i>HumanitZ </i>(New release on <a href="https://store.steampowered.com/app/1766060?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 18)</li>
+<li><i>These Doomed Isles</i> (New release on <a href="https://store.steampowered.com/app/1840710?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 25)</li>
+<li><i>Overpass 2 </i>(New release on <a href="https://store.steampowered.com/app/1830630?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>911 Operator</i> (<a href="https://www.epicgames.com/store/p/911-operator-585edd?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>A Plague Tale: Requiem </i>(<a href="https://www.xbox.com/games/store/a-plague-tale-requiem---windows/9N97RC576957?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Amnesia: The Bunker </i>(<a href="https://www.xbox.com/games/store/amnesia-the-bunker/9PC15H56NGJK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Airborne Kingdom </i>(<a href="https://www.epicgames.com/store/p/airborne-kingdom?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>Atomic Heart </i>(<a href="https://www.xbox.com/games/store/atomic-heart-windows/9N9KXP8RRPB5?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>BlazBlue: Cross Tag Battle </i>(<a href="https://www.xbox.com/games/store/blazblue-cross-tag-battle-special-edition/9NFWDRBZXDL9?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Bramble: The Mountain King </i>(<a href="https://www.xbox.com/games/store/bramble-the-mountain-king/9NHDFTCL691C?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Call of the Wild: The Angler </i>(<a href="https://www.xbox.com/games/store/call-of-the-wild-the-angler/9NDC5LJS839S?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Chained Echoes</i> (<a href="https://www.xbox.com/games/store/chained-echoes/9N1WWRPJ12FK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Danganronpa V3: Killing Harmony</i> (<a href="https://www.xbox.com/games/store/danganronpa-v3-killing-harmony-anniversary-edition/9PMM6V93MRKW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Descenders </i>(<a href="https://www.xbox.com/games/store/descenders/C37XBX7DCBZ0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Doom Eternal </i>(<a href="https://www.xbox.com/games/store/Doom-eternal-standard-edition-pc/9PK09BL31FK1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Dordogne </i>(<a href="https://www.xbox.com/games/store/dordogne/9pbc65kxpv5v?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Eastern Exorcist </i>(<a href="https://www.xbox.com/games/store/eastern-exorcist/9NQCJ132C6KW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Figment 2: Creed Valley </i>(<a href="https://www.xbox.com/games/store/figment-2-creed-valley/9NZWW8K1KX6S?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Hardspace: Shipbreaker </i>(<a href="https://www.xbox.com/games/store/hardspace-shipbreaker-pc-version/9MW8RMSBB5QH?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Insurgency: Sandstorm </i>(<a href="https://www.xbox.com/games/store/insurgency-sandstorm-windows/9NN46PGWPJ98?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>I Am Fish </i>(<a href="https://www.xbox.com/games/store/i-am-fish/9mxgj8jzl0lk?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Last Call BBS</i> (<a href="https://www.xbox.com/games/store/last-call-bbs/9NF0SNBQWN63?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>The Legend of Tianding</i> (<a href="https://www.xbox.com/games/store/the-legend-of-tianding/9NCBTKXHFF8K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>The Matchless Kungfu</i> (<a href="https://store.steampowered.com/app/1696440?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Mechwarrior 5: Mercenaries</i> (<a href="https://www.xbox.com/games/store/mechwarrior-5-mercenaries/9PB86W3JK8Z5?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Monster Sanctuary</i> (<a href="https://www.xbox.com/games/store/monster-sanctuary-windows-version/9PBWWQGXVMKC?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Opus Magnum</i> (<a href="https://www.xbox.com/games/store/opus-magnum/9P5QNLWDKHPF?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Pizza Possum </i>(New release on <a href="https://store.steampowered.com/app/1951230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
+<li><i>A Plague Tale: Innocence </i>(<a href="https://www.xbox.com/games/store/a-plague-tale-innocence-windows-10/9ND0CG3LM22K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Quake II </i>(<a href="https://store.steampowered.com/app/2320?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/quake-ii?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a> and <a href="https://www.xbox.com/games/store/quake-ii/9P7L9H478GGV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Remnant II</i> (<a href="https://www.epicgames.com/store/p/remnant-2?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>Road 96 </i>(<a href="https://www.xbox.com/games/store/road-96/9NVBKDF85W8T?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Shadowrun: Hong Kong &#8211; Extended Edition </i>(<a href="https://www.xbox.com/games/store/shadowrun-hong-kong---extended-edition-pc/9NK2DT3K7DTF?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>SnowRunner </i>(<a href="https://www.xbox.com/games/store/snowrunner-3-year-anniversary-edition-windows/9PMQF911J6N9?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Soulstice </i>(New release on <a href="https://www.epicgames.com/store/p/soulstice?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, free on Sept. 28)</li>
+<li><i>Space Hulk: Deathwing &#8211; Enhanced Edition</i> (<a href="https://www.xbox.com/games/store/space-hulk-deathwing-enhanced-edition-windows-10/9N8DKG2R0HKZ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Spacelines from the Far Out </i>(<a href="https://www.xbox.com/games/store/spacelines-from-the-far-out/9N23WV1HGLTQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Superhot </i>(<a href="https://www.xbox.com/games/store/superhot-windows-10/9NV17MJB26PG?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Totally Reliable Delivery Service </i>(<a href="https://www.xbox.com/games/store/totally-reliable-delivery-service/9NZG72SH3H4W?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Vampyr</i> (<a href="https://www.xbox.com/games/store/vampyr/9NT2QNP382V6?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+<li><i>Warhammer 40,000: Battlesector </i>(<a href="https://www.xbox.com/games/store/warhammer-40000-battlesector/9PFLW6WZVJC7?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Yooka-Laylee and the Impossible Lair </i>(<a href="https://www.xbox.com/games/store/yooka-laylee-and-the-impossible-lair/9NB1LCQDPPM1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
+</ul>
+<p><i>Halo Infinite </i>and <i>Kingdoms Reborn </i>didn’t make it in September. Stay tuned to GFN Thursday for more updates.</p>
+<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">Predict the game you’ll be playing in the cloud most this October… <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2601.png" alt="☁" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f447.png" alt="👇" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1709599258788184519?ref_src=twsrc%5Etfw">October 4, 2023</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/gfn-thursday-10-5-nv-blog-1280x680-no-cta.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/gfn-thursday-10-5-nv-blog-1280x680-no-cta-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Fall in Line for October With Nearly 60 New Games, Including Latest Game Pass Titles to Join the Cloud]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>A Mine-Blowing Breakthrough: Open-Ended AI Agent Voyager Autonomously Plays ‘Minecraft’</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/04/ai-jim-fan/</link>
 		
@@ -42,7 +275,7 @@
 <p>“We see all these behaviors come from the Voyager setup, the skill library and also the coding mechanism,” Fan explained. “We did not preprogram any of these behaviors.”</p>
 <p>He then spoke more generally about the rise and trajectory of LLMs. He foresees strong applications in software, gaming and robotics and increasingly pressing conversations surrounding AI safety.</p>
 <p>Fan encourages those looking to get involved and work with LLMs to “just do something,” whether that means using <a href="https://www.nvidia.com/en-us/training/">online resources</a> or experimenting with beginner-friendly, CPU-based AI models.</p>
-<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1627125918%3Fsecret_token%3Ds-PgUquX2ckQi&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1627125918%3Fsecret_token%3Ds-PgUquX2ckQi&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
 <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="NVIDIA’s Jim Fan delves into large language models and their industry impact - Ep. 204" href="https://soundcloud.com/theaipodcast/ai-jim-fan/s-PgUquX2ckQi" target="_blank" rel="noopener">NVIDIA’s Jim Fan delves into large language models and their industry impact &#8211; Ep. 204</a></div>
 <h2>You Might Also Like</h2>
 <p><a href="https://soundcloud.com/theaipodcast/jules-anh-tuan-nguyen-explains-how-ai-lets-amputee-control-prosthetic-hand-video-games-ep-149">Jules Anh Tuan Nguyen Explains How AI Lets Amputee Control Prosthetic Hand, Video Games<br />
@@ -99,14 +332,14 @@
 <p>The ALERTCalifornia initiative is based at UC San Diego’s Jacobs School of Engineering, the Qualcomm Institute and the Scripps Institution of Oceanography.</p>
 <p>The program manages a network of thousands of monitoring cameras and sensor arrays and collects data that provides actionable, real-time information to inform public safety.</p>
 <p>The AI program started in June and was initially deployed in six of Cal Fire’s command centers. This month it expanded to all of CAL FIRE’s 21 command centers.</p>
-<figure id="attachment_67307" aria-describedby="caption-attachment-67307" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1.png"><img decoding="async" fetchpriority="high" class="wp-image-67307 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1.png 1920w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67307" class="wp-caption-text">ALERTCalifornia, powered by DigitalPath, can detect fires from cameras positioned across the golden state.</figcaption></figure>
+<figure id="attachment_67307" aria-describedby="caption-attachment-67307" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1.png"><img decoding="async" loading="lazy" class="wp-image-67307 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire1.png 1920w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67307" class="wp-caption-text">ALERTCalifornia, powered by DigitalPath, can detect fires from cameras positioned across the golden state.</figcaption></figure>
 <p>DigitalPath began by building out a management platform for a network of cameras used to confirm California wildfires after a 911 call.</p>
 <p>The company quickly realized there would be no way to have people examine images from the thousands of cameras relaying images to the system every ten to fifteen seconds.</p>
 <p>So Ethan Higgins, the company’s system architect, turned to AI.</p>
 <p>The team began by training a convolutional neural network on a cloud-based system running an NVIDIA A100 Tensor Core GPU and later transitioned to a system running on eight A100 GPUs.</p>
 <p>The AI model is crucial to examining a system that sees almost 8 million images a day streaming in from over 1,000 first-party cameras, primarily in California, and thousands more from third-party sources nationwide, he said.</p>
 <h2><strong>Impact of Wildfires</strong></h2>
-<figure id="attachment_67311" aria-describedby="caption-attachment-67311" style="width: 299px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png"><img decoding="async" class="wp-image-67311 " src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png" alt="" width="299" height="430" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png 348w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-278x400.png 278w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-768x1105.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-1068x1536.png 1068w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-313x450.png 313w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-149x215.png 149w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png 1167w" sizes="(max-width: 299px) 100vw, 299px" /></a><figcaption id="caption-attachment-67311" class="wp-caption-text">All anomalies being tracked throughout California as of Sept. 20, 2023. Image Credit: DigitalPath</figcaption></figure>
+<figure id="attachment_67311" aria-describedby="caption-attachment-67311" style="width: 299px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png"><img decoding="async" loading="lazy" class="wp-image-67311 " src="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png" alt="" width="299" height="430" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-348x500.png 348w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-278x400.png 278w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-768x1105.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-1068x1536.png 1068w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-313x450.png 313w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-149x215.png 149w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/10/29fire2.png 1167w" sizes="(max-width: 299px) 100vw, 299px" /></a><figcaption id="caption-attachment-67311" class="wp-caption-text">All anomalies being tracked throughout California as of Sept. 20, 2023. Image Credit: DigitalPath</figcaption></figure>
 <p>It’s arriving just in time.</p>
 <p>Wildfires have ravaged California over the past decade, burning millions of acres of land, destroying thousands of homes and businesses and claiming hundreds of lives.</p>
 <p><a href="https://www.fire.ca.gov/our-impact/statistics" target="_blank" rel="noopener">According to CAL FIRE</a>, in 2020 alone, the state experienced five of its six largest and seven of its 20 most destructive wildfires.</p>
@@ -1157,113 +1390,6 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Into the Omniverse: Blender 4.0 Alpha Release Sets Stage for New Era of OpenUSD Artistry]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA CEO Jensen Huang to Headline AI Summit in Tel Aviv</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/21/ai-summit/</link>
-		
-		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
-		<pubDate>Thu, 21 Sep 2023 13:00:27 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Events]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67032</guid>
-
-					<description><![CDATA[NVIDIA founder and CEO Jensen Huang will highlight the newest in generative AI and cloud computing at the NVIDIA AI Summit in Tel Aviv from Oct. 15-16. The two-day summit is set to attract more than 2,500 developers, researchers and decision-makers from across one of the world’s most vibrant technology hubs. With over 6,000 startups, <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/21/ai-summit/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA founder and CEO Jensen Huang will highlight the newest in generative AI and cloud computing at the <a href="https://www.nvidia.com/en-il/ai-summit-israel/">NVIDIA AI Summit in Tel Aviv</a> from Oct. 15-16.</p>
-<p>The two-day summit is set to attract more than 2,500 developers, researchers and decision-makers from across one of the world’s most vibrant technology hubs.</p>
-<p>With over 6,000 startups, Israel consistently ranks among the world’s top countries for VC investments per capita. The 2023 Global Startup Ecosystem report places Tel Aviv among the top 5 cities globally for startups.</p>
-<p>The summit features more than 60 live sessions led by experts from NVIDIA and the region’s tech leaders, who will dive deep into topics like accelerated computing, robotics, cybersecurity and climate science.</p>
-<p>Attendees will be able to network and gain insights from some of NVIDIA’s foremost experts, including Kimberly Powell, vice president and general manager of healthcare; Deepu Talla, vice president and general manager of embedded and edge computing; Gilad Shainer, senior vice president of networking and HPC; and Gal Chechik, senior director and head of the Israel AI Research Center.</p>
-<p>Key events and features of the summit include:</p>
-<ul>
-<li><b>Livestream</b>: The keynote by Huang will take place Monday, Oct. 16, at 10 a.m. Israel time (11 p.m. Pacific) and will be available for livestreaming, with on-demand access to follow.</li>
-<li><b>Ecosystem exhibition</b>: An exhibition space at the Summit will showcase NVIDIA’s tech demos, paired with contributions from partners and emerging startups from the <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception program</a>.</li>
-<li><b>Deep dive into AI</b>: The first day is dedicated to intensive learning sessions hosted by the <a href="https://www.nvidia.com/en-us/training/">NVIDIA Deep Learning Institute</a>. Workshops encompass topics like “Fundamentals of Deep Learning” and “Building AI-Based Cybersecurity Pipelines,” among a range of other topics. Edge AI &amp; Robotics Developer Day activities will explore innovations in AI and the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson Orin platform</a>.</li>
-<li><b>Multitrack sessions</b>: The second day will include multiple tracks, covering areas such as generative AI and LLMs, AI in healthcare, networking and developer tools and <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>.</li>
-</ul>
-<p>Learn more at <a href="https://www.nvidia.com/en-il/ai-summit-israel/">https://www.nvidia.com/en-il/ai-summit-israel/</a>.</p>
-<p><em>Featured image credit: Gady Munz via the <a href="http://www.pikiwiki.org.il/?action=gallery&amp;img_id=51036">PikiWiki &#8211; Israel free image collection project</a></em></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2019/03/tel-aviv.jpg"
-			type="image/jpeg"
-			width="1080"
-			height="689"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2019/03/tel-aviv-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA CEO Jensen Huang to Headline AI Summit in Tel Aviv]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Cash In: ‘PAYDAY 3’ Streams on GeForce NOW</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/21/geforce-now-thursday-sep-21/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 21 Sep 2023 13:00:19 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=66999</guid>
-
-					<description><![CDATA[Time to get the gang back together — PAYDAY 3 streams on GeForce NOW this week. It’s one of 11 titles joining the cloud this week, including Party Animals. The Perfect Heist PAYDAY 3 is the highly anticipated sequel to one of the world’s most popular co-op shooters. Step out of retirement and back into <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/21/geforce-now-thursday-sep-21/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Time to get the gang back together — <i>PAYDAY 3</i> streams on <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> this week.</p>
-<p>It’s one of 11 titles joining the cloud this week, including <i>Party Animals</i>.</p>
-<h2><b>The Perfect Heist</b></h2>
-<figure id="attachment_67007" aria-describedby="caption-attachment-67007" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67007" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-672x378.png" alt="PAYDAY 3 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-PAYDAY_3-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67007" class="wp-caption-text"><em>Not pictured: the crew member in a fuzzy bunny mask. He stayed home.</em></figcaption></figure>
-<p><i>PAYDAY 3</i> is the highly anticipated sequel to one of the world’s most popular co-op shooters. Step out of retirement and back into the life of crime in the shoes of the Payday Gang — who bring the envy of their peers and the nightmare of law enforcement wherever they go. Set several years after the end of the crew’s reign of terror over Washington, D.C., the game reassembles the group to deal with the threat that’s roused them out of early retirement.</p>
-<p>Upgrade to a GeForce NOW <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate</a> membership to pull off every heist at the highest quality. Ultimate members can stream on GeForce RTX 4080 rigs with support for up to 4K at 120 frames per second gameplay on PCs and Macs, providing a gaming experience so seamless that it would be a crime to stream on anything less.</p>
-<h2><b>Game On</b></h2>
-<figure id="attachment_67003" aria-describedby="caption-attachment-67003" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67003" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-672x336.jpg" alt="Party Animals on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/09/GFN_Thursday-Party_Animals.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67003" class="wp-caption-text"><em>Paw it out with friends on nearly any device.</em></figcaption></figure>
-<p>There’s always more action every GFN Thursday. Here’s the full list of this week’s GeForce NOW library additions:<i></i></p>
-<ul>
-<li><i>HumanitZ </i>(New release on <a href="https://store.steampowered.com/app/1766060?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 18)</li>
-<li><i>Party Animals</i> (New release on <a href="https://store.steampowered.com/app/1260320?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 20)</li>
-<li><i>PAYDAY 3 </i>(New release on <a href="https://store.steampowered.com/app/1272080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/payday-3?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/payday-3/9npzvdch73sx?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> PC Game Pass, Sept. 21)</li>
-<li><i>Warhaven </i>(New release on <a href="https://store.steampowered.com/app/2107670?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>911 Operator</i> (<a href="https://www.epicgames.com/store/p/911-operator-585edd?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Ad Infinitum</i> (<a href="https://store.steampowered.com/app/1234430?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Chained Echoes</i> (<a href="https://www.xbox.com/games/store/chained-echoes/9N1WWRPJ12FK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Deceit 2</i> (<a href="https://store.steampowered.com/app/2064870?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>The Legend of Tianding</i> (<a href="https://www.xbox.com/games/store/the-legend-of-tianding/9NCBTKXHFF8K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Mechwarrior 5: Mercenaries</i> (<a href="https://www.xbox.com/games/store/mechwarrior-5-mercenaries/9PB86W3JK8Z5?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Sprawl </i>(<a href="https://store.steampowered.com/app/1549690?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-</ul>
-<p><span>Starting today, the </span><i><span>Cyberpunk 2077 </span></i><span>2.0 patch will also be supported, adding </span><a href="https://www.nvidia.com/en-us/geforce/news/dlss-3-5-available-september-21/"><span>DLSS 3.5</span></a><span> technology and other new features.</span></p>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">Form a team of video game characters to perform a heist, who are you recruiting? <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4b0.png" alt="💰" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1704525826446823629?ref_src=twsrc%5Etfw">September 20, 2023</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/gfn-thursday-9-21-nv-blog-1280x680-no-copy.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/gfn-thursday-9-21-nv-blog-1280x680-no-copy-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Cash In: ‘PAYDAY 3’ Streams on GeForce NOW]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
