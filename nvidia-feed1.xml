@@ -20,6 +20,64 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.1</generator>
 	<item>
+		<title>Keeping an AI on Quakes: Researchers Unveil Deep Learning Model to Improve Forecasts</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/06/quakes-deep-learning-forecasts/</link>
+		
+		<dc:creator><![CDATA[Scott Martin]]></dc:creator>
+		<pubDate>Fri, 06 Oct 2023 16:00:54 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67327</guid>
+
+					<description><![CDATA[A research team is aiming to shake up the status quo for earthquake models. Researchers from the Universities of California at Berkeley and Santa Cruz, and the Technical University of Munich recently released a paper describing a new model that delivers deep learning to earthquake forecasting. Dubbed RECAST, the model can use larger datasets and <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/06/quakes-deep-learning-forecasts/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>A research team is aiming to shake up the status quo for earthquake models.</p>
+<p>Researchers from the Universities of California at Berkeley and Santa Cruz, and the Technical University of Munich recently <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL103909">released a paper</a> describing a new model that delivers deep learning to earthquake forecasting.</p>
+<p>Dubbed RECAST, the model can use larger datasets and offer greater flexibility than the current model standard, ETAS, which has improved only incrementally since its development in 1988, it argues.</p>
+<p>The paper’s authors — Kelian Dascher-Cousineau, Oleksandr Shchur, Emily Brodsky and Stephan Günnemann — trained the model on <a href="https://www.nvidia.com/en-us/design-visualization/desktop-graphics/">NVIDIA GPU workstations</a>.</p>
+<p>“There’s a whole field of research that explores how to improve ETAS,” said Dacher-Cousineau, a postdoctoral researcher at UC Berkeley. “It’s an immensely useful model that has been used a lot, but it’s been frustratingly hard to improve on it.”</p>
+<h2><b>AI Drives Seismology Ahead </b></h2>
+<p>The promise of RECAST is that its model flexibility, self-learning capability and ability to scale will enable it to interpret larger datasets and make better predictions during earthquake sequences, he said.</p>
+<p>Model advances with improved forecasts could help agencies such as the U.S. Geological Survey and its counterparts elsewhere offer better information to those who need to know. Firefighters and other first responders entering damaged buildings, for example, could benefit from more reliable forecasts on aftershocks.</p>
+<p>“There’s a ton of room for improvement within the forecasting side of things. And for a variety of reasons, our community hasn’t really dove into the machine learning side of things, partly because of being conservative and partly because these are really impactful decisions,” said Dacher-Cousineau.</p>
+<h2><b>RECAST Model Moves the Needle</b></h2>
+<p>While past work on aftershock predictions has relied on statistical models, this doesn’t scale to handle the larger datasets becoming available from an explosion of newly enhanced data capabilities, according to the researchers.</p>
+<p>The RECAST model architecture builds on developments in neural temporal point processes, which are probabilistic generative models for continuous time event sequences. In a nutshell, the model has an encoder-decoder neural network architecture used for predicting the timing of a next event based on a history of past events.</p>
+<p>Dacher-Cousineau said that releasing and benchmarking the model in the paper demonstrates that it can quickly learn to do what ETAS can do, while it holds vast potential to do more.</p>
+<p>“Our model is a generative model that, just like a natural language processing model, you can generate paragraphs and paragraphs of words, and you can sample it and make synthetic catalogs,” said Dacher-Cousineau. “Part of the paper is there to convince old-school seismologists that this is a model that’s doing the right thing — we’re not overfitting.”</p>
+<h2><b>Boosting Earthquake Data With Enhanced Catalogs </b></h2>
+<p>Earthquake catalogs, or records of earthquake data, for particular geographies can be small. That’s because to this day many come from seismic analysts who interpret scribbles of raw data that comes from seismometers. But this, too, is an area where AI researchers are building models to autonomously interpret these P waves and other signals in the data in real time.</p>
+<p>Enhanced data is meanwhile helping to fill the void. With the labeled data in earthquake catalogs, machine learning engineers are revisiting these sources of raw data and building enhanced catalogs to get 10x to 100x the number of earthquakes for training data and categories.</p>
+<p>“So it’s not necessarily that we put out more instruments to gather data but rather that we enhance the datasets,” said Dacher-Cousineau.</p>
+<h2><b>Applying Larger Datasets to Other Settings</b></h2>
+<p>With the larger datasets, the researchers are starting to see improvements from RECAST over the standard ETAS model.</p>
+<p>To advance the state of the art in earthquake forecasting, Dascher-Cousineau is working with a team of undergraduates at UC Berkeley to train earthquake catalogs on multiple regions for better predictions.</p>
+<p>“I have the natural language processing analogies in mind, where it seems very plausible that earthquake sequences in Japan are useful to inform earthquakes in California,” he said. “And you can see that going in the right direction.”</p>
+<p><i>Learn about synthetic data generation with </i><a href="https://developer.nvidia.com/omniverse/replicator"><i>NVIDIA Omniverse Replicator</i></a></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/SFQuakePost-and-Grant-Avenue-Look-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1298"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/SFQuakePost-and-Grant-Avenue-Look-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Keeping an AI on Quakes: Researchers Unveil Deep Learning Model to Improve Forecasts]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Brains of the Operation: Atlas Meditech Maps Future of Surgery With AI, Digital Twins</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/05/atlas-meditech-brain-surgery-ai-digital-twins/</link>
 		
@@ -1315,83 +1373,6 @@ Huang, whose family immigrated to the United States from Taiwan when he was a ch
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Run AI on Your PC? GeForce Users Are Ahead of the Curve]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Into the Omniverse: Blender 4.0 Alpha Release Sets Stage for New Era of OpenUSD Artistry</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/21/omniverse-blender-release-openusd/</link>
-		
-		<dc:creator><![CDATA[Dane Johnston]]></dc:creator>
-		<pubDate>Thu, 21 Sep 2023 13:00:34 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[Into the Omniverse]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Universal Scene Description]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67011</guid>
-
-					<description><![CDATA[For seasoned 3D artists and budding digital creation enthusiasts alike, an alpha version of the popular 3D software Blender is elevating creative journeys. ]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of </i><a href="https://www.nvidia.com/en-us/omniverse/news/" target="_blank" rel="noopener"><i>Into the Omniverse</i></a><i>, a series focused on how artists, developers and enterprises can transform their workflows using the latest advances in </i><a href="https://www.nvidia.com/en-us/omniverse/usd/" target="_blank" rel="noopener"><i>OpenUSD</i></a><i> and </i><a href="https://www.nvidia.com/en-us/omniverse/usd/" target="_blank" rel="noopener"><i>NVIDIA Omniverse</i></a><i>.</i></p>
-<p>For seasoned 3D artists and budding digital creation enthusiasts alike, an <a href="https://wiki.blender.org/wiki/Reference/Release_Notes/4.0" target="_blank" rel="noopener">alpha</a> version of the popular 3D software Blender is elevating creative journeys.</p>
-<p>With the update’s features for intricate shader network creation and enhanced asset-export capabilities, the development community using Blender and the <a href="https://www.nvidia.com/en-us/omniverse/usd/" target="_blank" rel="noopener">Universal Scene Description</a> framework, aka OpenUSD, is helping to evolve the 3D landscape.</p>
-<p>NVIDIA engineers play a key role in enhancing the OpenUSD capabilities of Blender which also brings enhancements for use with <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse</a>, a development platform for connecting and building OpenUSD-based tools and applications.</p>
-<h2><b>A Universal Upgrade for Blender Workflows</b></h2>
-<p>With Blender 4.0 Alpha, 3D creators across industries and enterprises can access optimized OpenUSD workflows for various use cases.</p>
-<p>For example, <a href="https://blogs.nvidia.com/blog/2023/09/19/industrial-designer-blender-openusd-ai/" target="_blank" rel="noopener">Emily Boehmer</a>, a design intern at BMW Group’s Technology Office in Munich, is using the combined power of Omniverse, Blender and Adobe Substance 3D Painter to create realistic, OpenUSD-based assets to train computer vision AI models.</p>
-<p>Boehmer worked with her team to create assets for use with <a href="https://sordi.ai/" target="_blank" rel="noopener">SORDI.ai</a>, an AI dataset published by BMW Group that contains over 800,000 photorealistic images.</p>
-<p style="text-align: center"><img decoding="async" loading="lazy" class=" wp-image-67013 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/ezgif.com-video-to-gif-36.gif" alt="" width="623" height="351" /><i>A clip of an industrial crate virtually “aging.”</i></p>
-<p>USD helped optimize Boehmer’s workflow. “It’s great to see USD support for both Blender and Substance 3D Painter,” she said. “When I create 3D assets using USD, I can be confident that they’ll look and behave as I expect them to in the scenes that they’ll be placed in because I can add physical properties to them.”</p>
-<p>Australian animator <a href="https://blogs.nvidia.com/blog/2022/07/15/marko-matosevic-omniverse-animator/" target="_blank" rel="noopener">Marko Matosevic</a> is also harnessing the combined power of Blender, Omniverse and USD in his 3D workflows.</p>
-<p>Matosevic began creating tutorials for his YouTube channel, <a href="https://www.youtube.com/c/Markom3D/featured" target="_blank" rel="noopener">Markom3D</a>, to help artists of all levels. He now shares his vast 3D knowledge with over 77,000 subscribers.</p>
-<p>Most recently, Matosevic <a href="https://youtu.be/e90afeuxRC8" target="_blank" rel="noopener">created a 3D spaceship in Blender</a> that he later enhanced in Omniverse through <a href="https://docs.omniverse.nvidia.com/create-xr/latest/index.html" target="_blank" rel="noopener">virtual reality</a>.</p>
-<p><iframe loading="lazy" title="Inside My 3D Spaceship: Blender Design Enhanced in Omniverse VR" width="500" height="281" src="https://www.youtube.com/embed/dsH-TM8Xmpk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Individual creators aren’t the only ones seeing success with Blender and USD. Multimedia entertainment studio <a href="https://developer.nvidia.com/blog/creating-immersive-events-with-openusd-and-digital-twins" target="_blank" rel="noopener">Moment Factory</a> creates OpenUSD-based <a href="https://www.nvidia.com/en-us/omniverse/solutions/digital-twins/" target="_blank" rel="noopener">digital twins</a> to simulate their immersive events — including live performances, multimedia shows and interactive installations — in Omniverse with USD before deploying them in the real world.</p>
-<p style="text-align: center"><img decoding="async" loading="lazy" class="wp-image-67016 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-scaled.jpg" alt="" width="651" height="446" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-400x274.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-672x461.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-768x526.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-1536x1053.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-657x450.jpg 657w, https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-314x215.jpg 314w, https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-146x100.jpg 146w, https://blogs.nvidia.com/wp-content/uploads/2023/09/InfoComm2023_moment-factory_06588-1280x877.jpg 1280w" sizes="(max-width: 651px) 100vw, 651px" /><i></i><i>Moment Factory&#8217;s interactive installation at InfoComm 2023.</i></p>
-<p>Team members can work in the digital twin at the same time, including designers using Blender to create and render eye-catching beauty shots to share their creative vision with customers.</p>
-<p>See how Moment Factory uses Omniverse, Blender and USD to bring their immersive events to life in <a href="https://www.youtube.com/live/ikpP7bQ6kXA?si=t5s5QLLsA2aAk6z-" target="_blank" rel="noopener">their recent livestream</a>.</p>
-<p>These 3D workflow enhancements are available to all. Blender users and <a href="https://resources.nvidia.com/en-us-omniverse-usd/ov-openusd-allstars" target="_blank" rel="noopener">USD creators</a>, including Boehmer, showcased their unique 3D pipeline on this recent Omniverse community livestream:</p>
-<p><iframe loading="lazy" title="Explore the Power of OpenUSD and Blender Across 3D Use Cases | Omniverse Live" width="500" height="281" src="https://www.youtube.com/embed/tjiQZixHlkA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>New Features Deliver Elevated 3D Experience</b></h2>
-<p>The latest USD improvements in Blender are the result of collaboration among many contributors, including AMD, Apple, Unity and NVIDIA, enabled by the Blender Foundation.</p>
-<p>For example, hair object support — which improves USD import and export capabilities for digital hair — was added by a Unity software engineer. And a new Python IO callback system — which lets technical artists use Python to access USD application programming interfaces — was developed by a software engineer at NVIDIA, with support from others at Apple and AMD.</p>
-<p>NVIDIA engineers are continuing to work on other USD contributions to include in future Blender updates.</p>
-<p>Coming soon, the <a href="https://docs.omniverse.nvidia.com/connect/latest/blender/release-notes.html" target="_blank" rel="noopener">Blender 4.0 Alpha 201.0 Omniverse Connector</a> will offer new features for USD and Omniverse users, including:</p>
-<ul>
-<li style="font-weight: 400"><b>Universal Material Mapper 2 add-on:</b> This allows for more complex shader networks, or the blending of multiple textures and materials, to be round-tripped between Omniverse apps and Blender through USD.</li>
-<li style="font-weight: 400"><b>Improved UsdPreviewSurface support and USDZ import/export capabilities</b>: This enables creators to export 3D assets for viewing in AR and VR applications.</li>
-<li style="font-weight: 400"><b>Generic attribute support:</b> This allows geometry artists to generate vertex colors — red, green or blue values — or other per-vertex (3D point) values and import/export them between Blender and other 3D applications.</li>
-</ul>
-<p>Learn more about the Blender updates by watching this tutorial:</p>
-<p><iframe loading="lazy" title="NVIDIA Omniverse |" width="500" height="281" src="https://www.youtube.com/embed/Y5o9f2dt6pI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>Get Plugged Into the Omniverse </b></h2>
-<p>Learn from industry experts on how OpenUSD is enabling custom 3D pipelines, easing 3D tool development and delivering interoperability between 3D applications in sessions from SIGGRAPH 2023, now available <a href="https://www.youtube.com/playlist?list=PL3jK4xNnlCVevpoiQ8YR-kYz5h0_9GTD9" target="_blank" rel="noopener">on demand</a>.</p>
-<p>Anyone can build their own <a href="https://developer.nvidia.com/omniverse" target="_blank" rel="noopener">Omniverse extension or Connector</a> to enhance their 3D workflows and tools. Explore the Omniverse ecosystem’s <a href="https://www.nvidia.com/en-us/omniverse/ecosystem/" target="_blank" rel="noopener">growing catalog</a> of connections, extensions, foundation applications and third-party tools.</p>
-<p>Share your Blender and Omniverse work as part of the latest community challenge, #StartToFinish. Use the hashtag to submit a screenshot of a project featuring both its beginning and ending stages for a chance to be featured on the @NVIDIAStudio and @NVIDIAOmniverse social channels.</p>
-<p>To learn more about how OpenUSD can improve 3D workflows, check out a <a href="https://www.youtube.com/playlist?list=PL3jK4xNnlCVcUP08kj6eOzvCA82U_JKiy" target="_blank" rel="noopener">new video series </a>about the framework. For more resources on OpenUSD, explore the Alliance for OpenUSD <a href="https://forum.aousd.org/" target="_blank" rel="noopener">forum</a> or visit the <a href="https://aousd.org/" target="_blank" rel="noopener">AOUSD website</a>.</p>
-<p><i>Get started with NVIDIA Omniverse by downloading the standard license for </i><a href="https://www.nvidia.com/en-us/omniverse/download/" target="_blank" rel="noopener"><i>free</i></a><i> or learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/" target="_blank" rel="noopener"><i>Omniverse Enterprise</i><i> can connect your team</i></a><i>. </i></p>
-<p><i>Developers can check out these </i><a href="https://developer.nvidia.com/omniverse/get-started/" target="_blank" rel="noopener"><i>Omniverse resources</i></a><i> to begin building on the platform. </i></p>
-<p><i>Stay up to date on the platform by subscribing to the </i><a href="https://nvda.ws/3u5KPv1"><i>newsletter</i></a><i> and following NVIDIA Omniverse on </i><a href="https://www.instagram.com/nvidiaomniverse/" target="_blank" rel="noopener"><i>Instagram</i></a><i>, </i><a href="https://www.linkedin.com/showcase/nvidia-omniverse" target="_blank" rel="noopener"><i>LinkedIn</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse" target="_blank" rel="noopener"><i>Medium</i></a><i>, </i><a href="https://www.threads.net/@nvidiaomniverse" target="_blank" rel="noopener"><i>Threads</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse" target="_blank" rel="noopener"><i>Twitter</i></a><i>.</i></p>
-<p><i>For more, check out our </i><a href="https://forums.developer.nvidia.com/c/omniverse/300" target="_blank" rel="noopener"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC" target="_blank" rel="noopener"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse" target="_blank" rel="noopener"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA" target="_blank" rel="noopener"><i>YouTube</i></a><i> channels.</i></p>
-<p><i>Featured image courtesy of Alex Trevino.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/ov-corp-blog-sept-ito-1280x680-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/ov-corp-blog-sept-ito-1280x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Into the Omniverse: Blender 4.0 Alpha Release Sets Stage for New Era of OpenUSD Artistry]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
