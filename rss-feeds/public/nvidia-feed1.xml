@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 06 Oct 2023 01:40:01 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 09 Oct 2023 21:32:24 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -86,7 +86,7 @@
 				<category><![CDATA[Deep Learning]]></category>
 		<category><![CDATA[Pro Graphics]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Digital Twins]]></category>
+		<category><![CDATA[Digital Twin]]></category>
 		<category><![CDATA[Healthcare and Life Sciences]]></category>
 		<category><![CDATA[Open Source]]></category>
 		<category><![CDATA[Social Impact]]></category>
@@ -101,7 +101,7 @@
 <p>Atlas Meditech’s Pathfinder software is integrating AI algorithms that can suggest safe surgical pathways for experts to navigate through the brain to reach a lesion.</p>
 <p>And with NVIDIA Omniverse, a platform for connecting and building custom 3D pipelines and metaverse applications, the team aims to create custom virtual representations of individual patients’ brains for surgery rehearsal.</p>
 <h2><b>Custom 3D Models of Human Brains</b></h2>
-<p><span>A key benefit of Atlas Meditech’s advanced simulations — either onscreen or in immersive virtual reality — is the ability to customize the simulations, so that surgeons can practice on a virtual brain that matches the patient’s brain in size, shape and lesion position.</span></p>
+<p>A key benefit of Atlas Meditech’s advanced simulations — either onscreen or in immersive virtual reality — is the ability to customize the simulations, so that surgeons can practice on a virtual brain that matches the patient’s brain in size, shape and lesion position.</p>
 <p>“Every patient’s anatomy is a little different,” said Dr. Cohen-Gadol. “What we can do now with physics and advanced graphics is create a patient-specific model of the brain and work with it to see and virtually operate on a tumor. The accuracy of the physical properties helps to recreate the experience we have in the real world during an operation.”</p>
 <p>To create digital twins of patients’ brains, the Atlas Pathfinder tool has adopted MONAI Label, which can support radiologists by automatically annotating MRI and CT scans to segment normal structures and tumors.</p>
 <p>“MONAI Label is the gateway to any healthcare project because it provides us with the opportunity to segment critical structures and protect them,” said Dr. Cohen-Gadol. “For the Atlas, we’re training MONAI Label to act as the eyes of the surgeon, highlighting what is a normal vessel and what’s a tumor in an individual patient’s scan.”</p>
@@ -117,7 +117,7 @@
 <p>To better simulate the brain’s physical properties, the team adopted <a href="https://developer.nvidia.com/physx-sdk">NVIDIA PhysX</a>, an advanced real-time physics simulation engine that’s part of NVIDIA Omniverse. Using haptic devices, they were able to experiment with adding haptic feedback to the virtual environment, mimicking the feeling of working with brain tissue.</p>
 <h2><b>Envisioning AI, Robotics in the Future of Surgery Training</b></h2>
 <p>Dr. Cohen-Gadol believes that in the coming years AI models will be able to further enhance surgery by providing additional insights during a procedure. Examples include warning surgeons about critical brain structures that are adjacent to the area they’re working in, tracking medical instruments during surgery, and providing a guide to next steps in the surgery.</p>
-<p>Atlas Meditech plans to explore the <a href="https://www.nvidia.com/en-us/clara/medical-devices/">NVIDIA Holoscan</a> platform for streaming AI applications to power these real-time, intraoperative insights. <span>Applying AI analysis to a surgeon’s actions during a procedure can provide the surgeon with useful feedback to improve their technique. </span></p>
+<p>Atlas Meditech plans to explore the <a href="https://www.nvidia.com/en-us/clara/medical-devices/">NVIDIA Holoscan</a> platform for streaming AI applications to power these real-time, intraoperative insights. Applying AI analysis to a surgeon’s actions during a procedure can provide the surgeon with useful feedback to improve their technique.</p>
 <p>In addition to being used for surgeons to rehearse operations, Dr. Cohen-Gadol says that digital twins of the brain and of the operating room could help train intelligent medical instruments such as microscope robots using <a href="https://developer.nvidia.com/isaac-sim">Isaac Sim</a>, a robotics simulation application developed on Omniverse.</p>
 <p>View <a href="https://www.nvidia.com/en-us/on-demand/session/gtcfall22-a41130/">Dr. Cohen-Gadol’s presentation at NVIDIA GTC</a>.</p>
 <p><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>Subscribe to NVIDIA healthcare news</i></a><i>.</i></p>
