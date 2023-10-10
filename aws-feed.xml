@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 03 Oct 2023 19:08:58 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 10 Oct 2023 13:14:45 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,170 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Financial services industry HPC migrations using AWS ParallelCluster with Slurm</title>
+		<link>https://aws.amazon.com/blogs/hpc/financial-services-industry-hpc-migrations-using-aws-parallelcluster-with-slurm/</link>
+		
+		<dc:creator><![CDATA[Vinay Arora]]></dc:creator>
+		<pubDate>Tue, 10 Oct 2023 13:14:45 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[FSI]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Slurm]]></category>
+		<guid isPermaLink="false">38335ed4c953ad6c7ef375c45681146e51ae92b4</guid>
+
+					<description>In this post, we’ll walk you through how banks and other financial services firms migrate or burst their grid workloads onto AWS using AWS ParallelCluster and the Slurm scheduler.</description>
+										<content:encoded>&lt;p&gt;If you’re reading this post, you’ll know that HPC is a way of solving hard problems by slicing the problem space up amongst a lot of computers. You might have also heard the term ‘&lt;em&gt;grid computing’&lt;/em&gt; in the context of financial services. This refers to centralized systems which are typically used to provide ‘utility computing’ to support HPC workloads.&lt;/p&gt; 
+&lt;p&gt;In financial services these types of jobs use complex algorithms to calculate as many risk or trading scenarios in parallel as possible, bound only by the amount of compute available. Financial services firms are always keen to reduce their operational costs and look to the cloud as a way to provide the elasticity and cost benefits to do this, but also: the ability to respond rapidly to changing economic conditions and market volatility.&lt;/p&gt; 
+&lt;p&gt;Customers from all the major Financial Services Industry (FSI) verticals (including banking, capital markets, and insurance) are moving their on-premises grid workloads partially, or entirely, to the cloud. These workloads typically include high volumes of short-running tasks.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll walk through how these firms can migrate or burst their grid workloads onto AWS using AWS ParallelCluster and the Slurm scheduler – and we’ll give you an introduction to those two packages, if you’ve not met them before.&lt;/p&gt; 
+&lt;h2&gt;Loosely-coupled Grid scenarios&lt;/h2&gt; 
+&lt;p&gt;Grid workloads often require hundreds of thousands, or millions, of parallel processes to complete a calculation or simulation. Generally, these jobs run on a single node, consuming one process or multiple processes with shared memory parallelization (SMP) for parallelization &lt;em&gt;within&lt;/em&gt; the node. The parallel processes, or the iterations in the simulation, are post-processed to create one solution or discovery from the simulation.&lt;/p&gt; 
+&lt;p&gt;During the simulation, the operations can take place in any order, and the loss of any one node or job in a loosely coupled workload usually doesn’t delay the entire calculation. The lost work can be picked up later or omitted altogether. The nodes involved in the calculation can vary in specification and power. This gives us some hints about the types of compute that we need to run these loosely-connected simulations.&lt;/p&gt; 
+&lt;h2&gt;Architectural considerations&lt;/h2&gt; 
+&lt;h3&gt;Networking&lt;/h3&gt; 
+&lt;p&gt;Grid processes run in parallel and don’t communicate with each other (at all) to exchange information. This means the performance of jobs isn’t impacted by latency between the nodes. This is great because it means that instead of optimizing for latency, we can instead optimize for &lt;em&gt;instance availability&lt;/em&gt;: we can spread the job out over several Availability Zones (AZs), each of which have their own capacity pools. This is especially useful when using the Amazon Elastic Compute Cloud (Amazon EC2) Spot purchasing model because the availability of Spot instances in any given AZ can be limited.&lt;/p&gt; 
+&lt;p&gt;By providing AWS ParallelCluster with options about where to place the compute, we can achieve an architecture that can scale up to tens or hundreds of thousands of cores.&lt;/p&gt; 
+&lt;h3&gt;Storage&lt;/h3&gt; 
+&lt;p&gt;Loosely coupled jobs also have a great characteristic when working with shared storage. Typically, they need to read data in, compute on it, and then write it out all without interfering with any other job. This is the perfect use case for &lt;em&gt;object storage&lt;/em&gt;. In this post, we’ll focus on Amazon Simple Storage Service (Amazon S3) as the storage layer because it provides internet-scale storage, it’s low cost, and it scales up to hundreds of thousands of tasks working simultaneously.&lt;/p&gt; 
+&lt;h3&gt;Compute&lt;/h3&gt; 
+&lt;p&gt;Choosing instance types means looking at the job’s requirement for memory:vCPU ratio, availability, and architecture support for the workload. (ie x86 or aarch64). In this post, we’ll stick with x86, to provide the greatest instance availability &lt;em&gt;and compatibility&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;ParallelCluster can request instances based on what’s available and will &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/slurm-short-capacity-fail-mode-v3.html"&gt;quickly “fail-over”&lt;/a&gt; if the instances can’t be launched. For the purposes of testing we chose instances from both x86 manufacturers’ families because they share the same instruction set and by choosing both we have a larger pool to draw from.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll use &lt;em&gt;vCPUs&lt;/em&gt; instead of &lt;em&gt;cores&lt;/em&gt; because most x86 instances onAWS have hyperthreading enabled. Hyperthreading allows two virtual cores to share the same arithmetic/logic unit (ALU). This increases overall throughput by doubling the core count but deceases the individual core’s &lt;em&gt;solve-time&lt;/em&gt;. This is sometimes a controversial topic in HPC, but for grid workloads in FSI, we’ve seen that hyperthreading is a net benefit, so we’re leaving it enabled.&lt;/p&gt; 
+&lt;h3&gt;Scheduling&lt;/h3&gt; 
+&lt;p&gt;Running a few tasks on a single instance is easy to manage by hand, but once you scale up the number of tasks, you’ll need a scheduler to manage their lifecycle. &lt;strong&gt;Slurm&lt;/strong&gt; is an open-source job scheduler that’s optimized for scheduling both tightly-coupled &lt;em&gt;and&lt;/em&gt; loosely-coupled tasks across multiple instances. It handles queuing, execution, retries, and accounting. ParallelCluster sets up Slurm using the &lt;a href="https://slurm.schedmd.com/elastic_computing.html"&gt;Slurm cloud bursting plugin&lt;/a&gt; and manages the scaling of Amazon EC2 instances.&lt;/p&gt; 
+&lt;p&gt;We recommend enabling Slurm’s &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/slurm-mem-based-scheduling-v3.html"&gt;memory based scheduling&lt;/a&gt; feature. This provides an easy way to request specific memory amounts and compute directly in the job submission, i.e. 1 vCPU and 4 GB of memory could be set in the Slurm &lt;code&gt;sbatch&lt;/code&gt; file. It also helps Slurm maximize the CPU utilization of all the cores across the fleet.&lt;/p&gt; 
+&lt;h2&gt;AWS ParallelCluster&lt;/h2&gt; 
+&lt;p&gt;AWS ParallelCluster is an open-source cluster management tool that makes it straightforward for you to deploy, manage, and scale Slurm-based clusters on AWS. ParallelCluster allows you to leverage the elasticity of AWS by providing an easy way to expand and contract compute queues that you define. You can use multiple instance types, in multiple Availability Zones, and create job submission queues with a lot of creative freedom.&lt;/p&gt; 
+&lt;p&gt;You can also quickly spin up clusters for experimenting and prototyping. Since ParallelCluster uses a simple YAML file to define all the resources you need, the process of standing up additional clusters – for production, dev, or testing – is an automated (and secure) process.&lt;/p&gt; 
+&lt;p&gt;Let’s look at a reference architecture and a tutorial that you can use to deploy this in your own AWS account.&lt;/p&gt; 
+&lt;div id="attachment_2873" style="width: 1077px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2873" class="size-full wp-image-2873" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/18/CleanShot-2023-09-18-at-13.16.09.png" alt="Figure 1 –The reference architecture for FSI grid-style computing on AWS using AWS ParallelCluster. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region." width="1067" height="490"&gt;
+ &lt;p id="caption-attachment-2873" class="wp-caption-text"&gt;Figure 1 –The reference architecture for FSI grid-style computing on AWS using AWS ParallelCluster. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Implementation details&lt;/h2&gt; 
+&lt;p&gt;In the following steps, we’ll show you how to setup a cluster with a &lt;strong&gt;headnode&lt;/strong&gt; and two &lt;strong&gt;compute queues&lt;/strong&gt;. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region. The Slurm scheduler process (&lt;code&gt;slurmctld&lt;/code&gt;) runs on the &lt;code&gt;HeadNode&lt;/code&gt; and users can login there to submit jobs via AWS Systems Manager (SSM), using SSH, or with a remote desktop connection using DCV as shown in the reference architecture in Figure 1.&lt;/p&gt; 
+&lt;p&gt;You can follow along with these steps in the &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster"&gt;FSI Tutorial&lt;/a&gt; hands-on lab.&lt;/p&gt; 
+&lt;p&gt;First, install AWS ParallelCluster CLI or UI. We’ll assume you’re using the CLI for now. In ParallelCluster, you initiate the creation of a cluster through the CLI by specifying the location of your configuration file, like this:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster -c cluster.yaml -n cluster-name&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Your config file might look something like the this:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;HeadNode:
+  InstanceType: c5a.xlarge
+  Networking:
+    SubnetId: subnet-846f1aff
+  LocalStorage:
+    RootVolume:
+      VolumeType: gp3
+  Iam:
+    AdditionalIamPolicies:
+      - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      - Policy: arn:aws:iam::aws:policy/AmazonS3FullAccess
+  Dcv:
+    Enabled: true
+  CustomActions:
+    OnNodeConfigured:
+      Sequence:
+        - Script: &amp;gt;-
+            &lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/docker/postinstall.sh" rel="noopener noreferrer"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/docker/postinstall.sh&lt;/a&gt;
+        - Script: &amp;gt;-
+            &lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/pyxis/postinstall.sh" rel="noopener noreferrer"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/pyxis/postinstall.sh&lt;/a&gt;
+          Args:
+            - /fsx
+  Imds:
+    Secured: true
+Scheduling:
+  Scheduler: slurm
+  SlurmQueues:
+    - Name: c6i
+      AllocationStrategy: capacity-optimized
+      ComputeResources:
+        - Name: spot
+          Instances:
+            - InstanceType: c6i.32xlarge
+            - InstanceType: c6a.32xlarge
+            - InstanceType: m6i.32xlarge
+            - InstanceType: m6a.32xlarge
+            - InstanceType: r6i.32xlarge
+            - InstanceType: r6a.32xlarge
+          MinCount: 0
+          MaxCount: 100
+      CustomActions:
+        OnNodeConfigured:
+          Sequence:
+            - Script: &amp;gt;-
+                &lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/pyxis/postinstall.sh" rel="noopener noreferrer"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/pyxis/postinstall.sh&lt;/a&gt;
+              Args:
+                - /fsx
+      ComputeSettings:
+        LocalStorage:
+          RootVolume:
+            VolumeType: gp3
+      Networking:
+        SubnetIds:
+          - subnet-8b15a7c6
+          - subnet-04f44e9dc1c8ee425
+          - subnet-91ab80f8
+        PlacementGroup:
+          Enabled: false
+      CapacityType: SPOT
+      Iam:
+        AdditionalIamPolicies:
+          - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+          - Policy: arn:aws:iam::aws:policy/AmazonS3FullAccess
+Region: us-east-2
+Imds:
+  ImdsSupport: v2.0
+Image:
+  Os: alinux2
+SharedStorage:
+  - Name: Ebs0
+    StorageType: Ebs
+    MountDir: /shared
+    EbsSettings:
+      VolumeType: gp3
+      DeletionPolicy: Retain
+      Size: '100'
+Tags:
+  - Key: parallelcluster-ui
+    Value: 'true'
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This config has a few key sections:&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;HeadNode&lt;/code&gt; – this is the Amazon EC2 instance that runs the Slurm scheduler processes (&lt;code&gt;slurmctld&lt;/code&gt;, for example). Because this instance is responsible for scaling up the cluster, scheduling jobs, and serving the config files, we recommend going with an instance like the c6i.2xlarge that has sufficient resources (8 vCPUs and 16 GB memory) to run Slurm comfortably.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;SlurmQueues&lt;/code&gt; – these will depend on your resource requirements. For example, if you have jobs that requires 1 vCPUs and 2 GB memory, set up a queue with c6i instances. These instances all meet the memory to core ratio and specifying multiples different sizes of them will ensure you’re most likely to get your desired capacity. If you require more memory, the m6i and r6i instances offer 8 GB per vCPU and 16 GB per vCPU, respectively. We recommend you offer your users a choice by putting each instance family in their own &lt;code&gt;SlurmQueue&lt;/code&gt;. In addition to diversifying the instance types by providing multiple from each family, we also recommend you provide multiple Availability Zones, because this expands the number of pools you’re drawing from and is especially important for using Amazon EC2 Spot.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;Storage&lt;/code&gt; – for grid workloads there’s rarely a need for a parallel filesystem – more important is a filesystem that can serve traffic in multiple Availability Zones and scale up to the thousands of jobs that can execute concurrently. We recommend using Amazon S3 or if there’s a need for a POSIX compliant filesystem, then Amazon FSx for OpenZFS. The creation of the filesystem is out of scope for this blog, but you can learn more by reading about &lt;a href="https://aws.amazon.com/blogs/hpc/expanded-filesystems-support-in-aws-parallelcluster-3-2/"&gt;Filesystem Support in AWS ParallelCluster&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;When ParallelCluster builds your cluster, it’ll attach any existing filesystems you specified in the config file. Those filesystems are typically used for applications, libraries, and users’ data. It’s important to have a separation between the filesystem and cluster configuration because it allows for easy upgrades later when ParallelCluster release a new version which you want to take advantage of. In the config file we showed, it calls for ParallelCluster itself to create an EBS-based shared file system, mounted as &lt;code&gt;/shared&lt;/code&gt;. This will be NFS-exported to the compute nodes in the cluster when they’re created.&lt;/p&gt; 
+&lt;p&gt;Once your cluster is up and running, you have several ways to interact with it:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;You can login to the head node: you can use normal SSH, or connect through SSM using the attached &lt;code&gt;SSMInstanceCore&lt;/code&gt; SSM allows access to instances that are not routable through SSH, like those in a private subnet.&lt;/li&gt; 
+ &lt;li&gt;You can submit jobs using the default Slurm commands like &lt;code&gt;sbatch&lt;/code&gt;, &lt;code&gt;srun&lt;/code&gt;, and then monitor with &lt;code&gt;squeue&lt;/code&gt; and &lt;code&gt;sinfo&lt;/code&gt;. See Slurm &lt;a href="https://slurm.schedmd.com/sbatch.html"&gt;sbatch documentation&lt;/a&gt; for more details on options for submitting jobs, and the syntax for the run scripts.&lt;/li&gt; 
+ &lt;li&gt;When Slurm detects new jobs in the queue, it uses the &lt;a href="https://slurm.schedmd.com/elastic_computing.html"&gt;Cloud Scheduling&lt;/a&gt; plugin, which calls a &lt;code&gt;ResumeProgram&lt;/code&gt; script that ParallelCluster manages. This script, in turn, calls the Amazon EC2 Fleet API to allocate instances to the queue. The jobs run soon after the instances bootstrap (typically 2-3 minutes).&lt;/li&gt; 
+ &lt;li&gt;Once all jobs are complete, the instances are left running for a short ScaleDownIdleTime, in case more jobs arrive. This defaults to 10 minutes, but you can configure it yourself by specifying a &lt;code&gt;ScaleDownIdleTime&lt;/code&gt; &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/multiple-queue-mode-slurm-user-guide-v3.html"&gt;parameter in the ParallelCluster config file&lt;/a&gt;. After this time expires, ParallelCluster will terminate the instances, and wait again for new jobs to arrive in the queues.&lt;/li&gt; 
+ &lt;li&gt;If the cluster is deleted, all instances &lt;em&gt;including the head node&lt;/em&gt; will be terminated.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;There’s an &lt;a href="https://studio.us-east-1.prod.workshops.aws/preview/5b6a7b59-b9e4-4a42-ac25-5795b9b66391/builds/1428e077-f472-4b3f-b1fc-feab5a3872f2/en-US"&gt;AWS Workshop available online&lt;/a&gt; to show you how to calculate the price of a financial &lt;em&gt;auto-callable option&lt;/em&gt; based on this ParallelCluster architecture. The workshop provides step-by-step guidance to create and configure ParallelCluster and to deploy the containerized workload.&lt;/p&gt; 
+&lt;h2&gt;Best Practices when using ParallelCluster with Slurm&lt;/h2&gt; 
+&lt;h3&gt;Smaller and heterogeneous job duration&lt;/h3&gt; 
+&lt;p&gt;If your job durations are small, for example in seconds and somewhat heterogeneous, we suggest following &lt;a href="https://slurm.schedmd.com/high_throughput.html"&gt;the recommendations from SchedMD&lt;/a&gt; (the makers of Slurm) to tune the cluster for the best job throughput – measured in tasks per second. It’s possible for Slurm to scale to 500 jobs/sec – under the right conditions and with the right architecture.&lt;/p&gt; 
+&lt;h3&gt;Large Scale Clusters&lt;/h3&gt; 
+&lt;p&gt;If your cluster exceeds 1024 instances, we recommend that following the &lt;a href="https://slurm.schedmd.com/big_sys.html"&gt;Slurm Large Cluster Administration guide.&lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;You’ll also want to consider your &lt;strong&gt;HeadNode&lt;/strong&gt; architecture. Using a c6i.2xlarge won’t be sufficient for the network bandwidth demanded by slurmctld when it’s communicating with all the child nodes. We recommend using a network optimized instance with &lt;em&gt;at least&lt;/em&gt; 50 Gbps of dedicated bandwidth, like the c6in.8xlarge. Remember, the HeadNode instance communicates with the compute instances &lt;em&gt;and&lt;/em&gt; serves the Slurm config file, and application binaries via NFS.&lt;/p&gt; 
+&lt;p&gt;You’ll also need to review your AWS account limits, (which, we remind you, are set on a per-region basis):&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;&lt;strong&gt;Amazon EC2 Limits&lt;/strong&gt; – make sure you increase the Amazon EC2 limits for the compute nodes you plan to use. You can review these, and request limit increases via the AWS Service Quotas console.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;EBS limits&lt;/strong&gt; – each compute node mounts a 35 GB root volume (or larger) of gp3 EBS storage. If you plan to launch more instances than your quota (which defaults to 50 TiB), you should &lt;a href="https://console.aws.amazon.com/servicequotas/home/services/ebs/quotas"&gt;increase this limit&lt;/a&gt;, too.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Route53 limit&lt;/strong&gt; – each compute node is added to a Route53 Private Hosted Zone. This has a default limit of 10,000 records. If you plan to exceed this limit, make sure to &lt;a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html"&gt;request a limit increase&lt;/a&gt;.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h3&gt;Acadian did this – so you can you&lt;/h3&gt; 
+&lt;p&gt;Acadian chose to use Slurm in AWS ParallelCluster to execute thousands of these heterogeneous jobs. This cloud-native grid solution enables them to benefit from faster and seamless compute capacity provisioning &lt;em&gt;and&lt;/em&gt; on-demand auto scaling features, resulting in optimal results.&lt;/p&gt; 
+&lt;p&gt;According to Jian Pan, Head of Quantitative Systems at Acadian, “&lt;em&gt;we are able to reap immediate benefit such as maintaining consistent 4hr model runtime in AWS, comparing to 20~40hr runtime on-premise when resource is under stress&lt;/em&gt;”.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Slurm can handle a cluster that grows and shrinks – driven by demand. It’s able to this dynamically by scaling compute resources from Amazon EC2. Compute fleets can be spun up to complete the workload in the queue. When the jobs are complete, ParallelCluster scales those same fleets back down to the minimum level you set (usually zero).&lt;/p&gt; 
+&lt;p&gt;If you want to try this yourself, you can follow the steps in the &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster"&gt;FSI Tutorial&lt;/a&gt; hands-on lab, and when you’ve done that, you can try a real application to &lt;a href="https://studio.us-east-1.prod.workshops.aws/preview/5b6a7b59-b9e4-4a42-ac25-5795b9b66391/builds/1428e077-f472-4b3f-b1fc-feab5a3872f2/en-US"&gt;calculate the price&lt;/a&gt; of a financial &lt;em&gt;auto-callable option&lt;/em&gt;. Let us know how to get on – you can reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Conceptual design using generative AI and CFD simulations on AWS</title>
 		<link>https://aws.amazon.com/blogs/hpc/conceptual-design-using-generative-ai-and-cfd-simulations-on-aws/</link>
 		
@@ -42,7 +206,7 @@
 &lt;p&gt;We want to show you how generative AI can be applied to design optimization. In this post we’ll focus on its effectiveness in finding better solutions for drag reduction. Our approach combines generative AI for the initial design phase with &lt;a href="https://www.openfoam.com/"&gt;OpenFOAM&lt;/a&gt; CFD simulations for the evaluation of vehicle aerodynamics.&lt;/p&gt; 
 &lt;p&gt;Through this process, we’ve developed a workflow that empowers users to define a non-parametric design optimization problem as an algorithm suitable for execution on AWS – at scale with robust infrastructure. This is underpinned by&amp;nbsp; &lt;a href="https://github.com/aws-samples/twingraph"&gt;Twingraph&lt;/a&gt; which does the undifferentiated heavy lifting of dynamic task orchestration, gathering provenance information, and scaling.&lt;/p&gt; 
 &lt;div id="attachment_2896" style="width: 1860px" class="wp-caption alignright"&gt;
- &lt;img aria-describedby="caption-attachment-2896" class="wp-image-2896 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/CleanShot-2023-09-26-at-11.25.21@2x.png" alt="Figure 1: Overall workflow for iterative design optimization of car aerodynamics by combining Generative AI techniques and Computational Fluid Dynamics simulations" width="1850" height="576"&gt;
+ &lt;img aria-describedby="caption-attachment-2896" loading="lazy" class="wp-image-2896 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/26/CleanShot-2023-09-26-at-11.25.21@2x.png" alt="Figure 1: Overall workflow for iterative design optimization of car aerodynamics by combining Generative AI techniques and Computational Fluid Dynamics simulations" width="1850" height="576"&gt;
  &lt;p id="caption-attachment-2896" class="wp-caption-text"&gt;Figure 1: Overall workflow for iterative design optimization of car aerodynamics by combining Generative AI techniques and Computational Fluid Dynamics simulations&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h2&gt;Design iterations through Stable Diffusion&lt;/h2&gt; 
@@ -2250,89 +2414,6 @@ Outputs:
 &lt;p&gt;For more background on the protein folding topic generally, check out some of our other posts, including “&lt;a href="https://aws.amazon.com/jp/blogs/industries/predicting-protein-structures-at-scale-using-aws-batch/"&gt;Predicting protein structures at scale using AWS Batch (architecture for running RoseTTAFold on AWS Batch)&lt;/a&gt;” and the one about &lt;a href="https://aws.amazon.com/jp/blogs/hpc/optimize-protein-folding-costs-with-openfold-on-aws-batch/"&gt;optimizing protein folding costs with OpenFold on AWS Batch (benchmark results)&lt;/a&gt;.&lt;/p&gt; 
 &lt;h3&gt;Acknowledgements&lt;/h3&gt; 
 &lt;p&gt;Special thanks go to the following members at AWS Japan for their contributions in building the sample application presented in this post: &lt;em&gt;Judge Saki Ito (Solutions Architect), Tomochika Kato (Solutions Architect), Fuminori Abe (Solutions Architect), Hitoshi Anji (Manager, Solutions Architect), Hokuto Akimoto (Account Manager), Takehiro Suzuki (Prototyping Engineer), and Hiroshi Kobayashi (HPC Specialist Solutions Architect).&lt;/em&gt;&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Instance sizes in the Amazon EC2 Hpc7 family – a different experience</title>
-		<link>https://aws.amazon.com/blogs/hpc/instance-sizes-in-the-amazon-ec2-hpc7-family-a-different-experience/</link>
-		
-		<dc:creator><![CDATA[Karthik Raman]]></dc:creator>
-		<pubDate>Thu, 29 Jun 2023 14:37:22 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[Graviton]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[CFD]]></category>
-		<category><![CDATA[Computational Fluid Dynamics]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[GROMACS]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[MPI]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">1b629a9ac3ac532529bee73d97690e5c002b3552</guid>
-
-					<description>Hpc7g is the first Amazon EC2 HPC instance offering with multiple instance sizes, but this is quite different from the experience of getting smaller instances from other non-HPC instance families. Today, we want to take a moment to explore why this is different, and how it helps.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-2538" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/23/t-shirt-sizes.png" alt="t-shirt sizes" width="380" height="202"&gt;In an &lt;a href="https://aws.amazon.com/blogs/hpc/application-deep-dive-into-the-graviton3e-based-amazon-ec2-hpc7g-instance/"&gt;earlier post&lt;/a&gt;, we discussed performance results from the new Amazon EC2 Hpc7g instances, powered by the AWS Graviton3E processor. Check out that earlier post to get the scoop on a full range of applications we tested in our labs and with our customers and partners.&lt;/p&gt; 
-&lt;p&gt;The hardware behind these instances has 64 physical cores, 128 GiB of DDR5 memory, and 200 Gbps of network performance with Elastic Fabric Adapter (EFA), optimized for traffic between instances in the same VPC. These instances (and many others in Amazon EC2) are possible because of the &lt;a href="https://aws.amazon.com/ec2/nitro/"&gt;AWS Nitro System&lt;/a&gt;, a combination of dedicated hardware and a lightweight hypervisor that makes their performance virtually indistinguishable from bare metal.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Hpc7g is the first Amazon EC2 HPC instance offering with multiple instance sizes&lt;/strong&gt;, but this is quite different from the experience of getting smaller instances from other non-HPC instance families. Today, we want to take a moment to explore why this is different, and how it helps.&lt;/p&gt; 
-&lt;p&gt;In this post we’ll provide details on what “&lt;em&gt;instance sizes&lt;/em&gt;” mean for Hpc7g (and, going forward, 7&lt;sup&gt;th&lt;/sup&gt; generation HPC instances generally) and show how you can benefit when you’re aiming to extract the absolute best performance you can get from them.&lt;/p&gt; 
-&lt;h2&gt;Instance menu&lt;/h2&gt; 
-&lt;p&gt;Hpc7g is available in the following instance sizes with the specs shown in Table 1.&lt;/p&gt; 
-&lt;div id="attachment_2550" style="width: 934px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2550" loading="lazy" class="size-full wp-image-2550" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/28/CleanShot-2023-06-28-at-09.37.56.png" alt="Table 1 – Hpc7g prices, instance sizes at launch, and engineering specifications" width="924" height="247"&gt;
- &lt;p id="caption-attachment-2550" class="wp-caption-text"&gt;Table 1 – Hpc7g prices, instance sizes at launch, and engineering specifications&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The only difference among the different sizes is the number of available physical cores – the rest of the specs (RAM, memory bandwidth, CPU frequency, and network bandwidth) &lt;strong&gt;remain the same&lt;/strong&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;The price is also the same&lt;/strong&gt;.&lt;/p&gt; 
-&lt;p&gt;Why is that helpful? The smaller sizes (with 32, and 16 cores) &lt;em&gt;increase the memory per-core and memory bandwidth per-core&lt;/em&gt; and – as you’ll notice later in this post – that can have a serious impact on your code’s performance, and becomes tangible when you’re using commercial software that’s licensed on a per-core basis.&lt;/p&gt; 
-&lt;p&gt;These different sizes provide an easy way for customers to use the Amazon EC2 &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html"&gt;Optimize CPU&lt;/a&gt; options feature on the Hpc7g instances. This enables customers to choose from a range of instance sizes to target maximum performance &lt;em&gt;per instance&lt;/em&gt; or maximum performance &lt;em&gt;per core&lt;/em&gt; for their HPC workloads.&lt;/p&gt; 
-&lt;p&gt;Since the only variable among the instance sizes is the number of physical cores – with applications getting access to the full memory and network performance – &lt;em&gt;the per-hour instance cost is the same for all the sizes&lt;/em&gt;.&lt;/p&gt; 
-&lt;h2&gt;Workload benefits&lt;/h2&gt; 
-&lt;p&gt;As we mentioned, a lot of HPC customers need to customize the number of CPU cores on an instance to optimize the licensing costs of their application software. Often, they’re aiming to provide enough RAM and memory bandwidth &lt;em&gt;per core&lt;/em&gt; for memory-intensive workloads.&lt;/p&gt; 
-&lt;p&gt;CFD/CAE applications fit this model. They’re hungry for maximum performance per-core because they’re limited to a run on a fixed number of cores due to domain decomposition limitations and sometimes software licensing costs. It’s also typical for these codes to have license costs significantly higher than that of the underlying hardware, so customers are smart to want to get the best performance possible for these applications so they can maximize the bang for their buck.&lt;/p&gt; 
-&lt;p&gt;Let’s look at some workloads where these variables can impact the outcomes in various ways.&lt;/p&gt; 
-&lt;h2&gt;OpenFOAM Performance&lt;/h2&gt; 
-&lt;p&gt;OpenFOAM is one the most widely used computational fluid dynamics (CFD) packages and helps companies in a range of industries (automotive, aerospace, energy, and life-sciences) conduct research and design new products.&lt;/p&gt; 
-&lt;p&gt;Figure 1 shows the per-core-scaling solver performance for a 4M cell motorbike case on a single instance of Hpc7g.16xlarge. The x-axis represents the number of cores and the y-axis represents solver performance (higher is better).&lt;/p&gt; 
-&lt;p&gt;As shown in the figure, the performance starts to flatten beyond 16 to 24 cores &lt;em&gt;per instance&lt;/em&gt;. This is mainly due to the memory-bandwidth limitations – this code and test case can drive the memory bandwidth limits (at the instance level) using lower core counts, beyond which the performance gains start to diminish.&lt;/p&gt; 
-&lt;div id="attachment_2551" style="width: 774px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2551" loading="lazy" class="size-full wp-image-2551" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/28/CleanShot-2023-06-28-at-09.39.01.png" alt="Figure 1 - Solver core scaling performance on single instance of Hpc7g.16xlarge" width="764" height="601"&gt;
- &lt;p id="caption-attachment-2551" class="wp-caption-text"&gt;Figure 1 – Solver core scaling performance on single instance of Hpc7g.16xlarge&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 2 shows the solver performance for the larger 100M cell motorbike case across the three different Hpc7g instance sizes (Hpc7g.16xlarge, Hpc7g.8xlarge, Hpc7g.4xlarge). As before, the y-axis is performance (higher is better) and the x-axis is the number of cores – but this time &lt;em&gt;spanning multiple instances&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;As shown in the figure, &lt;em&gt;for a fixed core count&lt;/em&gt; the absolute performance is higher on the smaller instance sizes. For example, at 128 cores Hpc7g.8xlarge has 1.68x better performance than Hpc7g.16xlarge and Hpc7g.4xlarge has 2.64x better performance than Hpc7g.16xlarge. This is pretty much exactly what we’d expect if the x-axis was, in fact, tracking memory bandwidth.&lt;/p&gt; 
-&lt;div id="attachment_2552" style="width: 772px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2552" loading="lazy" class="size-full wp-image-2552" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/28/CleanShot-2023-06-28-at-09.39.34.png" alt="Figure 2 – Solver performance on the different Hpc7g instance sizes" width="762" height="612"&gt;
- &lt;p id="caption-attachment-2552" class="wp-caption-text"&gt;Figure 2 – Solver performance on the different Hpc7g instance sizes&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Now the next obvious question is: &lt;em&gt;but what about cost&lt;/em&gt;? The smaller sizes (Hpc7g.8xlarge – 32 cores per instance and Hpc7g.4xlarge – 16 cores per instance) mean we’re running the job on &lt;em&gt;more instances&lt;/em&gt; to achieve the same core count as the Hpc7g.16xlarge – 64 cores per instance. So, won’t that increase the cost? The answer may not be what you’d expect.&lt;/p&gt; 
-&lt;h2&gt;Looking at cost per simulation&lt;/h2&gt; 
-&lt;p&gt;Figure 3 shows the solver cost-per-simulation for the larger 100M cell motorbike case across the three different Hpc7g instance sizes (Hpc7g.16xlarge, Hpc7g.8xlarge, Hpc7g.4xlarge) using the Amazon EC2 On-Demand pricing.&lt;/p&gt; 
-&lt;div id="attachment_2553" style="width: 911px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2553" loading="lazy" class="size-full wp-image-2553" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/28/CleanShot-2023-06-28-at-09.42.04.png" alt="Figure 3 – Solver cost-per-simulation on the different Hpc7g instance sizes" width="901" height="724"&gt;
- &lt;p id="caption-attachment-2553" class="wp-caption-text"&gt;Figure 3 – Solver cost-per-simulation on the different Hpc7g instance sizes&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Since the only difference between the instances sizes is the varying number of physical cores – keeping the other specs the same – &lt;em&gt;the per-hour instance cost is the same for all the size&lt;/em&gt;s.&lt;/p&gt; 
-&lt;p&gt;The x-axis is the number of cores (spanning multiple instances) and y-axis is cost-per-simulation (lower is better). For a fixed core count, the absolute cost-per-simulation is higher on the smaller instance sizes. For example, at 128 cores Hpc7g.8xlarge is 1.19x higher cost than Hpc7g.16xlarge and Hpc7g.4xlarge is 1.5x higher cost than hpc7g.16xlarge.&lt;/p&gt; 
-&lt;p&gt;So, the cost-per-simulation is higher for the smaller instance sizes but at a significant increase in performance.&lt;/p&gt; 
-&lt;p&gt;Now let’s look at &lt;strong&gt;both the performance and cost numbers together&lt;/strong&gt;.&lt;/p&gt; 
-&lt;p&gt;Figure 4 shows the &lt;em&gt;performance-increase&lt;/em&gt; and &lt;em&gt;cost-increase&lt;/em&gt; ratio for the motorbike 100M cell case at a fixed 128-core count across the different Hpc7g instance sizes.&lt;/p&gt; 
-&lt;p&gt;The blue bar indicates the performance increase and the orange bar indicates the cost increase. As shown in the figure, at 128 cores Hpc7g.8xlarge provides a 1.68x increase in performance with a 1.19x increase in cost over Hpc7g.16xlarge and Hpc7g.4xlarge provides a 2.64x increase in performance with 1.51x increase in cost over Hpc7g.16xlarge.&lt;/p&gt; 
-&lt;p&gt;Thus for this case at 128 cores the Hpc7g.8xlarge and Hpc7g.4xlarge instance sizes provide a better price-performance ratio over the Hpc7g.16xlarge.&lt;/p&gt; 
-&lt;div id="attachment_2554" style="width: 907px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2554" loading="lazy" class="size-full wp-image-2554" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/28/CleanShot-2023-06-28-at-09.42.46.png" alt="Figure 4 – Performance and Cost ratio with the Hpc7g instance sizes" width="897" height="650"&gt;
- &lt;p id="caption-attachment-2554" class="wp-caption-text"&gt;Figure 4 – Performance and Cost ratio with the Hpc7g instance sizes&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Summary&lt;/h2&gt; 
-&lt;p&gt;In this post we provided an overview of the different Hpc7g instance sizes along with their instance specifications. We used a known memory bandwidth-sensitive CFD workload (using OpenFOAM) and explained how customers can benefit from using the different instance sizes to maximize the performance per core by choosing the smaller instance sizes, while keeping all the other engineering specs (and the price per instance) the same.&lt;/p&gt; 
-&lt;p&gt;This led to a modest increase in cost&amp;nbsp;but&amp;nbsp;a disproportionately significant improvement in the overall performance,&amp;nbsp;which means you get the result sooner, and net-net, with a better price-performance ratio.&amp;nbsp;This is meaningful for&amp;nbsp;memory-intensive and license-constrained use cases,&amp;nbsp;&lt;strong&gt;so we think this is a feature you should be paying attention to&lt;/strong&gt;.&lt;/p&gt; 
-&lt;p&gt;The result only &lt;em&gt;sounds&lt;/em&gt; unintuitive. If you have any thoughts about this, or you want to discuss this in depth, reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;. We’d love to know how this helps you.&lt;/p&gt;</content:encoded>
 					
 		
 		
