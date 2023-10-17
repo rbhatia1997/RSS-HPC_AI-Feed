@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 13 Oct 2023 20:52:44 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 17 Oct 2023 16:33:43 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,152 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.1</generator>
 	<item>
+		<title>Striking Performance: Large Language Models up to 4x Faster on RTX With TensorRT-LLM for Windows</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/17/tensorrt-llm-windows-stable-diffusion-rtx/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Tue, 17 Oct 2023 13:00:42 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67466</guid>
+
+					<description><![CDATA[GeForce RTX and NVIDIA RTX GPUs, which are packed with dedicated AI processors called Tensor Cores, are bringing the power of generative AI natively to more than 100 million Windows PCs and workstations.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/" target="_blank" rel="noopener">Generative AI</a> is one of the most important trends in the history of personal computing, bringing advancements to gaming, creativity, video, productivity, development and more.</p>
+<p>And <a href="https://www.nvidia.com/en-us/geforce/rtx/">GeForce RTX</a> and NVIDIA RTX GPUs, which are packed with dedicated AI processors called Tensor Cores, are bringing the power of generative AI natively to more than 100 million Windows PCs and workstations.</p>
+<p>Today, generative AI on PC is getting up to 4x faster via <a href="https://developer.nvidia.com/tensorrt">TensorRT-LLM</a> for Windows, an open-source library that accelerates inference performance for the latest AI large language models, like Llama 2 and Code Llama. This follows the announcement of TensorRT-LLM for <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">data centers</a> last month.</p>
+<p>NVIDIA has also released tools to help developers accelerate their LLMs, including scripts that optimize custom models with TensorRT-LLM, TensorRT-optimized open-source models and a developer reference project that showcases both the speed and quality of LLM responses.</p>
+<p>TensorRT acceleration is now available for Stable Diffusion in the popular Web UI by Automatic1111 distribution. It speeds up the generative AI diffusion model by up to 2x over the previous fastest implementation.</p>
+<p>Plus, <a href="https://blogs.nvidia.com/blog/2023/02/28/rtx-video-super-resolution/">RTX Video Super Resolution</a> (VSR) version 1.5 is available as part of today’s <a href="https://www.nvidia.com/en-us/geforce/news/game-ready-driver-dlss-3-naraka-vermintide-rtx-vsr">Game Ready Driver</a> release — and will be available in the next <a href="https://www.nvidia.com/en-us/studio/resources/">NVIDIA Studio Driver</a>, releasing early next month.</p>
+<h2><b>Supercharging LLMs With TensorRT</b></h2>
+<p>LLMs are fueling productivity — engaging in chat, summarizing documents and web content, drafting emails and blogs — and are at the core of new pipelines of AI and other software that can automatically analyze data and generate a vast array of content.</p>
+<p>TensorRT-LLM, a library for accelerating LLM inference, gives developers and end users the benefit of LLMs that can now operate up to 4x faster on RTX-powered Windows PCs.</p>
+<p>At higher batch sizes, this acceleration significantly improves the experience for more sophisticated LLM use — like writing and coding assistants that output multiple, unique auto-complete results at once. The result is accelerated performance and improved quality that lets users select the best of the bunch.</p>
+<p>TensorRT-LLM acceleration is also beneficial when integrating LLM capabilities with other technology, such as in retrieval-augmented generation (RAG), where an LLM is paired with a vector library or vector database. RAG enables the LLM to deliver responses based on a specific dataset, like user emails or articles on a website, to provide more targeted answers.</p>
+<p>To show this in practical terms, when the question “How does NVIDIA ACE generate emotional responses?” was asked of the LLaMa 2 base model, it returned an unhelpful response.</p>
+<figure id="attachment_67501" aria-describedby="caption-attachment-67501" style="width: 1858px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE.png"><img decoding="async" fetchpriority="high" class="size-full wp-image-67501" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE.png" alt="" width="1858" height="919" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE.png 1858w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE-400x198.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE-672x332.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE-768x380.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE-1536x760.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE-842x416.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE-406x201.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE-188x93.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChatWithGeForceNewsACE-1280x633.png 1280w" sizes="(max-width: 1858px) 100vw, 1858px" /></a><figcaption id="caption-attachment-67501" class="wp-caption-text">Better responses, faster.</figcaption></figure>
+<p>Conversely, using RAG with recent <a href="https://www.nvidia.com/en-us/geforce/news/">GeForce news articles</a> loaded into a vector library and connected to the same Llama 2 model not only returned the correct answer — using NeMo SteerLM — but did so much quicker with TensorRT-LLM acceleration. This combination of speed and proficiency gives users smarter solutions.</p>
+<p>TensorRT-LLM will soon be available to download from the <a href="https://developer.nvidia.com/">NVIDIA Developer</a> website. TensorRT-optimized open source models and the RAG demo with GeForce news as a sample project are available at <a href="https://catalog.ngc.nvidia.com/">ngc.nvidia.com</a> and <a href="https://github.com/nvidia">GitHub.com/NVIDIA</a>.</p>
+<h2><b>Automatic Acceleration</b></h2>
+<p>Diffusion models, like Stable Diffusion, are used to imagine and create stunning, novel works of art. Image generation is an iterative process that can take hundreds of cycles to achieve the perfect output. When done on an underpowered computer, this iteration can add up to hours of wait time.</p>
+<p>TensorRT is designed to accelerate AI models through layer fusion, precision calibration, kernel auto-tuning and other capabilities that significantly boost inference efficiency and speed. This makes it indispensable for real-time applications and resource-intensive tasks.</p>
+<p>And now, <a href="https://developer.nvidia.com/blog/unlock-faster-image-generation-in-stable-diffusion-web-ui-with-nvidia-tensorrt/">TensorRT doubles the speed of Stable Diffusion</a>.</p>
+<p>Compatible with the most popular distribution, WebUI from Automatic1111, Stable Diffusion with TensorRT acceleration helps users iterate faster and spend less time waiting on the computer, delivering a final image sooner. On a GeForce RTX 4090, it runs 7x faster than the top implementation on Macs with an Apple M2 Ultra. The extension is <a href="https://github.com/NVIDIA/Stable-Diffusion-WebUI-TensorRT">available for download</a> today.</p>
+<p>The <a href="https://github.com/NVIDIA/TensorRT/tree/release/8.6/demo/Diffusion">TensorRT demo of a Stable Diffusion pipeline</a> provides developers with a reference implementation on how to prepare diffusion models and accelerate them using TensorRT. This is the starting point for developers interested in turbocharging a diffusion pipeline and bringing lightning-fast inferencing to applications.</p>
+<h2><b>Video That’s Super</b></h2>
+<p>AI is improving everyday PC experiences for all users. Streaming video — from nearly any source, like YouTube, Twitch, Prime Video, Disney+ and countless others — is among the most popular activities on a PC. Thanks to AI and RTX, it’s getting another update in image quality.</p>
+<p><a href="https://blogs.nvidia.com/blog/2023/02/28/rtx-video-super-resolution/">RTX VSR</a> is a breakthrough in AI pixel processing that improves the quality of streamed video content by reducing or eliminating artifacts caused by video compression. It also sharpens edges and details.</p>
+<p><iframe title="AI-Enhanced Video: NVIDIA RTX Video Super Resolution Update 1.5" width="500" height="281" src="https://www.youtube.com/embed/VkKsamTPk7g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Available now, RTX VSR version 1.5 further improves visual quality with updated models, de-artifacts content played in its native resolution and adds support for RTX GPUs based on the NVIDIA Turing architecture — both professional RTX and GeForce RTX 20 Series GPUs.</p>
+<p>Retraining the VSR AI model helped it learn to accurately identify the difference between subtle details and compression artifacts. As a result, AI-enhanced images more accurately preserve details during the upscaling process. Finer details are more visible, and the overall image looks sharper and crisper.</p>
+<figure id="attachment_67470" aria-describedby="caption-attachment-67470" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1.png"><img decoding="async" class="size-large wp-image-67470" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-672x236.png" alt="" width="672" height="236" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-672x236.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-400x140.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-768x269.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-1536x539.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-842x295.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-406x142.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-188x66.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-1280x449.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67470" class="wp-caption-text">RTX Video Super Resolution v1.5 improves detail and sharpness.</figcaption></figure>
+<p>New with version 1.5 is the ability to de-artifact video played at the display’s native resolution. The original release only enhanced video when it was being upscaled. Now, for example, 1080p video streamed to a 1080p resolution display will look smoother as heavy artifacts are reduced.</p>
+<figure id="attachment_67473" aria-describedby="caption-attachment-67473" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR.png"><img decoding="async" loading="lazy" class="size-large wp-image-67473" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-672x377.png" alt="" width="672" height="377" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-400x224.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-1536x861.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-802x450.png 802w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-383x215.png 383w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-1280x718.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67473" class="wp-caption-text">RTX VSR now de-artifacts video played at its native resolution.</figcaption></figure>
+<p>RTX VSR 1.5 is available today for all RTX users in the latest Game Ready Driver. It will be available in the upcoming NVIDIA Studio Driver, scheduled for early next month.</p>
+<p>RTX VSR is among the NVIDIA software, tools, libraries and SDKs — like those mentioned above, plus DLSS, Omniverse, AI Workbench and others — that have helped bring over 400 AI-enabled apps and games to consumers.</p>
+<p>The AI era is upon us. And RTX is supercharging at every step in its evolution.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-ai-announcemenet-blog-kv-oct2023-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-ai-announcemenet-blog-kv-oct2023-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Striking Performance: Large Language Models up to 4x Faster on RTX With TensorRT-LLM for Windows]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA RTX Video Super Resolution Update Enhances Video Quality, Detail Preservation and Expands to GeForce RTX 20 Series GPUs</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/17/rtx-video-super-resolution-ai-obs-broadcast/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Tue, 17 Oct 2023 13:00:34 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[In the NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[NVIDIA Studio]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67476</guid>
+
+					<description><![CDATA[NVIDIA today announced an update to RTX Video Super Resolution (VSR) that delivers greater overall graphical fidelity with preserved details, upscaling for native videos and support for GeForce RTX 20 Series GPUs. ]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA today announced an update to <a href="https://blogs.nvidia.com/blog/2023/02/28/rtx-video-super-resolution/">RTX Video Super Resolution</a> (VSR) that delivers greater overall graphical fidelity with preserved details, upscaling for native videos and support for GeForce RTX 20 Series desktop and laptop GPUs.</p>
+<p><iframe loading="lazy" title="AI-Enhanced Video: NVIDIA RTX Video Super Resolution Update 1.5" width="500" height="281" src="https://www.youtube.com/embed/VkKsamTPk7g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>For AI assists from RTX VSR and more — from enhanced creativity and productivity to blisteringly fast gaming — check out the <a href="https://www.nvidia.com/en-us/ai-on-rtx/">RTX for AI page</a>.</p>
+<p>Plus, this week <i>In the NVIDIA Studio</i>, Twitch personality Runebee shares her inspiration, streaming tips and how she uses AI and RTX GPU acceleration.</p>
+<p><iframe loading="lazy" title="The Best of Highlights 1-100" width="500" height="281" src="https://www.youtube.com/embed/Gs8gTICgAGM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>And don’t forget to join the #SeasonalArtChallenge by submitting spooky Halloween-themed art in October and harvest- and fall-themed pieces in November. For inspiration, check out the hauntingly adorable work of artists like <a href="https://www.instagram.com/iryna.blender3d/">iryna.blender3d</a> on <a href="https://twitter.com/NVIDIAStudio/status/1711411202809577569">Twitter</a>.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/SeasonalArtChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SeasonalArtChallenge</a> continues on with an incredible render from iryna.blender3d (IG). <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f383.png" alt="🎃" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Share your spooky/Halloween-themed art with <a href="https://twitter.com/hashtag/SeasonalArtChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SeasonalArtChallenge</a> for a chance to be featured on the Studio or <a href="https://twitter.com/nvidiaomniverse?ref_src=twsrc%5Etfw">@NVIDIAOmniverse</a> channels! <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f64c.png" alt="🙌" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a href="https://t.co/lOxcYNhBJl">pic.twitter.com/lOxcYNhBJl</a></p>
+<p>&mdash; NVIDIA Studio (@NVIDIAStudio) <a href="https://twitter.com/NVIDIAStudio/status/1711411202809577569?ref_src=twsrc%5Etfw">October 9, 2023</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2><b>The Super RTX VSR Update 1.5</b></h2>
+<p>RTX VSR’s AI model has been retrained to more accurately identify the difference between subtle details and compression artifacts to better preserve image details during the upscaling process. Finer details are more visible, and the overall image looks sharper and crisper than before.</p>
+<figure id="attachment_67470" aria-describedby="caption-attachment-67470" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1.png"><img decoding="async" loading="lazy" class="size-large wp-image-67470" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-672x236.png" alt="" width="672" height="236" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-672x236.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-400x140.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-768x269.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-1536x539.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-842x295.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-406x142.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-188x66.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-1280x449.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67470" class="wp-caption-text">RTX VSR v1.5 improves detail and sharpness.</figcaption></figure>
+<p>RTX VSR version 1.5 will also de-artifact videos played at their native resolution — prior, only upscaled video could be enhanced. Providing a leap in graphical fidelity for laptop owners with 1080p screens, the updated RTX VSR makes 1080p resolution, which is popular for content and displays, look smoother at its native resolution, even with heavy artifacts.</p>
+<figure id="attachment_67473" aria-describedby="caption-attachment-67473" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR.png"><img decoding="async" loading="lazy" class="size-large wp-image-67473" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-672x377.png" alt="" width="672" height="377" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-400x224.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-1536x861.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-802x450.png 802w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-383x215.png 383w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-1280x718.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67473" class="wp-caption-text">RTX VSR now de-artifacts video played at native resolution.</figcaption></figure>
+<p>And with expanded RTX VSR support, owners of GeForce RTX 20 Series GPUs can benefit from the same AI-enhanced video as those using RTX 30 and 40 Series GPUs.</p>
+<p>RTX VSR 1.5 is available as part of the latest <a href="https://www.nvidia.com/en-us/geforce/game-ready-drivers/">Game Ready Driver</a>, available for download today. Content creators downloading <a href="https://www.nvidia.com/en-us/studio/">NVIDIA Studio Drivers</a> — designed to enhance features, reduce repetitiveness and dramatically accelerate creative workflows — can install the driver with RTX VSR releasing in early November.</p>
+<h2><b>Runebee-lievable Streaming</b></h2>
+<p>Runebee has been livestreaming for over 10 years, providing a space for viewers to hang out and talk about games, movies or whatever else is going on in life. Over the years, she’s realized how common a desire for escapism is.</p>
+<p>“Things aren’t always sunshine and rainbows, so it’s nice to have some company that can help take your mind off things,” said Runebee.</p>
+<p><iframe loading="lazy" title="Playable Mercs Wesker in Separate Ways! (With Trainer) - Resident Evil 4 Remake" width="500" height="281" src="https://www.youtube.com/embed/I3LUccjySJY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Runebee has amassed over 100K followers on Twitch, YouTube and Instagram, crediting her success to thorough preparation of her setup. Her technology-forward approach ensures efficiency and reliability — allowing her focus to be on performance.</p>
+<p>“There’s a lot of planning involved in streaming, but at the end of the day, hitting the ‘start streaming’ button is the most important step, and NVIDIA GPU-acceleration is a massive factor in allowing it to go as smoothly as it does,” said Runebee.</p>
+<div class="simplePullQuote right"><p>“I never thought I’d have this smooth of a stream just by upgrading to a GeForce RTX 40 Series GPU.” &#8211; Runebee</p>
+</div>
+<p>OBS is Runbee’s preferred open-source software for video recording and livestreaming on Twitch. For maximum efficiency, Runebee deploys her <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080/">GeForce RTX 4080 RTX GPU</a>, taking advantage of the eighth-generation NVIDIA encoder, <a href="https://developer.nvidia.com/video-codec-sdk">NVENC</a>, to independently encode video, which frees up the graphics card to focus on livestreaming.</p>
+<p>“Streaming games and running OBS used to kill my CPU, and NVENC has taken so much stress off,” said Runebee. “I was hardly even able to stream PC games until I switched to NVENC.”</p>
+<p>For livestreamers, RTX 40 Series GPUs can offer support for real-time AV1 hardware encoding, providing a 40% efficiency boost compared to H.264 and delivering higher quality than competing GPUs.</p>
+<p><iframe loading="lazy" title="Unlock Higher Quality Live Streams with AV1 Support on GeForce RTX 40 Series GPUs" width="500" height="281" src="https://www.youtube.com/embed/kxznHq8be8I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<div class="simplePullQuote right"><p>“As I started building more PCs with NVIDIA GPUs, I never had a reason to switch!” &#8211; Runebee</p>
+</div>
+<p>Runebee can export recordings of her livestreams with Adobe Premiere Pro in half the normally required time thanks to GeForce RTX 40 Series dual encoders working together, dividing the work evenly to double output.</p>
+<p>They’re capable of recording up to 8K, 60 frames per second content in real time via <a href="https://www.nvidia.com/en-us/geforce/geforce-experience/">GeForce Experience</a> and OBS Studio.</p>
+<p><iframe loading="lazy" title="Faster Video Editing with GeForce RTX 40 Series GPUs &amp; DaVinci Resolve" width="500" height="281" src="https://www.youtube.com/embed/DhBFuU8Gnik?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Always looking to improve her livestreaming process, Runebee plans on experimenting with the <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast app</a>, which transforms any room into a home studio by upgrading standard webcams, microphones and speakers into premium smart devices using the power of AI.</p>
+<p><iframe loading="lazy" title="NVIDIA Broadcast 1.4 Update Featuring Eye Contact" width="500" height="281" src="https://www.youtube.com/embed/nR-vP_7XFHE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Runebee encourages those interested in livestreaming to at least give their potential passion project a shot. “It’s a great way to meet tons of new friends, become more articulate at describing the things you love — be it games or movies — and cultivate a community to share your passions with,” she said.</p>
+<figure id="attachment_67477" aria-describedby="caption-attachment-67477" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67477" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67477" class="wp-caption-text">Twitch livestreamer Runebee’s setup.</figcaption></figure>
+<p>Follow Runebee on <a href="https://www.twitch.tv/runebee">Twitch</a>.</p>
+<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i> <i>See </i><a href="https://www.nvidia.com/en-us/about-nvidia/legal-info/"><i>notice </i></a><i>regarding software product information.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/runebee-nv-blog-header-preview-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/runebee-nv-blog-header-preview-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA RTX Video Super Resolution Update Enhances Video Quality, Detail Preservation and Expands to GeForce RTX 20 Series GPUs]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>From Skylines to Streetscapes: How SHoP Architects Brings Innovative Designs to Life</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/13/rtx-ambassador-mengyi-fan/</link>
 		
@@ -39,14 +185,14 @@
 <p>Fan and her team work on various architecture visualization projects, from still renderings to real-time walkthroughs. They use multiple creative applications throughout the course of their projects, including Adobe Photoshop, Autodesk 3ds Max, Autodesk Revit and Epic Games&#8217; Unreal Engine. SHoP also collaborates directly with architects at project kickoff, providing images and animations that facilitate quicker decision-making during the design process.</p>
 <p>The team consistently integrates new technologies that allow them to explore untapped innovation opportunities, as well as boost research and development. Fan often incorporates real-time and traditional rendering, <a href="https://blogs.nvidia.com/blog/2022/05/20/what-is-extended-reality/">extended reality</a> and AI into her creative workflows.</p>
 <p>To capture all the details that bring the designs together, SHoP uses <a href="https://www.nvidia.com/en-us/design-visualization/rtx-a5500/">NVIDIA RTX A5500</a>. Fan is also part of the <a href="https://www.nvidia.com/en-us/design-visualization/community/rtx-ambassador/">NVIDIA RTX Ambassador Program</a>, which is designed to amplify the work of professionals from diverse industries who are using RTX technology. Equipped with the latest capabilities of RTX, Fan hopes to continue pushing boundaries in real-time visualization, AI and <a href="https://blogs.nvidia.com/blog/2021/12/14/what-is-a-digital-twin/">digital twin</a> applications.</p>
-<figure id="attachment_67433" aria-describedby="caption-attachment-67433" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4.png"><img decoding="async" fetchpriority="high" class="size-large wp-image-67433" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67433" class="wp-caption-text">All images courtesy of SHoP Architects.</figcaption></figure>
+<figure id="attachment_67433" aria-describedby="caption-attachment-67433" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4.png"><img decoding="async" loading="lazy" class="size-large wp-image-67433" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67433" class="wp-caption-text">All images courtesy of SHoP Architects.</figcaption></figure>
 <h2><b>Redefining Creative Experiences </b></h2>
 <p>3D models play a critical role as the single source of truth, which is why SHoP designers need advanced technology to help them create detailed models and visualizations without creativity or productivity slowdowns.</p>
 <p>Previously, the team used CPU-based offerings, which limited the scope of work and research and development they could take on. But with RTX, ‌designers can create and communicate complex designs while continuously collaborating with others.</p>
 <p>By tapping into RTX A5500, Fan can prioritize efficiency and high rendering quality without worrying about compute power limitations.</p>
 <p>“NVIDIA’s professional RTX GPUs are currently known as the industry standard for graphics cards solutions,” said Fan. “RTX provides us with the performance and power needed to do all the above without worrying about hardware constraints.”</p>
 <p>The advanced features of the RTX GPUs allow SHoP designers to explore new ways of representation.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02.jpg"><img decoding="async" class="aligncenter size-large wp-image-67436" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-672x259.jpg" alt="" width="672" height="259" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-672x259.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-400x154.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-768x296.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-1536x591.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-842x324.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-406x156.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-188x72.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-1280x493.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67436" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-672x259.jpg" alt="" width="672" height="259" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-672x259.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-400x154.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-768x296.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-1536x591.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-842x324.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-406x156.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-188x72.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-1280x493.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>SHoP Architects’ projects have grown in scale, location and diversity, and Fan and her team are constantly learning and adapting from each project, drawing inspiration from diverse areas such as automotive, aviation, film and gaming.</p>
 <p>Fan views RTX-powered tools as a means of opening up diverse approaches and solutions to be more widely adopted within the industry. And as an NVIDIA RTX Ambassador, she aims to push past technological boundaries by connecting with like-minded designers and creatives.</p>
 <p>See more of Fan’s work below. Discover how <a href="https://www.nvidia.com/en-us/design-visualization/rtx/">NVIDIA RTX</a> can help enhance architectural workflows and learn more about the <a href="https://www.nvidia.com/en-us/design-visualization/community/rtx-ambassador/">NVIDIA RTX Ambassador Program</a>.</p>
@@ -151,7 +297,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Put the pedal to the metal this GFN Thursday as <i>Forza Motorsport</i> leads 23 new games in the cloud.</p>
 <p>Plus, Acer’s Predator Connect 6E is the newest addition to the <a href="https://www.nvidia.com/en-us/geforce-now/recommended/">GeForce NOW Recommended program</a>, with easy cloud gaming quality-of-service (QoS) settings built in to give <a href="http://geforcenow.com/memberships">Ultimate members</a> the best streaming experience.</p>
 <h2><b>No Breaks, No Limits, No Downloads</b></h2>
-<p><iframe title="Forza Motorsport - Official Launch Trailer" width="500" height="281" src="https://www.youtube.com/embed/yJumrR_bbg0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Forza Motorsport - Official Launch Trailer" width="500" height="281" src="https://www.youtube.com/embed/yJumrR_bbg0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Take the pole position thanks to the cloud. Turn 10 Studios’ <i>Forza Motorsport</i> joins the <a href="https://www.nvidia.com/en-us/geforce-now/games/">GeForce NOW library</a> this week.</p>
 <p>The realistic racing sim features over 500 realistically rendered cars across 20 dynamic and world-famous tracks, each with dynamic time-of-day, weather and driving conditions, so no two laps will ever be the same. Unlock more than 800 performance upgrades and outbuild the competition, either online or against new, highly competitive AI racers in the single-player Builders Cup Career Mode.</p>
 <p>Stream every turn at GeForce quality on nearly any device and max out image quality thanks to the cloud. Ultimate members can get in gear at up to 4K resolution andat up to 120 frames per second for the most realistic driving experience.</p>
@@ -1223,114 +1369,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[DENZA Unwraps Smart Driving Options for N7 Model Lineup, Powered by NVIDIA DRIVE Orin]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>The Fastest Path: Healthcare Startup Uses AI to Analyze Cancer Cells in the Operating Room</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/27/healthcare-ai-startup-analyzes-cancer-cells-in-the-operating-room/</link>
-		
-		<dc:creator><![CDATA[Renee Yao]]></dc:creator>
-		<pubDate>Wed, 27 Sep 2023 13:00:40 +0000</pubDate>
-				<category><![CDATA[Autonomous Machines]]></category>
-		<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Embedded Computing]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[Jetson]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67110</guid>
-
-					<description><![CDATA[Medical-device company Invenio Imaging is developing technology that enables surgeons to evaluate tissue biopsies in the operating room, immediately after samples are collected — providing in just three minutes AI-accelerated insights that would otherwise take weeks to obtain from a pathology lab. In a surgical biopsy, a medical professional removes samples of cells or tissue <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/27/healthcare-ai-startup-analyzes-cancer-cells-in-the-operating-room/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Medical-device company Invenio Imaging is developing technology that enables surgeons to evaluate tissue biopsies in the operating room, immediately after samples are collected — providing in just three minutes AI-accelerated insights that would otherwise take weeks to obtain from a pathology lab.</p>
-<p>In a surgical biopsy, a medical professional removes samples of cells or tissue that pathologists analyze for diseases such as cancer. By delivering these capabilities through a compact, AI-powered imaging system within the treatment room, Invenio aims to support rapid clinical decision-making.</p>
-<p>“This technology will help surgeons make intraoperative decisions when performing a biopsy or surgery,” said Chris Freudiger, chief technology officer of Silicon Valley-based Invenio. “They’ll be able to rapidly evaluate whether the tissue sample contains cancerous cells, decide whether they need to take another tissue sample and, with the AI models Invenio is developing, potentially make a molecular diagnosis for personalized medical treatment within minutes.”</p>
-<p>Quicker diagnosis enables quicker treatment. It’s especially critical for aggressive types of cancer that could grow or spread significantly in the weeks it takes for biopsy results to return from a dedicated pathology lab.</p>
-<p>Invenio is a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, a program that provides cutting-edge startups with technological support and AI platform guidance. The company accelerates AI training and inference using NVIDIA GPUs and software libraries.</p>
-<h2><b>Laser Focus on Cancer Care</b></h2>
-<figure id="attachment_67119" aria-describedby="caption-attachment-67119" style="width: 279px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001.png"><img decoding="async" loading="lazy" class="wp-image-67119 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-279x400.png" alt="" width="279" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-279x400.png 279w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-349x500.png 349w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-314x450.png 314w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-150x215.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001-70x100.png 70w, https://blogs.nvidia.com/wp-content/uploads/2023/09/image001.png 693w" sizes="(max-width: 279px) 100vw, 279px" /></a><figcaption id="caption-attachment-67119" class="wp-caption-text">The NIO Laser Imaging System accelerates the imaging of fresh tissue biopsies.</figcaption></figure>
-<p>Invenio’s NIO Laser Imaging System is a digital pathology tool that accelerates the imaging of fresh tissue biopsies. It’s been used in thousands of procedures in the U.S. and Europe. In 2021, it received the CE Mark of regulatory approval in Europe.</p>
-<p>The company plans to adopt the <a href="https://www.nvidia.com/en-us/lp/embedded-computing/robotics-edge-ai-tech-brief/">NVIDIA Jetson Orin series of edge AI modules</a> for its next-generation imaging system, which will feature near real-time AI inference accelerated by the <a href="https://developer.nvidia.com/tensorrt#:~:text=TensorRT%20provides%20INT8%20using%20quantization,detection%2C%20and%20natural%20language%20processing.">NVIDIA TensorRT SDK</a>.</p>
-<p>“We’re building a layer of AI models on top of our imaging capabilities to provide physicians with not just the diagnostic image but also an analysis of what they’re seeing,” Freudiger said. “With the AI performance provided by NVIDIA Jetson at the edge, they’ll be able to quickly determine what kinds of cancer cells are present in a biopsy image.”</p>
-<p>Invenio uses a cluster of <a href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">NVIDIA RTX A6000 GPUs</a> to train neural networks with tens of millions of parameters on pathologist-annotated images. The models were developed using the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow">TensorFlow deep learning framework</a> and trained on images acquired with NIO imaging systems.</p>
-<p>“The most powerful capability for us is the expanded VRAM on the RTX A6000 GPUs, which allows us to load large batches of images and capture the variability of features,” Freudiger said. “It makes a big difference for AI training.”</p>
-<h2><b>On the Path to Clinical Deployment</b></h2>
-<p>One of Invenio’s AI products, NIO Glioma Reveal, is approved for clinical use in Europe and available for research use in the U.S. to help identify areas of cancerous cells in brain tissue.</p>
-<p>A team of Invenio’s collaborators from the University of Michigan, New York University, University of California San Francisco, the Medical University of Vienna and University Hospital of Cologne recently developed a <a href="https://deepglioma.mlins.org/" target="_blank" rel="noopener">deep learning model</a> that can find biomarkers of cancerous tumors with <a href="https://www.nature.com/articles/s41591-023-02252-4" target="_blank" rel="noopener">93% accuracy</a> in 90 seconds.</p>
-<p>With this ability to analyze different molecular subtypes of cancer within a tissue sample, doctors can predict how well a patient will respond to chemotherapy — or determine whether a tumor has been successfully removed during surgery.</p>
-<p>Beyond its work on brain tissue analysis, Invenio this year announced a clinical research <a href="https://www.prnewswire.com/news-releases/invenio-imaging-announces-clinical-research-collaboration-agreement-301712598.html" target="_blank" rel="noopener">collaboration with Johnson &amp; Johnson’s Lung Cancer Initiative</a> to develop and validate an AI solution that can help evaluate lung biopsies. The AI model will help doctors rapidly determine whether collected tissue samples contain cancer.</p>
-<p>Lung cancer is the world’s <a href="https://www.who.int/news-room/fact-sheets/detail/cancer" target="_blank" rel="noopener">deadliest form of cancer</a>, and in the U.S. alone, lung nodules are found in <a href="https://pubmed.ncbi.nlm.nih.gov/35040882/#:~:text=Importance%3A%20Pulmonary%20nodules%20are%20identified,CT)%20images%20of%20the%20chest.">over 1.5 million</a> patients each year. Once approved for clinical use, Invenio’s NIO Lung Cancer Reveal tool aims to shorten the time needed to analyze tissue biopsies for these patients.</p>
-<p>As part of this initiative, Invenio will run a clinical study before submitting the NVIDIA Jetson-powered AI solution for FDA approval.</p>
-<p><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>Subscribe to NVIDIA healthcare news</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Ambra_1_blogsize.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/Ambra_1_blogsize-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[The Fastest Path: Healthcare Startup Uses AI to Analyze Cancer Cells in the Operating Room]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Works With NTT DOCOMO to Launch World’s First GPU-Accelerated 5G Network</title>
-		<link>https://blogs.nvidia.com/blog/2023/09/26/ntt-docomo-gpu-accelerated-5g-network/</link>
-		
-		<dc:creator><![CDATA[Soma Velayutham]]></dc:creator>
-		<pubDate>Wed, 27 Sep 2023 00:00:03 +0000</pubDate>
-				<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Software]]></category>
-		<category><![CDATA[5G]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[NVIDIA BlueField]]></category>
-		<category><![CDATA[Telecommunications]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67153</guid>
-
-					<description><![CDATA[As generative AI sweeps across corporate boardrooms around the world, global telecommunications companies are exploring how to cost-effectively deliver many of these new AI applications to the edge over 5G and upcoming 6G networks. Telcos plan to deploy over 17 million 5G microcells and towers worldwide by 2025. Building, managing and optimizing this new infrastructure <a class="read-more" href="https://blogs.nvidia.com/blog/2023/09/26/ntt-docomo-gpu-accelerated-5g-network/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>As generative AI sweeps across corporate boardrooms around the world, global telecommunications companies are exploring how to cost-effectively deliver many of these new AI applications to the edge over 5G and upcoming 6G networks.</p>
-<p>Telcos plan to deploy over 17 million 5G microcells and towers worldwide by 2025. Building, managing and optimizing this new infrastructure while maintaining quality-of-service delivery and maximizing the customer experience is the industry’s next big challenge.</p>
-<p>Today, <a href="https://www.docomo.ne.jp/english/info/media_center/pr/2023/0927_00.html" target="_blank" rel="noopener">NTT DOCOMO announced</a> it is deploying a <a href="https://developer.nvidia.com/blog/enabling-the-worlds-first-gpu-accelerated-5g-open-ran-for-ntt-docomo-with-nvidia-aerial/">GPU-accelerated wireless solution</a> in its network in Japan. This makes it the first-ever telco in the world to deploy a GPU-accelerated commercial 5G network.</p>
-<p>DOCOMO’s move aims to address the multibillion-dollar problem of driving improvements in performance, total cost of ownership and energy efficiency while unlocking the flexibility, scalability and supply chain diversity promise of <a href="https://www.o-ran.org/" target="_blank" rel="noopener">Open RAN</a>.</p>
-<p>The 5G Open RAN solution uses a high-performance 5G virtual radio access network (vRAN) from Fujitsu built on the <a href="https://developer.nvidia.com/aerial-sdk" target="_blank" rel="noopener">NVIDIA Aerial vRAN stack</a> and <a href="https://www.nvidia.com/en-us/data-center/products/converged-accelerator/" target="_blank" rel="noopener">NVIDIA Converged Accelerators</a>. This combination enables telcos to create a fully software- and cloud-defined network that can dynamically allocate resources using industry-standard equipment.</p>
-<p>“Open RAN offers the opportunity to build next-generation 5G networks with unprecedented flexibility and scalability thanks to multivendor connections,” said Sadayuki Abeta, global head of Open RAN solutions at NTT DOCOMO. “We look forward to continuing working with NVIDIA on infrastructure solutions that meet those needs.”</p>
-<p>The 5G Open RAN solution is the first 5G vRAN for telco commercial deployment using the NVIDIA Aerial platform, with a hardened, carrier-grade vRAN stack. The platform brings together the NVIDIA Aerial vRAN stack for 5G, AI frameworks, accelerated compute infrastructure and long-term software support and maintenance.</p>
-<h2><strong>Cost and Energy-Efficiency Benefits of GPU Acceleration</strong></h2>
-<p>Working with offerings from Fujitsu and Wind River, the new 5G solution uses the NVIDIA Aerial platform to lower costs and reduce power consumption. Compared to its existing 5G network deployments, DOCOMO says the solution reduces total costs by up to 30%, network design utilization by up to 50%, and power consumption at base stations by up to 50%.</p>
-<p>“Delivering a 5G Open RAN network that meets stringent performance requirements of operators is a significant accomplishment,” said Masaki Taniguchi, senior vice president and head of the Mobile System Business Unit at Fujitsu Limited. “Using our Fujitsu vCU/vDU, in combination with NVIDIA Aerial platform, will help network operators to efficiently build high-performance 5G networks for consumers and businesses alike.”</p>
-<p>NVIDIA’s contribution to the DOCOMO rollout is part of a growing portfolio of 5G solutions that are driving transformation in the telecommunications industry. Anchored on NVIDIA Aerial vRAN stack and NVIDIA Converged Accelerators — combined with <a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/" target="_blank" rel="noopener">NVIDIA BlueField data processing units (DPUs)</a> and a suite of AI frameworks — NVIDIA provides a high-performance, software-defined, cloud-native, AI-enabled 5G for on-premises and telco operators’ RAN.</p>
-<p>Fujitsu, NVIDIA and Wind River have been working under the OREX (5G Open RAN service brand), which was launched by DOCOMO in February 2021, to develop the Open RAN 5G vRAN. OREX has been deployed in Japan based on Fujitsu’s virtualized DU (vDU) and virtualized CU (vCU) and leverages commercial off-the-shelf servers, the Wind River cloud platform, Fujitsu’s 5G vRAN software and the NVIDIA Aerial vRAN stack and NVIDIA Converged Accelerators.</p>
-<p>“Wind River is delighted to work with NTT DOCOMO, Fujitsu and NVIDIA towards a vision of improved efficiency of RAN deployments and operations,” said Paul Miller, chief technology officer at Wind River. “Wind River Studio provides a cloud-native, distributed cloud, automation, and analytics solution based on open source, so that operators can deploy and manage their 5G edge networks globally at high scale with faster innovation. This solution is proven in highly scaled production deployments today.”</p>
-<h2><strong>OREX: Building Out From Japan and Beyond</strong></h2>
-<p>DOCOMO and its partners in OREX are promoting a multivendor, Open RAN-compliant 5G vRAN to the global operator community. The commercial deployment in Japan is a first step in the vision of OREX, where members can commercially validate their solutions and then promote them to other operators globally.</p>
-<p>NVIDIA is working with DOCOMO and other partners to support operators around the world to deploy high-performance, energy-efficient, software-defined, commercial 5G vRAN.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/docomo2.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/09/docomo2-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Works With NTT DOCOMO to Launch World’s First GPU-Accelerated 5G Network]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
