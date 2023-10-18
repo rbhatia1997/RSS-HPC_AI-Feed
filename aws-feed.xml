@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 10 Oct 2023 13:14:45 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 18 Oct 2023 11:17:52 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,99 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Introducing login nodes in AWS ParallelCluster</title>
+		<link>https://aws.amazon.com/blogs/hpc/introducing-login-nodes-in-aws-parallelcluster/</link>
+		
+		<dc:creator><![CDATA[Austin Cherian]]></dc:creator>
+		<pubDate>Wed, 18 Oct 2023 11:17:52 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[Slurm]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">b47b51c49022a980aec35361efa3990537c5c3a1</guid>
+
+					<description>AWS ParallelCluster 3.7 now supports adding login nodes to your cluster, out of the box. Here, we'll show you how to set this up, and highlight some important tunable options for tweaking the experience.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright wp-image-2940 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/12/AdobeStock_593057386-expanded.png" alt="Introducing login nodes in AWS ParallelCluster" width="380" height="212"&gt;If you’re a user of a Slurm-based HPC cluster, it’s likely you interact with your cluster using a &lt;em&gt;login node&lt;/em&gt;. It’s the portal through which you access your cluster’s vast computational resources. You’ve probably used one to browse your files, submit jobs (and check on them) and compile your code.&lt;/p&gt; 
+&lt;p&gt;You can do all these things using the headnode, too, but when a cluster is shared among multiple users in an enterprise or lab, someone compiling their code on the headnode can hamper other users trying to submit jobs, or just doing their own work. Some AWS ParallelCluster customers have worked around this limitation by manually creating login nodes for their users, but this involved a lot of undocumented steps and forced their admins to know about ParallelCluster’s internals.&lt;/p&gt; 
+&lt;p&gt;So we’re happy to announce that AWS ParallelCluster 3.7 now supports adding login nodes to your cluster, out of the box. In this post we’ll show you an example of setting this up for a cluster, and highlight some of the more important tunable options for tweaking the experience.&lt;/p&gt; 
+&lt;h2&gt;Getting started with AWS ParallelCluster Login Nodes&lt;/h2&gt; 
+&lt;p&gt;Login nodes are specified in a similar way to compute nodes: as a ‘pool of nodes’ which in this case have single purpose. You can specify one pool of login nodes with as many instances as you would like to configure for your cluster.&lt;/p&gt; 
+&lt;p&gt;If you want to try this feature out and explore how it works &lt;em&gt;without having to first design a cluster&lt;/em&gt;, you can use our &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/login_nodes"&gt;one-click launchable stack&lt;/a&gt; from the HPC Recipes Library (a &lt;em&gt;super useful&lt;/em&gt; resource which we described in a &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;recent post on this channel&lt;/a&gt;).&lt;/p&gt; 
+&lt;p&gt;Or, you can follow the steps here to augment an existing configuration file you have on hand, to enable login nodes on a new cluster, or to make an update to an existing one.&lt;/p&gt; 
+&lt;h3&gt;Step 1: Configure ParallelCluster with login nodes&lt;/h3&gt; 
+&lt;p&gt;First, ensure that you’re using ParallelCluster 3.7.0. &amp;nbsp;(or later) which introduces this new feature. You can then create a new cluster or update an existing one with login nodes.&lt;/p&gt; 
+&lt;p&gt;Enabling login nodes starts by configuring them in the YAML configuration file that describes your ParallelCluster. You can always retrieve the YAML config for a running cluster using the &lt;code&gt;pcluster-describe&lt;/code&gt; command (there’s an example in &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/pcluster.describe-cluster-v3.html"&gt;our documentation&lt;/a&gt;).&lt;/p&gt; 
+&lt;p&gt;When you defined your ComputeResources as part of &lt;code&gt;SlurmQueues&lt;/code&gt;, you specified the instance type, security groups, and several other details.&lt;/p&gt; 
+&lt;p&gt;It’s similar for login nodes where you now define these parameters in a new section called &lt;code&gt;LoginNodes&lt;/code&gt;. There are a few more settings unique to login nodes like: &lt;code&gt;Count&lt;/code&gt;, which specifies the number of nodes; and the &lt;code&gt;GraceTimePeriod&lt;/code&gt;, which lets you set a &lt;em&gt;countdown timer&lt;/em&gt; for logged in users on a node when ParallelCluster is planning to stop it. The full spread of options is in our &lt;code&gt;LoginNodes&lt;/code&gt; &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/LoginNodes-v3.html"&gt;documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;The following snippet (which you can add to the end of your config file) shows how to setup a cluster with three login nodes, as part of a pool named &lt;code&gt;CFDCluster&lt;/code&gt; that act as a front door to users to login and submit fluid dynamics jobs on your cluster.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;LoginNodes:
+   Pools:
+    - Name: CFDCluster
+      Count: 3  # Specify the number of login nodes you need
+      InstanceType: t2.micro  # Choose an appropriate instance type
+      Ssh:
+         KeyName: CFSClusterKey # The key pair setup in your AWS account
+      Networking: 
+        SubnetId: 
+          - subnet-XXXXXXXXX  # Specify the subnet for your login nodes
+        SecurityGroups:
+          - sg-XXXXXXXXX  # security groups your EC2 Login nodes will be within
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You can customize the settings according to your requirements, including the instance type, subnet, and security groups. There are some additional settings you can specify like IAM roles and policies, and additional security groups. You can also define custom AMIs if you want to be more opinionated about the experience for your users when they login (for instance, by giving them access to compilers or licensed debuggers). You’ll find all these details in the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/LoginNodes-v3.html#LoginNodes-v3.properties"&gt;ParallelCluster documentation on LoginNodes properties&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3&gt;Step 2: Update your cluster&lt;/h3&gt; 
+&lt;p&gt;After you’ve finished editing your ParallelCluster config file, you’re ready to update your running cluster, or create a new one.&lt;/p&gt; 
+&lt;p&gt;If you’re setting up a &lt;em&gt;new cluster&lt;/em&gt; with login nodes, use this command along with the configuration file that contains your settings:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster —cluster-configuration your_config_file_name —cluster-name your_cluster_name&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;If you’re updating an &lt;em&gt;existing cluster&lt;/em&gt; then it’s just:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster update-cluster --cluster-configuration your_config_file_name --cluster-name your_cluster_name&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Of course, replace &lt;code&gt;your_config_file_name&lt;/code&gt; with the name of your configuration file and &lt;code&gt;your_cluster_name&lt;/code&gt; with the name of your cluster.&lt;/p&gt; 
+&lt;h3&gt;Step 3: Access your login nodes&lt;/h3&gt; 
+&lt;p&gt;Once your cluster is ready, users with appropriate permissions can access the login nodes using SSH. But first they’ll need to find the address of the nodes they want to connect to.&lt;/p&gt; 
+&lt;p&gt;Login nodes are provisioned with a single connection address to a Network Load Balancer (which is a feature of Elastic Load Balancer), specifically configured for the pool of login nodes. The exact address depends on the type of subnet you specified in the &lt;code&gt;LoginNodes&lt;/code&gt; pool configuration. All connection requests are managed by the Network Load Balancer using &lt;em&gt;round-robin routing&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;To retrieve the address of the single connection provisioned to access the login nodes, you can run the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/pcluster.describe-cluster-v3.html"&gt;pcluster describe-cluster&lt;/a&gt; command.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster describe-cluster --cluster-name your_cluster_name&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This command will also provide more information about the &lt;em&gt;status&lt;/em&gt; of the login nodes. Here’s an example what it returns for our login nodes:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-json"&gt;"loginNodes": 
+{ "status": "active", 
+  "address": "8af2145440569xyz.us-east-1.amazonaws.com", 
+  "scheme": "internet-facing|internal", 
+  "healthyNodes": 3, 
+  "unhealthyNodes": 0 },
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Now it’s just a simple matter of SSH’ing to that address:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;ssh username@8af2145440569xyz.us-east-1.amazonaws.com&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Users can submit and manage jobs, and they’ll have access to any shared storage the cluster uses, too, so they can manage their files and see the output from their jobs.&lt;/p&gt; 
+&lt;p&gt;You’ll notice that the &lt;code&gt;describe-cluster&lt;/code&gt; output also gave you some information on the status and health of your login nodes. You can get more granular information on the state, IP address, and launch time for individual login nodes in the pool, by using the &lt;code&gt;pcluster describe-cluster-instances&lt;/code&gt; command, specifying the node-type as &lt;code&gt;LoginNodes&lt;/code&gt;:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster describe-cluster-instances --node-type LoginNode --cluster-name your_cluster_name&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Check our &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/pcluster.describe-cluster-instances-v3.html"&gt;documentation&lt;/a&gt; for more about this.&lt;/p&gt; 
+&lt;h2&gt;Controlling the population of login nodes&lt;/h2&gt; 
+&lt;p&gt;Once configured, your login nodes will keep running until you remove them from the pool.&lt;/p&gt; 
+&lt;h3&gt;Adding and removing login nodes&lt;/h3&gt; 
+&lt;p&gt;Adding and removing login nodes from a pool is straight forward. You set the Count parameter of the &lt;code&gt;LoginNodes&lt;/code&gt; configuration in the ParallelCluster YAML file to your desired number. Then, update your running cluster configuration using the &lt;code&gt;pcluster update-cluster command&lt;/code&gt;, as before:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster update-cluster --cluster-configuration your_config_file_name --cluster-name your_cluster_name&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;To remove all login nodes you can just set the &lt;code&gt;Count&lt;/code&gt; to &lt;code&gt;0&lt;/code&gt; and update the cluster.&lt;/p&gt; 
+&lt;h3&gt;Setting a grace-time message for users when terminating Login Nodes&lt;/h3&gt; 
+&lt;p&gt;When you remove login nodes from the pool using the &lt;code&gt;Count&lt;/code&gt; parameter we just described, ParallelCluster will terminate the Amazon EC2 instances powering them. During a node’s termination, logged in users will receive terminal notifications in their SSH windows alerting them about the impending shutdown. The message will specify a grace-time period during which no new connections will be allowed, except for those from the cluster’s default user. The message is customizable by the cluster administrator from the headnode or from a login node by editing the file &lt;code&gt;/opt/parallelcluster/shared_login_nodes/loginmgtd_config.json&lt;/code&gt; . Here’s what that looks like, by default:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-json"&gt;{
+  "termination_script_path": "/opt/parallelcluster/shared_login_nodes/loginmgtd_on_termination.sh",
+  "termination_message": "The system will be terminated within 10 minutes.",
+  "gracetime_period": "10"
+}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;AWS ParallelCluster 3.7 introduced login nodes – a powerful and flexible way to manage access and more carefully define the user experience for your HPC cluster users.&lt;/p&gt; 
+&lt;p&gt;By distributing interactive user sessions across a pool of dedicated login nodes, you can improve your cluster’s performance, expand the tools available to your end users, and streamline everyone’s data access. With careful configuration and management, login nodes can become an integral part of your cloud-based HPC infrastructure, enabling efficient and scalable computing for your organization.&lt;/p&gt; 
+&lt;p&gt;If you want to get started right away, you can use our &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/login_nodes"&gt;one-click launchable stack&lt;/a&gt; from the HPC Recipes Library to get a complete test environment launched quickly, which you can customize (or delete) later. This comes from the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipe Library&lt;/a&gt; which can help you quickly achieve feature-rich,&amp;nbsp;&lt;em&gt;reliable&lt;/em&gt;&amp;nbsp;HPC deployments that are ready to run a diverse range of workloads – regardless of where you’re starting from.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Financial services industry HPC migrations using AWS ParallelCluster with Slurm</title>
 		<link>https://aws.amazon.com/blogs/hpc/financial-services-industry-hpc-migrations-using-aws-parallelcluster-with-slurm/</link>
 		
@@ -51,7 +144,7 @@
 &lt;p&gt;You can also quickly spin up clusters for experimenting and prototyping. Since ParallelCluster uses a simple YAML file to define all the resources you need, the process of standing up additional clusters – for production, dev, or testing – is an automated (and secure) process.&lt;/p&gt; 
 &lt;p&gt;Let’s look at a reference architecture and a tutorial that you can use to deploy this in your own AWS account.&lt;/p&gt; 
 &lt;div id="attachment_2873" style="width: 1077px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2873" class="size-full wp-image-2873" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/18/CleanShot-2023-09-18-at-13.16.09.png" alt="Figure 1 –The reference architecture for FSI grid-style computing on AWS using AWS ParallelCluster. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region." width="1067" height="490"&gt;
+ &lt;img aria-describedby="caption-attachment-2873" loading="lazy" class="size-full wp-image-2873" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/18/CleanShot-2023-09-18-at-13.16.09.png" alt="Figure 1 –The reference architecture for FSI grid-style computing on AWS using AWS ParallelCluster. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region." width="1067" height="490"&gt;
  &lt;p id="caption-attachment-2873" class="wp-caption-text"&gt;Figure 1 –The reference architecture for FSI grid-style computing on AWS using AWS ParallelCluster. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h2&gt;Implementation details&lt;/h2&gt; 
@@ -2358,62 +2451,6 @@ Outputs:
 &lt;p&gt;In this article, we’ve shown you how to automated deployment and management of HPC infrastructure on AWS. We started by demonstrating the AWS ParallelCluster Python library, then introduced AWS CloudFormation as a tool for modeling and managing cloud resources. We then showed an example of using the newly-released integration between ParallelCluster and CloudFormation to deploy and manage simple cluster from a template file. Finally, we introduced quick-create links, which help streamline sharing and deployment of CloudFormation stacks, so you can help others use the solutions you’ve created.&lt;/p&gt; 
 &lt;p&gt;There’s a lot more to learn, and we’ll cover this in future posts.&lt;/p&gt; 
 &lt;p&gt;While you’re waiting on these, try &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials_09_cfn-custom-resource-v3.html"&gt;launching a cluster using AWS CloudFormation&lt;/a&gt; and let us know how we can improve the experience. You can reach us on Twitter at &lt;a href="https://twitter.com/techhpc/"&gt;@TechHPC&lt;/a&gt; or by email at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Running protein structure prediction at scale using a web interface for researchers</title>
-		<link>https://aws.amazon.com/blogs/hpc/running-protein-structure-prediction-at-scale-using-a-web-interface-for-researchers/</link>
-		
-		<dc:creator><![CDATA[Chiaki Ishio]]></dc:creator>
-		<pubDate>Wed, 05 Jul 2023 14:58:09 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Life Sciences]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[Protein Folding]]></category>
-		<guid isPermaLink="false">5ce79e678bb6dcf7f451ddf276cec5303fa160ee</guid>
-
-					<description>Today, we'll show you our open-source sample implementation of a web frontend and cloud HPC backend to support researchers using AI tools like AlphaFold for drug discovery and design.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-2422" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/09/AdobeStock_373127444-2.jpeg" alt="Protein enzymes fold into their structure to fulfill their function - 3d illustration" width="380" height="208"&gt;This post was contributed by Chiaki Ishio, Solutions Architect, Daisuke Miyamoto, Senior Specialist Solutions Architect, Compute/HPC, Shingo Chiyoda, Solutions Architect, Daiki Kuriyama, Senior Prototyping Engineer, AWS Japan&lt;/em&gt;&lt;/p&gt; 
-&lt;h2&gt;Introduction&lt;/h2&gt; 
-&lt;p&gt;Unraveling the proteins structure is crucial not only for understanding its function, but also for drug discovery. Protein structure prediction software like &lt;a href="https://github.com/deepmind/alphafold"&gt;AlphaFold2&lt;/a&gt; and &lt;a href="https://github.com/aqlaboratory/openfold"&gt;OpenFold&lt;/a&gt; have become indispensable to researchers since their introduction in 2021. However, researchers may find it complicated to build an environment to run this software &lt;em&gt;and&lt;/em&gt; manage the hardware. IT admins also may find it laborious to secure and control the computing resources for the researchers.&lt;/p&gt; 
-&lt;p&gt;In this blog post, we present &lt;a href="https://github.com/aws-samples/alphafold-protein-structure-prediction-with-frontend-app"&gt;a sample implementation&lt;/a&gt; to solve these problems. It consists of a purpose-built web frontend and a cloud HPC backend environment. Using this implementation, researchers can run protein structure prediction jobs at the backend HPC cluster through an easy-to-use web frontend.&lt;/p&gt; 
-&lt;p&gt;IT admins can reduce the time and effort required to prepare computing resources by taking advantage of a scalable HPC environment, and they can also easily manage permissions by restricting user access to the web interface. In this way, the cloud is an especially productive environment for HPC, because we can combine a variety of interfaces with serious computing horsepower, depending on the purposes and our users’ needs.&lt;/p&gt; 
-&lt;h2&gt;Overview of our sample application&lt;/h2&gt; 
-&lt;p&gt;In this section, we’ll take a look at a &lt;a href="https://github.com/aws-samples/alphafold-protein-structure-prediction-with-frontend-app"&gt;sample application published as an AWS Samples&lt;/a&gt; (see the link for the deployment method).&lt;/p&gt; 
-&lt;p&gt;This implementation provides a web application, as shown in Figure 1. Through this web frontend, you can easily run three-dimensional protein structure prediction using AlphaFold2. To run a job, input the FASTA format text at the screen top and click the ‘Create Job’ button. The job execution status is displayed in the list below the text field. You can also visualize the results of completed jobs and download the results in PDB format.&lt;/p&gt; 
-&lt;div id="attachment_2415" style="width: 905px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2415" loading="lazy" class="size-full wp-image-2415" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/09/CleanShot-2023-06-09-at-11.16.48.png" alt="Figure 1 – A sample web frontend application. Researchers can enter FASTA format text into a simple form and obtain results of the protein structure prediction following a short wait." width="895" height="851"&gt;
- &lt;p id="caption-attachment-2415" class="wp-caption-text"&gt;Figure 1 – A sample web frontend application. Researchers can enter FASTA format text into a simple form and obtain results of the protein structure prediction following a short wait.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Architecture: HPC cluster integrated with web frontend&lt;/h2&gt; 
-&lt;p&gt;What is happening behind the scenes when you use the web frontend above? We’ll illustrate the process using an architectural diagram (Figure 2). Note that the numbers in the following text match the numbers in the diagram.&lt;/p&gt; 
-&lt;p&gt;When you interact with the web frontend, it sends an instruction to the compute environment via an API (1). For example, when you start a job with a FASTA format text, the file gets stored in an S3 bucket via &lt;a href="https://aws.amazon.com/api-gateway/"&gt;Amazon API Gateway&lt;/a&gt; and &lt;a href="https://aws.amazon.com/lambda/"&gt;AWS Lambda&lt;/a&gt; (2).&lt;a href="https://aws.amazon.com/systems-manager/"&gt; Also, via &lt;u&gt;AWS Systems Manager&lt;/u&gt;, the AlphaFold2 script is executed&lt;/a&gt; on the HPC cluster managed by&lt;a href="https://aws.amazon.com/hpc/parallelcluster"&gt; &lt;u&gt;AWS ParallelCluster&lt;/u&gt; &lt;/a&gt;(3). The databases required to run AlphaFold2 are stored in &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt;, a distributed file system which offers rapid access from the HPC cluster (4). Since FSx for Lustre synchronizes bi-directionally with the S3 bucket (5), FASTA files in the S3 bucket can be accessed from the Lustre file system. Finally, we use &lt;a href="https://slurm.schedmd.com/documentation.html"&gt;Slurm&lt;/a&gt; to manage jobs in ParallelCluster, and &lt;a href="https://aws.amazon.com/rds/aurora/serverless/"&gt;Amazon Aurora Serverless v1&lt;/a&gt; to store the job execution history (6).&lt;/p&gt; 
-&lt;div id="attachment_2416" style="width: 1329px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2416" loading="lazy" class="size-full wp-image-2416" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/09/CleanShot-2023-06-09-at-11.18.24.png" alt="Figure 2 — Architectural diagram of a web application for predicting protein structures. When a FASTA file is submitted from the web frontend, the job is submitted to AWS ParallelCluster via Amazon API Gateway/AWS Lambda." width="1319" height="674"&gt;
- &lt;p id="caption-attachment-2416" class="wp-caption-text"&gt;Figure 2 — Architectural diagram of a web application for predicting protein structures. When a FASTA file is submitted from the web frontend, the job is submitted to AWS ParallelCluster via Amazon API Gateway/AWS Lambda.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We’ve walked through the detailed architecture, but application users don’t need to be aware of the actual mechanisms behind the scenes. If you’re a researcher and you want to try protein structure prediction on the cloud, but have no access to the AWS management console in your organization, you can still use this web application.&lt;/p&gt; 
-&lt;p&gt;Best of all, if you’re not familiar with HPC operations, you can still run the AlphaFold2 job via the GUI.&lt;/p&gt; 
-&lt;h2&gt;Deep Dive on components in the architecture&lt;/h2&gt; 
-&lt;p&gt;So far, we’ve explained the architecture at a high level. In this section, we’ll pick up some AWS services and components in this application.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;&lt;u&gt;AWS CDK:&lt;/u&gt;&lt;/strong&gt; The entire web application is implemented using the &lt;a href="https://aws.amazon.com/cdk/"&gt;AWS CDK (Cloud Development Kit)&lt;/a&gt;, a tool that allows you to define a cloud application as code. If you’re the IT admin, you can build this almost automatically. First, you deploy the backend and frontend with the CDK, connect the two, then launch an HPC cluster and configure a protein structure prediction tool (detail steps are &lt;a href="https://github.com/aws-samples/alphafold-protein-structure-prediction-with-frontend-app"&gt;described in the sample repository&lt;/a&gt;) to complete the entire application.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;&lt;u&gt;AWS ParallelCluster:&lt;/u&gt;&lt;/strong&gt; Now, we’ll take a closer look at the options for building the HPC cluster environment. Both &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; and &lt;a href="https://github.com/aws-samples/alphafold-protein-structure-prediction-with-frontend-app"&gt;AWS Batch&lt;/a&gt; are suitable compute environment options for running protein structure prediction software as in this blog post. Here’s a brief recap of each service: ParallelCluster makes it easy for you to deploy and manage HPC clusters on AWS, and is recommended for those who are familiar with any HPC cluster environments. Meanwhile, AWS Batch allows you to run batch computing jobs at any scale, and it automatically provisions computing resources. It is recommended for users who are comfortable using containers. Based on the characteristics of these two options, the reason we chose ParallelCluster is flexibility. That is, even if new software other than AlphaFold2 or ColabFold are released in the future, they won’t always immediately support container environments; ParallelCluster is useful in these kinds of cases.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;&lt;u&gt;Cost:&lt;/u&gt;&lt;/strong&gt; Cost is also an important perspective when considering any architecture. The sample application described above includes two types of costs: recurring and job-execution based. The breakdown of each cost type is described in the next paragraph (note that these cost calculations are based on US East (Northern Virginia) Region pricing as of the publish date of this blog post).&lt;/p&gt; 
-&lt;p&gt;First, the recurring cost is &lt;a href="https://calculator.aws/#/estimate?id=fd5b780e164920cb80c0cc009b68e85ddc9da2a4"&gt;about $290 per month&lt;/a&gt;, mostly due to FSx for Lustre. In this sample application, we applied the data compression setting in order to minimize the cost of FSx for Lustre. The remainder of the cost is associated with ParallelCluster: an EC2 instance acting as the head node, a NAT gateway, and the Aurora Serverless v1 that manages the job history. If you choose Batch instead of ParallelCluster for your HPC environment, you could reduce the recurring cost associated with ParallelCluster’s head node.&lt;/p&gt; 
-&lt;p&gt;Next, let’s look at the cost incurred &lt;em&gt;per-job&lt;/em&gt; for execution. For example, using g4dn.2xlarge for the GPU instance costs 0.752 USD per hour. The cost is proportional to the time required to run the job. Note that unit pricing for AWS services, including EC2 instances, varies by region. You can consider selecting a suitable region to optimize your costs.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this blog post, we described a sample implementation of a web application that can run protein structure prediction jobs with AlphaFold2 via GUI, using AWS ParallelCluster as backend. This web application is built to be easy for researchers to use &lt;em&gt;and&lt;/em&gt; for IT admins to manage the infrastructure.&lt;/p&gt; 
-&lt;p&gt;Also, as we discussed, you can use this implementation interchangeably with other protein structure prediction software. That is, you can replace the backend software with alternatives, like &lt;a href="https://github.com/HeliXonProtein/OmegaFold"&gt;OmegaFold&lt;/a&gt; and &lt;a href="https://github.com/aqlaboratory/openfold"&gt;OpenFold&lt;/a&gt;. And you can customize and extend the frontend, like offering users options for which software to use for the protein structure prediction jobs.&lt;/p&gt; 
-&lt;p&gt;If you’re an IT admin, you might want to add a user-management mechanism with Amazon Cognito or a cost capping mechanism using AWS Budgets. AWS allows you to combine these services and build an HPC environment in the form of a solution. We hope you will bring your own ideas to improve this implementation to build an even better research environment.&lt;/p&gt; 
-&lt;p&gt;For more background on the protein folding topic generally, check out some of our other posts, including “&lt;a href="https://aws.amazon.com/jp/blogs/industries/predicting-protein-structures-at-scale-using-aws-batch/"&gt;Predicting protein structures at scale using AWS Batch (architecture for running RoseTTAFold on AWS Batch)&lt;/a&gt;” and the one about &lt;a href="https://aws.amazon.com/jp/blogs/hpc/optimize-protein-folding-costs-with-openfold-on-aws-batch/"&gt;optimizing protein folding costs with OpenFold on AWS Batch (benchmark results)&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3&gt;Acknowledgements&lt;/h3&gt; 
-&lt;p&gt;Special thanks go to the following members at AWS Japan for their contributions in building the sample application presented in this post: &lt;em&gt;Judge Saki Ito (Solutions Architect), Tomochika Kato (Solutions Architect), Fuminori Abe (Solutions Architect), Hitoshi Anji (Manager, Solutions Architect), Hokuto Akimoto (Account Manager), Takehiro Suzuki (Prototyping Engineer), and Hiroshi Kobayashi (HPC Specialist Solutions Architect).&lt;/em&gt;&lt;/p&gt;</content:encoded>
 					
 		
 		
