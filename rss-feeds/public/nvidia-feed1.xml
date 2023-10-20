@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 19 Oct 2023 19:01:07 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 20 Oct 2023 16:28:17 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,124 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.1</generator>
 	<item>
+		<title>For the World to See: Nonprofit Deploys GPU-Powered Simulators to Train Providers in Sight-Saving Surgery</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/20/helpmesee-nonprofit-training-simulator-for-cataract-surgery/</link>
+		
+		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
+		<pubDate>Fri, 20 Oct 2023 13:00:50 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Education]]></category>
+		<category><![CDATA[Embedded Computing]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<category><![CDATA[Virtual Reality]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67485</guid>
+
+					<description><![CDATA[GPU-powered surgical-simulation devices are helping train more than 2,000 doctors a year in lower-income countries to treat cataract blindness, the world’s leading cause of blindness, thanks to the nonprofit HelpMeSee. While cataract surgery has a success rate of around 99%, many patients in low- and middle-income countries lack access to the common procedure due to <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/20/helpmesee-nonprofit-training-simulator-for-cataract-surgery/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>GPU-powered surgical-simulation devices are helping train more than 2,000 doctors a year in lower-income countries to treat cataract blindness, the world’s <a href="https://academic.oup.com/inthealth/article/14/Supplement_1/i68/6563812" target="_blank" rel="noopener">leading cause of blindness</a>, thanks to the nonprofit HelpMeSee.</p>
+<p>While cataract surgery has a success rate of <a href="https://okko.com.au/what-is-the-cataract-surgery-success-rate/#:~:text=The%20success%20rate%20for%20cataract,Sloan%2C%20F.%2C%202021." target="_blank" rel="noopener">around 99%</a>, many patients in low- and middle-income countries lack access to the common procedure due to a severe shortage of ophthalmologists. An estimated 90% of the <a href="https://academic.oup.com/inthealth/article/14/Supplement_1/i68/6563812" target="_blank" rel="noopener">100 million people</a> affected by cataract-related visual impairment or blindness are in these locations.</p>
+<p>By training more healthcare providers — including those without a specialty in ophthalmology — to treat cataracts, <a href="https://helpmesee.org/" target="_blank" rel="noopener">HelpMeSee</a> improves the quality of life for patients such as a mother of two young children in Bhiwandi, near Mumbai, India, who was blinded by cataracts in both eyes.</p>
+<p>“After the surgery, her vision improved dramatically and she was able to take up a job, changing the course of her entire family,” said Dr. Chetan Ahiwalay, chief instructor and subject-matter expert for HelpMeSee in India. “She and her husband are now happily raising their kids and leading a healthy life. These are the things that keep us going as doctors.”</p>
+<p>HelpMeSee’s simulator devices use <a href="https://www.nvidia.com/en-us/design-visualization/rtx/">NVIDIA RTX GPUs</a> to render high-quality visuals, providing a more realistic training environment for doctors to hone their surgical skills. To further improve the trainee experience, NVIDIA experts are working with the HelpMeSee team to improve rendering performance, increase visual realism and augment the simulator with next-generation technologies such as real-time ray tracing and AI.</p>
+<h2><b>Tackling Treatable Blindness With Accessible Training</b></h2>
+<p>High-income countries have <a href="https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-022-14491-0" target="_blank" rel="noopener">18x more ophthalmologists</a> per million residents than low-income countries. That coverage gap, which is far wider still in certain countries, makes it harder for those in thinly resourced areas to receive treatment for avoidable blindness.</p>
+<p>HelpMeSee’s devices can train doctors on multiple eye procedures using immersive tools inspired by flight simulators used in aviation. The team trains doctors in countries including India, China, Madagascar, Mexico and the U.S., and rolls out multilingual training each year for new procedures.</p>
+<p>The eye surgery simulator offers realistic 3D visuals, haptic feedback, performance scores and the opportunity to attempt a step of the procedure multiple times until the trainee achieves proficiency. Qualified instructors like Dr. Ahiwalay travel to rural and urban areas to deliver the training through structured courses — and help surgeons transition from the simulators to live surgeries.</p>
+<figure id="attachment_67489" aria-describedby="caption-attachment-67489" style="width: 533px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-scaled.jpeg"><img decoding="async" fetchpriority="high" class="size-large wp-image-67489" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-533x500.jpeg" alt="Doctors training to perform cataract surgery" width="533" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-533x500.jpeg 533w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-400x375.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-768x720.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-1536x1441.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-480x450.jpeg 480w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-229x215.jpeg 229w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-107x100.jpeg 107w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-1280x1201.jpeg 1280w" sizes="(max-width: 533px) 100vw, 533px" /></a><figcaption id="caption-attachment-67489" class="wp-caption-text">During a training session, doctors learn to perform manual small-incision cataract surgery.</figcaption></figure>
+<p>“We’re lowering the barrier for healthcare practitioners to learn these specific skills that can have a profound impact on patients,” said Dr. Bonnie An Henderson, CEO of HelpMeSee, which is based in New York. “Simulation-based training will improve surgical skills while keeping patients safe.”</p>
+<h2><b>Looking Ahead to AI, Advanced Rendering </b></h2>
+<p>HelpMeSee works with <a href="https://surgicalscience.com/" target="_blank" rel="noopener">Surgical Science</a>, a supplier of medical virtual-reality simulators, based in Gothenburg, Sweden, to develop the 3D models and real-time rendering for its devices. Other collaborators — Strasbourg, France-based <a href="https://www.insimo.com/" target="_blank" rel="noopener">InSimo</a> and Pune, India-based <a href="https://services.harman.com/" target="_blank" rel="noopener">Harman Connected Services</a> — develop the physics-based simulations and user interface, respectively.  <a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus.png"><img decoding="async" class="alignright wp-image-67492" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-400x400.png" alt="" width="250" height="250" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus.png 1024w" sizes="(max-width: 250px) 100vw, 250px" /></a></p>
+<p>“Since there are many crucial visual cues during eye surgery, the simulation requires high fidelity,” said Sebastian Ullrich, senior manager of software development at Surgical Science, who has worked with HelpMeSee for years. “To render a realistic 3D representation of the human eye, we use custom shader materials with high-resolution textures to represent various anatomical components, mimic optical properties such as refraction, use order-independent transparency sorting and employ volume rendering.”</p>
+<p>NVIDIA RTX GPUs support 3D volume rendering, stereoscopic rendering and depth sorting algorithms that provide a realistic visual experience for HelpMeSee’s trainees. Working with NVIDIA, the team is investigating AI models that could provide trainees with a real-time analysis of the practice procedure and offer recommendations for improvement.</p>
+<p>Watch a demo of HelpMeSee’s <a href="https://www.youtube.com/watch?v=Y2vHBo5jpD8" target="_blank" rel="noopener">cataract surgery training simulation</a>.</p>
+<p><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>Subscribe to NVIDIA healthcare news</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/Dr.-Samuel-Kwizera.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/Dr.-Samuel-Kwizera-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[For the World to See: Nonprofit Deploys GPU-Powered Simulators to Train Providers in Sight-Saving Surgery]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Eureka! NVIDIA Research Breakthrough Puts New Spin on Robot Learning</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/20/eureka-robotics-research/</link>
+		
+		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
+		<pubDate>Fri, 20 Oct 2023 13:00:24 +0000</pubDate>
+				<category><![CDATA[Autonomous Machines]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Isaac]]></category>
+		<category><![CDATA[NVIDIA Research]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67624</guid>
+
+					<description><![CDATA[A new AI agent developed by NVIDIA Research that can teach robots complex skills has trained a robotic hand to perform rapid pen-spinning tricks — for the first time as well as a human can. The stunning prestidigitation, showcased in the video above, is one of nearly 30 tasks that robots have learned to expertly <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/20/eureka-robotics-research/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>A new AI agent developed by <a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener">NVIDIA Research</a> that can teach robots complex skills has trained a robotic hand to perform rapid pen-spinning tricks — for the first time as well as a human can.</p>
+<p>The stunning prestidigitation, showcased in the video above, is one of nearly 30 tasks that robots have learned to expertly accomplish thanks to Eureka, which autonomously writes reward algorithms to train bots.</p>
+<p>Eureka has also taught robots to open drawers and cabinets, toss and catch balls, and manipulate scissors, among other tasks.</p>
+<p>The Eureka research, <a href="https://eureka-research.github.io/" target="_blank" rel="noopener">published today</a>, includes a paper and the project’s AI algorithms, which developers can experiment with using <a href="https://developer.nvidia.com/isaac-gym" target="_blank" rel="noopener">NVIDIA Isaac Gym</a>, a physics simulation reference application for <a href="https://blogs.nvidia.com/blog/2018/08/02/supervised-unsupervised-learning/" target="_blank" rel="noopener">reinforcement learning</a> research. Isaac Gym is built on <a href="https://developer.nvidia.com/omniverse" target="_blank" rel="noopener">NVIDIA Omniverse</a>, a development platform for building 3D tools and applications based on the OpenUSD framework. Eureka itself is powered by the GPT-4 <a href="https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/" target="_blank" rel="noopener">large language model</a>.</p>
+<p>“Reinforcement learning has enabled impressive wins over the last decade, yet many challenges still exist, such as reward design, which remains a trial-and-error process,” said Anima Anandkumar, senior director of AI research at NVIDIA and an author of the Eureka paper. “Eureka is a first step toward developing new algorithms that integrate generative and reinforcement learning methods to solve hard tasks.”</p>
+<p><iframe title="Eureka! Extreme Robot Dexterity with LLMs | NVIDIA Research Paper" width="500" height="281" src="https://www.youtube.com/embed/sDFAWnrCqKc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>AI Trains Robots</b></h2>
+<p>Eureka-generated reward programs — which enable trial-and-error learning for robots — outperform expert human-written ones on more than 80% of tasks, according to the paper. This leads to an average performance improvement of more than 50% for the bots.</p>
+<div style="width: 1920px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-67624-1" width="1920" height="1080" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/franka_cabinet.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/franka_cabinet.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/10/franka_cabinet.mp4</a></video></div>
+<p><i>Robot arm taught by Eureka to open a drawer.</i></p>
+<p>The AI agent taps the GPT-4 LLM and <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/" target="_blank" rel="noopener">generative AI</a> to write software code that rewards robots for reinforcement learning. It doesn’t require task-specific prompting or predefined reward templates — and readily incorporates human feedback to modify its rewards for results more accurately aligned with a developer’s vision.</p>
+<p>Using GPU-accelerated simulation in Isaac Gym, Eureka can quickly evaluate the quality of large batches of reward candidates for more efficient training.</p>
+<p>Eureka then constructs a summary of the key stats from the training results and instructs the LLM to improve its generation of reward functions. In this way, the AI is self-improving. It’s taught all kinds of robots — quadruped, bipedal, quadrotor, dexterous hands, cobot arms and others — to accomplish all kinds of tasks.</p>
+<p>The research paper provides in-depth evaluations of 20 Eureka-trained tasks, based on open-source dexterity benchmarks that require robotic hands to demonstrate a wide range of complex manipulation skills.</p>
+<p>The results from nine Isaac Gym environments are showcased in visualizations generated using NVIDIA Omniverse.</p>
+<div style="width: 1920px;" class="wp-video"><video class="wp-video-shortcode" id="video-67624-2" width="1920" height="1080" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/humanoid.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/humanoid.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/10/humanoid.mp4</a></video></div>
+<p><i>Humanoid robot learns a running gait via Eureka.</i></p>
+<p>“Eureka is a unique combination of large language models and NVIDIA GPU-accelerated simulation technologies,” said Linxi “Jim” Fan, senior research scientist at NVIDIA, who’s one of the project’s contributors. “We believe that Eureka will enable dexterous robot control and provide a new way to produce physically realistic animations for artists.”</p>
+<p>It’s breakthrough work bound to get developers’ minds spinning with possibilities, adding to recent NVIDIA Research advancements like <a href="https://blogs.nvidia.com/blog/2023/10/04/ai-jim-fan/" target="_blank" rel="noopener">Voyager</a>, an AI agent built with GPT-4 that can autonomously play <i>Minecraft</i>.</p>
+<p>NVIDIA Research comprises hundreds of scientists and engineers worldwide, with teams focused on topics including AI, computer graphics, computer vision, self-driving cars and robotics.</p>
+<p><i>Learn more about </i><a href="https://eureka-research.github.io/" target="_blank" rel="noopener"><i>Eureka</i></a><i> and </i><a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener"><i>NVIDIA Research</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/10/franka_cabinet.mp4" length="275129" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/10/humanoid.mp4" length="2901442" type="video/mp4" />
+
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/eureka-featured-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/eureka-featured-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Eureka! NVIDIA Research Breakthrough Puts New Spin on Robot Learning]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Next-Level Computing: NVIDIA and AMD Deliver Powerful Workstations to Accelerate AI, Rendering and Simulation</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/19/ai-workstations/</link>
 		
@@ -92,13 +210,13 @@
 <p>The University at Albany, in upstate New York, recently launched its <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.albany.edu%2Fai-plus&amp;data=05%7C01%7Cacourtney%40nvidia.com%7Ca0e8ba71696546347ee408dbd00ebf82%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638332534011886277%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=TTPp%2BLF%2B%2FopKSMJB76gzSDH%2FUYQhSIptBj4WUTYnPEo%3D&amp;reserved=0">AI Plus initiative</a>, which is integrating teaching and learning about AI across the university’s research and academic enterprise, in fields such as cybersecurity, weather prediction, health data analytics, drug discovery and next-generation semiconductor design. It will also foster collaborations across the humanities, social sciences, public policy and public health. The university is using DGX Cloud AI supercomputing instances on OCI as it builds out an on-premises supercomputer.</p>
 <p>“We’re accelerating our mission to infuse AI into virtually every academic and research disciplines,” said Thenkurussi (Kesh) Kesavadas, vice president for research and economic development at UAlbany. “We will drive advances in healthcare, security and economic competitiveness, while equipping students for roles in the evolving job market.”</p>
 <p>NVIDIA AI Enterprise brings the software layer of the NVIDIA AI platform to OCI. It includes <a href="https://developer.nvidia.com/nemo">NVIDIA NeMo</a> frameworks for building LLMs, <a href="https://www.nvidia.com/en-us/deep-learning-ai/software/rapids/">NVIDIA RAPIDS</a> for data science and <a href="https://developer.nvidia.com/tensorrt-llm-early-access">NVIDIA TensorRT-LLM</a> and <a href="https://developer.nvidia.com/triton-inference-server">NVIDIA Triton Inference Server</a> for supercharging production AI. NVIDIA software for cybersecurity, computer vision, speech AI and more is also included. Enterprise-grade support, security and stability ensure a smooth transition of AI projects from pilot to production.</p>
-<figure id="attachment_65649" aria-describedby="caption-attachment-65649" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual.jpg"><img decoding="async" fetchpriority="high" class="wp-image-65649 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-672x357.jpg" alt="NVIDIA DGX Cloud generative AI training" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-65649" class="wp-caption-text">NVIDIA DGX Cloud provides enterprises immediate access to AI supercomputing platform and software hosted by their preferred cloud provider.</figcaption></figure>
+<figure id="attachment_65649" aria-describedby="caption-attachment-65649" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual.jpg"><img decoding="async" loading="lazy" class="wp-image-65649 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-672x357.jpg" alt="NVIDIA DGX Cloud generative AI training" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/07/dgx-cloud-key-visual.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-65649" class="wp-caption-text">NVIDIA DGX Cloud provides enterprises immediate access to AI supercomputing platform and software hosted by their preferred cloud provider.</figcaption></figure>
 <h2><b>AI Supercomputing Platform Hosted by OCI</b></h2>
 <p>NVIDIA DGX Cloud provides enterprises immediate access to an AI supercomputing platform and software.</p>
 <p>Hosted by OCI, DGX Cloud provides enterprises with access to multi-node training on NVIDIA GPUs, paired with NVIDIA AI software, for training advanced models for generative AI and other groundbreaking applications.</p>
 <p>Each DGX Cloud instance consists of eight <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a> interconnected with network fabric, purpose-built for multi-node training. This high-performance computing architecture also includes industry-leading AI development software and offers direct access to NVIDIA AI expertise so businesses can train LLMs faster.</p>
 <p>OCI customers access DGX Cloud using <a href="https://www.nvidia.com/en-us/data-center/base-command-platform/">NVIDIA Base Command Platform</a>, which gives developers access to an AI supercomputer through a web browser. By providing a single-pane view of the customer’s AI infrastructure, Base Command Platform simplifies the management of multinode clusters.</p>
-<figure id="attachment_61238" aria-describedby="caption-attachment-61238" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0.jpg"><img decoding="async" class="size-large wp-image-61238" src="https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-672x336.jpg" alt="NVIDIA AI Enterprise software" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-61238" class="wp-caption-text">NVIDIA AI Enterprise software powers secure, stable and supported production AI and data science.</figcaption></figure>
+<figure id="attachment_61238" aria-describedby="caption-attachment-61238" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-61238" src="https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-672x336.jpg" alt="NVIDIA AI Enterprise software" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2022/12/nvaie-promo-3-0.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-61238" class="wp-caption-text">NVIDIA AI Enterprise software powers secure, stable and supported production AI and data science.</figcaption></figure>
 <h2><b>Software for Secure, Stable and Supported Production AI</b></h2>
 <p>NVIDIA AI Enterprise enables rapid development and deployment of AI and data science.</p>
 <p>With NVIDIA AI Enterprise on Oracle Cloud Marketplace, enterprises can efficiently build an application once and deploy it on OCI and their on-prem infrastructure, making a multi- or hybrid-cloud strategy cost-effective and easy to adopt. Since NVIDIA AI Enterprise is also included in NVIDIA DGX Cloud, customers can streamline the transition from training on DGX Cloud to deploying their AI application into production with NVIDIA AI Enterprise on OCI, since the AI software runtime is consistent across the environments.</p>
@@ -139,7 +257,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Rush to the cloud — stream <i>Counter-Strike 2 </i>on <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> for the highest frame rates. Members can play through the newest chapter of Valve’s elite, competitive, first-person shooter from the cloud.</p>
 <p>It’s all part of an action-packed GFN Thursday, with 22 more games joining the cloud gaming platform’s library, including <i>Hot Wheels Unleashed 2 &#8211; Turbocharged</i>.</p>
 <h2><b>“Rush B! Rush B!”</b></h2>
-<p><iframe title="Counter-Strike 2: Responsive Smokes" width="500" height="281" src="https://www.youtube.com/embed/_y9MpNcAitQ?start=1&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Counter-Strike 2: Responsive Smokes" width="500" height="281" src="https://www.youtube.com/embed/_y9MpNcAitQ?start=1&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>&nbsp;</p>
 <p><i>Counter-Strike 2 </i>is the long-awaited upgrade to one of the most recognizable competitive first-person shooters in the world.</p>
 <p>Building on the legacy of <i>Counter-Strike: Global Offensive</i>, the latest iteration brings the action to Valve’s long-anticipated Source 2 video game engine, promising enhanced graphical fidelity with a physically based rendering system for more realistic textures and materials, dynamic lighting, reflections and more.</p>
@@ -360,14 +478,14 @@
 <p>Berlin-based Armin Halač works as a principal animator at <a href="https://www.wooga.com/" target="_blank" rel="noopener">Wooga</a>, a mobile games development studio known for projects like <a href="https://play.google.com/store/apps/details?id=net.wooga.junes_journey_hidden_object_mystery_game&amp;hl=en&amp;gl=US" target="_blank" rel="noopener"><i>June’s Journey</i></a> and <a href="https://play.google.com/store/apps/details?id=com.netflix.NGP.GhostDetective&amp;hl=en_US" target="_blank" rel="noopener"><i>Ghost Detective</i></a>. The nature of his job means Halač is no stranger to 3D workflows — he gets hands-on with animation and character rigging.</p>
 <p>For texturing and producing high-quality renders, Marmoset is Halač’s go-to tool, providing a user-friendly interface and powerful features to simplify his workflow. Recently, Halač used Marmoset to create the captivating cover image for his book, <a href="https://www.routledge.com/A-Complete-Guide-to-Character-Rigging-for-Games-Using-Blender/Halac/p/book/9781032203003" target="_blank" rel="noopener"><i>A Complete Guide to Character Rigging for Games Using Blender</i></a><i>.</i></p>
 <p>Using the added support for USD, Halač can seamlessly send 3D assets from Blender to Marmoset, creating new possibilities for collaboration and improved visuals.</p>
-<p style="text-align: center"><img decoding="async" loading="lazy" class="wp-image-67521 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1.png" alt="" width="933" height="525" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-1280x720.png 1280w" sizes="(max-width: 933px) 100vw, 933px" /><i>The cover image of Halač’s book.</i></p>
+<p style="text-align: center;"><img decoding="async" loading="lazy" class="wp-image-67521 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1.png" alt="" width="933" height="525" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/cover_image_4k-1-1280x720.png 1280w" sizes="(max-width: 933px) 100vw, 933px" /><i>The cover image of Halač’s book.</i></p>
 <p>Nkoro Anselem Ire, a.k.a <a href="https://www.youtube.com/@askNK/videos" target="_blank" rel="noopener">askNK</a>, is a popular YouTube creator as well as a media and visual arts professor at a couple of universities who is also seeing workflow benefits from increased USD support.</p>
 <p>As a 3D content creator, he uses Marmoset Toolbag for the majority of his <a href="https://www.adobe.com/products/substance3d/discover/pbr.html#:~:text=Physically%20based%20rendering%20(PBR)%2C,light%20interacts%20with%20material%20properties." target="_blank" rel="noopener">PBR</a> workflow — from texture baking and lighting to animation and rendering. Now, with USD, askNK is enjoying newfound levels of creative flexibility as the framework allows him to “collaborate with individuals or team members a lot easier because they can now pick up and drop off processes while working on the same file.”</p>
 <p><iframe loading="lazy" title="Mamoverse - Into the Omniverse with Marmoset Toolbag!" width="500" height="281" src="https://www.youtube.com/embed/xLKyE6wXHcs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Halač and askNK recently joined an <a href="https://www.youtube.com/live/8UsOTa8rTgg?si=yUI8kUSWxROufxsf" target="_blank" rel="noopener">NVIDIA-hosted livestream</a> where community members and the Omniverse team explored the benefits of a Marmoset- and Omniverse-boosted workflow.</p>
 <p><iframe loading="lazy" title="Learning Marmoset Toolbag for Enhanced 3D Workflows" width="500" height="281" src="https://www.youtube.com/embed/8UsOTa8rTgg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Daniel Bauer is another creator experiencing the benefits of Marmoset, OpenUSD and Omniverse. A <a href="https://www.solidworks.com/" target="_blank" rel="noopener">SolidWorks</a> mechanical engineer with over 10 years of experience, Bauer works frequently in CAD software environments, where it’s typical to assign different materials to various scene components. The variance can often lead to shading errors and incorrect geometry representation, but using USD, Bauer can avoid errors by easily importing versions of his scene from Blender to Marmoset Toolbag to <a href="https://www.nvidia.com/en-us/omniverse/apps/usd-composer/" target="_blank" rel="noopener">Omniverse USD Composer</a>.</p>
-<p style="text-align: center"><img decoding="async" loading="lazy" class="size-full wp-image-67524 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GRIPPER_-1.gif" alt="" width="600" height="382" /><i>A Kuka Scara robot simulation with 10 parallel small grippers for sorting and handling pens.</i></p>
+<p><a href="https://www.linkedin.com/in/metalbyte/" target="_blank" rel="noopener">Daniel Bauer</a> is another creator experiencing the benefits of Marmoset, OpenUSD and Omniverse. A <a href="https://www.solidworks.com/" target="_blank" rel="noopener">SolidWorks</a> mechanical engineer with over 10 years of experience, Bauer works frequently in CAD software environments, where it’s typical to assign different materials to various scene components. The variance can often lead to shading errors and incorrect geometry representation, but using USD, Bauer can avoid errors by easily importing versions of his scene from Blender to Marmoset Toolbag to <a href="https://www.nvidia.com/en-us/omniverse/apps/usd-composer/" target="_blank" rel="noopener">Omniverse USD Composer</a>.</p>
+<p style="text-align: center;"><img decoding="async" loading="lazy" class="size-full wp-image-67524 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GRIPPER_-1.gif" alt="" width="600" height="382" /><i>A Kuka Scara robot simulation with 10 parallel small grippers for sorting and handling pens.</i></p>
 <p>Additionally, 3D artists <a href="https://blogs.nvidia.com/blog/2023/04/19/studio-omniverse-usd-composer-animation/" target="_blank" rel="noopener">Gianluca Squillace and Pasquale Scionti</a> are harnessing the collaborative power of Omniverse, Marmoset and OpenUSD to transform their workflows from a convoluted series of exports and imports to a streamlined, real-time, interconnected process.</p>
 <p>Squillace crafted a captivating 3D character with Pixologic ZBrush, Autodesk Maya, Adobe Substance 3D Painter and Marmoset Toolbag — aggregating the data from the various tools in Omniverse. With USD, he seamlessly integrated his animations and made real-time adjustments without the need for constant file exports.</p>
 <p>Simultaneously, Scionti constructed a stunning glacial environment using Autodesk 3ds Max, Adobe Substance 3D Painter, Quixel and Unreal Engine, uniting the various pieces from his tools in Omniverse. His work showcased the potential of Omniverse to foster real-time collaboration as he was able to seamlessly integrate Squillace’s character into his snowy world.</p>
@@ -643,8 +761,7 @@
 <p>SHoP Architects’ projects have grown in scale, location and diversity, and Fan and her team are constantly learning and adapting from each project, drawing inspiration from diverse areas such as automotive, aviation, film and gaming.</p>
 <p>Fan views RTX-powered tools as a means of opening up diverse approaches and solutions to be more widely adopted within the industry. And as an NVIDIA RTX Ambassador, she aims to push past technological boundaries by connecting with like-minded designers and creatives.</p>
 <p>See more of Fan’s work below. Discover how <a href="https://www.nvidia.com/en-us/design-visualization/rtx/">NVIDIA RTX</a> can help enhance architectural workflows and learn more about the <a href="https://www.nvidia.com/en-us/design-visualization/community/rtx-ambassador/">NVIDIA RTX Ambassador Program</a>.</p>
-<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-67432-1" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-67432-3" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4?_=3" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4</a></video></div>
 </div>]]></content:encoded>
 					
 		
@@ -1098,232 +1215,6 @@
 			/>
 			<media:title type="html"><![CDATA[Brains of the Operation: Atlas Meditech Maps Future of Surgery With AI, Digital Twins]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Fall in Line for October With Nearly 60 New Games, Including Latest Game Pass Titles to Join the Cloud</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/05/geforce-now-thursday-oct-5/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 05 Oct 2023 13:00:25 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67333</guid>
-
-					<description><![CDATA[October brings more than falling leaves and pumpkin spice lattes for GeForce NOW members. Get ready for nearly 60 new games to stream, including Forza Motorsport and 16 more PC Game Pass titles. Assassin’s Creed Mirage leads 29 new games to hit the GeForce NOW library this week. In addition, catch a challenge to earn <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/05/geforce-now-thursday-oct-5/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>October brings more than falling leaves and pumpkin spice lattes for <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> members. Get ready for nearly 60 new games to stream, including <i>Forza Motorsport </i>and 16 more PC Game Pass titles.</p>
-<p><i>Assassin’s Creed Mirage</i> leads 29 new games to hit the GeForce NOW library this week. In addition, catch a challenge to earn in-game rewards for <i>World of Warship </i>players.</p>
-<h2><b>Leap Into the Cloud</b></h2>
-<figure id="attachment_67341" aria-describedby="caption-attachment-67341" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67341" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-672x336.jpg" alt="Assassin's Creed Mirage on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Assassins_Creed_Mirage.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67341" class="wp-caption-text"><em>Nothing is true. Everything is permitted … in the cloud.</em></figcaption></figure>
-<p>It’s not an illusion — Ubisoft’s <i>Assassin’s Creed Mirage </i>launches in the cloud this week. <i>Mirage</i> was created as an homage to the first <i>Assassin’s Creed </i>games and pays tribute to the series’ well-loved roots.</p>
-<p>Join the powerful proto-Assassin order — the Hidden Ones — as a 17-year-old street thief named Basim Ibn Is’haq as he learns to become a master assassin. Stalk the streets of a bustling and historically accurate ninth-century Baghdad — the perfect urban setting to seamlessly parkour across rooftops, scale tall towers and flee guards while uncovering a conspiracy that threatens the city and Basim’s future destiny.</p>
-<p>Take a Leap of Faith into a GeForce NOW Ultimate membership and explore this new open world at up to 4K resolution and 120 frames per second. Ultimate members get exclusive access to GeForce RTX 4080 servers in the cloud, making it the easiest upgrade around.</p>
-<h2><b>No Tricks, Only Treats</b></h2>
-<p>Don’t be spooked — GeForce NOW has plenty of treats for members this month. More PC Game Pass games are coming soon to the cloud, including <i>Forza Motorsport</i> from Turn 10 Studios and Xbox Game Studios and the <i>Dishonored </i>series from Arkane and Bethesda.</p>
-<p>Catch some action (with a little stealth, magic and combat mixed in) with the <i>Dishonored</i> franchise. Dive into a struggle of power and revenge that revolves around the assassination of the Empress of the Isles. Members can follow the whole story starting with the original <i>Dishonored</i> game, up through the latest entry, <i>Dishonored: Death of an Outsider</i>, when the series launches in the cloud this month.</p>
-<p>Jump into all the action with an <a href="http://geforcenow.com/membership">Ultimate or Priority</a> account today, for higher performance and faster access to stream over 1,700 games.</p>
-<p>Check out the spooktacular list for October:</p>
-<ul>
-<li><i>Star Trek: Infinite </i>(New release on <a href="https://store.steampowered.com/app/1622900?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 12)</li>
-<li><i>Lords of the Fallen </i>(New release on <a href="https://store.steampowered.com/app/1501750?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.epicgames.com/store/p/lords-of-the-fallen-2-46fdd6?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, Oct. 13)</li>
-<li><i>Wizard with a Gun </i>(New release on <a href="https://store.steampowered.com/app/1150530?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 17)</li>
-<li><i>Alaskan Road Truckers </i>(New release <a href="https://store.steampowered.com/app/849100?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://store.epicgames.com/en-US/p/alaskan-road-truckers-d31463">Epic Games Store</a>, Oct. 18)</li>
-<li><i>Hellboy: Web of Wyrd </i>(New release on <a href="https://store.steampowered.com/app/2160480?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 18)</li>
-<li><i>HOT WHEELS UNLEASHED 2 &#8211; Turbocharged </i>(New release on <a href="https://store.steampowered.com/app/2051120?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 19)</li>
-<li><i>Laika Aged Through Blood </i>(New release on <a href="https://store.steampowered.com/app/1796220?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 19)</li>
-<li><i>Cities: Skylines II </i>(New release on <a href="https://store.steampowered.com/app/949230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/cities-skylines-ii/9ndntv0l9n87?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass, Oct. 24)</li>
-<li><i>Ripout </i>(New release on <a href="https://store.steampowered.com/app/1558830?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct 24)</li>
-<li><i>War Hospital </i>(New release on <a href="https://store.steampowered.com/app/1553000?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 26)</li>
-<li><i>Alan Wake 2 </i>(New release on <a href="https://store.epicgames.com/en-US/p/alan-wake-2">Epic Games Store</a>, Oct. 26)</li>
-<li><i>Headbangers: Rhythm Royale </i>(New release on <a href="https://store.steampowered.com/app/1761620?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/headbangers-rhythm-royale/9ngrwj03gr1n?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass, Oct. 31)</li>
-<li><i>Jusant </i>(New release on <a href="https://store.steampowered.com/app/1977170?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/jusant/9PJB1ZRJDCBQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass, Oct. 31)</li>
-<li><i>Bad North </i>(<a href="https://www.xbox.com/games/store/bad-north-jotunn-edition/9N4T8VCMQVDT?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Daymare 1994: Sandcastle </i>(<a href="https://store.steampowered.com/app/1530470?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>For The King </i>(<a href="https://www.xbox.com/games/store/for-the-king/9NS1CD1V4BKW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Forza Motorsport </i>(<a href="https://store.steampowered.com/app/2440510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/forza-motorsport-standard-edition/9PLKVSWR299F?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
-<li><i>Heretic’s Fork</i> (<a href="https://store.steampowered.com/app/2181610?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Moonbreaker </i>(<a href="https://store.steampowered.com/app/845890?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Metro Simulator 2 </i>(<a href="https://store.steampowered.com/app/1787480?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Narita Boy </i>(<a href="https://www.xbox.com/games/store/narita-boy/9NT3FGQC1DFR?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Sifu </i>(<a href="https://www.xbox.com/games/store/sifu/9P7PF6ZP3958?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>StalCraft </i>(<a href="https://store.steampowered.com/app/1818450?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Star Renegades</i> (<a href="https://www.xbox.com/games/store/star-renegades/9PK5S1QKV10D?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Streets of Rogue</i> (<a href="https://www.xbox.com/games/store/streets-of-rogue/9NKRBSZXQ2HM?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Supraland </i>(<a href="https://www.xbox.com/games/store/supraland/9P75CZFXMS7N?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>The Surge </i>(<a href="https://www.xbox.com/games/store/the-surge-windows-10-version/9NKLXF5DLBKT?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Tiny Football </i>(<a href="https://store.steampowered.com/app/1887010?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Vampire Survivors </i>(<a href="https://store.steampowered.com/app/1794680?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/vampire-survivors/9PD5BM2Z8C4L?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>VEILED EXPERTS </i>(<a href="https://store.steampowered.com/app/1934780?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Yes, Your Grace</i> (<a href="https://www.xbox.com/games/store/yes-your-grace/9NX14Q0QZD1T?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-</ul>
-<h2><b>Come Sail Away</b></h2>
-<figure id="attachment_67338" aria-describedby="caption-attachment-67338" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67338" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-672x336.jpg" alt="" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-World_of_Warships_GFN_Event.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67338" class="wp-caption-text"><em>A new challenge awaits on the open sea.</em></figcaption></figure>
-<p><i>World of Warships</i> is launching a new in-game event this week exclusive to GeForce NOW members. From Oct. 5-9, those streaming the game on GeForce NOW will be prompted to complete a special in-game challenge chain, only available from the cloud, to earn economic reward containers and one-day GeForce NOW Priority trials. Aspiring admirals can learn more about these challenges on the <i>World of Warships</i> <a href="https://worldofwarships.com/en/news/sales-and-events/geforce-now-event-2023/">blog</a> and <a href="https://twitter.com/WorldofWarships?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">social channels</a>.</p>
-<p>Those new to <i>World of Warships </i>can activate the invite code “GEFORCENOW” in the game starting today to claim exclusive rewards, including a seven-day Premium <i>World of Warships</i> account, 300 doubloons, credits and economic boosters. Once 15 battles are completed, players can choose one of the following tech tree ships to speed up game progress: Japanese destroyer Isokaze, American cruiser Phoenix, German battleship Moltke or British aircraft carrier Hermes.</p>
-<figure id="attachment_67335" aria-describedby="caption-attachment-67335" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="wp-image-67335 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-672x336.jpg" alt="Age Of Empires II on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Age_of_Empires_II.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67335" class="wp-caption-text"><em>Conquer the cloud.</em></figcaption></figure>
-<p>The leaves may be falling, but new games are always coming to the cloud. Dive into the action now with 29 new games this week:</p>
-<ul>
-<li><i>Battle Shapers </i>(New release on <a href="https://store.steampowered.com/app/1421290?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 3)</li>
-<li><i>Disgaea 7: Vows of the Virtueless </i>(New release on <a href="https://store.steampowered.com/app/2250600?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 3)</li>
-<li><i>Station to Station</i> (New release on <a href="https://store.steampowered.com/app/2272400?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 3)</li>
-<li><i>The Lamplighter’s League </i>(New release on <a href="https://store.steampowered.com/app/1167750?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/the-lamplighters-league-pc-edition/9PG4M7W805RB?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass, Oct. 3)</li>
-<li><i>Thief Simulator 2 </i>(New release on <a href="https://store.steampowered.com/app/1332720?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 4)</li>
-<li><i>Heads Will Roll: Reforged </i>(New release on <a href="https://store.steampowered.com/app/687800?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 4)</li>
-<li><i>Assassin’s Creed Mirage </i>(New release on <a href="https://store.ubi.com/62ea4f8e09372571f2736a71.html#ucid=AFL-ID_152062&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;addinfo=">Ubisoft</a>, Oct. 5)</li>
-<li><i>Age of Empires II: Definitive Edition </i>(<a href="https://www.xbox.com/games/store/age-of-empires-ii-definitive-edition/9n2z748spmtm?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Arcade Paradise </i>(<a href="https://www.xbox.com/games/store/arcade-paradise/9N2FQCGWH32D?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>The Ascent </i>(<a href="https://www.xbox.com/games/store/the-ascent/C27QL5JBKQ8M?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Citizen Sleeper </i>(<a href="https://www.xbox.com/games/store/citizen-sleeper/9N6F97F9WGL0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Dicey Dungeons </i>(<a href="https://www.xbox.com/games/store/dicey-dungeons/9PC4C9NLP3ZD?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Godlike Burger</i> (<a href="https://www.epicgames.com/store/p/godlike-burger-4150a0?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Greedfall </i>(<a href="https://www.xbox.com/games/store/greedfall-gold-edition-windows-10/9PM3JCK0CXHC?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Hypnospace Outlaw </i>(<a href="https://www.xbox.com/games/store/hypnospace-outlaw/9PM3NVB3PXG0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Killer Frequency </i>(<a href="https://www.xbox.com/games/store/killer-frequency/9mtmss84nw5r?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Lonely Mountains: Downhill </i>(<a href="https://www.xbox.com/games/store/lonely-mountains-downhill/9MV6MCVLT8GR?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Metro 2033 Redux </i>(<a href="https://www.xbox.com/games/store/metro-2033-redux/9NQ387M27TMV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Metro: Last Light Redux </i>(<a href="https://www.xbox.com/games/store/metro-last-light-redux/9NM5W1TDNQZ3?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>MudRunner </i>(<a href="https://www.xbox.com/games/store/mudrunner/9N58J0GM9MRP?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Potion Craft: Alchemist Simulator </i>(<a href="https://www.xbox.com/games/store/potion-craft-alchemist-simulator/9MW7WD7J3PPK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Shadow Gambit: The Cursed Crew </i>(<a href="https://www.epicgames.com/store/p/shadow-gambit-the-cursed-crew-0bca60?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Slayers X: Terminal Aftermath: Vengance of the Slayer </i>(<a href="https://www.xbox.com/games/store/slayers-x-terminal-aftermath-vengance-of-the-slayer/9P2Q0J0GW1FJ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Soccer Story</i> (<a href="https://www.xbox.com/games/store/soccer-story/9PJ1045MHZJ0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li>SOMA (<a href="https://www.xbox.com/games/store/soma/C23M2TC1ZFPJ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Space Hulk: Tactics </i>(<a href="https://www.xbox.com/games/store/space-hulk-tactics/9PBVRHZT421P?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>SpiderHeck</i> (<a href="https://www.xbox.com/games/store/spiderheck/9N0TRF57SMQH?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>SUPERHOT: MIND CONTROL DELETE </i>(<a href="https://www.xbox.com/en-us/games/store/superhot-mind-control-delete/9nrh78b682l8">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Surviving Mars </i>(<a href="https://www.xbox.com/games/store/surviving-mars-digital-deluxe-edition/9N9C8081CZD2?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-</ul>
-<h2><b>Surprises in September</b></h2>
-<p>On top of the 24 games announced in September, an additional 45 joined the cloud last month:</p>
-<ul>
-<li><i>Void Crew</i> (New release on <a href="https://store.steampowered.com/app/1063420?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 7)</li>
-<li><i>Tavernacle!</i> (New release on <a href="https://store.steampowered.com/app/1937820?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 11)</li>
-<li><i>Gunbrella</i> (New release on <a href="https://store.steampowered.com/app/1580180?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 13)</li>
-<li><i>HumanitZ </i>(New release on <a href="https://store.steampowered.com/app/1766060?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 18)</li>
-<li><i>These Doomed Isles</i> (New release on <a href="https://store.steampowered.com/app/1840710?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 25)</li>
-<li><i>Overpass 2 </i>(New release on <a href="https://store.steampowered.com/app/1830630?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
-<li><i>911 Operator</i> (<a href="https://www.epicgames.com/store/p/911-operator-585edd?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>A Plague Tale: Requiem </i>(<a href="https://www.xbox.com/games/store/a-plague-tale-requiem---windows/9N97RC576957?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Amnesia: The Bunker </i>(<a href="https://www.xbox.com/games/store/amnesia-the-bunker/9PC15H56NGJK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Airborne Kingdom </i>(<a href="https://www.epicgames.com/store/p/airborne-kingdom?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Atomic Heart </i>(<a href="https://www.xbox.com/games/store/atomic-heart-windows/9N9KXP8RRPB5?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>BlazBlue: Cross Tag Battle </i>(<a href="https://www.xbox.com/games/store/blazblue-cross-tag-battle-special-edition/9NFWDRBZXDL9?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Bramble: The Mountain King </i>(<a href="https://www.xbox.com/games/store/bramble-the-mountain-king/9NHDFTCL691C?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Call of the Wild: The Angler </i>(<a href="https://www.xbox.com/games/store/call-of-the-wild-the-angler/9NDC5LJS839S?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Chained Echoes</i> (<a href="https://www.xbox.com/games/store/chained-echoes/9N1WWRPJ12FK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Danganronpa V3: Killing Harmony</i> (<a href="https://www.xbox.com/games/store/danganronpa-v3-killing-harmony-anniversary-edition/9PMM6V93MRKW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Descenders </i>(<a href="https://www.xbox.com/games/store/descenders/C37XBX7DCBZ0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Doom Eternal </i>(<a href="https://www.xbox.com/games/store/Doom-eternal-standard-edition-pc/9PK09BL31FK1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Dordogne </i>(<a href="https://www.xbox.com/games/store/dordogne/9pbc65kxpv5v?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Eastern Exorcist </i>(<a href="https://www.xbox.com/games/store/eastern-exorcist/9NQCJ132C6KW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Figment 2: Creed Valley </i>(<a href="https://www.xbox.com/games/store/figment-2-creed-valley/9NZWW8K1KX6S?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Hardspace: Shipbreaker </i>(<a href="https://www.xbox.com/games/store/hardspace-shipbreaker-pc-version/9MW8RMSBB5QH?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Insurgency: Sandstorm </i>(<a href="https://www.xbox.com/games/store/insurgency-sandstorm-windows/9NN46PGWPJ98?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>I Am Fish </i>(<a href="https://www.xbox.com/games/store/i-am-fish/9mxgj8jzl0lk?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Last Call BBS</i> (<a href="https://www.xbox.com/games/store/last-call-bbs/9NF0SNBQWN63?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>The Legend of Tianding</i> (<a href="https://www.xbox.com/games/store/the-legend-of-tianding/9NCBTKXHFF8K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>The Matchless Kungfu</i> (<a href="https://store.steampowered.com/app/1696440?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Mechwarrior 5: Mercenaries</i> (<a href="https://www.xbox.com/games/store/mechwarrior-5-mercenaries/9PB86W3JK8Z5?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Monster Sanctuary</i> (<a href="https://www.xbox.com/games/store/monster-sanctuary-windows-version/9PBWWQGXVMKC?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Opus Magnum</i> (<a href="https://www.xbox.com/games/store/opus-magnum/9P5QNLWDKHPF?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Pizza Possum </i>(New release on <a href="https://store.steampowered.com/app/1951230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Sept. 28)</li>
-<li><i>A Plague Tale: Innocence </i>(<a href="https://www.xbox.com/games/store/a-plague-tale-innocence-windows-10/9ND0CG3LM22K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Quake II </i>(<a href="https://store.steampowered.com/app/2320?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/quake-ii?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a> and <a href="https://www.xbox.com/games/store/quake-ii/9P7L9H478GGV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Remnant II</i> (<a href="https://www.epicgames.com/store/p/remnant-2?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Road 96 </i>(<a href="https://www.xbox.com/games/store/road-96/9NVBKDF85W8T?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Shadowrun: Hong Kong &#8211; Extended Edition </i>(<a href="https://www.xbox.com/games/store/shadowrun-hong-kong---extended-edition-pc/9NK2DT3K7DTF?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>SnowRunner </i>(<a href="https://www.xbox.com/games/store/snowrunner-3-year-anniversary-edition-windows/9PMQF911J6N9?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Soulstice </i>(New release on <a href="https://www.epicgames.com/store/p/soulstice?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, free on Sept. 28)</li>
-<li><i>Space Hulk: Deathwing &#8211; Enhanced Edition</i> (<a href="https://www.xbox.com/games/store/space-hulk-deathwing-enhanced-edition-windows-10/9N8DKG2R0HKZ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Spacelines from the Far Out </i>(<a href="https://www.xbox.com/games/store/spacelines-from-the-far-out/9N23WV1HGLTQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Superhot </i>(<a href="https://www.xbox.com/games/store/superhot-windows-10/9NV17MJB26PG?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Totally Reliable Delivery Service </i>(<a href="https://www.xbox.com/games/store/totally-reliable-delivery-service/9NZG72SH3H4W?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Vampyr</i> (<a href="https://www.xbox.com/games/store/vampyr/9NT2QNP382V6?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-<li><i>Warhammer 40,000: Battlesector </i>(<a href="https://www.xbox.com/games/store/warhammer-40000-battlesector/9PFLW6WZVJC7?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Yooka-Laylee and the Impossible Lair </i>(<a href="https://www.xbox.com/games/store/yooka-laylee-and-the-impossible-lair/9NB1LCQDPPM1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>)</li>
-</ul>
-<p><i>Halo Infinite </i>and <i>Kingdoms Reborn </i>didn’t make it in September. Stay tuned to GFN Thursday for more updates.</p>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">Predict the game you’ll be playing in the cloud most this October… <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2601.png" alt="☁" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f447.png" alt="👇" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1709599258788184519?ref_src=twsrc%5Etfw">October 4, 2023</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/gfn-thursday-10-5-nv-blog-1280x680-no-cta.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/gfn-thursday-10-5-nv-blog-1280x680-no-cta-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Fall in Line for October With Nearly 60 New Games, Including Latest Game Pass Titles to Join the Cloud]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>A Mine-Blowing Breakthrough: Open-Ended AI Agent Voyager Autonomously Plays ‘Minecraft’</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/04/ai-jim-fan/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Wed, 04 Oct 2023 21:04:52 +0000</pubDate>
-				<category><![CDATA[The AI Podcast]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67324</guid>
-
-					<description><![CDATA[For NVIDIA Senior AI Scientist Jim Fan, the video game Minecraft served as the “perfect primordial soup” for his research on open-ended AI agents. In the latest AI Podcast episode, host Noah Kravitz spoke with Fan on using large language models to create AI agents — specifically to create Voyager, an AI bot built with <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/04/ai-jim-fan/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>For NVIDIA Senior AI Scientist Jim Fan, the video game <i>Minecraft</i> served as the “perfect primordial soup” for his research on open-ended AI agents.</p>
-<p>In the latest <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> episode, host Noah Kravitz spoke with Fan on using <a href="https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/">large language models</a> to create AI agents — specifically to create Voyager, an AI bot built with Chat GPT-4 that can autonomously play <i>Minecraft</i>.</p>
-<p>AI agents are models that “can proactively take actions and then perceive the world, see the consequences of its actions, and then improve itself,” Fan said. Many current AI agents are programmed to achieve specific objectives, such as beating a game as quickly as possible or answering a question. They can work autonomously toward a particular output but lack a broader decision-making agency.</p>
-<p>Fan wondered if it was possible to have a “truly open-ended agent that can be prompted by arbitrary natural language to do open-ended, even creative things.”</p>
-<p>But he needed a flexible playground in which to test that possibility.</p>
-<p>“And that’s why we found <i>Minecraft </i>to be almost a perfect primordial soup for open-ended agents to emerge, because it sets up the environment so well,” he said. <i>Minecraft </i>at its core, after all, doesn’t set a specific key objective for players other than to survive and freely explore the open world.</p>
-<p>That became the springboard for Fan’s project, MineDojo, which eventually led to the creation of the AI bot Voyager.</p>
-<p>“Voyager leverages the power of Chat GPT-4 to write code in Javascript to execute in the game,” Fan explained. “GPT-4 then looks at the output, and if there’s an error from JavaScript or some feedback from the environment, GPT-4 does a self-reflection and tries to debug the code.”</p>
-<p>The bot learns from its mistakes and stores the correctly implemented programs in a skill library for future use, allowing for “lifelong learning.”</p>
-<p>In-game, Voyager can autonomously explore for hours, adapting its decisions based on its environment and developing skills to combat monsters and find food when needed.</p>
-<p>“We see all these behaviors come from the Voyager setup, the skill library and also the coding mechanism,” Fan explained. “We did not preprogram any of these behaviors.”</p>
-<p>He then spoke more generally about the rise and trajectory of LLMs. He foresees strong applications in software, gaming and robotics and increasingly pressing conversations surrounding AI safety.</p>
-<p>Fan encourages those looking to get involved and work with LLMs to “just do something,” whether that means using <a href="https://www.nvidia.com/en-us/training/">online resources</a> or experimenting with beginner-friendly, CPU-based AI models.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1627125918%3Fsecret_token%3Ds-PgUquX2ckQi&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="NVIDIA’s Jim Fan delves into large language models and their industry impact - Ep. 204" href="https://soundcloud.com/theaipodcast/ai-jim-fan/s-PgUquX2ckQi" target="_blank" rel="noopener">NVIDIA’s Jim Fan delves into large language models and their industry impact &#8211; Ep. 204</a></div>
-<h2>You Might Also Like</h2>
-<p><a href="https://soundcloud.com/theaipodcast/jules-anh-tuan-nguyen-explains-how-ai-lets-amputee-control-prosthetic-hand-video-games-ep-149">Jules Anh Tuan Nguyen Explains How AI Lets Amputee Control Prosthetic Hand, Video Games<br />
-</a>A postdoctoral researcher at the University of Minnesota discusses his efforts to allow amputees to control their prosthetic limb — right down to the finger motions — with their minds.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-overjet">Overjet’s Ai Wardah Inam on Bringing AI to Dentistry<br />
-</a>Overjet, a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, is moving fast to bring AI to dentists’ offices. Dr. Wardah Inam, CEO of the company, discusses using AI to improve patient care.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-luis-voloch">Immunai CTO and Co-Founder Luis Voloch on Using Deep Learning to Develop New Drugs<br />
-</a>Luis Voloch talks about tackling the challenges of the immune system with a machine learning and data science mindset.</p>
-<h2>Subscribe to the AI Podcast: Now Available on Amazon Music</h2>
-<p><a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">The AI Podcast is now available through Amazon Music</a>.</p>
-<p>In addition, get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
-<p>Make the AI Podcast better. Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
-<p>&nbsp;</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast.jpg"
-			type="image/jpeg"
-			width="1400"
-			height="931"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[A Mine-Blowing Breakthrough: Open-Ended AI Agent Voyager Autonomously Plays ‘Minecraft’]]></media:title>
-			<media:description type="html">NVIDIA AI Podcast</media:description>
 			</media:content>
 			</item>
 	</channel>
