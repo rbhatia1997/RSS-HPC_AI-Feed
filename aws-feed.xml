@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 19 Oct 2023 16:43:40 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 24 Oct 2023 10:44:16 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -300,7 +300,7 @@ Tags:
  &lt;li&gt;Once all jobs are complete, the instances are left running for a short ScaleDownIdleTime, in case more jobs arrive. This defaults to 10 minutes, but you can configure it yourself by specifying a &lt;code&gt;ScaleDownIdleTime&lt;/code&gt; &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/multiple-queue-mode-slurm-user-guide-v3.html"&gt;parameter in the ParallelCluster config file&lt;/a&gt;. After this time expires, ParallelCluster will terminate the instances, and wait again for new jobs to arrive in the queues.&lt;/li&gt; 
  &lt;li&gt;If the cluster is deleted, all instances &lt;em&gt;including the head node&lt;/em&gt; will be terminated.&lt;/li&gt; 
 &lt;/ol&gt; 
-&lt;p&gt;There’s an &lt;a href="https://studio.us-east-1.prod.workshops.aws/preview/5b6a7b59-b9e4-4a42-ac25-5795b9b66391/builds/1428e077-f472-4b3f-b1fc-feab5a3872f2/en-US"&gt;AWS Workshop available online&lt;/a&gt; to show you how to calculate the price of a financial &lt;em&gt;auto-callable option&lt;/em&gt; based on this ParallelCluster architecture. The workshop provides step-by-step guidance to create and configure ParallelCluster and to deploy the containerized workload.&lt;/p&gt; 
+&lt;p&gt;There’s an &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster/en-US"&gt;AWS Workshop available online&lt;/a&gt; to show you how to calculate the price of a financial &lt;em&gt;auto-callable option&lt;/em&gt; based on this ParallelCluster architecture. The workshop provides step-by-step guidance to create and configure ParallelCluster and to deploy the containerized workload.&lt;/p&gt; 
 &lt;h2&gt;Best Practices when using ParallelCluster with Slurm&lt;/h2&gt; 
 &lt;h3&gt;Smaller and heterogeneous job duration&lt;/h3&gt; 
 &lt;p&gt;If your job durations are small, for example in seconds and somewhat heterogeneous, we suggest following &lt;a href="https://slurm.schedmd.com/high_throughput.html"&gt;the recommendations from SchedMD&lt;/a&gt; (the makers of Slurm) to tune the cluster for the best job throughput – measured in tasks per second. It’s possible for Slurm to scale to 500 jobs/sec – under the right conditions and with the right architecture.&lt;/p&gt; 
@@ -318,7 +318,7 @@ Tags:
 &lt;p&gt;According to Jian Pan, Head of Quantitative Systems at Acadian, “&lt;em&gt;we are able to reap immediate benefit such as maintaining consistent 4hr model runtime in AWS, comparing to 20~40hr runtime on-premise when resource is under stress&lt;/em&gt;”.&lt;/p&gt; 
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;Slurm can handle a cluster that grows and shrinks – driven by demand. It’s able to this dynamically by scaling compute resources from Amazon EC2. Compute fleets can be spun up to complete the workload in the queue. When the jobs are complete, ParallelCluster scales those same fleets back down to the minimum level you set (usually zero).&lt;/p&gt; 
-&lt;p&gt;If you want to try this yourself, you can follow the steps in the &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster"&gt;FSI Tutorial&lt;/a&gt; hands-on lab, and when you’ve done that, you can try a real application to &lt;a href="https://studio.us-east-1.prod.workshops.aws/preview/5b6a7b59-b9e4-4a42-ac25-5795b9b66391/builds/1428e077-f472-4b3f-b1fc-feab5a3872f2/en-US"&gt;calculate the price&lt;/a&gt; of a financial &lt;em&gt;auto-callable option&lt;/em&gt;. Let us know how to get on – you can reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+&lt;p&gt;If you want to try this yourself, you can follow the steps in the &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster"&gt;FSI Tutorial&lt;/a&gt; hands-on lab, and when you’ve done that, you can try a real application to &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster/en-US/02-application/03-job-submit"&gt;calculate the price&lt;/a&gt; of a financial &lt;em&gt;auto-callable option&lt;/em&gt;. Let us know how to get on – you can reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 					
 		
 		
