@@ -12,14 +12,165 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 25 Oct 2023 14:59:46 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 26 Oct 2023 16:41:25 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.3.1</generator>
+	<generator>https://wordpress.org/?v=6.3.2</generator>
 	<item>
+		<title>Turning the Tide on Coral Reef Decline: CUREE Robot Dives Deep With Deep Learning</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/26/coral-reef-decline-curee-robot-jetson-isaac-omniverse/</link>
+		
+		<dc:creator><![CDATA[Scott Martin]]></dc:creator>
+		<pubDate>Thu, 26 Oct 2023 16:00:57 +0000</pubDate>
+				<category><![CDATA[Autonomous Machines]]></category>
+		<category><![CDATA[NVIDIA Isaac Sim]]></category>
+		<category><![CDATA[NVIDIA Jetson]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67573</guid>
+
+					<description><![CDATA[Researchers are taking deep learning for a deep dive, literally. The Woods Hole Oceanographic Institution (WHOI) Autonomous Robotics and Perception Laboratory (WARPLab) and MIT are developing a robot for studying coral reefs and their ecosystems. The WARPLab autonomous underwater vehicle (AUV), enabled by an NVIDIA Jetson Orin NX module, is an effort from the world’s <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/26/coral-reef-decline-curee-robot-jetson-isaac-omniverse/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Researchers are taking deep learning for a deep dive, literally.</p>
+<p>The Woods Hole Oceanographic Institution (WHOI) Autonomous Robotics and Perception Laboratory (<a href="https://warp.whoi.edu/">WARPLab</a>) and MIT are developing a robot for studying coral reefs and their ecosystems.</p>
+<p>The WARPLab autonomous underwater vehicle (AUV), enabled by an <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson Orin NX</a> module, is an effort from the world’s largest private ocean research institution to turn the tide on reef declines.</p>
+<p>Some 25% of coral reefs worldwide have vanished in the past three decades, and most of the remaining reefs are heading for extinction, according to the <a href="https://reefsolutions.whoi.edu/">WHOI Reef Solutions Initiative</a>.</p>
+<p>The AUV, dubbed CUREE (Curious Underwater Robot for Ecosystem Exploration), gathers visual, audio, and other environmental data alongside divers to help understand the human impact on reefs and the sea life around them. The robot runs an expanding collection of NVIDIA Jetson-enabled edge AI to build 3D models of reefs and to track creatures and plant life. It also runs models to navigate and collect data autonomously.</p>
+<p>WHOI, whose submarine first explored the Titanic in 1986, is developing its CUREE robot for data gathering to scale the effort and aid in mitigation strategies. The oceanic research organization is also exploring the use of simulation and <a href="https://blogs.nvidia.com/blog/2021/12/14/what-is-a-digital-twin/">digital twins</a> to better replicate reef conditions and investigate solutions like <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a development platform for building and connecting 3D tools and applications.</p>
+<p>Creating a digital twin of Earth in Omniverse, NVIDIA is developing the world’s most powerful AI supercomputer for predicting climate change, <a href="https://blogs.nvidia.com/blog/2021/11/12/earth-2-supercomputer/">called Earth-2</a>.</p>
+<h2><b>Underwater AI: DeepSeeColor Model</b></h2>
+<p>Anyone who’s gone snorkeling knows that seeing underwater isn’t as clear as seeing on land. Over distance, water attenuates the visible spectrum of light from the sun underwater, muting some colors more than others. At the same time, particles in the water create a hazy view, known as backscatter.</p>
+<p>A team from WARPLab recently <a href="https://arxiv.org/pdf/2303.04025.pdf">published a research paper</a> on undersea vision correction that helps mitigate these problems and supports the work of CUREE. The paper describes a model, called DeepSeeColor, that uses a sequence of two <a href="https://blogs.nvidia.com/blog/2018/09/05/whats-the-difference-between-a-cnn-and-an-rnn/">convolutional neural networks</a> to reduce backscatter and correct colors in real time on the NVIDIA Jetson Orin NX while undersea.</p>
+<p>“NVIDIA GPUs are involved in a large portion of our pipeline because, basically, when the images come in, we use DeepSeeColor to color correct them, and then we can do the fish detection and transmit that to a scientist up at the surface on a boat,” said Stewart Jamieson, a robotics Ph.D. candidate at MIT and AI developer at WARPLab.</p>
+<p><iframe title="DeepSeeColor: Removing backscatter and color attenuation from underwater images in realtime" width="500" height="281" src="https://www.youtube.com/embed/vpge92KRU1M?start=1&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Eyes and Ears: Fish and Reef Detection</b></h2>
+<p>CUREE packs four forward-facing cameras, four hydrophones for underwater audio capture, depth sensors and inertial measurement unit sensors. GPS doesn’t work underwater, so it is only used to initialize the robot’s starting position while on the surface.</p>
+<p>Using a combination of cameras and hydrophones along with AI models running on the Jetson Orin NX enables CUREE to collect data for producing 3D models of reefs and undersea terrains.</p>
+<p>To use the hydrophones for audio data collection, CUREE needs to drift with its motor off so that there’s no interference with the audio.</p>
+<p>“It can build a spatial soundscape map of the reef, using sounds produced by different animals,” said Yogesh Girdhar, an associate scientist at WHOI, who leads WARPLab. “We currently (in post-processing) detect where all the chatter associated with bioactivity hotspots is,” he added, referring to all the noises of sea life.</p>
+<p>The team has been training detection models for both audio and video input to track creatures. But a big noise interference with detecting clear audio samples has come from one creature in particular.</p>
+<p>“The problem is that, underwater, the snapping shrimps are loud,” said Girdhar. On land, this classic dilemma of how to separate sounds from background noises is known as <a href="https://blogs.nvidia.com/blog/2018/08/28/music-youtube-cocktail-party-problem-ai-artificial-intelligence-deep-learning/">the cocktail party problem</a>. “If only we could figure out an algorithm to remove the effects of sounds of snapping shrimps from audio, but at the moment we don’t have a good solution,” said Girdhar.</p>
+<p>Despite few underwater datasets in existence, <a href="https://warp.whoi.edu/vmat/">pioneering fish detection and tracking</a> is going well, said Levi Cai, a Ph.D. candidate in the MIT-WHOI joint program. He said they’re taking a semi-supervised approach to the marine animal tracking problem. The tracking is initialized using targets detected by a <a href="https://github.com/warplab/megafishdetector">fish detection neural network</a> trained on open-source datasets for fish detection, which is fine-tuned with <a href="https://blogs.nvidia.com/blog/2019/02/07/what-is-transfer-learning/">transfer learning</a> from images gathered by CUREE.</p>
+<p>“We manually drive the vehicle until we see an animal that we want to track, and then we click on it and have the semi-supervised tracker take over from there,” said Cai.</p>
+<p><iframe title="Tracking a barracuda using CUREE" width="500" height="281" src="https://www.youtube.com/embed/s_PBaYIqNKg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Jetson Orin Energy Efficiency Drives CUREE</b></h2>
+<p>Energy efficiency is critical for small AUVs like CUREE. The compute requirements for data collection consume roughly 25% of the available energy resources, with driving the robots taking the remainder.</p>
+<p>CUREE typically operates for as long as two hours on a charge, depending on the reef mission and the observation requirements, said Girdhar, who goes on the dive missions in St. John in the U.S. Virgin Islands.</p>
+<p>To enhance energy efficiency, the team is looking into AI for managing the sensors so that computing resources automatically stay awake while making observations and sleep when not in use.</p>
+<p>“Our robot is small, so the amount of energy spent on GPU computing actually matters — with Jetson Orin NX our power issues are gone, and it’s made our system much more robust,” said  Girdhar.</p>
+<h2><b>Exploring Isaac Sim to Make Improvements </b></h2>
+<p>The WARPLab team is experimenting with <a href="https://developer.nvidia.com/isaac-sim">NVIDIA Isaac Sim</a>, a scalable robotics simulation application and <a href="https://blogs.nvidia.com/blog/2021/06/08/what-is-synthetic-data/">synthetic data</a> generation tool powered by Omniverse, to accelerate development of autonomy and observation for CUREE.</p>
+<p>The goal is to do simple simulations in Isaac Sim to get the core essence of the problem to be simulated and then finish the training in the real world undersea, said Yogesh.</p>
+<p>“In a coral reef environment, we cannot depend on sonars — we need to get up really close,” he said. “Our goal is to observe different ecosystems and processes happening.”</p>
+<h2><b>Understanding Ecosystems and Creating Mitigation Strategies</b></h2>
+<p>The WARPLab team intends to make the CUREE platform available for others to understand the impact humans are having on undersea environments and to help create mitigation strategies.</p>
+<p>The researchers plan to learn from patterns that emerge from the data. CUREE provides an almost fully autonomous data collection scientist that can communicate findings to human researchers, said Jamieson. “A scientist gets way more out of this than if the task had to be done manually, driving it around staring at a screen all day,” he said.</p>
+<p>Girdhar said that ecosystems like coral reefs can be modeled with a network, with different nodes corresponding to different types of species and habitat types. Within that, he said, there are all these different interactions happening, and the researchers seek to understand this network to learn about the relationship between various animals and their habitats.</p>
+<p>The hope is that there’s enough data collected using CUREE AUVs to gain a comprehensive understanding of ecosystems and how they might progress over time and be affected by harbors, pesticide runoff, carbon emissions and dive tourism, he said.</p>
+<p>“We can then better design and deploy interventions and determine, for example, if we planted new corals how they would change the reef over time,” said Girdar.</p>
+<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/"><i>NVIDIA Jetson Orin NX</i></a><i>, </i><a href="https://www.nvidia.com/en-us/omniverse/"><i>Omniverse</i></a><i> and </i><a href="https://www.nvidia.com/en-us/high-performance-computing/earth-2/"><i>Earth-2</i></a><i>.</i></p>
+<p><em>Image credit: Austin Greene, Woods Hole Oceanographic Institution</em></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/CUREE.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1365"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/CUREE-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Turning the Tide on Coral Reef Decline: CUREE Robot Dives Deep With Deep Learning]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>The Sky’s the Limit: ‘Cities: Skylines II’ Streams This Week on GeForce NOW</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/26/geforce-now-thursday-oct-26/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 26 Oct 2023 13:00:01 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67744</guid>
+
+					<description><![CDATA[The cloud is full of treats this GFN Thursday with Cities: Skylines II now streaming, leading 15 newly supported games this week. The game’s publisher, Paradox Interactive, is offering GeForce NOW one-month Priority memberships for those who pick up the game first, so make sure to grab one before they’re gone. Among the newly supported <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/26/geforce-now-thursday-oct-26/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The cloud is full of treats this GFN Thursday with <i>Cities: Skylines II </i>now streaming, leading 15 newly supported games this week<i>.</i> The game’s publisher, Paradox Interactive, is offering GeForce NOW one-month Priority memberships for those who pick up the game first, so make sure to grab one before they’re gone.</p>
+<p>Among the newly supported additions to the <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> library are more games from the PC Game Pass catalog, including <i>Ghostwire Tokyo</i>,<i> State of Decay</i> and the <i>Dishonored</i> series. Members can also look forward to <i>Alan Wake 2</i> — streaming soon.</p>
+<h2><b>Cloud City</b></h2>
+<figure id="attachment_67761" aria-describedby="caption-attachment-67761" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" fetchpriority="high" class="size-large wp-image-67761" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-672x378.jpg" alt="Cities: Skylines II on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67761" class="wp-caption-text"><em>If you build it, they will come.</em></figcaption></figure>
+<p>Members can build the metropolis of their dreams this week in <i>Cities: Skylines II, </i>the sequel to Paradox Interactive’s award-winning city sim<i>.</i> Raise a city from the ground up and transform it into a thriving urban landscape. Get creative to build on an unprecedented scale while managing a deep simulation and a living economy.</p>
+<p>The game’s AI and intricate economics mean every choice ripples through the fabric of a player’s city, so they’ll have to stay sharp — strategizing, solving problems and reacting to challenges. Build sky-high and sprawl across the map like never before. New dynamic map features affect how the city expands amid rising pollution, changing weather and seasonal challenges.</p>
+<p>Paradox is offering one-month GeForce NOW Priority memberships to the first 100,000 people who purchase the game, so budding city planners can optimize their gameplay across nearly any device. Visit <a href="https://www.paradoxinteractive.com/games/cities-skylines-ii/geforce-now"><i>Cities Skylines II</i></a> for more info.</p>
+<h2><b>Newly Risen in the Cloud</b></h2>
+<p>Settle in for a spooky night with the newest PC Game Pass additions to the cloud: <i>State of Decay </i>and the <i>Dishonored</i> series.</p>
+<figure id="attachment_67758" aria-describedby="caption-attachment-67758" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67758" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-672x336.jpg" alt="State of Decay 2: Juggernaut Edition on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-State_of_Decay_2_Juggernaut_Edition.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67758" class="wp-caption-text"><em>“The right choice is the one that keeps us alive.”</em></figcaption></figure>
+<p>Drop into a post-apocalyptic world and fend off zombies in <i>State of Decay 2: Juggernaut Edition</i> from Undead Labs and Xbox Game Studios. Band together with a small group of survivors and rebuild a corner of civilization in this dynamic, open-world sandbox. Fortify home base, perform daring raids for food and supplies and rescue other survivors who may have unique talents to contribute. Head online with friends for an up to four-player online co-op mode and visit their communities to help defend them and bring back rewards. No two players’ experiences will be the same.</p>
+<figure id="attachment_67755" aria-describedby="caption-attachment-67755" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67755" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-672x336.jpg" alt="" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Dishonored_Death_of_the_Outside.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67755" class="wp-caption-text"><em>Dishonor on you, dishonor on your cow, “Dishonored” in the cloud.</em></figcaption></figure>
+<p>Get supernatural with the <i>Dishonored</i> series, which comprises first-person action games set in a steampunk Lovecraftian world. In <i>Dishonored</i>, follow the story of Corvo Attano — a former bodyguard turned assassin driven by revenge after being framed for the murder of the Empress of Dunwall. Choose stealth or violence with <i>Dishonored</i>’s flexible combat system and Corvo’s supernatural abilities.</p>
+<p><i>The Definitive Edition</i> includes the original <i>Dishonored</i> game with updated graphics, the “Void Walker’s Arsenal&#8221; add-on pack, plus expansion packs for more missions: “The Knife of Dunwall,” “The Brigmore Witches” and “Dunwall City Trials.”</p>
+<p>Follow up with the sequel, <i>Dishonored 2</i>, set 15 years after<i> Dishonored</i>. Members can play as Corvo or his daughter, Emily, who seeks to reclaim her rightful place as the Empress of Dunwall. <i>Dishonored: Death of the Outsider</i> is the latest in the series, following the story of former assassin Billie Lurk on her mission to discover the origins of a mysterious entity called The Outsider.</p>
+<h2><b>It’s Getting Dark in Here</b></h2>
+<figure id="attachment_67752" aria-describedby="caption-attachment-67752" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67752" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/BigFish_DET_4K_054-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67752" class="wp-caption-text"><em>Maybe you should be afraid of the dark after all.</em></figcaption></figure>
+<p><i>Alan Wake 2</i>, the long-awaited sequel to Remedy Entertainments’ survival-horror classic, is coming soon to the cloud.</p>
+<p>What begins as a small-town murder investigation rapidly spirals into a nightmare journey. Uncover the source of a supernatural darkness in this psychological horror story filled with suspense and unexpected twists. Play as FBI agent Saga Anderson and Alan Wake, a horror writer long trapped in the Dark Place, to see events unfold from different perspectives.</p>
+<p>Ultimate members will soon be able to uncover mysteries with the power of a <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080/">GeForce RTX 4080</a> server in the cloud. Survive the surreal world of <i>Alan Wake 2</i> at up to 4K resolution and 120 frames per second, with <a href="https://blogs.nvidia.com/blog/2022/03/23/what-is-path-tracing/">path-traced</a> graphics accelerated and enhanced by <a href="https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-3-5-ray-reconstruction/">NVIDIA DLSS 3.5</a> and <a href="https://www.nvidia.com/en-us/geforce/technologies/reflex/">NVIDIA Reflex</a> technology.</p>
+<h2><b>Trick or Treat: Give Me All New Games to Beat</b></h2>
+<figure id="attachment_67749" aria-describedby="caption-attachment-67749" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67749" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-672x336.jpg" alt="Ghostwire Tokyo on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Ghostwire_Tokyo.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67749" class="wp-caption-text"><em>I ain’t afraid of no ghost.</em></figcaption></figure>
+<p>It’s time for a bewitching new list of games in the cloud. <i>Ghostwire Tokyo </i>from Bethesda is an action-adventure game set in a modern-day Tokyo mysteriously depopulated by a paranormal phenomenon. Team with a spectral entity to fight the supernatural forces that have taken over the city, including ghosts, yokai and other creatures from Japanese folklore.</p>
+<p>Jump into the action now with 15 new games this week:</p>
+<ul>
+<li><i>Cities: Skylines II </i>(New release on <a href="https://store.steampowered.com/app/949230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/cities-skylines-ii/9ndntv0l9n87?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass, Oct. 24)</li>
+<li><i>RIPOUT </i>(New release on <a href="https://store.steampowered.com/app/1558830?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 24)</li>
+<li><i>Ghostrunner 2 </i>(New release on <a href="https://store.steampowered.com/app/2144740?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 26)</li>
+<li><i>Cricket 22 </i>(<a href="https://www.xbox.com/games/store/cricket-22/9NWNX54ZMT1K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>Deceive Inc. </i>(<a href="https://www.epicgames.com/store/p/deceive-inc?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>Dishonored </i>(<a href="https://store.steampowered.com/app/205100?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Dishonored: Death of the Outsider </i>(<a href="https://store.steampowered.com/app/614570?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/dishonored-death-of-the-outsider?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/dishonored-death-of-the-outsider-pc/9MVF0PGV94F7?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>Dishonored Definitive Edition</i> (<a href="https://www.epicgames.com/store/p/dishonored-definitive-edition?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/dishonored-definitive-edition-pc/9P1N07XDL1D4?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass)</li>
+<li><i>Dishonored 2 </i>(<a href="https://store.steampowered.com/app/403640?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/dishonored-2?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/dishonored-2/9MW4RJDRSF78?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>Ghostwire: Tokyo </i>(<a href="https://store.steampowered.com/app/1475810?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/ghostwire-tokyo?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/ghostwire-tokyo/9PKP39CL0C8D?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass)</li>
+<li><i>The Gunk </i>(<a href="https://www.xbox.com/games/store/the-gunk/9P008L2LS87F?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>Kill It With Fire </i>(<a href="https://www.xbox.com/games/store/kill-it-with-fire/9MZVSHQZ666K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>State of Decay 2: Juggernaut Edition </i>(<a href="https://store.steampowered.com/app/495420?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/state-of-decay-2-juggernaut-edition?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/state-of-decay-2-juggernaut-edition/9nt4x7p8b9nb?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>Totally Accurate Battle Simulator </i>(<a href="https://www.xbox.com/games/store/totally-accurate-battle-simulator/9PC4RWP34M2D?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>Vampire Survivors</i> (<a href="https://store.steampowered.com/app/1794680?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+</ul>
+<p>Make sure to check out the question of the week. Share your answer on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">raise your hand if you&#39;ve felt personally victimized by the mute/unmute button <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f64b-200d-2640-fe0f.png" alt="🙋‍♀️" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1717209401298194658?ref_src=twsrc%5Etfw">October 25, 2023</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/gfn-thursday-cities-skylines-2-nv-blog-1280x680-no-copy.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/gfn-thursday-cities-skylines-2-nv-blog-1280x680-no-copy-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[The Sky’s the Limit: ‘Cities: Skylines II’ Streams This Week on GeForce NOW]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Next-Gen Neural Networks: NVIDIA Research Announces Array of AI Advancements at NeurIPS</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/25/neurips-ai-research/</link>
 		
@@ -49,7 +200,7 @@
 <li>Another poster describes work that improves how text-to-image models <a href="https://neurips.cc/virtual/2023/poster/70922" target="_blank" rel="noopener">generate concepts rarely seen in training data</a>. Attempts to generate such images usually result in low-quality visuals that aren’t an exact match to the user’s prompt. The new method uses a small set of example images that help the model identify good seeds — random number sequences that guide the AI to generate images from the specified rare classes.</li>
 <li>A third poster shows how a text-to-image diffusion model can <a href="https://neurips.cc/virtual/2023/poster/70648" target="_blank" rel="noopener">use the text description of an incomplete point cloud</a> to generate missing parts and create a complete 3D model of the object. This could help complete point cloud data collected by lidar scanners and other depth sensors for robotics and autonomous vehicle AI applications. Collected imagery is often incomplete because objects are scanned from a specific angle — for example, a lidar sensor mounted to a vehicle would only scan one side of each building as the car drives down a street.</li>
 </ul>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion.jpg"><img decoding="async" fetchpriority="high" class="aligncenter size-large wp-image-67733" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-672x222.jpg" alt="" width="672" height="222" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-672x222.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-400x132.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-768x253.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-1536x506.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-842x278.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-406x134.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-188x62.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-1280x422.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion.jpg 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67733" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-672x222.jpg" alt="" width="672" height="222" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-672x222.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-400x132.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-768x253.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-1536x506.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-842x278.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-406x134.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-188x62.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion-1280x422.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Point-Cloud-Completion.jpg 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <h2><b>Character Development: Advancements in AI Avatars</b></h2>
 <p>AI avatars combine multiple generative AI models to create and animate virtual characters, produce text and convert it to speech. Two NVIDIA posters at NeurIPS present new ways to make these tasks more efficient.</p>
 <ul style="font-weight: 300;">
@@ -67,7 +218,7 @@
 <ul style="font-weight: 300;">
 <li>To accelerate <a href="https://neurips.cc/virtual/2023/poster/72670" target="_blank" rel="noopener">computational fluid dynamics for large-scale 3D simulations</a>, a team of NVIDIA researchers proposed a neural operator architecture that combines accuracy and computational efficiency to estimate the pressure field around vehicles — the first deep learning-based computational fluid dynamics method on an industry-standard, large-scale automotive benchmark. The method achieved 100,000x acceleration on a single <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPU</a> compared to another GPU-based solver, while reducing the error rate. Researchers can incorporate the model into their own applications using the open-source <a href="https://github.com/neuraloperator/neuraloperator" target="_blank" rel="noopener">neuraloperator library</a>.</li>
 </ul>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1.jpg"><img decoding="async" class="aligncenter size-large wp-image-67740" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-672x390.jpg" alt="" width="672" height="390" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-672x390.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-400x232.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-768x446.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-775x450.jpg 775w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-370x215.jpg 370w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-172x100.jpg 172w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1.jpg 1171w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67740" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-672x390.jpg" alt="" width="672" height="390" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-672x390.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-400x232.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-768x446.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-775x450.jpg 775w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-370x215.jpg 370w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1-172x100.jpg 172w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Computational-Fluid-Dynamics-1.jpg 1171w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>&nbsp;</p>
 <ul>
 <li>A consortium of climate scientists and machine learning researchers from universities, national labs, research institutes, Allen AI and NVIDIA collaborated on <a href="https://neurips.cc/virtual/2023/poster/73569" target="_blank" rel="noopener">ClimSim</a>, a massive dataset for physics and machine learning-based climate research that will be shared in an oral presentation at NeurIPS. The dataset covers the globe over multiple years at high resolution — and machine learning emulators built using that data can be plugged into existing operational climate simulators to improve their fidelity, accuracy and precision. This can help scientists produce better predictions of storms and other extreme events.</li>
@@ -113,7 +264,7 @@
 
 					<description><![CDATA[Visual effects artist Surfaced Studio returns to 'In the NVIDIA Studio' to share his real-world VFX project, created on a brand new Razer Blade 16 Mercury Edition laptop powered by GeForce RTX 4080 graphics. ]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Visual effects artist Surfaced Studio returns to <i>In the NVIDIA Studio</i> to share his real-world VFX project, created on a brand new <a href="https://www.razer.com/gaming-laptops/razer-blade-16/RZ09-0483TEM3-R3U1">Razer Blade 16 Mercury Edition</a> laptop powered by <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080/">GeForce RTX 4080</a> graphics.</p>
-<p><iframe title="Razer Blade 16 Mercury Edition - Real World VFX Test &amp; Review" width="500" height="281" src="https://www.youtube.com/embed/d6AR3XnwtIs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Razer Blade 16 Mercury Edition - Real World VFX Test &amp; Review" width="500" height="281" src="https://www.youtube.com/embed/d6AR3XnwtIs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Surfaced Studio creates photorealistic, digitally generated imagery that seamlessly integrates visual effects into short films, television and console gaming.</p>
 <p>He found inspiration for a recent sci-fi project by experimenting with 3D transitions: using a laptop screen as a gateway between worlds, like the portals from <i>Dr. Strange</i> or the transitions from <i>The Matrix</i>.</p>
 <h2><b>Break the Rules and Become a Hero</b></h2>
@@ -723,7 +874,7 @@
 </ul>
 <p>Download Toolbag 4.06 directly from Marmoset to explore USD support and RTX-accelerated production tools. New users are eligible for a full-featured, <a href="https://marmoset.co/toolbag/#dltoolbag" target="_blank" rel="noopener">30-day free trial license</a>.</p>
 <h2><b>Get Plugged Into the Omniverse </b></h2>
-<p>Learn from industry experts on how OpenUSD is enabling custom 3D pipelines, easing 3D tool development and delivering interoperability between 3D applications in sessions from SIGGRAPH 2023, now available <a href="https://www.youtube.com/playlist?list=PL3jK4xNnlCVevpoiQ8YR-kYz5h0_9GTD9" target="_blank" rel="noopener">on demand</a>.</p>
+<p>Learn from industry experts on how OpenUSD is enabling custom 3D pipelines, easing 3D tool development and delivering interoperability between 3D applications in sessions from SIGGRAPH 2023, now available <a href="https://www.youtube.com/playlist?list=PL3jK4xNnlCVevpoiQ8YR-kYz5h0_9GTD9" target="_blank" rel="noopener" class="broken_link">on demand</a>.</p>
 <p>Anyone can build their own <a href="https://developer.nvidia.com/omniverse" target="_blank" rel="noopener">Omniverse extension or Connector</a> to enhance their 3D workflows and tools. Explore the Omniverse ecosystem’s <a href="https://www.nvidia.com/en-us/omniverse/ecosystem/" target="_blank" rel="noopener">growing catalog</a> of connections, extensions, foundation applications and third-party tools.</p>
 <p>For more <a href="https://developer.nvidia.com/usd" target="_blank" rel="noopener">resources on OpenUSD</a>, explore the <a href="https://forum.aousd.org/" target="_blank" rel="noopener">Alliance for OpenUSD forum</a> or visit the <a href="https://aousd.org/" target="_blank" rel="noopener">AOUSD website</a>.</p>
 <p>Share your Marmoset Toolbag and Omniverse work as part of the latest community challenge, <a href="https://forums.developer.nvidia.com/t/the-new-community-challenge-is-here-we-are-kicking-off-the-seasonalartchallenge/268346" target="_blank" rel="noopener">#SeasonalArtChallenge</a>. Use the hashtag to submit a spooky or festive scene for a chance to be featured on the @NVIDIAStudio and @NVIDIAOmniverse social channels.</p>
@@ -1066,161 +1217,6 @@
 			/>
 			<media:title type="html"><![CDATA[UK Tech Festival Showcases Startups Using AI for Creative Industries]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Get in Gear: ‘Forza Motorsport’ Races Onto GeForce NOW</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/12/geforce-now-thursday-oct-12/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 12 Oct 2023 13:00:10 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67408</guid>
-
-					<description><![CDATA[Put the pedal to the metal this GFN Thursday as Forza Motorsport leads 23 new games in the cloud. Plus, Acer’s Predator Connect 6E is the newest addition to the GeForce NOW Recommended program, with easy cloud gaming quality-of-service (QoS) settings built in to give Ultimate members the best streaming experience. No Breaks, No Limits, <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/12/geforce-now-thursday-oct-12/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Put the pedal to the metal this GFN Thursday as <i>Forza Motorsport</i> leads 23 new games in the cloud.</p>
-<p>Plus, Acer’s Predator Connect 6E is the newest addition to the <a href="https://www.nvidia.com/en-us/geforce-now/recommended/">GeForce NOW Recommended program</a>, with easy cloud gaming quality-of-service (QoS) settings built in to give <a href="http://geforcenow.com/memberships">Ultimate members</a> the best streaming experience.</p>
-<h2><b>No Breaks, No Limits, No Downloads</b></h2>
-<p><iframe loading="lazy" title="Forza Motorsport - Official Launch Trailer" width="500" height="281" src="https://www.youtube.com/embed/yJumrR_bbg0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Take the pole position thanks to the cloud. Turn 10 Studios’ <i>Forza Motorsport</i> joins the <a href="https://www.nvidia.com/en-us/geforce-now/games/">GeForce NOW library</a> this week.</p>
-<p>The realistic racing sim features over 500 realistically rendered cars across 20 dynamic and world-famous tracks, each with dynamic time-of-day, weather and driving conditions, so no two laps will ever be the same. Unlock more than 800 performance upgrades and outbuild the competition, either online or against new, highly competitive AI racers in the single-player Builders Cup Career Mode.</p>
-<p>Stream every turn at GeForce quality on nearly any device and max out image quality thanks to the cloud. Ultimate members can get in gear at up to 4K resolution andat up to 120 frames per second for the most realistic driving experience.</p>
-<h2><b>Need for Speed</b></h2>
-<figure id="attachment_67416" aria-describedby="caption-attachment-67416" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67416" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Acer_Predator_W6_Router-672x363.jpg" alt="Acer Predator Connect W6 router for GeForce NOW" width="672" height="363" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Acer_Predator_W6_Router-672x363.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Acer_Predator_W6_Router-400x216.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Acer_Predator_W6_Router-768x414.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Acer_Predator_W6_Router-834x450.jpg 834w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Acer_Predator_W6_Router-398x215.jpg 398w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Acer_Predator_W6_Router-185x100.jpg 185w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Acer_Predator_W6_Router.jpg 1260w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67416" class="wp-caption-text"><em>Better together.</em></figcaption></figure>
-<p>Say hello to the newest addition to the GeForce NOW Recommended program.</p>
-<p>GeForce NOW members have access to the best cloud streaming experience, and Acer’s newly released <a href="https://www.acer.com/us-en/predator/networking/wi-fi/predator-connect-w6-wifi-6e-router">Predator Connect W6 wireless router</a> is built to support it, providing the ultrafast, stable gaming environment needed for 4K cloud streaming.</p>
-<p>NVIDIA and Acer have collaborated to create a best-in-class streaming experience, creating a special QoS option in the Predator Connect that prioritizes cloud gaming network traffic for maximized speed. The software underwent six months of rigorous testing, ensuring it can consistently deliver the high-performance offerings of a GeForce NOW Ultimate membership, including 4K 120 fps gaming with ultra-low latency.</p>
-<p>The Predator Connect W6 also includes tri-band network support with the latest wireless technologies, like WiFi 6E. Pair it with a GeForce NOW Ultimate membership for an unrivaled cloud gaming experience.</p>
-<h2><b>Play On</b></h2>
-<figure id="attachment_67413" aria-describedby="caption-attachment-67413" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67413" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-672x336.jpg" alt="Star Trek Infinite on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Star_Trek_Infinte.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67413" class="wp-caption-text"><em>Live long and prosper in the cloud.</em></figcaption></figure>
-<p>Get the weekend started with the new weekly games list:</p>
-<ul>
-<li><i>Forza Motorsport </i>(New release on <a href="https://store.steampowered.com/app/2440510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/forza-motorsport-standard-edition/9PLKVSWR299F?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass, Oct. 12)</li>
-<li><i>From Space</i> (New release on <a href="https://www.xbox.com/games/store/from-space/9PLK75782446?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, Oct. 12)</li>
-<li><i>Hotel: A Resort Simulator </i>(New release on <a href="https://store.steampowered.com/app/1389840?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 12)</li>
-<li><i>Saltsea Chronicles </i>(New release on <a href="https://store.steampowered.com/app/1419620?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 12)</li>
-<li><i>Star Trek: Infinite </i>(New release on <a href="https://store.steampowered.com/app/1622900?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 12)</li>
-<li><i>Tribe: Primitive Builder</i> (New release on <a href="https://store.steampowered.com/app/1059900?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Oct. 12)</li>
-<li><i>Lords of the Fallen </i>(New release on <a href="https://store.steampowered.com/app/1501750?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.epicgames.com/store/p/lords-of-the-fallen-2-46fdd6?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, Oct. 13)</li>
-<li><i>Bad North </i>(<a href="https://www.xbox.com/games/store/bad-north-jotunn-edition/9N4T8VCMQVDT?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Call of the Sea </i>(<a href="https://www.xbox.com/games/store/call-of-the-sea/9NNG78K7N91K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store</li>
-<li><i>For The King </i>(<a href="https://www.xbox.com/games/store/for-the-king/9NS1CD1V4BKW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Golf With Your Friends</i> (<a href="https://www.xbox.com/games/store/golf-with-your-friends-windows-version/9MVK5W0HMRP7?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Metro Simulator 2 </i>(<a href="https://store.steampowered.com/app/1787480?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Moonbreaker </i>(<a href="https://store.steampowered.com/app/845890?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Narita Boy </i>(<a href="https://www.xbox.com/games/store/narita-boy/9NT3FGQC1DFR?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Rubber Bandits </i>(<a href="https://www.xbox.com/games/store//rubber-bandits/9PL36RW9ZTPW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Sifu </i>(<a href="https://www.xbox.com/games/store/sifu/9P7PF6ZP3958?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Star Renegades</i> (<a href="https://www.xbox.com/games/store/star-renegades/9PK5S1QKV10D?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Streets of Rogue</i> (<a href="https://www.xbox.com/games/store/streets-of-rogue/9NKRBSZXQ2HM?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Supraland </i>(<a href="https://www.xbox.com/games/store/supraland/9P75CZFXMS7N?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Supraland Six Inches Under </i>(<a href="https://www.epicgames.com/store/p/supraland-six-inches-under-dd0220?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>The Surge </i>(<a href="https://www.xbox.com/games/store/the-surge-windows-10-version/9NKLXF5DLBKT?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-<li><i>Tiny Football</i> (<a href="https://store.steampowered.com/app/1887010?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Yes, Your Grace</i> (<a href="https://www.xbox.com/games/store/yes-your-grace/9NX14Q0QZD1T?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
-</ul>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">It&#39;s time to head to the cloud. What gear are you bringing? <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1712135972844958026?ref_src=twsrc%5Etfw">October 11, 2023</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
-<p>&nbsp;</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/gfn-thursday-10-12-nv-blog-1280x680-no-cta.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/gfn-thursday-10-12-nv-blog-1280x680-no-cta-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Get in Gear: ‘Forza Motorsport’ Races Onto GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Take the Wheel: NVIDIA NeMo SteerLM Lets Companies Customize a Model’s Responses During Inference</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/11/customize-ai-models-steerlm/</link>
-		
-		<dc:creator><![CDATA[Annamalai Chockalingam]]></dc:creator>
-		<pubDate>Wed, 11 Oct 2023 14:30:17 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[NVIDIA Research]]></category>
-		<category><![CDATA[Open Source]]></category>
-		<category><![CDATA[Trustworthy AI]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67289</guid>
-
-					<description><![CDATA[Developers have a new AI-powered steering wheel to help them hug the road while they drive powerful large language models (LLMs) to their desired locations. NVIDIA NeMo SteerLM lets companies define knobs to dial in a model’s responses as it’s running in production, a process called inference. Unlike current methods for customizing an LLM, it <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/11/customize-ai-models-steerlm/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Developers have a new AI-powered steering wheel to help them hug the road while they drive powerful large language models (<a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/#:~:text=Large%20language%20models%20(LLMs)%20are,content%20using%20very%20large%20datasets.">LLMs</a>) to their desired locations.</p>
-<p>NVIDIA NeMo SteerLM lets companies define knobs to dial in a model’s responses as it’s running in production, a process called <a href="https://blogs.nvidia.com/blog/2016/08/22/difference-deep-learning-training-inference-ai/">inference</a>. Unlike current methods for customizing an LLM, it lets a single training run create one model that can serve dozens or even hundreds of use cases, saving time and money.</p>
-<p>NVIDIA researchers created SteerLM to teach AI models what users care about, like road signs to follow in their particular use cases or markets. These user-defined attributes can gauge nearly anything — for example, the degree of helpfulness or humor in the model’s responses.</p>
-<h2><b>One Model, Many Uses</b></h2>
-<p>The result is a new level of flexibility.</p>
-<p>With SteerLM, users define all the attributes they want and embed them in a single model. Then they can choose the combination they need for a given use case while the model is running.</p>
-<p>For example, a custom model can now be tuned during inference to the unique needs of, say, an accounting, sales or engineering department or a vertical market.</p>
-<p>The method also enables a continuous improvement cycle. Responses from a custom model can serve as data for a future training run that dials the model into new levels of usefulness.</p>
-<h2><b>Saving Time and Money</b></h2>
-<p>To date, fitting a <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> model to the needs of a specific application has been the equivalent of rebuilding an engine’s transmission. Developers had to painstakingly label datasets, write lots of new code, adjust the hyperparameters under the hood of the neural network and retrain the model several times.</p>
-<p>SteerLM replaces those complex, time-consuming processes with three simple steps:</p>
-<ul>
-<li style="font-weight: 400;" aria-level="1">Using a basic set of prompts, responses and desired attributes, customize an AI model that predicts how those attributes will perform.</li>
-<li style="font-weight: 400;" aria-level="1">Automatically generating a dataset using this model.</li>
-<li style="font-weight: 400;" aria-level="1">Training the model with the dataset using standard supervised fine-tuning techniques.</li>
-</ul>
-<h2><b>Many Enterprise Use Cases</b></h2>
-<p>Developers can adapt SteerLM to nearly any enterprise use case that requires generating text.</p>
-<p>With SteerLM, a company might produce a single chatbot it can tailor in real time to customers’ changing attitudes, demographics or circumstances in the many vertical markets or geographies it serves.</p>
-<p>SteerLM also enables a single LLM to act as a flexible writing co-pilot for an entire corporation.</p>
-<p>For example, lawyers can modify their model during inference to adopt a formal style for their legal communications. Or marketing staff can dial in a more conversational style for their audience.</p>
-<h2><b>Game On With SteerLM</b></h2>
-<p>To show the potential of SteerLM, NVIDIA demonstrated it on one of its classic applications — gaming (see the video below).</p>
-<p>Today, some games pack dozens of non-playable characters — characters that the player can’t control — which mechanically repeat prerecorded text, regardless of the user or situation.</p>
-<p>SteerLM makes these characters come alive, responding with more personality and emotion to players’ prompts. It’s a tool game developers can use to unlock unique new experiences for every player.</p>
-<p><iframe loading="lazy" title="NVIDIA ACE Enhanced with Dynamic Responses for Virtual Characters" width="500" height="281" src="https://www.youtube.com/embed/lf0z8Z3OQvM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>The Genesis of SteerLM</b></h2>
-<p>The concept behind the new method arrived unexpectedly.</p>
-<p>“I woke up early one morning with this idea, so I jumped up and wrote it down,” recalled Yi Dong, an applied research scientist at NVIDIA who initiated the work on SteerLM.</p>
-<p>While building a prototype, he realized a popular model-conditioning technique could also be part of the method. Once all the pieces came together and his experiment worked, the team helped articulate the method in four simple steps.</p>
-<p>It’s the latest advance in model customization, a hot area in AI research.</p>
-<p>“It’s a challenging field, a kind of holy grail for making AI more closely reflect a human perspective — and I love a new challenge,” said the researcher, who earned a Ph.D. in computational neuroscience at Johns Hopkins University, then worked on machine learning algorithms in finance before joining NVIDIA.</p>
-<h2><b>Get Hands on the Wheel</b></h2>
-<p>SteerLM is available as open-source software for developers to try out today. They can also get <a href="https://huggingface.co/nvidia/SteerLM-llama2-13B">details</a> on how to experiment with a Llama-2-13b model customized using the SteerLM method.</p>
-<p>For users who want full enterprise security and support, SteerLM will be integrated into <a href="https://developer.nvidia.com/nemo">NVIDIA NeMo</a>, a rich framework for building, customizing and deploying large generative AI models.</p>
-<p>The SteerLM method works on all models supported on NeMo, including popular community-built pretrained LLMs such as Llama-2 and BLOOM.</p>
-<p>Read a <a href="https://developer.nvidia.com/blog/announcing-steerlm-a-simple-and-practical-technique-to-customize-llms-during-inference/">technical blog</a> to learn more about SteerLM.</p>
-<p><i>See </i><a href="https://www.nvidia.com/en-us/about-nvidia/legal-info/"><i>notice</i></a><i> regarding software product information.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/SteerLM-KV-x1280-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1089"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/SteerLM-KV-x1280-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Take the Wheel: NVIDIA NeMo SteerLM Lets Companies Customize a Model’s Responses During Inference]]></media:title>
-			<media:description type="html">Image for NVIDIA NeMo SteerLM</media:description>
 			</media:content>
 			</item>
 	</channel>
