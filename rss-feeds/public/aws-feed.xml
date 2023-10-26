@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 26 Oct 2023 07:48:33 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 26 Oct 2023 14:30:25 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,128 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>EFA: how fixing one thing, lead to an improvement for … everyone</title>
+		<link>https://aws.amazon.com/blogs/hpc/efa-how-fixing-one-thing-lead-to-an-improvement-for-everyone/</link>
+		
+		<dc:creator><![CDATA[Shi Jin]]></dc:creator>
+		<pubDate>Thu, 26 Oct 2023 14:30:25 +0000</pubDate>
+				<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[Drug Discovery]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[Finite Element Analysis]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[Molecular Modeling]]></category>
+		<category><![CDATA[MPI]]></category>
+		<category><![CDATA[Protein Folding]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">ba7892a9031f1d2a300dccb5eeca53894380222e</guid>
+
+					<description>Today, we're diving deep into the open-source frameworks that move MPI messages around, and showing you how work we did in the Open MPI and libfabrics community lead to an improvement for EFA users - and everyone else, too.</description>
+										<content:encoded>&lt;p&gt;We routinely test a lot of HPC applications to make sure they work well on AWS, because we think that’s the only benchmark that matters. Hardware improvements from generation to generation are always important, but software is more frequently the place we find gains for customers.&lt;/p&gt; 
+&lt;p&gt;Last summer, our performance teams alerted us to a discrepancy in runtimes when a single application ran with several different MPIs, while on the same hardware. At a high level, codes running with Open MPI were coming in a little slower than when using other commercial or open-source MPIs. This concerned us, because Open MPI is the most popular MPI option for customers using AWS Graviton (our home-grown Arm64 CPU) and we don’t want customers working on that processor to be disadvantaged.&lt;/p&gt; 
+&lt;p&gt;In today’s post, we’ll explain how deep our engineers had to go to solve this puzzle (spoiler: it didn’t end with Open MPI). We’ll show you the outcomes from that work with some benchmark results including a real workload.&lt;/p&gt; 
+&lt;p&gt;Along the way, we’ll give you a peek at how our engineers work in the open-source community to improve performance for everyone, and you’ll get a sense of the valuable contributions from the people in those communities who support these MPIs.&lt;/p&gt; 
+&lt;p&gt;And – of course – we’ll show you how to get your hands on this so your code just runs faster – on every CPU (not just Graviton).&lt;/p&gt; 
+&lt;h2&gt;First, some architecture&lt;/h2&gt; 
+&lt;p&gt;If you’ve been paying &lt;em&gt;close attention&lt;/em&gt; to the posts on this channel&lt;em&gt;,&lt;/em&gt; you’ll know that the Elastic Fabric Adapter (EFA) is key to much of the performance you see in our posts. EFA works underneath your MPI and is often (we hope) just plain invisible to you and your application. EFA’s responsibility is to move message messages securely – and rapidly – across our fabric between the instances that form parts of your cluster job. Doing this in a cloud environment adds an element or two to the task, because the cloud is both always under construction, and truly &lt;a href="https://youtu.be/JIQETrFC_SQ?t=1484"&gt;massive in scale&lt;/a&gt;. Scale isn’t the enemy however, and &lt;a href="https://aws.amazon.com/blogs/hpc/in-the-search-for-performance-theres-more-than-one-way-to-build-a-network/"&gt;we’ve exploited that fact&lt;/a&gt; to pull off &lt;a href="https://aws.amazon.com/blogs/hpc/second-generation-efa-improving-hpc-and-ml-application-performance-in-the-cloud/"&gt;great performance for HPC and ML codes&lt;/a&gt; with an interconnect built on the existing AWS network from existing technologies like Ethernet.&lt;/p&gt; 
+&lt;p&gt;EFA remains largely invisible, because we chose to expose it through libfabric, which is also known as Open Fabrics Interfaces (OFI). This is a communications API for lots of parallel and distributed computing applications. By design, it’s lower-level than, say, MPI, and so allows lots of hardware makers (like AWS) abstract their networking fabrics, so application programmers don’t need to pay attention to too many details of how they’re built.&lt;/p&gt; 
+&lt;div id="attachment_2860" style="width: 976px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2860" class="size-full wp-image-2860" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.04.03.png" alt="Figure 1 - Open Fabrics Interfaces (OFI), or libfabric is the abstraction we've chosen to expose EFA to MPIs and NCCL. This allows application programmers to be productive without needing to know too much about how the fabric underneath does its work." width="966" height="466"&gt;
+ &lt;p id="caption-attachment-2860" class="wp-caption-text"&gt;Figure 1 – Open Fabrics Interfaces (OFI), or libfabric is the abstraction we’ve chosen to expose EFA to MPIs and NCCL. This allows application programmers to be productive without needing to know too much about how the fabric underneath does its work.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;As Figure 1 shows, there are several components and APIs in libfabric that MPI interacts with. While it’s impossible to explain them all in this post, let’s take a minute to work through a simple API flow for MPI that sends and receives a message between two ranks – using libfabric.&lt;/p&gt; 
+&lt;h3&gt;An aside: a simple data flow example&lt;/h3&gt; 
+&lt;p&gt;There are 3 groups of libfabric APIs involved: a &lt;em&gt;data sending&lt;/em&gt; API, a &lt;em&gt;data receiving&lt;/em&gt; API, and a &lt;em&gt;completion polling&lt;/em&gt; API. We’ve illustrated their connections in Figure 2.&lt;/p&gt; 
+&lt;div id="attachment_2861" style="width: 553px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2861" loading="lazy" class="size-full wp-image-2861" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.05.04.png" alt="Figure 2 – API flow for MPI to send and receive a message between two ranks using libfabric." width="543" height="474"&gt;
+ &lt;p id="caption-attachment-2861" class="wp-caption-text"&gt;Figure 2 – API flow for MPI to send and receive a message between two ranks using libfabric.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;On the sender side, MPI initiates a message sending via the &lt;code&gt;fi_tsend&lt;/code&gt; API (&lt;a href="https://ofiwg.github.io/libfabric/main/man/fi_tagged.3.html"&gt;or its variants&lt;/a&gt;). This allows MPI to post a sending request that includes the address, length, and tag of the &lt;em&gt;sending&lt;/em&gt; buffer. On the receiver side, MPI posts a receiving request via the &lt;code&gt;fi_trecv&lt;/code&gt; API. This includes the address, length, and tag of the &lt;em&gt;receiving&lt;/em&gt; buffer. The tags are used for the receiver to filter what messages should be received from one or more senders.&lt;/p&gt; 
+&lt;p&gt;Both sending and receiving APIs return &lt;em&gt;asynchronously&lt;/em&gt;, which means the sending and receiving operations don’t necessarily complete when the calls return. Except for some special cases, MPI needs to poll a completion queue (CQ) to get the completion events for sending and receiving operations, through &lt;code&gt;fi_cq_read&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;Hopefully this gives you a picture of what goes on under the hood when MPI ranks want to communicate with each other. Anyhow, back to our main story now …&lt;/p&gt; 
+&lt;h2&gt;Intra-node comms&lt;/h2&gt; 
+&lt;p&gt;Digging deeper, the other MPIs seemed to have better &lt;em&gt;intra-node performance&lt;/em&gt; than Open MPI. This might sound a little surprising – you could be forgiven for presuming that &lt;em&gt;intra&lt;/em&gt;-node performance would be … more of a &lt;em&gt;solved problem&lt;/em&gt;. It’s literally cores sending messages to other cores &lt;em&gt;inside the same compute node&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;Open MPI is designed to use a layer called the &lt;strong&gt;matching transport layer&lt;/strong&gt; (MTL) whenever libfabric is used to manage the two-sided tagged message sending and receiving operations (there &lt;em&gt;is&lt;/em&gt; another layer called the &lt;em&gt;byte transfer layer&lt;/em&gt; that uses libfabric for one-sided operations, like write and read, but we’re not going to discuss it in this post). This layer offloads &lt;em&gt;all communications&lt;/em&gt;, whether they’re intra-node or inter-node, to the libfabric layer. This is different from how the others do it, because they use their own shared-memory implementations for intra-node communications, &lt;em&gt;by default&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;Other MPIs allow you to define which underlying libfabric provider they should use for shared memory operations (usually by tweaking some environment variables). Open MPI &lt;em&gt;also&lt;/em&gt; has its own shared-memory implementation in its BTL (Byte Transfer Layer) component (BTL/vader in Open MPI 4, and BTL/sm in Open MPI 5). This allowed us to explore several pathways to narrow down the specific portions of code where trouble was occurring.&lt;/p&gt; 
+&lt;p&gt;We noticed that when running on a single instance, Open MPI with BTL/SM had similar performance to the others when they were using their native routines. As we noted above, due to low-level implementation details in Open MPI, when libfabric is being used, BTL/SM &lt;em&gt;cannot&lt;/em&gt; be used.&lt;/p&gt; 
+&lt;p&gt;This is where some subtle effects can have quite impact on outcomes. When Open MPI sends an intra-node message through the libfabric EFA provider, the EFA provider actually hands over the message to the libfabric SHM provider, which is yet another provider in libfabric – &lt;em&gt;that supports pure intra-node communications&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;When we put this to the test with &lt;a href="http://mvapich.cse.ohio-state.edu/benchmarks/"&gt;OSU’s benchmarking suite&lt;/a&gt; and some instrumented code, the high level performance gap we noticed between Open MPI with libfabric EFA and the other MPI’s native implementations could be decomposed into – mainly – two parts:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;The gap between libfabric’s SHM provider itself and the others’ shared memory implementation.&lt;/li&gt; 
+ &lt;li&gt;The gap between libfabric with (EFA + SHM)&amp;nbsp;and libfabric SHM on its own.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;For a sense of scale, for small message sizes under 64 bytes (using a c5n.18xlarge instance) these gaps were adding around 0.4-0.5 µsec extra ping-pong latency. Given these are messages travelling &lt;em&gt;inside&lt;/em&gt; a machine and never making it to a PCI bus (let alone a network cable), this was a big penalty.&lt;/p&gt; 
+&lt;h2&gt;Community efforts&lt;/h2&gt; 
+&lt;p&gt;To address these two gaps, we needed to pursue directions of effort, in parallel.&lt;/p&gt; 
+&lt;p&gt;Addressing the first gap involving the libfabric SHM provider performance became an effort with the help of the libfabric maintainers to optimize the locking mechanisms in the queues, and some other details – which we’ll dive into in a future post.&lt;/p&gt; 
+&lt;p&gt;For the second gap involving the handoff between the EFA provider and the SHM provider, the AWS team worked to onboard the EFA provider using a newly-developed libfabric interface called&amp;nbsp;the &lt;a href="https://ofiwg.github.io/libfabric/main/man/fi_peer.3.html"&gt;Peer API&lt;/a&gt; so we could use the SHM provider as a &lt;em&gt;peer provider&lt;/em&gt;.&amp;nbsp;Peer providers are a way for independently developed providers to be used together in a tight fashion, which helps everyone (a) avoid layering overhead; and (b) resist the urge to duplicate each other’s’ provider functionality.&lt;/p&gt; 
+&lt;div id="attachment_2862" style="width: 1178px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2862" loading="lazy" class="size-full wp-image-2862" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.06.37.png" alt="Figure 3 - The base case before our improvement work began, characterized by a long pathway through all the layers of the stack, even though intra-node traffic should be able to short circuit much of it." width="1168" height="489"&gt;
+ &lt;p id="caption-attachment-2862" class="wp-caption-text"&gt;Figure 3 – The base case before our improvement work began, characterized by a long pathway through all the layers of the stack, even though intra-node traffic should be able to short circuit much of it.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We’ve illustrated the contrasting pathways that small messages traverse when using the Peer API. Figures 3 and 4 depict these two paradigms – before and after we introduced peering through this new API. We’ll summarize it from two angles: the data movement and the completion-events population.&lt;/p&gt; 
+&lt;div id="attachment_2863" style="width: 1151px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2863" loading="lazy" class="size-full wp-image-2863" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.08.18.png" alt="Figure 4 - After we introduced the Peer API, which effectively short-circuits the pathways an intra-node message needs to travel." width="1141" height="594"&gt;
+ &lt;p id="caption-attachment-2863" class="wp-caption-text"&gt;Figure 4 – After we introduced the Peer API, which effectively short-circuits the pathways an intra-node message needs to travel.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Data movement&lt;/h3&gt; 
+&lt;p&gt;&lt;strong&gt;Before using the Peer API&lt;/strong&gt;, when MPI sends a message using the libfabric EFA provider, it calls &lt;code&gt;fi_tsend()&lt;/code&gt;(&lt;a href="https://ofiwg.github.io/libfabric/main/man/fi_tagged.3.html"&gt;or its variants&lt;/a&gt;) through the EFA endpoint. The EFA provider performs protocol selection logic and adds EFA headers to the message body before posting the message again though the SHM endpoint. After getting the send request from EFA, SHM does its &lt;em&gt;own &lt;/em&gt;protocol selection and message packaging &lt;em&gt;again,&lt;/em&gt; before copying the message into a ‘bounce’ buffer, which is shared in both the sender’s and receiver’s memory spaces. Over on the receiver’s side, SHM will copy the received message to a bounce buffer in the EFA provider, before delivering the message to the application’s buffer via another memory copy. That’s a lot of memory copies.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;After using the Peer API&lt;/strong&gt;, on the sender’s side, EFA will check to see if SHM is enabled, and if the destination is on the same instance. If that’s true, EFA will immediately forward the &lt;code&gt;fi_tsend()&lt;/code&gt; request from MPI to SHM. On the receiver side, SHM copies the received message directly to the application buffer without the extra forwarding through the bounce buffer in the EFA layer.&lt;/p&gt; 
+&lt;h3&gt;Completion events population&lt;/h3&gt; 
+&lt;p&gt;The improvement on the completion events population is almost as dramatic. MPI gets a notification for the send/receive completion events by polling the completion queues.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Before using the Peer API&lt;/strong&gt;, the completion events generated by SHM when the actual send/receive operation completed needed another forwarding &lt;em&gt;inside&lt;/em&gt; the EFA provider before populating to the completion queues that the MPI polls from.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;After using the Peer API&lt;/strong&gt;, EFA and SHM just share the same completion queue allocated by MPI, and SHM can write the completion events directly to the queue.&lt;/p&gt; 
+&lt;h2&gt;Performance improvements&lt;/h2&gt; 
+&lt;p&gt;Let’s show you the performance improvements we saw when we ran both micro-benchmarks and real applications – the ultimate test.&lt;/p&gt; 
+&lt;p&gt;For micro benchmarks, we use the &lt;a href="https://mvapich.cse.ohio-state.edu/benchmarks/"&gt;OSU Latency benchmark&lt;/a&gt; to measure the latency of point-to-point comms for two ranks, and OSU’s &lt;code&gt;MPI_Alltoallw&lt;/code&gt; test to measure the latency for collective comms.&lt;/p&gt; 
+&lt;p&gt;For a real-world application, we ran &lt;a href="https://openfoam.org/"&gt;OpenFOAM&lt;/a&gt; with a 4M cell motorbike model.&lt;/p&gt; 
+&lt;p&gt;In our testing, we used Open MPI 4.1.5 with two different versions of libfabric: 1.18.1 (&lt;em&gt;before&lt;/em&gt; the Peer API), and 1.19.0 (&lt;em&gt;after&lt;/em&gt; implementing Peer API).&lt;/p&gt; 
+&lt;h3&gt;OSU latency&lt;/h3&gt; 
+&lt;p&gt;This is where the improvements from our combined efforts are most visible – by measuring the point-to-point (two-rank) MPI send and receive ping-pong latency.&lt;/p&gt; 
+&lt;p&gt;Figure 5 shows the OSU latency benchmark when running Open MPI with libfabric 1.18.1 (before using Peer API), and again with the newer libfabric 1.19.0 (after implementing the Peer API). We ran all these tests on two ranks on two different instance types: An hpc6a.48xlarge built around an x86 architecture, and the hpc7g.32xlarge, which is built using the AWS Graviton 3E – an Arm64 architecture.&lt;/p&gt; 
+&lt;div id="attachment_2988" style="width: 1090px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2988" loading="lazy" class="size-full wp-image-2988" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/23/CleanShot-2023-10-23-at-18.41.29.png" alt="Figure 5 - Peer to peer intra-node MPI ping-pong latency measurements, before and after we implemented the Peering API in our libfabric providers. Latency approximately halved, which is a dramatic improvement." width="1080" height="463"&gt;
+ &lt;p id="caption-attachment-2988" class="wp-caption-text"&gt;Figure 5 – Peer to peer intra-node MPI ping-pong latency measurements, before and after we implemented the Peering API in our libfabric providers. Latency approximately halved, which is a dramatic improvement.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The latency we measured approximately halved – a dramatic result, but in line with what we should expect when we removed all the unnecessary memory copies and method calls by using the Peer API, and the improvements in SHM itself.&lt;/p&gt; 
+&lt;p&gt;The work continues in this area: the gap between libfabric 1.19.0 and the other private implementations will likely be reduced further – our teams are working together with the libfabric community to optimize the SHM provider further, with a goal of making it comparable to MPICH. This is a space to watch.&lt;/p&gt; 
+&lt;h3&gt;OSU all-to-all communication&lt;/h3&gt; 
+&lt;p&gt;To see the impact on MPI &lt;em&gt;collective operations&lt;/em&gt;, we benchmarked &lt;code&gt;MPI_Alltoallw&lt;/code&gt; – well known for stressing MPI communications.&lt;/p&gt; 
+&lt;div id="attachment_2989" style="width: 1057px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2989" loading="lazy" class="size-full wp-image-2989" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/23/CleanShot-2023-10-23-at-18.42.06.png" alt="Figure 6 - The impact on collective operations. Latency dropped by between a third (in the case of the Hpc6a nodes) and a half (for Hpc7g)." width="1047" height="464"&gt;
+ &lt;p id="caption-attachment-2989" class="wp-caption-text"&gt;Figure 6 – The impact on collective operations. Latency dropped by between a third (in the case of the Hpc6a nodes) and a half (for Hpc7g).&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 6 shows the results again for running Open MPI with libfabric 1.18.1 (before Peer API), libfabric 1.19.0 (after Peer API). This time we used 64 ranks and conducted the tests as before: using Hpc6a and Hpc7g instances.&lt;/p&gt; 
+&lt;p&gt;The impact was significant. On Hpc6a, the latency fell generally by about a third. For Hpc7g, it fell by half.&lt;/p&gt; 
+&lt;h3&gt;OpenFOAM motorbike 4M case&lt;/h3&gt; 
+&lt;p&gt;The real test of our work is always an actual application that a customer runs: micro-benchmarks can only tell you so much. We ran the same &lt;em&gt;OpenFOAM motorBike 4M cell&lt;/em&gt; case on 4 x hpc6a.48xlarge (96 ranks per node) and 6 x hpc7g.16xlarge (64 ranks per node) – 386 total ranks in both cases. And in this case, we only tested with Open MPI, but with both our newer and older libfabric versions.&lt;/p&gt; 
+&lt;p&gt;We measured &lt;em&gt;runs per day&lt;/em&gt; to focus on what a customer will care about – the pace at which they can results from different CFD models. The runs showed around a 10% improvement from libfabric 1.18.1 to libfabric 1.19.0 across both instance types. We’ve graphed this in Figure 7.&lt;/p&gt; 
+&lt;div id="attachment_2990" style="width: 642px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2990" loading="lazy" class="size-full wp-image-2990" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/23/CleanShot-2023-10-23-at-18.42.58.png" alt="Figure 7 - Runs per day for our OpenFOAM workload across two instance types, both before and after Peer API was used. Both show around 10% improvement from the new methods." width="632" height="483"&gt;
+ &lt;p id="caption-attachment-2990" class="wp-caption-text"&gt;Figure 7 – Runs per day for our OpenFOAM workload across two instance types, both before and after Peer API was used. Both show around 10% improvement from the new methods.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;How to get this new code for your workloads&lt;/h2&gt; 
+&lt;p&gt;The improvements we’ve shown here are already in the main branch of the &lt;a href="https://github.com/ofiwg/libfabric"&gt;OFIWG/libfabric GitHub repo&lt;/a&gt; and they’re part of libfabric 1.19, which was released at the end of August. We ingested that into EFA installer 1.27.0, which also shipped recently. You can always &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa-start.html"&gt;check our documentation&lt;/a&gt; to find out how to get the latest version.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;The enhancements we’ve described in this post should make everyone’s lives easier. In most cases, the intra-node latency between ranks using Open MPI will drop by around a half – without any code changes in the end user application. In our real-world test using a CFD benchmark, we saw a 10% performance gain.&lt;/p&gt; 
+&lt;p&gt;We think there are two significant takeaways from this for the HPC community.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;The first&lt;/strong&gt; is that our engineering teams are always looking for ways to boost performance. Sometimes that happens in hardware, very often firmware, and – like today’s post – software, too. When we find those ways, we’ll roll them out as quick as we can, and they’ll form part of the pattern that cloud HPC users have come to expect: things just get faster (and easier) over time, without compromising security.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;The second&lt;/strong&gt; is that those same engineers work collaboratively with their counterparts at partners (and competitors, too) to make things better, and faster – for everyone. This collaborative angle, underscores a truth that innovation thrives in shared effort rather than isolated silos. We’re thankful to have been able to work with so many dedicated engineers from around the world to bring these results to you today.&lt;/p&gt; 
+&lt;p&gt;Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; if you have any questions – or if you want to find a way to contribute, too.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Unpacking the power of agent-based models for environmental and socio-economic impact</title>
 		<link>https://aws.amazon.com/blogs/hpc/unpacking-the-power-of-agent-based-models-for-environmental-and-socio-economic-impact/</link>
 		
@@ -25,7 +147,7 @@
 		<guid isPermaLink="false">7d5dc1a9167d60992b36e694dc5e534206fd493f</guid>
 
 					<description>Today we’ll help you understand agent-based models and their potential to impact the environment and socio-economic systems. We'll explore a few use cases and show how ABMs can improve our comprehension of environmental and social decision making.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="size-full wp-image-2848 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/08/boofla88_conways_game_of_life_as_a_concept_3D_close_zoom_photo__61aa6916-7a48-466e-93c7-00b102db121d.png" alt="" width="380" height="212"&gt;&lt;em&gt;This post was contributed by Namid Stillman, Quantitative Researcher at Simudyne, and Sam Bydlon and Ilan Gleiser from the Global Impact Computing team at AWS.&lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-2848 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/08/boofla88_conways_game_of_life_as_a_concept_3D_close_zoom_photo__61aa6916-7a48-466e-93c7-00b102db121d.png" alt="" width="380" height="212"&gt;&lt;em&gt;This post was contributed by Namid Stillman, Quantitative Researcher at Simudyne, and Sam Bydlon and Ilan Gleiser from the Global Impact Computing team at AWS.&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Agent-based modeling (ABM) is a powerful computational modeling approach that centers on the simulation of interactions between autonomous agents to understand the behavior of the broader system and its governing principles. Agent-based simulation can be traced back all the way to the mid-20&lt;sup&gt;th&lt;/sup&gt; century and John von Neumann’s universal constructor, but due to the large computational requirements of running agent-based simulations widespread development and application did not come until the 1990s.&lt;/p&gt; 
 &lt;p&gt;Since then, ABMs have evolved and gained prominence in helping us model and understand complex systems by representing the behaviors and interactions between agents. With the emergence of cloud technology, in particular high-performance computing services on AWS, agent-based simulation is poised to enter a new era of scale and accessibility. By developing simulations that mimic systems such as economies and scaling the number of agents to be comparable to reality, we can explore hypothetical scenarios that would not be possible, or might be too risky, to test in the real world.&lt;/p&gt; 
 &lt;p&gt;With the drop in computing costs and the democratization of HPC on AWS, ABMs have become a significant tool for analyzing the complexities of the environmental and socio-economic impacts of our decisions. By simulating interactions between individual ‘agents’, like households, governments, firms, trees, and vehicles, for example, ABMs can grant a deeper insight into effects of economic policy decisions, changes to supply chains, urban plastics flow, and climate risks, among others.&lt;/p&gt; 
@@ -2075,92 +2197,6 @@ ncview wrfout*
 &lt;/table&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;p&gt;We’re excited about this opportunity to give back to the HPC community alongside LLNL and look forward to meeting you all over the duration of the event.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Deploying and running HPC applications on AWS Batch</title>
-		<link>https://aws.amazon.com/blogs/hpc/deploying-and-running-hpc-applications-on-aws-batch/</link>
-		
-		<dc:creator><![CDATA[Dario La Porta]]></dc:creator>
-		<pubDate>Tue, 18 Jul 2023 15:46:07 +0000</pubDate>
-				<category><![CDATA[Amazon Elastic File System (EFS)]]></category>
-		<category><![CDATA[Amazon FSx for Lustre]]></category>
-		<category><![CDATA[AWS Service Catalog]]></category>
-		<category><![CDATA[AWS Step Functions]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<guid isPermaLink="false">c84fd32f4acbd74debeef9e525762984afdbb0d3</guid>
-
-					<description>In this post AWS Professional Services describes how they recommend using AWS Batch and Amazon Elastic Container Service (Amazon ECS) managed services for running HPC applications like GROMACS and RELION.</description>
-										<content:encoded>&lt;p&gt;In this document, we introduce the use of &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; and &lt;a href="https://aws.amazon.com/ecs/"&gt;Amazon Elastic Container Service (Amazon ECS)&lt;/a&gt; managed services for running HPC applications like &lt;a href="https://www.gromacs.org/"&gt;GROMACS&lt;/a&gt; and &lt;a href="https://relion.readthedocs.io/"&gt;RELION&lt;/a&gt;. The use of containers is combined with the traditional approach of building and provisioning HPC application binaries, which helps in keeping the container image small and avoiding the proliferation of per-application containers.&lt;/p&gt; 
-&lt;h2&gt;Executive Summary&lt;/h2&gt; 
-&lt;p&gt;The purpose of this document is to share the discoveries and best practices for migrating a simple HPC workflow, which includes batch and legacy X11 applications, to &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;. The goal is to showcase how to architect infrastructure using managed AWS services such as &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt;, &lt;a href="https://aws.amazon.com/efs/"&gt;Amazon Elastic File System&lt;/a&gt;, and &lt;a href="https://aws.amazon.com/step-functions/"&gt;AWS Step Functions&lt;/a&gt;, with the help of &lt;a href="https://aws.amazon.com/cdk/"&gt;AWS Cloud Development Kit(AWS CDK)&lt;/a&gt;, and make the solution available as a Service in &lt;a href="https://aws.amazon.com/servicecatalog/"&gt;AWS Service Catalog&lt;/a&gt; for a self-service user experience.&lt;/p&gt; 
-&lt;p&gt;The solution described here can be used for a broad range of HPC applications, including those with the most demanding CPU/GPU and networking requirements. In this case, we have selected GROMACS and RELION. GROMACS (GROningen MAchine for Chemical Simulations) is a Molecular Dynamics package used for simulating proteins, lipids, and nucleic acids. RELION (REgularised LIkelihood OptimisatioN) is used for processing electron cryo-microscopy (cryo-EM) images to identify 3D macromolecular structures. Both applications can run on CPUs or GPUs to accelerate compute-intensive steps, and they can scale out on multiple nodes through MPI (Message Passing Interface). The design of this solution is suitable for a Proof-of-Concept activity — &amp;nbsp;you should expect to do more integration work to enable these workloads in your production deployments.&lt;/p&gt; 
-&lt;h2&gt;Motivations&lt;/h2&gt; 
-&lt;p&gt;AWS offers a broad range of products and services that can be combined in various ways to achieve optimal price/performance and, more importantly, to attain business agility. The business outcomes underlying this project are as follows:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Performance optimization: This involves reducing costs by optimizing the application binaries and the underlying software stack of libraries. Costs-performance optimization can be achieved in two main ways: by selecting different &lt;a href="https://aws.amazon.com/ec2/instance-types/"&gt;Amazon EC2 instance types&lt;/a&gt; or by choosing the &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html"&gt;Spot&lt;/a&gt; pricing model.&lt;/li&gt; 
- &lt;li&gt;Reduction of dependency on legacy software applications: This goal aims to minimize the need for ongoing maintenance for software updates and fixes.&lt;/li&gt; 
- &lt;li&gt;Highly scalable HPC infrastructure: The objective is to automatically scale out/in the compute environment to meet the demands of the workload.&lt;/li&gt; 
- &lt;li&gt;Improved availability of the service to end users.&lt;/li&gt; 
- &lt;li&gt;Enhanced flexibility in balancing between minimum time and maximum cost savings.&lt;/li&gt; 
- &lt;li&gt;Software-defined infrastructure: This enables building and deploying through any CI/CD pipeline and facilitates self-service delivery.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;The goal of this post is to assess the feasibility of running highly demanding HPC applications in a fully managed and highly scalable environment based on fully managed HPC services such as AWS Batch and Amazon ECS.&lt;/p&gt; 
-&lt;h2&gt;Solution Overview&lt;/h2&gt; 
-&lt;p&gt;HPC applications like GROMACS and RELION, originally designed for traditional HPC systems, can be run on AWS using the same software stack utilized in on-premises static data centers. This can be achieved by leveraging the EC2 virtualization layer or employing EC2 metal instances, while benefiting from the high-performance networking offered by &lt;a href="https://aws.amazon.com/hpc/efa/"&gt;Elastic Fabric Adapter (EFA)&lt;/a&gt;. To handle scale-out/in, a job scheduler such as &lt;a href="https://slurm.schedmd.com/"&gt;SLURM&lt;/a&gt; can be deployed within an &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; instance.&lt;/p&gt; 
-&lt;p&gt;However, in this project, we have designed a cloud-native architecture based on managed services like AWS Batch, eliminating the reliance on third-party software for job scheduling (e.g., SLURM) and infrastructure elasticity management (e.g., extensions in ParallelCluster for scale-out/in based on the job queue).&lt;/p&gt; 
-&lt;p&gt;The use of Amazon ECS containers for HPC applications and workflows provides an additional level of flexibility, but it raises several key questions:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;How does application performance on AWS Batch/ECS compare to running on-premises/EC2?&lt;/li&gt; 
- &lt;li&gt;What is the optimal cost-performance tradeoff considering CPU and GPU instances, Spot, and On-Demand pricing?&lt;/li&gt; 
- &lt;li&gt;How efficiently does AWS Batch execute tightly-coupled and multi-node parallel applications in containers while leveraging EFA and high-performance file systems?&lt;/li&gt; 
- &lt;li&gt;What containerization strategy should be employed: one container for each distinct application or for a group of applications?&lt;/li&gt; 
- &lt;li&gt;How can Spot or On-Demand pricing be selectively used to further optimize costs?&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Addressing these questions will help determine the best approach for running HPC workloads on AWS and optimizing performance and cost-efficiency.&lt;/p&gt; 
-&lt;h2&gt;Architecture&lt;/h2&gt; 
-&lt;p&gt;The following architecture demonstrates how AWS services are combined to centrally manage applications and associated resources, achieving consistent governance and transforming workflows into IT services for end users.&lt;/p&gt; 
-&lt;div id="attachment_2545" style="width: 843px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2545" loading="lazy" class="size-full wp-image-2545" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/06/26/HPCBlog-194-fig1.png" alt="Figure 1: The architecture for deploying HPC applications on AWS Batch" width="833" height="618"&gt;
- &lt;p id="caption-attachment-2545" class="wp-caption-text"&gt;Figure 1: The architecture for deploying HPC applications on AWS Batch.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;To identify, manage, and audit the solution, the administrator can deploy the architecture using AWS CDK. This approach ensures flexibility and manages all content relevant to both the architecture itself and architecture governance processes.&lt;/p&gt; 
-&lt;p&gt;The architecture includes the following components:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;An AWS Batch compute environment used to run GROMACS and other containerized HPC applications&lt;/li&gt; 
- &lt;li&gt;A multi-layer storage solution consisting of Amazon S3, Amazon FSx for Lustre, and Amazon EFS&lt;/li&gt; 
- &lt;li&gt;An orchestration layer based on Step Functions&lt;/li&gt; 
- &lt;li&gt;A remote visualization layer using the NICE DCV remote display protocol for running RELION&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;The AWS Batch compute environment offers multiple queues with various EC2 instance types, including those with GPUs, as some workflows benefit from the NVIDIA Tensor Cores. Spot and On-Demand compute environments are utilized to prioritize either the cost, or completion time of simulations, aiming to avoid unnecessary expenses and control job completion time as suggested in the &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/welcome.html"&gt;Cost Optimization Pillar&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;For job monitoring and orchestration, AWS Step Functions are employed. The Step Functions workflow is designed to optimize job costs by first attempting execution on Spot Instances and then falling back to On-Demand instances in case of failure or pending status. This configuration ensures quick recovery from spot termination failures and meets demand, as described in the &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html"&gt;Reliability Pillar&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Considering the requirement for handling multiple categories of data, the solution incorporates different layers of storage. This configuration is based on the &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/performance-efficiency-pillar/welcome.html"&gt;Performance Efficiency Pillar&lt;/a&gt;, aiming to optimize workload performance.&lt;/p&gt; 
-&lt;p&gt;Amazon S3 is used as a high-resiliency, low-cost storage for input and output files. In a typical use case, the input file is downloaded from the S3 bucket during job bootstrap, and the generated output files are uploaded back to S3 upon completion. The bucket can be configured with a lifecycle policy to &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/lifecycle-transition-general-considerations.html"&gt;migrate files between storage classes&lt;/a&gt; based on file access or age, further optimizing costs.&lt;/p&gt; 
-&lt;p&gt;A high-performance scratch file system based on Amazon FSx for Lustre is utilized for staging GROMACS job input and output files. This file system is mounted on each EC2 instance running AWS Batch jobs, and the Docker environment is configured to export the mounted file system to the container.&lt;/p&gt; 
-&lt;p&gt;To simplify the compilation and installation of application binaries, the environment is integrated with the &lt;a href="https://spack.io/"&gt;Spack&lt;/a&gt; package manager and provided recipes. With Spack, it is possible to build packages with multiple versions, configurations, platforms, and compilers, all coexisting on the same machine. The &lt;a href="https://github.com/TACC/Lmod"&gt;Lmod&lt;/a&gt; environment manager is used to launch the installed applications.&lt;/p&gt; 
-&lt;p&gt;The application binaries are located in Amazon Elastic File System (EFS), which is also used to store job launch configurations and scripts. Similar to the FSx for Lustre file system, EFS is mounted on each EC2 instance running AWS Batch jobs and exported to the Docker container.&lt;/p&gt; 
-&lt;p&gt;The ECS container image has been created with an OS and software stack suitable for running both targeted applications. The use of a single container simplifies infrastructure deployment by using a general-purpose container compatible with the required applications. This configuration is possible because the container does not contain the application binaries; instead, they are installed with Spack in the shared file system.&lt;/p&gt; 
-&lt;p&gt;Post-execution analysis plays a crucial role in the scientists’ workflow. Therefore, the environment is configured to use &lt;a href="https://aws.amazon.com/hpc/dcv/"&gt;NICE DCV&lt;/a&gt;, allowing applications to run on CPU for software rendering or GPU for 3D/OpenGL rendering support. The ability to choose between software rendering or 3D/OpenGL rendering optimizes costs by selecting the appropriate instance type for the specific application.&lt;/p&gt; 
-&lt;p&gt;For system issue and application error collection, system logs are monitored and retrieved using Amazon CloudWatch.&lt;/p&gt; 
-&lt;p&gt;The IT personnel provision and update the infrastructure using the AWS Cloud Development Kit (CDK), ensuring reproducibility and simplifying maintenance. The infrastructure CDK can be designed to be general enough for reuse through AWS Service Catalog, supporting different business units and/or users located in different AWS Regions.&lt;/p&gt; 
-&lt;p&gt;The availability of AWS Service Catalog for end users transforms application workflows into IT services that are more reproducible and easier to maintain.&lt;/p&gt; 
-&lt;h2&gt;User Experience&lt;/h2&gt; 
-&lt;p&gt;The end user’s experience begins with AWS Service Catalog, where they will find the entry for “RELION”. Clicking on this entry will launch an AWS CloudFormation (CF) template, which has been created through CDK. Behind the scenes, the CF template will create a DCV Virtual Session running the RELION application in an X11 Linux Desktop and provide a link for connection using a common web browser or the DCV Client.&lt;/p&gt; 
-&lt;p&gt;RELION will be pre-configured with a custom script to submit a distinct Step Functions instance for each GROMACS job, implementing the desired data and job orchestration functions.&lt;/p&gt; 
-&lt;p&gt;The Step Functions task will retrieve input data and set up a work environment on FSx for Lustre for the job. It will then submit the job to a Spot queue in AWS Batch and monitor its execution. If the job remains pending, the task will terminate and resubmit it to an On-Demand queue. Once the job is completed, the Step Function will transfer the job results back to S3.&lt;/p&gt; 
-&lt;p&gt;The end user’s experience with RELION is identical to running the application on a static infrastructure with a rigid software stack like Slurm and VDI clusters. However, in this case, the user is presented with a simple entry in AWS Service Catalog. The use of ECS containers in conjunction with Batch’s scale-out/in capabilities and Step Functions workflows allows IT administrators to conceal the implementation details of the HPC infrastructure and data/job orchestration functions while minimizing costs.&lt;/p&gt; 
-&lt;h2&gt;Future Work&lt;/h2&gt; 
-&lt;p&gt;The AWS Batch compute environment depicted in Figure 1 is suitable for benchmarking purposes, as it allows for identifying the instance types that offer the best cost/performance ratio. However, for production environments, the Batch compute environment should be designed to span multiple Availability Zones, and the selection of instance types should be tailored to the specific workloads of the company.&lt;/p&gt; 
-&lt;p&gt;In addition to basic logging and event monitoring, it is recommended to collect job statistics, including execution times and costs, in production environments. These statistics can be aggregated into a dashboard that provides valuable insights on key business metrics for management and operational teams.&lt;/p&gt; 
-&lt;p&gt;Since the infrastructure is created through AWS CDK, it can be integrated into a higher-level system that automates the execution of an entire workflow. This workflow may include cluster deployment, job submission, retrieval and archiving of results, and can be triggered by an event such as dropping data into an S3 bucket.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we have outlined the best practices for deploying an HPC application stack on AWS using a range of AWS services. Through this project, we have successfully demonstrated the feasibility of using ECS containers and AWS Batch to run demanding HPC applications such as GROMACS and RELION.&lt;/p&gt; 
-&lt;p&gt;Compared to a software stack based on job schedulers like SLURM, our solution relies on fully managed services for job scheduling, resource allocation, and resource provisioning. This simplifies maintenance and reduces the operational costs of the system.&lt;/p&gt; 
-&lt;p&gt;We have designed the infrastructure using AWS CDK, enabling seamless integration with CI/CD pipelines and providing the potential for an HPC-as-a-Service solution. Additionally, we have optimized the storage architecture by implementing three layers of storage to achieve the best possible cost-to-performance ratio.&lt;/p&gt; 
-&lt;p&gt;The ability to run applications in containers combines the use of the widely adopted package manager, Spack, with containers that are optimized to leverage GPU acceleration. This is further facilitated by AWS Batch, which allows for the execution of tightly coupled MPI jobs on multiple nodes, leveraging the high-performance networking provided by EFA.&lt;/p&gt; 
-&lt;p&gt;To learn more, read about how to use &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/step-functions/"&gt;AWS Step Functions&lt;/a&gt;, &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; and &lt;a href="https://aws.amazon.com/cdk/"&gt;AWS CDK&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 					
 		
 		
