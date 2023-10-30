@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Sat, 28 Oct 2023 14:39:06 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 30 Oct 2023 16:08:04 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,124 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Deploying Level 4 Digital Twin Self-Calibrating Virtual Sensors on AWS</title>
+		<link>https://aws.amazon.com/blogs/hpc/deploying-level-4-digital-twin-self-calibrating-virtual-sensors-on-aws/</link>
+		
+		<dc:creator><![CDATA[Ross Pivovar]]></dc:creator>
+		<pubDate>Mon, 30 Oct 2023 15:04:39 +0000</pubDate>
+				<category><![CDATA[AWS IoT TwinMaker]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Internet of Things]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[HPC]]></category>
+		<guid isPermaLink="false">13884cdb21d9f5d41adb23e1c678c023812d8ed6</guid>
+
+					<description>Digital twins can be hard if they deviate from real-world behavior as real systems degrade and change over time. Today we’ll show digital twins that calibrate on operational data, using TwinFlow on AWS.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Ross Pivovar, Solution Architect, Autonomous Computing, and Adam Rasheed, Head of Autonomous Computing at AWS; and Kayla Rossi, Application Engineer, and Orang Vahid, Director of Engineering Services at Maplesoft.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;In a &lt;a href="https://aws.amazon.com/blogs/hpc/deploying-a-level-3-digital-twin-virtual-sensor-with-ansys-on-aws/"&gt;previous post&lt;/a&gt; we shared the common customer use case of deploying &lt;a href="https://aws.amazon.com/blogs/hpc/deploying-a-level-3-digital-twin-virtual-sensor-with-ansys-on-aws/"&gt;Level 3 Digital Twin (L3 DT) virtual sensors&lt;/a&gt; to help operators make more informed decisions in situations where using physical sensors is difficult, expensive, or impractical. One of the challenges is that L3 DT virtual sensors use pre-trained models that deviate from real-world behavior as the physical system degrades and changes over time. Operators then become hesitant to base operational decisions solely on the L3 DT virtual sensor predictions.&lt;/p&gt; 
+&lt;p&gt;Today we’ll describe how to build and deploy L4 DT self-calibrating virtual sensors where operational data is used to automatically calibrate the virtual sensor. This automated self-calibration allows the virtual sensor predictions to adapt and more closely match the real-world, allowing the operators to take proactive corrective actions to prevent failures and optimize performance. For more discussion on the different levels for digital twins, check out &lt;a href="https://aws.amazon.com/blogs/iot/digital-twins-on-aws-unlocking-business-value-and-outcomes/"&gt;our previous post describing the AWS L1-L4 Digital Twin framework&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;In this post, we use a&lt;a href="https://en.wikipedia.org/wiki/Modelica"&gt; Modelica&lt;/a&gt;-based model created using &lt;a href="https://www.maplesoft.com/products/maplesim/"&gt;Maplesoft’s MapleSim simulation and engineering design software&lt;/a&gt;. MapleSim provides the tools to create engineering simulation models of machine equipment and exports them as Functional Mockup Units (FMUs) which is an industry standard file format for simulation models. We then use &lt;a href="https://aws.amazon.com/blogs/hpc/predictive-models-and-simulations-with-twinflow-on-aws/"&gt;TwinFlow&lt;/a&gt; to deploy the model on AWS and calibrate the FMU using probabilistic Bayesian estimation techniques to statistically infer the unmeasured model coefficients – using the incoming sensor data to calibrate against. TwinFlow is an AWS open-source framework for building and deploying predictive models at scale.&lt;/p&gt; 
+&lt;h2&gt;Roll-to-roll manufacturing&lt;/h2&gt; 
+&lt;p&gt;For our use case, we’ll consider the web-handling process in roll-to-roll manufacturing (depicted in Figure 1) used for continuous materials such as paper, film, and textiles. The web-handling process involves unwinding the material from a spool, guiding it through various treatments such as printing or coating, and then winding it onto individual rolls. Precise control of tension, alignment, and speed is essential to ensure smooth processing and maintain product quality.&lt;/p&gt; 
+&lt;p&gt;&lt;iframe title="Web Line Perspective 2023 07 20" width="500" height="281" src="https://www.youtube-nocookie.com/embed/gouyAMuY6fs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
+&lt;div class="wp-caption aligncenter" style="width: 945px"&gt; 
+ &lt;p id="caption-attachment-2964" class="wp-caption-text"&gt;Figure 1: A short movie showing the dynamics of the web material handling process in roll to roll manufacturing. The web material is the sheet passing through the rollers which control the tension and speed of the manufacturing process. The driven rollers set the web speed and tension.&lt;/p&gt; 
+&lt;/div&gt; 
+&lt;p&gt;There are many different failure mechanisms, however for this post, we’ll focus on two failure modes: &lt;strong&gt;high tension failures&lt;/strong&gt; and &lt;strong&gt;slip failures&lt;/strong&gt;.&lt;/p&gt; 
+&lt;p&gt;Figure 2 shows a schematic diagram of the web-handling equipment with the material spans between the rollers labeled from S1 through S12. Figure 2b shows a screenshot of the MapleSim web-handling simulation model of the roll-to-roll manufacturing line.&lt;/p&gt; 
+&lt;div id="attachment_2964" style="width: 945px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2964" loading="lazy" class="size-full wp-image-2964" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure2.jpg" alt="Figure 2: a) Schematic diagram of the web handling equipment in which each span is labeled, and b) Screenshot of the MapleSim simulation model of the web handling equipment." width="935" height="560"&gt;
+ &lt;p id="caption-attachment-2964" class="wp-caption-text"&gt;Figure 2: a) Schematic diagram of the web handling equipment in which each span is labeled, and b) Screenshot of the MapleSim simulation model of the web handling equipment.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Referring to Figure 2, tension failures occur when the tension within the material at a particular span exceeds a threshold (175 Newtons in this example) resulting in web deformities like wrinkling and troughing. Slip failures are more subtle and occur when the relative movement between the web material and rollers isn’t in sync, causing the web to be dragged across the roller. Slip failures are quantified by measuring the slip velocity which is the difference between the linear velocity of the web material and the tangential velocity of the roller. We consider it a slip failure when the slip velocity exceeds a threshold (0.0001 m/s in this case). It can result in difficult-to-detect defects, misalignment, and reduced product quality if not controlled.&lt;/p&gt; 
+&lt;p&gt;Tension and slip are measurable variables, but it’s expensive and intrusive to add these sensors at every location along the manufacturing line. It’s more common to have a limited number of these sensors at key locations while measuring the angular velocity (rotation speed, often colloquially referred to as RPM) of each of the rollers and relying on best practices to control the manufacturing process. This results in sub-optimal process control and relies heavily on operator experience. A digital twin of this process can be used to calculate the tension and slip velocity when combined with the proper IoT data.&lt;/p&gt; 
+&lt;p&gt;Both failure mechanisms are the direct result of the rollers becoming more difficult to turn because of dirt and grime fouling the bearings, increasing the viscous friction. In our example, the viscous friction of the rollers is accounted for in the MapleSim model. The model solves the equations of motion, but requires estimates of the viscous friction coefficients to use for the rollers in the model. Viscous friction (damping) is not a directly measurable variable but can be inferred by calibrating the model using the measured angular velocities.&lt;/p&gt; 
+&lt;p&gt;In essence, we’re seeking to infer the viscous friction coefficient by leveraging statistics, the FMU model, and our probabilistic Bayesian estimation methods.&lt;/p&gt; 
+&lt;p&gt;We use the calibrated L4 Digital Twin to create self-calibrating virtual sensors of tension and slip velocity. These L4 DT self-calibrating virtual sensors can then be used by operators to support operational decisions to control the manufacturing process.&lt;/p&gt; 
+&lt;h2&gt;Example failure scenario&lt;/h2&gt; 
+&lt;p&gt;To understand the process of combining IoT data streams with the FMU model to create an L4 Digital Twin, we’ll examine a failure scenario that we simulated. In our synthetic failure scenario, we introduced defects for rollers 3 and 9 in the form of contamination – leading to increased friction. Here, we linearly increased the bearing viscous damping coefficients from 0 on Day 15 to 0.2 on Day 23 (which we’ve shown in Figure 3).&lt;/p&gt; 
+&lt;div id="attachment_2965" style="width: 896px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2965" loading="lazy" class="size-full wp-image-2965" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure3.jpg" alt="Figure 3: Plot showing the artificially induced increase in viscous damping for rollers 3 and 9 starting from 0 on Day 15 to 0.2 on Day 23." width="886" height="480"&gt;
+ &lt;p id="caption-attachment-2965" class="wp-caption-text"&gt;Figure 3: Plot showing the artificially induced increase in viscous damping for rollers 3 and 9 starting from 0 on Day 15 to 0.2 on Day 23.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 4 shows the angular velocity measurements (both plots show the same data with different y-axis scale) for each of the rollers. Figure 4b shows that – as expected – at Day 15, the angular velocity for rollers 3 and 9 begin to change because of the increasing viscous damping we introduced to simulate dirt build-up. Since the entire web line is linked via the material, a single roller increasing in resistance impacts the angular velocities of the surrounding rollers. In our case, we see that rollers 1,2,3,7,8,9, and 10 all experience changes in angular velocity.&lt;/p&gt; 
+&lt;p&gt;By Day 21, the dirt build-up is sufficient to cause a very large change in the angular velocity of roller 9 as we’ve shown in Figure 4.&lt;/p&gt; 
+&lt;div id="attachment_2966" style="width: 1384px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2966" loading="lazy" class="size-full wp-image-2966" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure4.jpg" alt="Figure 4: Incoming IoT data streams for angular velocity. Left and right figures are the same data with the scaling of the y-axis changed to enable observing tiny differences." width="1374" height="442"&gt;
+ &lt;p id="caption-attachment-2966" class="wp-caption-text"&gt;Figure 4: Incoming IoT data streams for angular velocity. Left and right figures are the same data with the scaling of the y-axis changed to enable observing tiny differences.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 5 shows the corresponding span tensions and slip velocities (that we would measure with IoT sensors if they were installed) leading to tension failures in spans 4, 5, and 6 and slip failure at roller 9. Figure 5a shows spans 4, 5, and 6 exceeding the 175N threshold and Figure 5b shows roller 9 with non-zero slip velocity.&lt;/p&gt; 
+&lt;div id="attachment_2967" style="width: 1351px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2967" loading="lazy" class="size-full wp-image-2967" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure5.jpg" alt="Figure 5: a) Measured span tensions during the dirt build up scenario in which spans 4,5, and 6 exceed the failure threshold for the webbing material, and b) measured roller slip velocities during the dirt build up scenario in which roller 9 eventually exhibits significant slippage around day 21." width="1341" height="399"&gt;
+ &lt;p id="caption-attachment-2967" class="wp-caption-text"&gt;Figure 5: a) Measured span tensions during the dirt build up scenario in which spans 4,5, and 6 exceed the failure threshold for the webbing material, and b) measured roller slip velocities during the dirt build up scenario in which roller 9 eventually exhibits significant slippage around day 21.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;As mentioned already, in practice, operators typically only measure the angular velocity of the rollers – and span tension might be measured using a load cell for only one span across the entire production line.&lt;/p&gt; 
+&lt;p&gt;This example shows the importance of calibrating the system model to use the correct viscous friction coefficients. Without regular calibrations, the model predictions for span tension and roller slip velocity will be incorrect, resulting in the operator being unaware of potential, impending failures.&lt;/p&gt; 
+&lt;h2&gt;Using TwinFlow to calibrate the L4 Digital Twin&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/blogs/hpc/predictive-models-and-simulations-with-twinflow-on-aws/"&gt;TwinFlow&lt;/a&gt; is the AWS open-source framework for building and deploying millions of predictive models at scale on a distributed, heterogeneous architecture. TwinFlow incorporates the &lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph&lt;/a&gt; module to orchestrate the model deployment and the &lt;a href="https://github.com/aws-samples/twinstat"&gt;TwinStat&lt;/a&gt; module which includes statistical methods for building and deploying L4 Digital Twins. These methods include techniques to build quick-execution (seconds or less) response surface models (RSMs) from complex simulation models that could take hours to run and would be too costly and too slow to support operational decisions.&lt;/p&gt; 
+&lt;p&gt;The TwinStat module also includes methods to probabilistically update and calibrate L4 Digital Twins. In our case, the MapleSim model is exported as an FMU which already has a very quick execution time on the order of a few seconds. Since the degradation effect due to roller dirt accumulation is gradual (hours to days), our FMU execution time is more than sufficient – and cost-efficient.&lt;/p&gt; 
+&lt;p&gt;The model calibration techniques in TwinStat include probabilistic Bayesian estimation methods like &lt;a href="https://en.wikipedia.org/wiki/Kalman_filter"&gt;Unscented Kalman Filters (UKF)&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Particle_filter"&gt;Particle Filters (PF)&lt;/a&gt;, and &lt;a href="https://en.wikipedia.org/wiki/Gaussian_process"&gt;Gaussian Processes&lt;/a&gt;. Each of the methods have pros and cons and preferred scenarios, which we’ll discuss in a future post. For our present use case, UKF provides the necessary accuracy while minimizing the compute time. We used UKF in TwinFlow with the MapleSim FMU model to calibrate the viscous coefficients using the measured angular velocity IoT data.&lt;/p&gt; 
+&lt;p&gt;To use TwinFlow, we needed an appropriately-sized Amazon EC2 instance. For our specific scenario (fast FMU with low memory requirements) we wanted to minimize the network overhead, hardware procurement time, and container download and activation time needed to run UKF. We know that UKF scales with the number of FMU executions by 2*D+1, where D is the number of variables included in the UKF. For our example, we have 9 measured angular velocities and 9 unmeasured viscous damping coefficients for a total of 18 variables. For each incoming IoT data point, UKF will run the FMU 37 times. Thus, we select an EC2 instance with around 37 cores for optimal runtime performance. In this scenario, the FMU is single-threaded (you’d need to increase your instance size if you used a multi-threaded FMU with UKF). TwinFlow parallelizes the UKF execution with multi-processing, thus the more CPUs, the shorter the runtime.&lt;/p&gt; 
+&lt;p&gt;In our calibration example, we used the synthetic dataset for the angular velocity plotted in Figure 4 to represent the real-world measured sensor data. We used UKF to iterate and determine the correct viscous damping coefficients in the FMU model to match the measured angular velocities. Figure 6a shows the values determined by UKF for the viscous damping coefficients, as well as the estimates of uncertainty (shaded regions around the lines).&lt;/p&gt; 
+&lt;p&gt;We see that UKF correctly estimates the coefficients to be approximately zero for all rollers &lt;em&gt;except 3 and 9&lt;/em&gt;, which increased to a value of approximately 0.20, giving us confidence that UKF is successfully calibrating the L4 Digital Twin to model the evolving behavior of the web-handling system.&lt;/p&gt; 
+&lt;p&gt;Figure 6b shows how the UKF estimates for angular velocity lies directly on top of the IoT sensor data (open circle data points). The shaded region represents uncertainty.&lt;/p&gt; 
+&lt;div id="attachment_2968" style="width: 634px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2968" loading="lazy" class="size-full wp-image-2968" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure6.jpg" alt="Figure 6: a) UKF estimates for a) viscous damping coefficients (commonly denoted with letter ”b” ) and b) angular velocity of each roller with uncertainty estimations (shaded region). We see that the viscous damping coefficients for rollers 3 and 9 increase from 0 to 0.2, corresponding to the failure scenario we manually introduced when creating the synthetic data, and we see the UKF angular velocity estimates matching the IoT synthetic data." width="624" height="244"&gt;
+ &lt;p id="caption-attachment-2968" class="wp-caption-text"&gt;Figure 6: a) UKF estimates for a) viscous damping coefficients (commonly denoted with letter ”b” ) and b) angular velocity of each roller with uncertainty estimations (shaded region). We see that the viscous damping coefficients for rollers 3 and 9 increase from 0 to 0.2, corresponding to the failure scenario we manually introduced when creating the synthetic data, and we see the UKF angular velocity estimates matching the IoT synthetic data.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We can now examine the performance of the L4 Digital Twin self-calibrated virtual sensor for tension and slip by checking the residuals are close to zero. The &lt;em&gt;residual&lt;/em&gt; is the difference between the virtual sensor predicted value and the actual IoT measured data value (in this case our synthetic dataset).&lt;/p&gt; 
+&lt;p&gt;Figure 7 shows the residuals for tension and slip velocity are near zero, meaning that the virtual sensor predicted values closely match the true values, and we can eliminate the costly physical sensors for measuring tension and slip velocity.&lt;/p&gt; 
+&lt;div id="attachment_2969" style="width: 768px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2969" loading="lazy" class="size-full wp-image-2969" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure7.jpg" alt="Figure 7: Residuals of the digital twin output comparing tension on the left and slip velocity on the right. Due to the example scenario using synthetic data that is noiseless, the residuals are almost perfectly zero." width="758" height="312"&gt;
+ &lt;p id="caption-attachment-2969" class="wp-caption-text"&gt;Figure 7: Residuals of the digital twin output comparing tension on the left and slip velocity on the right. Due to the example scenario using synthetic data that is noiseless, the residuals are almost perfectly zero.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Now, we compare the results of using an uncalibrated L3 virtual sensor model with the L4 self-calibrating virtual sensor.&lt;/p&gt; 
+&lt;p&gt;Figure 8a shows that the L3 digital twin initially matches the measured angular velocity, but then misses the changes as the system performance degrades due to dirt accumulation, whereas the L4 self-calibrated digital twin virtual sensor evolves with the real physical system and matches the measured data closely. Similarly, Figure 8b and Figure 8c show that the L3 (uncalibrated) virtual sensors initially match the measured data, but then underpredict the roller 9 slip velocity and the span 6 tension as the system degrades and the operator is completely unaware of the impending failure.&lt;/p&gt; 
+&lt;p&gt;The L4 (self-calibrating) virtual sensor predictions, however, closely match the measured data, allowing the operator to take corrective actions &lt;em&gt;prior to failure&lt;/em&gt;. The slip failure is particularly noteworthy since it induces difficult-to-detect material imperfections that can make their way into the final product. We see that the L3 uncalibrated virtual sensor initially makes reasonable predictions, but as the web-handling system behavior evolves over time (due to real-world degradation), a self-calibrating L4 virtual sensor is required to adapt the model to the changing real-world conditions.&lt;/p&gt; 
+&lt;div id="attachment_2970" style="width: 634px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2970" loading="lazy" class="size-full wp-image-2970" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure8.jpg" alt="Figure 8: Comparison of a digital twins that are either calibrated or uncalibrated relative to measured data." width="624" height="204"&gt;
+ &lt;p id="caption-attachment-2970" class="wp-caption-text"&gt;Figure 8: Comparison of a digital twins that are either calibrated or uncalibrated relative to measured data.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;AWS Architecture&lt;/h2&gt; 
+&lt;p&gt;These are great results, so it’s worth taking a moment to explain what architectural decisions we made that allowed us to get here.&lt;/p&gt; 
+&lt;p&gt;The AWS architecture used for the L4 Digital Twin virtual sensor calibration is shown in Figure 9. In our scenario, we periodically collected sensor data every 10-20 mins – a sufficient time resolution to capture the failure phenomena of interest.&lt;/p&gt; 
+&lt;p&gt;It’s important to balance the trade-off of increased time resolution versus what is needed for the use case, as gathering a lot of data at high frequency results in unnecessary data storage and additional compute costs. We used an &lt;a href="https://aws.amazon.com/eventbridge/"&gt;Amazon EventBridge&lt;/a&gt; scheduler to enable periodic calibration. We could have alternatively added logic to the container code to first calculate the error of the digital twin and decided to only calibrate if an error threshold is violated. And since Amazon EventBridge can only handle a maximum of 100 scheduling rules, we’d need to modify the architecture to use a Lambda function between Amazon EventBridge and &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, if we needed to scale to millions of tasks.&lt;/p&gt; 
+&lt;p&gt;In Step 1 in Figure 9, we’ve shown how you can download &lt;a href="https://github.com/aws-samples/twinflow"&gt;TwinFlow&lt;/a&gt; to a temporary EC2 instance where they can customize, build, and push containers to cloud repositories, and then deploy your infrastructure as code (IaC).&lt;/p&gt; 
+&lt;p&gt;Next, you can modify the example container and insert your own model into the container. The container gets pushed up to Amazon Elastic Container Registry (Amazon ECR) where it’s now available to all AWS services.&lt;/p&gt; 
+&lt;p&gt;At step 4, you connect your IoT data from an edge location into a cloud database like &lt;a href="https://aws.amazon.com/iot-sitewise/"&gt;AWS IoT SiteWise&lt;/a&gt;, which is a serverless database designed to handle sensors with user defined attributes.&lt;/p&gt; 
+&lt;p&gt;At this point, the Amazon EventBridge scheduler calls tasks in an &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; compute environment which loads the customized container, pulls data from &lt;a href="https://aws.amazon.com/iot-sitewise/"&gt;AWS IoT SiteWise&lt;/a&gt;, calibrates the L4 Digital Twin, saves the calibration to an S3 bucket, makes physics predictions, and saves them back in AWS IoT SiteWise.&lt;/p&gt; 
+&lt;p&gt;AWS Batch selects the optimal EC2 instance type, auto-scales up or out, and logs all task output in Amazon CloudWatch. Finally, we used &lt;a href="https://aws.amazon.com/iot-twinmaker/"&gt;AWS IoT TwinMaker&lt;/a&gt; to create dashboards in Grafana so operators can review the measured and predicted data in near real time – and make operational decisions.&lt;/p&gt; 
+&lt;div id="attachment_2971" style="width: 987px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2971" loading="lazy" class="size-full wp-image-2971" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/HPCBlog-244-fig9.png" alt="Figure 9: AWS Cloud architecture needed to achieve digital twin periodic-calibration" width="977" height="550"&gt;
+ &lt;p id="caption-attachment-2971" class="wp-caption-text"&gt;Figure 9: AWS Cloud architecture needed to achieve digital twin periodic-calibration.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we showed how to build an L4 Digital Twin self-calibrating virtual sensor on AWS using an FMU model created by MapleSim.&lt;/p&gt; 
+&lt;p&gt;MapleSim provides the physics model in the form of an FMU, and TwinFlow allows us to use incoming IoT data to probabilistically calibrate the L4 Digital Twin virtual sensor for &lt;em&gt;span tension&lt;/em&gt; and &lt;em&gt;roller slip velocity&lt;/em&gt;. In future posts, we’ll discuss how to use the calibrated L4 Digital Twin to perform scenario analysis, risk assessment, and process optimization.&lt;/p&gt; 
+&lt;p&gt;If you want to request a proof of concept or if you have feedback on the AWS tools, reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Some of the content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/kayla-rossi-profile.png" alt="Kayla Rossi" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Kayla Rossi&lt;/h3&gt; 
+  &lt;p&gt;Kayla is an Application Engineer at Maplesoft providing customers with advanced engineering support for the digital modeling of their complex production machines. Her project experience includes the simulation and analysis of web handling and converting systems across various industrial applications, including printing and battery production.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/orang-vahid-profile.png" alt="Dr. Orang Vahid" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Dr. Orang Vahid&lt;/h3&gt; 
+  &lt;p&gt;Orang has over 20 years of experience in system-level modeling, advanced dynamic systems, frictional vibration and control, automotive noise and vibration, and mechanical engineering design. He is a frequent invited speaker and has published numerous papers on various topics in engineering design. At Maplesoft he is Director of Engineering Services, with a focus on the use and development of MapleSim solutions.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>EFA: how fixing one thing, led to an improvement for … everyone</title>
 		<link>https://aws.amazon.com/blogs/hpc/efa-how-fixing-one-thing-lead-to-an-improvement-for-everyone/</link>
 		
@@ -48,7 +166,7 @@
 &lt;p&gt;If you’ve been paying &lt;em&gt;close attention&lt;/em&gt; to the posts on this channel&lt;em&gt;,&lt;/em&gt; you’ll know that the Elastic Fabric Adapter (EFA) is key to much of the performance you see in our posts. EFA works underneath your MPI and is often (we hope) just plain invisible to you and your application. EFA’s responsibility is to move messages securely – and rapidly – across our fabric between the instances that form parts of your cluster job. Doing this in a cloud environment adds an element or two to the task, because the cloud is both always under construction, and truly &lt;a href="https://youtu.be/JIQETrFC_SQ?t=1484"&gt;massive in scale&lt;/a&gt;. Scale isn’t the enemy however, and &lt;a href="https://aws.amazon.com/blogs/hpc/in-the-search-for-performance-theres-more-than-one-way-to-build-a-network/"&gt;we’ve exploited that fact&lt;/a&gt; to pull off &lt;a href="https://aws.amazon.com/blogs/hpc/second-generation-efa-improving-hpc-and-ml-application-performance-in-the-cloud/"&gt;great performance for HPC and ML codes&lt;/a&gt; with an interconnect built on the existing AWS network from existing technologies like Ethernet.&lt;/p&gt; 
 &lt;p&gt;EFA remains largely invisible, because we chose to expose it through libfabric, which is also known as Open Fabrics Interfaces (OFI). This is a communications API for lots of parallel and distributed computing applications. By design, it’s lower-level than, say, MPI, and so allows lots of hardware makers (like AWS) to abstract their networking fabrics, so application programmers don’t need to pay attention to too many details of how they’re built.&lt;/p&gt; 
 &lt;div id="attachment_2860" style="width: 976px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2860" class="size-full wp-image-2860" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.04.03.png" alt="Figure 1 - Open Fabrics Interfaces (OFI), or libfabric is the abstraction we've chosen to expose EFA to MPIs and NCCL. This allows application programmers to be productive without needing to know too much about how the fabric underneath does its work." width="966" height="466"&gt;
+ &lt;img aria-describedby="caption-attachment-2860" loading="lazy" class="size-full wp-image-2860" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.04.03.png" alt="Figure 1 - Open Fabrics Interfaces (OFI), or libfabric is the abstraction we've chosen to expose EFA to MPIs and NCCL. This allows application programmers to be productive without needing to know too much about how the fabric underneath does its work." width="966" height="466"&gt;
  &lt;p id="caption-attachment-2860" class="wp-caption-text"&gt;Figure 1 – Open Fabrics Interfaces (OFI), or libfabric is the abstraction we’ve chosen to expose EFA to MPIs and NCCL. This allows application programmers to be productive without needing to know too much about how the fabric underneath does its work.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;As Figure 1 shows, there are several components and APIs in libfabric that MPI interacts with. While it’s impossible to explain them all in this post, let’s take a minute to work through a simple API flow for MPI that sends and receives a message between two ranks – using libfabric.&lt;/p&gt; 
@@ -2084,119 +2202,6 @@ ncview wrfout*
 &lt;p&gt;Digital technologies are revolutionizing the way businesses operate and achieve their goals. Leveraging these technologies, businesses can now create an effective and sustainable circular economy that reduces waste, maximizes resource utilization, and minimizes environmental impacts.&lt;/p&gt; 
 &lt;p&gt;With these tools, companies can create closed-loop systems &lt;em&gt;designed&lt;/em&gt; to reuse and recycle resources, resulting in a more sustainable business model. To make the most of these digital technologies, businesses should focus on creating flexible systems that can be tailored to meet the changing needs of their customers.&lt;/p&gt; 
 &lt;p&gt;Using AWS technologies such as artificial intelligence, machine-learning, high-performance computing, IOT and Blockchain, the AWS Global Impact Computing Team is actively involved in driving this transformation. If you are interested in learning more how we can support your business, please reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;. With the right digital transformation strategy and AWS support, companies can successfully implement a circular economy business model that brings long-term economic, social, and environmental benefits.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Call for participation: RADIUSS Tutorial Series 2023</title>
-		<link>https://aws.amazon.com/blogs/hpc/call-for-participation-radiuss-tutorial-series-2023/</link>
-		
-		<dc:creator><![CDATA[Brendan Bouffler]]></dc:creator>
-		<pubDate>Thu, 20 Jul 2023 14:43:29 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Research]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">bf60ac5fc9d32b2a05eccff237b773604ff35782</guid>
-
-					<description>Lawrence Livermore National Laboratory (LLNL) and AWS are again joining forces to provide a training opportunity for emerging HPC tools and application. In this post you'll find out the details of those tutorials, and find out how to participate.</description>
-										<content:encoded>&lt;p&gt;Lawrence Livermore National Laboratory (LLNL) and AWS are again joining forces to provide a training opportunity for emerging HPC tools and application. RADIUSS (&lt;a href="http://software.llnl.gov/radiuss/"&gt;Rapid Application Development via an Institutional Universal Software Stack&lt;/a&gt;) is a broad suite of open-source software projects originating from LLNL. Together we’re hosting a tutorial series to give attendees hands-on experience with these cutting-edge technologies. We’re calling on you to participate in these events.&lt;br&gt; &lt;img loading="lazy" class="size-full wp-image-1549 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2022/07/22/HPCBlog-149-fig1.png" alt="Various logos for the RADIUSS projects. " width="400" height="166"&gt;&lt;/p&gt; 
-&lt;p&gt;This &lt;a href="https://software.llnl.gov/radiuss/event/2023/07/11/radiuss-on-aws/"&gt;virtual series&lt;/a&gt; consists of &lt;strong&gt;nine distinct tutorials&lt;/strong&gt; through the month of August (two more than last year). Each tutorial focuses on a specific package from the RADIUSS suite. You’ll get hands-on experience with each project and learn more about HPC deployments on AWS. Each event will be hosted on AWS resources and use &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; to provide an HPC environment for you to use, and gain experience with.&lt;/p&gt; 
-&lt;p&gt;LLNL has a long history of delivering some of the world’s largest supercomputers and the supporting software to effectively use them. This &lt;a href="https://www.llnl.gov/news/llnl-amazon-web-services-cooperate-standardized-software-stack-hpc"&gt;collaboration between LLNL and AWS&lt;/a&gt; brings these projects and industry best practices to a broader community. Together we’re hoping to democratize access to next generation computational research tools and HPC resources.&lt;/p&gt; 
-&lt;h2&gt;How to Participate&lt;/h2&gt; 
-&lt;p&gt;Come join us in learning how these projects can help advance your HPC research and improve efficiency. These tutorials provide a great opportunity to learn modern techniques and tools in an adaptive cloud environment.&lt;/p&gt; 
-&lt;p&gt;To register your interest, sign up for the tutorials through the &lt;a href="https://forms.gle/F1o6L6phiaruYWNp8"&gt;RADIUSS event form&lt;/a&gt;. Details of each event and registration deadlines are listed in the following table.&lt;/p&gt; 
-&lt;table class="aligncenter" style="height: 1352px" border="1" width="895"&gt; 
- &lt;thead&gt; 
-  &lt;tr style="background-color: #000000"&gt; 
-   &lt;td width="87"&gt;&lt;span style="color: #ffffff"&gt;&lt;strong&gt;Package&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;&lt;span style="color: #ffffff"&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt; 
-   &lt;td width="267"&gt;&lt;span style="color: #ffffff"&gt;&lt;strong&gt;Tutorial Date&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt; 
-   &lt;td width="147"&gt;&lt;span style="color: #ffffff"&gt;&lt;strong&gt;Signup Deadline&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/thead&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;BLT&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;BLT is a streamlined&amp;nbsp;CMake-based foundation for&amp;nbsp;Building,&amp;nbsp;Linking and&amp;nbsp;Testing large-scale high performance computing (HPC) applications.&amp;nbsp;BLT makes it easy to get up and running on a wide range of HPC compilers, operating systems and technologies&lt;/td&gt; 
-   &lt;td&gt;August 3rd&lt;br&gt; 9am-11am PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Spack&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;Spack is a multi-platform package manager that builds and installs multiple versions and configurations of software. It works on Linux, macOS, and many supercomputers.&lt;/td&gt; 
-   &lt;td&gt;August 8th and 9th&lt;br&gt; 8am-11:30am PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;MFEM&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;MFEM&amp;nbsp;is a modular parallel C++ library for finite element methods. Its goal is to enable high-performance scalable finite element discretization research and application development on a wide variety of platforms, ranging from laptops to supercomputers.&lt;/td&gt; 
-   &lt;td&gt;August 10th&lt;br&gt; 9am-11am PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Caliper&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;Caliper is a library to integrate performance profiling capabilities into applications. Caliper can be used for lightweight always-on profiling or advanced performance engineering use cases, such as tracing, monitoring, and auto-tuning.&lt;/td&gt; 
-   &lt;td rowspan="3"&gt;August 14th&lt;br&gt; 9am-12pm PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Hatchet&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;Hatchet is a Python-based library that allows&amp;nbsp;Pandas&amp;nbsp;dataframes to be indexed by structured tree and graph data. It is intended for analyzing performance data that has a hierarchy (for example, serial or parallel profiles that represent calling context trees, call graphs, nested regions’ timers, etc.).&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Thicket&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;Thicket is a Python-based toolkit for analyzing ensemble performance data. You can find detailed documentation, along with tutorials of Thicket in the&amp;nbsp;ReadtheDocs.&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;RAJA&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;RAJA is a library of C++ software abstractions, primarily developed at Lawrence Livermore National Laboratory (LLNL), that enables architecture and programming model portability for HPC applications.&lt;/td&gt; 
-   &lt;td rowspan="2"&gt;August 17th&lt;br&gt; 9am-11am PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Umpire&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;Umpire is a resource management library that allows the discovery, provision, and management of memory on machines with multiple memory devices like NUMA and GPUs.&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Ascent&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;Ascent is an open source many-core capable lightweight in situ visualization and analysis infrastructure for multi-physics HPC simulations.&lt;/td&gt; 
-   &lt;td&gt;August 22nd&lt;br&gt; 9am-11am PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Axom&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;Axom provides robust, flexible software infrastructure for the development of multi-physics applications and computational tools.&lt;/td&gt; 
-   &lt;td&gt;August 24th&lt;br&gt; 9am-11am PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;WEAVE&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;WEAVE is a collection of open source workflow tools. WEAVE includes Sina and Maestro which can be used together to perform and analyze runs of your code.&lt;/td&gt; 
-   &lt;td&gt;August 29th&lt;br&gt; 9am-11am PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Flux&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="395"&gt;Flux is a flexible framework for resource management, built for your site. The framework consists of a suite of projects, tools, and libraries which may be used to build site-custom resource managers for High Performance Computing centers.&lt;/td&gt; 
-   &lt;td&gt;August 31st&lt;br&gt; 9am-11am PST&lt;/td&gt; 
-   &lt;td&gt;2 business days prior&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
-&lt;p&gt;We’re excited about this opportunity to give back to the HPC community alongside LLNL and look forward to meeting you all over the duration of the event.&lt;/p&gt;</content:encoded>
 					
 		
 		
