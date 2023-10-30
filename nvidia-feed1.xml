@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 27 Oct 2023 17:18:29 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 30 Oct 2023 16:48:56 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,77 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.2</generator>
 	<item>
+		<title>Silicon Volley: Designers Tap Generative AI for a Chip Assist</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/30/llm-semiconductors-chip-nemo/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Mon, 30 Oct 2023 16:00:33 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[NVIDIA Foundation]]></category>
+		<category><![CDATA[NVIDIA Research]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67732</guid>
+
+					<description><![CDATA[A research paper released today describes ways generative AI can assist one of the most complex engineering efforts: designing semiconductors. The work demonstrates how companies in highly specialized fields can train large language models (LLMs) on their internal data to build assistants that increase productivity. Few pursuits are as challenging as semiconductor design. Under a <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/30/llm-semiconductors-chip-nemo/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>A <a href="https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design">research paper</a> released today describes ways <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> can assist one of the most complex engineering efforts: designing semiconductors.</p>
+<p>The work demonstrates how companies in highly specialized fields can train large language models (<a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>) on their internal data to build assistants that increase productivity.</p>
+<p>Few pursuits are as challenging as semiconductor design. Under a microscope, a state-of-the-art chip like an <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPU</a> (above) looks like a well-planned metropolis, built with tens of billions of transistors, connected on streets 10,000x thinner than a human hair.</p>
+<p>Multiple engineering teams coordinate for as long as two years to construct one of these digital megacities.</p>
+<p>Some groups define the chip’s overall architecture, some craft and place a variety of ultra-small circuits, and others test their work. Each job requires specialized methods, software programs and computer languages.</p>
+<h2><b>A Broad Vision for LLMs</b></h2>
+<p>“I believe over time large language models will help all the processes, across the board,” said Mark Ren, an NVIDIA Research director and lead author on the paper.</p>
+<p>Bill Dally, NVIDIA’s chief scientist, announced the paper today in a keynote at the International Conference on Computer-Aided Design, an annual gathering of hundreds of engineers working in the field called electronic design automation, or EDA.</p>
+<p>“This effort marks an important first step in applying LLMs to the complex work of designing semiconductors,” said Dally at the event in San Francisco. “It shows how even highly specialized fields can use their internal data to train useful generative AI models.”</p>
+<h2><b>ChipNeMo Surfaces</b></h2>
+<p>The paper details how NVIDIA engineers created for their internal use a custom LLM, called ChipNeMo, trained on the company’s internal data to generate and optimize software and assist human designers.</p>
+<p>Long term, engineers hope to apply generative AI to each stage of chip design, potentially reaping significant gains in overall productivity, said Ren, whose career spans more than 20 years in EDA.</p>
+<p>After surveying NVIDIA engineers for possible use cases, the research team chose three to start: a chatbot, a code generator and an analysis tool.</p>
+<h2><b>Initial Use Cases</b></h2>
+<p>The latter — a tool that automates the time-consuming tasks of maintaining updated descriptions of known bugs — has been the most well-received so far.</p>
+<p>A prototype chatbot that responds to questions about GPU architecture and design helped many engineers quickly find technical documents in early tests.</p>
+<figure id="attachment_67780" aria-describedby="caption-attachment-67780" style="width: 600px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNemo.gif"><img decoding="async" fetchpriority="high" class="wp-image-67780 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNemo.gif" alt="Animation of a generative AI code generator using an LLM" width="600" height="338" /></a><figcaption id="caption-attachment-67780" class="wp-caption-text">A code generator will help designers write software for a chip design.</figcaption></figure>
+<p>A code generator in development (demonstrated above)  already creates snippets of about 10-20 lines of software in two specialized languages chip designers use. It will be integrated with existing tools, so engineers have a handy assistant for designs in progress.</p>
+<h2><b>Customizing AI Models With NVIDIA NeMo</b></h2>
+<p>The paper mainly focuses on the team’s work gathering its design data and using it to create a specialized generative AI model, a process portable to any industry.</p>
+<p>As its starting point, the team chose a <a href="https://blogs.nvidia.com/blog/2023/03/13/what-are-foundation-models/">foundation model</a> and customized it with <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework for building, customizing and deploying generative AI models that’s included in the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform. The selected NeMo model sports 43 billion parameters, a measure of its capability to understand patterns. It was trained using more than a trillion tokens, the words and symbols in text and software.</p>
+<figure id="attachment_67773" aria-describedby="caption-attachment-67773" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final.jpg"><img decoding="async" class="size-large wp-image-67773" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-672x338.jpg" alt="Diagram of the ChipNeMo workflow for training a custom model" width="672" height="338" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-672x338.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-400x201.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-768x386.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-842x423.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-406x204.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-188x95.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final.jpg 1277w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67773" class="wp-caption-text">ChipNeMo provides an example of how one deeply technical team refined a pretrained model with its own data.</figcaption></figure>
+<p>The team then refined the model in two training rounds, the first using about 24 billion tokens worth of its internal design data and the second on a mix of about 130,000 conversation and design examples.</p>
+<p>The work is among several examples of <a href="https://arxiv.org/pdf/2308.10204.pdf">research</a> and <a href="https://www.cadence.com/en_US/home/explore/large-language-models-llms.html" class="broken_link">proofs of concept</a> of generative AI in the semiconductor industry, just beginning to emerge from the lab.</p>
+<h2><b>Sharing Lessons Learned</b></h2>
+<p>One of the most important lessons Ren’s team learned is the value of customizing an LLM.</p>
+<p>On chip-design tasks, custom ChipNeMo models with as few as 13 billion parameters match or exceed performance of even much larger general-purpose LLMs like LLaMA2 with 70 billion parameters. In some use cases, ChipNeMo models were dramatically better.</p>
+<p>Along the way, users need to exercise care in what data they collect and how they clean it for use in training, he added.</p>
+<p>Finally, Ren advises users to stay abreast of the latest tools that can speed and simplify the work.</p>
+<p>NVIDIA Research has hundreds of scientists and engineers worldwide focused on topics such as AI, computer graphics, computer vision, self-driving cars and robotics. Other recent projects in semiconductors include using AI to <a href="https://developer.nvidia.com/blog/designing-arithmetic-circuits-with-deep-reinforcement-learning/">design smaller, faster circuits</a> and to <a href="https://developer.nvidia.com/blog/autodmp-optimizes-macro-placement-for-chip-design-with-ai-and-gpus/">optimize placement of large blocks</a>.</p>
+<p>Enterprises looking to build their own custom LLMs can get started today using <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/get-started/?nvid=nv-int-unbr-268853">NeMo framework</a> available from GitHub and NVIDIA NGC catalog.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/NVIDIA-GH100-GPU-x-1280.jpg"
+			type="image/jpeg"
+			width="1360"
+			height="724"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/NVIDIA-GH100-GPU-x-1280-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Silicon Volley: Designers Tap Generative AI for a Chip Assist]]></media:title>
+			<media:description type="html">Diagram of NVIDIA Hopper GPU</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Turning the Tide on Coral Reef Decline: CUREE Robot Dives Deep With Deep Learning</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/26/coral-reef-decline-curee-robot-jetson-isaac-omniverse/</link>
 		
@@ -54,7 +125,7 @@
 <p>“The problem is that, underwater, the snapping shrimps are loud,” said Girdhar. On land, this classic dilemma of how to separate sounds from background noises is known as <a href="https://blogs.nvidia.com/blog/2018/08/28/music-youtube-cocktail-party-problem-ai-artificial-intelligence-deep-learning/">the cocktail party problem</a>. “If only we could figure out an algorithm to remove the effects of sounds of snapping shrimps from audio, but at the moment we don’t have a good solution,” said Girdhar.</p>
 <p>Despite few underwater datasets in existence, <a href="https://warp.whoi.edu/vmat/">pioneering fish detection and tracking</a> is going well, said Levi Cai, a Ph.D. candidate in the MIT-WHOI joint program. He said they’re taking a semi-supervised approach to the marine animal tracking problem. The tracking is initialized using targets detected by a <a href="https://github.com/warplab/megafishdetector">fish detection neural network</a> trained on open-source datasets for fish detection, which is fine-tuned with <a href="https://blogs.nvidia.com/blog/2019/02/07/what-is-transfer-learning/">transfer learning</a> from images gathered by CUREE.</p>
 <p>“We manually drive the vehicle until we see an animal that we want to track, and then we click on it and have the semi-supervised tracker take over from there,” said Cai.</p>
-<p><iframe title="Tracking a barracuda using CUREE" width="500" height="281" src="https://www.youtube.com/embed/s_PBaYIqNKg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Tracking a barracuda using CUREE" width="500" height="281" src="https://www.youtube.com/embed/s_PBaYIqNKg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <h2><b>Jetson Orin Energy Efficiency Drives CUREE</b></h2>
 <p>Energy efficiency is critical for small AUVs like CUREE. The compute requirements for data collection consume roughly 25% of the available energy resources, with driving the robots taking the remainder.</p>
 <p>CUREE typically operates for as long as two hours on a charge, depending on the reef mission and the observation requirements, said Girdhar, who goes on the dive missions in St. John in the U.S. Virgin Islands.</p>
@@ -107,7 +178,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The cloud is full of treats this GFN Thursday with <i>Cities: Skylines II </i>now streaming, leading 15 newly supported games this week<i>.</i> The game’s publisher, Paradox Interactive, is offering GeForce NOW one-month Priority memberships for those who pick up the game first, so make sure to grab one before they’re gone.</p>
 <p>Among the newly supported additions to the <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> library are more games from the PC Game Pass catalog, including <i>Ghostwire Tokyo</i>,<i> State of Decay</i> and the <i>Dishonored</i> series. Members can also look forward to <i>Alan Wake 2</i> — streaming soon.</p>
 <h2><b>Cloud City</b></h2>
-<figure id="attachment_67761" aria-describedby="caption-attachment-67761" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" fetchpriority="high" class="size-large wp-image-67761" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-672x378.jpg" alt="Cities: Skylines II on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67761" class="wp-caption-text"><em>If you build it, they will come.</em></figcaption></figure>
+<figure id="attachment_67761" aria-describedby="caption-attachment-67761" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-67761" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-672x378.jpg" alt="Cities: Skylines II on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/GFN_Thursday-Cities_Skylines_II.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67761" class="wp-caption-text"><em>If you build it, they will come.</em></figcaption></figure>
 <p>Members can build the metropolis of their dreams this week in <i>Cities: Skylines II, </i>the sequel to Paradox Interactive’s award-winning city sim<i>.</i> Raise a city from the ground up and transform it into a thriving urban landscape. Get creative to build on an unprecedented scale while managing a deep simulation and a living economy.</p>
 <p>The game’s AI and intricate economics mean every choice ripples through the fabric of a player’s city, so they’ll have to stay sharp — strategizing, solving problems and reacting to challenges. Build sky-high and sprawl across the map like never before. New dynamic map features affect how the city expands amid rising pollution, changing weather and seasonal challenges.</p>
 <p>Paradox is offering one-month GeForce NOW Priority memberships to the first 100,000 people who purchase the game, so budding city planners can optimize their gameplay across nearly any device. Visit <a href="https://www.paradoxinteractive.com/games/cities-skylines-ii/geforce-now"><i>Cities Skylines II</i></a> for more info.</p>
@@ -1153,69 +1224,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[From Skylines to Streetscapes: How SHoP Architects Brings Innovative Designs to Life]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>UK Tech Festival Showcases Startups Using AI for Creative Industries</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/12/ai-for-creative-industries-uk-startups/</link>
-		
-		<dc:creator><![CDATA[Jamie Allan]]></dc:creator>
-		<pubDate>Thu, 12 Oct 2023 19:58:03 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Game Development]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[NVIDIA in Europe]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[Virtual Reality]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67426</guid>
-
-					<description><![CDATA[At one of the U.K.’s largest technology festivals, top enterprises and startups are this week highlighting their latest innovations, hosting workshops and celebrating the growing tech ecosystem based in the country’s southwest. The Bristol Technology Festival today showcased the work of nine startups that recently participated in a challenge hosted by Digital Catapult — the <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/12/ai-for-creative-industries-uk-startups/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>At one of the U.K.’s largest technology festivals, top enterprises and startups are this week highlighting their latest innovations, hosting workshops and celebrating the growing tech ecosystem based in the country’s southwest.</p>
-<p>The Bristol Technology Festival today showcased the work of nine startups that recently participated in a challenge hosted by Digital Catapult — the U.K. authority on advanced digital technology — in collaboration with NVIDIA.</p>
-<p>The challenge, which ran for four months, supported companies in developing a prototype or extending an innovation that could transform experiences using reality capture, real-time collaboration and creation, or cross-platform content delivery.</p>
-<p>It’s part of MyWorld, an initiative for pioneering creative technology focused on the western U.K.</p>
-<p>Each selected startup was given £50,000 to help develop projects that foster the advancement of <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/" target="_blank" rel="noopener">generative AI</a>, digital twins and other groundbreaking technologies for use in creative industries.</p>
-<h2><b>Lux Aeterna Explores Generative AI for Visual Effects</b></h2>
-<p>Emmy Award-winning independent visual effects studio <a href="https://www.myworld-creates.com/blogs/lux-aeterna-investigating-generative-ai-tools-for-vfx/" target="_blank" rel="noopener">Lux Aeterna</a> — which is using gen AI and neural networks for VFX production — deployed its funds to develop a generative AI-powered text-to-image toolkit for creating maps, or 2D images used to represent aspects of a scene, object or effect.</p>
-<p>At the Bristol Technology Festival, Lux Aeterna demonstrated this technology, powered by <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/" target="_blank" rel="noopener">NVIDIA RTX 40 Series GPUs</a>, with a focus on its ability to generate parallax occlusion maps, a method of creating the effect of depth for 3D textured surfaces.</p>
-<p>“Our goal is to tackle the unique VFX challenges with bespoke AI-assisted solutions, and to put these tools of the future into the hands of our talented artists,” said James Pollock, creative technologist at Lux Aeterna. “NVIDIA’s insightful feedback on our work as a part of the MyWorld challenge has been invaluable in informing our strategy toward innovation in this rapidly changing space.”</p>
-<h2><b>Meaning Machine Brings AI to Game Characters, Dialogue</b></h2>
-<p><a href="https://www.myworld-creates.com/blogs/why-game-developers-hate-ai/" target="_blank" rel="noopener">Meaning Machine</a>, a studio pioneering gameplay that uses natural language AI, used its funds from the challenge to develop a generative AI system for in-game characters and dialogue. Its Game Consciousness technology enables in-game characters to accurately talk about their world, in real time, so that every line of dialogue reflects the game developer’s creative vision.</p>
-<p>Meaning Machine’s demo at today’s showcase invited attendees to experience its interrogation game, “Dead Meat,” in which players must chat with an in-game character — a murder suspect — with the aim of manipulating them into giving a confession.</p>
-<p>A member of the <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener">NVIDIA Inception</a> program for cutting-edge startups, Meaning Machine powers its generative AI technology for game development using the <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/" target="_blank" rel="noopener">NVIDIA NeMo</a> framework for building, customizing and deploying <a href="https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/" target="_blank" rel="noopener">large language models</a>.</p>
-<p>“NVIDIA NeMo enables us to deliver scalable model tuning and inference,” said Ben Ackland, cofounder and chief technology officer at Meaning Machine. “We see potential for Game Consciousness to transform blockbuster games — delivering next-gen characters that feel at home in bigger, deeper, more complex virtual worlds — and our collaboration with NVIDIA will help us make this a reality sooner.”</p>
-<h2><b>More Startups Showcase AI for Creative Industries</b></h2>
-<p>Additional challenge participants that hosted demos today at the Bristol Technology Festival include:</p>
-<ul>
-<li style="font-weight: 300;" aria-level="1"><a href="https://www.myworld-creates.com/blogs/from-puppets-to-pixels/" target="_blank" rel="noopener">Black Laboratory</a>, an NVIDIA Inception member demonstrating a live puppet-performance capture system, puppix, that can seamlessly transfer the physicality of puppets to digital characters.</li>
-<li style="font-weight: 300;" aria-level="1"><a href="https://www.myworld-creates.com/blogs/impress-launchpad-influencer-marketing-for-indie-games/" target="_blank" rel="noopener">IMPRESS</a>, which is developing an AI-powered launchpad for self-publishing indie video games. It offers data-driven market research for game development, marketing campaign support, press engagement tools and more.</li>
-<li style="font-weight: 300;" aria-level="1"><a href="https://www.myworld-creates.com/blogs/otto-a-realtime-generative-visual-media-solution-for-the-performing-arts/" target="_blank" rel="noopener">Larkhall</a>, which is expanding Otto, its AI system that generates live, reactive visuals based on musical performances, as well as automatic, expressive captioning for speech-based performances.</li>
-<li style="font-weight: 300;" aria-level="1"><a href="https://myworld-creates.com/blogs/unlocking-the-future-of-cinematography-software-based-control-for-agito-systems/" target="_blank" rel="noopener">Motion Impossible</a>, which is building a software platform for centralized control of its AGITO systems — free-roaming, modular, camera dolly systems for filmmaking.</li>
-<li style="font-weight: 300;" aria-level="1"><a href="https://www.myworld-creates.com/blogs/future-places-toolkit-using-ar-and-vr-to-design-future-urban-environments/" target="_blank" rel="noopener">Zubr and Uninvited Guests</a>, two companies collaborating on the development of <a href="https://blogs.nvidia.com/blog/2022/05/20/what-is-extended-reality/" target="_blank" rel="noopener">augmented- and virtual-reality</a> tools for designing futuristic urban environments.</li>
-</ul>
-<p>“NVIDIA’s involvement in the MyWorld challenge, led by Digital Catapult, has created extraordinary value for the participating teams,” said Sarah Addezio, senior innovation partner and MyWorld program lead at Digital Catapult. “We’ve seen the benefit of our cohort having access to industry-leading technical and business-development expertise, elevating their projects in ways that would not have been possible otherwise.”</p>
-<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener"><i>NVIDIA Inception</i></a><i> and </i><a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/" target="_blank" rel="noopener"><i>NVIDIA generative AI technologies</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/bristol-tech-fest-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/bristol-tech-fest-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[UK Tech Festival Showcases Startups Using AI for Creative Industries]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
