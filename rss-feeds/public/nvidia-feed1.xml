@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 30 Oct 2023 23:01:33 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 31 Oct 2023 15:38:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,148 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.2</generator>
 	<item>
+		<title>Riding the Rays: Sunswift Racing Shines in World Solar Challenge Race</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/31/sunswift-racing-world-solar-challenge-jetson/</link>
+		
+		<dc:creator><![CDATA[Scott Martin]]></dc:creator>
+		<pubDate>Tue, 31 Oct 2023 16:00:42 +0000</pubDate>
+				<category><![CDATA[Autonomous Machines]]></category>
+		<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[NVIDIA Jetson]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67784</guid>
+
+					<description><![CDATA[In the world’s largest solar race car event of the year, the University of New South Wales Sunswift Racing team is having its day in the sun. The World Solar Challenge, which first began some 35 years ago, attracts academic participants from across the globe. This year’s event drew nearly 100 competitors. The race runs <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/31/sunswift-racing-world-solar-challenge-jetson/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>In the world’s largest solar race car event of the year, the University of New South Wales Sunswift Racing team is having its day in the sun.</p>
+<p>The <a href="https://worldsolarchallenge.org/">World Solar Challenge</a>, which first began some 35 years ago, attracts academic participants from across the globe. This year’s event drew nearly 100 competitors.</p>
+<p>The race runs nearly 1,900 miles over the course of about four days and pits challengers in a battle not for speed but for greatest energy efficiency.</p>
+<p>UNSW Sydney won the energy efficiency competition and crossed the finish line first, taking the Cruiser Cup with its Sunswift 7 vehicle, which utilizes <a href="https://www.nvidia.com/en-sg/autonomous-machines/embedded-systems/jetson-xavier-nx/">NVIDIA Jetson Xavier NX</a> for energy optimization. It was also the only competitor to race with 4 people on board and a remote mission control team.</p>
+<p>“It’s a completely different proposition to say we can use the least amount of energy and arrive in Adelaide before anybody else, but crossing the line first is just about bragging rights,” said Richard Hopkins, project manager at Sunswift and a UNSW professor. Hopkins previously managed Formula 1 race teams in the U.K.</p>
+<p>Race organizers bill the event, which cuts across the entire Australian continent on public roads — from Darwin in the north to Adelaide in the south — as the “world’s greatest innovation and engineering challenge contributing to a more sustainable mobility future.” It’s also become a launchpad for students pursuing career paths in the electric vehicle industry.</p>
+<p>Like many of the competitors, UNSW is coming back after a three-year hiatus from the race due to the COVID-19 pandemic, making this year’s competition highly anticipated.</p>
+<p>“Every single team member needs to understand what they’re doing and what their role is on the team and perform at the very best during those five-and-a-half days,” said Hopkins. “It is exhausting.”</p>
+<h2><b>All In on Energy Efficiency  </b></h2>
+<p>The race allows participants to start with a fully charged battery and to charge when the vehicles stop for the night at two locations. The remaining energy used, some 90%, comes from the sun and the vehicles’ solar panels.</p>
+<p>UNSW’s seventh-generation Sunswift 7 runs algorithms to optimize for energy efficiency, essentially shutting down all nonessential computing to maximize battery life.</p>
+<p>The solar electric vehicle relies on <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/">NVIDIA Jetson</a> AI to give it an edge across its roughly 100 automotive monitoring and power management systems.</p>
+<p>It can also factor in whether it should drive faster or slower based on weather forecasts. For instance, the car will urge the driver to go faster if it’s going to rain later in the day when conditions would force the car to slow down.</p>
+<p>The Sunswift 7 vehicle was designed to mostly drive in a straight line from Darwin to Adelaide, and the object is to use the least amount of power outside of that mission, said Hopkins.</p>
+<p>“Sunswift 7 late last year was featured in the <i>Guinness Book of World Records</i> for being the fastest electric vehicle for over 1,000 kilometers on a single charge of battery,” he said.</p>
+<p><iframe title="Sunswift 7 (Ep 04 - Guinness World Record attempt ) - Fastest EV over 1000k on a single charge." width="500" height="281" src="https://www.youtube.com/embed/jm1Efr8vlk4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Jetson-Based Racers for Learning</b></h2>
+<p>The UNSW team created nearly 60 design iterations to improve on the aerodynamics of the vehicle. They used computational fluid dynamics modeling and ran simulations to analyze each version.</p>
+<p>“We didn’t ever put the car through a physical wind tunnel,” said Hopkins.</p>
+<p>The technical team has been working on a model to determine what speed the vehicle should be driven at for maximum energy conservation. “They’re working on taking in as many parameters as you can, given it’s really hard to get good driving data,” said Josh Bramley, technology manager at Sunswift Racing.</p>
+<p>Sunswift 7 is running on the Robot Operating System (ROS) suite of software and relies on its NVIDIA Jetson module to process all the input from the sensors for analytics, which can be monitored by the remote pit crew back on campus at UNSW.</p>
+<p>Jetson is used for all the control systems on the car, so everything from the accelerator pedal, wheel sensors, solar current sensors and more are processed on it for data to analyze for ways AI might help, said Bramley. The next version of the vehicle is expected to pack more AI, he added.</p>
+<p>“A lot of the AI and computer vision will be coming for Sunswift 8 in the next solar challenge,” said Bramley.</p>
+<p>More than 100 students are getting course credit for the Sunswift Racing team work, and many are interested in pursuing careers in electric vehicles, said Hopkins.</p>
+<p>Past World Solar Challenge contestants have gone on to work at Tesla, SpaceX and Zipline.</p>
+<p>Talk about a bright future.</p>
+<p><i>Learn more about the </i><a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/"><i>NVIDIA Jetson</i></a><i> platform for edge AI and robotics.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/Sunswift7-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1366"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/Sunswift7-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Riding the Rays: Sunswift Racing Shines in World Solar Challenge Race]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>DLSS 3.5 With Ray Reconstruction Now Available in NVIDIA Omniverse</title>
+		<link>https://blogs.nvidia.com/blog/2023/10/31/dlss-omniverse-cinema-4d-halloween/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Tue, 31 Oct 2023 13:00:49 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[In the NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA Studio Driver]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67789</guid>
+
+					<description><![CDATA[The highly anticipated NVIDIA DLSS 3.5 update, including Ray Reconstruction for NVIDIA Omniverse — a platform for connecting and building custom 3D tools and apps — is now available. ]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The highly anticipated NVIDIA DLSS 3.5 update, including Ray Reconstruction for <a href="https://www.nvidia.com/en-us/omniverse/creators/" target="_blank" rel="noopener">NVIDIA Omniverse</a> — a platform for connecting and building custom 3D tools and apps — is now available.</p>
+<p><a href="https://blogs.nvidia.com/blog/2023/10/17/rtx-video-super-resolution-ai-obs-broadcast/">RTX Video Super Resolution</a> (VSR) will be available with tomorrow’s <a href="https://www.nvidia.com/en-us/studio/">NVIDIA Studio Driver</a> release — which also supports the DLSS 3.5 update in Omniverse and is free for RTX GPU owners. The version 1.5 update delivers greater overall graphical fidelity, upscaling for native videos and support for GeForce RTX 20 Series GPUs.</p>
+<p>NVIDIA Creative Director and visual effects producer Sabour Amirazodi returns <i>In the NVIDIA Studio</i> to share his Halloween-themed project: a full projection mapping show on his house, featuring haunting songs, frightful animation, spooky props and more.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">Get ready for some Halloween magic! <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f383.png" alt="🎃" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Check out this amazing artwork by <a href="https://twitter.com/itsfunkyboy?ref_src=twsrc%5Etfw">@itsfunkyboy</a> as part of our <a href="https://twitter.com/hashtag/SeasonalArtChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SeasonalArtChallenge</a>.<img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f47b.png" alt="👻" class="wp-smiley" style="height: 1em; max-height: 1em;" /> </p>
+<p>Don&#39;t miss the chance to showcase your own spooky creations using <a href="https://twitter.com/hashtag/SeasonalArtChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SeasonalArtChallenge</a> for a chance to be featured. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f64c.png" alt="🙌" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a href="https://t.co/uKcuFmHK4K">pic.twitter.com/uKcuFmHK4K</a></p>
+<p>&mdash; NVIDIA Studio (@NVIDIAStudio) <a href="https://twitter.com/NVIDIAStudio/status/1716484714729460004?ref_src=twsrc%5Etfw">October 23, 2023</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>Creators can join the #SeasonalArtChallenge by submitting harvest- and fall-themed pieces through November.</p>
+<p><iframe title="Nightmare Fuel: A Community Digital Art Showcase | NVIDIA Studio Standouts" width="500" height="281" src="https://www.youtube.com/embed/YO9l6WVTvCs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>The latest Halloween-themed Studio Standouts video features ghouls, creepy monsters, haunted hospitals, dimly lit homes and is not for the faint-of-heart.</p>
+<h2><b>Remarkable Ray Reconstruction</b></h2>
+<p><a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS 3.5</a> — featuring Ray Reconstruction — enhances ray-traced image quality on GeForce RTX GPUs by replacing hand-tuned denoisers with an NVIDIA supercomputer-trained AI network that generates higher-quality pixels in between sampled rays.</p>
+<p><iframe title="NVIDIA DLSS 3.5 | New Ray Reconstruction Enhances Ray Tracing with AI" width="500" height="281" src="https://www.youtube.com/embed/sGKCrcNsVzo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Previewing content in the viewport, even with high-end hardware, can sometimes offer less than ideal image quality, as traditional denoisers require hand-tuning for every scene.</p>
+<p>With DLSS 3.5, the AI neural network recognizes a wide variety of scenes, producing high-quality preview images and drastically reducing time spent rendering scenes.</p>
+<p>NVIDIA Omniverse and the <a href="https://www.nvidia.com/en-us/omniverse/apps/usd-composer/" target="_blank" rel="noopener">USD Composer</a> app — featuring the Omniverse RTX Renderer — specialize in real-time preview modes, offering ray-tracing inference and higher-quality previews while building and iterating.</p>
+<p>The feature can be enabled by opening “Render Settings” under “Ray Tracing,” opening the “Direct Lighting” tab and ensuring “New Denoiser (experimental)” is turned on.</p>
+<h2><b>The ‘Haunted Sanctuary’</b> <b>Returns</b></h2>
+<p>Sabour Amirazodi’s “home-made” installation, <i>Haunted Sanctuary</i>, has become an annual tradition, much to the delight of his neighbors.</p>
+<figure id="attachment_67793" aria-describedby="caption-attachment-67793" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67793" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w-672x341.png" alt="" width="672" height="341" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w-672x341.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w-400x203.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w-768x390.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w-842x428.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w-406x206.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w-188x95.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-crowd-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67793" class="wp-caption-text">Crowds form to watch the spectacular Halloween light show.</figcaption></figure>
+<p>Amirazodi begins by staging props, such as pumpkins and skeletons, around his house.</p>
+<figure id="attachment_67796" aria-describedby="caption-attachment-67796" style="width: 381px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67796" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w-381x500.png" alt="" width="381" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w-381x500.png 381w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w-305x400.png 305w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w-768x1008.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w-1170x1536.png 1170w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w-343x450.png 343w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w-164x215.png 164w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w-76x100.png 76w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-props-1280w.png 1280w" sizes="(max-width: 381px) 100vw, 381px" /></a><figcaption id="caption-attachment-67796" class="wp-caption-text">Physical props add to the spooky atmosphere.</figcaption></figure>
+<p>Then he carefully positions his projectors — building protective casings to keep them both safe and blended into the scene.</p>
+<figure id="attachment_67799" aria-describedby="caption-attachment-67799" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67799" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-building-projectors-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67799" class="wp-caption-text">Amirazodi custom builds, paints and welds his projector cases to match the Halloween-themed decor.</figcaption></figure>
+<div class="simplePullQuote right"><p>“In the last few years, I’ve rendered 32,862 frames of 5K animation out of the Octane Render Engine. The loop has now become 21 minutes long, and the musical show is another 28 minutes!” — Sabour Amirazodi</p>
+</div>
+<p>Building a virtual scene onto a physical object requires projection mapping, so Amirazodi used NVIDIA GPU-accelerated MadMapper software and its structured light-scan feature to map custom visuals onto his house. He achieved this by connecting a DSLR camera to his mobile workstation, which was powered by an <a href="https://www.nvidia.com/en-us/design-visualization/rtx-a5000/" target="_blank" rel="noopener">NVIDIA RTX A5000 GPU</a>.</p>
+<p>He used the camera to shoot a series of lines and capture photos. Then, he translated to the projector’s point of view an image on which to base a 3D model. Basic camera-matching tools found in Cinema 4D helped recreate the scene. Afterward, Amirazodi applied various mapping and perspective correction edits.</p>
+<figure id="attachment_67802" aria-describedby="caption-attachment-67802" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67802" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-cinema-4d-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67802" class="wp-caption-text">Projection mapping requires matching the virtual world with real-world specifications, done in Cinema 4D.</figcaption></figure>
+<p>Next, Amirazodi animated and rigged the characters. GPU acceleration in the viewport enabled smooth interactivity with complex 3D models.</p>
+<p>“I like having a choice between several third-party NVIDIA GPU-accelerated 3D renderers, such as V-Ray, OctaneRender and Redshift in Cinema 4D,” noted Amirazodi.</p>
+<div class="simplePullQuote right"><p>“I switched to NVIDIA graphics cards in 2017. GPUs are the only way to go for serious creators.” — Sabour Amirazodi</p>
+</div>
+<p>Amirazodi then spent hours on his <a href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">RTX 6000</a> workstation creating and rendering out all the animations, assembling them in Adobe After Effects and compositing them on the scanned canvas in MadMapper. There, he crafted individual scenes to render out as chunks and assembled them in Adobe Premiere Pro. Remarkably, he repeated this workflow for every projector.</p>
+<p>Once satisfied with the sequences, Amirazodi encoded everything using Adobe Media Encoder and loaded them onto BrightSign digital players — all networked to run the show synchronously.</p>
+<p>Amirazodi used the advantages of GPU acceleration to streamline his workflow — saving him countless hours. “After Effects has numerous plug-ins that are GPU-accelerated — plus, Adobe Premiere Pro and Media Encoder use the new dual encoders found in the Ada generation of NVIDIA RTX 6000 GPUs, cutting my export times in half,” he said.</p>
+<figure id="attachment_67805" aria-describedby="caption-attachment-67805" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67805" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-sabour-amirazodi-wk81-premiere-pro-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67805" class="wp-caption-text">Smooth timeline movement in Adobe Premiere Pro assisted by the NVIDIA RTX A6000 GPU.</figcaption></figure>
+<p>Amirazodi’s careful efforts are all in the Halloween spirit — creating a hauntingly memorable experience for his community.</p>
+<p>“The hard work and long nights all become worth it when I see the smile on my kids’ faces and all the joy it brings to the entire neighborhood,” he reflected.</p>
+<figure id="attachment_67808" aria-describedby="caption-attachment-67808" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67808" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w-672x282.png" alt="" width="672" height="282" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w-672x282.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w-400x168.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w-768x323.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w-842x354.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w-406x171.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w-188x79.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-itns-sabour-amirazodi-wk81-artist-feature-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67808" class="wp-caption-text">NVIDIA Creative Director Sabour Amirazodi.</figcaption></figure>
+<p>Discover more of Amirazodi’s work on <a href="https://www.imdb.com/name/nm3658528/">IMDb</a>.</p>
+<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/nv-blog-header-preview-1280x680-2.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/nv-blog-header-preview-1280x680-2-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[DLSS 3.5 With Ray Reconstruction Now Available in NVIDIA Omniverse]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Silicon Volley: Designers Tap Generative AI for a Chip Assist</title>
 		<link>https://blogs.nvidia.com/blog/2023/10/30/llm-semiconductors-chip-nemo/</link>
 		
@@ -55,12 +197,12 @@
 <h2><b>Initial Use Cases</b></h2>
 <p>The latter — a tool that automates the time-consuming tasks of maintaining updated descriptions of known bugs — has been the most well-received so far.</p>
 <p>A prototype chatbot that responds to questions about GPU architecture and design helped many engineers quickly find technical documents in early tests.</p>
-<figure id="attachment_67780" aria-describedby="caption-attachment-67780" style="width: 600px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNemo.gif"><img decoding="async" fetchpriority="high" class="wp-image-67780 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNemo.gif" alt="Animation of a generative AI code generator using an LLM" width="600" height="338" /></a><figcaption id="caption-attachment-67780" class="wp-caption-text">A code generator will help designers write software for a chip design.</figcaption></figure>
+<figure id="attachment_67780" aria-describedby="caption-attachment-67780" style="width: 600px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNemo.gif"><img decoding="async" loading="lazy" class="wp-image-67780 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNemo.gif" alt="Animation of a generative AI code generator using an LLM" width="600" height="338" /></a><figcaption id="caption-attachment-67780" class="wp-caption-text">A code generator will help designers write software for a chip design.</figcaption></figure>
 <p>A code generator in development (demonstrated above)  already creates snippets of about 10-20 lines of software in two specialized languages chip designers use. It will be integrated with existing tools, so engineers have a handy assistant for designs in progress.</p>
 <h2><b>Customizing AI Models With NVIDIA NeMo</b></h2>
 <p>The paper mainly focuses on the team’s work gathering its design data and using it to create a specialized generative AI model, a process portable to any industry.</p>
 <p>As its starting point, the team chose a <a href="https://blogs.nvidia.com/blog/2023/03/13/what-are-foundation-models/">foundation model</a> and customized it with <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework for building, customizing and deploying generative AI models that’s included in the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform. The selected NeMo model sports 43 billion parameters, a measure of its capability to understand patterns. It was trained using more than a trillion tokens, the words and symbols in text and software.</p>
-<figure id="attachment_67773" aria-describedby="caption-attachment-67773" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final.jpg"><img decoding="async" class="size-large wp-image-67773" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-672x338.jpg" alt="Diagram of the ChipNeMo workflow for training a custom model" width="672" height="338" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-672x338.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-400x201.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-768x386.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-842x423.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-406x204.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-188x95.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final.jpg 1277w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67773" class="wp-caption-text">ChipNeMo provides an example of how one deeply technical team refined a pretrained model with its own data.</figcaption></figure>
+<figure id="attachment_67773" aria-describedby="caption-attachment-67773" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67773" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-672x338.jpg" alt="Diagram of the ChipNeMo workflow for training a custom model" width="672" height="338" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-672x338.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-400x201.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-768x386.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-842x423.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-406x204.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-188x95.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final.jpg 1277w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67773" class="wp-caption-text">ChipNeMo provides an example of how one deeply technical team refined a pretrained model with its own data.</figcaption></figure>
 <p>The team then refined the model in two training rounds, the first using about 24 billion tokens worth of its internal design data and the second on a mix of about 130,000 conversation and design examples.</p>
 <p>The work is among several examples of <a href="https://arxiv.org/pdf/2308.10204.pdf">research</a> and <a href="https://www.cadence.com/en_US/home/explore/large-language-models-llms.html">proofs of concept</a> of generative AI in the semiconductor industry, just beginning to emerge from the lab.</p>
 <h2><b>Sharing Lessons Learned</b></h2>
@@ -115,7 +257,7 @@
 <p>Anyone who’s gone snorkeling knows that seeing underwater isn’t as clear as seeing on land. Over distance, water attenuates the visible spectrum of light from the sun underwater, muting some colors more than others. At the same time, particles in the water create a hazy view, known as backscatter.</p>
 <p>A team from WARPLab recently <a href="https://arxiv.org/pdf/2303.04025.pdf">published a research paper</a> on undersea vision correction that helps mitigate these problems and supports the work of CUREE. The paper describes a model, called DeepSeeColor, that uses a sequence of two <a href="https://blogs.nvidia.com/blog/2018/09/05/whats-the-difference-between-a-cnn-and-an-rnn/">convolutional neural networks</a> to reduce backscatter and correct colors in real time on the NVIDIA Jetson Orin NX while undersea.</p>
 <p>“NVIDIA GPUs are involved in a large portion of our pipeline because, basically, when the images come in, we use DeepSeeColor to color correct them, and then we can do the fish detection and transmit that to a scientist up at the surface on a boat,” said Stewart Jamieson, a robotics Ph.D. candidate at MIT and AI developer at WARPLab.</p>
-<p><iframe title="DeepSeeColor: Removing backscatter and color attenuation from underwater images in realtime" width="500" height="281" src="https://www.youtube.com/embed/vpge92KRU1M?start=1&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="DeepSeeColor: Removing backscatter and color attenuation from underwater images in realtime" width="500" height="281" src="https://www.youtube.com/embed/vpge92KRU1M?start=1&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <h2><b>Eyes and Ears: Fish and Reef Detection</b></h2>
 <p>CUREE packs four forward-facing cameras, four hydrophones for underwater audio capture, depth sensors and inertial measurement unit sensors. GPS doesn’t work underwater, so it is only used to initialize the robot’s starting position while on the surface.</p>
 <p>Using a combination of cameras and hydrophones along with AI models running on the Jetson Orin NX enables CUREE to collect data for producing 3D models of reefs and undersea terrains.</p>
@@ -1093,137 +1235,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Striking Performance: Large Language Models up to 4x Faster on RTX With TensorRT-LLM for Windows]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA RTX Video Super Resolution Update Enhances Video Quality, Detail Preservation and Expands to GeForce RTX 20 Series GPUs</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/17/rtx-video-super-resolution-ai-obs-broadcast/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Tue, 17 Oct 2023 13:00:34 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67476</guid>
-
-					<description><![CDATA[NVIDIA today announced an update to RTX Video Super Resolution (VSR) that delivers greater overall graphical fidelity with preserved details, upscaling for native videos and support for GeForce RTX 20 Series GPUs. ]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA today announced an update to <a href="https://blogs.nvidia.com/blog/2023/02/28/rtx-video-super-resolution/">RTX Video Super Resolution</a> (VSR) that delivers greater overall graphical fidelity with preserved details, upscaling for native videos and support for GeForce RTX 20 Series desktop and laptop GPUs.</p>
-<p><iframe loading="lazy" title="AI-Enhanced Video: NVIDIA RTX Video Super Resolution Update 1.5" width="500" height="281" src="https://www.youtube.com/embed/VkKsamTPk7g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>For AI assists from RTX VSR and more — from enhanced creativity and productivity to blisteringly fast gaming — check out the <a href="https://www.nvidia.com/en-us/ai-on-rtx/">RTX for AI page</a>.</p>
-<p>Plus, this week <i>In the NVIDIA Studio</i>, Twitch personality Runebee shares her inspiration, streaming tips and how she uses AI and RTX GPU acceleration.</p>
-<p><iframe loading="lazy" title="The Best of Highlights 1-100" width="500" height="281" src="https://www.youtube.com/embed/Gs8gTICgAGM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>And don’t forget to join the #SeasonalArtChallenge by submitting spooky Halloween-themed art in October and harvest- and fall-themed pieces in November. For inspiration, check out the hauntingly adorable work of artists like <a href="https://www.instagram.com/iryna.blender3d/">iryna.blender3d</a> on <a href="https://twitter.com/NVIDIAStudio/status/1711411202809577569">Twitter</a>.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/SeasonalArtChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SeasonalArtChallenge</a> continues on with an incredible render from iryna.blender3d (IG). <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f383.png" alt="🎃" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>Share your spooky/Halloween-themed art with <a href="https://twitter.com/hashtag/SeasonalArtChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#SeasonalArtChallenge</a> for a chance to be featured on the Studio or <a href="https://twitter.com/nvidiaomniverse?ref_src=twsrc%5Etfw">@NVIDIAOmniverse</a> channels! <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f64c.png" alt="🙌" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a href="https://t.co/lOxcYNhBJl">pic.twitter.com/lOxcYNhBJl</a></p>
-<p>&mdash; NVIDIA Studio (@NVIDIAStudio) <a href="https://twitter.com/NVIDIAStudio/status/1711411202809577569?ref_src=twsrc%5Etfw">October 9, 2023</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<h2><b>The Super RTX VSR Update 1.5</b></h2>
-<p>RTX VSR’s AI model has been retrained to more accurately identify the difference between subtle details and compression artifacts to better preserve image details during the upscaling process. Finer details are more visible, and the overall image looks sharper and crisper than before.</p>
-<figure id="attachment_67470" aria-describedby="caption-attachment-67470" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1.png"><img decoding="async" loading="lazy" class="size-large wp-image-67470" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-672x236.png" alt="" width="672" height="236" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-672x236.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-400x140.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-768x269.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-1536x539.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-842x295.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-406x142.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-188x66.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/VSR-v1.5-sbsbs-1-1280x449.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67470" class="wp-caption-text">RTX VSR v1.5 improves detail and sharpness.</figcaption></figure>
-<p>RTX VSR version 1.5 will also de-artifact videos played at their native resolution — prior, only upscaled video could be enhanced. Providing a leap in graphical fidelity for laptop owners with 1080p screens, the updated RTX VSR makes 1080p resolution, which is popular for content and displays, look smoother at its native resolution, even with heavy artifacts.</p>
-<figure id="attachment_67473" aria-describedby="caption-attachment-67473" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR.png"><img decoding="async" loading="lazy" class="size-large wp-image-67473" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-672x377.png" alt="" width="672" height="377" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-400x224.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-1536x861.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-802x450.png 802w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-383x215.png 383w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR-1280x718.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/RTX-VSR.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67473" class="wp-caption-text">RTX VSR now de-artifacts video played at native resolution.</figcaption></figure>
-<p>And with expanded RTX VSR support, owners of GeForce RTX 20 Series GPUs can benefit from the same AI-enhanced video as those using RTX 30 and 40 Series GPUs.</p>
-<p>RTX VSR 1.5 is available as part of the latest <a href="https://www.nvidia.com/en-us/geforce/game-ready-drivers/">Game Ready Driver</a>, available for download today. Content creators downloading <a href="https://www.nvidia.com/en-us/studio/">NVIDIA Studio Drivers</a> — designed to enhance features, reduce repetitiveness and dramatically accelerate creative workflows — can install the driver with RTX VSR releasing in early November.</p>
-<h2><b>Runebee-lievable Streaming</b></h2>
-<p>Runebee has been livestreaming for over 10 years, providing a space for viewers to hang out and talk about games, movies or whatever else is going on in life. Over the years, she’s realized how common a desire for escapism is.</p>
-<p>“Things aren’t always sunshine and rainbows, so it’s nice to have some company that can help take your mind off things,” said Runebee.</p>
-<p><iframe loading="lazy" title="Playable Mercs Wesker in Separate Ways! (With Trainer) - Resident Evil 4 Remake" width="500" height="281" src="https://www.youtube.com/embed/I3LUccjySJY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Runebee has amassed over 100K followers on Twitch, YouTube and Instagram, crediting her success to thorough preparation of her setup. Her technology-forward approach ensures efficiency and reliability — allowing her focus to be on performance.</p>
-<p>“There’s a lot of planning involved in streaming, but at the end of the day, hitting the ‘start streaming’ button is the most important step, and NVIDIA GPU-acceleration is a massive factor in allowing it to go as smoothly as it does,” said Runebee.</p>
-<div class="simplePullQuote right"><p>“I never thought I’d have this smooth of a stream just by upgrading to a GeForce RTX 40 Series GPU.” &#8211; Runebee</p>
-</div>
-<p>OBS is Runbee’s preferred open-source software for video recording and livestreaming on Twitch. For maximum efficiency, Runebee deploys her <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080/">GeForce RTX 4080 RTX GPU</a>, taking advantage of the eighth-generation NVIDIA encoder, <a href="https://developer.nvidia.com/video-codec-sdk">NVENC</a>, to independently encode video, which frees up the graphics card to focus on livestreaming.</p>
-<p>“Streaming games and running OBS used to kill my CPU, and NVENC has taken so much stress off,” said Runebee. “I was hardly even able to stream PC games until I switched to NVENC.”</p>
-<p>For livestreamers, RTX 40 Series GPUs can offer support for real-time AV1 hardware encoding, providing a 40% efficiency boost compared to H.264 and delivering higher quality than competing GPUs.</p>
-<p><iframe loading="lazy" title="Unlock Higher Quality Live Streams with AV1 Support on GeForce RTX 40 Series GPUs" width="500" height="281" src="https://www.youtube.com/embed/kxznHq8be8I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<div class="simplePullQuote right"><p>“As I started building more PCs with NVIDIA GPUs, I never had a reason to switch!” &#8211; Runebee</p>
-</div>
-<p>Runebee can export recordings of her livestreams with Adobe Premiere Pro in half the normally required time thanks to GeForce RTX 40 Series dual encoders working together, dividing the work evenly to double output.</p>
-<p>They’re capable of recording up to 8K, 60 frames per second content in real time via <a href="https://www.nvidia.com/en-us/geforce/geforce-experience/">GeForce Experience</a> and OBS Studio.</p>
-<p><iframe loading="lazy" title="Faster Video Editing with GeForce RTX 40 Series GPUs &amp; DaVinci Resolve" width="500" height="281" src="https://www.youtube.com/embed/DhBFuU8Gnik?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Always looking to improve her livestreaming process, Runebee plans on experimenting with the <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast app</a>, which transforms any room into a home studio by upgrading standard webcams, microphones and speakers into premium smart devices using the power of AI.</p>
-<p><iframe loading="lazy" title="NVIDIA Broadcast 1.4 Update Featuring Eye Contact" width="500" height="281" src="https://www.youtube.com/embed/nR-vP_7XFHE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Runebee encourages those interested in livestreaming to at least give their potential passion project a shot. “It’s a great way to meet tons of new friends, become more articulate at describing the things you love — be it games or movies — and cultivate a community to share your passions with,” she said.</p>
-<figure id="attachment_67477" aria-describedby="caption-attachment-67477" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67477" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/10/studio-runebee-wk79-runebee-setup-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67477" class="wp-caption-text">Twitch livestreamer Runebee’s setup.</figcaption></figure>
-<p>Follow Runebee on <a href="https://www.twitch.tv/runebee">Twitch</a>.</p>
-<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i> <i>See </i><a href="https://www.nvidia.com/en-us/about-nvidia/legal-info/"><i>notice </i></a><i>regarding software product information.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/runebee-nv-blog-header-preview-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/runebee-nv-blog-header-preview-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA RTX Video Super Resolution Update Enhances Video Quality, Detail Preservation and Expands to GeForce RTX 20 Series GPUs]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>From Skylines to Streetscapes: How SHoP Architects Brings Innovative Designs to Life</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/13/rtx-ambassador-mengyi-fan/</link>
-		
-		<dc:creator><![CDATA[JJ Kim]]></dc:creator>
-		<pubDate>Fri, 13 Oct 2023 16:00:17 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[AEC]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67432</guid>
-
-					<description><![CDATA[At SHoP Architects, a New York City-based architectural firm, Mengyi Fan and her team aim to inspire industry professionals to create visual masterpieces by incorporating emerging technologies. Fan, the director of visualization at SHoP, has expertise that spans the fields of architectural visualization and design. She takes a definitive, novel and enduring approach to designing <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/13/rtx-ambassador-mengyi-fan/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>At <a href="https://www.shoparc.com/">SHoP Architects</a>, a New York City-based architectural firm, Mengyi Fan and her team aim to inspire industry professionals to create visual masterpieces by incorporating emerging technologies.</p>
-<p>Fan, the director of visualization at SHoP, has expertise that spans the fields of architectural visualization and design. She takes a definitive, novel and enduring approach to designing and planning architecture for city skylines and streetscapes.</p>
-<p>Fan and her team work on various architecture visualization projects, from still renderings to real-time walkthroughs. They use multiple creative applications throughout the course of their projects, including Adobe Photoshop, Autodesk 3ds Max, Autodesk Revit and Epic Games&#8217; Unreal Engine. SHoP also collaborates directly with architects at project kickoff, providing images and animations that facilitate quicker decision-making during the design process.</p>
-<p>The team consistently integrates new technologies that allow them to explore untapped innovation opportunities, as well as boost research and development. Fan often incorporates real-time and traditional rendering, <a href="https://blogs.nvidia.com/blog/2022/05/20/what-is-extended-reality/">extended reality</a> and AI into her creative workflows.</p>
-<p>To capture all the details that bring the designs together, SHoP uses <a href="https://www.nvidia.com/en-us/design-visualization/rtx-a5500/">NVIDIA RTX A5500</a>. Fan is also part of the <a href="https://www.nvidia.com/en-us/design-visualization/community/rtx-ambassador/">NVIDIA RTX Ambassador Program</a>, which is designed to amplify the work of professionals from diverse industries who are using RTX technology. Equipped with the latest capabilities of RTX, Fan hopes to continue pushing boundaries in real-time visualization, AI and <a href="https://blogs.nvidia.com/blog/2021/12/14/what-is-a-digital-twin/">digital twin</a> applications.</p>
-<figure id="attachment_67433" aria-describedby="caption-attachment-67433" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4.png"><img decoding="async" loading="lazy" class="size-large wp-image-67433" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_4.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67433" class="wp-caption-text">All images courtesy of SHoP Architects.</figcaption></figure>
-<h2><b>Redefining Creative Experiences </b></h2>
-<p>3D models play a critical role as the single source of truth, which is why SHoP designers need advanced technology to help them create detailed models and visualizations without creativity or productivity slowdowns.</p>
-<p>Previously, the team used CPU-based offerings, which limited the scope of work and research and development they could take on. But with RTX, ‌designers can create and communicate complex designs while continuously collaborating with others.</p>
-<p>By tapping into RTX A5500, Fan can prioritize efficiency and high rendering quality without worrying about compute power limitations.</p>
-<p>“NVIDIA’s professional RTX GPUs are currently known as the industry standard for graphics cards solutions,” said Fan. “RTX provides us with the performance and power needed to do all the above without worrying about hardware constraints.”</p>
-<p>The advanced features of the RTX GPUs allow SHoP designers to explore new ways of representation.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67436" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-672x259.jpg" alt="" width="672" height="259" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-672x259.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-400x154.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-768x296.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-1536x591.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-842x324.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-406x156.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-188x72.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02-1280x493.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_immersive_02.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
-<p>SHoP Architects’ projects have grown in scale, location and diversity, and Fan and her team are constantly learning and adapting from each project, drawing inspiration from diverse areas such as automotive, aviation, film and gaming.</p>
-<p>Fan views RTX-powered tools as a means of opening up diverse approaches and solutions to be more widely adopted within the industry. And as an NVIDIA RTX Ambassador, she aims to push past technological boundaries by connecting with like-minded designers and creatives.</p>
-<p>See more of Fan’s work below. Discover how <a href="https://www.nvidia.com/en-us/design-visualization/rtx/">NVIDIA RTX</a> can help enhance architectural workflows and learn more about the <a href="https://www.nvidia.com/en-us/design-visualization/community/rtx-ambassador/">NVIDIA RTX Ambassador Program</a>.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-67432-3" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4?_=3" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4</a></video></div>
-</div>]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/10/SHoP_Botswana-Innovation-Hub_lite.mp4" length="9616749" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/Mengyi-Fan-copy_1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[From Skylines to Streetscapes: How SHoP Architects Brings Innovative Designs to Life]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
