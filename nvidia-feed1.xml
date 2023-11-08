@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 08 Nov 2023 04:51:54 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 08 Nov 2023 17:45:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,201 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.2</generator>
 	<item>
+		<title>Acing the Test: NVIDIA Turbocharges Generative AI Training in MLPerf Benchmarks</title>
+		<link>https://blogs.nvidia.com/blog/2023/11/08/scaling-ai-training-mlperf/</link>
+		
+		<dc:creator><![CDATA[Dave Salvator]]></dc:creator>
+		<pubDate>Wed, 08 Nov 2023 17:00:10 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cloud Services]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Genomics]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[NVIDIA Quantum-2]]></category>
+		<category><![CDATA[Recommender Systems]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Supercomputing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67934</guid>
+
+					<description><![CDATA[NVIDIA’s AI platform raised the bar for AI training and high performance computing in the latest MLPerf industry benchmarks. Among many new records and milestones, one in generative AI stands out: NVIDIA Eos — an AI supercomputer powered by a whopping 10,752 NVIDIA H100 Tensor Core GPUs and NVIDIA Quantum-2 InfiniBand networking — completed a <a class="read-more" href="https://blogs.nvidia.com/blog/2023/11/08/scaling-ai-training-mlperf/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA’s AI platform raised the bar for AI training and high performance computing in the latest <a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">MLPerf</a> industry benchmarks.</p>
+<p>Among many new records and milestones, one in <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> stands out: <a href="https://nvidianews.nvidia.com/news/nvidia-announces-dgx-h100-systems-worlds-most-advanced-enterprise-ai-infrastructure">NVIDIA Eos</a> — an AI supercomputer powered by a whopping 10,752 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> networking — completed a training benchmark based on a GPT-3 model with 175 billion parameters trained on one billion tokens in just 3.9 minutes.</p>
+<p>That’s a nearly 3x gain from 10.9 minutes, the record NVIDIA set when the test <a href="https://blogs.nvidia.com/blog/2023/06/27/generative-ai-debut-mlperf/">was introduced</a> less than six months ago.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights.jpg"><img decoding="async" fetchpriority="high" class="aligncenter size-large wp-image-67961" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-672x422.jpg" alt="NVIDIA H100 training results over time on MLPerf benchmarks" width="672" height="422" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-672x422.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-400x251.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-768x483.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-716x450.jpg 716w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-342x215.jpg 342w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-159x100.jpg 159w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights.jpg 1200w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>The benchmark uses a portion of the full GPT-3 data set behind the popular ChatGPT service that, by extrapolation, Eos could now train in just eight days, 73x faster than a prior state-of-the-art system using 512 A100 GPUs.</p>
+<p>The acceleration in training time reduces costs, saves energy and speeds time-to-market. It’s heavy lifting that makes large language models widely available so every business can adopt them with tools like <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework for customizing <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>.</p>
+<p>In a new generative AI test ‌this round, 1,024 <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">NVIDIA Hopper architecture GPUs</a> completed a training benchmark based on the Stable Diffusion text-to-image model in 2.5 minutes, setting a high bar on this new workload.</p>
+<p>By adopting these two tests, MLPerf reinforces its leadership as the industry standard for measuring AI performance, since generative AI is the most transformative technology of our time.</p>
+<h2><b>System Scaling Soars</b></h2>
+<p>The latest results were due in part to the use of the most accelerators ever applied to an MLPerf benchmark. The 10,752 H100 GPUs far surpassed the scaling in <a href="https://blogs.nvidia.com/blog/2023/06/27/generative-ai-debut-mlperf/">AI training</a> in June, when NVIDIA used 3,584 Hopper GPUs.</p>
+<p>The 3x scaling in GPU numbers delivered a 2.8x scaling in performance, a 93% efficiency rate thanks in part to software optimizations.</p>
+<p>Efficient scaling is a key requirement in generative AI because LLMs are growing by <a href="https://blogs.nvidia.com/blog/2023/09/29/huangs-law-dally-hot-chips/">an order of magnitude every year</a>. The latest results show NVIDIA’s ability to meet this unprecedented challenge for even the world’s largest data centers.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark.jpg"><img decoding="async" class="aligncenter size-large wp-image-67964" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-672x420.jpg" alt="Chart of near linear scaling of H100 GPUs on MLPerf training" width="672" height="420" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-672x420.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-400x250.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-768x480.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-720x450.jpg 720w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-344x215.jpg 344w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-160x100.jpg 160w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark.jpg 1200w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>The achievement is thanks to a full-stack platform of innovations in accelerators, systems and software that both Eos and <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/nd-h100-v5-series">Microsoft Azure</a> used in the latest round.</p>
+<p>Eos and Azure both employed 10,752 H100 GPUs in separate submissions. They achieved within 2% of the same performance, demonstrating the efficiency of NVIDIA AI in data center and public-cloud deployments.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling.jpg"><img decoding="async" class="aligncenter size-large wp-image-67967" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-672x378.jpg" alt="Chart of record Azure scaling in MLPerf training" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling.jpg 1200w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>NVIDIA relies on Eos for a wide array of critical jobs. It helps advance initiatives like <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a>, AI-powered software for state-of-the-art computer graphics and NVIDIA Research projects like <a href="https://blogs.nvidia.com/blog/2023/10/30/llm-semiconductors-chip-nemo/">ChipNeMo</a>, generative AI tools that help design next-generation GPUs.</p>
+<h2><b>Advances Across Workloads</b></h2>
+<p>NVIDIA set several new records in this round in addition to making advances in generative AI.</p>
+<p>For example, H100 GPUs were 1.6x faster than the prior-round training recommender models widely employed to help users find what they’re looking for online. Performance was up 1.8x on RetinaNet, a computer vision model.</p>
+<p>These increases came from a combination of advances in software and scaled-up hardware.</p>
+<p>NVIDIA was once again the only company to run all MLPerf tests. H100 GPUs demonstrated the fastest performance and the greatest scaling in each of the nine benchmarks.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67970" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-672x366.jpg" alt="List of six new NVIDIA records in MLPerf training" width="672" height="366" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-672x366.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-400x218.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-768x418.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-826x450.jpg 826w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-395x215.jpg 395w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-184x100.jpg 184w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-1280x697.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training.jpg 1300w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>Speedups translate to faster time to market, lower costs and energy savings for users training massive LLMs or customizing them with frameworks like NeMo for the specific needs of their business.</p>
+<p>Eleven systems makers used the NVIDIA AI platform in their submissions this round, including ASUS, Dell Technologies, Fujitsu, GIGABYTE, Lenovo, QCT and Supermicro.</p>
+<p>NVIDIA partners participate in MLPerf because they know it’s a valuable tool for customers evaluating AI platforms and vendors.</p>
+<h2><b>HPC Benchmarks Expand</b></h2>
+<p>In MLPerf HPC, a separate benchmark for AI-assisted simulations on supercomputers, H100 GPUs delivered up to twice the performance of NVIDIA A100 Tensor Core GPUs in <a href="https://blogs.nvidia.com/blog/2021/11/17/mlperf-hpc-ai/">the last HPC round</a>. The results showed up to 16x gains since the first MLPerf HPC round in 2019.</p>
+<p>The benchmark included a new test that trains OpenFold, a model that predicts the 3D structure of a protein from its sequence of amino acids. OpenFold can do in minutes vital work for healthcare that used to take researchers weeks or months.</p>
+<p>Understanding a protein’s structure is key to finding effective drugs fast because most drugs act on proteins, the cellular machinery that helps control many biological processes.</p>
+<p>In the MLPerf HPC test, H100 GPUs trained OpenFold in 7.5 minutes.  The OpenFold test is a representative part of the entire AlphaFold training process that two years ago took 11 days using 128 accelerators.</p>
+<p>A version of the OpenFold model and the software NVIDIA used to train it will be available soon in <a href="https://www.nvidia.com/en-us/gpu-cloud/bionemo/">NVIDIA BioNeMo</a>, a generative AI platform for drug discovery.</p>
+<p>Several partners made submissions on the NVIDIA AI platform in this round. They included Dell Technologies and supercomputing centers at Clemson University, the Texas Advanced Computing Center and — with assistance from Hewlett Packard Enterprise (HPE) — Lawrence Berkeley National Laboratory.</p>
+<h2><b>Benchmarks With Broad Backing</b></h2>
+<p>Since its inception in May 2018, the MLPerf benchmarks have enjoyed broad backing from both industry and academia. Organizations that support them include Amazon, Arm, Baidu, Google, Harvard, HPE, Intel, Lenovo, Meta, Microsoft, NVIDIA, Stanford University and the University of Toronto.</p>
+<p>MLPerf tests are transparent and objective, so users can rely on the results to make informed buying decisions.</p>
+<p>All the software NVIDIA used is available from the MLPerf repository, so all developers can get the same world-class results. These software optimizations get continuously folded into containers available on <a href="https://ngc.nvidia.com/catalog">NGC</a>, NVIDIA’s software hub for GPU applications.</p>
+<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/"><i>MLPerf</i></a><i> and </i><a href="https://developer.nvidia.com/blog/setting-new-records-at-data-center-scale-using-nvidia-h100-gpus-and-quantum-2-infiniband/"><i>the details</i></a><i> of this round.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/NVIDIA-Eos-supercomputer-runs-MLPerf-tests.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/NVIDIA-Eos-supercomputer-runs-MLPerf-tests-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Acing the Test: NVIDIA Turbocharges Generative AI Training in MLPerf Benchmarks]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Partners With APEC Economies to Change Lives, Increase Opportunity, Improve Outcomes</title>
+		<link>https://blogs.nvidia.com/blog/2023/11/08/apec-summit/</link>
+		
+		<dc:creator><![CDATA[Ruth Berry]]></dc:creator>
+		<pubDate>Wed, 08 Nov 2023 16:00:32 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Deep Learning Institute]]></category>
+		<category><![CDATA[Developer Program]]></category>
+		<category><![CDATA[Inception]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67976</guid>
+
+					<description><![CDATA[When patients in Vietnam enter a medical facility in distress, doctors use NVIDIA technology to get more accurate scans to diagnose their ailments. In Hong Kong, a different set of doctors leverage generative AI to discover new cures for patients. Improving the health and well-being of citizens and strengthening economies and communities are key themes <a class="read-more" href="https://blogs.nvidia.com/blog/2023/11/08/apec-summit/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>When patients in Vietnam enter a medical facility in distress, doctors use NVIDIA technology to get more accurate scans to diagnose their ailments. In Hong Kong, a different set of doctors leverage generative AI to discover new cures for patients.</p>
+<p>Improving the health and well-being of citizens and strengthening economies and communities are key themes as world leaders soon gather in San Francisco for the 2023 Asia-Pacific Economic Cooperation (APEC) Summit.</p>
+<p>When they meet to discuss bold solutions to improve the lives of their citizens and societies, NVIDIA’s AI and accelerated computing initiatives are a crucial enabler.</p>
+<p>NVIDIA’s work to improve outcomes for everyday people while tackling future challenges builds on years of deep investment with APEC partners. With a strong presence in countries across the region, including a workforce of thousands and numerous collaborative projects in areas from farming to healthcare to education, NVIDIA is delivering new technologies and workforce training programs to enhance industrial development and advance generative AI research.</p>
+<p>Beyond technological advancements, these efforts spur economic growth, create good-paying jobs and improve the health and well-being of people globally.</p>
+<h2><b>Research and National Compute Partnerships</b></h2>
+<p>NVIDIA has advanced AI research partnerships with several APEC economies. These accelerate scientific breakthroughs in AI and HPC to address national challenges, such as healthcare, skills development and creating more robust local AI ecosystems to protect and advance well-being, prosperity and security. For example:</p>
+<ul>
+<li><b>Australia’s</b> national science and research organization, CSIRO, has teamed with NVIDIA to advance Australia&#8217;s AI program across climate action, space exploration, quantum computing and AI education.</li>
+<li><b>Singapore’s</b> National Supercomputing Centre and Ministry of Education have partnered with NVIDIA to drive sovereign AI capabilities with a priority focus on sectors such as healthcare, climate science and digital twins.</li>
+<li><b>Thailand</b> was Southeast Asia’s first country to participate in NVIDIA’s AI Nations initiative, bringing together the Ministry of Education with a consortium of top universities to advance public-private collaborations in urban planning, public health and autonomous vehicles.</li>
+<li>In <b>Vietnam</b>, NVIDIA is partnering with Viettel,  the nation’s largest employer, and Vietnam’s Academy for Science &amp; Technology to upskill workforces, accelerate the introduction of AI services to industry and deploy next-generation 5G services.</li>
+</ul>
+<h2><b>Innovation Ecosystems</b></h2>
+<p>Startups are at the leading edge of AI innovation, and a robust startup ecosystem is vital to advancing technology within APEC economies.</p>
+<p><a href="https://www.nvidia.com/en-us/startups/#nv-accordion-81048a018e-item-2202bf6f03">NVIDIA Inception</a> is a free program to help startups innovate faster. Through it, NVIDIA supports over 5,000 startups across APEC economies, and more than 15,000 globally, by providing cutting-edge technology, connections with venture capitalists and access to the latest technical resources.</p>
+<p>In 2023, NVIDIA added nearly 1,000 APEC-area startups to the program. In addition to creating economic opportunities, Inception supports small- and medium-sized enterprises in developing novel solutions to some of society&#8217;s biggest challenges. Here’s what some of its members are doing:</p>
+<ul>
+<li>In <b>Malaysia</b>, <a href="https://gotapway.com/">Tapway</a> uses AI to reduce congestion and streamline traffic for more than 1 million daily travelers.</li>
+<li>In <b>New Zealand</b>, <a href="https://www.lynker-analytics.com/our-work">Lynker</a> uses geospatial analysis, deep learning and remote sensing for earth observation.  Lynker’s technology measures carbon sequestration on farms, detecting, monitoring and restoring wetlands and enabling more effective disaster relief.</li>
+<li>In <b>Thailand</b>, <a href="https://www.altotech.ai/">AltoTech Global</a>, an Inception partner, integrates AI software with Internet of Things devices to optimize energy consumption for hotels, buildings, factories and smart cities. AltoTech’s ultimate goal is contributing to the net-zero economy and helping customers achieve their net-zero targets.</li>
+</ul>
+<h2><b>Digital Upskilling and Tools for Growth</b></h2>
+<p>The <a href="https://www.nvidia.com/en-us/training/">NVIDIA Deep Learning Institute</a> (DLI) provides AI training and digital upskilling programs that cultivate innovation and create economic opportunities.</p>
+<p>DLI’s training and certification program helps individuals and organizations accelerate skills development and workforce transformation in AI, high performance computing and industrial digitalization.</p>
+<p>Hands-on, self-paced and instructor-led courses are created and taught by NVIDIA experts, bringing real-world experience and deep technical know-how to developers and IT professionals.</p>
+<p>Through this program, NVIDIA has trained more than 115,000 individuals in APEC economies, including more than 16,000 new trainees this year.</p>
+<p>Separately, the <a href="https://developer.nvidia.com/developer-program">NVIDIA Developer Program</a> offers more than 2 million developers in APEC economies access to software development kits, application program interfaces, pretrained AI models and performance analysis tools to help developers create and innovate. Members receive free hands-on training, access to developer forums and early access to new products and services.</p>
+<h2><b>Creating a Better Future for All</b></h2>
+<p>As nations work together to address common challenges and improve the lives of their citizens, NVIDIA will continue to leverage its world-class technologies to help create a better world for all.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/apec-ceo-2023.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/apec-ceo-2023-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Partners With APEC Economies to Change Lives, Increase Opportunity, Improve Outcomes]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Harrison.ai CEO Dr. Aengus Tran on Using AI as a Spell Check for Health Checks</title>
+		<link>https://blogs.nvidia.com/blog/2023/11/08/harrison-ai-ceo/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 08 Nov 2023 14:00:34 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67942</guid>
+
+					<description><![CDATA[Clinician-led healthcare AI company Harrison.ai has built an AI system that effectively serves as a “spell checker” for radiologists — flagging critical findings to improve the speed and accuracy of radiology image analysis, reducing misdiagnoses. In the latest episode of NVIDIA’s AI Podcast, host Noah Kravitz spoke with Harrison.ai cofounder and CEO Aengus Tran about <a class="read-more" href="https://blogs.nvidia.com/blog/2023/11/08/harrison-ai-ceo/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Clinician-led healthcare AI company <a href="https://harrison.ai/">Harrison.ai</a> has built an AI system that effectively serves as a “spell checker” for radiologists — flagging critical findings to improve the speed and accuracy of radiology image analysis, reducing misdiagnoses.</p>
+<p>In the latest episode of NVIDIA’s <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a>, host Noah Kravitz spoke with Harrison.ai cofounder and CEO Aengus Tran about the company’s mission to scale global healthcare capacity with autonomous AI systems.</p>
+<p>Harrison.ai’s initial product, Annalise.ai, is an AI tool that automates radiology image analysis to enable faster, more accurate diagnoses. It can produce 124-130 different possible diagnoses and flag key findings to aid radiologists in their final diagnosis. Currently, Annalise.ai works for chest X-rays and brain CT scans, with more on the way.</p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1658401437%3Fsecret_token%3Ds-GBoYrNuokCy&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Harrison.ai CEO Aengus Tran on Using AI as a Spell Check for Health Checks - Ep. 207" href="https://soundcloud.com/theaipodcast/harrisonai-ceo-aengus-tran/s-GBoYrNuokCy" target="_blank" rel="noopener">Harrison.ai CEO Aengus Tran on Using AI as a Spell Check for Health Checks &#8211; Ep. 207</a></div>
+<p>While an AI designed for categorizing traffic lights, for example, doesn’t need perfection, medical tools must be highly accurate — any oversight could be fatal. To overcome this challenge, annalise.ai was trained on millions of meticulously annotated images — some were annotated three to five times over before being used for training.</p>
+<p>Harrison.ai is also developing Franklin.ai, a sibling AI tool aimed at accelerating and improving the accuracy of histopathology diagnosis — in which a clinician performs a biopsy and inspects the tissue for the presence of cancerous cells. Similarly to Annalise.ai, Franklin.ai flags critical findings to assist pathologists in speeding and increasing the accuracy of diagnoses.</p>
+<p>Ethical concerns about AI use are ever rising, but for Tran, the concern is less about whether it’s ethical to use AI for medical diagnosis but “actually the converse: Is it ethical to <i>not</i> use AI for medical diagnosis,” especially if “humans using those AI systems simply pick up more misdiagnosis, pick up more cancer and conditions?”</p>
+<p>Tran also talked about the future of AI systems and suggested that the focus is dual: first, focus on improving preexisting systems and then think of new cutting-edge solutions.</p>
+<p>And for those looking to break into careers in AI and healthcare, Tran says that the “first step is to decide upfront what problems you’re willing to spend a huge part of your time solving first, before the AI part,” emphasizing that the “first thing is actually to fall in love with some problem.”</p>
+<h2>You Might Also Like</h2>
+<p><a href="https://soundcloud.com/theaipodcast/jules-anh-tuan-nguyen-explains-how-ai-lets-amputee-control-prosthetic-hand-video-games-ep-149">Jules Anh Tuan Nguyen Explains How AI Lets Amputee Control Prosthetic Hand, Video Games<br />
+</a>A postdoctoral researcher at the University of Minnesota discusses his efforts to allow amputees to control their prosthetic limb — right down to the finger motions — with their minds.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-overjet">Overjet’s Ai Wardah Inam on Bringing AI to Dentistry<br />
+</a>Overjet, a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, is moving fast to bring AI to dentists’ offices. Dr. Wardah Inam, CEO of the company, discusses using AI to improve patient care.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-luis-voloch">Immunai CTO and Cofounder Luis Voloch on Using Deep Learning to Develop New Drugs<br />
+</a>Luis Voloch talks about tackling the challenges of the immune system with a machine learning and data science mindset.</p>
+<h2>Subscribe to the AI Podcast: Now Available on Amazon Music</h2>
+<p><a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">The AI Podcast is now available through Amazon Music</a>.</p>
+<p>In addition, get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
+<p>Make the AI Podcast better. Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Annalise_Screen_01-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1152"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Annalise_Screen_01-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Harrison.ai CEO Dr. Aengus Tran on Using AI as a Spell Check for Health Checks]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Digital Artist Steven Tung Shows Off So-fish-ticated Style This Week ‘In the NVIDIA Studio’</title>
 		<link>https://blogs.nvidia.com/blog/2023/11/07/tung-msi-adobe-3d-painter-blender/</link>
 		
@@ -43,7 +238,7 @@
 <p>Professional-grade technology, which was once available only at select special effects studios, is becoming increasingly accessible.</p>
 <p>“Visual production capabilities continue to skyrocket, generating a growing demand for better computer hardware among the general public,” Tung said. “The evolving synergy between art and technology can spark endless possibilities for creators.”</p>
 <p>Tung uses an <a href="https://www.msi.com/Desktop/MEG-Trident-X2-13th">MSI MEG Trident X2 desktop</a>, powered by GeForce RTX 4090 graphics, to accelerate his creative workflow.</p>
-<figure id="attachment_67876" aria-describedby="caption-attachment-67876" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w.png"><img decoding="async" fetchpriority="high" class="size-large wp-image-67876" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67876" class="wp-caption-text">The MSI MEG Trident X2 desktop, powered by GeForce RTX 4090 graphics.</figcaption></figure>
+<figure id="attachment_67876" aria-describedby="caption-attachment-67876" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67876" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67876" class="wp-caption-text">The MSI MEG Trident X2 desktop, powered by GeForce RTX 4090 graphics.</figcaption></figure>
 <p>“The enhanced speed and performance expedites various processes, such as updating material textures in Adobe Substance 3D Painter and rendering in Blender,” said Tung. “The necessary specifications and requirements align, enabling maximum creativity without limitations.”</p>
 <h2><b>Exquisite Visuals Made E-fish-ciently</b></h2>
 <p>Tung’s 3D animation, <i>The Given Fish</i>, may look simple at first glance — but it’s surprisingly complex.</p>
@@ -52,9 +247,9 @@
 <p>In the creative world behind the animation, the stone fish depicted can be consumed by people. The concept is that once taken out of the aquarium, the stone fish transforms into a real, living one.</p>
 <p>“I have a strong desire to have an aquarium at home, but it’s not practical,” said Tung. “The next best thing is to turn that emotion into art.”</p>
 <p>Tung began by creating concept sketches in Adobe Photoshop, where he had access to over 30 GPU-accelerated features that could help modify and adjust his canvas and maximize his efficiency.</p>
-<figure id="attachment_67879" aria-describedby="caption-attachment-67879" style="width: 453px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w.png"><img decoding="async" class="size-large wp-image-67879" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-453x500.png" alt="" width="453" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-453x500.png 453w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-363x400.png 363w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-768x847.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-408x450.png 408w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-195x215.png 195w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-91x100.png 91w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w.png 1280w" sizes="(max-width: 453px) 100vw, 453px" /></a><figcaption id="caption-attachment-67879" class="wp-caption-text">Concept art for “The Given Fish.”</figcaption></figure>
+<figure id="attachment_67879" aria-describedby="caption-attachment-67879" style="width: 453px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67879" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-453x500.png" alt="" width="453" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-453x500.png 453w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-363x400.png 363w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-768x847.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-408x450.png 408w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-195x215.png 195w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-91x100.png 91w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w.png 1280w" sizes="(max-width: 453px) 100vw, 453px" /></a><figcaption id="caption-attachment-67879" class="wp-caption-text">Concept art for “The Given Fish.”</figcaption></figure>
 <p>Next, Tung jumped from 2D to 3D with ZBrush. He first built a basic model and then refined critical details with custom brushes — adding greater depth and dimension with authentic, hand-sculpted textures.</p>
-<figure id="attachment_67882" aria-describedby="caption-attachment-67882" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w.png"><img decoding="async" class="size-large wp-image-67882" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67882" class="wp-caption-text">Advanced sculpting in ZBrush.</figcaption></figure>
+<figure id="attachment_67882" aria-describedby="caption-attachment-67882" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67882" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67882" class="wp-caption-text">Advanced sculpting in ZBrush.</figcaption></figure>
 <p>He then used the UV unwrapping feature in RizomUV to ensure that his models were properly unwrapped and ready for texture application.</p>
 <figure id="attachment_67885" aria-describedby="caption-attachment-67885" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67885" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-672x361.png" alt="" width="672" height="361" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-672x361.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-400x215.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-768x412.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-838x450.png 838w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-401x215.png 401w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-186x100.png 186w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67885" class="wp-caption-text">UV unwrapping feature in RizomUV.</figcaption></figure>
 <p>Tung imported the models into Adobe 3D Substance Painter, where he meticulously painted textures, blended materials and used the built-in library to achieve lifelike stone textures. RTX-accelerated light and ambient occlusion baking optimized his assets in seconds.</p>
@@ -1145,173 +1340,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Street View to the Rescue: Deep Learning Paves the Way to Safer Buildings]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>For the World to See: Nonprofit Deploys GPU-Powered Simulators to Train Providers in Sight-Saving Surgery</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/20/helpmesee-nonprofit-training-simulator-for-cataract-surgery/</link>
-		
-		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
-		<pubDate>Fri, 20 Oct 2023 13:00:50 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Education]]></category>
-		<category><![CDATA[Embedded Computing]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<category><![CDATA[Virtual Reality]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67485</guid>
-
-					<description><![CDATA[GPU-powered surgical-simulation devices are helping train more than 2,000 doctors a year in lower-income countries to treat cataract blindness, the world’s leading cause of blindness, thanks to the nonprofit HelpMeSee. While cataract surgery has a success rate of around 99%, many patients in low- and middle-income countries lack access to the common procedure due to <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/20/helpmesee-nonprofit-training-simulator-for-cataract-surgery/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>GPU-powered surgical-simulation devices are helping train more than 2,000 doctors a year in lower-income countries to treat cataract blindness, the world’s <a href="https://academic.oup.com/inthealth/article/14/Supplement_1/i68/6563812" target="_blank" rel="noopener">leading cause of blindness</a>, thanks to the nonprofit HelpMeSee.</p>
-<p>While cataract surgery has a success rate of <a href="https://okko.com.au/what-is-the-cataract-surgery-success-rate/#:~:text=The%20success%20rate%20for%20cataract,Sloan%2C%20F.%2C%202021." target="_blank" rel="noopener">around 99%</a>, many patients in low- and middle-income countries lack access to the common procedure due to a severe shortage of ophthalmologists. An estimated 90% of the <a href="https://academic.oup.com/inthealth/article/14/Supplement_1/i68/6563812" target="_blank" rel="noopener">100 million people</a> affected by cataract-related visual impairment or blindness are in these locations.</p>
-<p>By training more healthcare providers — including those without a specialty in ophthalmology — to treat cataracts, <a href="https://helpmesee.org/" target="_blank" rel="noopener">HelpMeSee</a> improves the quality of life for patients such as a mother of two young children in Bhiwandi, near Mumbai, India, who was blinded by cataracts in both eyes.</p>
-<p>“After the surgery, her vision improved dramatically and she was able to take up a job, changing the course of her entire family,” said Dr. Chetan Ahiwalay, chief instructor and subject-matter expert for HelpMeSee in India. “She and her husband are now happily raising their kids and leading a healthy life. These are the things that keep us going as doctors.”</p>
-<p>HelpMeSee’s simulator devices use <a href="https://www.nvidia.com/en-us/design-visualization/rtx/">NVIDIA RTX GPUs</a> to render high-quality visuals, providing a more realistic training environment for doctors to hone their surgical skills. To further improve the trainee experience, NVIDIA experts are working with the HelpMeSee team to improve rendering performance, increase visual realism and augment the simulator with next-generation technologies such as real-time ray tracing and AI.</p>
-<h2><b>Tackling Treatable Blindness With Accessible Training</b></h2>
-<p>High-income countries have <a href="https://bmcpublichealth.biomedcentral.com/articles/10.1186/s12889-022-14491-0" target="_blank" rel="noopener">18x more ophthalmologists</a> per million residents than low-income countries. That coverage gap, which is far wider still in certain countries, makes it harder for those in thinly resourced areas to receive treatment for avoidable blindness.</p>
-<p>HelpMeSee’s devices can train doctors on multiple eye procedures using immersive tools inspired by flight simulators used in aviation. The team trains doctors in countries including India, China, Madagascar, Mexico and the U.S., and rolls out multilingual training each year for new procedures.</p>
-<p>The eye surgery simulator offers realistic 3D visuals, haptic feedback, performance scores and the opportunity to attempt a step of the procedure multiple times until the trainee achieves proficiency. Qualified instructors like Dr. Ahiwalay travel to rural and urban areas to deliver the training through structured courses — and help surgeons transition from the simulators to live surgeries.</p>
-<figure id="attachment_67489" aria-describedby="caption-attachment-67489" style="width: 533px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-scaled.jpeg"><img decoding="async" loading="lazy" class="size-large wp-image-67489" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-533x500.jpeg" alt="Doctors training to perform cataract surgery" width="533" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-533x500.jpeg 533w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-400x375.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-768x720.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-1536x1441.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-480x450.jpeg 480w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-229x215.jpeg 229w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-107x100.jpeg 107w, https://blogs.nvidia.com/wp-content/uploads/2023/10/IMO-First-MSTC-Training_23-1-1280x1201.jpeg 1280w" sizes="(max-width: 533px) 100vw, 533px" /></a><figcaption id="caption-attachment-67489" class="wp-caption-text">During a training session, doctors learn to perform manual small-incision cataract surgery.</figcaption></figure>
-<p>“We’re lowering the barrier for healthcare practitioners to learn these specific skills that can have a profound impact on patients,” said Dr. Bonnie An Henderson, CEO of HelpMeSee, which is based in New York. “Simulation-based training will improve surgical skills while keeping patients safe.”</p>
-<h2><b>Looking Ahead to AI, Advanced Rendering </b></h2>
-<p>HelpMeSee works with <a href="https://surgicalscience.com/" target="_blank" rel="noopener">Surgical Science</a>, a supplier of medical virtual-reality simulators, based in Gothenburg, Sweden, to develop the 3D models and real-time rendering for its devices. Other collaborators — Strasbourg, France-based <a href="https://www.insimo.com/" target="_blank" rel="noopener">InSimo</a> and Pune, India-based <a href="https://services.harman.com/" target="_blank" rel="noopener">Harman Connected Services</a> — develop the physics-based simulations and user interface, respectively.  <a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus.png"><img decoding="async" loading="lazy" class="alignright wp-image-67492" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-400x400.png" alt="" width="250" height="250" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2023/10/delivering_the_nucleus.png 1024w" sizes="(max-width: 250px) 100vw, 250px" /></a></p>
-<p>“Since there are many crucial visual cues during eye surgery, the simulation requires high fidelity,” said Sebastian Ullrich, senior manager of software development at Surgical Science, who has worked with HelpMeSee for years. “To render a realistic 3D representation of the human eye, we use custom shader materials with high-resolution textures to represent various anatomical components, mimic optical properties such as refraction, use order-independent transparency sorting and employ volume rendering.”</p>
-<p>NVIDIA RTX GPUs support 3D volume rendering, stereoscopic rendering and depth sorting algorithms that provide a realistic visual experience for HelpMeSee’s trainees. Working with NVIDIA, the team is investigating AI models that could provide trainees with a real-time analysis of the practice procedure and offer recommendations for improvement.</p>
-<p>Watch a demo of HelpMeSee’s <a href="https://www.youtube.com/watch?v=Y2vHBo5jpD8" target="_blank" rel="noopener">cataract surgery training simulation</a>.</p>
-<p><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>Subscribe to NVIDIA healthcare news</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/Dr.-Samuel-Kwizera.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/Dr.-Samuel-Kwizera-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[For the World to See: Nonprofit Deploys GPU-Powered Simulators to Train Providers in Sight-Saving Surgery]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Eureka! NVIDIA Research Breakthrough Puts New Spin on Robot Learning</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/20/eureka-robotics-research/</link>
-		
-		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
-		<pubDate>Fri, 20 Oct 2023 13:00:24 +0000</pubDate>
-				<category><![CDATA[Autonomous Machines]]></category>
-		<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Research]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Isaac]]></category>
-		<category><![CDATA[NVIDIA Research]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Open Source]]></category>
-		<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67624</guid>
-
-					<description><![CDATA[A new AI agent developed by NVIDIA Research that can teach robots complex skills has trained a robotic hand to perform rapid pen-spinning tricks — for the first time as well as a human can. The stunning prestidigitation, showcased in the video above, is one of nearly 30 tasks that robots have learned to expertly <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/20/eureka-robotics-research/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>A new AI agent developed by <a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener">NVIDIA Research</a> that can teach robots complex skills has trained a robotic hand to perform rapid pen-spinning tricks — for the first time as well as a human can.</p>
-<p>The stunning prestidigitation, showcased in the video above, is one of nearly 30 tasks that robots have learned to expertly accomplish thanks to Eureka, which autonomously writes reward algorithms to train bots.</p>
-<p>Eureka has also taught robots to open drawers and cabinets, toss and catch balls, and manipulate scissors, among other tasks.</p>
-<p>The Eureka research, <a href="https://eureka-research.github.io/" target="_blank" rel="noopener">published today</a>, includes a paper and the project’s AI algorithms, which developers can experiment with using <a href="https://developer.nvidia.com/isaac-gym" target="_blank" rel="noopener">NVIDIA Isaac Gym</a>, a physics simulation reference application for <a href="https://blogs.nvidia.com/blog/2018/08/02/supervised-unsupervised-learning/" target="_blank" rel="noopener">reinforcement learning</a> research. Isaac Gym is built on <a href="https://developer.nvidia.com/omniverse" target="_blank" rel="noopener">NVIDIA Omniverse</a>, a development platform for building 3D tools and applications based on the OpenUSD framework. Eureka itself is powered by the GPT-4 <a href="https://blogs.nvidia.com/blog/2023/01/26/what-are-large-language-models-used-for/" target="_blank" rel="noopener">large language model</a>.</p>
-<p>“Reinforcement learning has enabled impressive wins over the last decade, yet many challenges still exist, such as reward design, which remains a trial-and-error process,” said Anima Anandkumar, senior director of AI research at NVIDIA and an author of the Eureka paper. “Eureka is a first step toward developing new algorithms that integrate generative and reinforcement learning methods to solve hard tasks.”</p>
-<p><iframe loading="lazy" title="Eureka! Extreme Robot Dexterity with LLMs | NVIDIA Research Paper" width="500" height="281" src="https://www.youtube.com/embed/sDFAWnrCqKc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>AI Trains Robots</b></h2>
-<p>Eureka-generated reward programs — which enable trial-and-error learning for robots — outperform expert human-written ones on more than 80% of tasks, according to the paper. This leads to an average performance improvement of more than 50% for the bots.</p>
-<div style="width: 1920px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-67624-1" width="1920" height="1080" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/franka_cabinet.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/franka_cabinet.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/10/franka_cabinet.mp4</a></video></div>
-<p><i>Robot arm taught by Eureka to open a drawer.</i></p>
-<p>The AI agent taps the GPT-4 LLM and <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/" target="_blank" rel="noopener">generative AI</a> to write software code that rewards robots for reinforcement learning. It doesn’t require task-specific prompting or predefined reward templates — and readily incorporates human feedback to modify its rewards for results more accurately aligned with a developer’s vision.</p>
-<p>Using GPU-accelerated simulation in Isaac Gym, Eureka can quickly evaluate the quality of large batches of reward candidates for more efficient training.</p>
-<p>Eureka then constructs a summary of the key stats from the training results and instructs the LLM to improve its generation of reward functions. In this way, the AI is self-improving. It’s taught all kinds of robots — quadruped, bipedal, quadrotor, dexterous hands, cobot arms and others — to accomplish all kinds of tasks.</p>
-<p>The research paper provides in-depth evaluations of 20 Eureka-trained tasks, based on open-source dexterity benchmarks that require robotic hands to demonstrate a wide range of complex manipulation skills.</p>
-<p>The results from nine Isaac Gym environments are showcased in visualizations generated using NVIDIA Omniverse.</p>
-<div style="width: 1920px;" class="wp-video"><video class="wp-video-shortcode" id="video-67624-2" width="1920" height="1080" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/humanoid.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/humanoid.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/10/humanoid.mp4</a></video></div>
-<p><i>Humanoid robot learns a running gait via Eureka.</i></p>
-<p>“Eureka is a unique combination of large language models and NVIDIA GPU-accelerated simulation technologies,” said Linxi “Jim” Fan, senior research scientist at NVIDIA, who’s one of the project’s contributors. “We believe that Eureka will enable dexterous robot control and provide a new way to produce physically realistic animations for artists.”</p>
-<p>It’s breakthrough work bound to get developers’ minds spinning with possibilities, adding to recent NVIDIA Research advancements like <a href="https://blogs.nvidia.com/blog/2023/10/04/ai-jim-fan/" target="_blank" rel="noopener">Voyager</a>, an AI agent built with GPT-4 that can autonomously play <i>Minecraft</i>.</p>
-<p>NVIDIA Research comprises hundreds of scientists and engineers worldwide, with teams focused on topics including AI, computer graphics, computer vision, self-driving cars and robotics.</p>
-<p><i>Learn more about </i><a href="https://eureka-research.github.io/" target="_blank" rel="noopener"><i>Eureka</i></a><i> and </i><a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener"><i>NVIDIA Research</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/10/franka_cabinet.mp4" length="275129" type="video/mp4" />
-<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/10/humanoid.mp4" length="2901442" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/eureka-featured-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/eureka-featured-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Eureka! NVIDIA Research Breakthrough Puts New Spin on Robot Learning]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Next-Level Computing: NVIDIA and AMD Deliver Powerful Workstations to Accelerate AI, Rendering and Simulation</title>
-		<link>https://blogs.nvidia.com/blog/2023/10/19/ai-workstations/</link>
-		
-		<dc:creator><![CDATA[Stacy Ozorio]]></dc:creator>
-		<pubDate>Thu, 19 Oct 2023 19:30:07 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67603</guid>
-
-					<description><![CDATA[To enable professionals worldwide to build and run AI applications right from their desktops, NVIDIA and AMD are powering a new line of workstations equipped with NVIDIA RTX Ada Generation GPUs and AMD Ryzen Threadripper PRO 7000 WX-Series CPUs. Bringing together the highest levels of AI computing, rendering and simulation capabilities, these new platforms enable <a class="read-more" href="https://blogs.nvidia.com/blog/2023/10/19/ai-workstations/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>To enable professionals worldwide to build and run AI applications right from their desktops, NVIDIA and AMD are powering a new line of <a href="https://www.nvidia.com/en-us/design-visualization/workstations/latest/">workstations</a> equipped with <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/" target="_blank" rel="noopener">NVIDIA RTX Ada Generation GPUs</a> and <a href="https://ir.amd.com/news-events/press-releases/detail/1162/amd-introduces-new-amd-ryzen-threadripper-7000-series" target="_blank" rel="noopener">AMD Ryzen Threadripper PRO 7000 WX-Series CPUs</a>.</p>
-<p>Bringing together the highest levels of AI computing, rendering and simulation capabilities, these new platforms enable professionals to efficiently tackle the most resource-intensive, large-scale AI workflows locally.</p>
-<h2><b>Bringing AI Innovation to the Desktop</b></h2>
-<p>Advanced AI tasks typically require data-center-level performance. Training a <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/" target="_blank" rel="noopener">large language model</a> with a trillion parameters, for example, takes thousands of GPUs running for weeks, though research is underway to reduce model size and enable model training on smaller systems while still maintaining high levels of AI model accuracy.</p>
-<p>The new NVIDIA RTX GPU and AMD CPU-powered AI workstations provide the power and performance required for training such smaller models, as well as local fine-tuning, and helping to offload data center and cloud resources for AI development tasks. The devices let users select single- or multi-GPU configurations as required for their workloads.</p>
-<p>Smaller trained AI models also provide the opportunity to use workstations for local inferencing. RTX GPU and AMD CPU-powered workstations can be configured to run these smaller AI models for inference serving for small workgroups or departments.</p>
-<p>With up to 48GB of memory in a single NVIDIA RTX GPU, these workstations offer a cost-effective way to reduce compute load on data centers. And when professionals do need to scale training and deployment from these workstations to data centers or the cloud, the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform enables seamless portability of workflows and toolchains.</p>
-<p>RTX GPU and AMD CPU-powered workstations also enable cutting-edge visual workflows. With accelerated computing power, the new workstations enable highly interactive content creation, industrial digitalization, and advanced simulation and design.</p>
-<h2><b>Unmatched Power, Performance and Flexibility</b></h2>
-<p>AMD Ryzen Threadripper PRO 7000 WX-Series processors provide the CPU platform for the next generation of demanding workloads. The processors deliver a significant increase in core count — up to 96 cores per CPU — and industry-leading maximum memory bandwidth in a single socket.</p>
-<p>Combining them with the latest NVIDIA RTX Ada Generation GPUs brings unmatched power and performance in a workstation. The GPUs enable up to 2x the performance in ray tracing, AI processing, graphics rendering and computational tasks compared to the previous generation.</p>
-<p>Ada Generation GPUs options include the RTX 4000 SFF, RTX 4000, RTX 4500, RTX 5000 and RTX 6000. They’re built on the <a href="https://www.nvidia.com/en-us/geforce/ada-lovelace-architecture/" target="_blank" rel="noopener">NVIDIA Ada Lovelace architecture</a> and feature up to 142 third-generation RT Cores, 568 fourth-generation Tensor Cores and 18,176 latest-generation CUDA cores.</p>
-<p>From architecture and manufacturing to media and entertainment and healthcare, professionals across industries will be able to use the new workstations to tackle challenging AI computing workloads — along with 3D rendering, product visualization, simulation and scientific computing tasks.</p>
-<h2><b>Availability</b></h2>
-<p><a href="https://www.nvidia.com/en-us/design-visualization/workstations/latest/">New workstations</a> powered by NVIDIA RTX Ada Generation GPUs and the latest AMD Threadripper Pro processors will be available starting next month from BOXX and HP, with other system integrators offering them soon.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/proviz-intel-nv-workstation-kv-2972327-edit-r2.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/proviz-intel-nv-workstation-kv-2972327-edit-r2-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Next-Level Computing: NVIDIA and AMD Deliver Powerful Workstations to Accelerate AI, Rendering and Simulation]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
