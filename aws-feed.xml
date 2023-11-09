@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 08 Nov 2023 13:47:14 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 09 Nov 2023 16:28:19 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,167 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Deep-dive into Ansys Fluent performance on Ansys Gateway powered by AWS</title>
+		<link>https://aws.amazon.com/blogs/hpc/deep-dive-into-ansys-fluent-performance-on-ansys-gateway-powered-by-aws/</link>
+		
+		<dc:creator><![CDATA[Dnyanesh Digraskar]]></dc:creator>
+		<pubDate>Thu, 09 Nov 2023 15:38:16 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">62218975828b3a44d88617555b4bff2d5132a214</guid>
+
+					<description>In this post, we’ll show you the performance and price curves when Ansys Gateway, powered by AWS runs on different HPC instances - this should help you make the right hardware choices for running Fluent simulations in the cloud.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Dnyanesh Digraskar, Principal HPC Partner Solutions Architect, AWS, Ashwini Kumar, Senior Principal Engineer, Ansys, Nicole Diana, Director, Fluids Business Unit, Ansys.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Today, we’re going to deep-dive into the performance and associated cost of running computational fluid dynamics (CFD) simulations on AWS using Ansys Fluent through the &lt;a href="https://www.ansys.com/products/cloud/ansys-gateway"&gt;Ansys Gateway powered by AWS&lt;/a&gt; (or just “Ansys Gateway” for the rest of this post).&lt;/p&gt; 
+&lt;p&gt;Ansys Gateway is an &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-ppiyshk2oin3i"&gt;AWS Marketplace&lt;/a&gt; hosted solution for users to manage their complete Ansys virtual desktop and HPC simulation workflows with more than fifty Ansys products in their AWS cloud environment. &lt;a href="https://www.ansys.com/resource-center/case-study/ansys-emirates-team-new-zealand"&gt;Emirates Team New Zealand&lt;/a&gt; and &lt;a href="https://www.ansys.com/resource-center/case-study/ansys-turntide-technologies"&gt;Turntide Technologies&lt;/a&gt; use Ansys Gateway to accelerate their design and engineering simulation cycles.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://www.ansys.com/products/fluids/ansys-fluent"&gt;Ansys Fluent&lt;/a&gt;, an advanced physics modeling simulation software is used by engineers and scientists across industries like automotive, aerospace, manufacturing, and energy to innovate and optimize product development.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll evaluate the performance and price characteristics for three test cases on various configurations of Amazon Elastic Compute Cloud (Amazon EC2) instance types. Using the results in this post, you’ll be able to make appropriate hardware choices for running Ansys Fluent simulations.&lt;/p&gt; 
+&lt;h2&gt;Ansys Gateway recap&lt;/h2&gt; 
+&lt;p&gt;Ansys Gateway is a secure, online platform that enables users to create, manage, and execute complete computer-aided engineering (CAE) workflows in their own AWS accounts. Earlier this year, we published a &lt;a href="https://aws.amazon.com/blogs/apn/accelerate-your-ansys-simulations-with-ansys-gateway-powered-by-aws/"&gt;blog post&lt;/a&gt; that described solution architecture components, security implementation, and typical end-user workflows for using Ansys Gateway.&lt;/p&gt; 
+&lt;p&gt;The Ansys applications (solvers) available through Ansys Gateway are pre-configured, validated, and extensively benchmarked on various Amazon EC2 hardware for performance and price. Ansys users can refer to the &lt;a href="https://ansyshelp.ansys.com/account/secured?returnurl=/Views/Secured/gateway/v000/en/gateway_ru/bk_gateway_ru.html"&gt;recommended usage&lt;/a&gt; guidelines on the Ansys Gateway documentation in &lt;a href="https://www.ansys.com/support"&gt;Ansys Help&lt;/a&gt; to setup their virtual desktop infrastructure (VDI) or HPC environment with the recommended Amazon EC2 instance types. Users can then carry out simulations with solvers of their choice straight out-of-the-box without the need to manually setup and tune the solvers, simulation environment, and hardware parameters.&lt;/p&gt; 
+&lt;h2&gt;Benchmark information and simulation environment&lt;/h2&gt; 
+&lt;h3&gt;Benchmarks&lt;/h3&gt; 
+&lt;p&gt;For the benchmarking purposes of this post, we’ve used the test cases from the standard &lt;a href="https://www.ansys.com/it-solutions/benchmarks-overview"&gt;Ansys Fluent Benchmarks&lt;/a&gt; suite. The model description of each test case, including the mesh size represented in terms of number of cells, turbulence model used, and the fluid-flow condition are shown in Table 1. These benchmarks, shown in Figures 1a – 1c for visual reference, represent the typical size and physics modeled by users. We used Ansys Fluent version 2023 R1 to run the simulations.&lt;/p&gt; 
+&lt;div id="attachment_3037" style="width: 899px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3037" class="size-full wp-image-3037" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.06.26.png" alt="Table 1: Description of Ansys Fluent benchmarking test cases used for this post." width="889" height="198"&gt;
+ &lt;p id="caption-attachment-3037" class="wp-caption-text"&gt;Table 1: Description of Ansys Fluent benchmarking test cases used for this post.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3038" style="width: 1107px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3038" loading="lazy" class="size-full wp-image-3038" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.10.32.png" alt="Figure 1a: Visual representation of Ansys Fluent benchmarking test cases used for this post – Steady-state simulation of flow through a vehicle exhaust system with 33 million cells. Figure 1b: Visual representation of Ansys Fluent benchmarking test cases used for this post – Transient simulation of flow through a combustor with 71 million cells. Figure 1c: Visual representation of Ansys Fluent benchmarking test cases used for this post – Steady-state simulation of external aerodynamics of Formula 1 race car with 140 million cells." width="1097" height="241"&gt;
+ &lt;p id="caption-attachment-3038" class="wp-caption-text"&gt;Figure 1 – &lt;strong&gt;a&lt;/strong&gt;: Visual representation of Ansys Fluent benchmarking test cases used for this post – Steady-state simulation of flow through a vehicle exhaust system with 33 million cells. &lt;strong&gt;b&lt;/strong&gt;: Visual representation of Ansys Fluent benchmarking test cases used for this post – Transient simulation of flow through a combustor with 71 million cells. &lt;strong&gt;c&lt;/strong&gt;: Visual representation of Ansys Fluent benchmarking test cases used for this post – Steady-state simulation of external aerodynamics of Formula 1 race car with 140 million cells.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Simulation environment&lt;/h3&gt; 
+&lt;p&gt;AWS recently announced the &lt;a href="https://aws.amazon.com/ec2/instance-types/hpc7a/"&gt;Amazon EC2 Hpc7a&lt;/a&gt; instance type, powered by 4&lt;sup&gt;th&lt;/sup&gt; generation AMD EPYC&lt;sup&gt;TM&lt;/sup&gt; (Genoa) processors with up to 192 physical cores and 300 Gbps Elastic Fabric Adapter (EFA) network bandwidth. We compared the performance of these benchmarks on Hpc7a and the previous generation &lt;a href="https://aws.amazon.com/ec2/instance-types/hpc6a/"&gt;Hpc6a&lt;/a&gt; instances.&lt;/p&gt; 
+&lt;p&gt;The following table (Table 2) summarizes Amazon EC2 instance configurations used:&lt;/p&gt; 
+&lt;div id="attachment_3039" style="width: 936px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3039" loading="lazy" class="size-full wp-image-3039" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.12.16.png" alt="Table 2: Amazon EC2 instances used for running the benchmarking test cases" width="926" height="362"&gt;
+ &lt;p id="caption-attachment-3039" class="wp-caption-text"&gt;Table 2: Amazon EC2 instances used for running the benchmarking test cases&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Analysis methodology&lt;/h2&gt; 
+&lt;p&gt;Our objective for running these benchmarks was to quantify Ansys Fluent performance, associated hardware, platform, and license costs, and thus be able to recommend the appropriate Amazon EC2 instance type to use on Ansys Gateway. With that in mind, we performed the analysis by measuring the following:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Solver Rating to represent the solver performance&lt;/li&gt; 
+ &lt;li&gt;Ratio of performance to hardware configuration cost&lt;/li&gt; 
+ &lt;li&gt;Ratio of performance to total job cost&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;&lt;strong&gt;Solver Rating:&lt;/strong&gt; the &lt;em&gt;Solver Rating&lt;/em&gt; is defined as the number of times the benchmark can be run on a given machine in 24 hours. It’s computed by dividing the number of seconds in a day by the number of seconds required to run the benchmark. A higher &lt;em&gt;Solver Rating&lt;/em&gt; indicates better performance. &lt;em&gt;Solver Rating&lt;/em&gt; is the primary metric we used in this post to report the performance. We ran our simulations for 1000 iterations for steady-state flow or 1000 timesteps for transient flow.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Job cost:&lt;/strong&gt; The total job (or simulation) cost is comprised of three main components: the Amazon EC2 cost, Ansys Gateway charge of $0.25 per running Amazon EC2 instance per hour, and the Ansys Licensing&amp;nbsp;cost.&lt;/p&gt; 
+&lt;p&gt;These cost representations can guide you to select the right HPC configuration to&amp;nbsp;meet any one of these three simulation goals:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;minimize job cost&lt;/li&gt; 
+ &lt;li&gt;maximize performance&lt;/li&gt; 
+ &lt;li&gt;achieve the best performance/cost ratio&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Note that for the purpose of this post, we used the Ansys Elastic Licensing to account for the licensing costs which might not be fully representative if you’re using leased or perpetual licenses. Also, we haven’t accounted for storage and networking charges in our calculations, simply because compute constitutes most (or nearly all) of the infrastructure costs for these simulations. We used Amazon EC2 on-demand costs from the us-east-2 (Ohio) region. You can take advantage of flexible Amazon EC2 pricing options like &lt;a href="https://aws.amazon.com/savingsplans/"&gt;Compute Savings Plan&lt;/a&gt; or &lt;a href="https://aws.amazon.com/ec2/pricing/reserved-instances/"&gt;Reserved Instances&lt;/a&gt; (RI) which provide a significant discount (up to 72%) compared to On-Demand pricing.&lt;/p&gt; 
+&lt;h2&gt;Results&lt;/h2&gt; 
+&lt;p&gt;To understand Ansys Fluent performance, we plotted the variation of the Solver Rating against the number of instance cores for each of our three test cases. These plots are in Figures 2 (a, b, c). Higher Solver Rating signifies better performance. The &lt;em&gt;Vehicle Exhaust&lt;/em&gt; model with 33 million cells was scaled to 1536 cores, while the &lt;em&gt;Combustor&lt;/em&gt; and &lt;em&gt;F1 Race Car&lt;/em&gt; models were scaled to over 6000 cores, respectively.&lt;/p&gt; 
+&lt;div id="attachment_3040" style="width: 708px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3040" loading="lazy" class="size-full wp-image-3040" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.13.17.png" alt="Figure 2a: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instance cores for the Vehicle exhaust benchmark." width="698" height="451"&gt;
+ &lt;p id="caption-attachment-3040" class="wp-caption-text"&gt;Figure 2a: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instance cores for the Vehicle exhaust benchmark.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3041" style="width: 697px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3041" loading="lazy" class="size-full wp-image-3041" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.13.53.png" alt="Figure 2b: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instance cores for the Combustor benchmark." width="687" height="436"&gt;
+ &lt;p id="caption-attachment-3041" class="wp-caption-text"&gt;Figure 2b: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instance cores for the Combustor benchmark.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3042" style="width: 703px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3042" loading="lazy" class="size-full wp-image-3042" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.14.32.png" alt="Figure 2c: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instance cores for the Formula 1 car benchmark." width="693" height="442"&gt;
+ &lt;p id="caption-attachment-3042" class="wp-caption-text"&gt;Figure 2c: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instance cores for the Formula 1 car benchmark.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Since the number of physical cores on Hpc6a and Hpc7a instance types are different, the relative performance between the two instance types on cores and node level differ, too. In Figures 3 (a, b, c) we plotted the variation of the Solver Rating with the number of instances (nodes).&lt;/p&gt; 
+&lt;div id="attachment_3043" style="width: 706px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3043" loading="lazy" class="size-full wp-image-3043" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.15.25.png" alt="Figure 3a: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instances (nodes) for the Vehicle Exhaust benchmark." width="696" height="398"&gt;
+ &lt;p id="caption-attachment-3043" class="wp-caption-text"&gt;Figure 3a: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instances (nodes) for the Vehicle Exhaust benchmark.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3044" style="width: 708px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3044" loading="lazy" class="size-full wp-image-3044" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.15.53.png" alt="Figure 3b: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instances (nodes) for the Combustor benchmark." width="698" height="444"&gt;
+ &lt;p id="caption-attachment-3044" class="wp-caption-text"&gt;Figure 3b: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instances (nodes) for the Combustor benchmark.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3045" style="width: 748px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3045" loading="lazy" class="size-full wp-image-3045" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.16.19.png" alt="Figure 3c: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instances (nodes) for the Formula 1 race car benchmark." width="738" height="470"&gt;
+ &lt;p id="caption-attachment-3045" class="wp-caption-text"&gt;Figure 3c: Comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a and Hpc7a instances (nodes) for the Formula 1 race car benchmark.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;For the Vehicle Exhaust model with 33 million cells, the performance improvement with Hpc7a instances was 1.2x at 1536 cores on a &lt;em&gt;per-core &lt;/em&gt;basis, and 1.78x at 32 instances on a &lt;em&gt;per-instance&lt;/em&gt; basis. For the Combustor benchmark model with 71 million cells, the performance improvement with Hpc7a instances is 1.3x at 3072 cores on a &lt;em&gt;per-core&lt;/em&gt; basis, and was 1.83x at 32 instances on &lt;em&gt;per-instance&lt;/em&gt; basis.&lt;/p&gt; 
+&lt;p&gt;As the benchmark model size increased, the instance topology and higher EFA networking bandwidth of Hpc7a instances helps to achieve better scaling. For the Formula 1 Race Car model with 140 million cells, the performance improvement &lt;em&gt;per-core&lt;/em&gt; with Hpc7a instances was 1.3x at 6144 cores, and was 2.1x at 32 instances on a &lt;em&gt;per-instance&lt;/em&gt; basis.&lt;/p&gt; 
+&lt;h3&gt;Full cores vs partial cores&lt;/h3&gt; 
+&lt;p&gt;These plots show performance results when running Ansys Fluent on the full available set of physical cores: 192 for hpc7a.96xlarge, and 96 for hpc6a.48xlarge. But it’s possible to manually disable certain numbers of physical cores – or use process pinning on each instance – to achieve better &lt;em&gt;per-core&lt;/em&gt; performance because of increased memory bandwidth per core. We call this under-subscribing.&lt;/p&gt; 
+&lt;p&gt;When running simulations on the Hpc6a instance type, which is available in only one size, under-subscribing is implemented in Ansys Gateway via job setup scripts. Under-subscribing on Hpc7a isn’t required because it’s a feature of the different instance sizes.&lt;/p&gt; 
+&lt;p&gt;In this section we’ll take a detailed look at the impact this under-subscribing technique has on Ansys Fluent performance. Figures 4a, 4b, 4c show variations of Solver Rating with the number of instance cores for 100%, 50%, and 25% cores enabled per-instance for Hpc6a and corresponding sizes of Hpc7a instance type.&lt;/p&gt; 
+&lt;div id="attachment_3046" style="width: 694px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3046" loading="lazy" class="size-full wp-image-3046" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.17.08.png" alt="Figure 4a: Vehicle exhaust benchmark - comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance." width="684" height="413"&gt;
+ &lt;p id="caption-attachment-3046" class="wp-caption-text"&gt;Figure 4a: Vehicle exhaust benchmark – comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3047" style="width: 689px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3047" loading="lazy" class="size-full wp-image-3047" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.17.34.png" alt="Figure 4a: Vehicle exhaust benchmark - comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance." width="679" height="463"&gt;
+ &lt;p id="caption-attachment-3047" class="wp-caption-text"&gt;Figure 4a: Vehicle exhaust benchmark – comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3048" style="width: 718px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3048" loading="lazy" class="size-full wp-image-3048" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.17.57.png" alt="Figure 4c: F1 Race Car benchmark - comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. " width="708" height="454"&gt;
+ &lt;p id="caption-attachment-3048" class="wp-caption-text"&gt;Figure 4c: F1 Race Car benchmark – comparison of Ansys Fluent solver rating with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;From Figures 4a – 4c, it’s clear that as we undersubscribe an instance (thus increasing the available memory bandwidth per core), the simulation performance improves. For the vehicle exhaust benchmark, the performance improvement with 50% and 25% cores enabled compared to 100% cores for both Hpc6a and Hpc7a instances was between 1.3x and 1.8x.&lt;/p&gt; 
+&lt;p&gt;As the size of the simulation model increased, the performance improvement due to the under-subscribing became even more pronounced. For the Combustor model, the performance improvement with 50% and 25% cores enabled compared to 100% cores on both Hpc6a and Hpc7a was between 1.7x and 2.6x.&lt;/p&gt; 
+&lt;p&gt;Finally, for the F1 Race Car model, the performance improvement with 50% and 25% cores enabled compared to 100% cores for both Hpc6a and Hpc7a instances was between 1.8x and 2.9x.&lt;/p&gt; 
+&lt;h2&gt;Simulation costs&lt;/h2&gt; 
+&lt;p&gt;Now let’s look at the cost impacts (based on cloud infrastructure and licensing) for running these benchmarks with our various instance configurations.&lt;/p&gt; 
+&lt;p&gt;Figures 5a – 5b show variations of &lt;em&gt;performance to cloud-infrastructure-cost&lt;/em&gt; with across a range of &lt;em&gt;cores-enabled per-instance&lt;/em&gt; for Hpc6a and Hpc7a, for the smallest and the largest benchmark case.&lt;/p&gt; 
+&lt;p&gt;The cloud infrastructure costs plotted here represent the total hardware cost based on Amazon EC2, and the Ansys Gateway hardware flat charge of $0.25 per-instance per-hour. This is a good metric to follow when you want to evaluate the instances for best performance while considering the cloud infrastructure costs only.&lt;/p&gt; 
+&lt;div id="attachment_3049" style="width: 711px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3049" loading="lazy" class="size-full wp-image-3049" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.18.51.png" alt="Figure 5a: Vehicle exhaust benchmark – performance to cloud infrastructure cost ratio with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Higher is better. Fully subscribed Hpc6a and Hpc7a instances provide the best performance to cost ratio. " width="701" height="416"&gt;
+ &lt;p id="caption-attachment-3049" class="wp-caption-text"&gt;Figure 5a: Vehicle exhaust benchmark – performance to cloud infrastructure cost ratio with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Higher is better. Fully subscribed Hpc6a and Hpc7a instances provide the best performance to cost ratio.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3051" style="width: 706px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3051" loading="lazy" class="size-full wp-image-3051" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.19.56.png" alt="Figure 5b: F1 race car benchmark – performance to cloud infrastructure cost ratio with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Higher is better. Fully subscribed Hpc6a and Hpc7a instances provide the best performance to cost ratio. " width="696" height="433"&gt;
+ &lt;p id="caption-attachment-3051" class="wp-caption-text"&gt;Figure 5b: F1 race car benchmark – performance to cloud infrastructure cost ratio with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Higher is better. Fully subscribed Hpc6a and Hpc7a instances provide the best performance to cost ratio.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;From Figures 5a – 5b, you can tell that simulations run on the fully-subscribed Hpc6a and Hpc7a instances have the best performance &lt;em&gt;per hardware-configuration&lt;/em&gt; cost. At higher core counts, the cloud infrastructure costs start to increase, resulting in a drop of the &lt;em&gt;performance-to-cost&lt;/em&gt; ratio.&lt;/p&gt; 
+&lt;p&gt;In Figure 6, we plotted the &lt;em&gt;performance to total-job-cost&lt;/em&gt; ratio, where the total job cost is the sum of cloud infrastructure &lt;em&gt;and&lt;/em&gt; the Ansys licensing cost. As the Ansys licensing costs can vary for each customer depending on their licensing agreement, for the purpose of this post we used the Ansys Elastic Currency (AEC) to represent the licensing cost, to keep it simple.&lt;/p&gt; 
+&lt;div id="attachment_3052" style="width: 752px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3052" loading="lazy" class="size-full wp-image-3052" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.20.40.png" alt="Figure 6: F1 race car benchmark – performance to total cost ratio with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Total cost includes Ansys licensing. Higher is better. Hpc6a with 25% subscribed and hpc7a.24xlarge instances provide the best performance to total cost ratio. " width="742" height="459"&gt;
+ &lt;p id="caption-attachment-3052" class="wp-caption-text"&gt;Figure 6: F1 race car benchmark – performance to total cost ratio with Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Total cost includes Ansys licensing. Higher is better. Hpc6a with 25% subscribed and hpc7a.24xlarge instances provide the best performance to total cost ratio.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;From Figure 6, you can see that simulations run on Hpc6a instances with 25% cores enabled, and hpc7a.24xlarge show the best &lt;em&gt;performance to total-cost&lt;/em&gt; ratio. Running the simulations with 50% cores enabled on Hpc6a or on Amazon EC2 hpc7a.48xlarge is a good idea for customers with pre-existing Ansys licensing who are looking to balance performance and cloud infrastructure costs. All instance types provide better value at higher core counts because per-core license costs decrease when you use more cores.&lt;/p&gt; 
+&lt;p&gt;In our plots, we focused on performance and cost comparisons, but customers are also interested in making the right Amazon EC2 choices based on &lt;strong&gt;simulation runtime and costs&lt;/strong&gt;. In Figures 7 and 8, we plotted the variation of cloud infrastructure and total costs with simulation runtime. By referring to these plots, you can choose the right instance for your preferred simulation runtime.&lt;/p&gt; 
+&lt;div id="attachment_3053" style="width: 685px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3053" loading="lazy" class="size-full wp-image-3053" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.21.18.png" alt="Figure 7: F1 race car benchmark – variation of cloud infrastructure cost with simulation runtime on Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Lower cost and runtime are better. Fully subscribed Hpc6a and Hpc7a instances offer the lowest costs for a given simulation runtime. " width="675" height="441"&gt;
+ &lt;p id="caption-attachment-3053" class="wp-caption-text"&gt;Figure 7: F1 race car benchmark – variation of cloud infrastructure cost with simulation runtime on Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Lower cost and runtime are better. Fully subscribed Hpc6a and Hpc7a instances offer the lowest costs for a given simulation runtime.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3054" style="width: 678px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3054" loading="lazy" class="size-full wp-image-3054" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.21.43.png" alt="Figure 8: F1 race car benchmark – variation of total cost i.e., cloud infrastructure + licensing cost with simulation runtime on Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Lower cost and runtime are better. Hpc6a with 25% subscribed and hpc7a.24xlarge instances offer the best total cost for a given simulation runtime. " width="668" height="435"&gt;
+ &lt;p id="caption-attachment-3054" class="wp-caption-text"&gt;Figure 8: F1 race car benchmark – variation of total cost i.e., cloud infrastructure + licensing cost with simulation runtime on Amazon EC2 Hpc6a instance with 100%, 50%, and 25% cores enabled, and different sizes of Amazon EC2 Hpc7a instance. Lower cost and runtime are better. Hpc6a with 25% subscribed and hpc7a.24xlarge instances offer the best total cost for a given simulation runtime.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;From Figure 7, you can see that when prioritizing cloud infrastructure cost for a desired simulation runtime, the fully-subscribed instances offer the lowest cost because of utilizing maximum available cores on the instances.&lt;/p&gt; 
+&lt;p&gt;When we add the software licensing costs – which can be high for larger simulations – the benefit of running the simulations on under-subscribed instances for performance gain helps to drive the total cost down. It’s clear from Figure 8 that under-subscribed instances offer the best total cost for a given simulation runtime.&lt;/p&gt; 
+&lt;h2&gt;Summary&lt;/h2&gt; 
+&lt;p&gt;Today we described the price-performance characteristics of Ansys Fluent CFD simulations on Ansys Gateway powered by AWS. We showed you some of our best practices for running simulations on different &lt;a href="https://aws.amazon.com/ec2/"&gt;Amazon EC2&lt;/a&gt; compute-optimized instances. And we described how total job costs comprise of infrastructure costs and Ansys licenses for the Ansys Fluent simulations. With these results you should be able to select the right instance types for running your simulations, whether your goal is to maximize performance or minimize costs.&lt;/p&gt; 
+&lt;p&gt;You can get started with Ansys Gateway powered by AWS by subscribing through the &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-ppiyshk2oin3i"&gt;AWS Marketplace&lt;/a&gt;. Follow the &lt;a href="https://www.youtube.com/playlist?list=PL0lZXwHtV6Omw8rjdXmr4UiDj2WZksygA"&gt;Ansys Gateway YouTube channel&lt;/a&gt; for in-depth step-by-step tutorials and video guidelines to get started with setup and running Ansys applications. Finally, you can refer to the &lt;a href="https://forum.ansys.com/forums/forum/installation-and-licensing/ansys-gateway/"&gt;Ansys innovation Space learning forums&lt;/a&gt; for Ansys Gateway specific help.&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.28.29.png" alt="Ashwini Kumar " width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Ashwini Kumar&lt;/h3&gt; 
+  &lt;p&gt;Ashwini Kumar is a senior principal application engineer at Ansys, specializing in Ansys Cloud solutions, where he plays a pivotal role in assisting Ansys clients with optimizing their cloud investments. With over three decades of expertise in customer relationship management, cloud computing, technical support, and services related to Fluid Flow and Heat Transfer, he brings a wealth of knowledge to his role. His educational background includes a Ph.D. from the University of Minnesota in Minneapolis-St. Paul, Minnesota, a master’s degree from the University of Manitoba in Winnipeg, Canada, and a B.Tech from G.B. Pant University of Agriculture and Technology in Pantnagar, India.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.28.34.png" alt="Nicole Diana " width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Nicole Diana&lt;/h3&gt; 
+  &lt;p&gt;Nicole Diana is Director of research and development Verification for the computational fluids dynamics (CFD) product line at Ansys. She has over twenty-five years of experience in the development, verification, and application of Ansys CFD products.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Lattice Boltzmann simulation with Palabos on AWS using Graviton-based Amazon EC2 Hpc7g instances</title>
 		<link>https://aws.amazon.com/blogs/hpc/lattice-boltzmann-simulation-with-palabos-on-aws-using-graviton-based-amazon-ec2-hpc7g-instances/</link>
 		
@@ -24,7 +185,7 @@
 		<guid isPermaLink="false">ecb740a48f70c44fb346183b25ed64dbe70baea3</guid>
 
 					<description>In this post we’ll show you the performance when running the Parallel Lattice Boltzmann Solver (Palabos) on the latest generation of AWS Graviton CPUs in Hpc7g instances on AWS.</description>
-										<content:encoded>&lt;p&gt;Computational fluid dynamics (CFD) has grown over the several decades to become a widely used tool to study a broad range of important industrial and academic problems, ranging from automotive and aircraft design to the study of blood flow inside the human body.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;Computational fluid dynamics (CFD) has grown over several decades to become a widely used tool to study a broad range of important industrial and academic problems, ranging from automotive and aircraft design to the study of blood flow inside the human body.&lt;/p&gt; 
 &lt;p&gt;Whilst traditional Navier-Stokes (NS) based codes using the finite-volume approach are still the most widely used, an alternative approach – the Lattice Boltzmann method (LBM) – has emerged in the last two decades. LBM methods are particularly attractive to both industry and academia.&lt;/p&gt; 
 &lt;p&gt;In this post we’ll show you the performance and cost benefits of running the Parallel Lattice Boltzmann Solver (&lt;em&gt;Palabos&lt;/em&gt;) [1] – a specific LBM solver – on the latest generation of Amazon Elastic Compute Cloud instances based on the AWS Graviton.&lt;/p&gt; 
 &lt;p&gt;Palabos is an open-source, C++ solver developed by the University of Geneva. It’s designed to run and scale efficiently on HPC clusters. Palabos is a highly versatile computational tool and has been widely used in the LBM community and is often a reference implementation for many Lattice Boltzmann models.&lt;/p&gt; 
@@ -44,7 +205,7 @@
 &lt;h3&gt;Cavity 3D benchmark&lt;/h3&gt; 
 &lt;p&gt;In our first test, we used the “&lt;a href="https://gitlab.unige.ch/hpc/benchmark-aimp-2022/-/blob/main/Palabos/README.md"&gt;lid-driven cavity problem in a cuboid&lt;/a&gt;”, a three-dimension benchmark with 1 billion cells (1001x1001x1001). The top wall moves to the right with a constant velocity, while the other walls are stationary. Figure 1 is a snapshot of the simulated velocity field at 10.1 sec. We used Palabos v2.3.0, compiled with GNU Compiler v11.1.0 and Open MPI v4.1.4.&lt;/p&gt; 
 &lt;div id="attachment_3081" style="width: 767px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3081" class="size-full wp-image-3081" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.24.40.png" alt="Figure 1. A display of Palabos output velocity field at 10.1 sec for the three-dimension lid driven cavity problem. Arrow shows flow direction and speed." width="757" height="495"&gt;
+ &lt;img aria-describedby="caption-attachment-3081" loading="lazy" class="size-full wp-image-3081" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.24.40.png" alt="Figure 1. A display of Palabos output velocity field at 10.1 sec for the three-dimension lid driven cavity problem. Arrow shows flow direction and speed." width="757" height="495"&gt;
  &lt;p id="caption-attachment-3081" class="wp-caption-text"&gt;Figure 1. A display of Palabos output velocity field at 10.1 sec for the three-dimension lid driven cavity problem. Arrow shows flow direction and speed.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;We ran the same benchmark on both Hpc7g and C6gn scaling from 2 to 128 instances (8192cores) in both cases. We calculated throughput in &lt;em&gt;million site updates per second&lt;/em&gt; (MLUPS)&amp;nbsp;which we’ve shown in Table 1.&lt;/p&gt; 
@@ -2081,105 +2242,6 @@ ncview wrfout*
   &lt;/div&gt; 
   &lt;h3 class="lb-h4"&gt;Tarek Ben Charrada&lt;/h3&gt; 
   &lt;p&gt;Tarek Ben Charrada graduated with distinction, ranking 28th out of over 2800 candidates in the highly competitive “concours d’entrée aux grandes écoles” to go and earn his engineering degree from Ecole polytechnique de Tunisie. He then pursued his PhD in 3D reconstruction from a single image, demonstrating his commitment to advancing the field of computer vision and computer graphics. Today, Tarek’s expertise is sought-after as a data scientist, where he leverages his skills in computer vision, speech processing and differentiable privacy to push the boundaries of what’s possible in these exciting fields.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Automate scheduling of jobs on AWS Batch and AWS Fargate with Amazon EventBridge</title>
-		<link>https://aws.amazon.com/blogs/hpc/automate-scheduling-of-jobs-on-aws-batch-and-aws-fargate-with-amazon-eventbridge/</link>
-		
-		<dc:creator><![CDATA[Jeff Blakely]]></dc:creator>
-		<pubDate>Tue, 08 Aug 2023 15:32:15 +0000</pubDate>
-				<category><![CDATA[Amazon EventBridge]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS Fargate]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<guid isPermaLink="false">4c4efcd2cd5e250317ee6cf4c26db59117f0d766</guid>
-
-					<description>In this post we'll show how to use AWS Batch, AWS Fargate and&amp;nbsp;Amazon Event Bridge to create a job scheduling solution for containers that's fully managed, serverless, and event-driven.</description>
-										<content:encoded>&lt;h2&gt;Introduction&lt;/h2&gt; 
-&lt;p&gt;One of the simplest ways to help streamline your automation needs is to employ a job scheduler and remove the requirement to manually execute tasks. As businesses embrace automation to do more with less, job schedulers have established themselves as a critical part of any business’s IT operations. As such, the reliability, scalability, performance, and cost effectiveness of the scheduling platform becomes a bigger consideration. It’s no surprise that we are often engaged in conversations with customers asking us how they may leverage an AWS service to replace legacy on-premise job scheduler solutions.&lt;/p&gt; 
-&lt;p&gt;In this blog post we will explain how you can use &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/fargate/"&gt;AWS Fargate&lt;/a&gt; and&amp;nbsp;&lt;a href="https://aws.amazon.com/eventbridge/"&gt;Amazon Event Bridge&lt;/a&gt; to create a fully managed and serverless, cloud-native, event-driven, job scheduling solution, with a specific focus on containerized jobs. We will provide a technical overview of the different components that make up this solution and cover some of the key considerations to help you determine if this solution is a good fit for your needs.&lt;/p&gt; 
-&lt;h2&gt;Overview&lt;/h2&gt; 
-&lt;p&gt;The following solution showcases an &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/fargate.html"&gt;AWS Batch on AWS Fargate&lt;/a&gt; environment where jobs, which run on container images provided by the end user, can be configured to run on a schedule or in response to some event. It also covers how to pass secrets into these container jobs to connect to back-end systems like databases, and how to centralize the logs from these jobs. This solution also caters to jobs which require central storage for generated artifacts like reports.&lt;/p&gt; 
-&lt;p&gt;Additionally, the architecture is designed with cost optimization and operational efficiency in mind, so all services used take advantage of low cost &lt;a href="https://aws.amazon.com/serverless/"&gt;AWS serverless technologies&lt;/a&gt; or managed services. This helps remove the undifferentiated heavy lifting of managing the underlying compute resources.&lt;/p&gt; 
-&lt;div id="attachment_2614" style="width: 1562px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2614" loading="lazy" class="size-full wp-image-2614" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/13/hpcblog-180-fig1v2.png" alt="Figure 1: High-Level architecture of the solution showing how schedules defined in Amazon EventBridge initiate AWS Batch jobs, which in turn can pull container images from Amazon ECR or secrets from AWS Secrets Manger, and push data and logs to Amazon EFS and Amazon CloudWatch, respectively." width="1552" height="1232"&gt;
- &lt;p id="caption-attachment-2614" class="wp-caption-text"&gt;Figure 1: High-Level architecture of the solution showing how schedules defined in Amazon EventBridge initiate AWS Batch jobs, which in turn can pull container images from Amazon ECR or secrets from AWS Secrets Manger, and push data and logs to Amazon EFS and Amazon CloudWatch, respectively.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Before we jump into the implementation, lets quickly introduce each of the services called out in the architecture and its function:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; helps you to run batch computing workloads on the AWS Cloud. A job definition is created to specify how a job is to be run, and includes details such as the job container image, and any required parameters and secrets.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/fargate/"&gt;AWS Fargate&lt;/a&gt; is a serverless, pay-as-you-go compute engine that can be used with AWS Batch to easily run and scale containerized data processing workloads without the need to own, run, or manage compute infrastructure.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/secrets-manager/"&gt;AWS Secrets Manager&lt;/a&gt; is used to securely store and manage secrets which can be passed securely to the jobs in AWS Batch.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html"&gt;Amazon CloudWatch Logs&lt;/a&gt; enables you to centralize the logs from all of your systems, applications, and AWS services that you use including AWS Batch, in a single, highly scalable service.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/batch-cwe-target.html"&gt;Amazon EventBridge&lt;/a&gt; can be used to&amp;nbsp;schedule automated actions that are invoked at certain times using cron or rate expressions. By setting an AWS Batch job as a target, EventBridge can run the job on a schedule, or in response to some event.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/ecr/"&gt;Amazon Elastic Container Registry (Amazon ECR)&lt;/a&gt;is an AWS managed container image registry service where users can store their own job container images for selection in AWS Batch job definitions.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/efs/"&gt;Amazon Elastic File System (EFS)&lt;/a&gt; provides serverless, fully elastic file storage so that you can share file data without provisioning or managing storage capacity and performance, and is a useful option for storing and sharing job artifacts.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Implementation&lt;/h2&gt; 
-&lt;p&gt;For this solution, we are using AWS Fargate as the compute resource and AWS Batch to run various job definitions. As shown in Figure 2, we are using a public ECR image which is available from the&amp;nbsp;Amazon Public ECR Gallery. Alternatively, you can upload your own image to a private ECR repository and pass the image URL in the AWS Batch job definition.&amp;nbsp;If you use a private ECR repository, you will need to verify that the Batch execution IAM role is able to access it.&lt;/p&gt; 
-&lt;div id="attachment_2610" style="width: 889px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2610" loading="lazy" class="size-full wp-image-2610" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/12/hpcblog-180-fig2.png" alt="Figure 2: AWS Batch Job Definitions example depicting one active Fargate job" width="879" height="235"&gt;
- &lt;p id="caption-attachment-2610" class="wp-caption-text"&gt;Figure 2: AWS Batch Job Definitions example depicting one active Fargate job&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We utilized Secrets Manager to store three secure variables that will be used later in this example. They represent a username, a password, and a connection string. Review the &lt;a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_secret.html"&gt;Create an AWS Secrets Manager secret documentation&lt;/a&gt; for more information on this process.&lt;/p&gt; 
-&lt;p&gt;Shell scripts can be used as the entry point to the container to perform any desired task, such as start an ETL process, run SQL scripts against an AWS RDS database, or pull and analyze data from S3. As seen in Figure 3 below, we pass multiple variables to the shell script.&lt;/p&gt; 
-&lt;div id="attachment_2609" style="width: 889px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2609" loading="lazy" class="size-full wp-image-2609" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/12/hpcblog-180-fig3.png" alt="Figure 3:&amp;nbsp; AWS Batch Job Definitions – Container properties details depicting bash commands" width="879" height="368"&gt;
- &lt;p id="caption-attachment-2609" class="wp-caption-text"&gt;Figure 3: AWS Batch Job Definitions – Container properties details depicting bash commands&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;As part of the AWS Batch job definition, we define two environment variables, &lt;code&gt;$Var1&lt;/code&gt; and &lt;code&gt;$Var2&lt;/code&gt;, along with AWS Secrets &lt;code&gt;username&lt;/code&gt;, &lt;code&gt;password&lt;/code&gt; and &lt;code&gt;connectionstring&lt;/code&gt;, as shown in Figure 4 below. For demonstration purpose, we are simply writing these parameters to an EFS file system that is mounted to the container. You can leverage these features to customize how you pass parameters to run application or database jobs through AWS Batch. You can create multiple job definitions and can pass variables and secrets based on specific job or application requirements.&lt;/p&gt; 
-&lt;div id="attachment_2608" style="width: 889px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2608" loading="lazy" class="size-full wp-image-2608" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/12/hpcblog-180-fig4.png" alt="Figure 4:&amp;nbsp; AWS Batch Job Definitions – Linux operating systems configuration depicting environment variables &amp;amp; EFS mount points" width="879" height="758"&gt;
- &lt;p id="caption-attachment-2608" class="wp-caption-text"&gt;Figure 4: AWS Batch Job Definitions – Linux operating systems configuration depicting environment variables &amp;amp; EFS mount points&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;To run these Batch job definitions on a schedule, we are relying on Amazon EventBridge&amp;nbsp;rules. With Amazon EventBridge rules, we can create complex schedules to run these jobs,&amp;nbsp;such as every first Tuesday of the month. Figure 5 below shows how we are running a job every 10 minutes, and which Batch job queue and job definition to use.&lt;/p&gt; 
-&lt;div id="attachment_2607" style="width: 889px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2607" loading="lazy" class="size-full wp-image-2607" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/12/hpcblog-180-fig5.png" alt="Figure 5: Amazon EventBridge Schedule screen highlighting the EventBridge rules with an example target" width="879" height="602"&gt;
- &lt;p id="caption-attachment-2607" class="wp-caption-text"&gt;Figure 5: Amazon EventBridge Schedule screen highlighting the EventBridge rules with an example target&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;You can customize the EventBridge rule based on your specific needs. You can run these events using a cron expressions as mentioned in Figure 6, or you can specify regular intervals. This gives you the flexibility to schedule daily, weekly, or monthly jobs to run and reduce maintenance cost.&lt;/p&gt; 
-&lt;div id="attachment_2606" style="width: 987px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2606" loading="lazy" class="size-full wp-image-2606" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/12/hpcblog-180-fig6.png" alt="Figure 6: EventBridge Rule - Scheduling pattern showing a fine-grained schedule that runs the rule every day at 12:00pm UTC+0" width="977" height="593"&gt;
- &lt;p id="caption-attachment-2606" class="wp-caption-text"&gt;Figure 6: EventBridge Rule – Scheduling pattern showing a fine-grained schedule that runs the rule every day at 12:00pm UTC+0&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The AWS Batch management console has a built in &lt;a href="https://console.aws.amazon.com/batch/home?#dashboard"&gt;dashboard&lt;/a&gt; where we can see how many jobs are ready to run and the number of successful and failed jobs. As we have shown in Figure 7, you can observe the status of previously executed jobs and take necessary action based on requirements. AWS Batch retains job information for a minimum of 7 days.&lt;/p&gt; 
-&lt;div id="attachment_2605" style="width: 889px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2605" loading="lazy" class="size-full wp-image-2605" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/12/hpcblog-180-fig7.png" alt="Figure 7: AWS Batch Success/Running Dashboard showing multiple successful job executions" width="879" height="395"&gt;
- &lt;p id="caption-attachment-2605" class="wp-caption-text"&gt;Figure 7: AWS Batch Success/Running Dashboard showing multiple successful job executions&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;If there are any failed jobs, you can use CloudWatch Logs to troubleshoot further. In our example, the job definition is using the &lt;strong&gt;&lt;em&gt;awslogs&lt;/em&gt;&lt;/strong&gt; Log driver to send logs to a CloudWatch log group called &lt;code&gt;batch-loggroup&lt;/code&gt;, as shown in Figure 8.&lt;/p&gt; 
-&lt;div id="attachment_2604" style="width: 889px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2604" loading="lazy" class="size-full wp-image-2604" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/12/hpcblog-180-fig8.png" alt="Figure 8: AWS Batch Job&amp;nbsp;Definition&amp;nbsp;- Logging configuration detail panel with awslogs driver options" width="879" height="264"&gt;
- &lt;p id="caption-attachment-2604" class="wp-caption-text"&gt;Figure 8: AWS Batch Job&amp;nbsp;Definition&amp;nbsp;– Logging configuration detail panel with awslogs driver options&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 9 shows the log files with date and time information of respective batch jobs. You can get a detailed analysis of those jobs and troubleshoot as necessary.&lt;/p&gt; 
-&lt;div id="attachment_2603" style="width: 889px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2603" loading="lazy" class="size-full wp-image-2603" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/12/hpcblog-180-fig9.png" alt="Figure 9: CloudWatch Batch Log Group log stream details" width="879" height="512"&gt;
- &lt;p id="caption-attachment-2603" class="wp-caption-text"&gt;Figure 9: CloudWatch Batch Log Group log stream details&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Considerations&lt;/h2&gt; 
-&lt;p&gt;AWS Batch runs jobs at scale and optimizes for throughput and cost, while giving you powerful queueing and scaling capabilities. However, not every workload is best run on Batch on Fargate. Here are some important things to consider when configuring AWS Batch jobs:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Very short jobs. &lt;/strong&gt;If your jobs run for only a handful of seconds, the overhead to schedule your jobs may be more than the runtime of the jobs themselves, resulting in less-than-desired utilization. In this case, &lt;a href="https://aws.amazon.com/lambda/"&gt;AWS Lambda&lt;/a&gt; might be a better option. Or, staying with Batch, a workaround is to binpack your tasks together before submitting them in Batch, then having your Batch jobs iterate over your tasks. A general guidance is to binpack your jobs is to: 1) stage the individual tasks arguments into an Amazon DynamoDB table or as a file in an Amazon S3 bucket, ideally group the tasks in order to get your AWS Batch jobs to last of 3-5 minutes each 2) loop through your task groups within your AWS Batch job.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Jobs required to run immediately.&lt;/strong&gt; While Batch can process jobs rapidly, it optimizes for cost, priority, and throughput rather than instantaneous job execution. This implies that some queue time is desirable to allow Batch to make the right choice for compute. If you need a response time ranging from milliseconds to seconds between job submissions, you may want to use a service-based approach using Amazon Elastic Container Service (&lt;a href="https://aws.amazon.com/ecs/"&gt;Amazon ECS&lt;/a&gt;) or Amazon Elastic Kubernetes Service (&lt;a href="https://aws.amazon.com/eks/"&gt;Amazon EKS&lt;/a&gt;) instead of using a delayed-start, batch-processing architecture.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Batch Compute – Fargate vs Amazon Elastic Compute Cloud (Amazon EC2).&amp;nbsp;&lt;/strong&gt;AWS Fargate requires less initial setup and configuration than Amazon EC2 and you don’t need to manage servers, handle capacity planning, or isolate container workloads for security. So, if your jobs must start quickly, specifically less than 30 seconds, or the requirements of your jobs are 16 vCPUs or less, no GPUs, and 120 GiB of memory or less, then Fargate is the recommended choice. However, if you require specific control over instance types, a high level of throughput or concurrency, custom Amazon Machine Images (AMI’s), or have requirements for resources Fargate does not provide, such as GPU or more memory for example, we recommend &lt;a href="https://aws.amazon.com/pm/ec2"&gt;Amazon EC2&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Spot Instance usage. &lt;/strong&gt;Most AWS Batch customers use Amazon EC2 Spot Instances because of the savings over EC2 On-Demand instances. However, if your workload runs for multiple hours and can’t be interrupted, On-Demand instances might be more suitable for you. You can always try Spot Instances first and switch to On-Demand if necessary.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;For more information, please review the &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/best-practices.html"&gt;Best Practices for AWS Batch&lt;/a&gt; documentations.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;AWS Batch on AWS Fargate is an excellent option when looking for a low cost, scalable solution for running batch jobs, with low operational overhead. In this blog we hoped to cover some of the common use cases when configuring batch jobs, as well as considerations when identifying when Amazon Batch may or may not be a good fit. To get started, out the&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html"&gt;Getting Started with AWS Batch documentation&lt;/a&gt;.&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/13/varsh-raju-profile.png" alt="Varsha Raju" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Varsha Raju&lt;/h3&gt; 
-  &lt;p&gt;Varsha Raju is a Container Specialist Consultant with the Professional Services team at Amazon Web Services.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
 					
