@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 13 Nov 2023 16:55:42 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 13 Nov 2023 19:38:53 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,108 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.2</generator>
 	<item>
+		<title>New Class of Accelerated, Efficient AI Systems Mark the Next Era of Supercomputing</title>
+		<link>https://blogs.nvidia.com/blog/efficient-ai-supercomputers-sc23/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Mon, 13 Nov 2023 20:00:50 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Supercomputing]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Scientific Visualization]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68046</guid>
+
+					<description><![CDATA[NVIDIA today unveiled at SC23 the next wave of technologies that will lift scientific and industrial research centers worldwide to new levels of performance and energy efficiency. “NVIDIA hardware and software innovations are creating a new class of AI supercomputers,” said Ian Buck, vice president of the company’s high performance computing and hyperscale data center <a class="read-more" href="https://blogs.nvidia.com/blog/efficient-ai-supercomputers-sc23/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA today unveiled at SC23 the next wave of technologies that will lift scientific and industrial research centers worldwide to new levels of performance and energy efficiency.</p>
+<p>“NVIDIA hardware and software innovations are creating a new class of AI supercomputers,” said Ian Buck, vice president of the company’s high performance computing and hyperscale data center business, in a special address at the conference.</p>
+<p>Some of the systems will pack memory-enhanced <a href="https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/">NVIDIA Hopper accelerators</a>, others a new <a href="https://nvidianews.nvidia.com/news/nvidia-grace-hopper-superchip-powers-jupiter-defining-a-new-class-of-supercomputers-to-propel-ai-for-scientific-discovery">NVIDIA Grace Hopper systems architecture</a>. All will use the expanded parallelism to run a full stack of accelerated software for <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a>, HPC and hybrid <a href="https://blogs.nvidia.com/blog/what-is-quantum-computing/">quantum computing</a>.</p>
+<p>Buck described the new <a href="https://nvidianews.nvidia.com/news/nvidia-supercharges-hopper-the-worlds-leading-ai-computing-platform">NVIDIA HGX H200</a> as “the world’s leading AI computing platform.”</p>
+<figure id="attachment_68062" aria-describedby="caption-attachment-68062" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image.jpg"><img decoding="async" fetchpriority="high" class="size-large wp-image-68062" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image-672x411.jpg" alt="Image of H200 GPU system" width="672" height="411" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image-672x411.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image-400x244.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image-768x469.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image-737x450.jpg 737w, https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image-352x215.jpg 352w, https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image-164x100.jpg 164w, https://blogs.nvidia.com/wp-content/uploads/2023/11/H200-image.jpg 1231w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68062" class="wp-caption-text">NVIDIA H200 Tensor Core GPUs pack HBM3e memory to run growing generative AI models.</figcaption></figure>
+<p>It packs up to 141GB of HBM3e, the first AI accelerator to use the ultrafast technology. Running models like GPT-3, NVIDIA H200 Tensor Core GPUs provide an 18x performance increase over prior-generation accelerators.</p>
+<p><span>Among other </span><a href="https://github.com/NVIDIA/TensorRT-LLM/blob/release/0.5.0/docs/source/blogs/H200launch.md"><span>generative AI benchmarks</span></a><span>, they zip through 12,000 tokens per second on a Llama2-13B large language model (</span><a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/"><span>LLM</span></a><span>). </span></p>
+<p>Buck also revealed a server platform that links four <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA GH200 Grace Hopper Superchips</a> on an <a href="https://blogs.nvidia.com/blog/what-is-nvidia-nvlink/">NVIDIA NVLink</a> interconnect. The quad configuration puts in a single compute node a whopping 288 Arm Neoverse cores and 16 petaflops of AI performance with up to 2.3 terabytes of high-speed memory.</p>
+<figure id="attachment_68065" aria-describedby="caption-attachment-68065" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration.jpg"><img decoding="async" class="size-large wp-image-68065" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration-672x405.jpg" alt="Image of quad GH200 server node" width="672" height="405" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration-672x405.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration-400x241.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration-768x463.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration-747x450.jpg 747w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration-357x215.jpg 357w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration-166x100.jpg 166w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Quad-Grace-Hopper-node-configuration.jpg 1256w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68065" class="wp-caption-text">Server nodes based on the four GH200 Superchips will deliver 16 petaflops of AI performance.</figcaption></figure>
+<p>Demonstrating its efficiency, one GH200 Superchip using the <a href="https://github.com/NVIDIA/TensorRT-LLM">NVIDIA TensorRT-LLM</a> open-source library is 100x faster than a dual-socket x86 CPU system and nearly 2x more energy efficient than an X86 + H100 GPU server.</p>
+<p>“Accelerated computing is sustainable computing,” Buck said. “By harnessing the power of accelerated computing and generative AI, together we can drive innovation across industries while reducing our impact on the environment.”</p>
+<h2><b>NVIDIA Powers 38 of 49 New TOP500 Systems</b></h2>
+<p>The latest TOP500 list of the world’s fastest supercomputers reflects the shift toward accelerated, energy-efficient supercomputing.</p>
+<p>Thanks to new systems powered by <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, NVIDIA now delivers more than 2.5 exaflops of HPC performance across these world-leading systems, up from 1.6 exaflops in the May rankings. NVIDIA’s contribution on the top 10 alone reaches nearly an exaflop of HPC and 72 exaflops of AI performance.</p>
+<p>The new list contains the highest number of systems ever using NVIDIA technologies, 379 vs. 372 in May, including 38 of 49 new supercomputers on the list.</p>
+<p>Microsoft Azure leads the newcomers with its Eagle system using H100 GPUs in NDv5 instances to hit No. 3 with 561 petaflops. Mare Nostrum5 in Barcelona ranked No. 8, and NVIDIA Eos — which recently set <a href="https://blogs.nvidia.com/blog/scaling-ai-training-mlperf/">new AI training records</a> on the MLPerf benchmarks — came in at No. 9.</p>
+<p>Showing their energy efficiency, NVIDIA GPUs power 23 of the top 30 systems on the Green500. And they retained the No. 1 spot with the H100 GPU-based Henri system, which delivers 65.09 gigaflops per watt for the Flatiron Institute in New York.</p>
+<h2><b>Gen AI Explores COVID</b></h2>
+<p><span>Showing what’s possible</span>, the Argonne National Laboratory used <a href="https://www.nvidia.com/en-gb/gpu-cloud/bionemo/">NVIDIA BioNeMo</a>, a generative AI platform for biomolecular LLMs, to develop <a href="https://blogs.nvidia.com/blog/generative-ai-covid-genome-sequences/">GenSLMs</a>, a model that can generate gene sequences that closely resemble real-world variants of the coronavirus. Using NVIDIA GPUs and data from 1.5 million COVID genome sequences, it can also rapidly identify new virus variants.</p>
+<p>The work<a href="https://blogs.nvidia.com/blog/genomic-large-language-model-predicts-covid-variants/"> won the Gordon Bell special prize</a> last year and was trained on supercomputers, including Argonne’s<a href="https://nvidianews.nvidia.com/news/nvidia-turbocharges-extreme-scale-ai-for-argonne-national-laboratorys-polaris-supercomputer"> Polaris</a> system, the U.S. Department of Energy’s<a href="https://blogs.nvidia.com/blog/nersc-perlmutter-ai-supercomputer/"> Perlmutter</a> and NVIDIA’s<a href="https://blogs.nvidia.com/blog/making-selene-pandemic-ai/"> Selene</a>.</p>
+<p>It’s “just the tip of the iceberg — the future is brimming with possibilities, as generative AI continues to redefine the landscape of scientific exploration,” said Kimberly Powell, vice president of healthcare at NVIDIA, in the special address.</p>
+<h2><b>Saving Time, Money and Energy</b></h2>
+<p>Using the latest technologies, accelerated workloads can see an order-of-magnitude reduction in system cost and energy used, Buck said.</p>
+<p>For example, Siemens teamed with Mercedes to analyze aerodynamics and related acoustics for its new electric EQE vehicles. The simulations that took weeks on CPU clusters ran significantly faster using the latest NVIDIA H100 GPUs. In addition, Hopper GPUs let them reduce costs by 3x and reduce energy consumption by 4x (below).</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart.jpg"><img decoding="async" class="aligncenter size-large wp-image-68068" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart-672x351.jpg" alt="Chart showing the performance and energy efficiency of H100 GPUs" width="672" height="351" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart-672x351.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart-400x209.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart-768x401.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart-842x439.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart-406x212.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart-188x98.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart-1280x668.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Sustainable-computing-chart.jpg 1319w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<h2><b>Switching on 200 Exaflops Beginning Next Year</b></h2>
+<p>Scientific and industrial advances will come from every corner of the globe where the latest systems are <a href="https://blogs.nvidia.com/blog/gh200-grace-hopper-superchip-powers-ai-supercomputers/">being deployed</a>.</p>
+<p>“We already see a combined 200 <a href="https://blogs.nvidia.com/blog/what-is-an-exaflop/">exaflops</a> of AI on Grace Hopper supercomputers going to production 2024,” Buck said.</p>
+<p>They include the massive <a href="https://nvidianews.nvidia.com/news/nvidia-grace-hopper-superchip-powers-jupiter-defining-a-new-class-of-supercomputers-to-propel-ai-for-scientific-discovery">JUPITER supercomputer</a> at Germany’s Jülich center. It can deliver 93 exaflops of performance for AI training and 1 exaflop for HPC applications, while consuming only 18.2 megawatts of power.</p>
+<figure id="attachment_68071" aria-describedby="caption-attachment-68071" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-68071" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed-672x403.jpg" alt="Chart of deployed performance of supercomputers using NVIDIA GPUs through 2024" width="672" height="403" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed-672x403.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed-400x240.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed-768x460.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed-751x450.jpg 751w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed-359x215.jpg 359w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed-167x100.jpg 167w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Chart-on-350-exaflops-of-AI-performance-deployed.jpg 1201w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68071" class="wp-caption-text">Research centers are poised to switch on a tsunami of GH200 performance.</figcaption></figure>
+<p>Based on Eviden’s BullSequana XH3000 liquid-cooled system, JUPITER will use the NVIDIA quad GH200 system architecture and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> networking for climate and weather predictions, drug discovery, hybrid quantum computing and digital twins. JUPITER quad GH200 nodes will be configured with 864GB of high-speed memory.</p>
+<p>It’s one of several new supercomputers using Grace Hopper that NVIDIA announced at SC23.</p>
+<p>The HPE Cray EX2500 system from Hewlett Packard Enterprise will use the quad GH200 to power many AI supercomputers coming online next year.</p>
+<p>For example, HPE uses the quad GH200 to power OFP-II, an advanced HPC system in Japan shared by the University of Tsukuba and the University of Tokyo, as well as the DeltaAI system, which will triple computing capacity for the U.S. National Center for Supercomputing Applications.</p>
+<p>HPE is also building the <a href="https://blogs.nvidia.com/blog/special-address-isc-2022-hpc/">Venado</a> system for the Los Alamos National Laboratory, the first GH200 to be deployed in the U.S. In addition, HPE is building GH200 supercomputers in the Middle East, Switzerland and the U.K.</p>
+<h2><b>Grace Hopper in Texas and Beyond</b></h2>
+<p>At the Texas Advanced Computing Center (TACC), Dell Technologies is building the Vista supercomputer with NVIDIA Grace Hopper and Grace CPU Superchips.</p>
+<p>More than 100 global enterprises and organizations, including NASA Ames Research Center and Total Energies, have already purchased Grace Hopper early-access systems, Buck said.</p>
+<p>They join previously announced GH200 users such as <a href="https://blogs.nvidia.com/blog/computex-keynote-generative-ai/">SoftBank</a> and the <a href="https://blogs.nvidia.com/blog/uk-largest-ai-supercomputer/">University of Bristol</a>, as well as the massive <a href="https://blogs.nvidia.com/blog/supercomputing-ai-eurohpc/">Leonardo</a> system with 14,000 NVIDIA A100 GPUs that delivers 10 exaflops of AI performance for Italy’s Cineca consortium.</p>
+<h2><b>The View From Supercomputing Centers</b></h2>
+<p>Leaders from supercomputing centers around the world shared their plans and work in progress with the latest systems.</p>
+<p>“We’ve been collaborating with MeteoSwiss ECMWP as well as scientists from ETH EXCLAIM and NVIDIA’s Earth-2 project to create an infrastructure that will push the envelope in all dimensions of big data analytics and extreme scale computing,” said Thomas Schultess, director of the Swiss National Supercomputing Centre of work on the Alps supercomputer.</p>
+<p>“There’s really impressive energy-efficiency gains across our stacks,” Dan Stanzione, executive director of TACC, said of Vista.</p>
+<p>It’s “really the stepping stone to move users from the kinds of systems we’ve done in the past to looking at this new Grace Arm CPU and Hopper GPU tightly coupled combination and … we’re looking to scale out by probably a factor of 10 or 15 from what we are deploying with Vista when we deploy Horizon in a couple years,” he said.</p>
+<h2><b>Accelerating the Quantum Journey</b></h2>
+<p>Researchers are also using today’s accelerated systems to pioneer a path to tomorrow’s supercomputers.</p>
+<p>In Germany, JUPITER “will revolutionize scientific research across climate, materials, drug discovery and quantum computing,” said Kristel Michelson, who leads Julich’s research group on quantum information processing.</p>
+<p>“JUPITER’s architecture also allows for the seamless integration of quantum algorithms with parallel HPC algorithms, and this is mandatory for effective quantum HPC hybrid simulations,” she said.</p>
+<h2><b>CUDA Quantum Drives Progress</b></h2>
+<p>The special address also showed how <a href="https://developer.nvidia.com/cuda-quantum">NVIDIA CUDA Quantum</a> — a platform for programming CPUs, GPUs and quantum computers also known as <a href="https://blogs.nvidia.com/blog/what-is-a-qpu/">QPUs</a> — is advancing research in quantum computing.</p>
+<p>For example, researchers at <a href="https://blogs.nvidia.com/blog/basf-cuda-quantum-momentum/">BASF</a>, the world’s largest chemical company, pioneered a new hybrid quantum-classical method for simulating chemicals that can shield humans against harmful metals. They join researchers at Brookhaven National Laboratory and HPE who are separately pushing the frontiers of science with CUDA Quantum.</p>
+<p>NVIDIA also announced a collaboration with Classiq, a developer of quantum programming tools, to create a life sciences research center at the Tel Aviv Sourasky Medical Center, Israel’s largest teaching hospital.  The center will use Classiq’s software and CUDA Quantum running on an <a href="https://www.nvidia.com/en-us/data-center/dgx-h100/">NVIDIA DGX H100 system</a>.</p>
+<p>Separately, Quantum Machines will deploy the first <a href="https://www.nvidia.com/en-us/data-center/dgx-quantum/">NVIDIA DGX Quantum</a>, a system using Grace Hopper Superchips, at the Israel National Quantum Center that aims to drive advances across scientific fields. The DGX system will be connected to a superconducting QPU by Quantware and a photonic QPU from ORCA Computing, both powered by CUDA Quantum.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-68074" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners-672x402.jpg" alt="Logos of NVIDIA CUDA Quantum partners" width="672" height="402" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners-672x402.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners-400x239.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners-768x459.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners-752x450.jpg 752w, https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners-359x215.jpg 359w, https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners-167x100.jpg 167w, https://blogs.nvidia.com/wp-content/uploads/2023/11/quantum-computing-partners.jpg 1227w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>“In just two years, our NVIDIA quantum computing platform has amassed over 120 partners [above], a testament to its open, innovative platform,” Buck said.</p>
+<p>Overall, the work across many fields of discovery reveals a new trend that combines accelerated computing at data center scale with NVIDIA’s full-stack innovation.</p>
+<p>“Accelerated computing is paving the path for sustainable computing with advancements that provide not just amazing technology but a more sustainable and impactful future,” he concluded.</p>
+<p>Watch NVIDIA’s<a href="http://www.nvidia.com/sc23"> SC23 special address</a> below.</p>
+<p><iframe loading="lazy" title="NVIDIA SC23 Special Address" width="500" height="281" src="https://www.youtube.com/embed/6g0v3tMK2LU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/JUPITER-supercomputer-2-in-Germany.jpg"
+			type="image/jpeg"
+			width="1389"
+			height="737"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/JUPITER-supercomputer-2-in-Germany-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[New Class of Accelerated, Efficient AI Systems Mark the Next Era of Supercomputing]]></media:title>
+			<media:description type="html">Image of JUPITER supercomputer in Germany</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Gen AI for the Genome: LLM Predicts Characteristics of COVID Variants</title>
 		<link>https://blogs.nvidia.com/blog/generative-ai-covid-genome-sequences/</link>
 		
@@ -56,7 +158,7 @@
 <p>GenSLMs was trained on more than 110 million prokaryotic genome sequences and fine-tuned with a global dataset of around 1.5 million COVID viral sequences using open-source data from the Bacterial and Viral Bioinformatics Resource Center. In the future, the model could be fine-tuned on the genomes of other viruses or bacteria, enabling new research applications.</p>
 <p>To train the model, the researchers used <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA A100 Tensor Core GPU</a>-powered supercomputers, including Argonne’s <a href="https://nvidianews.nvidia.com/news/nvidia-turbocharges-extreme-scale-ai-for-argonne-national-laboratorys-polaris-supercomputer">Polaris</a> system, the U.S. Department of Energy’s <a href="https://blogs.nvidia.com/blog/nersc-perlmutter-ai-supercomputer/">Perlmutter</a> and NVIDIA’s <a href="https://blogs.nvidia.com/blog/making-selene-pandemic-ai/">Selene</a>.</p>
 <p>The GenSLMs research team’s Gordon Bell special prize was awarded at last year’s SC22 supercomputing conference. At this week’s SC23, in Denver, NVIDIA is sharing a new range of groundbreaking work in the field of accelerated computing. <a href="https://www.nvidia.com/en-us/events/supercomputing/">View the full schedule</a> and catch the replay of NVIDIA&#8217;s special address below.</p>
-<p><iframe title="NVIDIA SC23 Special Address" width="500" height="281" src="https://www.youtube.com/embed/6g0v3tMK2LU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="NVIDIA SC23 Special Address" width="500" height="281" src="https://www.youtube.com/embed/6g0v3tMK2LU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>NVIDIA Research comprises hundreds of scientists and engineers worldwide, with teams focused on topics including AI, computer graphics, computer vision, self-driving cars and robotics. Learn more about <a href="https://www.nvidia.com/en-us/research/">NVIDIA Research</a> and subscribe to <a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/">NVIDIA healthcare news</a>.</p>
 <p><i>Main image courtesy of Argonne National Laboratory’s Bharat Kale. </i></p>
 <p><i>This research was supported by the Exascale Computing Project (17-SC-20-SC), a collaborative effort of the U.S. DOE Office of Science and the National Nuclear Security Administration. Research was supported by the DOE through the National Virtual Biotechnology Laboratory, a consortium of DOE national laboratories focused on response to COVID-19, with funding from the Coronavirus CARES Act.</i></p>
@@ -68,13 +170,13 @@
 
 		
 			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/GenSLM_Visualization_Omicron_blogsized.jpg"
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/research-corp-blog-genslm-demo-1280x680-1.jpg"
 			type="image/jpeg"
 			width="1280"
 			height="680"
 			>
 			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/GenSLM_Visualization_Omicron_blogsized-842x450.jpg"
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/research-corp-blog-genslm-demo-1280x680-1-842x450.jpg"
 			width="842"
 			height="450"
 			/>
@@ -129,6 +231,7 @@
 <p>In addition, Grace Hopper is being put to work by qBraid, in Chicago, to build a quantum cloud service, and Fermioniq, in Amsterdam, to develop tensor-network algorithms.</p>
 <p>The large quantity of shared memory and the memory bandwidth of Grace Hopper make these superchips an excellent fit for memory-hungry quantum simulations.</p>
 <p>Get started programming hybrid quantum systems today with the latest release of CUDA Quantum from <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuda-quantum">NGC</a>, NVIDIA’s catalog of accelerated software, or <a href="https://github.com/NVIDIA/cuda-quantum">GitHub</a>.</p>
+<p><em>(Picture above source: BASF)</em></p>
 </div>]]></content:encoded>
 					
 		
@@ -224,7 +327,7 @@
 <p>The Herculaneum scrolls are a library of ancient texts that were carbonized and preserved by the eruption of Mount Vesuvius in 79 AD, which buried the cities of Pompeii and Herculaneum under a thick layer of ash and pumice.</p>
 <p>The competition, which has piqued the interest of historians and technologists across the globe, seeks to extract readable content from the carbonized remains of the scrolls.</p>
 <p>In a significant breakthrough, the word “πορφυρας,” which means “purple dye” or “cloths of purple,” emerged from the ancient texts thanks to the efforts of Farritor.</p>
-<figure id="attachment_35262" aria-describedby="caption-attachment-35262" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" fetchpriority="high" class="wp-image-35262 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-672x448.jpg" alt="The Herculaneum scrolls, wound about 100 times around, are sealed by the heat of the lava." width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-300x200.jpg 300w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-676x451.jpg 676w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-328x219.jpg 328w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-1200x800.jpg 1200w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll.jpg 2000w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-35262" class="wp-caption-text">The Herculaneum scrolls, wound about 100 times around, are sealed by the heat of the eruption of Vesuvius.</figcaption></figure>
+<figure id="attachment_35262" aria-describedby="caption-attachment-35262" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="wp-image-35262 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-672x448.jpg" alt="The Herculaneum scrolls, wound about 100 times around, are sealed by the heat of the lava." width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-300x200.jpg 300w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-676x451.jpg 676w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-328x219.jpg 328w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll-1200x800.jpg 1200w, https://blogs.nvidia.com/wp-content/uploads/2016/12/Herculaneum-scroll.jpg 2000w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-35262" class="wp-caption-text">The Herculaneum scrolls, wound about 100 times around, are sealed by the heat of the eruption of Vesuvius.</figcaption></figure>
 <p>His achievement in identifying 10 letters within a small patch of scroll earned him a $40,000 prize.</p>
 <p>Close on his heels was Youssef Nader, a biorobotics graduate student, who independently discerned the same word a few months later, meriting a $10,000 prize.</p>
 <p>Adding to these notable successes, Casey Handmer, an entrepreneur with a keen eye, secured another $10,000 for his demonstration that significant amounts of ink were waiting to be discovered within the unopened scrolls.</p>
@@ -278,7 +381,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Wield the blade and embrace the way of the samurai for some thrilling action — <i>Onimusha: Warlords</i> comes to <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> this week. Members can experience feudal Japan in this hack-and-slash adventure game in the cloud.</p>
 <p>It’s part of an action-packed GFN Thursday, with 16 more games joining the cloud gaming platform’s library.</p>
 <h2><b>Forging Destinies</b></h2>
-<figure id="attachment_68004" aria-describedby="caption-attachment-68004" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-68004" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68004" class="wp-caption-text"><em>Vengeance is mine.</em></figcaption></figure>
+<figure id="attachment_68004" aria-describedby="caption-attachment-68004" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-68004" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Onimusha_Warlords.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68004" class="wp-caption-text"><em>Vengeance is mine.</em></figcaption></figure>
 <p>Capcom’s popular <i>Onimusha: Warlords</i> is newly supported in the cloud this week, just in time for those tuning into the recently released <a href="https://www.netflix.com/title/81153116">Netflix anime</a> adaptation.</p>
 <p>Fight against the evil warlord Nobunaga Oda and his army of demons as samurai Samanosuke Akechi. Explore feudal Japan, wield swords, use ninja techniques and solve puzzles to defeat enemies. The action-adventure hack-and-slash game has been enhanced with improved controls for smoother swordplay mechanics, an updated soundtrack and more.</p>
 <p><a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate</a> members can stream the game in ultrawide resolution with up to eight hours each gaming session for riveting samurai action.</p>
@@ -1208,77 +1311,6 @@
 			/>
 			<media:title type="html"><![CDATA[DLSS 3.5 With Ray Reconstruction Now Available in NVIDIA Omniverse]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Silicon Volley: Designers Tap Generative AI for a Chip Assist</title>
-		<link>https://blogs.nvidia.com/blog/llm-semiconductors-chip-nemo/</link>
-		
-		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
-		<pubDate>Mon, 30 Oct 2023 16:00:33 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Research]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[New GPU Uses]]></category>
-		<category><![CDATA[NVIDIA Foundation]]></category>
-		<category><![CDATA[NVIDIA Research]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67732</guid>
-
-					<description><![CDATA[A research paper released today describes ways generative AI can assist one of the most complex engineering efforts: designing semiconductors. The work demonstrates how companies in highly specialized fields can train large language models (LLMs) on their internal data to build assistants that increase productivity. Few pursuits are as challenging as semiconductor design. Under a <a class="read-more" href="https://blogs.nvidia.com/blog/llm-semiconductors-chip-nemo/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>A <a href="https://research.nvidia.com/publication/2023-10_chipnemo-domain-adapted-llms-chip-design">research paper</a> released today describes ways <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> can assist one of the most complex engineering efforts: designing semiconductors.</p>
-<p>The work demonstrates how companies in highly specialized fields can train large language models (<a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>) on their internal data to build assistants that increase productivity.</p>
-<p>Few pursuits are as challenging as semiconductor design. Under a microscope, a state-of-the-art chip like an <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPU</a> (above) looks like a well-planned metropolis, built with tens of billions of transistors, connected on streets 10,000x thinner than a human hair.</p>
-<p>Multiple engineering teams coordinate for as long as two years to construct one of these digital megacities.</p>
-<p>Some groups define the chip’s overall architecture, some craft and place a variety of ultra-small circuits, and others test their work. Each job requires specialized methods, software programs and computer languages.</p>
-<h2><b>A Broad Vision for LLMs</b></h2>
-<p>“I believe over time large language models will help all the processes, across the board,” said Mark Ren, an NVIDIA Research director and lead author on the paper.</p>
-<p>Bill Dally, NVIDIA’s chief scientist, announced the paper today in a keynote at the International Conference on Computer-Aided Design, an annual gathering of hundreds of engineers working in the field called electronic design automation, or EDA.</p>
-<p>“This effort marks an important first step in applying LLMs to the complex work of designing semiconductors,” said Dally at the event in San Francisco. “It shows how even highly specialized fields can use their internal data to train useful generative AI models.”</p>
-<h2><b>ChipNeMo Surfaces</b></h2>
-<p>The paper details how NVIDIA engineers created for their internal use a custom LLM, called ChipNeMo, trained on the company’s internal data to generate and optimize software and assist human designers.</p>
-<p>Long term, engineers hope to apply generative AI to each stage of chip design, potentially reaping significant gains in overall productivity, said Ren, whose career spans more than 20 years in EDA.</p>
-<p>After surveying NVIDIA engineers for possible use cases, the research team chose three to start: a chatbot, a code generator and an analysis tool.</p>
-<h2><b>Initial Use Cases</b></h2>
-<p>The latter — a tool that automates the time-consuming tasks of maintaining updated descriptions of known bugs — has been the most well-received so far.</p>
-<p>A prototype chatbot that responds to questions about GPU architecture and design helped many engineers quickly find technical documents in early tests.</p>
-<figure id="attachment_67780" aria-describedby="caption-attachment-67780" style="width: 600px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNemo.gif"><img decoding="async" loading="lazy" class="wp-image-67780 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNemo.gif" alt="Animation of a generative AI code generator using an LLM" width="600" height="338" /></a><figcaption id="caption-attachment-67780" class="wp-caption-text">A code generator will help designers write software for a chip design.</figcaption></figure>
-<p>A code generator in development (demonstrated above)  already creates snippets of about 10-20 lines of software in two specialized languages chip designers use. It will be integrated with existing tools, so engineers have a handy assistant for designs in progress.</p>
-<h2><b>Customizing AI Models With NVIDIA NeMo</b></h2>
-<p>The paper mainly focuses on the team’s work gathering its design data and using it to create a specialized generative AI model, a process portable to any industry.</p>
-<p>As its starting point, the team chose a <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation model</a> and customized it with <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework for building, customizing and deploying generative AI models that’s included in the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform. The selected NeMo model sports 43 billion parameters, a measure of its capability to understand patterns. It was trained using more than a trillion tokens, the words and symbols in text and software.</p>
-<figure id="attachment_67773" aria-describedby="caption-attachment-67773" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final.jpg"><img decoding="async" loading="lazy" class="size-large wp-image-67773" src="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-672x338.jpg" alt="Diagram of the ChipNeMo workflow for training a custom model" width="672" height="338" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-672x338.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-400x201.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-768x386.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-842x423.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-406x204.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final-188x95.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/10/ChipNeMo-diagram-Final.jpg 1277w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67773" class="wp-caption-text">ChipNeMo provides an example of how one deeply technical team refined a pretrained model with its own data.</figcaption></figure>
-<p>The team then refined the model in two training rounds, the first using about 24 billion tokens worth of its internal design data and the second on a mix of about 130,000 conversation and design examples.</p>
-<p>The work is among several examples of <a href="https://arxiv.org/pdf/2308.10204.pdf">research</a> and <a href="https://www.cadence.com/en_US/home/explore/large-language-models-llms.html">proofs of concept</a> of generative AI in the semiconductor industry, just beginning to emerge from the lab.</p>
-<h2><b>Sharing Lessons Learned</b></h2>
-<p>One of the most important lessons Ren’s team learned is the value of customizing an LLM.</p>
-<p>On chip-design tasks, custom ChipNeMo models with as few as 13 billion parameters match or exceed performance of even much larger general-purpose LLMs like LLaMA2 with 70 billion parameters. In some use cases, ChipNeMo models were dramatically better.</p>
-<p>Along the way, users need to exercise care in what data they collect and how they clean it for use in training, he added.</p>
-<p>Finally, Ren advises users to stay abreast of the latest tools that can speed and simplify the work.</p>
-<p>NVIDIA Research has hundreds of scientists and engineers worldwide focused on topics such as AI, computer graphics, computer vision, self-driving cars and robotics. Other recent projects in semiconductors include using AI to <a href="https://developer.nvidia.com/blog/designing-arithmetic-circuits-with-deep-reinforcement-learning/">design smaller, faster circuits</a> and to <a href="https://developer.nvidia.com/blog/autodmp-optimizes-macro-placement-for-chip-design-with-ai-and-gpus/">optimize placement of large blocks</a>.</p>
-<p>Enterprises looking to build their own custom LLMs can get started today using <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/get-started/?nvid=nv-int-unbr-268853">NeMo framework</a> available from GitHub and NVIDIA NGC catalog.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/NVIDIA-GH100-GPU-x-1280.jpg"
-			type="image/jpeg"
-			width="1360"
-			height="724"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/10/NVIDIA-GH100-GPU-x-1280-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Silicon Volley: Designers Tap Generative AI for a Chip Assist]]></media:title>
-			<media:description type="html">Diagram of NVIDIA Hopper GPU</media:description>
 			</media:content>
 			</item>
 	</channel>

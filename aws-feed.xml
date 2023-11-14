@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 09 Nov 2023 16:28:19 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 13 Nov 2023 22:14:01 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,93 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>New: Research and Engineering Studio on AWS</title>
+		<link>https://aws.amazon.com/blogs/hpc/new-research-and-engineering-studio-on-aws/</link>
+		
+		<dc:creator><![CDATA[Brendan Bouffler]]></dc:creator>
+		<pubDate>Mon, 13 Nov 2023 22:14:01 +0000</pubDate>
+				<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[End User Computing]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[DCV]]></category>
+		<category><![CDATA[Drug Discovery]]></category>
+		<category><![CDATA[FEA]]></category>
+		<category><![CDATA[Finite Element Analysis]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[VDI]]></category>
+		<category><![CDATA[visualization]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">e085244ba2853fcab2e7687e1f7ed8d1e80e089c</guid>
+
+					<description>Today we’re announcing Research and Engineering Studio on AWS, a self-service portal to help scientists and engineers access and manage virtual desktops to see their data and run their interactive applications in the cloud.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="size-full wp-image-3095 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/08/Ingenio-icon_2pt-line-version-illustration.png" alt="" width="380" height="235"&gt;Your brain is extravagantly equipped for visualization. More than 50% of your cerebral cortex is dedicated to processing sensory input from your eyes, making it the information super highway that helps complex ideas form in your head incredibly quickly. Our output devices – our limbs and our voices – had to develop unique articulation skills, just to match the speed at which we can &lt;em&gt;learn from seeing&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;So, it’s fitting that today we’re announcing Research and Engineering Studio on AWS (RES), a self-service portal to help scientists and engineers access and manage their research and design workspaces, including virtual desktops to &lt;em&gt;see&lt;/em&gt; their data and run their interactive applications in the cloud.&lt;/p&gt; 
+&lt;p&gt;Setting up – and then managing – virtual desktops manually takes a lot of work, taking time away from the core mission of research and development groups: solving hard scientific problems. We’ve also noticed that when processes to access resources become complicated, users often take shortcuts (like sharing passwords or setting file permissions to be globally read/write).&lt;/p&gt; 
+&lt;p&gt;With RES, we’re putting all the launch and monitoring tools behind a single pane of glass, so administrators can deploy new desktop environments quickly, from their own pre-prepared library of software images and trusted applications. This gives their users the freedom to come and go when needed – incredibly important when chasing new lines of inquiry – without impacting their budgets or the security posture of their organization.&lt;/p&gt; 
+&lt;p&gt;In today’s post, we’ll explain what RES is and how it works, and we’ll explain how to deploy it in your own AWS account, and get it ready for your users.&lt;/p&gt; 
+&lt;h2&gt;Visualization without the headaches&lt;/h2&gt; 
+&lt;p&gt;Research and Engineering Studio on AWS has been designed to make it easier for site admins to provide a suite of applications, data, and large-scale compute resources through familiar interfaces – starting today with interactive desktops.&lt;/p&gt; 
+&lt;p&gt;When you login to RES through your browser, you’ll have the ability to see the virtual desktops that are available to you, based on permissions that draw from your membership of user &lt;strong&gt;Groups&lt;/strong&gt; that are associated with &lt;strong&gt;Projects&lt;/strong&gt;. We’ll explain this a little further on.&lt;/p&gt; 
+&lt;p&gt;On the main Virtual Desktops screen, you’ll have the ability to see thumbnails of sessions that are live and running, and other sessions that are suspended. All have sets of controls to spin them up, or shut them down. You can even schedule sessions start and stop during specific time windows (like 9-5 Mon-Fri, if that’s your thing). This is also where you can create new sessions, based on software stacks your admin has provided for you – this only take a couple of minutes, typically.&lt;/p&gt; 
+&lt;p&gt;By clicking &lt;strong&gt;Connect&lt;/strong&gt; in the RES interface for a running session, you can open a new browser tab containing an encrypted shared desktop session with the remote system using NICE DCV – our own &lt;a href="https://aws.amazon.com/blogs/hpc/pushing-pixels-with-nice-dcv/"&gt;high performance streaming protocol&lt;/a&gt;. DCV uses a lot of tricks with network protocols designed to make remote desktops feel like they’re local. The techniques it uses to do this are remarkable enough that Netflix uses it to provide their editors and FX teams access to powerful Amazon EC2 systems so they can produce the great content you’re probably watching this week on TV. This is great for scientists and engineers, since our interactive applications often need precision screen controls and only work well with access to truly large memory models.&lt;/p&gt; 
+&lt;div id="attachment_3096" style="width: 853px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3096" loading="lazy" class="size-full wp-image-3096" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/08/CleanShot-2023-11-08-at-10.57.51.png" alt="Figure 1 - the RES Virtual Desktops screen lists all the sessions a user has previously created, with controls to spin up, shutdown, or schedule uptime." width="843" height="481"&gt;
+ &lt;p id="caption-attachment-3096" class="wp-caption-text"&gt;Figure 1 – the RES Virtual Desktops screen lists all the sessions a user has previously created, with controls to spin up, shutdown, or schedule uptime.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;RES allows users to share their desktops, too. While the sessions they start in RES will always belong to them, they can share a session too, like the way you can do that in a conferencing system like Zoom. This can be incredibly useful for working sessions where a group of engineers in a team need draw design insights by poring over visualizations of massive datasets – without needing to move the datasets themselves. A desktop share can have an expiration date attached to it, too.&lt;/p&gt; 
+&lt;div id="attachment_3104" style="width: 1767px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3104" loading="lazy" class="wp-image-3104 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/09/share-session.png" alt="Figure 2 - RES permits users to share their virtual desktop sessions with others in a controlled fashion." width="1757" height="988"&gt;
+ &lt;p id="caption-attachment-3104" class="wp-caption-text"&gt;Figure 2 – RES permits users to share their virtual desktop sessions with others in a controlled fashion.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Projects, users, and groups&lt;/h2&gt; 
+&lt;p&gt;To manage all of this, RES works from a few important concepts, all of which are likely familiar to you already.&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;First is the &lt;strong&gt;Project&lt;/strong&gt;. In most organizations – public and private – everything revolves around &lt;em&gt;project teams&lt;/em&gt;. Resources are typically created for – and consumed by – project teams, with access, billing, and even software stacks being driven by project needs.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Users and Groups: &lt;/strong&gt;Users can be members of multiple Groups, and in RES a Group can be associated with one or more Projects.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Like most institutions, you probably have an investment in a user identity and authentication system, complete with existing project groups that you’ve defined to define access for shared files and other resources. We wanted to align with that, so RES – out of the box – is built to connect with your existing directory service, starting with Active Directory (AD), helping you avoid doing this work twice.&lt;/p&gt; 
+&lt;p&gt;At launch, RES can connect to your existing AD server &lt;em&gt;on-premises&lt;/em&gt; or &lt;em&gt;in the cloud&lt;/em&gt;. If you want to separate your RES environment from your regular user space – to create an engineering sandbox, for instance – you can spin up a managed AD using AWS Directory Service to privately manage a set of users.&lt;/p&gt; 
+&lt;div id="attachment_3106" style="width: 3526px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3106" loading="lazy" class="wp-image-3106 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/09/users-shot.png" alt="Figure 3 - Identity functions, like defining users and groups, are done centrally in an Active Directory environment, which you specify when installing RES in your AWS environment. The AD can be on-premises or in the cloud and can - if you wish - be separate from your corporate directory service." width="3516" height="1976"&gt;
+ &lt;p id="caption-attachment-3106" class="wp-caption-text"&gt;Figure 3 – Identity functions, like defining users and groups, are done centrally in an Active Directory environment, which you specify when installing RES in your AWS environment. The AD can be on-premises or in the cloud and can – if you wish – be separate from your corporate directory service.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;RES enables access to &lt;strong&gt;Project&lt;/strong&gt; resources, by specifying which &lt;strong&gt;Groups&lt;/strong&gt; are assigned to the &lt;strong&gt;Project&lt;/strong&gt;. You define this at Project creation, but of course you can change it afterwards, too (see Figure 4).&lt;/p&gt; 
+&lt;div id="attachment_3107" style="width: 1768px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3107" loading="lazy" class="wp-image-3107 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/09/create-project.png" alt="Figure 4 - when you create a Project in RES, you can specify which user groups are permitted to access its resources. The Groups and Users are inherited from your Active Directory service." width="1758" height="988"&gt;
+ &lt;p id="caption-attachment-3107" class="wp-caption-text"&gt;Figure 4 – when you create a Project in RES, you can specify which user groups are permitted to access its resources. The Groups and Users are inherited from your Active Directory service.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;RES is designed to bind to your AD and draw its knowledge of your teams from there, which allows RES to reflect changes you make to Group memberships right away.&lt;/p&gt; 
+&lt;h2&gt;Storage&lt;/h2&gt; 
+&lt;p&gt;At launch, RES supports two file systems which customers have told us are most useful for managing users’ files. Amazon Elastic File System (EFS) and Amazon FSx for NetApp ONTAP. While EFS is great for customers with large Linux deployments using NFSv4, FSx for NetApp ONTAP can offer the same file system using either NFS or SMB – which is helpful if you’re running a hybrid Windows and Linux environment and your users regularly flip back and forth, depending on the applications they’re using.&lt;/p&gt; 
+&lt;div id="attachment_3100" style="width: 851px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3100" loading="lazy" class="size-full wp-image-3100" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/08/CleanShot-2023-11-08-at-10.59.48.png" alt="Figure 5 - You can manage file systems in RES, and associate them with Projects. At launch, RES supports Amazon EFS, and Amazon FSx for NetApp ONTAP." width="841" height="229"&gt;
+ &lt;p id="caption-attachment-3100" class="wp-caption-text"&gt;Figure 5 – You can manage file systems in RES, and associate them with Projects. At launch, RES supports Amazon EFS, and Amazon FSx for NetApp ONTAP.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;RES allows an administrator to spin up new filesystems or to &lt;em&gt;onboard existing filesystems&lt;/em&gt; which you might have previously created for your project. You need to associate a file system resource with a &lt;strong&gt;Project&lt;/strong&gt; to make it visible to the users who are member of the Groups associated with that project. Individual file and folder access is still controlled in the usual way at an operating system level with permissions, which again will usually map back to your Users and Groups definitions in the AD you’re using for your directory service.&lt;/p&gt; 
+&lt;h2&gt;Software stacks and machine images&lt;/h2&gt; 
+&lt;p&gt;RES uses Amazon Machine Images (AMIs) as the basis for customizing the environments you deploy for your users. If this is new to you, an AMI is an image that provides the information required to launch an instance. You need to specify an AMI whenever you launch an instance. You can launch multiple instances from a single AMI when you need lots of machines with the same configuration. And you can use different AMIs to launch instances when you need add some local flavor to your users’ environment.&lt;/p&gt; 
+&lt;p&gt;RES extends this concept a little further by narrowing the set of instances and GPUs it will offer based on an AMI. And – as you’d expect – the resulting stack needs to be associated with a Project before a user will know about it. This is helpful not just for customizing what your users can &lt;em&gt;do&lt;/em&gt;, but it’s great when you have commercially licensed software, too. For example – all members of Project &lt;em&gt;Beeblebrox&lt;/em&gt; can access an AMI with the &lt;em&gt;Marvin&lt;/em&gt; license embedded in it.&lt;/p&gt; 
+&lt;p&gt;Creating an AMI is almost as easy as launching an existing one, making your changes, and then &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html#creating-an-ami"&gt;asking the Amazon EC2 console&lt;/a&gt; to create a new AMI from it. After that, you just need to take the ID of your AMI to RES admin screen and register it.&lt;/p&gt; 
+&lt;p&gt;Starting today, RES is designed to support Windows and Linux operating systems, specifically: Windows Server 2019 (Datacenter Version 1809), Amazon Linux 2, CentOS 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8, and Red Hat Enterprise Linux 9. We’ll keep the list of supported operating systems up to date in the online documentation for RES.&lt;/p&gt; 
+&lt;h2&gt;One click deployment – or two&lt;/h2&gt; 
+&lt;p&gt;Research and Engineering Studio is a self-managed, open-source product which you install in your own AWS account.&lt;/p&gt; 
+&lt;p&gt;There are several ways of getting up and running with RES. Which one you choose depends on your experience with AWS, and how heavily you want to customize it to suit your local needs. This includes a “&lt;strong&gt;batteries included”&lt;/strong&gt; method which is a full, one-click launchable AWS CloudFormation stack, that can be used to build an entire environment, including a managed AD server.&lt;/p&gt; 
+&lt;p&gt;RES is a supported open-source project, available via its public &lt;a href="https://github.com/aws/res"&gt;GitHub repository&lt;/a&gt;, which is where you can find the RES installation recipes (including several components, supplied by the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipe Library&lt;/a&gt;).&lt;/p&gt; 
+&lt;p&gt;RES can be used in the following Regions: US East (Ohio), US East (N. Virginia), US West (N. California), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Europe (Frankfurt), Europe (London), Europe (Paris), Asia Pacific (Mumbai) and AWS GovCloud (US-West).&lt;/p&gt; 
+&lt;p&gt;Links to documentation, and more are available on the &lt;a href="https://aws.amazon.com/hpc/res"&gt;Research and Engineering Studio homepage&lt;/a&gt;. Try it out and let us know what you think at&amp;nbsp;&lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Deep-dive into Ansys Fluent performance on Ansys Gateway powered by AWS</title>
 		<link>https://aws.amazon.com/blogs/hpc/deep-dive-into-ansys-fluent-performance-on-ansys-gateway-powered-by-aws/</link>
 		
@@ -41,7 +128,7 @@
 &lt;h3&gt;Benchmarks&lt;/h3&gt; 
 &lt;p&gt;For the benchmarking purposes of this post, we’ve used the test cases from the standard &lt;a href="https://www.ansys.com/it-solutions/benchmarks-overview"&gt;Ansys Fluent Benchmarks&lt;/a&gt; suite. The model description of each test case, including the mesh size represented in terms of number of cells, turbulence model used, and the fluid-flow condition are shown in Table 1. These benchmarks, shown in Figures 1a – 1c for visual reference, represent the typical size and physics modeled by users. We used Ansys Fluent version 2023 R1 to run the simulations.&lt;/p&gt; 
 &lt;div id="attachment_3037" style="width: 899px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3037" class="size-full wp-image-3037" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.06.26.png" alt="Table 1: Description of Ansys Fluent benchmarking test cases used for this post." width="889" height="198"&gt;
+ &lt;img aria-describedby="caption-attachment-3037" loading="lazy" class="size-full wp-image-3037" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-10.06.26.png" alt="Table 1: Description of Ansys Fluent benchmarking test cases used for this post." width="889" height="198"&gt;
  &lt;p id="caption-attachment-3037" class="wp-caption-text"&gt;Table 1: Description of Ansys Fluent benchmarking test cases used for this post.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;div id="attachment_3038" style="width: 1107px" class="wp-caption aligncenter"&gt;
@@ -2102,148 +2189,6 @@ ncview wrfout*
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;In this blog post we introduced the Amazon EC2 Hpc7a instance, which offers up to 2.5x better compute performance compared to previous generation AMD HPC instance. It has twice the cores per instance and yet still has increased per-core compute performance, better memory bandwidth, and greater network performance per core.&lt;/p&gt; 
 &lt;p&gt;We hope you’ll try them for your workloads, too. Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; and let us know how you fare.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>How computer vision is enabling a circular economy</title>
-		<link>https://aws.amazon.com/blogs/hpc/how-computer-vision-is-enabling-a-circular-economy/</link>
-		
-		<dc:creator><![CDATA[Ilan Gleiser]]></dc:creator>
-		<pubDate>Tue, 15 Aug 2023 15:04:30 +0000</pubDate>
-				<category><![CDATA[Amazon Machine Learning]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[ML]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Sustainability]]></category>
-		<guid isPermaLink="false">593227d1a134845db1c20527dfb0d67ff5c347eb</guid>
-
-					<description>In this post, we show how Reezocar uses computer vision to change the way they detect damage and price used vehicles for re-sale in secondary markets. This reduces landfill and helps achieve the goals of the circular economy.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright wp-image-2675 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/boofla88_computer_vision_as_part_of_the_circular_economy_62b0baed-7a6b-49a3-9fc0-848575717090-1.png" alt="How computer vision is enabling a circular economy" width="380" height="212"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;This post was contributed by Laurent Fabre, Chief Technology Officer and his team from Reezocar, and &lt;/em&gt;&lt;em&gt;Ilan Gleiser, Pr. Specialist, Global Impact Computing, AWS and our team.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Computer vision has enormous potential to revolutionize the way we think about sustainability and the circular economy. One of the key ways in which computer vision is already being applied to these areas is using powerful graphics processing units (GPUs) and AWS cloud computing services.&lt;/p&gt; 
-&lt;p&gt;One of the primary applications of computer vision in the circular economy is in product lifecycles. By using advanced computer vision algorithms and machine learning models, manufacturers and supply chain managers can more accurately track and analyze the lifecycle of products, from raw materials sourcing all the way through to end-of-life disposal. This allows companies to better understand the environmental impacts of their products and make more informed decisions about how to design and produce products that are more sustainable and can be easily reused or recycled.&lt;/p&gt; 
-&lt;p&gt;Another area in which computer vision is being applied to the circular economy is in waste reduction. By using advanced image recognition algorithms and computer vision technologies, waste management companies can better sort and categorize recyclable materials, making it easier and more cost-effective to recover and reuse valuable resources.&lt;/p&gt; 
-&lt;p&gt;In addition to these applications, computer vision is also being used to identify opportunities for energy and resource savings, and to monitor and analyze environmental impacts at both a local and global scale. For example, satellite imagery and other forms of remote sensing data can be used to track deforestation, monitor ocean pollution levels, and even create early warning systems to predict the impact of natural disasters on ecosystems.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll explore how Reezocar is using computer vision to change the way they detect car damage and price used vehicles for re-sale in secondary markets. This technology can be used to determine the useful life of a car and potentially reduce the need for landfill waste, therefore aligning with the goals of the circular economy: designing-out waste and pollution from the environment.&lt;/p&gt; 
-&lt;p&gt;Secondary markets play a critical role in achieving a circular economy by extending the lifespan of products and reducing waste. The benefits of secondary markets go beyond environmental impact, as they also generate economic opportunities, job creation, and community empowerment.&lt;/p&gt; 
-&lt;p&gt;In this context, computer vision is revolutionizing the way we detect car damage. By leveraging the power of machine learning, computer vision can detect even the smallest dents and scratches on a car’s body.&lt;/p&gt; 
-&lt;p&gt;Overall, the applications of computer vision in the circular economy are wide-ranging and growing rapidly. By enabling more efficient and sustainable resource use, computer vision has the power to drive real change in our economy and help create a more sustainable future for us all.&lt;/p&gt; 
-&lt;h2&gt;Who is Reezocar?&lt;/h2&gt; 
-&lt;p&gt;Reezocar is an online platform for buying and selling used cars in France. It offers customers a safe purchase guarantee and a bespoke shopping help service. With access to over six-million car ads, Reezocar makes it easy to select makes and models that match a buyer’s search criteria. Customers also have the option of purchasing a certified car, with a 15-day money back guarantee included.&lt;/p&gt; 
-&lt;p&gt;Reezocar uses GPU-accelerated machine learning algorithms, convolutional neural networks, and a damage estimation model to calculate car prices. This system helps customers get the best deal on their purchase, as well as an accurate assessment of the vehicle’s condition. The result is a fair price estimate of the car and reassurance that they’re getting a good value for their money.&lt;/p&gt; 
-&lt;p&gt;More than 10,000 customers have already been won over by the Reezocar experience, making it one of the top on-line marketplaces for buying and selling used cars. With its reliable customer service and advanced technology, Reezocar is quickly becoming the go-to destination for those looking to purchase a used car.&lt;/p&gt; 
-&lt;p&gt;Reezocar is committed to its environmental mission and employs various strategies to uphold its climate-conscious values. Here are four key approaches they employ:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;strong&gt;Extending Vehicle Lifespan&lt;/strong&gt;: By refurbishing selected vehicles, they have successfully prolonged their lifespan by up to five years, using approximately 5% of their manufacturer’s suggested retail price (MSRP) as refurbishing budget. This initiative has prevented over 30,000 tons of waste from ending up in landfills.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Carbon Offset Initiatives&lt;/strong&gt;: To counterbalance the CO2 emissions produced by these vehicles, they consistently engage in carbon offset practices through their partnership with ReforestAction. Through this collaboration, they have planted 33,000 trees, effectively trapping an &lt;a href="https://www.reforestaction.com/reezocar"&gt;estimated 5,000 tons of CO2.&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Discouraging New Car Production&lt;/strong&gt;: Recognizing that the most environmentally friendly car is the one that doesn’t need to be built, they actively discourage the production of new cars by prioritizing the refurbishment of used vehicles. This approach has resulted in an estimated avoidance of 40,000 tons of material, considering the increasing weight of modern cars.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Efficient Supply Chain&lt;/strong&gt;: By advocating for a shorter supply chain, they significantly reduce energy consumption during the delivery of vehicles. Additionally, this approach helps them avoid the costs associated with waste management while minimizing the pollution caused by car-related materials such as plastics, thus safeguarding the surrounding ecosystem.&lt;br&gt; With a decade of experience and numerous satisfied customers, Reezocar remains dedicated to leading the way in climate action.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h2&gt;The rise of computer vision&lt;/h2&gt; 
-&lt;p&gt;For decades, car buyers and dealers have relied on manual inspection to detect body damage on used cars. Until recently, physical inspections were the only way to get a full picture of the car’s condition. Even then, most damage could only be detected with close examination from a trained eye.&lt;/p&gt; 
-&lt;p&gt;The technology leverages a combination of machine learning algorithms and convolutional neural networks to detect dents in vehicles, resulting in a faster, more streamlined, and accurate process.&lt;/p&gt; 
-&lt;p&gt;Initially, the technology employs machine learning algorithms to estimate an initial value of the car based on features such as its model and gearbox type (automatic vs. standard).&lt;/p&gt; 
-&lt;p&gt;Next, Computer vision is used to process the car’s image and identify any form of damage, like scratches, dents, or severe degradation. Any detected damage will be factored into the initial value estimate by subtracting the repair costs. The proposed computer vision system determines the specific parts of the car that are damaged, which helps identify the necessary repairs and their costs.&lt;/p&gt; 
-&lt;p&gt;After computing the repair cost, Reezocar generates a post-repair estimate of the car’s value. This estimate considers factors like age, condition, and make to ensure maximum accuracy. With these tools at their disposal, dealerships can offer more competitive pricing and decide whether a car should be refurbished or sent to the landfill.&lt;/p&gt; 
-&lt;h2&gt;Reezocar reference architecture&lt;/h2&gt; 
-&lt;div id="attachment_2656" style="width: 1079px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2656" loading="lazy" class="size-full wp-image-2656" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.31.43.png" alt="Figure 1: Reezocar’s architecture schema " width="1069" height="509"&gt;
- &lt;p id="caption-attachment-2656" class="wp-caption-text"&gt;Figure 1: Reezocar’s architecture schema&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Reezocar’s Reference architecture aims to detect car dents using computer vision, as illustrated in Figure 1. Their approach consists of three steps: acquiring a dataset, fine tuning a convolutional neural network, and measuring the success of the model.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;First&lt;/strong&gt;, they acquired and combined a synthetic and a real-world dataset to ensure a diverse and robust sample dataset. Using Amazon EC2 instances, they generated a synthetic dataset by algorithmically deforming 3D CAD models of cars. This helped to create a labeled synthetic dataset of images. Afterwards, they used Amazon SageMaker Ground Truth to annotate a set of real-world images. To achieve this, Reezocar uses Amazon SageMaker Ground Truth to acquire and annotate data, and then employs machine learning models running on GPUs to train a damage estimation model.&lt;/p&gt; 
-&lt;p&gt;By using Amazon SageMaker Ground Truth, Reezocar was able to avoid the need to manage their own data labeling workforce, which would have slowed down innovation and increased costs. This approach allowed Reezocar to focus on their core competencies and optimize their resources for maximum efficiency.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Second&lt;/strong&gt;, they leveraged GPUs to fine tune a convolutional neural network (CNN) such as Mask R-CNN or Detectron to do object segmentation and damage detection. This CNN model is used to segment car parts and detect car dents.&lt;/p&gt; 
-&lt;p&gt;Reezocar adopted a gradual approach to tackle the dent detection problem. They aimed to ensure that their system could effectively differentiate between damaged and undamaged cars. Once they were satisfied with the performance of the initial model, they submitted images with low confidence for undamaged cars and images of damaged cars to Amazon SageMaker Ground Truth to obtain around 4000 more detailed and accurate annotations, which indicate which parts are damaged. This annotated dataset was then used to train an object detection model that could accurately identify the damaged parts of a car.&lt;/p&gt; 
-&lt;p&gt;Reezocar uses AWS Batch to run inference and augment their data with damage information. Reezocar triggers AWS Batch conditionally by leveraging AWS Step Functions and an Amazon SQS queue. The Step Functions workflow showcased in Reference 1 checks for the arrival of a certain number of events related to the car damage data in the SQS queue. Once the required number of events is present, AWS Step Functions triggers AWS Batch to process the data using the proposed computer vision algorithm on P4d instances. AWS Batch dynamically provisions the optimal quantity and type of compute resources based on the volume and specific resource requirements of the batch jobs submitted.&lt;/p&gt; 
-&lt;p&gt;P4d instances are a specific type of Amazon EC2 instance family that is optimized for high-performance computing and includes powerful NVIDIA GPUs. These instances provide the necessary computational power for running machine learning models and computer vision algorithms efficiently, making them suitable for Reezocar’s car damage detection system.&lt;/p&gt; 
-&lt;p&gt;This combination of Step Functions, SQS, and AWS Batch allows Reezocar to efficiently process the data.&lt;/p&gt; 
-&lt;h2&gt;Evaluating the model is in the eye of the beholder&lt;/h2&gt; 
-&lt;p&gt;&lt;strong&gt;Finally&lt;/strong&gt;, to evaluate the performance of their dent detection models, Reezocar used a combination of accuracy and mean Average Precision (mAP) metrics. The accuracy metric was used to assess the classifier’s performance, while the mAP metric was used to evaluate the object detection model’s performance. They set a target accuracy of 0.85 and a target mAP of 0.9 to ensure high levels of accuracy and reliability in their results. These metrics allowed Reezocar to measure the success of their object detection model and assess the quality of the system’s output. The process is illustrated in Figure 2.&lt;/p&gt; 
-&lt;div id="attachment_2657" style="width: 1015px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2657" loading="lazy" class="size-full wp-image-2657" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.32.56.png" alt="Figure 2: The damage detection system developed by Reezocar combines the generation of a synthetic dataset with real-world data labeling to ensure a diverse and robust dataset. The system is designed to detect relevant images that require labeling, which contributes to the overall efficiency and effectiveness of the damage detection system." width="1005" height="716"&gt;
- &lt;p id="caption-attachment-2657" class="wp-caption-text"&gt;Figure 2: The damage detection system developed by Reezocar combines the generation of a synthetic dataset with real-world data labeling to ensure a diverse and robust dataset. The system is designed to detect relevant images that require labeling, which contributes to the overall efficiency and effectiveness of the damage detection system.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Reezocar’s objective is to determine the refurbishing cost of cars, which involves an additional step to detect the severity of the damage in parts. The severity assessment process is illustrated in Figure 3, and the severity estimation is used to determine the repair cost of the damaged part. Table 1 shows that the repair cost estimation method involves applying a percentage of the initial price of the part, which varies according to the severity of the damage. In other words, different percentages are used based on the severity of the damage to estimate the repair cost accurately.&lt;/p&gt; 
-&lt;div id="attachment_2658" style="width: 852px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2658" loading="lazy" class="size-full wp-image-2658" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.33.30.png" alt="Figure 3: Damage severity assessment pipeline. The severity assessment is based on the normal consistency of the damaged part." width="842" height="604"&gt;
- &lt;p id="caption-attachment-2658" class="wp-caption-text"&gt;Figure 3: Damage severity assessment pipeline. The severity assessment is based on the normal consistency of the damaged part.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;table width="624"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td width="156"&gt;&lt;strong&gt;Severity&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="156"&gt;Scratched&lt;/td&gt; 
-   &lt;td width="156"&gt;Damaged&lt;/td&gt; 
-   &lt;td width="156"&gt;Wrecked&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td width="156"&gt;&lt;strong&gt;Repair cost&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="156"&gt;12%&lt;/td&gt; 
-   &lt;td width="156"&gt;60%&lt;/td&gt; 
-   &lt;td width="156"&gt;100%&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;&lt;em&gt;Table 1: Repair cost. Reezocar uses a percentage of the initial price of the damaged part to estimate the repair cost. The repair cost estimation process involves applying different percentages based on the severity of the damage.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Through the implementation of their damage detection pipeline, Reezocar has achieved a high degree of automation with a precision rate of 86.7%. However, due to challenging light conditions and reflective materials, some cars are being mislabeled as damaged. Reezocar has identified a mislabeling rate of 15.7%, and are currently labeling data in order to retrain the damage detection model.&lt;/p&gt; 
-&lt;p&gt;The team was able to achieve a notable performance improvement by using Amazon Sagemaker Ground Truth to obtain 4000 labeled images, resulting in an increase in their mean Average Precision (MAP) from 0.22 to 0.3. This success has validated the effectiveness of their data-labeling pipeline and has motivated the company to pursue further data acquisition for labeling to enhance the performance of their system. As part of this effort, Reezocar is actively collecting images of damaged cars and labeling them to reach their goal of a MAP of 0.9.&lt;/p&gt; 
-&lt;p&gt;In the figures below, we see some qualitative results of the proposed damage detection model. For example, in Figure 4, an image of a car with damaged parts is displayed, and the proposed model accurately detects and segments the damaged parts, as shown in the second row, first column. Additionally, they used a car-part segmentation model (See Row 1; Column 3 of Figure 4) to identify which specific part is damaged.&lt;/p&gt; 
-&lt;div id="attachment_2659" style="width: 1009px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2659" loading="lazy" class="size-full wp-image-2659" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.34.17.png" alt="Figure 4: example of a wrecked car." width="999" height="458"&gt;
- &lt;p id="caption-attachment-2659" class="wp-caption-text"&gt;Figure 4: example of a wrecked car.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 5 shows an image of an undamaged car, while Figure 6 showcases the performance of the proposed method on scratched parts of a car, providing a closer look at the results.&lt;/p&gt; 
-&lt;div id="attachment_2660" style="width: 1003px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2660" loading="lazy" class="size-full wp-image-2660" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.34.51.png" alt="Figure 5: Example of an undamaged car." width="993" height="392"&gt;
- &lt;p id="caption-attachment-2660" class="wp-caption-text"&gt;Figure 5: Example of an undamaged car.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2661" style="width: 998px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2661" loading="lazy" class="size-full wp-image-2661" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.35.19.png" alt="Figure 6: Example of a car with a scratched part." width="988" height="519"&gt;
- &lt;p id="caption-attachment-2661" class="wp-caption-text"&gt;Figure 6: Example of a car with a scratched part.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;The use of computer vision to detect car dents is quickly becoming a game-changer in the automotive industry. Machine learning and convolutional neural networks are allowing for a more accurate detection of car dents than ever before, leading to improved repair and maintenance processes.&lt;/p&gt; 
-&lt;p&gt;Companies like Reezocar are leveraging computer vision-based damage estimation models to accurately and efficiently calculate car prices. Thanks to these models, Reezocar is now able to calculate the car price with a Mean Absolute Percentage (MAP) error of just 6%, improving the accuracy and efficiency of their pricing process.&lt;/p&gt; 
-&lt;p&gt;This technology is not only helping to extend the life of cars but also to reduce landfill waste. It’s also helping to make the car buying process simpler and more transparent. As computer vision technology continues to improve, the way we detect and repair car dents will likely change as well.&lt;/p&gt; 
-&lt;p&gt;By combining the power of Amazon EC2 instances, NVIDIA GPUs, AWS Batch linked by Elastic Fabric Adapter (EFA), and machine learning powered computer vision models, Reezocar can accurately detect car dents, ultimately extending the lifespan of selected cars by up to 5 years. By refurbishing these cars and reselling them in the secondary market, Reezocar helps reduce landfill waste and promote circularity.&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.41.23.png" alt="Laurent Fabre" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Laurent Fabre&lt;/h3&gt; 
-  &lt;p&gt;Laurent Fabre is the CTO of Reezocar, a leading online platform for buying and selling used cars. Laurent brings over two decades of experience in the IT industry. He is a highly skilled Cybersecurity expert, having trained at Airbus, where he developed expertise in cryptography and secure programming techniques. He also studied mathematics, with a focus on operations research, which has enabled him to leverage data analytics and metrics to solve complex problems and achieve optimal solutions. Throughout his career, Laurent has taken on numerous mission-critical tasks for both civilian and military-grade projects, often on short notice. Outside of work, Laurent indulges his passion for interpretive dancing of quantum physics, which allows him to combine his love of science and art.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.41.26.png" alt="Atef Shaar" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Atef Shaar&lt;/h3&gt; 
-  &lt;p&gt;Atef Shaar is currently a Lead Data at Reezocar. He is developing new machine-learning-based applications for the automobile industry. Additionally, he is managing a team of data engineers and data scientists. Prior to this work, Atef Shaar worked as a Research Engineer at Télécom Paris. He graduated with a Ph.D. degree from Télécom Paris in 2018. He was a visiting research student at the National University of Singapore in 2015. He completed a master’s study in International Business at Grenoble Graduate School of Business, after earning an engineering degree. His research work is related to machine learning and its application in multiple domains including marketing, distributed storage systems, and the automotive industry.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.46.26.png" alt="Julien Maksoud" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Julien Maksoud&lt;/h3&gt; 
-  &lt;p&gt;Julien Maksoud is a highly skilled engineer with over a decade of experience in the Oil &amp;amp; Gas industry. As a consultant, he supported various companies in Europe and Africa in analyzing their data using machine learning-based methods, providing valuable insights to decision-makers. Julien’s passion for solving complex problems using machine learning led him to pursue an advanced Master’s degree from Télécom Paris, which equipped him with a deeper understanding of data science, including machine learning and deep learning frameworks. Currently, Julien is working as a Data Engineer at Reezocar, where he leverages his expertise to create data pipelines on AWS for ETL and data analysis. His experience in both data engineering and data science enables him to assist with model deployment and maintenance as well. Julien is committed to delivering results that enable organizations to make informed decisions based on data-driven insights.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/07/20/CleanShot-2023-07-20-at-16.41.30.png" alt="Tarek " width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Tarek Ben Charrada&lt;/h3&gt; 
-  &lt;p&gt;Tarek Ben Charrada graduated with distinction, ranking 28th out of over 2800 candidates in the highly competitive “concours d’entrée aux grandes écoles” to go and earn his engineering degree from Ecole polytechnique de Tunisie. He then pursued his PhD in 3D reconstruction from a single image, demonstrating his commitment to advancing the field of computer vision and computer graphics. Today, Tarek’s expertise is sought-after as a data scientist, where he leverages his skills in computer vision, speech processing and differentiable privacy to push the boundaries of what’s possible in these exciting fields.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
 					
 		
 		
