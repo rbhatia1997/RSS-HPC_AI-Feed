@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 16 Nov 2023 07:36:10 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 16 Nov 2023 17:08:32 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,233 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.2</generator>
 	<item>
+		<title>Three Ways Generative AI Can Bolster Cybersecurity</title>
+		<link>https://blogs.nvidia.com/blog/generative-ai-cybersecurity/</link>
+		
+		<dc:creator><![CDATA[David Reber Jr.]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2023 16:00:37 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cybersecurity]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68187</guid>
+
+					<description><![CDATA[Human analysts can no longer effectively defend against the increasing speed and complexity of cybersecurity attacks. The amount of data is simply too large to screen manually. Generative AI, the most transformative tool of our time, enables a kind of digital jiu jitsu. It lets companies shift the force of data that threatens to overwhelm <a class="read-more" href="https://blogs.nvidia.com/blog/generative-ai-cybersecurity/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Human analysts can no longer effectively defend against the increasing speed and complexity of cybersecurity attacks. The amount of data is simply too large to screen manually.</p>
+<p><a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">Generative AI</a>, the most transformative tool of our time, enables a kind of digital jiu jitsu. It lets companies shift the force of data that threatens to overwhelm them into a force that makes their defenses stronger.</p>
+<p>Business leaders seem ready for the opportunity at hand. In a <a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us/c-suite-study/ceo">recent survey</a>, CEOs said cybersecurity is one of their top three concerns, and they see generative AI as a lead technology that will deliver competitive advantages.</p>
+<p>Generative AI brings both risks and benefits. An earlier blog outlined <a href="https://blogs.nvidia.com/blog/ai-security-steps/">six steps to start the process of securing enterprise AI</a>.</p>
+<p>Here are three ways generative AI can bolster cybersecurity.</p>
+<h2><b>Begin With Developers</b></h2>
+<p>First, give developers a security copilot.</p>
+<p>Everyone plays a role in security, but not everyone is a security expert. So, this is one of the most strategic places to begin.</p>
+<p>The best place to start bolstering security is on the front end, where developers are writing software. An AI-powered assistant, trained as a security expert, can help them ensure their code follows best practices in security.</p>
+<p>The AI software assistant can get smarter every day if it’s fed previously reviewed code. It can learn from prior work to help guide developers on best practices.</p>
+<p>To give users a leg up, NVIDIA is creating a <a href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/generative-ai-chatbots/">workflow for building such co-pilots or chatbots</a>. This particular workflow uses components from <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework for building and customizing <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">large language models</a>.</p>
+<p>Whether users customize their own models or use a commercial service, a security assistant is just the first step in applying generative AI to cybersecurity.</p>
+<h2><b>An Agent to Analyze Vulnerabilities</b></h2>
+<p>Second, let generative AI help navigate the sea of known software vulnerabilities.</p>
+<p>At any moment, companies must choose among thousands of patches to mitigate known exploits. That’s because every piece of code can have roots in dozens if not thousands of different software branches and open-source projects.</p>
+<p>An LLM focused on vulnerability analysis can help prioritize which patches a company should implement first. It’s a particularly powerful security assistant because it reads all the software libraries a company uses as well as its policies on the features and APIs it supports.</p>
+<p>To test this concept, NVIDIA built a pipeline to analyze software containers for vulnerabilities. The agent identified areas that needed patching with high accuracy, speeding the work of human analysts up to 4x.</p>
+<p>The takeaway is clear. It’s time to enlist generative AI as a first responder in vulnerability analysis.</p>
+<h2><b>Fill the Data Gap</b></h2>
+<p>Finally, use LLMs to help fill the growing data gap in cybersecurity.</p>
+<p>Users rarely share information about data breaches because they’re so sensitive. That makes it difficult to anticipate exploits.</p>
+<p>Enter LLMs. Generative AI models can create <a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/">synthetic data</a> to simulate never-before-seen attack patterns. Such synthetic data can also fill gaps in training data so machine-learning systems learn how to defend against exploits before they happen.</p>
+<h2><b>Staging Safe Simulations</b></h2>
+<p>Don’t wait for attackers to demonstrate what’s possible. Create safe simulations to learn how they might try to penetrate corporate defenses.</p>
+<p>This kind of proactive defense is the hallmark of a strong security program. Adversaries are already using generative AI in their attacks. It’s time users harness this powerful technology for cybersecurity defense.</p>
+<p>To show what’s possible, another <a href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/spear-phishing/">AI workflow</a> uses generative AI to defend against spear phishing — the carefully targeted bogus emails that cost companies an estimated $2.4 billion in 2021 alone.</p>
+<p>This workflow generated synthetic emails to make sure it had plenty of good examples of spear phishing messages. The AI model trained on that data learned to understand the intent of incoming emails through natural language processing capabilities in <a href="https://developer.nvidia.com/morpheus-cybersecurity">NVIDIA Morpheus</a>, a framework for AI-powered cybersecurity.</p>
+<p>The resulting model caught 21% more spear phishing emails than existing tools. Check out our <a href="https://developer.nvidia.com/blog/generative-ai-and-accelerated-computing-for-spear-phishing-detection/">developer blog</a> or watch the video below to learn more.</p>
+<p><iframe title="Improve Spear Phishing Detection with Generative AI" width="500" height="281" src="https://www.youtube.com/embed/57dEPP67XrY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Wherever users choose to start this work, automation is crucial, given the shortage of cybersecurity experts and the thousands upon thousands of users and use cases that companies need to protect.</p>
+<p>These three tools — software assistants, virtual vulnerability analysts and synthetic data simulations — are great starting points for applying generative AI to a security journey that continues every day.</p>
+<p>But this is just the beginning. Companies need to integrate generative AI into all layers of their defenses.</p>
+<p>Attend a <a href="https://www.nvidia.com/en-us/events/llm-developer-day/">webinar</a> for more details on how to get started.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/new-KV.jpg"
+			type="image/jpeg"
+			width="1000"
+			height="563"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/new-KV-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Three Ways Generative AI Can Bolster Cybersecurity]]></media:title>
+			<media:description type="html">Image showing worker using generative AI to bolster cybersecurity</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Into the Omniverse: OpenUSD Enhancements for Autodesk Maya Make 3D Workflows a Ferret-Tale</title>
+		<link>https://blogs.nvidia.com/blog/openusd-enhancements-for-autodesk-maya/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2023 14:00:53 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[Into the Omniverse]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Universal Scene Description]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68127</guid>
+
+					<description><![CDATA[3D artists can improve the productivity and efficiency of their generative AI-enabled content-creation workflows thanks to the latest updates to popular OpenUSD software.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of </i><a href="https://www.nvidia.com/en-us/omniverse/news/"><i>Into the Omniverse</i></a><i>, a series focused on how artists, developers and enterprises can transform their workflows using the latest advances in </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>OpenUSD</i></a><i> and </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>NVIDIA Omniverse</i></a><i>.</i></p>
+<p>In 3D art and design, efficient workflows are essential for quickly bringing creative visions to life.</p>
+<p><a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description</a>, aka OpenUSD, is a framework that enhances these workflows by providing a unified, extensible ecosystem for describing, composing, simulating and collaborating within 3D worlds. OpenUSD is a key technology in Autodesk’s suite of products and solutions, across media and entertainment; architecture, engineering and construction; and product design and manufacturing.</p>
+<p>Unveiled at the <a href="https://conferences.autodesk.com/flow/autodesk/au2023/web/page/overview" target="_blank" rel="noopener">AU 2023</a> conference this week, the latest OpenUSD updates to Autodesk Maya enable artists and technical professionals to create and manipulate OpenUSD assets with greater control and efficiency, while also ensuring more efficient and accurate 3D workflows.</p>
+<h2><b></b><b>Bridging the Digital and Real Worlds With Maya and OpenUSD</b></h2>
+<p>Many creators are using Maya and OpenUSD to propel their 3D workflows.</p>
+<p><a href="https://www.linkedin.com/in/karol-osinski-3dartist" target="_blank" rel="noopener">Karol Osinski</a> is a 3D artist at <a href="http://www.s20m.com" target="_blank" rel="noopener">S20M</a>, an architectural and design firm that specializes in tackling unique, bold and elegant projects. When it comes to creating architectural visualizations, Osinski says the biggest challenge is matching the digital world to the real one.</p>
+<p>Using USD and creative tools such as Maya, SideFX Houdini and Epic Games’ Unreal Engine, Osinski creates high-quality visuals for clients while accelerating his architectural workflows.</p>
+<p style="text-align: center;"><img decoding="async" fetchpriority="high" class=" wp-image-68143 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/ezgif.com-video-to-gif-38.gif" alt="" width="644" height="363" /><i>Osinski’s panoramic view from the 20th floor terrace in the Upper East Side</i></p>
+<p>“OpenUSD provides the possibility of bridging different tools like never before,” said Osinski. “I love how accessible USD is for first-time users and how it opens opportunities to make designs very complex.”</p>
+<p><a href="https://blogs.nvidia.com/blog/sir-wade-autodesk-maya-blender-davinci-resolve" target="_blank" rel="noopener">“Sir Wade” Neistadt</a>, an animator and YouTube creator, aims to make animation and 3D education more accessible through his video tutorials and industry training. The first step of his unique animation workflow is to act out his animations on camera. He then translates them in Maya to begin his animation work before using USD to export them to other 3D software, including Blender, for finishing touches.</p>
+<p style="text-align: center;"><img decoding="async" class=" wp-image-68137 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-sir-wade-neistadt-wk83-robot-bts-maya-1280w-1.png" alt="" width="722" height="435" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-sir-wade-neistadt-wk83-robot-bts-maya-1280w-1.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-sir-wade-neistadt-wk83-robot-bts-maya-1280w-1-400x241.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-sir-wade-neistadt-wk83-robot-bts-maya-1280w-1-672x405.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-sir-wade-neistadt-wk83-robot-bts-maya-1280w-1-768x463.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-sir-wade-neistadt-wk83-robot-bts-maya-1280w-1-746x450.png 746w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-sir-wade-neistadt-wk83-robot-bts-maya-1280w-1-356x215.png 356w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-sir-wade-neistadt-wk83-robot-bts-maya-1280w-1-166x100.png 166w" sizes="(max-width: 722px) 100vw, 722px" /><i>The making of Sir Wade’s VFX robot animation</i></p>
+<p>3D artists at NVIDIA are also experiencing the power of Maya and OpenUSD. Technical specialist <a href="https://www.linkedin.com/in/lee-fraser/" target="_blank" rel="noopener">Lee Fraser</a> led the “Ferret-Tale Project” to showcase character creation and animation workflows enabled by OpenUSD and <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a>.</p>
+<p>To create the demo, Fraser and his team collaborated across 3D applications like Blender, Autodesk Maya and Reallusion Character Creator through <a href="https://www.nvidia.com/en-us/omniverse/ecosystem/">OpenUSD Connectors</a>. This allowed them to reduce the data prep and import and export time that’s usually required when working with multiple data sources.</p>
+<p>“My favorite thing about using OpenUSD is not having to think about where the 3D files I use originated from,” Fraser said. “It was also easy to use USD layers to experiment with applying different animation clips with different characters.”</p>
+<p><iframe loading="lazy" title="The Making of an OpenUSD and Generative AI Ferret-Tale" width="500" height="281" src="https://www.youtube.com/embed/mYcTbOV334Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Members of the creative community joined a recent livestream to share their workflows using Autodesk tools, OpenUSD and <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a development platform for connecting and building OpenUSD-based tools and applications.</p>
+<p>Whether adjusting lighting conditions in an environment or looking at building designs from the street view, designers in architecture, engineering, construction and operations are advancing their work with AI. Learn more by watching the replay:</p>
+<p><iframe loading="lazy" title="Architecting 3D Environments With Autodesk and OpenUSD" width="500" height="281" src="https://www.youtube.com/embed/jJhwq3uO_Uk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Shaping the Future of 3D With More Efficient Workflows</b></h2>
+<p>AU 2023 attendees experienced how Autodesk is <a href="https://www.autodesk.com/customer-value/me/maya">enhancing Maya</a> with its new OpenUSD plug-in to provide additional practical workflows for various production processes. The software’s latest features include:</p>
+<ul>
+<li><strong>Simplified asset sharing:</strong> Designers can now use relative paths when creating OpenUSD stages, allowing for easy asset sharing between different systems. This includes support for sublayers, references, payloads and textures.</li>
+<li><strong>Enhanced control:</strong> Plug-in developers and technical directors can overwrite the default prim writers in Maya USD to gain complete control over their OpenUSD exports.</li>
+</ul>
+<p>Plus, Autodesk introduced impressive capabilities to <a href="https://help-staging.autodesk.com/view/MAYAUL/2024/ENU/?guid=GUID-3C97F007-F02A-43AD-A4A4-3590E120DA1D">LookdevX in Maya</a>, a look-development tool that lets users create OpenUSD shade graphs and custom materials in Maya. These new features include:</p>
+<ul>
+<li><b>Streamlined shader creation:</b> Users can employ a unified shader workflow, replacing the need for multiple shaders. They can select their desired shader type within the parameters panel, with intuitive error messages guiding them to the correct selection.</li>
+<li><b>Efficient operations:</b> Creators can copy, paste and duplicate shaders and materials using the Outliner and LookdevX tool sets, with the option to include or exclude connections.</li>
+<li><b>Seamless color management:</b> LookdevX in Maya integrates with color managers in other digital content creation apps to ensure accurate color representation. Color management data is precisely embedded in USD files for accurate reading.</li>
+<li><b>Advanced graphing:</b> Users can explore advanced graphing options with the integrated component workflow, supporting multichannel Extended Dynamic Range (EXR) workflows within USD, MaterialX or Arnold shading graphs.</li>
+<li><b>Efficient troubleshooting: </b>Solo nodes enable faster look-development workflows and efficient graph troubleshooting. Users can inspect renders of upstream nodes, supporting both Autodesk Arnold and MaterialX graphs, including materials, shaders and compounds.</li>
+</ul>
+<p style="text-align: center;"><img decoding="async" loading="lazy" class=" wp-image-68131 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Picture1.png" alt="" width="587" height="330" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Picture1.png 480w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Picture1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Picture1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Picture1-178x100.png 178w" sizes="(max-width: 587px) 100vw, 587px" /><i>Access to default prim options in Maya UI</i></p>
+<h2><b>Get Plugged Into the World of OpenUSD</b></h2>
+<p>Anyone can build their own <a href="https://developer.nvidia.com/omniverse">Omniverse extension or Connector</a> to enhance their 3D workflows and tools. Explore the Omniverse ecosystem’s <a href="https://www.nvidia.com/en-us/omniverse/ecosystem/">growing catalog</a> of connections, extensions, foundation applications and third-party tools.</p>
+<p>Autodesk and NVIDIA are founding members of the <a href="https://aousd.org/">Alliance for OpenUSD</a> (AOUSD), together strengthening an open future with USD. To learn more, explore the <a href="https://forum.aousd.org/">AOUSD forum</a> and check out <a href="https://developer.nvidia.com/usd">resources on OpenUSD</a>.</p>
+<p>Share your Autodesk Maya and Omniverse work through November as part of the <a href="https://forums.developer.nvidia.com/t/the-new-community-challenge-is-here-we-are-kicking-off-the-seasonalartchallenge/268346">#SeasonalArtChallenge</a>. Use the hashtag to submit an autumn harvest-themed scene for a chance to be featured on the @NVIDIAStudio and @NVIDIAOmniverse social channels.</p>
+<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, or learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise</i><i> can connect your team</i></a><i>. </i></p>
+<p><i>Developers can check out these </i><a href="https://docs.omniverse.nvidia.com/dev-guide/latest/index.html"><i>Omniverse resources</i></a><i> to begin building on the platform. </i></p>
+<p><i>Stay up to date on the platform by subscribing to the </i><a href="https://nvda.ws/3u5KPv1"><i>newsletter</i></a><i> and following NVIDIA Omniverse on </i><a href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a href="https://www.linkedin.com/showcase/nvidia-omniverse"><i>LinkedIn</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i>, </i><a href="https://www.threads.net/@nvidiaomniverse"><i>Threads</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse"><i>Twitter</i></a><i>.</i></p>
+<p><i>For more, check out our </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels..</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Copy-of-nv-ov-ito-1280x680_nov-autodesk.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Copy-of-nv-ov-ito-1280x680_nov-autodesk-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Into the Omniverse: OpenUSD Enhancements for Autodesk Maya Make 3D Workflows a Ferret-Tale]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>More Games, More Wins: PC Game Pass Included With Six-Month GeForce NOW Memberships</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-nov-16/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2023 14:00:44 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68198</guid>
+
+					<description><![CDATA[The fastest way to give the gift of cloud gaming starts this GFN Thursday: For a limited time, every six-month GeForce NOW Ultimate membership includes three months of PC Game Pass. Also, the newest GeForce NOW app update is rolling out to members, including Xbox Game Syncing and more improvements. Plus, take advantage of a <a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-nov-16/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The fastest way to give the gift of cloud gaming starts this GFN Thursday: For a limited time, every six-month <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">GeForce NOW Ultimate membership</a> includes three months of PC Game Pass.</p>
+<p>Also, the newest GeForce NOW app update is rolling out to members, including Xbox Game Syncing and more improvements.</p>
+<p>Plus, take advantage of a heroic, new members-only <i>Guild Wars 2</i> reward. It’s all topped off by support for 18 more games in the GeForce NOW library this week.</p>
+<h2><b>Give the Gift of Gaming</b></h2>
+<figure id="attachment_68212" aria-describedby="caption-attachment-68212" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-68212" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-672x336.jpg" alt="PC Game Pass bundle" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68212" class="wp-caption-text"><em>Pair PC Game Pass with a GeForce NOW Ultimate bundle for the ultimate gaming gift.</em></figcaption></figure>
+<p>Unwrap the gift of gaming: For a limited time, gamers who sign up for the six-month GeForce NOW Ultimate membership will also receive three free months of PC Game Pass — a $30 value.</p>
+<p>With it, Ultimate members can play a collection of high-quality Xbox PC titles with the power of a GeForce RTX 4080 rig in the cloud. Jump into the action in iconic franchises like <i>Age of Empires</i>, <i>DOOM</i>, <i>Forza</i> and more, with support for more titles added every GFN Thursday.</p>
+<p>Seamlessly launch supported favorites across nearly any device at up to 4K and 120 frames per second or at up to 240 fps with <a href="https://www.nvidia.com/en-us/geforce/technologies/reflex/">NVIDIA Reflex</a> technology in supported titles for lowest-latency streaming.</p>
+<p>This special offer is only here for a limited time, so <a href="https://www.nvidia.com/en-us/geforce-now/holiday">upgrade</a> today.</p>
+<h2><b>Sync’d Up</b></h2>
+<figure id="attachment_68209" aria-describedby="caption-attachment-68209" style="width: 606px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-68209" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-606x500.jpg" alt="Xbox and Ubisoft+ game library sync" width="606" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-606x500.jpg 606w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-400x330.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-545x450.jpg 545w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-261x215.jpg 261w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-121x100.jpg 121w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft.jpg 623w" sizes="(max-width: 606px) 100vw, 606px" /><figcaption id="caption-attachment-68209" class="wp-caption-text"><em>Look who just joined the party!</em></figcaption></figure>
+<p>With so many games ready to stream, it might be hard to decide what to play next. The latest GeForce NOW app update, currently rolling out to members, is here to help.</p>
+<p>Members can now connect their Xbox accounts to GeForce NOW to sync the games they own to their GeForce NOW library. Game syncing lets members connect their digital game store accounts to GeForce NOW, so all of their supported games are part of their streaming library. Syncing an Xbox account will also add any supported titles a member has access to via PC Game Pass — perfect for members taking advantage of the latest Ultimate bundle.</p>
+<p>The new update also adds benefits for Ubisoft+ subscribers. With a linked Ubisoft+ account, members can now launch supported Ubisoft+ games they already own from the GeForce NOW app, and the game will be automatically added to “My Library.” Get more details on <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5286">Ubisoft account</a> linking.</p>
+<p>Version 2.0.58 also includes an expansion of the new game session diagnostic tools to help members ensure they’re streaming at optimal quality. It adds codec information to the in-stream statistics overlay and includes other miscellaneous bug fixes. The update should be available for all members soon.</p>
+<h2><b>A Heroic Offering</b></h2>
+<figure id="attachment_68206" aria-describedby="caption-attachment-68206" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-68206" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-672x336.jpg" alt="Guild Wars 2 reward on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68206" class="wp-caption-text"><em>Rewards fit for a hero.</em></figcaption></figure>
+<p>This week, members can receive <i>Guild Wars 2</i> “Heroic Edition,” which includes a treasure trove of goodies, such as the base game, Legacy Armor, an 18-slot inventory expansion and four heroic Boosters. It’s the perfect way to jump into ArenaNet’s critically acclaimed, free-to-play, massively multiplayer online role-playing game.</p>
+<p>It’s easy to get membership rewards for streaming games on the cloud. Visit the <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW Rewards portal</a> and update the settings to receive special offers and in-game goodies.</p>
+<p>Members can also sign up for the GeForce NOW newsletter, which includes reward notifications, by logging into their <a href="https://www.nvidia.com/en-us/account/email-preferences">NVIDIA account</a> and selecting “Preferences” from the header. Check the “Gaming &amp; Entertainment” box and “GeForce NOW” under topic preferences.</p>
+<h2><b>Ready, Set, Go</b></h2>
+<figure id="attachment_68203" aria-describedby="caption-attachment-68203" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="size-large wp-image-68203" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-672x336.jpg" alt="Remnant II DLC on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68203" class="wp-caption-text"><em>A new DLC awakens.</em></figcaption></figure>
+<p>The first downloadable content for Gearbox’s <i>Remnant 2</i> arrives in the cloud. <i>The Awakened King </i>brings a new storyline, area, archetype and more to the dark fantasy co-op shooter — stream it today to experience the awakening of the One True King as he seeks revenge against all who oppose him.</p>
+<p>Catch even more action with the 18 newly supported games in the cloud:</p>
+<ul>
+<li><i>Spirittea </i>(New release on <a href="https://store.steampowered.com/app/1931010?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Nov. 13)</li>
+<li><i>KarmaZoo </i>(New release on <a href="https://store.steampowered.com/app/1661630?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Nov. 14)</li>
+<li><i>Naheulbeuk’s Dungeon Master </i>(New release on <a href="https://store.steampowered.com/app/2005160?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Nov. 15)</li>
+<li><i>Warhammer Age of Sigmar: Realms of Ruin </i>(New release on <a href="https://store.steampowered.com/app/1844380?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Nov. 17)</li>
+<li><i>Arcana of Paradise —The Tower </i>(<a href="https://store.steampowered.com/app/2089500/Arcana_of_Paradise_The_Tower/">Steam</a>)</li>
+<li><i>Blazing Sails: Pirate Battle Royale</i> (<a href="https://www.epicgames.com/store/p/blazing-sails?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>Disney Dreamlight Valley</i> (<a href="https://www.xbox.com/games/store/disney-dreamlight-valley/9NSF0BGH8D86?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Hello Neighbor 2</i> (<a href="https://www.xbox.com/games/store/hello-neighbor-2/9N961B11FJ4W?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Overcooked! 2 </i>(<a href="https://www.xbox.com/en-us/games/store/Overcooked-2/BVJLKDG2TX8H">Xbox</a>, available on PC Game Pass)</li>
+<li><i>RoboCop: Rogue City </i>(New release on <a href="https://www.epicgames.com/store/p/robocop-rogue-city?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>Roboquest </i>(<a href="https://www.xbox.com/games/store/roboquest-game-preview/9p47s7njgwzl?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Rune Factory 4 Special </i>(<a href="https://www.xbox.com/games/store/rune-factory-4-special---windows-edition/9N73PLHJN878?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
+<li><i>Settlement Survival </i>(<a href="https://store.steampowered.com/app/1509510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>SOULVARS </i>(<a href="https://store.steampowered.com/app/2087910?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>State of Decay: Year-One Survival Edition</i> (<a href="https://store.steampowered.com/app/329430?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>The Wonderful One: After School Hero </i>(<a href="https://store.steampowered.com/app/2399600?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Wolfenstein: The New Order </i>(<a href="https://www.xbox.com/games/store/wolfenstein-the-new-order-pc/9p75cbj9wt9w?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Wolfenstein: The Old Blood </i>(<a href="https://store.steampowered.com/app/350080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/wolfenstein-the-old-blood?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/wolfenstein-the-old-blood-pc/9pbb4qhmsdkr?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass)</li>
+</ul>
+<p>What are you looking forward to streaming? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="in" dir="ltr">h̴e̴r̴e̴&#39;̴s̴ soon&#39;s the deal&#8230;</p>
+<p>stay tuned <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f440.png" alt="👀" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f384.png" alt="🎄" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1724834650688758068?ref_src=twsrc%5Etfw">November 15, 2023</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/gfn-thursday-date-nv-blog-1280x680-no-cta.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/gfn-thursday-date-nv-blog-1280x680-no-cta-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[More Games, More Wins: PC Game Pass Included With Six-Month GeForce NOW Memberships]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Ringing in the Future: NVIDIA and Amdocs Bring Custom Generative AI to Global Telco Industry</title>
 		<link>https://blogs.nvidia.com/blog/amdocs-telco-industry/</link>
 		
@@ -245,7 +472,7 @@
 <p>The court clerk of AI is a process called retrieval-augmented generation, or RAG for short.</p>
 <h2><b>The Story of the Name</b></h2>
 <p>Patrick Lewis, lead author of the <a href="https://arxiv.org/pdf/2005.11401.pdf">2020 paper that coined the term</a>, apologized for the unflattering acronym that now describes a growing family of methods across hundreds of papers and dozens of commercial services he believes represent the future of generative AI.</p>
-<figure id="attachment_68128" aria-describedby="caption-attachment-68128" style="width: 250px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author.jpg"><img decoding="async" fetchpriority="high" class="wp-image-68128" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-150x150.jpg" alt="Picture of Patrick Lewis, lead author of RAG paper" width="250" height="267" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-202x215.jpg 202w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-94x100.jpg 94w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author.jpg 375w" sizes="(max-width: 250px) 100vw, 250px" /></a><figcaption id="caption-attachment-68128" class="wp-caption-text">Patrick Lewis</figcaption></figure>
+<figure id="attachment_68128" aria-describedby="caption-attachment-68128" style="width: 250px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author.jpg"><img decoding="async" loading="lazy" class="wp-image-68128" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-150x150.jpg" alt="Picture of Patrick Lewis, lead author of RAG paper" width="250" height="267" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-202x215.jpg 202w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-94x100.jpg 94w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author.jpg 375w" sizes="(max-width: 250px) 100vw, 250px" /></a><figcaption id="caption-attachment-68128" class="wp-caption-text">Patrick Lewis</figcaption></figure>
 <p>“We definitely would have put more thought into the name had we known our work would become so widespread,” Lewis said in an interview from Singapore, where he was sharing his ideas with a regional conference of database developers.</p>
 <p>“We always planned to have a nicer sounding name, but when it came time to write the paper, no one had a better idea,” said Lewis, who now leads a RAG team at AI startup Cohere.</p>
 <h2><b>So, What Is Retrieval-Augmented Generation?</b></h2>
@@ -272,14 +499,14 @@
 <p>Getting the best performance for RAG workflows requires massive amounts of memory and compute to move and process data. The <a href="https://nvidianews.nvidia.com/news/gh200-grace-hopper-superchip-with-hbm3e-memory">NVIDIA GH200 Grace Hopper Superchip</a>, with its 288GB of fast HBM3e memory and 8 petaflops of compute, is ideal — it can deliver a 150x speedup over using a CPU.</p>
 <p>Once companies get familiar with RAG, they can combine a variety of off-the-shelf or custom LLMs with internal or external knowledge bases to create a wide range of assistants that help their employees and customers.</p>
 <p>RAG doesn’t require a data center. LLMs are debuting on Windows PCs, thanks to NVIDIA software that enables all sorts of applications users can access even on their laptops.</p>
-<figure id="attachment_68134" aria-describedby="caption-attachment-68134" style="width: 1200px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg"><img decoding="async" class="size-full wp-image-68134" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg" alt="Chart shows running RAG on a PC" width="1200" height="659" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg 1200w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-400x220.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-672x369.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-768x422.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-819x450.jpg 819w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-392x215.jpg 392w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-182x100.jpg 182w" sizes="(max-width: 1200px) 100vw, 1200px" /></a><figcaption id="caption-attachment-68134" class="wp-caption-text">An example application for RAG on a PC.</figcaption></figure>
+<figure id="attachment_68134" aria-describedby="caption-attachment-68134" style="width: 1200px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg"><img decoding="async" loading="lazy" class="size-full wp-image-68134" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg" alt="Chart shows running RAG on a PC" width="1200" height="659" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg 1200w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-400x220.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-672x369.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-768x422.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-819x450.jpg 819w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-392x215.jpg 392w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-182x100.jpg 182w" sizes="(max-width: 1200px) 100vw, 1200px" /></a><figcaption id="caption-attachment-68134" class="wp-caption-text">An example application for RAG on a PC.</figcaption></figure>
 <p>PCs equipped with NVIDIA RTX GPUs can now run some AI models locally. By using RAG on a PC, users can link to a private knowledge source – whether that be emails, notes or articles – to improve responses. The user can then feel confident that their data source, prompts and response all remain private and secure.</p>
 <p>A<a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fblogs.nvidia.com%2Fblog%2F2023%2F10%2F17%2Ftensorrt-llm-windows-stable-diffusion-rtx%2F&amp;data=05%7C01%7Crmerritt%40nvidia.com%7Cdfd2267cb8344597f73408dbd0e6fc36%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638333462716560839%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=V5FClNyBybzOnm3%2FKxiTT4i9aoT0GdLWzdLfnF8LBk0%3D&amp;reserved=0"> recent blog</a> provides an example of RAG accelerated by TensorRT-LLM for Windows to get better results fast.</p>
 <h2><b>The History of Retrieval-Augmented Generation </b></h2>
 <p>The roots of the technique go back at least to the early 1970s. That’s when researchers in information retrieval prototyped what they called question-answering systems, apps that use natural language processing (<a href="https://www.nvidia.com/en-us/glossary/natural-language-processing/">NLP</a>) to access text, initially in narrow topics such as baseball.</p>
 <p>The concepts behind this kind of text mining have remained fairly constant over the years. But the machine learning engines driving them have grown significantly, increasing their usefulness and popularity.</p>
 <p>In the mid-1990s, the Ask Jeeves service, now Ask.com, popularized question answering with its mascot of a well-dressed valet. IBM’s Watson became a TV celebrity in 2011 when it handily beat two human champions on the <i>Jeopardy!</i> game show.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2.jpg"><img decoding="async" class="aligncenter size-full wp-image-68140" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2.jpg" alt="Picture of Ask Jeeves, an early RAG-like web service" width="620" height="334" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2.jpg 620w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2-400x215.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2-399x215.jpg 399w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2-186x100.jpg 186w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2.jpg"><img decoding="async" loading="lazy" class="aligncenter size-full wp-image-68140" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2.jpg" alt="Picture of Ask Jeeves, an early RAG-like web service" width="620" height="334" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2.jpg 620w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2-400x215.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2-399x215.jpg 399w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ask-Jeeves-2-186x100.jpg 186w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
 <p>Today, LLMs are taking question-answering systems to a whole new level.</p>
 <h2><b>Insights From a London Lab</b></h2>
 <p>The seminal 2020 paper arrived as Lewis was pursuing a doctorate in NLP at University College London and working for Meta at a new London AI lab. The team was searching for ways to pack more knowledge into an LLM’s parameters and using a benchmark it developed to measure its progress.</p>
@@ -1014,185 +1241,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[NVIDIA Partners With APEC Economies to Change Lives, Increase Opportunity, Improve Outcomes]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Harrison.ai CEO Dr. Aengus Tran on Using AI as a Spell Check for Health Checks</title>
-		<link>https://blogs.nvidia.com/blog/harrison-ai-ceo/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Wed, 08 Nov 2023 14:00:34 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67942</guid>
-
-					<description><![CDATA[Clinician-led healthcare AI company Harrison.ai has built an AI system that effectively serves as a “spell checker” for radiologists — flagging critical findings to improve the speed and accuracy of radiology image analysis, reducing misdiagnoses. In the latest episode of NVIDIA’s AI Podcast, host Noah Kravitz spoke with Harrison.ai cofounder and CEO Aengus Tran about <a class="read-more" href="https://blogs.nvidia.com/blog/harrison-ai-ceo/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Clinician-led healthcare AI company <a href="https://harrison.ai/">Harrison.ai</a> has built an AI system that effectively serves as a “spell checker” for radiologists — flagging critical findings to improve the speed and accuracy of radiology image analysis, reducing misdiagnoses.</p>
-<p>In the latest episode of NVIDIA’s <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a>, host Noah Kravitz spoke with Harrison.ai cofounder and CEO Aengus Tran about the company’s mission to scale global healthcare capacity with autonomous AI systems.</p>
-<p>Harrison.ai’s initial product, Annalise.ai, is an AI tool that automates radiology image analysis to enable faster, more accurate diagnoses. It can produce 124-130 different possible diagnoses and flag key findings to aid radiologists in their final diagnosis. Currently, Annalise.ai works for chest X-rays and brain CT scans, with more on the way.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1658401437%3Fsecret_token%3Ds-GBoYrNuokCy&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Harrison.ai CEO Aengus Tran on Using AI as a Spell Check for Health Checks - Ep. 207" href="https://soundcloud.com/theaipodcast/harrisonai-ceo-aengus-tran/s-GBoYrNuokCy" target="_blank" rel="noopener">Harrison.ai CEO Aengus Tran on Using AI as a Spell Check for Health Checks &#8211; Ep. 207</a></div>
-<p>While an AI designed for categorizing traffic lights, for example, doesn’t need perfection, medical tools must be highly accurate — any oversight could be fatal. To overcome this challenge, annalise.ai was trained on millions of meticulously annotated images — some were annotated three to five times over before being used for training.</p>
-<p>Harrison.ai is also developing Franklin.ai, a sibling AI tool aimed at accelerating and improving the accuracy of histopathology diagnosis — in which a clinician performs a biopsy and inspects the tissue for the presence of cancerous cells. Similarly to Annalise.ai, Franklin.ai flags critical findings to assist pathologists in speeding and increasing the accuracy of diagnoses.</p>
-<p>Ethical concerns about AI use are ever rising, but for Tran, the concern is less about whether it’s ethical to use AI for medical diagnosis but “actually the converse: Is it ethical to <i>not</i> use AI for medical diagnosis,” especially if “humans using those AI systems simply pick up more misdiagnosis, pick up more cancer and conditions?”</p>
-<p>Tran also talked about the future of AI systems and suggested that the focus is dual: first, focus on improving preexisting systems and then think of new cutting-edge solutions.</p>
-<p>And for those looking to break into careers in AI and healthcare, Tran says that the “first step is to decide upfront what problems you’re willing to spend a huge part of your time solving first, before the AI part,” emphasizing that the “first thing is actually to fall in love with some problem.”</p>
-<h2>You Might Also Like</h2>
-<p><a href="https://soundcloud.com/theaipodcast/jules-anh-tuan-nguyen-explains-how-ai-lets-amputee-control-prosthetic-hand-video-games-ep-149">Jules Anh Tuan Nguyen Explains How AI Lets Amputee Control Prosthetic Hand, Video Games<br />
-</a>A postdoctoral researcher at the University of Minnesota discusses his efforts to allow amputees to control their prosthetic limb — right down to the finger motions — with their minds.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-overjet">Overjet’s Ai Wardah Inam on Bringing AI to Dentistry<br />
-</a>Overjet, a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, is moving fast to bring AI to dentists’ offices. Dr. Wardah Inam, CEO of the company, discusses using AI to improve patient care.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-luis-voloch">Immunai CTO and Cofounder Luis Voloch on Using Deep Learning to Develop New Drugs<br />
-</a>Luis Voloch talks about tackling the challenges of the immune system with a machine learning and data science mindset.</p>
-<h2>Subscribe to the AI Podcast: Now Available on Amazon Music</h2>
-<p><a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">The AI Podcast is now available through Amazon Music</a>.</p>
-<p>In addition, get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
-<p>Make the AI Podcast better. Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Annalise_Screen_01-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1152"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Annalise_Screen_01-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Harrison.ai CEO Dr. Aengus Tran on Using AI as a Spell Check for Health Checks]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Digital Artist Steven Tung Shows Off So-fish-ticated Style This Week ‘In the NVIDIA Studio’</title>
-		<link>https://blogs.nvidia.com/blog/tung-msi-adobe-3d-painter-blender/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Tue, 07 Nov 2023 14:00:06 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67869</guid>
-
-					<description><![CDATA[Taiwanese artist Steven Tung creates captivating 2D and 3D digital art that explores sci-fi, minimalism and realism and pushes artistic boundaries.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep-diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
-<p>Taiwanese artist Steven Tung creates captivating 2D and 3D digital art that explores sci-fi, minimalism and realism and pushes artistic boundaries.</p>
-<p>This week <i>In the NVIDIA Studio,</i> Tung shares the inspiration and creative workflow behind his whimsical animation, <i>The Given Fish</i>.</p>
-<p>Professional-grade technology, which was once available only at select special effects studios, is becoming increasingly accessible.</p>
-<p>“Visual production capabilities continue to skyrocket, generating a growing demand for better computer hardware among the general public,” Tung said. “The evolving synergy between art and technology can spark endless possibilities for creators.”</p>
-<p>Tung uses an <a href="https://www.msi.com/Desktop/MEG-Trident-X2-13th">MSI MEG Trident X2 desktop</a>, powered by GeForce RTX 4090 graphics, to accelerate his creative workflow.</p>
-<figure id="attachment_67876" aria-describedby="caption-attachment-67876" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67876" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-kv-bg-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67876" class="wp-caption-text">The MSI MEG Trident X2 desktop, powered by GeForce RTX 4090 graphics.</figcaption></figure>
-<p>“The enhanced speed and performance expedites various processes, such as updating material textures in Adobe Substance 3D Painter and rendering in Blender,” said Tung. “The necessary specifications and requirements align, enabling maximum creativity without limitations.”</p>
-<h2><b>Exquisite Visuals Made E-fish-ciently</b></h2>
-<p>Tung’s 3D animation, <i>The Given Fish</i>, may look simple at first glance — but it’s surprisingly complex.</p>
-<div class="simplePullQuote right"><p>“GeForce RTX GPUs are indispensable hardware for 3D rendering tasks. Faster speeds bring significant benefits in production efficiency and time saved.” — Steven Tung</p>
-</div>
-<p>In the creative world behind the animation, the stone fish depicted can be consumed by people. The concept is that once taken out of the aquarium, the stone fish transforms into a real, living one.</p>
-<p>“I have a strong desire to have an aquarium at home, but it’s not practical,” said Tung. “The next best thing is to turn that emotion into art.”</p>
-<p>Tung began by creating concept sketches in Adobe Photoshop, where he had access to over 30 GPU-accelerated features that could help modify and adjust his canvas and maximize his efficiency.</p>
-<figure id="attachment_67879" aria-describedby="caption-attachment-67879" style="width: 453px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67879" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-453x500.png" alt="" width="453" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-453x500.png 453w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-363x400.png 363w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-768x847.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-408x450.png 408w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-195x215.png 195w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w-91x100.png 91w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-sketch-1280w.png 1280w" sizes="(max-width: 453px) 100vw, 453px" /></a><figcaption id="caption-attachment-67879" class="wp-caption-text">Concept art for “The Given Fish.”</figcaption></figure>
-<p>Next, Tung jumped from 2D to 3D with ZBrush. He first built a basic model and then refined critical details with custom brushes — adding greater depth and dimension with authentic, hand-sculpted textures.</p>
-<figure id="attachment_67882" aria-describedby="caption-attachment-67882" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67882" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-wip-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67882" class="wp-caption-text">Advanced sculpting in ZBrush.</figcaption></figure>
-<p>He then used the UV unwrapping feature in RizomUV to ensure that his models were properly unwrapped and ready for texture application.</p>
-<figure id="attachment_67885" aria-describedby="caption-attachment-67885" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67885" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-672x361.png" alt="" width="672" height="361" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-672x361.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-400x215.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-768x412.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-838x450.png 838w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-401x215.png 401w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w-186x100.png 186w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-rizomuv-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67885" class="wp-caption-text">UV unwrapping feature in RizomUV.</figcaption></figure>
-<p>Tung imported the models into Adobe 3D Substance Painter, where he meticulously painted textures, blended materials and used the built-in library to achieve lifelike stone textures. RTX-accelerated light and ambient occlusion baking optimized his assets in seconds.</p>
-<figure id="attachment_67888" aria-describedby="caption-attachment-67888" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67888" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-adobe-substance-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67888" class="wp-caption-text">Applying textures in Adobe Substance 3D Painter.</figcaption></figure>
-<p>To bring all the elements together, Tung imported the models and materials into Blender. He set up texture channels, assigned texture files and assembled the models so that they would be true to the compositions outlined in the initial sketch.</p>
-<figure id="attachment_67891" aria-describedby="caption-attachment-67891" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67891" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-painting-fish-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67891" class="wp-caption-text">Achieving realistic stone textures in Adobe 3D Substance Painter.</figcaption></figure>
-<p>Next, Tung used Blender Cycles to light and render the scene.</p>
-<figure id="attachment_67894" aria-describedby="caption-attachment-67894" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67894" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/comp-studio-steven-tung-wk82-kv-bg-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67894" class="wp-caption-text">Composition edits in Blender.</figcaption></figure>
-<p>Blender Cycles’ RTX-accelerated, AI-powered OptiX ray tracing enabled interactive, photorealistic movement in the viewport and sped up animation work — all powered by his GeForce RTX 4090 GPU-equipped system.</p>
-<figure id="attachment_67897" aria-describedby="caption-attachment-67897" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67897" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-steven-tung-wk82-blender-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67897" class="wp-caption-text">Animation work in Blender.</figcaption></figure>
-<p>RTX accelerated OptiX ray tracing in Blender Cycles enabled the fastest final frame render.</p>
-<figure id="attachment_67900" aria-describedby="caption-attachment-67900" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w.png"><img decoding="async" loading="lazy" class="size-large wp-image-67900" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w-672x244.png" alt="" width="672" height="244" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w-672x244.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w-400x145.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w-768x278.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w-842x305.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w-406x147.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w-188x68.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-steven-tung-wk82-artist-feature-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67900" class="wp-caption-text">Digital artist Steven Tung.</figcaption></figure>
-<p>Check out Tung’s portfolio on <a href="https://www.instagram.com/tung_10/">Instagram</a>.</p>
-<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/nv-blog-header-preview-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/nv-blog-header-preview-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Digital Artist Steven Tung Shows Off So-fish-ticated Style This Week ‘In the NVIDIA Studio’]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>‘Starship for the Mind’: University of Florida Opens Malachowsky Hall, an Epicenter for AI and Data Science</title>
-		<link>https://blogs.nvidia.com/blog/starship-for-mind-uf-malachowsky-hall/</link>
-		
-		<dc:creator><![CDATA[Cheryl Martin]]></dc:creator>
-		<pubDate>Fri, 03 Nov 2023 15:43:03 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Education]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67914</guid>
-
-					<description><![CDATA[Embodying the convergence of AI and academia, the University of Florida Friday inaugurated the Malachowsky Hall for Data Science &#38; Information Technology. The sleek, seven-story building is poised to play a pivotal role in UF’s ongoing efforts to harness the transformative power of AI, reaffirming its stature as one of the nation’s leading public universities. <a class="read-more" href="https://blogs.nvidia.com/blog/starship-for-mind-uf-malachowsky-hall/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Embodying the convergence of AI and academia, the University of Florida Friday inaugurated the Malachowsky Hall for Data Science &amp; Information Technology.</p>
-<p>The sleek, seven-story building is poised to play a pivotal role in UF’s ongoing efforts to harness the transformative power of AI, reaffirming its stature as one of the nation’s leading public universities.</p>
-<p>Evoking Apple co-founder Steve Jobs’ iconic description of a personal computer, NVIDIA’s founder and CEO Jensen Huang described Malachowsky Hall — named for NVIDIA co-founder Chris Malachowsky — and the <a href="https://blogs.nvidia.com/blog/university-of-florida-nvidia-ai-supercomputer/">HiPerGator AI supercomputer</a> it hosts as a “starship for knowledge discovery.”</p>
-<p>“Steve Jobs called (the PC) ‘the bicycle of the mind,’ a device that propels our thoughts further and faster,” Huang said.</p>
-<p>“What Chris Malachowsky has gifted this institution is nothing short of the ‘starship of the mind’ — a vehicle that promises to take our intellect to uncharted territories,” Huang said.</p>
-<p>The inauguration of the 260,000-square-foot structure marks a milestone in the partnership between UF alum Malachowsky, NVIDIA and the state of Florida — a collaboration that has propelled UF to the forefront of AI innovation.</p>
-<p>Malachowsky and NVIDIA both made major contributions toward its construction, bolstered by a $110 million investment from the state of Florida.</p>
-<figure id="attachment_67931" aria-describedby="caption-attachment-67931" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" loading="lazy" class="wp-image-67931 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-672x448.jpg" alt="University of Florida President Ben Sasse and NVIDIA CEO Jensen Huang speak at the opening of Malachowsky Hall." width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-1536x1025.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-322x215.jpg 322w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Ben-Sasse-and-Jensen-Huang-Malachowsky-Hall-UF-Nov-3-2023-1280x854.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-67931" class="wp-caption-text">University of Florida President Ben Sasse and NVIDIA CEO Jensen Huang speak at the opening of Malachowsky Hall.</figcaption></figure>
-<p>Following the opening, Huang and UF’s new president, Ben Sasse, met to discuss the impact of AI and data science across UF and beyond for students just starting their careers.</p>
-<p>Sasse underscored the importance of adaptability in a rapidly changing world, telling the audience: “work in lots and lots of different organizations … because lifelong work in any one, not just firm, but any one industry is going to end in our lives. You’re ultimately going to have to figure out how to reinvent yourselves at 30, 35, 40 and 45.”</p>
-<p>Huang offered students very different advice, recalling how he met his wife, Lori, who was in the audience, as an undergraduate. “Have a good pickup line … do you want to know the pickup line?” Huang asked, pausing a beat. “You want to see my homework?”</p>
-<p>The spirit of Sasse and Huang’s adaptable approach to career and personal development is embodied in Malachowsky Hall, designed to bring together people from academia and industry, research and government.</p>
-<p>Packed with innovative collaboration spaces and labs, the hall features a spacious 400-seat auditorium, dedicated high-performance computing study spaces and a rooftop terrace that unveils panoramic campus vistas.</p>
-<p>Sustainability is woven into its design, highlighted by energy-efficient systems and rainwater harvesting facilities.</p>
-<p>Malachowsky Hall will serve as a conduit to bring the on-campus advances in AI to Florida’s thriving economy, which continues to outpace the nation in jobs and GDP growth.</p>
-<figure id="attachment_67908" aria-describedby="caption-attachment-67908" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-scaled.jpg"><img decoding="async" loading="lazy" class="wp-image-67908 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-672x448.jpg" alt="Together, NVIDIA founder and UF alumnus Chris Malachowsky and NVIDIA donated $50 million toward the University of Florida’s HiPerGator AI supercomputer." width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-HiPerGator-AI-supercomputer-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-67908" class="wp-caption-text">Together, NVIDIA founder and UF alumnus Chris Malachowsky and NVIDIA donated $50 million toward the University of Florida’s HiPerGator AI supercomputer.</figcaption></figure>
-<p>UF’s efforts to bring AI and academia together, catalyzed by support from Malachowsky and NVIDIA, go far beyond Malachowsky Hall.</p>
-<p>In 2020, UF announced that Malachowsky and NVIDIA together donated $50 million toward HiPerGator, one of the most powerful AI supercomputers in the country.</p>
-<p>With additional state support, UF recently added more than 110 AI faculty members to the 300 already engaged in AI teaching and research.</p>
-<p>As a result, UF extended AI-focused courses, workshops and projects across the university, enabling its 55,000 students to delve into AI and its interdisciplinary applications.</p>
-<p>Friday&#8217;s ribbon-cutting will open exciting new opportunities for the university, its students and the state of Florida to realize the potential of AI innovations across sectors.</p>
-<p>Huang likened pursuing knowledge through AI to embarking on a “starship.” “You’ve got to go as far as you can,” he urged students.</p>
-<p>For a deeper exploration of Malachowsky Hall and UF’s groundbreaking AI initiatives, <a href="https://www.ufl.edu/">visit UF’s website</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-Malachowsky-Hall-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-Malachowsky-Hall-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[‘Starship for the Mind’: University of Florida Opens Malachowsky Hall, an Epicenter for AI and Data Science]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
