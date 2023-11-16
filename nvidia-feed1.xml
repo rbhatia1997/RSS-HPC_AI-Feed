@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 16 Nov 2023 00:03:04 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 16 Nov 2023 07:36:10 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -345,7 +345,7 @@
 <p>Custom generative AI requires time and energy to maintain projects. The process can become incredibly complex and time-consuming, especially when trying to collaborate and deploy across multiple environments and platforms.</p>
 <p><a href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/">AI Workbench</a> is a unified, easy-to-use toolkit that allows developers to quickly create, test and customize pretrained generative AI models and LLMs on a PC or workstation. It provides developers a single platform to organize their AI projects and tune models to specific use cases.</p>
 <p>This enables seamless collaboration and deployment for developers to create cost-effective, scalable generative AI models quickly. <a href="https://developer.nvidia.com/ai-workbench-early-access">Join the early access list</a> to be among the first to gain access to this growing initiative and to receive future updates.</p>
-<p>To support AI developers, NVIDIA and Microsoft will release DirectML enhancements to accelerate one of the most popular foundational AI models, Llama 2. Developers now have more options for cross-vendor deployment, in addition to setting <a href="https://blogs.nvidia.com/blog/tensorrt-llm-windows-stable-diffusion-rtx/">a new standard for performance</a>.</p>
+<p>To support AI developers, NVIDIA and Microsoft will release <a href="#directml-llama">DirectML enhancements</a> to accelerate one of the most popular foundational AI models, Llama 2. Developers now have more options for cross-vendor deployment, in addition to setting <a href="https://blogs.nvidia.com/blog/tensorrt-llm-windows-stable-diffusion-rtx/">a new standard for performance</a>.</p>
 <h2><b>Portable AI</b></h2>
 <p>Last month, NVIDIA announced TensorRT-LLM for Windows, a library for accelerating LLM inference.</p>
 <p>The next TensorRT-LLM release, v0.6.0 coming later this month, will bring improved inference performance — up to 5x faster — and enable support for additional popular LLMs, including the new Mistral 7B and Nemotron-3 8B. Versions of these LLMs will run on any GeForce RTX 30 Series and 40 Series GPU with 8GB of RAM or more, making fast, accurate, local LLM capabilities accessible even in some of the most portable Windows devices.</p>
@@ -357,12 +357,12 @@
 <p>To address this challenge, NVIDIA is soon enabling TensorRT-LLM for Windows to offer a similar API interface to OpenAI&#8217;s widely popular ChatAPI, through a new wrapper, offering a similar workflow to developers whether they are designing models and applications to run locally on a PC with RTX or in the cloud. By changing just one or two lines of code, hundreds of AI-powered developer projects and applications can now benefit from fast, local AI. Users can keep their data on their PCs and not worry about uploading datasets to the cloud.</p>
 <p><iframe loading="lazy" title="TensorRT-LLM OpenAI Chat API Integration" width="500" height="281" src="https://www.youtube.com/embed/-P17YXulhDc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Perhaps the best part is that many of these projects and applications are open source, making it easy for developers to leverage and extend their capabilities to fuel the adoption of generative AI on Windows, powered by RTX.</p>
-<p>The wrapper will work with any LLM that’s been optimized for TensorRT-LLM (for example, Llama 2, Mistral and NV LLM) and is being released as a reference project on GitHub, alongside other developer resources for working with LLMs on RTX.</p>
-<h2><b>Model Acceleration</b></h2>
+<p>The wrapper will work with any LLM that’s been optimized for TensorRT-LLM (for example, Llama 2, Mistral and Nemotron-3 8B) and is being released as a reference project on GitHub, alongside other developer resources for working with LLMs on RTX.</p>
+<h2 id="directml-llama"><b>Model Acceleration</b></h2>
 <p>Developers can now leverage cutting-edge AI models and deploy with a cross-vendor API. As part of an ongoing commitment to empower developers, NVIDIA and Microsoft have been working together to accelerate Llama on RTX via the DirectML API.</p>
 <p>Building on the announcements for the fastest inference performance for these models announced last month, this new option for cross-vendor deployment makes it easier than ever to bring AI capabilities to PC.</p>
 <p>Developers and enthusiasts can experience the latest optimizations by downloading the latest ONNX runtime and following the installation instructions from Microsoft, and installing the <a href="https://www.nvidia.com/download/index.aspx">latest driver from NVIDIA</a>, which will be available on Nov. 21.</p>
-<p>These new optimizations, models and resources will accelerate the development and deployment of AI features and applications to the 100 million RTX PCs worldwide, joining the more than 400 partners shipping AI-powered apps and games already accelerated by RTX GPUs.</p>
+<p>These new optimizations, models and resources will accelerate the development and deployment of AI features and applications to the 100 million RTX PCs worldwide, joining the more than 400 AI-powered apps and games already accelerated by RTX GPUs.</p>
 <p>As models become even more accessible and developers bring more generative AI-powered functionality to RTX-powered Windows PCs, RTX GPUs will be critical for enabling users to take advantage of this powerful technology.</p>
 </div>]]></content:encoded>
 					
