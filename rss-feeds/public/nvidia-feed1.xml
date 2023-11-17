@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 16 Nov 2023 22:54:51 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 17 Nov 2023 02:44:12 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,59 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.2</generator>
 	<item>
+		<title>NVIDIA and Scaleway Speed Development for European Startups and Enterprises</title>
+		<link>https://blogs.nvidia.com/blog/scaleway-european-startups-inception/</link>
+		
+		<dc:creator><![CDATA[Serge Lemonde]]></dc:creator>
+		<pubDate>Fri, 17 Nov 2023 10:00:43 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[NVIDIA DGX]]></category>
+		<category><![CDATA[NVIDIA in Europe]]></category>
+		<category><![CDATA[RAPIDS]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68220</guid>
+
+					<description><![CDATA[Europe’s startup ecosystem is getting a boost of accelerated computing for generative AI. NVIDIA and cloud service provider (CSP) Scaleway are working together to deliver access to GPUs, NVIDIA AI Enterprise software, and services for turbocharging large language models (LLMs) and generative AI development for European startups. Scaleway, a subsidiary of French telecommunications provider iliad <a class="read-more" href="https://blogs.nvidia.com/blog/scaleway-european-startups-inception/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Europe’s startup ecosystem is getting a boost of accelerated computing for generative AI.</p>
+<p>NVIDIA and cloud service provider (CSP) Scaleway are working together to deliver access to GPUs, NVIDIA AI Enterprise software, and services for turbocharging large language models (LLMs) and generative AI development for European startups.</p>
+<p>Scaleway, a subsidiary of French telecommunications provider iliad Group, is offering cloud credits for access to its AI supercomputer cluster, which packs 1,016 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>. As a regional CSP, Scaleway also provides sovereign infrastructure that ensures access and compliance with EU data protection laws — critical to businesses with a European footprint.</p>
+<h2><b>Sovereign Cloud, Generative AI </b></h2>
+<p>Complying with regulations governing how data and metadata can be stored in cloud computing is critical. When doing business in Europe, U.S. companies, for example, need to comply with EU regulations on sovereignty to secure data against access from foreign adversaries or entities. Noncompliance risks data vulnerabilities, financial penalties and legal consequences.</p>
+<p>Regional CSPs like Scaleway provide a strategic path forward for companies to do business in Europe with a sovereign infrastructure. iliad Group’s data centers, where Scaleway operates, are fortified by compliance certifications that ensure data security, covering key aspects like healthcare, public safety, governance and public service activities.</p>
+<h2><b>Delivering Sovereign Accelerated Computing </b></h2>
+<p>NVIDIA is working with Scaleway to expand access to sovereign accelerated computing in the EU, enabling companies to deploy AI applications and scale up faster.  <b> </b></p>
+<p>Through the <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception program</a>, startups already relying on the sovereign cloud computing capabilities of Scaleway’s NVIDIA-accelerated infrastructure include Hugging Face, with more to come. Inception is a free global program that provides technical guidance, training, discounts and networking opportunities.</p>
+<p>Inception member Hugging Face, based in New York and with operations in France, creates tools and resources to help developers build, deploy and train AI models.</p>
+<p>“AI is the new way of building technology, and making the fastest AI accelerators accessible within regional clouds is key to democratizing AI across the world, enabling enterprises and startups to build the experiences of tomorrow,” said Jeff Boudier, head of product at Hugging Face. “I’m really excited that selected French startups will be able to access NVIDIA H100 GPUs in Scaleway’s cluster through the new startup program Scaleway and Hugging Face just announced with Meta and Station F.”</p>
+<h2><b>H100 and NVIDIA AI to Scale </b></h2>
+<p>Scaleway’s newly available <a href="https://www.scaleway.com/en/news/scaleway-releases-the-details-of-its-offering-based-on-nabuchodonosor-its-dedicated-ai-supercomputer-built-on-nvidia-dgx-h100-infrastructure/">Nabuchodonosor</a> supercomputer, an <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a> with 127 <a href="https://www.nvidia.com/en-us/data-center/dgx-h100/?ncid=pa-srch-goog-560181&amp;_bt=676835775117&amp;_bk=dgx%20h100&amp;_bm=p&amp;_bn=g&amp;_bg=154931763096&amp;gad_source=1&amp;gclid=EAIaIQobChMI0NPi36mVggMV80lHAR0zigLiEAAYASAAEgJCF_D_BwE">NVIDIA DGX H100</a> systems, will help startups in France and across Europe scale up AI workloads.</p>
+<p>Regional Inception members will also be able to access NVIDIA AI Enterprise software on Scaleway Marketplace, including the <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a> framework and pretrained models for building LLMs, <a href="https://developer.nvidia.com/rapids">NVIDIA RAPIDS</a> for accelerated data science, and <a href="https://developer.nvidia.com/nvidia-triton-inference-server">NVIDIA Triton Inference Server</a> and <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a> for boosting inference.</p>
+<h2><b>NVIDIA Inception Services on Tap</b></h2>
+<p><a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a> has more than 4,000 members across Europe. Member companies of Scaleway’s own startup program are eligible to join Inception for benefits and resources. Scaleway is earmarking companies to fast-track for Inception membership.</p>
+<p>Inception members gain access to cloud computing credits, <a href="http://www.nvidia.com/dli">NVIDIA Deep Learning Institute</a> courses, technology experts, preferred pricing on hardware and software, guidance on the latest software development kits and AI frameworks, as well as opportunities for matchmaking with investors.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/ai-pulse-corp-blog-scaleway-2023-1260x680-1.jpg"
+			type="image/jpeg"
+			width="1260"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/ai-pulse-corp-blog-scaleway-2023-1260x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA and Scaleway Speed Development for European Startups and Enterprises]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>AI Training AI: GatorTronGPT at the Forefront of University of Florida’s Medical AI Innovations</title>
 		<link>https://blogs.nvidia.com/blog/gatortrongpt/</link>
 		
@@ -1145,86 +1198,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Enter a World of Samurai and Demons: GFN Thursday Brings Capcom’s ‘Onimusha: Warlords’ to the Cloud]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Acing the Test: NVIDIA Turbocharges Generative AI Training in MLPerf Benchmarks</title>
-		<link>https://blogs.nvidia.com/blog/scaling-ai-training-mlperf/</link>
-		
-		<dc:creator><![CDATA[Dave Salvator]]></dc:creator>
-		<pubDate>Wed, 08 Nov 2023 17:00:10 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Genomics]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
-		<category><![CDATA[NVIDIA Quantum-2]]></category>
-		<category><![CDATA[Recommender Systems]]></category>
-		<category><![CDATA[Science]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67934</guid>
-
-					<description><![CDATA[NVIDIA’s AI platform raised the bar for AI training and high performance computing in the latest MLPerf industry benchmarks. Among many new records and milestones, one in generative AI stands out: NVIDIA Eos — an AI supercomputer powered by a whopping 10,752 NVIDIA H100 Tensor Core GPUs and NVIDIA Quantum-2 InfiniBand networking — completed a <a class="read-more" href="https://blogs.nvidia.com/blog/scaling-ai-training-mlperf/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA’s AI platform raised the bar for AI training and high performance computing in the latest <a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">MLPerf</a> industry benchmarks.</p>
-<p>Among many new records and milestones, one in <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> stands out: <a href="https://nvidianews.nvidia.com/news/nvidia-announces-dgx-h100-systems-worlds-most-advanced-enterprise-ai-infrastructure">NVIDIA Eos</a> — an AI supercomputer powered by a whopping 10,752 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> networking — completed a training benchmark based on a GPT-3 model with 175 billion parameters trained on one billion tokens in just 3.9 minutes.</p>
-<p>That’s a nearly 3x gain from 10.9 minutes, the record NVIDIA set when the test <a href="https://blogs.nvidia.com/blog/generative-ai-debut-mlperf/">was introduced</a> less than six months ago.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67961" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-672x422.jpg" alt="NVIDIA H100 training results over time on MLPerf benchmarks" width="672" height="422" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-672x422.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-400x251.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-768x483.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-716x450.jpg 716w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-342x215.jpg 342w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights-159x100.jpg 159w, https://blogs.nvidia.com/wp-content/uploads/2023/11/1-NV-H100-Leaps-to-New-Heights.jpg 1200w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
-<p>The benchmark uses a portion of the full GPT-3 data set behind the popular ChatGPT service that, by extrapolation, Eos could now train in just eight days, 73x faster than a prior state-of-the-art system using 512 A100 GPUs.</p>
-<p>The acceleration in training time reduces costs, saves energy and speeds time-to-market. It’s heavy lifting that makes large language models widely available so every business can adopt them with tools like <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework for customizing <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>.</p>
-<p>In a new generative AI test ‌this round, 1,024 <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">NVIDIA Hopper architecture GPUs</a> completed a training benchmark based on the Stable Diffusion text-to-image model in 2.5 minutes, setting a high bar on this new workload.</p>
-<p>By adopting these two tests, MLPerf reinforces its leadership as the industry standard for measuring AI performance, since generative AI is the most transformative technology of our time.</p>
-<h2><b>System Scaling Soars</b></h2>
-<p>The latest results were due in part to the use of the most accelerators ever applied to an MLPerf benchmark. The 10,752 H100 GPUs far surpassed the scaling in <a href="https://blogs.nvidia.com/blog/generative-ai-debut-mlperf/">AI training</a> in June, when NVIDIA used 3,584 Hopper GPUs.</p>
-<p>The 3x scaling in GPU numbers delivered a 2.8x scaling in performance, a 93% efficiency rate thanks in part to software optimizations.</p>
-<p>Efficient scaling is a key requirement in generative AI because LLMs are growing by <a href="https://blogs.nvidia.com/blog/huangs-law-dally-hot-chips/">an order of magnitude every year</a>. The latest results show NVIDIA’s ability to meet this unprecedented challenge for even the world’s largest data centers.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67964" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-672x420.jpg" alt="Chart of near linear scaling of H100 GPUs on MLPerf training" width="672" height="420" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-672x420.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-400x250.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-768x480.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-720x450.jpg 720w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-344x215.jpg 344w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark-160x100.jpg 160w, https://blogs.nvidia.com/wp-content/uploads/2023/11/2-Near-linear-scaling-of-NV-H100s-on-MLPerf-training-benchmark.jpg 1200w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
-<p>The achievement is thanks to a full-stack platform of innovations in accelerators, systems and software that both Eos and <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/nd-h100-v5-series">Microsoft Azure</a> used in the latest round.</p>
-<p>Eos and Azure both employed 10,752 H100 GPUs in separate submissions. They achieved within 2% of the same performance, demonstrating the efficiency of NVIDIA AI in data center and public-cloud deployments.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67967" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-672x378.jpg" alt="Chart of record Azure scaling in MLPerf training" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/3-Azure-achieves-record-scaling.jpg 1200w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
-<p>NVIDIA relies on Eos for a wide array of critical jobs. It helps advance initiatives like <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a>, AI-powered software for state-of-the-art computer graphics and NVIDIA Research projects like <a href="https://blogs.nvidia.com/blog/llm-semiconductors-chip-nemo/">ChipNeMo</a>, generative AI tools that help design next-generation GPUs.</p>
-<h2><b>Advances Across Workloads</b></h2>
-<p>NVIDIA set several new records in this round in addition to making advances in generative AI.</p>
-<p>For example, H100 GPUs were 1.6x faster than the prior-round training recommender models widely employed to help users find what they’re looking for online. Performance was up 1.8x on RetinaNet, a computer vision model.</p>
-<p>These increases came from a combination of advances in software and scaled-up hardware.</p>
-<p>NVIDIA was once again the only company to run all MLPerf tests. H100 GPUs demonstrated the fastest performance and the greatest scaling in each of the nine benchmarks.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training.jpg"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-67970" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-672x366.jpg" alt="List of six new NVIDIA records in MLPerf training" width="672" height="366" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-672x366.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-400x218.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-768x418.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-826x450.jpg 826w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-395x215.jpg 395w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-184x100.jpg 184w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training-1280x697.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/4-Six-NVIDIA-records-in-MLPerf-training.jpg 1300w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
-<p>Speedups translate to faster time to market, lower costs and energy savings for users training massive LLMs or customizing them with frameworks like NeMo for the specific needs of their business.</p>
-<p>Eleven systems makers used the NVIDIA AI platform in their submissions this round, including ASUS, Dell Technologies, Fujitsu, GIGABYTE, Lenovo, QCT and Supermicro.</p>
-<p>NVIDIA partners participate in MLPerf because they know it’s a valuable tool for customers evaluating AI platforms and vendors.</p>
-<h2><b>HPC Benchmarks Expand</b></h2>
-<p>In MLPerf HPC, a separate benchmark for AI-assisted simulations on supercomputers, H100 GPUs delivered up to twice the performance of NVIDIA A100 Tensor Core GPUs in <a href="https://blogs.nvidia.com/blog/mlperf-hpc-ai/">the last HPC round</a>. The results showed up to 16x gains since the first MLPerf HPC round in 2019.</p>
-<p>The benchmark included a new test that trains OpenFold, a model that predicts the 3D structure of a protein from its sequence of amino acids. OpenFold can do in minutes vital work for healthcare that used to take researchers weeks or months.</p>
-<p>Understanding a protein’s structure is key to finding effective drugs fast because most drugs act on proteins, the cellular machinery that helps control many biological processes.</p>
-<p>In the MLPerf HPC test, H100 GPUs trained OpenFold in 7.5 minutes.  The OpenFold test is a representative part of the entire AlphaFold training process that two years ago took 11 days using 128 accelerators.</p>
-<p>A version of the OpenFold model and the software NVIDIA used to train it will be available soon in <a href="https://www.nvidia.com/en-us/gpu-cloud/bionemo/">NVIDIA BioNeMo</a>, a generative AI platform for drug discovery.</p>
-<p>Several partners made submissions on the NVIDIA AI platform in this round. They included Dell Technologies and supercomputing centers at Clemson University, the Texas Advanced Computing Center and — with assistance from Hewlett Packard Enterprise (HPE) — Lawrence Berkeley National Laboratory.</p>
-<h2><b>Benchmarks With Broad Backing</b></h2>
-<p>Since its inception in May 2018, the MLPerf benchmarks have enjoyed broad backing from both industry and academia. Organizations that support them include Amazon, Arm, Baidu, Google, Harvard, HPE, Intel, Lenovo, Meta, Microsoft, NVIDIA, Stanford University and the University of Toronto.</p>
-<p>MLPerf tests are transparent and objective, so users can rely on the results to make informed buying decisions.</p>
-<p>All the software NVIDIA used is available from the MLPerf repository, so all developers can get the same world-class results. These software optimizations get continuously folded into containers available on <a href="https://ngc.nvidia.com/catalog">NGC</a>, NVIDIA’s software hub for GPU applications.</p>
-<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/"><i>MLPerf</i></a><i> and </i><a href="https://developer.nvidia.com/blog/setting-new-records-at-data-center-scale-using-nvidia-h100-gpus-and-quantum-2-infiniband/"><i>the details</i></a><i> of this round.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/NVIDIA-Eos-supercomputer-runs-MLPerf-tests.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/NVIDIA-Eos-supercomputer-runs-MLPerf-tests-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Acing the Test: NVIDIA Turbocharges Generative AI Training in MLPerf Benchmarks]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
