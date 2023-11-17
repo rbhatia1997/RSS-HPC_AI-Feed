@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 16 Nov 2023 17:08:32 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 16 Nov 2023 22:54:51 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,53 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.3.2</generator>
 	<item>
+		<title>AI Training AI: GatorTronGPT at the Forefront of University of Florida’s Medical AI Innovations</title>
+		<link>https://blogs.nvidia.com/blog/gatortrongpt/</link>
+		
+		<dc:creator><![CDATA[Mona Flores]]></dc:creator>
+		<pubDate>Thu, 16 Nov 2023 22:31:40 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68233</guid>
+
+					<description><![CDATA[How do you train an AI to understand clinical language with less clinical data? Train another AI to synthesize training data. Artificial intelligence is changing the way medicine is done, and is increasingly being used in all sorts of clinical tasks. This is fueled by generative AI and models like GatorTronGPT, a generative language model <a class="read-more" href="https://blogs.nvidia.com/blog/gatortrongpt/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>How do you train an AI to understand clinical language with less clinical data? Train another AI to synthesize training data.</p>
+<p>Artificial intelligence is changing the way medicine is done, and is increasingly being used in all sorts of clinical tasks.</p>
+<p>This is fueled by <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> and models like GatorTronGPT, a generative language model trained on the University of Florida’s HiPerGator AI supercomputer and <a href="https://www.nature.com/articles/s41746-023-00958-w">detailed in a paper published in Nature Digital Medicine Thursday</a>.</p>
+<p>GatorTronGPT joins a growing number of large language models (<a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/">LLMs</a>) trained on clinical data. Researchers trained the model using the GPT-3 framework, also used by ChatGPT.</p>
+<p>They used a massive corpus of 277 billion words for this purpose. The training corpora included 82 billion words from de-identified clinical notes and 195 billion words from various English texts.</p>
+<p>But there’s a twist: The research team also used GatorTronGPT to generate a synthetic clinical text corpus with over 20 billion words of synthetic clinical text, with carefully prepared prompts. The synthetic clinical text focuses on clinical factors and reads just like real clinical notes written by doctors.</p>
+<p>This <a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/">synthetic data</a> was then used to train a BERT-based model called GatorTron-S.</p>
+<p>In a comparative evaluation, GatorTron-S exhibited remarkable performance on clinical natural language understanding tasks like clinical concept extraction and medical relation extraction, beating the records set by the original BERT-based model, GatorTron-OG, which was trained on the 82-billion-word clinical dataset.</p>
+<p>More impressively, it was able to do so using less data.</p>
+<p>Both GatorTron-OG and GatorTron-S models were trained on 560 <a href="https://www.nvidia.com/en-us/data-center/a100/">NVIDIA A100 Tensor Core GPUs</a> running NVIDIA’s Megatron-LM package on the University of Florida’s <a href="https://blogs.nvidia.com/blog/university-of-florida-rankings-ai/">HiPerGator supercomputer</a>. Technology from the Megatron LM framework used in the project has since been incorporated with the <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a> framework, which has been central to more recent work on GatorTronGPT.</p>
+<p>Using synthetic data created by LLMs addresses several challenges. LLMs require vast amounts of data, and there’s a limited availability of quality medical data.</p>
+<p>In addition, synthetic data allows for model training that complies with medical privacy regulations, such as HIPAA.</p>
+<p>The work with GatorTronGPT is just the latest example of how LLMs — which exploded onto the scene last year with the rapid adoption of ChatGPT — can be tailored to assist in a growing number of fields.</p>
+<p>It’s also an example of the advances made possible by new AI techniques powered by accelerated computing.</p>
+<p>The GatorTronGPT effort is the latest result of an <a href="https://blogs.nvidia.com/blog/university-of-florida-nvidia-ai-supercomputer/">ambitious collaboration</a> announced in 2020, when the University of Florida and NVIDIA unveiled plans to erect the world’s fastest AI supercomputer in academia.</p>
+<p>This initiative was driven by a $50 million gift, a fusion of contributions from NVIDIA founder Chris Malachowsky and NVIDIA itself.</p>
+<p>Using AI to train more AI is just one example of HiPerGator’s impact, with the supercomputer promising to power more innovations in medical sciences and <a href="https://blogs.nvidia.com/blog/uf-health-syngatortron-ai-synthetic-clinical-data/">across disciplines</a> throughout the University of Florida system.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-Malachowsky-Hall-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/UF-Malachowsky-Hall-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[AI Training AI: GatorTronGPT at the Forefront of University of Florida’s Medical AI Innovations]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Three Ways Generative AI Can Bolster Cybersecurity</title>
 		<link>https://blogs.nvidia.com/blog/generative-ai-cybersecurity/</link>
 		
@@ -73,18 +120,18 @@
 		
 		
 			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/new-KV.jpg"
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Security-KV-Final-AdobeStock_312879614-scaled.jpeg"
 			type="image/jpeg"
-			width="1000"
-			height="563"
+			width="2048"
+			height="1152"
 			>
 			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/new-KV-842x450.jpg"
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Security-KV-Final-AdobeStock_312879614-842x450.jpeg"
 			width="842"
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Three Ways Generative AI Can Bolster Cybersecurity]]></media:title>
-			<media:description type="html">Image showing worker using generative AI to bolster cybersecurity</media:description>
+			<media:description type="html">Security analyst using generative AI</media:description>
 			</media:content>
 			</item>
 		<item>
@@ -1178,69 +1225,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Acing the Test: NVIDIA Turbocharges Generative AI Training in MLPerf Benchmarks]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Partners With APEC Economies to Change Lives, Increase Opportunity, Improve Outcomes</title>
-		<link>https://blogs.nvidia.com/blog/apec-summit/</link>
-		
-		<dc:creator><![CDATA[Ruth Berry]]></dc:creator>
-		<pubDate>Wed, 08 Nov 2023 16:00:32 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Deep Learning Institute]]></category>
-		<category><![CDATA[Developer Program]]></category>
-		<category><![CDATA[Inception]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67976</guid>
-
-					<description><![CDATA[When patients in Vietnam enter a medical facility in distress, doctors use NVIDIA technology to get more accurate scans to diagnose their ailments. In Hong Kong, a different set of doctors leverage generative AI to discover new cures for patients. Improving the health and well-being of citizens and strengthening economies and communities are key themes <a class="read-more" href="https://blogs.nvidia.com/blog/apec-summit/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>When patients in Vietnam enter a medical facility in distress, doctors use NVIDIA technology to get more accurate scans to diagnose their ailments. In Hong Kong, a different set of doctors leverage generative AI to discover new cures for patients.</p>
-<p>Improving the health and well-being of citizens and strengthening economies and communities are key themes as world leaders soon gather in San Francisco for the 2023 Asia-Pacific Economic Cooperation (APEC) Summit.</p>
-<p>When they meet to discuss bold solutions to improve the lives of their citizens and societies, NVIDIA’s AI and accelerated computing initiatives are a crucial enabler.</p>
-<p>NVIDIA’s work to improve outcomes for everyday people while tackling future challenges builds on years of deep investment with APEC partners. With a strong presence in countries across the region, including a workforce of thousands and numerous collaborative projects in areas from farming to healthcare to education, NVIDIA is delivering new technologies and workforce training programs to enhance industrial development and advance generative AI research.</p>
-<p>Beyond technological advancements, these efforts spur economic growth, create good-paying jobs and improve the health and well-being of people globally.</p>
-<h2><b>Research and National Compute Partnerships</b></h2>
-<p>NVIDIA has advanced AI research partnerships with several APEC economies. These accelerate scientific breakthroughs in AI and HPC to address national challenges, such as healthcare, skills development and creating more robust local AI ecosystems to protect and advance well-being, prosperity and security. For example:</p>
-<ul>
-<li><b>Australia’s</b> national science and research organization, CSIRO, has teamed with NVIDIA to advance Australia&#8217;s AI program across climate action, space exploration, quantum computing and AI education.</li>
-<li><b>Singapore’s</b> National Supercomputing Centre and Ministry of Education have partnered with NVIDIA to drive sovereign AI capabilities with a priority focus on sectors such as healthcare, climate science and digital twins.</li>
-<li><b>Thailand</b> was Southeast Asia’s first country to participate in NVIDIA’s AI Nations initiative, bringing together the Ministry of Education with a consortium of top universities to advance public-private collaborations in urban planning, public health and autonomous vehicles.</li>
-<li>In <b>Vietnam</b>, NVIDIA is partnering with Viettel,  the nation’s largest employer, and Vietnam’s Academy for Science &amp; Technology to upskill workforces, accelerate the introduction of AI services to industry and deploy next-generation 5G services.</li>
-</ul>
-<h2><b>Innovation Ecosystems</b></h2>
-<p>Startups are at the leading edge of AI innovation, and a robust startup ecosystem is vital to advancing technology within APEC economies.</p>
-<p><a href="https://www.nvidia.com/en-us/startups/#nv-accordion-81048a018e-item-2202bf6f03">NVIDIA Inception</a> is a free program to help startups innovate faster. Through it, NVIDIA supports over 5,000 startups across APEC economies, and more than 15,000 globally, by providing cutting-edge technology, connections with venture capitalists and access to the latest technical resources.</p>
-<p>In 2023, NVIDIA added nearly 1,000 APEC-area startups to the program. In addition to creating economic opportunities, Inception supports small- and medium-sized enterprises in developing novel solutions to some of society&#8217;s biggest challenges. Here’s what some of its members are doing:</p>
-<ul>
-<li>In <b>Malaysia</b>, <a href="https://gotapway.com/">Tapway</a> uses AI to reduce congestion and streamline traffic for more than 1 million daily travelers.</li>
-<li>In <b>New Zealand</b>, <a href="https://www.lynker-analytics.com/our-work">Lynker</a> uses geospatial analysis, deep learning and remote sensing for earth observation.  Lynker’s technology measures carbon sequestration on farms, detecting, monitoring and restoring wetlands and enabling more effective disaster relief.</li>
-<li>In <b>Thailand</b>, <a href="https://www.altotech.ai/">AltoTech Global</a>, an Inception partner, integrates AI software with Internet of Things devices to optimize energy consumption for hotels, buildings, factories and smart cities. AltoTech’s ultimate goal is contributing to the net-zero economy and helping customers achieve their net-zero targets.</li>
-</ul>
-<h2><b>Digital Upskilling and Tools for Growth</b></h2>
-<p>The <a href="https://www.nvidia.com/en-us/training/">NVIDIA Deep Learning Institute</a> (DLI) provides AI training and digital upskilling programs that cultivate innovation and create economic opportunities.</p>
-<p>DLI’s training and certification program helps individuals and organizations accelerate skills development and workforce transformation in AI, high performance computing and industrial digitalization.</p>
-<p>Hands-on, self-paced and instructor-led courses are created and taught by NVIDIA experts, bringing real-world experience and deep technical know-how to developers and IT professionals.</p>
-<p>Through this program, NVIDIA has trained more than 115,000 individuals in APEC economies, including more than 16,000 new trainees this year.</p>
-<p>Separately, the <a href="https://developer.nvidia.com/developer-program">NVIDIA Developer Program</a> offers more than 2 million developers in APEC economies access to software development kits, application program interfaces, pretrained AI models and performance analysis tools to help developers create and innovate. Members receive free hands-on training, access to developer forums and early access to new products and services.</p>
-<h2><b>Creating a Better Future for All</b></h2>
-<p>As nations work together to address common challenges and improve the lives of their citizens, NVIDIA will continue to leverage its world-class technologies to help create a better world for all.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/apec-ceo-2023.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/apec-ceo-2023-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Partners With APEC Economies to Change Lives, Increase Opportunity, Improve Outcomes]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
