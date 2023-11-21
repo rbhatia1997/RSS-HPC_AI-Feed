@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 20 Nov 2023 05:24:36 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 20 Nov 2023 23:18:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -745,7 +745,7 @@
 			</media:content>
 			</item>
 		<item>
-		<title>What Is Retrieval-Augmented Generation?</title>
+		<title>What Is Retrieval-Augmented Generation aka RAG?</title>
 		<link>https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/</link>
 		
 		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
@@ -766,12 +766,12 @@
 <p>Judges hear and decide cases based on their general understanding of the law. Sometimes a case — like a malpractice suit or a labor dispute —  requires special expertise, so judges send court clerks to a law library, looking for precedents and specific cases they can cite.</p>
 <p>Like a good judge, large language models (<a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>) can respond to a wide variety of human queries. But to deliver authoritative answers that cite sources, the model needs an assistant to do some research.</p>
 <p>The court clerk of AI is a process called retrieval-augmented generation, or RAG for short.</p>
-<h2><b>The Story of the Name</b></h2>
+<h2><b>How It Got Named &#8216;RAG&#8217;</b></h2>
 <p>Patrick Lewis, lead author of the <a href="https://arxiv.org/pdf/2005.11401.pdf">2020 paper that coined the term</a>, apologized for the unflattering acronym that now describes a growing family of methods across hundreds of papers and dozens of commercial services he believes represent the future of generative AI.</p>
 <figure id="attachment_68128" aria-describedby="caption-attachment-68128" style="width: 250px" class="wp-caption alignleft"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author.jpg"><img decoding="async" loading="lazy" class="wp-image-68128" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-150x150.jpg" alt="Picture of Patrick Lewis, lead author of RAG paper" width="250" height="267" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-202x215.jpg 202w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author-94x100.jpg 94w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Patrick-Lewis-RAG-lead-author.jpg 375w" sizes="(max-width: 250px) 100vw, 250px" /></a><figcaption id="caption-attachment-68128" class="wp-caption-text">Patrick Lewis</figcaption></figure>
 <p>“We definitely would have put more thought into the name had we known our work would become so widespread,” Lewis said in an interview from Singapore, where he was sharing his ideas with a regional conference of database developers.</p>
 <p>“We always planned to have a nicer sounding name, but when it came time to write the paper, no one had a better idea,” said Lewis, who now leads a RAG team at AI startup Cohere.</p>
-<h2><b>So, What Is Retrieval-Augmented Generation?</b></h2>
+<h2><b>So, What Is Retrieval-Augmented Generation (RAG)?</b></h2>
 <p>Retrieval-augmented generation (RAG) is a technique for enhancing the accuracy and reliability of generative AI models with facts fetched from external sources.</p>
 <p>In other words, it fills a gap in how LLMs work. Under the hood, LLMs are neural networks, typically measured by how many parameters they contain. An LLM’s parameters essentially represent the general patterns of how humans use words to form sentences.</p>
 <p>That deep understanding, sometimes called parameterized knowledge, makes LLMs useful in responding to general prompts at light speed. However, it does not serve users who want a deeper dive into a current or more specific topic.</p>
@@ -783,7 +783,7 @@
 <p>What’s more, the technique can help models clear up ambiguity in a user query. It also reduces the possibility a model will make a wrong guess, a phenomenon sometimes called hallucination.</p>
 <p>Another great advantage of RAG is it’s relatively easy. A <a href="https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/">blog</a> by Lewis and three of the paper’s coauthors said developers can implement the process with as few as <a href="https://huggingface.co/facebook/rag-token-nq">five lines of code</a>.</p>
 <p>That makes the method faster and less expensive than retraining a model with additional datasets. And it lets users hot-swap new sources on the fly.</p>
-<h2><b>How People Are Using Retrieval-Augmented Generation </b></h2>
+<h2><b>How People Are Using RAG</b></h2>
 <p>With retrieval-augmented generation, users can essentially have conversations with data repositories, opening up new kinds of experiences. This means the applications for RAG could be multiple times the number of available datasets.</p>
 <p>For example, a generative AI model supplemented with a medical index could be a great assistant for a doctor or nurse. Financial analysts would benefit from an assistant linked to market data.</p>
 <p>In fact, almost any business can turn its technical or policy manuals, videos or logs into resources called knowledge bases that can enhance LLMs. These sources can enable use cases such as customer or field support, employee training and developer productivity.</p>
@@ -798,7 +798,7 @@
 <figure id="attachment_68134" aria-describedby="caption-attachment-68134" style="width: 1200px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg"><img decoding="async" loading="lazy" class="size-full wp-image-68134" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg" alt="Chart shows running RAG on a PC" width="1200" height="659" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs.jpg 1200w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-400x220.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-672x369.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-768x422.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-819x450.jpg 819w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-392x215.jpg 392w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Using-RAG-on-PCs-182x100.jpg 182w" sizes="(max-width: 1200px) 100vw, 1200px" /></a><figcaption id="caption-attachment-68134" class="wp-caption-text">An example application for RAG on a PC.</figcaption></figure>
 <p>PCs equipped with NVIDIA RTX GPUs can now run some AI models locally. By using RAG on a PC, users can link to a private knowledge source – whether that be emails, notes or articles – to improve responses. The user can then feel confident that their data source, prompts and response all remain private and secure.</p>
 <p>A<a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fblogs.nvidia.com%2Fblog%2F2023%2F10%2F17%2Ftensorrt-llm-windows-stable-diffusion-rtx%2F&amp;data=05%7C01%7Crmerritt%40nvidia.com%7Cdfd2267cb8344597f73408dbd0e6fc36%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638333462716560839%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=V5FClNyBybzOnm3%2FKxiTT4i9aoT0GdLWzdLfnF8LBk0%3D&amp;reserved=0"> recent blog</a> provides an example of RAG accelerated by TensorRT-LLM for Windows to get better results fast.</p>
-<h2><b>The History of Retrieval-Augmented Generation </b></h2>
+<h2><b>The History of RAG </b></h2>
 <p>The roots of the technique go back at least to the early 1970s. That’s when researchers in information retrieval prototyped what they called question-answering systems, apps that use natural language processing (<a href="https://www.nvidia.com/en-us/glossary/natural-language-processing/">NLP</a>) to access text, initially in narrow topics such as baseball.</p>
 <p>The concepts behind this kind of text mining have remained fairly constant over the years. But the machine learning engines driving them have grown significantly, increasing their usefulness and popularity.</p>
 <p>In the mid-1990s, the Ask Jeeves service, now Ask.com, popularized question answering with its mascot of a well-dressed valet. IBM’s Watson became a TV celebrity in 2011 when it handily beat two human champions on the <i>Jeopardy!</i> game show.</p>
@@ -841,7 +841,7 @@
 			width="842"
 			height="450"
 			/>
-			<media:title type="html"><![CDATA[What Is Retrieval-Augmented Generation?]]></media:title>
+			<media:title type="html"><![CDATA[What Is Retrieval-Augmented Generation aka RAG?]]></media:title>
 			<media:description type="html">NVIDIA artist&#039;s concept of retrieval-augmented generation aka RAG</media:description>
 			</media:content>
 			</item>
