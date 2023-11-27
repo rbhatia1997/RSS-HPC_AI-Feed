@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 23 Nov 2023 01:05:57 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 27 Nov 2023 17:06:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -41,7 +41,7 @@
 <p>The scale of work across each of these areas requires a medical imaging-specific AI factory — an enterprise-grade platform that delivers large-scale data management, creates ground-truth annotations, accelerates model development and establishes seamless AI application deployment.</p>
 <p>With NVIDIA MONAI cloud APIs, solution providers can more easily integrate AI into their medical imaging platforms, enabling them to provide supercharged tools for radiologists, researchers and clinical trial teams to build domain-specialized AI factories. The APIs are <a href="https://developer.nvidia.com/nvidia-monai-cloud-api-early-access-program">available in early access</a> through the <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> AI supercomputing service.</p>
 <p>The NVIDIA MONAI cloud API is integrated into Flywheel, a leading medical imaging data and AI platform that supports end-to-end workflows for AI development. Developers at medical image annotation companies including <a href="https://redbrickai.com/" target="_blank" rel="noopener">RedBrick AI</a> and at machine learning operations (MLOps) platform providers including <a href="https://www.dataiku.com/" target="_blank" rel="noopener">Dataiku</a> are poised to integrate NVIDIA MONAI cloud APIs into their offerings.</p>
-<h2><b>Ready-to-Run Annotation and Training for Medical Imaging</b></h2>
+<h2><b>Easy-to-Deploy Annotation and Training for Medical Imaging</b></h2>
 <p>Building efficient and cost-effective AI solutions requires a robust, domain-specialized development foundation that includes full-stack optimizations for software, scalable multi-node systems and state-of-the-art research. It also requires high-quality ground-truth data — which can be arduous and time-consuming to gather, particularly for 3D medical images that require a high level of expertise to annotate.</p>
 <p>NVIDIA MONAI cloud APIs feature interactive annotation powered by the VISTA-3D (Vision Imaging Segmentation and Annotation) foundation model. It’s purpose-built for continuous learning, a capability that improves AI model performance based on user feedback and new data.</p>
 <p>Trained on a dataset of annotated images from 3D CT scans from more than 4,000 patients, spanning various diseases and parts of the body, VISTA-3D accelerates the creation of 3D segmentation masks for medical image analysis. With continuous learning, the AI model’s annotation quality improves over time.</p>
