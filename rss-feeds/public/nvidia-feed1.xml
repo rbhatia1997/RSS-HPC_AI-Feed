@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 27 Nov 2023 23:03:55 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 28 Nov 2023 17:21:42 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,248 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.1</generator>
 	<item>
+		<title>NVIDIA BioNeMo Enables Generative AI for Drug Discovery on AWS</title>
+		<link>https://blogs.nvidia.com/blog/bionemo-on-aws-generative-ai-drug-discovery/</link>
+		
+		<dc:creator><![CDATA[Kimberly Powell]]></dc:creator>
+		<pubDate>Tue, 28 Nov 2023 17:21:33 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Genomics]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[NVIDIA Clara]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68361</guid>
+
+					<description><![CDATA[Researchers and developers at leading pharmaceutical and techbio companies can now easily deploy NVIDIA Clara software and services for accelerated healthcare through Amazon Web Services. Announced today at AWS re:Invent, the initiative gives healthcare and life sciences developers using AWS cloud resources the flexibility to integrate NVIDIA-accelerated offerings such as NVIDIA BioNeMo — a generative <a class="read-more" href="https://blogs.nvidia.com/blog/bionemo-on-aws-generative-ai-drug-discovery/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Researchers and developers at leading pharmaceutical and techbio companies can now easily deploy <a href="https://aws.amazon.com/nvidia/hcls/" target="_blank" rel="noopener">NVIDIA Clara software and services</a> for accelerated healthcare through Amazon Web Services.</p>
+<p><a href="https://nvidianews.nvidia.com/news/aws-nvidia-strategic-collaboration-for-generative-ai">Announced today at AWS re:Invent</a>, the initiative gives healthcare and life sciences developers using AWS cloud resources the flexibility to integrate NVIDIA-accelerated offerings such as <a href="https://www.nvidia.com/en-gb/clara/bionemo/">NVIDIA BioNeMo</a> — a generative AI platform for drug discovery — coming to <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> on AWS, and currently available via the AWS ParallelCluster cluster management tool for high performance computing and the Amazon SageMaker machine learning service.</p>
+<p>Thousands of healthcare and life sciences companies globally use AWS. They will now be able to access BioNeMo to build or customize digital biology foundation models with proprietary data, scaling up model training and deployment using NVIDIA GPU-accelerated cloud servers on AWS.</p>
+<p>Techbio innovators including <a href="https://www.alchemab.com/" target="_blank" rel="noopener">Alchemab Therapeutics</a>, <a href="https://www.basecamp-research.com/" target="_blank" rel="noopener">Basecamp Research</a>, <a href="https://www.characterbio.com/" target="_blank" rel="noopener">Character Biosciences</a>, <a href="https://www.evozyne.com/" target="_blank" rel="noopener">Evozyne</a>, <a href="https://www.etcembly.com/" target="_blank" rel="noopener">Etcembly</a> and <a href="https://labgeni.us/" target="_blank" rel="noopener">LabGenius</a> are among the AWS users already using BioNeMo for generative AI-accelerated drug discovery and development. This collaboration gives them more ways to rapidly scale up cloud computing resources for developing generative AI models trained on biomolecular data.</p>
+<p>This announcement extends NVIDIA’s existing healthcare-focused offerings available on AWS — <a href="https://www.nvidia.com/en-us/clara/monai/">NVIDIA MONAI</a> for medical imaging workflows and <a href="https://www.nvidia.com/en-us/clara/parabricks/">NVIDIA Parabricks</a> for accelerated genomics.</p>
+<h2><b>New to AWS: NVIDIA BioNeMo Advances Generative AI for Drug Discovery</b></h2>
+<p><a href="https://www.nvidia.com/en-gb/gpu-cloud/bionemo/">BioNeMo</a> is a domain-specific framework for digital biology generative AI, including pretrained large language models (LLMs), data loaders and optimized training recipes that can help advance computer-aided drug discovery by speeding target identification, protein structure prediction and drug candidate screening.</p>
+<p>Drug discovery teams can use their proprietary data to build or optimize models with BioNeMo and run them on cloud-based high performance computing clusters.</p>
+<p>One of these models, ESM-2 — a powerful LLM that supports protein structure prediction —  achieves almost linear scaling on 256 NVIDIA H100 Tensor Core GPUs. Researchers can scale to 512 H100 GPUs to complete training in a few days instead of a month, the training time published in the original paper.</p>
+<p>Developers can train ESM-2 at scale using checkpoints of 650 million or 3 billion parameters. Additional AI models supported in the BioNeMo training framework include small-molecule generative model MegaMolBART and protein sequence generation model ProtT5.</p>
+<p>BioNeMo’s pretrained models and optimized training recipes — which are available using self-managed services like AWS ParallelCluster and Amazon ECS as well as integrated, managed services through NVIDIA DGX Cloud and Amazon SageMaker — can help R&amp;D teams build foundation models that can explore more drug candidates, optimize wet lab experimentation and find promising clinical candidates faster.</p>
+<h2><b>Also Available on AWS: NVIDIA Clara for Medical Imaging and Genomics</b></h2>
+<p>Project MONAI, cofounded and <a href="https://www.nvidia.com/en-us/clara/monai/">enterprise-supported by NVIDIA</a> to support medical imaging workflows, has been downloaded more than 1.8 million times and is available for deployment on AWS. Developers can harness their proprietary healthcare datasets already stored on AWS cloud resources to rapidly annotate and build AI models for medical imaging.</p>
+<p>These models, trained on NVIDIA GPU-powered <a href="https://aws.amazon.com/ec2/pricing/" target="_blank" rel="noopener">Amazon EC2 instances</a>, can be used for interactive annotation and fine-tuning for segmentation, classification, registration and detection tasks in medical imaging. Developers can also harness MRI image synthesis models available in MONAI to augment training datasets.</p>
+<p>To accelerate genomics pipelines, <a href="https://aws.amazon.com/marketplace/pp/prodview-apbngojlskcyq" target="_blank" rel="noopener">Parabricks</a> enables variant calling on a whole human genome in around 15 minutes, compared to a day on a CPU-only system. <a href="https://aws.amazon.com/blogs/hpc/getting-started-with-nvidia-parabricks-on-aws-batch-using-aws-cloudformation/" target="_blank" rel="noopener">On AWS</a>, developers can quickly scale up to process large amounts of genomic data across multiple GPU nodes.</p>
+<p>More than a dozen <a href="https://aws.amazon.com/blogs/industries/easily-run-nvidia-parabricks-ready2run-workflows-on-amazon-omics/" target="_blank" rel="noopener">Parabricks workflows are available on</a> AWS HealthOmics as Ready2Run workflows, which enable customers to easily run pre-built pipelines.</p>
+<p>Get started with <a href="https://aws.amazon.com/nvidia/hcls/" target="_blank" rel="noopener">NVIDIA Clara on AWS</a> to accelerate AI workflows for drug discovery, genomics and medical imaging.</p>
+<p><i>Subscribe to </i><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>NVIDIA healthcare news</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/hc-corp-blog-aws23-bionemo-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/hc-corp-blog-aws23-bionemo-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA BioNeMo Enables Generative AI for Drug Discovery on AWS]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA GPUs on AWS to Offer 2x Simulation Leap in Omniverse Isaac Sim, Accelerating Smarter Robots</title>
+		<link>https://blogs.nvidia.com/blog/gpu-aws-omniverse-isaac-sim-robots/</link>
+		
+		<dc:creator><![CDATA[Gerard Andrews]]></dc:creator>
+		<pubDate>Tue, 28 Nov 2023 17:20:12 +0000</pubDate>
+				<category><![CDATA[Autonomous Machines]]></category>
+		<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[NVIDIA Isaac Sim]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68341</guid>
+
+					<description><![CDATA[Developing more intelligent robots in the cloud is about to get a speed multiplier. NVIDIA Isaac Sim and NVIDIA L40S GPUs are coming to Amazon Web Services, enabling developers to build and deploy accelerated robotics applications in the cloud. Isaac Sim, an extensible simulator for AI-enabled robots, is built on the NVIDIA Omniverse development platform <a class="read-more" href="https://blogs.nvidia.com/blog/gpu-aws-omniverse-isaac-sim-robots/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Developing more intelligent robots in the cloud is about to get a speed multiplier.</p>
+<p><a href="https://developer.nvidia.com/isaac-sim">NVIDIA Isaac Sim</a> and <a href="https://www.nvidia.com/en-us/data-center/l40s/">NVIDIA L40S GPUs</a> are coming to Amazon Web Services, enabling developers to build and deploy accelerated robotics applications in the cloud. Isaac Sim, an extensible simulator for AI-enabled robots, is built on the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> development platform for building and connecting <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a> applications.</p>
+<p>Combining powerful AI compute with graphics and media acceleration, the L40S GPU is built to power the next generation of data center workloads. Based on the Ada Lovelace architecture, the L40S enables ultrafast real-time rendering delivering up to a 3.8x performance leap for Omniverse compared with the previous generation, boosting engineering and robotics teams.</p>
+<p>The generational leap in acceleration results in 2x faster performance than the A40 GPU across a broad set of robotic simulations tasks when using Isaac Sim.</p>
+<p>L40S GPUs can also be harnessed for generative AI workloads, from fine-tuning large language models within a matter of hours, to real-time inferencing for text-to-image and chat applications.</p>
+<p>New Amazon Machine Images (AMIs) on the NVIDIA L40S in AWS Marketplace will enable roboticists to easily access preconfigured virtual machines to operate Isaac Sim workloads.</p>
+<p>Robotics development in simulation is speeding the process of deploying applications, turbocharging industries such as <a href="https://blogs.nvidia.com/blog/isaac-jetson-robotics/">retail</a>, <a href="https://blogs.nvidia.com/blog/isaac-soft-robotics-simulation/">food processing</a>, <a href="https://blogs.nvidia.com/blog/bmw-group-nvidia-omniverse/">manufacturing</a>, logistics and more.</p>
+<p>Revenue from mobile robots in warehouses worldwide is expected to explode, more than tripling from $11.6 billion in 2023 to $42.2 billion by 2030, according to ABI Research.</p>
+<p>Robotics systems have played an important role across fulfillment centers to help meet the demands of online shoppers and provide a better workplace for employees. Amazon Robotics has deployed more than 750,000 robots in its warehouses around the world to improve the experience for employees supporting package fulfillment and its customers.</p>
+<p>“Simulation technology plays a critical role in how we develop, test and deploy our robots.” said Brian Basile, head of virtual systems at Amazon Robotics. “At Amazon Robotics we continue to increase the scale and complexity of our simulations. With the new AWS L40S offering we will push the boundaries of simulation, rendering and model training even further.”</p>
+<h2><b>Accelerated Robotics Development With Isaac Sim</b></h2>
+<p>Robotics systems can demand large datasets for precision operation in deployed applications. Gathering these datasets and testing them in the real world is time-consuming, costly and impractical.</p>
+<p><a href="https://blogs.nvidia.com/blog/what-is-robotics-simulation/">Robotics simulation</a> drives the training and testing of AI-based robotic applications. With <a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/">synthetic data</a>, simulations are enabling virtual advances like never before. Simulations can help verify, validate and optimize robot designs, systems and their algorithms before operation. It can also be used to optimize facility designs before construction or remodeling starts for maximum efficiencies, reducing costly manufacturing change orders.</p>
+<p>Isaac Sim offers access to the latest robotics simulation tools and capabilities as well as cloud access, enabling teams to collaborate more effectively. Access to the <a href="https://developer.nvidia.com/omniverse/replicator">Omniverse Replicator</a> synthetic data generation engine in Isaac Sim allows machine learning engineers to build production-ready synthetic datasets for training robust deep learning perception models.</p>
+<h2><b>Customer Adoption of Isaac Sim on AWS</b></h2>
+<p>AWS early adopters tapping into the Isaac Sim platform include <a href="https://blogs.nvidia.com/blog/isaac-jetson-robotics/">Amazon Robotics</a>, <a href="https://blogs.nvidia.com/blog/isaac-soft-robotics-simulation/">Soft Robotics</a> and <a href="https://www.theorystudios.com/synthetic-data">Theory Studios</a>.</p>
+<p>Amazon Robotics has begun using Omniverse to build digital twins for automating, optimizing and planning its autonomous warehouses in virtual environments before deploying them into the real world.</p>
+<p>Using Isaac Sim for sensor emulation, Amazon Robotics will accelerate development of its <a href="https://www.youtube.com/watch?v=LUnZXBL_lqA">Proteus autonomous mobile robot</a>, improving it to help the online retail giant efficiently manage fulfillment.</p>
+<p><i>Learn more about </i><a href="https://developer.nvidia.com/isaac-sim"><i>Isaac Sim</i></a><i>, powered by </i><a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>.</p>
+<p>&nbsp;</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/AWS-reinvent-robotics-blog-key-visual.png"
+			type="image/png"
+			width="2048"
+			height="1062"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/AWS-reinvent-robotics-blog-key-visual-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA GPUs on AWS to Offer 2x Simulation Leap in Omniverse Isaac Sim, Accelerating Smarter Robots]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Powers Training for Some of the Largest Amazon Titan Foundation Models</title>
+		<link>https://blogs.nvidia.com/blog/nemo-amazon-titan/</link>
+		
+		<dc:creator><![CDATA[Nirmala De]]></dc:creator>
+		<pubDate>Tue, 28 Nov 2023 17:19:07 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cloud Services]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Parallel Computing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68363</guid>
+
+					<description><![CDATA[Everything about large language models is big — giant models train on massive datasets across thousands of NVIDIA GPUs. That can pose a lot of big challenges for companies pursuing generative AI. NVIDIA NeMo, a framework for building, customizing and running LLMs, helps overcome these challenges. A team of experienced scientists and developers at Amazon <a class="read-more" href="https://blogs.nvidia.com/blog/nemo-amazon-titan/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Everything about large language models is big — giant models train on massive datasets across thousands of NVIDIA GPUs.</p>
+<p>That can pose a lot of big challenges for companies pursuing generative AI. <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework for building, customizing and running <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>, helps overcome these challenges.</p>
+<p>A team of experienced scientists and developers at Amazon Web Services creating <a href="https://aws.amazon.com/bedrock/titan/">Amazon Titan</a> <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation models</a> for <a href="https://aws.amazon.com/bedrock/">Amazon Bedrock</a>, a generative AI service for foundation models, has been using NVIDIA NeMo for over the past several months.</p>
+<p>“One key reason for us to work with NeMo is that it is extensible, comes with optimizations that allow us to run with high GPU utilization while also enabling us to scale to larger clusters so we can train and deliver models to our customers faster,” said Leonard Lausen, a senior applied scientist at AWS.</p>
+<p style="margin: 12.0pt 0in 12.0pt 0in;"><b>Think Big, Really Big</b></p>
+<p>Parallelism techniques in NeMo enable efficient LLM training at scale. When coupled with the Elastic Fabric Adapter from AWS, it allowed the team to spread its LLM across many GPUs to accelerate training.</p>
+<p>EFA provides AWS customers with an UltraCluster Networking infrastructure that can directly connect more than 10,000 GPUs and bypass the operating system and CPU using <a href="https://developer.nvidia.com/gpudirect">NVIDIA GPUDirect</a>.</p>
+<p>The combination allowed the AWS scientists to deliver excellent model quality — something that’s not possible at scale when relying solely on data parallelism approaches.</p>
+<h2><b>Framework Fits All Sizes</b></h2>
+<p>“The flexibility of NeMo,” Lausen said, “allowed AWS to tailor the training software for the specifics of the new Titan model, datasets and infrastructure.”</p>
+<p>AWS’s innovations include efficient streaming from Amazon Simple Storage Service (Amazon S3) to the GPU cluster. “It was easy to incorporate these improvements because NeMo builds upon popular libraries like PyTorch Lightning that standardize LLM training pipeline components,” Lausen said.</p>
+<p>AWS and NVIDIA aim to infuse products like NVIDIA NeMo and services like Amazon Titan with lessons learned from their collaboration for the benefit of customers.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Amazon-Titan-logo-KV.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="683"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Amazon-Titan-logo-KV-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Powers Training for Some of the Largest Amazon Titan Foundation Models]]></media:title>
+			<media:description type="html">Amazon Titan logo, a foundation model trained with NVIDIA NeMo</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>3D Artist Nourhan Ismail Brings Isometric Innovation ‘In the NVIDIA Studio’ With Adobe After Effects and Blender</title>
+		<link>https://blogs.nvidia.com/blog/ismail-adobe-after-effects-blender/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Tue, 28 Nov 2023 14:00:44 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[In the NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA Studio]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68394</guid>
+
+					<description><![CDATA[This week’s talented In the NVIDIA Studio artist, Nourhan Ismail, created a literal NVIDIA studio.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. </i></p>
+<p>This week’s talented <i>In the NVIDIA Studio</i> artist, Nourhan Ismail, created a literal NVIDIA studio.</p>
+<p>Her piece, called <i>Creator by Day, Gamer by Night</i>, was crafted with the isometric art style and impressive graphical fidelity Ismail’s known for, rich with vibrant colors and playful details. It also captures her “work hard, play hard” mentality as a 3D artist, interior designer and game level designer.</p>
+<p>The same art style is featured in the NVIDIA Studio Sessions YouTube miniseries led by Ismail, which provides step-by-step tutorials on how to create a low-poly bedroom, from inception to final render.</p>
+<p><iframe title="Creating Low Poly Bedroom in Blender w/ Nourhan Ismail" width="500" height="281" src="https://www.youtube.com/embed/videoseries?list=PL4w6jm6S2lzso-UjuP-cB0Nsv9NloOThB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Facial Animations Made Easier</b></h2>
+<p>Reallusion is the maker of <a href="https://www.reallusion.com/iclone/default.html">Reallusion iClone</a>, real-time 3D animation software built to produce professional animations for films and video games.</p>
+<p>To expedite character animation workflows, the company recently launched its <a href="https://mocap.reallusion.com/iclone-motion-live-mocap/accuface.html?_gl=1*1qxpyqc*_ga*MzYwNDE5ODQ4LjE3MDA2MDg2MDk.*_ga_Q3FS71VPKC*MTcwMDYwODYwOC4xLjEuMTcwMDYxMTQzNS40Mi4wLjA.">AccuFACE plug-in</a>, which accurately captures facial expressions from webcams and conventional video files, without the need for expensive, specialized equipment.</p>
+<p><iframe title="AccuFACE - Video-based AI Facial Mocap | Live from Webcam or Recorded Video | iClone 8" width="500" height="281" src="https://www.youtube.com/embed/WCzHLSss_xU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>The <a href="https://developer.nvidia.com/maxine">NVIDIA Maxine</a> software development platform, the foundational technology behind the revolutionary <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast app</a>, powers this incredible capability by weighing output and analyzing facial expressions and blendshapes to predict facial mesh animations.</p>
+<p>From there, the AccuFACE plug-in converts this data into facial mesh assets for creators to apply seamlessly. It also fine-tunes lip and tongue articulation using proprietary AccuLIPS technology.</p>
+<p><iframe title="Advanced Facial Animations With OpenUSD and AI" width="500" height="281" src="https://www.youtube.com/embed/XwtzEU91oAI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Download the <a href="https://mocap.reallusion.com/iclone-motion-live-mocap/accuface.html">plug-in</a> today, available to creators with <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> GPUs.</p>
+<h2><b>Turning Pain Into Beauty</b></h2>
+<p>Ismail’s creative journey began at age four as a form of escape from the armed conflict occurring in Syria, her homeland. During that time, Ismail’s family faced many difficulties, including the loss of their home.</p>
+<p>In the aftermath, she looked to her father, an accomplished artist and fashion designer, as a source of inspiration.</p>
+<p>“His encouragement propelled me to showcase the pinnacle of my abilities, reminding me that art has the power to transform pain into beauty,” she said.</p>
+<p>That encouragement has guided and fueled Ismail’s creative journey, eventually giving rise to her signature, single-room isometric style, an homage to the power of resilience and finding beauty in adversity.</p>
+<figure id="attachment_68401" aria-describedby="caption-attachment-68401" style="width: 500px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68401" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-500x500.png" alt="" width="500" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w.png 1280w" sizes="(max-width: 500px) 100vw, 500px" /></a><figcaption id="caption-attachment-68401" class="wp-caption-text">Warm and homey.</figcaption></figure>
+<p>“Starting with a single room, I delve into interior design, crafting spaces that reflect the comfort and joy I yearned for during challenging times,” she said. “To me, overcoming adversity proves that even from the harshest circumstances, beauty can emerge.”</p>
+<p>Ismail started as a self-taught 3D artist, driven by a passion to learn the intricacies of creating digital masterpieces.</p>
+<p>“Posting my works became a personal gauge of improvement — not for validation, but as a record of my learning curve,” she said.</p>
+<figure id="attachment_68404" aria-describedby="caption-attachment-68404" style="width: 500px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68404" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-500x500.png" alt="" width="500" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w.png 1280w" sizes="(max-width: 500px) 100vw, 500px" /></a><figcaption id="caption-attachment-68404" class="wp-caption-text">Beautifully conceived, masterfully executed.</figcaption></figure>
+<p>Each of Ismail’s pieces is a testament to her evolving skills, dedication and love for sharing her craft, especially with her father.</p>
+<p>In fact, she dedicated her first isometric house to her father. “That was the happiest moment, to create something inspiring and make someone happy,” she said.</p>
+<h2><b>Isometric Art</b></h2>
+<p>Ismail first collects reference material on Adobe Behance to gain inspiration on ways to mix different art styles.</p>
+<p>She then opens Blender and starts sketching in 3D. Blender Cycles’ RTX-accelerated OptiX ray tracing, powered by her <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/">GeForce RTX 3080 Ti GPU</a>, ensured smooth viewport movement.</p>
+<figure id="attachment_68422" aria-describedby="caption-attachment-68422" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-scaled.jpg"><img loading="lazy" decoding="async" class="wp-image-68422 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68422" class="wp-caption-text">A gorgeous work in progress.</figcaption></figure>
+<p>While the models are still fairly rudimentary, Ismail calculates the angles that light should be coming in from.</p>
+<p>“Lighting is an emotional element,” she said. “The lighting of each piece evokes different emotions and a certain idiosyncratic introspectiveness, making the experience unique to each person.”</p>
+<figure id="attachment_68407" aria-describedby="caption-attachment-68407" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68407" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68407" class="wp-caption-text">The NVIDIA Studio has NVIDIA Canvas!</figcaption></figure>
+<p>Her trick is to regularly switch between rich, colorful scenes and plain color models to measure the emotional weight and visual impact. She either creates the custom textures herself or downloads premade ones online when on a time crunch.</p>
+<figure id="attachment_68410" aria-describedby="caption-attachment-68410" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68410" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68410" class="wp-caption-text">Ismail’s incredible detail on full display.</figcaption></figure>
+<p>Then, she plays with camera angles to analyze depth shadows and lighting, setting up animations and sequence shots in Blender. There, Blender Cycles’ RTX-accelerated OptiX ray tracing delivered seamless viewport movement.</p>
+<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-68394-1" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-nvidia-camera-animation-1280w.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-nvidia-camera-animation-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-nvidia-camera-animation-1280w.mp4</a></video></div>
+<p>&nbsp;</p>
+<p>Final touch-ups are done in post-production in Adobe After Effects. Over 30 GPU-accelerated effects sped the process, allowed Ismail to complete the project with time to spare.</p>
+<figure id="attachment_68416" aria-describedby="caption-attachment-68416" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68416" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68416" class="wp-caption-text">“Creator by Day, Gamer by Night” in dark mode.</figcaption></figure>
+<p>“There will always be hard times, so never give up and keep believing in yourself,” Ismail encourages content creators.</p>
+<figure id="attachment_68419" aria-describedby="caption-attachment-68419" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68419" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-672x252.png" alt="" width="672" height="252" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-672x252.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-400x150.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-768x288.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-842x316.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-406x152.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-188x71.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68419" class="wp-caption-text">Digital 3D artist Nourhan Ismail.</figcaption></figure>
+<p>Check out Ismail’s <a href="https://www.instagram.com/noah.pabllooll/">Instagram</a> for more spectacular isometric art.</p>
+<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
+</div>]]></content:encoded>
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-nvidia-camera-animation-1280w.mp4" length="1210576" type="video/mp4" />
+
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/nv-blog-header-preview-1280x680-3.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/nv-blog-header-preview-1280x680-3-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[3D Artist Nourhan Ismail Brings Isometric Innovation ‘In the NVIDIA Studio’ With Adobe After Effects and Blender]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Medical Imaging AI Made Easier: NVIDIA Offers MONAI as Hosted Cloud Service</title>
 		<link>https://blogs.nvidia.com/blog/monai-cloud-apis-rsna/</link>
 		
@@ -94,14 +336,14 @@
 <p>A collaboration between Chromebook Plus, CD PROJEKT RED and GeForce NOW brought an immersive 3D activation to Times Square over the weekend, containing a hidden Easter egg for <i>Cyberpunk 2077</i> players.</p>
 <p>Plus, this holiday season, give the gift of high-performance cloud gaming with <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-nov-16/">a free, three-month PC Game Pass subscription</a> included with a six-month GeForce NOW <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate membership</a>.</p>
 <h2><b>Eye Spy</b></h2>
-<figure id="attachment_68356" aria-describedby="caption-attachment-68356" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-68356" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-672x378.png" alt="Chromebook Plus activation with GeForce NOW and Cyberpunk, Times Square" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68356" class="wp-caption-text"><em>Crack the code now with Chromebook Plus, GeForce NOW and “Cyberpunk 2077.”</em></figcaption></figure>
+<figure id="attachment_68356" aria-describedby="caption-attachment-68356" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-68356" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-672x378.png" alt="Chromebook Plus activation with GeForce NOW and Cyberpunk, Times Square" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chromebook_Plus_GeForceNOW_Time_Square_Cyberpunk2077-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68356" class="wp-caption-text"><em>Crack the code now with Chromebook Plus, GeForce NOW and “Cyberpunk 2077.”</em></figcaption></figure>
 <p>Times Square was transformed into a futuristic dystopia last weekend by a stunning 3D <i>Cyberpunk 2077</i> activation. The immersive display showcased the power of GeForce NOW on a Chromebook Plus, enabling gamers to stream thousands of titles from popular digital gaming stores from the cloud, right out of the box.</p>
-<p><iframe title="Chromebook Plus presents Cyberpunk 2077 x GeForce NOW" width="500" height="281" src="https://www.youtube.com/embed/G_oqD3ytjVU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Chromebook Plus presents Cyberpunk 2077 x GeForce NOW" width="500" height="281" src="https://www.youtube.com/embed/G_oqD3ytjVU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Long-time <i>Cyberpunk 2077 </i>fans were also challenged to try their hand at spotting a code hidden in the activation — the latest hint in a long line of clues needed to solve a riddle that has had players guessing for the past three years.</p>
 <p>Chromebook owners with an <a href="http://geforcenow.com">Ultimate or Priority membership</a> can explore <i>Cyberpunk 2077</i>’s Night City with <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX ON</a> for the most immersive gaming experience, including the “Phantom Liberty” expansion and 2.0 update. Google and NVIDIA are offering all Chromebook owners <a href="https://www.google.com/intl/en_us/chromebook/perks/">three free months of a GeForce NOW Priority membership</a> to get gamers started.</p>
 <p>And those interested in leveling up to the highest-performing tier can get three free months of a GeForce NOW Ultimate membership with the purchase of a Cloud Gaming Chromebook. Find more details on how to redeem the offer on the <a href="https://www.google.com/intl/en_us/chromebook/perks/">Chromebook Perks page</a>.</p>
 <h2><b>Grateful for Great Games</b></h2>
-<figure id="attachment_68353" aria-describedby="caption-attachment-68353" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-68353" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-672x378.jpg" alt="Chivalry 2 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68353" class="wp-caption-text"><em>That’s one way to carve a turkey.</em></figcaption></figure>
+<figure id="attachment_68353" aria-describedby="caption-attachment-68353" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-68353" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-672x378.jpg" alt="Chivalry 2 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Chivalry_2-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68353" class="wp-caption-text"><em>That’s one way to carve a turkey.</em></figcaption></figure>
 <p>Get the weekend started with the new weekly games list:<i></i></p>
 <ul>
 <li><i>Breathedge</i> (<a href="https://www.xbox.com/games/store/breathedge/9PHJSGJNX37S?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on Microsoft Store)</li>
@@ -341,8 +583,7 @@
 <p>Before any modeling takes place, Carpenen lights the scene — but without textures.</p>
 <p>“This is to tell the story of the artwork, as light intends to give artwork an emotional flow, alongside as well as color and materials,” he said.</p>
 <p>Carpenen initially sculpts his models in ZBrush using customizable brushes to shape, texture and paint his virtual clay in a real-time environment with instant feedback.</p>
-<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-68261-1" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Turkey-Blender-Timelapse-video.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Turkey-Blender-Timelapse-video.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/11/Turkey-Blender-Timelapse-video.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68261-2" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Turkey-Blender-Timelapse-video.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Turkey-Blender-Timelapse-video.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/11/Turkey-Blender-Timelapse-video.mp4</a></video></div>
 <p>&nbsp;</p>
 <p>He then browses the Quixel Megascans library for models that can further add realism, such as garlic cloves and rosemary garnishes for his turkey project.</p>
 <h2><b>Rare-in for More</b></h2>
@@ -355,7 +596,7 @@
 <p>Once the renders are ready, Carpenen imports them into Adobe Substance 3D Painter to apply custom colors and textures.</p>
 <p><iframe loading="lazy" title="Blackberry Pie - Blender Timelapse" width="500" height="281" src="https://www.youtube.com/embed/xPA6-ZW293Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>There, Carpenen uses RTX-accelerated light and ambient occlusion baking — though not in the oven — to optimize his assets, such as this berry pie, in mere seconds.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68261-2" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Blackberry-Pie-Blender-Timelapse-video.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Blackberry-Pie-Blender-Timelapse-video.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/11/Blackberry-Pie-Blender-Timelapse-video.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68261-3" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Blackberry-Pie-Blender-Timelapse-video.mp4?_=3" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/Blackberry-Pie-Blender-Timelapse-video.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/11/Blackberry-Pie-Blender-Timelapse-video.mp4</a></video></div>
 <p>&nbsp;</p>
 <p>He also had the option to set up a <a href="https://www.nvidia.com/en-us/omniverse/ecosystem/">live link</a> connection between 3D Painter and <a href="https://www.nvidia.com/en-us/omniverse/creators/">NVIDIA Omniverse</a>, a development platform for connecting and building <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a>-based tools and applications, via the <a href="https://www.nvidia.com/en-us/omniverse/apps/usd-composer/">USD Composer foundation app</a>.</p>
 <p><iframe loading="lazy" title="Adobe Substance 3D Painter Connector Overview with Omniverse USD Composer" width="500" height="281" src="https://www.youtube.com/embed/_XRN2qAWJN0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
@@ -919,208 +1160,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[More Games, More Wins: PC Game Pass Included With Six-Month GeForce NOW Memberships]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Ringing in the Future: NVIDIA and Amdocs Bring Custom Generative AI to Global Telco Industry</title>
-		<link>https://blogs.nvidia.com/blog/amdocs-telco-industry/</link>
-		
-		<dc:creator><![CDATA[Lilac Ilan]]></dc:creator>
-		<pubDate>Wed, 15 Nov 2023 16:00:46 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[NVIDIA DGX]]></category>
-		<category><![CDATA[Telecommunications]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=67989</guid>
-
-					<description><![CDATA[The telecommunications industry — the backbone of today’s interconnected world — is valued at a staggering $1.7 trillion globally, according to IDC. It’s a massive operation, as telcos process hundreds of petabytes of data in their networks each day. That magnitude is only increasing, as the total amount of data transacted globally is forecast to <a class="read-more" href="https://blogs.nvidia.com/blog/amdocs-telco-industry/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The telecommunications industry — the backbone of today’s interconnected world — is valued at a staggering $1.7 trillion globally, <a href="https://www.idc.com/getdoc.jsp?containerId=prUS51360523">according to IDC</a>.</p>
-<p>It’s a massive operation, as telcos process hundreds of petabytes of data in their networks each day. That magnitude is only increasing, as the total amount of data transacted globally is forecast to grow to more than <a href="https://www.statista.com/statistics/871513/worldwide-data-created/">180 zettabytes by 2025</a>.</p>
-<p>To meet this demand for data processing and analysis, telcos are turning to <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a>, which is improving efficiency and productivity across industries.</p>
-<p>NVIDIA announced an <a href="https://nvidianews.nvidia.com/news/nvidia-introduces-generative-ai-foundry-service-on-microsoft-azure-for-enterprises-and-startups-worldwide">AI foundry service</a> — a collection of NVIDIA AI Foundation Models, <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a> framework and tools, and <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> AI supercomputing and services — that gives enterprises an end-to-end solution for creating and optimizing custom generative AI models.</p>
-<p>Using the AI foundry service, Amdocs, a leading provider of software and services for communications and media providers, will optimize enterprise-grade <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">large language models</a> for the telco and media industries to efficiently deploy generative AI use cases across their businesses, from customer experiences to network operations and provisioning. The LLMs will run on NVIDIA accelerated computing as part of the <a href="https://www.amdocs.com/products-services/amaiz-telco-grade-genai-framework">Amdocs amAIz framework</a>.</p>
-<p>The collaboration builds on the previously announced <a href="https://www.amdocs.com/news-press/amdocs-and-microsoft-expand-strategic-partnership-reimagine-telco-experience">Amdocs-Microsoft partnership</a>, enabling service providers to adopt these applications in secure, trusted environments, including on premises and in the cloud.</p>
-<h2><b>Custom Models for Custom Results</b></h2>
-<p>While preliminary applications of <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> used broad datasets, enterprises have become increasingly focused on developing custom models to perform specialized, industry-specific skills.</p>
-<p>By training models on proprietary data, telcos can deliver tailored solutions that produce more accurate results for their use cases.</p>
-<p>To simplify the development, tuning and deployment of such custom models, Amdocs is integrating the new NVIDIA AI foundry service.</p>
-<p>Equipped with these new generative AI capabilities — including <a href="https://blogs.nvidia.com/blog/ai-chatbot-guardrails-nemo/">guardrail</a> features — service providers can enhance performance, optimize resource utilization and flexibly scale to meet future needs.</p>
-<h2><b>Amdocs’ Global Telco Ecosystem Footprint</b></h2>
-<p>More than 350 of the world’s leading telecom and media companies across 90 countries take advantage of Amdocs services each day, including 27 of the world’s top 30 service providers, according to OMDIA.<sup>(1)</sup> Powering more than 1.7 billion daily digital journeys, Amdocs platforms impact more than 3 billion people around the world.</p>
-<p>NVIDIA and Amdocs are exploring several generative AI use cases to simplify and improve operations by providing secure, cost-effective, and high-performance generative AI capabilities.</p>
-<p>Initial use cases span customer care, including accelerating resolution of customer inquiries by drawing information from across company data.</p>
-<p>And in network operations, the companies are exploring ways to generate solutions to address configuration, coverage or performance issues as they arise.</p>
-<p><sup>(1)</sup> Source: OMDIA 2022 revenue estimates, excludes China.</p>
-<p><i>Stay up to date on the latest </i><a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/news/"><i>NVIDIA generative AI news and technologies</i></a><i> and</i><a href="https://azure.microsoft.com/en-us/blog/"> <i>Microsoft Azure AI News</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Amdocs-logo.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Amdocs-logo-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Ringing in the Future: NVIDIA and Amdocs Bring Custom Generative AI to Global Telco Industry]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>In the Fast Lane: NVIDIA Announces Omniverse Cloud Services on Microsoft Azure to Accelerate Automotive Digitalization</title>
-		<link>https://blogs.nvidia.com/blog/omniverse-cloud-services-microsoft-azure/</link>
-		
-		<dc:creator><![CDATA[Danny Shapiro]]></dc:creator>
-		<pubDate>Wed, 15 Nov 2023 16:00:39 +0000</pubDate>
-				<category><![CDATA[Autonomous Machines]]></category>
-		<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Driving]]></category>
-		<category><![CDATA[NVIDIA DRIVE Sim]]></category>
-		<category><![CDATA[NVIDIA Isaac Sim]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Omniverse Enterprise]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68080</guid>
-
-					<description><![CDATA[Automotive companies are transforming every phase of their product lifecycle — evolving their primarily physical, manual processes into software-driven, AI-enhanced digital systems. To help them save costs and reduce lead times, NVIDIA is announcing two new simulation engines on Omniverse Cloud: the virtual factory simulation engine and the autonomous vehicle (AV) simulation engine. Omniverse Cloud, <a class="read-more" href="https://blogs.nvidia.com/blog/omniverse-cloud-services-microsoft-azure/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Automotive companies are transforming every phase of their product lifecycle — evolving their primarily physical, manual processes into software-driven, AI-enhanced digital systems.</p>
-<p>To help them save costs and reduce lead times, NVIDIA is announcing two new simulation engines on <a href="https://www.nvidia.com/en-us/omniverse/cloud/">Omniverse Cloud</a>: the virtual factory simulation engine and the autonomous vehicle (AV) simulation engine.</p>
-<p>Omniverse Cloud, a platform-as-a-service for developing and deploying applications for industrial digitalization, is hosted on Microsoft Azure. This one-stop shop enables automakers worldwide to unify digitalization across their core product and business processes. It allows enterprises to achieve faster production and more efficient operations, improving time to market and enhancing sustainability initiatives.</p>
-<p>For design, engineering and manufacturing teams, digitalization streamlines their work, converting once primarily manual industrial processes into efficient systems for concept and styling; AV development, testing and validation; and factory planning.</p>
-<h2><b>Virtual Factory Simulation Engine</b></h2>
-<p>The Omniverse Cloud virtual factory simulation engine is a collection of customizable developer applications and services that enable factory planning teams to connect large-scale industrial datasets while collaborating, navigating and reviewing them in real time.</p>
-<p>Design teams working with 3D data can assemble virtual factories and share their work with thousands of planners who can view, annotate and update the full-fidelity factory dataset from lightweight devices. By simulating virtual factories on Omniverse Cloud, automakers can increase throughput and production quality while saving years of effort and millions of dollars that would result from making changes once construction is underway.</p>
-<p>On Omniverse Cloud, teams can create interoperability between existing software applications such as Autodesk Factory Planning, which supports the entire lifecycle for building, mechanical, electrical, and plumbing and factory lines, as well as Siemens’ NX, Process Simulate and Teamcenter Visualization software and the JT file format. They can share knowledge and data in real time in live, virtual factory reviews across 2D devices or in <a href="https://blogs.nvidia.com/blog/what-is-extended-reality/">extended reality</a>.</p>
-<p><a href="https://www.telekom.com/en/media/media-information/archive/t-systems-announces-digital-twin-offering-powered-by-nvidia-omniverse-1051446">T-Systems</a>, a leading IT solutions provider for Europe’s largest automotive manufacturers, is building and deploying a custom virtual factory application that its customers can deploy in Omniverse Cloud.</p>
-<p><a href="https://www.softserveinc.com/en-us/our-partners/nvidia-omniverse">SoftServe</a>, an elite member of the NVIDIA Service Delivery Partner program, is also developing custom factory simulation and visualization solutions on this Omniverse Cloud engine, covering factory design, production planning and control.</p>
-<h2><b>AV Simulation Engine</b></h2>
-<p>The AV simulation engine is a service that delivers physically based sensor simulation, enabling AV and robotics developers to run autonomous systems in a closed-loop virtual environment.</p>
-<p>The next generation of AV architectures will be built on large, unified AI models that combine layers of the vehicle stack, including perception, planning and control. Such new architectures call for an integrated approach to development.</p>
-<p>With previous architectures, developers could train and test these layers independently, as they were governed by different models. For example, simulation could be used to develop a vehicle’s planning and control system, which only needs basic information about objects in a scene — such as the speed and distance of surrounding vehicles — while perception networks could be trained and tested on recorded sensor data.</p>
-<p>However, using simulation to develop an advanced unified AV architecture requires sensor data as the input. For a simulator to be effective, it must be able to simulate vehicle sensors, such as cameras, radars and lidars, with high fidelity.</p>
-<p>To address this challenge, NVIDIA is bringing state-of-the-art sensor simulation pipelines used in <a href="https://www.nvidia.com/en-us/self-driving-cars/simulation/">DRIVE Sim</a> and <a href="https://developer.nvidia.com/isaac-sim">Isaac Sim</a> to Omniverse Cloud on Microsoft Azure.</p>
-<p>Omniverse Cloud sensor simulation provides AV and robotics workflows with high-fidelity, physically based simulation for cameras, radars, lidars and other types of sensors. It can be connected to existing simulation applications, whether developed in-house or provided by a third party, via Omniverse Cloud application programming interfaces for integration into workflows.</p>
-<h2><b>Fast Track to Digitalization</b></h2>
-<p>The factory simulation engine is now available to customers via an Omniverse Cloud enterprise private offer through the <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nvidia.nvidia-omniverse-cloud?tab=Overview">Azure Marketplace</a>, which provides access to <a href="https://www.nvidia.com/en-us/data-center/products/ovx/">NVIDIA OVX</a> systems and fully managed Omniverse software, reference applications and workflows. The sensor simulation engine is coming soon.</p>
-<p>Enterprises can now also deploy <a href="https://www.nvidia.com/en-us/omniverse/enterprise/">Omniverse Enterprise</a> on new <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nvidia.nvidia-omniverse-workstation?tab=Overview">optimized Azure virtual machines</a>.</p>
-<p><i>Learn more on </i><a href="https://ignite.microsoft.com/en-US/partners/3c7c8276-fad8-4276-8977-5a7d4d383a45"><i>NVIDIA’s Microsoft Ignite showcase page</i></a><i>. </i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Omniverse-cloud-services-simulation.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Omniverse-cloud-services-simulation-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[In the Fast Lane: NVIDIA Announces Omniverse Cloud Services on Microsoft Azure to Accelerate Automotive Digitalization]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>New NVIDIA H100, H200 Tensor Core GPU Instances Coming to Microsoft Azure to Accelerate AI Workloads</title>
-		<link>https://blogs.nvidia.com/blog/microsoft-azure-hopper-gpu-instances/</link>
-		
-		<dc:creator><![CDATA[Dave Salvator]]></dc:creator>
-		<pubDate>Wed, 15 Nov 2023 16:00:37 +0000</pubDate>
-				<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
-		<category><![CDATA[NVLink]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68115</guid>
-
-					<description><![CDATA[As NVIDIA continues to collaborate with Microsoft to build state-of-the-art AI infrastructure, Microsoft is introducing additional H100-based virtual machines to Microsoft Azure to accelerate demanding AI workloads. At its Ignite conference in Seattle today, Microsoft announced its new NC H100 v5 VM series for Azure, the industry’s first cloud instances featuring NVIDIA H100 NVL GPUs. <a class="read-more" href="https://blogs.nvidia.com/blog/microsoft-azure-hopper-gpu-instances/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>As NVIDIA continues to collaborate with Microsoft to build state-of-the-art AI infrastructure, Microsoft is introducing additional H100-based virtual machines to Microsoft Azure to accelerate demanding AI workloads.</p>
-<p>At its Ignite conference in Seattle today, Microsoft announced its new NC H100 v5 VM series for Azure, the industry’s first cloud instances featuring NVIDIA H100 NVL GPUs.</p>
-<p>This offering brings together a pair of PCIe-based H100 GPUs connected via <a href="https://www.nvidia.com/en-us/data-center/nvlink/">NVIDIA NVLink</a>, with nearly 4 petaflops of AI compute and 188GB of faster HBM3 memory. The NVIDIA H100 NVL GPU can deliver up to 12x higher performance on GPT-3 175B over the previous generation and is ideal for inference and mainstream training workloads.</p>
-<p>Additionally, Microsoft announced plans to add the <a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA H200 Tensor Core GPU</a> to its Azure fleet next year to support larger model inferencing with no increase in latency. This new offering is purpose-built to accelerate the largest AI workloads, including <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a> and <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> models.</p>
-<p>The H200 GPU brings dramatic increases both in memory capacity and bandwidth using the latest-generation HBM3e memory. Compared to the H100, this new GPU will offer 141GB of HBM3e memory (1.8x more) and 4.8 TB/s of peak memory bandwidth (a 1.4x increase).</p>
-<h2><b>Cloud Computing Gets Confidential</b></h2>
-<p>Further expanding availability of NVIDIA-accelerated generative AI computing for Azure customers, Microsoft announced another NVIDIA-powered instance: the NCC H100 v5.</p>
-<p>These Azure confidential VMs with NVIDIA H100 Tensor Core GPUs allow customers to protect the confidentiality and integrity of their data and applications in use, in memory, while accessing the unsurpassed acceleration of H100 GPUs. These GPU-enhanced confidential VMs will be coming soon to private preview.</p>
-<p>To learn more about the new confidential VMs with NVIDIA H100 Tensor Core GPUs, and sign up for the preview, read the blog.</p>
-<p><i>Learn more about NVIDIA-powered Azure instances on the </i><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-gpu"><i>GPU VM information page</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/nvidia-h100-sxm-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/nvidia-h100-sxm-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[New NVIDIA H100, H200 Tensor Core GPU Instances Coming to Microsoft Azure to Accelerate AI Workloads]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Fast-Tracks Custom Generative AI Model Development for Enterprises</title>
-		<link>https://blogs.nvidia.com/blog/custom-generative-ai-model-development/</link>
-		
-		<dc:creator><![CDATA[Erik Pounds]]></dc:creator>
-		<pubDate>Wed, 15 Nov 2023 16:00:32 +0000</pubDate>
-				<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Software]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68048</guid>
-
-					<description><![CDATA[Today’s landscape of free, open-source large language models (LLMs) is like an all-you-can-eat buffet for enterprises. This abundance can be overwhelming for developers building custom generative AI applications, as they need to navigate unique project and business requirements, including compatibility, security and the data used to train the models. NVIDIA AI Foundation Models — a <a class="read-more" href="https://blogs.nvidia.com/blog/custom-generative-ai-model-development/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Today’s landscape of free, open-source <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">large language models</a> (LLMs) is like an all-you-can-eat buffet for enterprises. This abundance can be overwhelming for developers building custom generative AI applications, as they need to navigate unique project and business requirements, including compatibility, security and the data used to train the models.</p>
-<p><a href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/">NVIDIA AI Foundation Models</a> — a curated collection of enterprise-grade pretrained models — give developers a running start for bringing custom generative AI to their enterprise applications.</p>
-<h2><b>NVIDIA-Optimized Foundation Models Speed Up Innovation </b></h2>
-<p>NVIDIA AI Foundation Models can be experienced through a simple user interface or API, directly from a browser. Additionally, these models can be accessed from NVIDIA AI Foundation Endpoints to test model performance from within their enterprise applications.</p>
-<p>Available models include leading community models such as Llama 2, Stable Diffusion XL and Mistral, which are formatted to help developers streamline customization with proprietary data. Additionally, models have been optimized with <a href="https://developer.nvidia.com/tensorrt#inference">NVIDIA TensorRT-LLM</a> to deliver the highest throughput and lowest latency and to run at scale on any NVIDIA GPU-accelerated stack. For instance, the Llama 2 model optimized with TensorRT-LLM runs nearly <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">2x faster</a> on NVIDIA H100.</p>
-<p>The new NVIDIA family of <a href="https://developer.nvidia.com/blog/nvidia-ai-foundation-models-build-custom-enterprise-chatbots-and-co-pilots-with-production-ready-llms/">Nemotron-3 8B foundation models</a> supports the creation of today’s most advanced enterprise chat and Q&amp;A applications for a broad range of industries, including healthcare, telecommunications and financial services.</p>
-<p>The models are a starting point for customers building secure, production-ready generative AI applications, are trained on responsibly sourced datasets and operate at comparable performance to much larger models. This makes them ideal for enterprise deployments.</p>
-<p>Multilingual capabilities are a key differentiator of the Nemotron-3 8B models. Out of the box, the models are proficient in over 50 languages, including English, German, Russian, Spanish, French, Japanese, Chinese, Korean, Italian and Dutch.</p>
-<h2><b>Fast-Track Customization to Deployment</b></h2>
-<p>Enterprises leveraging generative AI across business functions need an AI foundry to customize models for their unique applications. NVIDIA’s AI foundry features three elements — NVIDIA AI Foundation Models, <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a> framework and tools, and <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> AI supercomputing services. Together, these provide an end-to-end enterprise offering for creating custom generative AI models.</p>
-<p>Importantly, enterprises own their customized models and can deploy them virtually anywhere on accelerated computing with enterprise-grade security, stability and support using <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software.</p>
-<p>NVIDIA AI Foundation Models are freely available <a href="https://catalog.ngc.nvidia.com/ai-foundation-models">to experiment with now on the NVIDIA NGC catalog</a> and Hugging Face, and are also hosted in the Microsoft Azure AI model catalog.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/NVIDIA-AI-Foundation-Models.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/NVIDIA-AI-Foundation-Models-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Fast-Tracks Custom Generative AI Model Development for Enterprises]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
