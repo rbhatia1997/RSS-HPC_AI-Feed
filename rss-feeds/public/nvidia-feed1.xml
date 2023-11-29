@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 28 Nov 2023 17:21:42 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 28 Nov 2023 22:15:16 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,68 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.1</generator>
 	<item>
+		<title>Embracing Transformation: AWS and NVIDIA Forge Ahead in Generative AI and Cloud Innovation</title>
+		<link>https://blogs.nvidia.com/blog/aws-nvidia/</link>
+		
+		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
+		<pubDate>Tue, 28 Nov 2023 19:28:06 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Supercomputing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68436</guid>
+
+					<description><![CDATA[Amazon Web Services and NVIDIA will bring the latest generative AI technologies to enterprises worldwide. Combining AI and cloud computing, NVIDIA founder and CEO Jensen Huang joined AWS CEO Adam Selipsky Tuesday on stage at AWS re:Invent 2023 at the Venetian Expo Center in Las Vegas. Selipsky said he was “thrilled” to announce the expansion <a class="read-more" href="https://blogs.nvidia.com/blog/aws-nvidia/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Amazon Web Services and NVIDIA will bring the latest generative AI technologies to enterprises worldwide.</p>
+<p>Combining AI and cloud computing, NVIDIA founder and CEO Jensen Huang joined AWS CEO Adam Selipsky Tuesday on stage at AWS re:Invent 2023 at the Venetian Expo Center in Las Vegas.</p>
+<p>Selipsky said he was “thrilled” to announce the expansion of the partnership between AWS and NVIDIA with more offerings that will deliver advanced graphics, machine learning and generative AI infrastructure.</p>
+<p>The two announced that AWS will be the first cloud provider to adopt the latest NVIDIA GH200 NVL32 Grace Hopper Superchip with new multi-node NVLink technology, that AWS is bringing <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> to AWS, and that AWS has integrated some of NVIDIA’s most popular software libraries.</p>
+<p>Huang started the conversation by highlighting the integration of key NVIDIA libraries with AWS, encompassing a range from <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> to <a href="https://developer.nvidia.com/cuquantum-sdk">cuQuantum</a> to <a href="https://blogs.nvidia.com/blog/bionemo-on-aws-generative-ai-drug-discovery/">BioNeMo</a>, catering to domains like data processing, quantum computing and digital biology.</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-68437" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1.png" alt="" width="2048" height="1152" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-1280x720.png 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
+<p>The partnership opens AWS to millions of developers and the nearly 40,000 companies who are using these libraries, Huang said, adding that it’s great to see AWS expand its cloud instance offerings to include NVIDIA’s new L4, L40S and, soon, H200 GPUs.</p>
+<p>Selipsky then introduced the AWS debut of the NVIDIA GH200 Grace Hopper Superchip, a significant advancement in cloud computing, and prompted Huang for further details.</p>
+<p>“Grace Hopper, which is GH200, connects two revolutionary processors together in a really unique way,” Huang said. He explained that the GH200 connects NVIDIA’s Grace Arm CPU with its H200 GPU using a chip-to-chip interconnect called NVLink, at an astonishing one terabyte per second.</p>
+<p>Each processor has direct access to the high-performance HBM and efficient LPDDR5X memory. This configuration results in 4 petaflops of processing power and 600GB of memory for each superchip.</p>
+<p>AWS and NVIDIA connect 32 Grace Hopper Superchips in each rack using a new NVLink switch. Each 32 GH200 NVLink-connected node can be a single Amazon EC2 instance. When these are integrated with AWS Nitro and EFA networking, customers can connect GH200 NVL32 instances to scale to thousands of GH200 Superchips</p>
+<p>“With AWS Nitro, that becomes basically one giant virtual GPU instance,” Huang said.</p>
+<p>The combination of AWS expertise in highly scalable cloud computing plus NVIDIA innovation with Grace Hopper will make this an amazing platform that delivers the highest performance for complex generative AI workloads, Huang said.</p>
+<p>&#8220;It&#8217;s great to see the infrastructure, but it extends to the software, the services and all the other workflows that they have,&#8221; Selipsky said, introducing NVIDIA DGX Cloud on AWS.</p>
+<p>This partnership will bring about the first DGX Cloud AI supercomputer powered by the GH200 Superchips, demonstrating the power of AWS’s cloud infrastructure and NVIDIA’s AI expertise.</p>
+<p>Following up, Huang announced that this new DGX Cloud supercomputer design in AWS, codenamed Project Ceiba, will serve as NVIDIA’s newest AI supercomputer as well, for its own AI research and development.</p>
+<p><img decoding="async" class="aligncenter size-full wp-image-68440" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2.png" alt="" width="3840" height="2160" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide2-1280x720.png 1280w" sizes="(max-width: 3840px) 100vw, 3840px" /><br />
+Named after the majestic Amazonian Ceiba tree, the Project Ceiba DGX Cloud cluster incorporates 16,384 GH200 Superchips to achieve 65 exaflops of AI processing power, Huang said.</p>
+<p>Ceiba will be the world’s first GH200 NVL32 AI supercomputer built and the newest AI supercomputer in NVIDIA DGX Cloud, Huang said.</p>
+<p>Huang described Project Ceiba AI supercomputer as “utterly incredible,” saying it will be able to reduce the training time of the largest language models by half.</p>
+<p>NVIDIA’s AI engineering teams will use this new supercomputer in DGX Cloud to advance AI for graphics, LLMs, image/video/3D generation, digital biology, robotics, self-driving cars, <a href="https://www.nvidia.com/en-us/high-performance-computing/earth-2/">Earth-2 climate prediction</a> and more, Huang said.</p>
+<p>“DGX is NVIDIA’s cloud AI factory,” Huang said, noting that AI is now key to doing NVIDIA’s own work in everything from computer graphics to creating digital biology models to robotics to climate simulation and modeling.</p>
+<p>“DGX Cloud is also our AI factory to work with enterprise customers to build custom AI models,” Huang said. “They bring data and domain expertise; we bring AI technology and infrastructure.”</p>
+<p>In addition, Huang also announced that AWS will be bringing four Amazon EC2 instances based on the NVIDIA GH200 NVL, H200, L40S, L4 GPUs, coming to market early next year.</p>
+<p>Selipsky wrapped up the conversation by announcing that GH200-based instances and DGX Cloud will be available on AWS in the coming year.<br />
+<b><br />
+</b><i>You can catch the discussion and Selipsky’s entire keynote on AWS’s YouTube channel. </i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/AWS-NVIDIA.jpg"
+			type="image/jpeg"
+			width="1920"
+			height="1098"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/AWS-NVIDIA-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Embracing Transformation: AWS and NVIDIA Forge Ahead in Generative AI and Cloud Innovation]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA BioNeMo Enables Generative AI for Drug Discovery on AWS</title>
 		<link>https://blogs.nvidia.com/blog/bionemo-on-aws-generative-ai-drug-discovery/</link>
 		
@@ -132,7 +194,7 @@
 		<title>NVIDIA Powers Training for Some of the Largest Amazon Titan Foundation Models</title>
 		<link>https://blogs.nvidia.com/blog/nemo-amazon-titan/</link>
 		
-		<dc:creator><![CDATA[Nirmala De]]></dc:creator>
+		<dc:creator><![CDATA[Nirmalya De]]></dc:creator>
 		<pubDate>Tue, 28 Nov 2023 17:19:07 +0000</pubDate>
 				<category><![CDATA[Deep Learning]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
@@ -204,10 +266,10 @@
 <h2><b>Facial Animations Made Easier</b></h2>
 <p>Reallusion is the maker of <a href="https://www.reallusion.com/iclone/default.html">Reallusion iClone</a>, real-time 3D animation software built to produce professional animations for films and video games.</p>
 <p>To expedite character animation workflows, the company recently launched its <a href="https://mocap.reallusion.com/iclone-motion-live-mocap/accuface.html?_gl=1*1qxpyqc*_ga*MzYwNDE5ODQ4LjE3MDA2MDg2MDk.*_ga_Q3FS71VPKC*MTcwMDYwODYwOC4xLjEuMTcwMDYxMTQzNS40Mi4wLjA.">AccuFACE plug-in</a>, which accurately captures facial expressions from webcams and conventional video files, without the need for expensive, specialized equipment.</p>
-<p><iframe title="AccuFACE - Video-based AI Facial Mocap | Live from Webcam or Recorded Video | iClone 8" width="500" height="281" src="https://www.youtube.com/embed/WCzHLSss_xU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="AccuFACE - Video-based AI Facial Mocap | Live from Webcam or Recorded Video | iClone 8" width="500" height="281" src="https://www.youtube.com/embed/WCzHLSss_xU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>The <a href="https://developer.nvidia.com/maxine">NVIDIA Maxine</a> software development platform, the foundational technology behind the revolutionary <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast app</a>, powers this incredible capability by weighing output and analyzing facial expressions and blendshapes to predict facial mesh animations.</p>
 <p>From there, the AccuFACE plug-in converts this data into facial mesh assets for creators to apply seamlessly. It also fine-tunes lip and tongue articulation using proprietary AccuLIPS technology.</p>
-<p><iframe title="Advanced Facial Animations With OpenUSD and AI" width="500" height="281" src="https://www.youtube.com/embed/XwtzEU91oAI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Advanced Facial Animations With OpenUSD and AI" width="500" height="281" src="https://www.youtube.com/embed/XwtzEU91oAI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Download the <a href="https://mocap.reallusion.com/iclone-motion-live-mocap/accuface.html">plug-in</a> today, available to creators with <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> GPUs.</p>
 <h2><b>Turning Pain Into Beauty</b></h2>
 <p>Ismail’s creative journey began at age four as a form of escape from the armed conflict occurring in Syria, her homeland. During that time, Ismail’s family faced many difficulties, including the loss of their home.</p>
@@ -1078,88 +1140,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Into the Omniverse: OpenUSD Enhancements for Autodesk Maya Make 3D Workflows a Ferret-Tale]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>More Games, More Wins: PC Game Pass Included With Six-Month GeForce NOW Memberships</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-nov-16/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 16 Nov 2023 14:00:44 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68198</guid>
-
-					<description><![CDATA[The fastest way to give the gift of cloud gaming starts this GFN Thursday: For a limited time, every six-month GeForce NOW Ultimate membership includes three months of PC Game Pass. Also, the newest GeForce NOW app update is rolling out to members, including Xbox Game Syncing and more improvements. Plus, take advantage of a <a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-nov-16/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The fastest way to give the gift of cloud gaming starts this GFN Thursday: For a limited time, every six-month <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">GeForce NOW Ultimate membership</a> includes three months of PC Game Pass.</p>
-<p>Also, the newest GeForce NOW app update is rolling out to members, including Xbox Game Syncing and more improvements.</p>
-<p>Plus, take advantage of a heroic, new members-only <i>Guild Wars 2</i> reward. It’s all topped off by support for 18 more games in the GeForce NOW library this week.</p>
-<h2><b>Give the Gift of Gaming</b></h2>
-<figure id="attachment_68212" aria-describedby="caption-attachment-68212" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-68212" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-672x336.jpg" alt="PC Game Pass bundle" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-PC_Game_Pass_Titles.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68212" class="wp-caption-text"><em>Pair PC Game Pass with a GeForce NOW Ultimate bundle for the ultimate gaming gift.</em></figcaption></figure>
-<p>Unwrap the gift of gaming: For a limited time, gamers who sign up for the six-month GeForce NOW Ultimate membership will also receive three free months of PC Game Pass — a $30 value.</p>
-<p>With it, Ultimate members can play a collection of high-quality Xbox PC titles with the power of a GeForce RTX 4080 rig in the cloud. Jump into the action in iconic franchises like <i>Age of Empires</i>, <i>DOOM</i>, <i>Forza</i> and more, with support for more titles added every GFN Thursday.</p>
-<p>Seamlessly launch supported favorites across nearly any device at up to 4K and 120 frames per second or at up to 240 fps with <a href="https://www.nvidia.com/en-us/geforce/technologies/reflex/">NVIDIA Reflex</a> technology in supported titles for lowest-latency streaming.</p>
-<p>This special offer is only here for a limited time, so <a href="https://www.nvidia.com/en-us/geforce-now/holiday">upgrade</a> today.</p>
-<h2><b>Sync’d Up</b></h2>
-<figure id="attachment_68209" aria-describedby="caption-attachment-68209" style="width: 606px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-68209" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-606x500.jpg" alt="Xbox and Ubisoft+ game library sync" width="606" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-606x500.jpg 606w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-400x330.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-545x450.jpg 545w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-261x215.jpg 261w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft-121x100.jpg 121w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Xbox_Ubisoft.jpg 623w" sizes="(max-width: 606px) 100vw, 606px" /><figcaption id="caption-attachment-68209" class="wp-caption-text"><em>Look who just joined the party!</em></figcaption></figure>
-<p>With so many games ready to stream, it might be hard to decide what to play next. The latest GeForce NOW app update, currently rolling out to members, is here to help.</p>
-<p>Members can now connect their Xbox accounts to GeForce NOW to sync the games they own to their GeForce NOW library. Game syncing lets members connect their digital game store accounts to GeForce NOW, so all of their supported games are part of their streaming library. Syncing an Xbox account will also add any supported titles a member has access to via PC Game Pass — perfect for members taking advantage of the latest Ultimate bundle.</p>
-<p>The new update also adds benefits for Ubisoft+ subscribers. With a linked Ubisoft+ account, members can now launch supported Ubisoft+ games they already own from the GeForce NOW app, and the game will be automatically added to “My Library.” Get more details on <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5286">Ubisoft account</a> linking.</p>
-<p>Version 2.0.58 also includes an expansion of the new game session diagnostic tools to help members ensure they’re streaming at optimal quality. It adds codec information to the in-stream statistics overlay and includes other miscellaneous bug fixes. The update should be available for all members soon.</p>
-<h2><b>A Heroic Offering</b></h2>
-<figure id="attachment_68206" aria-describedby="caption-attachment-68206" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-68206" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-672x336.jpg" alt="Guild Wars 2 reward on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Guild_Wars_2_reward.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68206" class="wp-caption-text"><em>Rewards fit for a hero.</em></figcaption></figure>
-<p>This week, members can receive <i>Guild Wars 2</i> “Heroic Edition,” which includes a treasure trove of goodies, such as the base game, Legacy Armor, an 18-slot inventory expansion and four heroic Boosters. It’s the perfect way to jump into ArenaNet’s critically acclaimed, free-to-play, massively multiplayer online role-playing game.</p>
-<p>It’s easy to get membership rewards for streaming games on the cloud. Visit the <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW Rewards portal</a> and update the settings to receive special offers and in-game goodies.</p>
-<p>Members can also sign up for the GeForce NOW newsletter, which includes reward notifications, by logging into their <a href="https://www.nvidia.com/en-us/account/email-preferences">NVIDIA account</a> and selecting “Preferences” from the header. Check the “Gaming &amp; Entertainment” box and “GeForce NOW” under topic preferences.</p>
-<h2><b>Ready, Set, Go</b></h2>
-<figure id="attachment_68203" aria-describedby="caption-attachment-68203" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-68203" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-672x336.jpg" alt="Remnant II DLC on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Remnant_2_DLC.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68203" class="wp-caption-text"><em>A new DLC awakens.</em></figcaption></figure>
-<p>The first downloadable content for Gearbox’s <i>Remnant 2</i> arrives in the cloud. <i>The Awakened King </i>brings a new storyline, area, archetype and more to the dark fantasy co-op shooter — stream it today to experience the awakening of the One True King as he seeks revenge against all who oppose him.</p>
-<p>Catch even more action with the 18 newly supported games in the cloud:</p>
-<ul>
-<li><i>Spirittea </i>(New release on <a href="https://store.steampowered.com/app/1931010?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Nov. 13)</li>
-<li><i>KarmaZoo </i>(New release on <a href="https://store.steampowered.com/app/1661630?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Nov. 14)</li>
-<li><i>Naheulbeuk’s Dungeon Master </i>(New release on <a href="https://store.steampowered.com/app/2005160?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Nov. 15)</li>
-<li><i>Warhammer Age of Sigmar: Realms of Ruin </i>(New release on <a href="https://store.steampowered.com/app/1844380?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Nov. 17)</li>
-<li><i>Arcana of Paradise —The Tower </i>(<a href="https://store.steampowered.com/app/2089500/Arcana_of_Paradise_The_Tower/">Steam</a>)</li>
-<li><i>Blazing Sails: Pirate Battle Royale</i> (<a href="https://www.epicgames.com/store/p/blazing-sails?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Disney Dreamlight Valley</i> (<a href="https://www.xbox.com/games/store/disney-dreamlight-valley/9NSF0BGH8D86?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Hello Neighbor 2</i> (<a href="https://www.xbox.com/games/store/hello-neighbor-2/9N961B11FJ4W?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Overcooked! 2 </i>(<a href="https://www.xbox.com/en-us/games/store/Overcooked-2/BVJLKDG2TX8H">Xbox</a>, available on PC Game Pass)</li>
-<li><i>RoboCop: Rogue City </i>(New release on <a href="https://www.epicgames.com/store/p/robocop-rogue-city?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Roboquest </i>(<a href="https://www.xbox.com/games/store/roboquest-game-preview/9p47s7njgwzl?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Rune Factory 4 Special </i>(<a href="https://www.xbox.com/games/store/rune-factory-4-special---windows-edition/9N73PLHJN878?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
-<li><i>Settlement Survival </i>(<a href="https://store.steampowered.com/app/1509510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>SOULVARS </i>(<a href="https://store.steampowered.com/app/2087910?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>State of Decay: Year-One Survival Edition</i> (<a href="https://store.steampowered.com/app/329430?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>The Wonderful One: After School Hero </i>(<a href="https://store.steampowered.com/app/2399600?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Wolfenstein: The New Order </i>(<a href="https://www.xbox.com/games/store/wolfenstein-the-new-order-pc/9p75cbj9wt9w?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Wolfenstein: The Old Blood </i>(<a href="https://store.steampowered.com/app/350080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/wolfenstein-the-old-blood?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/wolfenstein-the-old-blood-pc/9pbb4qhmsdkr?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox </a>and available on PC Game Pass)</li>
-</ul>
-<p>What are you looking forward to streaming? Let us know on <a href="https://www.twitter.com/nvidiagfn">Twitter</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="in" dir="ltr">h̴e̴r̴e̴&#39;̴s̴ soon&#39;s the deal&#8230;</p>
-<p>stay tuned <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f440.png" alt="👀" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f384.png" alt="🎄" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1724834650688758068?ref_src=twsrc%5Etfw">November 15, 2023</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/gfn-thursday-date-nv-blog-1280x680-no-cta.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/gfn-thursday-date-nv-blog-1280x680-no-cta-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[More Games, More Wins: PC Game Pass Included With Six-Month GeForce NOW Memberships]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
