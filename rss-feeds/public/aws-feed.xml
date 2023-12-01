@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 14 Nov 2023 19:03:16 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 01 Dec 2023 16:50:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -67,9 +67,9 @@
 &lt;/ol&gt; 
 &lt;p&gt;Like most institutions, you probably have an investment in a user identity and authentication system, complete with existing project groups that you’ve defined to define access for shared files and other resources. We wanted to align with that, so RES – out of the box – is built to connect with your existing directory service, starting with Active Directory (AD), helping you avoid doing this work twice.&lt;/p&gt; 
 &lt;p&gt;At launch, RES can connect to your existing AD server &lt;em&gt;on-premises&lt;/em&gt; or &lt;em&gt;in the cloud&lt;/em&gt;. If you want to separate your RES environment from your regular user space – to create an engineering sandbox, for instance – you can spin up a managed AD using AWS Directory Service to privately manage a set of users.&lt;/p&gt; 
-&lt;div id="attachment_3106" style="width: 3526px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3106" loading="lazy" class="wp-image-3106 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/09/users-shot.png" alt="Figure 3 - Identity functions, like defining users and groups, are done centrally in an Active Directory environment, which you specify when installing RES in your AWS environment. The AD can be on-premises or in the cloud and can - if you wish - be separate from your corporate directory service." width="3516" height="1976"&gt;
- &lt;p id="caption-attachment-3106" class="wp-caption-text"&gt;Figure 3 – Identity functions, like defining users and groups, are done centrally in an Active Directory environment, which you specify when installing RES in your AWS environment. The AD can be on-premises or in the cloud and can – if you wish – be separate from your corporate directory service.&lt;/p&gt;
+&lt;div id="attachment_3133" style="width: 3526px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3133" loading="lazy" class="wp-image-3133 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/01/users-shot.png" alt="Figure 3 - Identity functions, like defining users and groups, are done centrally in an Active Directory environment, which you specify when installing RES in your AWS environment. The AD can be on-premises or in the cloud and can - if you wish - be separate from your corporate directory service." width="3516" height="1976"&gt;
+ &lt;p id="caption-attachment-3133" class="wp-caption-text"&gt;Figure 3 – Identity functions, like defining users and groups, are done centrally in an Active Directory environment, which you specify when installing RES in your AWS environment. The AD can be on-premises or in the cloud and can – if you wish – be separate from your corporate directory service.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;RES enables access to &lt;strong&gt;Project&lt;/strong&gt; resources, by specifying which &lt;strong&gt;Groups&lt;/strong&gt; are assigned to the &lt;strong&gt;Project&lt;/strong&gt;. You define this at Project creation, but of course you can change it afterwards, too (see Figure 4).&lt;/p&gt; 
 &lt;div id="attachment_3107" style="width: 1768px" class="wp-caption aligncenter"&gt;
