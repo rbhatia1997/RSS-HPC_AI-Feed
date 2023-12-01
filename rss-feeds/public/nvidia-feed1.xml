@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 30 Nov 2023 16:40:01 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 30 Nov 2023 18:47:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -182,7 +182,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Amazon Web Services and NVIDIA will bring the latest generative AI technologies to enterprises worldwide.</p>
 <p>Combining AI and cloud computing, NVIDIA founder and CEO Jensen Huang joined AWS CEO Adam Selipsky Tuesday on stage at AWS re:Invent 2023 at the Venetian Expo Center in Las Vegas.</p>
 <p>Selipsky said he was “thrilled” to announce the expansion of the partnership between AWS and NVIDIA with more offerings that will deliver advanced graphics, machine learning and generative AI infrastructure.</p>
-<p>The two announced that AWS will be the first cloud provider to adopt the latest NVIDIA GH200 NVL32 Grace Hopper Superchip with new multi-node NVLink technology, that AWS is bringing <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> to AWS, and that AWS has integrated some of NVIDIA’s most popular software libraries.</p>
+<p>The two announced that AWS will be the first cloud provider to adopt the latest <a href="https://developer.nvidia.com/blog/one-giant-superchip-for-llms-recommenders-and-gnns-introducing-nvidia-gh200-nvl32/">NVIDIA GH200 NVL32 Grace Hopper Superchip</a> with new multi-node NVLink technology, that AWS is bringing <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> to AWS, and that AWS has integrated some of NVIDIA’s most popular software libraries.</p>
 <p>Huang started the conversation by highlighting the integration of key NVIDIA libraries with AWS, encompassing a range from <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> to <a href="https://developer.nvidia.com/cuquantum-sdk">cuQuantum</a> to <a href="https://blogs.nvidia.com/blog/bionemo-on-aws-generative-ai-drug-discovery/">BioNeMo</a>, catering to domains like data processing, quantum computing and digital biology.</p>
 <p><img decoding="async" class="aligncenter size-full wp-image-68437" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1.png" alt="" width="2048" height="1152" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-1280x720.png 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
 <p>The partnership opens AWS to millions of developers and the nearly 40,000 companies who are using these libraries, Huang said, adding that it’s great to see AWS expand its cloud instance offerings to include NVIDIA’s new L4, L40S and, soon, H200 GPUs.</p>
