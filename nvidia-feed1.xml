@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 30 Nov 2023 18:47:38 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 01 Dec 2023 16:12:56 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,105 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.1</generator>
 	<item>
+		<title>Why GPUs Are Great for AI</title>
+		<link>https://blogs.nvidia.com/blog/why-gpus-are-great-for-ai/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Mon, 04 Dec 2023 16:00:36 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Explainer]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[CUDA]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[NVIDIA DGX]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[NVIDIA Quantum-2]]></category>
+		<category><![CDATA[NVLink]]></category>
+		<category><![CDATA[Parallel Computing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68375</guid>
+
+					<description><![CDATA[GPUs have been called the rare Earth metals — even the gold — of artificial intelligence, because they’re foundational for today’s generative AI era. Three technical reasons, and many stories, explain why that’s so. Each reason has multiple facets well worth exploring, but at a high level: GPUs employ parallel processing. GPU systems scale up <a class="read-more" href="https://blogs.nvidia.com/blog/why-gpus-are-great-for-ai/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>GPUs have been called the rare Earth metals — even the gold — of artificial intelligence, because they’re foundational for today’s <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> era.</p>
+<p>Three technical reasons, and many stories, explain why that’s so. Each reason has multiple facets well worth exploring, but at a high level:</p>
+<ul>
+<li style="font-weight: 400;" aria-level="1">GPUs employ parallel processing.</li>
+<li style="font-weight: 400;" aria-level="1">GPU systems scale up to supercomputing heights.</li>
+<li style="font-weight: 400;" aria-level="1">The GPU software stack for AI is broad and deep.</li>
+</ul>
+<p>The net result is GPUs perform technical calculations faster and with greater <a href="https://www.nvidia.com/en-us/glossary/energy-efficiency/">energy efficiency</a> than CPUs. That means they deliver leading performance for AI training and inference as well as gains across a wide array of applications that use <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a>.</p>
+<p>In its <a href="https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report_2023.pdf">recent report</a> on AI, Stanford’s Human-Centered AI group provided some context. GPU performance “has increased roughly 7,000 times” since 2003 and price per performance is “5,600 times greater,” it reported.</p>
+<figure id="attachment_68465" aria-describedby="caption-attachment-68465" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-68465" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-672x329.jpg" alt="Stanford report on GPU performance increases" width="672" height="329" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-672x329.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-400x196.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-768x376.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-1536x753.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-842x413.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-406x199.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-188x92.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final-1280x627.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Stanford-2023-AI-report-GPU-performance-final.jpg 1982w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68465" class="wp-caption-text">A 2023 report captured the steep rise in GPU performance and price/performance.</figcaption></figure>
+<p>The report also cited analysis from Epoch, an independent research group that measures and forecasts AI advances.</p>
+<p>“GPUs are the dominant computing platform for accelerating machine learning workloads, and most (if not all) of the biggest models over the last five years have been trained on GPUs … [they have] thereby centrally contributed to the recent progress in AI,” Epoch said on <a href="https://epochai.org/blog/trends-in-gpu-price-performance">its site</a>.</p>
+<p>A <a href="https://cset.georgetown.edu/wp-content/uploads/AI-Chips%E2%80%94What-They-Are-and-Why-They-Matter.pdf">2020 study</a> assessing AI technology for the U.S. government drew similar conclusions.</p>
+<p>“We expect [leading-edge] AI chips are one to three orders of magnitude more cost-effective than leading-node CPUs when counting production and operating costs,” it said.</p>
+<p>NVIDIA GPUs have increased performance on AI inference 1,000x in the last ten years, said Bill Dally, the company’s chief scientist in a <a href="https://blogs.nvidia.com/blog/hot-chips-dally-research/">keynote</a> at Hot Chips, an annual gathering of semiconductor and systems engineers.</p>
+<h2><b>ChatGPT Spread the News</b></h2>
+<p>ChatGPT provided a powerful example of how GPUs are great for AI. The <a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/">large language model</a> (LLM), trained and run on thousands of NVIDIA GPUs, runs generative AI services used by more than 100 million people.</p>
+<p>Since its 2018 launch, <a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">MLPerf</a>, the industry-standard benchmark for AI, has provided numbers that detail the leading performance of NVIDIA GPUs on both AI training and inference.</p>
+<p>For example, <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA Grace Hopper Superchips</a> swept the <a href="https://blogs.nvidia.com/blog/grace-hopper-inference-mlperf/">latest round</a> of inference tests. <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a>, inference software released since that test, delivers up to an 8x boost in performance and more than a 5x reduction in energy use and total cost of ownership. Indeed, NVIDIA GPUs have won every round of MLPerf training and inference tests since the benchmark was released in 2019.</p>
+<p>In February, NVIDIA GPUs<a href="https://blogs.nvidia.com/blog/stac-ml-inference-gpu/"> delivered leading results</a> for inference, serving up thousands of inferences per second on the most demanding models in the STAC-ML Markets benchmark, a key technology performance gauge for the financial services industry.</p>
+<p>A RedHat software engineering team put it succinctly in <a href="https://developers.redhat.com/articles/2022/11/21/why-gpus-are-essential-computing">a blog</a>: “GPUs have become the foundation of artificial intelligence.”</p>
+<h2><b>AI Under the Hood</b></h2>
+<p>A brief look under the hood shows why GPUs and AI make a powerful pairing.</p>
+<p>An AI model, also called a neural network, is essentially a mathematical lasagna, made from layer upon layer of linear algebra equations. Each equation represents the likelihood that one piece of data is related to another.</p>
+<p>For their part, GPUs pack thousands of cores, tiny calculators working in parallel to slice through the math that makes up an AI model. This, at a high level, is how <a href="https://blogs.nvidia.com/blog/what-is-ai-computing/">AI computing</a> works.</p>
+<h2><b>Highly Tuned Tensor Cores</b></h2>
+<p>Over time, NVIDIA’s engineers have tuned GPU cores to the evolving needs of AI models. The latest GPUs include <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">Tensor Cores</a> that are 60x more powerful than the first-generation designs for processing the matrix math neural networks use.</p>
+<p>In addition, <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA Hopper Tensor Core GPUs</a> include a <a href="https://blogs.nvidia.com/blog/h100-transformer-engine/">Transformer Engine</a> that can automatically adjust to the optimal precision needed to process <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">transformer models</a>, the class of neural networks that spawned generative AI.</p>
+<p>Along the way, each GPU generation has packed more memory and optimized techniques to store an entire AI model in a single GPU or set of GPUs.</p>
+<h2><b>Models Grow, Systems Expand</b></h2>
+<p>The complexity of AI models is expanding a whopping 10x a year.</p>
+<p>The current state-of-the-art LLM, GPT4, packs more than a trillion parameters, a metric of its mathematical density. That’s up from less than 100 million parameters for a popular LLM in 2018.</p>
+<figure id="attachment_68468" aria-describedby="caption-attachment-68468" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-scaled.jpg"><img decoding="async" class="size-large wp-image-68468" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-672x380.jpg" alt="Chart shows 1,000x performance improvement on AI inference over a decade for single GPUs" width="672" height="380" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-672x380.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-400x226.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-768x434.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-1536x868.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-797x450.jpg 797w, https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-381x215.jpg 381w, https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-177x100.jpg 177w, https://blogs.nvidia.com/wp-content/uploads/2023/12/1000x-AI-inferrence-gain-in-10-years-1280x723.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68468" class="wp-caption-text">In a recent talk at Hot Chips, NVIDIA Chief Scientist Bill Dally described how single-GPU performance on AI inference expanded 1,000x in the last decade.</figcaption></figure>
+<p>GPU systems have kept pace by ganging up on the challenge. They scale up to supercomputers, thanks to their fast <a href="https://blogs.nvidia.com/blog/what-is-nvidia-nvlink/">NVLink</a> interconnects and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum InfiniBand networks</a>.</p>
+<p>For example, the <a href="https://www.nvidia.com/en-us/data-center/dgx-gh200/">DGX GH200</a>, a large-memory AI supercomputer, combines up to 256 NVIDIA GH200 Grace Hopper Superchips into a single data-center-sized GPU with 144 terabytes of shared memory.</p>
+<p>Each GH200 superchip is a single server with 72 Arm Neoverse CPU cores and four petaflops of AI performance. A new <a href="https://blogs.nvidia.com/blog/gh200-grace-hopper-superchip-powers-ai-supercomputers/">four-way Grace Hopper systems configuration</a> puts in a single compute node a whopping 288 Arm cores and 16 petaflops of AI performance with up to 2.3 terabytes of high-speed memory.</p>
+<p>And <a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA H200 Tensor Core GPUs</a> announced in November pack up to 288 gigabytes of the latest HBM3e memory technology.</p>
+<h2><b>Software Covers the Waterfront</b></h2>
+<p>An expanding ocean of GPU software has evolved since 2007 to enable every facet of AI, from deep-tech features to high-level applications.</p>
+<p>The NVIDIA AI platform includes hundreds of software libraries and apps. The CUDA programming language and the cuDNN-X library for deep learning provide a base on top of which developers have created software like <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework to let users build, customize and run inference on their own generative AI models.</p>
+<p>Many of these elements are available as open-source software, the grab-and-go staple of software developers. More than a hundred of them are packaged into the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> platform for companies that require full security and support. Increasingly, they’re also available from major cloud service providers as APIs and services on <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>.</p>
+<p><a href="https://blogs.nvidia.com/blog/customize-ai-models-steerlm/">SteerLM</a>, one of the latest AI software updates for NVIDIA GPUs, lets users fine tune models during inference.</p>
+<h2><b>A 70x Speedup in 2008</b></h2>
+<p>Success stories date back to a <a href="http://robotics.stanford.edu/~ang/papers/icml09-LargeScaleUnsupervisedDeepLearningGPU.pdf">2008 paper</a> from AI pioneer Andrew Ng, then a Stanford researcher. Using two NVIDIA GeForce GTX 280 GPUs, his three-person team achieved a 70x speedup over CPUs processing an AI model with 100 million parameters, finishing work that used to require several weeks in a single day.</p>
+<p>“Modern graphics processors far surpass the computational capabilities of multicore CPUs, and have the potential to revolutionize the applicability of deep unsupervised learning methods,” they reported.</p>
+<figure id="attachment_68471" aria-describedby="caption-attachment-68471" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-scaled.jpg"><img decoding="async" class="size-large wp-image-68471" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-672x266.jpg" alt="Picture of Andrew Ng showing slide in a talk on GPU performance for AI" width="672" height="266" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-672x266.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-400x159.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-768x304.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-1536x609.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-842x334.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-406x161.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-188x75.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/12/Andrew-Ng-GTC-2015-scaling-1280x507.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68471" class="wp-caption-text">Andrew Ng described his experiences using GPUs for AI in a GTC 2015 talk.</figcaption></figure>
+<p>In a <a href="https://video.ibm.com/recorded/60113824/highlight/619422">2015 talk</a> at NVIDIA GTC, Ng described how he continued using more GPUs to scale up his work, running larger models at Google Brain and Baidu. Later, he helped found Coursera, an online education platform where he taught hundreds of thousands of AI students.</p>
+<p>Ng counts Geoff Hinton, one of the godfathers of modern AI, among the people he influenced. “I remember going to Geoff Hinton saying check out CUDA, I think it can help build bigger neural networks,” he said in the GTC talk.</p>
+<p>The University of Toronto professor spread the word<b>. </b>“In 2009, I remember giving a talk at NIPS [now NeurIPS], where I told about 1,000 researchers they should all buy GPUs because GPUs are going to be the future of machine learning,” Hinton said in a <a href="https://venturebeat.com/ai/how-nvidia-dominated-ai-and-plans-to-keep-it-that-way-as-generative-ai-explodes/">press report</a>.</p>
+<h2><b>Fast Forward With GPUs</b></h2>
+<p>AI’s gains are expected to ripple across the global economy.</p>
+<p>A <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier#key-insights">McKinsey report</a> in June estimated that generative AI could add the equivalent of $2.6 trillion to $4.4 trillion annually across the 63 use cases it analyzed in industries like banking, healthcare and retail. So, it’s no surprise Stanford’s 2023 AI report said that a majority of business leaders expect to increase their investments in AI.</p>
+<p>Today, more than 40,000 companies use NVIDIA GPUs for AI and accelerated computing, attracting a global community of 4 million developers. Together they’re advancing science, healthcare, finance and virtually every industry.</p>
+<p>Among the latest achievements, NVIDIA described a whopping 700,000x speedup using AI to ease climate change by keeping carbon dioxide out of the atmosphere (see video below). It’s one of many ways NVIDIA is applying the performance of GPUs to AI and beyond.</p>
+<p>Learn how <a href="https://www.nvidia.com/en-us/lp/ai-data-science/how-to-get-started-with-ai-inference-series/">GPUs put AI into production</a>.</p>
+<p><iframe loading="lazy" title="Accelerating Carbon Capture and Storage With Fourier Neural Operator and NVIDIA Modulus" width="500" height="281" src="https://www.youtube.com/embed/u-M5LQvx1cQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/NVIDIA-AI-platform-x1280-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1090"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/NVIDIA-AI-platform-x1280-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Why GPUs Are Great for AI]]></media:title>
+			<media:description type="html">NVIDIA&#039;s GPU-based AI platform</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>‘Call of Duty’ Comes to GeForce NOW</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-call-of-duty/</link>
 		
@@ -36,13 +135,13 @@
 <p>And it’s the most wonderful time of the year — over 65 games are joining the GeForce NOW library in December, with 15 available to stream this week.</p>
 <p>Plus, stream GeForce NOW on the go and get console-quality controls by simply snapping a mobile device into a Backbone One controller. For a limited time, Backbone is offering a 30% discount for premium GeForce NOW members starting today in the <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fgeforce-now%2Frewards%2F&amp;data=05%7C01%7Csngo%40nvidia.com%7C9a6764f3073d445e8f1708dbeb82cfb4%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638362719285332290%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=ZRfUaxP7RMBSbj95%2F2pFBldzJGUS5asGANpeyQIlmto%3D&amp;reserved=0">Rewards Portal</a>. Free-level members can claim the discount starting Dec. 7.</p>
 <h2><b>The Lobby Awaits</b></h2>
-<figure id="attachment_68460" aria-describedby="caption-attachment-68460" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-68460" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-672x378.jpeg" alt="Call of Duty on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-672x378.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-400x225.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-768x432.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-1536x864.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-800x450.jpeg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-382x215.jpeg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-178x100.jpeg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-1280x720.jpeg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68460" class="wp-caption-text"><em>The war has changed.</em></figcaption></figure>
+<figure id="attachment_68460" aria-describedby="caption-attachment-68460" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-68460" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-672x378.jpeg" alt="Call of Duty on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-672x378.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-400x225.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-768x432.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-1536x864.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-800x450.jpeg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-382x215.jpeg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-178x100.jpeg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-Call_Of_Duty_Modern_Warfare_III-1280x720.jpeg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68460" class="wp-caption-text"><em>The war has changed.</em></figcaption></figure>
 <p><i>Call of Duty: Modern Warfare III</i> returns as a direct sequel to the record-breaking <i>Call of Duty: Modern Warfare II</i> and follows the story of Task Force 141 as they face off the ultimate threat.</p>
 <p>Dig into the action-packed single-player campaign or head online to defeat the undead in an exciting open-world co-op experience that takes the Zombies mode that fans know and love to the next level. Those that prefer some multiplayer action can dip into a selection of Core Multiplayer maps from the 16 iconic launch maps of 2009’s <i>Call of Duty: Modern Warfare 2</i> that are being brought over and modernized for <i>Call of Duty: Modern Warfare III</i>.</p>
 <p>Plus, stay tuned to GFN Thursday for when other legacy <i>Call of Duty</i> titles will be added to the cloud. Check out <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5462">the article </a>for more details.</p>
 <p>GeForce NOW <a href="http://geforcenow.com">Ultimate members</a> can get the upper hand with <a href="https://www.nvidia.com/en-us/geforce/news/dlss-3-jusant-ripout-robocop-talos-principle-2-more/">NVIDIA DLSS 3 and Reflex</a> to get the highest frame rates and lowest latencies for the smoothest gameplay by streaming from a GeForce RTX 4080 gaming rig in the cloud. Never worry about upgrading hardware or system specs again with GeForce NOW.</p>
 <h2><b>Presents, Galore</b></h2>
-<figure id="attachment_68457" aria-describedby="caption-attachment-68457" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-68457" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-672x378.jpg" alt="SteamWorld Build on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68457" class="wp-caption-text"><em>Dig, dig, dig!</em></figcaption></figure>
+<figure id="attachment_68457" aria-describedby="caption-attachment-68457" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-68457" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-672x378.jpg" alt="SteamWorld Build on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/GFN_Thursday-SteamWorld_Build-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-68457" class="wp-caption-text"><em>Dig, dig, dig!</em></figcaption></figure>
 <p>Break ground in <i>SteamWorld Build</i> from Thunderful Publishing. Dig deep and build wide to excavate long-lost spacefaring technology while ensuring everyone has the resources needed to survive and reach the final frontier. It launches Dec. 1 on Steam and PC Game Pass — check it out with the three free months of PC Game Pass included with the purchase of a six-month Ultimate membership, part of the <a href="https://www.nvidia.com/en-us/geforce-now/holiday/">GeForce NOW holiday bundle</a><b>.</b></p>
 <p>Members can start their adventures now with 15 newly supported titles in the cloud this week:</p>
 <ul>
@@ -184,7 +283,7 @@
 <p>Selipsky said he was “thrilled” to announce the expansion of the partnership between AWS and NVIDIA with more offerings that will deliver advanced graphics, machine learning and generative AI infrastructure.</p>
 <p>The two announced that AWS will be the first cloud provider to adopt the latest <a href="https://developer.nvidia.com/blog/one-giant-superchip-for-llms-recommenders-and-gnns-introducing-nvidia-gh200-nvl32/">NVIDIA GH200 NVL32 Grace Hopper Superchip</a> with new multi-node NVLink technology, that AWS is bringing <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> to AWS, and that AWS has integrated some of NVIDIA’s most popular software libraries.</p>
 <p>Huang started the conversation by highlighting the integration of key NVIDIA libraries with AWS, encompassing a range from <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> to <a href="https://developer.nvidia.com/cuquantum-sdk">cuQuantum</a> to <a href="https://blogs.nvidia.com/blog/bionemo-on-aws-generative-ai-drug-discovery/">BioNeMo</a>, catering to domains like data processing, quantum computing and digital biology.</p>
-<p><img decoding="async" class="aligncenter size-full wp-image-68437" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1.png" alt="" width="2048" height="1152" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-1280x720.png 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-68437" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1.png" alt="" width="2048" height="1152" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/Slide1-1280x720.png 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
 <p>The partnership opens AWS to millions of developers and the nearly 40,000 companies who are using these libraries, Huang said, adding that it’s great to see AWS expand its cloud instance offerings to include NVIDIA’s new L4, L40S and, soon, H200 GPUs.</p>
 <p>Selipsky then introduced the AWS debut of the NVIDIA GH200 Grace Hopper Superchip, a significant advancement in cloud computing, and prompted Huang for further details.</p>
 <p>“Grace Hopper, which is GH200, connects two revolutionary processors together in a really unique way,” Huang said. He explained that the GH200 connects NVIDIA’s Grace Arm CPU with its H200 GPU using a chip-to-chip interconnect called NVLink, at an astonishing one terabyte per second.</p>
@@ -1142,74 +1241,6 @@ Named after the majestic Amazonian Ceiba tree, the Project Ceiba DGX Cloud clust
 			/>
 			<media:title type="html"><![CDATA[AI Training AI: GatorTronGPT at the Forefront of University of Florida’s Medical AI Innovations]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Three Ways Generative AI Can Bolster Cybersecurity</title>
-		<link>https://blogs.nvidia.com/blog/generative-ai-cybersecurity/</link>
-		
-		<dc:creator><![CDATA[David Reber Jr.]]></dc:creator>
-		<pubDate>Thu, 16 Nov 2023 16:00:37 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cybersecurity]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[New GPU Uses]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68187</guid>
-
-					<description><![CDATA[Human analysts can no longer effectively defend against the increasing speed and complexity of cybersecurity attacks. The amount of data is simply too large to screen manually. Generative AI, the most transformative tool of our time, enables a kind of digital jiu jitsu. It lets companies shift the force of data that threatens to overwhelm <a class="read-more" href="https://blogs.nvidia.com/blog/generative-ai-cybersecurity/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Human analysts can no longer effectively defend against the increasing speed and complexity of cybersecurity attacks. The amount of data is simply too large to screen manually.</p>
-<p><a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">Generative AI</a>, the most transformative tool of our time, enables a kind of digital jiu jitsu. It lets companies shift the force of data that threatens to overwhelm them into a force that makes their defenses stronger.</p>
-<p>Business leaders seem ready for the opportunity at hand. In a <a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us/c-suite-study/ceo">recent survey</a>, CEOs said cybersecurity is one of their top three concerns, and they see generative AI as a lead technology that will deliver competitive advantages.</p>
-<p>Generative AI brings both risks and benefits. An earlier blog outlined <a href="https://blogs.nvidia.com/blog/ai-security-steps/">six steps to start the process of securing enterprise AI</a>.</p>
-<p>Here are three ways generative AI can bolster cybersecurity.</p>
-<h2><b>Begin With Developers</b></h2>
-<p>First, give developers a security copilot.</p>
-<p>Everyone plays a role in security, but not everyone is a security expert. So, this is one of the most strategic places to begin.</p>
-<p>The best place to start bolstering security is on the front end, where developers are writing software. An AI-powered assistant, trained as a security expert, can help them ensure their code follows best practices in security.</p>
-<p>The AI software assistant can get smarter every day if it’s fed previously reviewed code. It can learn from prior work to help guide developers on best practices.</p>
-<p>To give users a leg up, NVIDIA is creating a <a href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/generative-ai-chatbots/">workflow for building such co-pilots or chatbots</a>. This particular workflow uses components from <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, a framework for building and customizing <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">large language models</a>.</p>
-<p>Whether users customize their own models or use a commercial service, a security assistant is just the first step in applying generative AI to cybersecurity.</p>
-<h2><b>An Agent to Analyze Vulnerabilities</b></h2>
-<p>Second, let generative AI help navigate the sea of known software vulnerabilities.</p>
-<p>At any moment, companies must choose among thousands of patches to mitigate known exploits. That’s because every piece of code can have roots in dozens if not thousands of different software branches and open-source projects.</p>
-<p>An LLM focused on vulnerability analysis can help prioritize which patches a company should implement first. It’s a particularly powerful security assistant because it reads all the software libraries a company uses as well as its policies on the features and APIs it supports.</p>
-<p>To test this concept, NVIDIA built a pipeline to analyze software containers for vulnerabilities. The agent identified areas that needed patching with high accuracy, speeding the work of human analysts up to 4x.</p>
-<p>The takeaway is clear. It’s time to enlist generative AI as a first responder in vulnerability analysis.</p>
-<h2><b>Fill the Data Gap</b></h2>
-<p>Finally, use LLMs to help fill the growing data gap in cybersecurity.</p>
-<p>Users rarely share information about data breaches because they’re so sensitive. That makes it difficult to anticipate exploits.</p>
-<p>Enter LLMs. Generative AI models can create <a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/">synthetic data</a> to simulate never-before-seen attack patterns. Such synthetic data can also fill gaps in training data so machine-learning systems learn how to defend against exploits before they happen.</p>
-<h2><b>Staging Safe Simulations</b></h2>
-<p>Don’t wait for attackers to demonstrate what’s possible. Create safe simulations to learn how they might try to penetrate corporate defenses.</p>
-<p>This kind of proactive defense is the hallmark of a strong security program. Adversaries are already using generative AI in their attacks. It’s time users harness this powerful technology for cybersecurity defense.</p>
-<p>To show what’s possible, another <a href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/spear-phishing/">AI workflow</a> uses generative AI to defend against spear phishing — the carefully targeted bogus emails that cost companies an estimated $2.4 billion in 2021 alone.</p>
-<p>This workflow generated synthetic emails to make sure it had plenty of good examples of spear phishing messages. The AI model trained on that data learned to understand the intent of incoming emails through natural language processing capabilities in <a href="https://developer.nvidia.com/morpheus-cybersecurity">NVIDIA Morpheus</a>, a framework for AI-powered cybersecurity.</p>
-<p>The resulting model caught 21% more spear phishing emails than existing tools. Check out our <a href="https://developer.nvidia.com/blog/generative-ai-and-accelerated-computing-for-spear-phishing-detection/">developer blog</a> or watch the video below to learn more.</p>
-<p><iframe loading="lazy" title="Improve Spear Phishing Detection with Generative AI" width="500" height="281" src="https://www.youtube.com/embed/57dEPP67XrY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Wherever users choose to start this work, automation is crucial, given the shortage of cybersecurity experts and the thousands upon thousands of users and use cases that companies need to protect.</p>
-<p>These three tools — software assistants, virtual vulnerability analysts and synthetic data simulations — are great starting points for applying generative AI to a security journey that continues every day.</p>
-<p>But this is just the beginning. Companies need to integrate generative AI into all layers of their defenses.</p>
-<p>Attend a <a href="https://www.nvidia.com/en-us/events/llm-developer-day/">webinar</a> for more details on how to get started.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Security-KV-Final-AdobeStock_312879614-scaled.jpeg"
-			type="image/jpeg"
-			width="2048"
-			height="1152"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/Security-KV-Final-AdobeStock_312879614-842x450.jpeg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Three Ways Generative AI Can Bolster Cybersecurity]]></media:title>
-			<media:description type="html">Security analyst using generative AI</media:description>
 			</media:content>
 			</item>
 	</channel>
