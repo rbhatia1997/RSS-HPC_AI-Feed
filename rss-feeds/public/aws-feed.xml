@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Fri, 01 Dec 2023 16:50:11 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 06 Dec 2023 15:30:55 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,268 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Slurm REST API in AWS ParallelCluster</title>
+		<link>https://aws.amazon.com/blogs/hpc/slurm-rest-api-in-aws-parallelcluster/</link>
+		
+		<dc:creator><![CDATA[Sean Smith]]></dc:creator>
+		<pubDate>Wed, 06 Dec 2023 15:30:55 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[Drug Discovery]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Slurm]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">c6ddf535719513e79c43687d50d07ddd004a82a6</guid>
+
+					<description>Looking to integrate AWS ParallelCluster into an automated workflow? This post shows how to submit and monitor jobs programmatically with Slurm REST API (code examples included).</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Sean Smith, Sr HPC Solution Architect, and Ryan Kilpadi, SDE Intern, HPC&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;AWS ParallelCluster offers powerful compute capabilities for problems ranging from discovering new drugs, to designing F1 race cars, to predicting the weather. In all these cases there’s a need for a human to sit in the loop – maybe an engineer running a simulation or perhaps a scientist submitting their lab results for analysis.&lt;/p&gt; 
+&lt;p&gt;In this post we’ll show you how to programmatically submit and monitor jobs using the open-source Slurm REST API. This allows ParallelCluster to be integrated into an automated system via API calls. For example, this could mean that whenever a genome sample is read from a sequencer, it’s automatically fed through a secondary analysis pipeline to align the individual reads, or when new satellite data lands in an Amazon S3 bucket, it triggers a job to create the latest weather forecast.&lt;/p&gt; 
+&lt;p&gt;Today, we’ll show how to set this up with AWS ParallelCluster. We’ll also link to a GitHub repository with code you can use and show examples of how to call the API using both curl and Python.&lt;/p&gt; 
+&lt;h2&gt;Architecture&lt;/h2&gt; 
+&lt;p&gt;This diagram shows an example cluster architecture with the Slurm REST API. The REST API runs on the HeadNode and submits jobs to the compute queues. The credentials used to authenticate with the API are stored in AWS Secrets Manager. The compute queues shown are examples only: the cluster can be configured with any instance configuration you desire.&lt;/p&gt; 
+&lt;div id="attachment_3120" style="width: 849px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3120" class="size-full wp-image-3120" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-13.37.39.png" alt="Figure 1 – The REST API runs on the HeadNode and submits jobs to the compute queues. The credentials used to authenticate with the API are stored in AWS Secrets Manager. The compute queues shown are examples only, the cluster can be configured with any instance configuration you desire." width="839" height="385"&gt;
+ &lt;p id="caption-attachment-3120" class="wp-caption-text"&gt;Figure 1 – The REST API runs on the HeadNode and submits jobs to the compute queues. The credentials used to authenticate with the API are stored in AWS Secrets Manager. The compute queues shown are examples only, the cluster can be configured with any instance configuration you desire.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;For this tutorial, we’ll be using ParallelCluster UI to set up our cluster with the Slurm REST API enabled. To set up ParallelCluster UI, &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-pcui-v3.html"&gt;refer to our online documentation&lt;/a&gt;. If you’d rather use the ParallelCluster CLI, see the example YAML configuration step 5.&lt;/p&gt; 
+&lt;h2&gt;Step 1 – Create a Security Group to allow inbound API requests&lt;/h2&gt; 
+&lt;p&gt;By default, your cluster will not be able to accept incoming HTTPS requests to the REST API. You will need to create a security group to allow traffic from outside the cluster to call the API.&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Navigate to the &lt;a href="http://console.aws.amazon.com/ec2/#SecurityGroups"&gt;EC2 Security Group console&lt;/a&gt; and choose &lt;strong&gt;Create security group&lt;/strong&gt;.&lt;/li&gt; 
+ &lt;li&gt;Under Security group name, enter &lt;code&gt;Slurm REST API&lt;/code&gt;&amp;nbsp;(or another name of your choosing)&lt;/li&gt; 
+ &lt;li&gt;Ensure the VPC matches your cluster’s VPC&lt;/li&gt; 
+ &lt;li&gt;Add an Inbound rule and select &lt;code&gt;HTTPS&lt;/code&gt; under Type, then change the Source to only the CIDR range that you want to have access. For example, you can use the CIDR associated with your VPC to restrict access to within your VPC.&lt;/li&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Create security group&lt;/strong&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div id="attachment_3121" style="width: 931px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3121" loading="lazy" class="size-full wp-image-3121" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-13.39.07.png" alt="Figure 2 – Create your security group, adding a VPC and an inbound rule to allow only HTTPS connections from a specific CID" width="921" height="453"&gt;
+ &lt;p id="caption-attachment-3121" class="wp-caption-text"&gt;Figure 2 – Create your security group, adding a VPC and an inbound rule to allow only HTTPS connections from a specific CID&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Step 2 – Add Additional IAM Permissions&lt;/h2&gt; 
+&lt;p&gt;If you’re using the AWS ParallelCluster UI, please follow the instructions under the ParallelCluster UI Tutorial &lt;strong&gt;section ‘G’&lt;/strong&gt; – &lt;a href="https://pcluster.cloud/02-tutorials/07-setup-iam.html"&gt;Setup IAM Permissions&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Step 3 – Configure your Cluster&lt;/h2&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;In your cluster configuration, return to the &lt;strong&gt;HeadNode section &amp;gt; Advanced options &amp;gt; Additional Security Groups &amp;gt;&lt;/strong&gt; add the &lt;em&gt;Slurm REST API&lt;/em&gt; Security Group you created in Step 1. Under &lt;strong&gt;Scripts &amp;gt; on node configured &amp;gt;&lt;/strong&gt; add the following script:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh&lt;/code&gt;&lt;/pre&gt; 
+&lt;div id="attachment_3122" style="width: 639px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3122" loading="lazy" class="size-full wp-image-3122" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-13.41.18.png" alt="Figure 4 – Add the script to be run after node configuration" width="629" height="288"&gt;
+ &lt;p id="caption-attachment-3122" class="wp-caption-text"&gt;Figure 4 – Add the script to be run after node configuration&lt;/p&gt;
+&lt;/div&gt; 
+&lt;ol start="2"&gt; 
+ &lt;li&gt;Under &lt;strong&gt;Additional IAM permissions&lt;/strong&gt;, add the policy:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;arn:aws:iam::aws:policy/SecretsManagerReadWrite&lt;/code&gt;&lt;/pre&gt; 
+&lt;div id="attachment_3123" style="width: 838px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3123" loading="lazy" class="size-full wp-image-3123" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-13.42.08.png" alt="Figure 5 – Add IAM policy to allow updates to AWS SecretsManager. This is needed to automatically refresh the JSON Web Token (JWT)." width="828" height="231"&gt;
+ &lt;p id="caption-attachment-3123" class="wp-caption-text"&gt;Figure 5 – Add IAM policy to allow updates to AWS SecretsManager. This is needed to automatically refresh the JSON Web Token (JWT).&lt;/p&gt;
+&lt;/div&gt; 
+&lt;ol start="3"&gt; 
+ &lt;li&gt;Create your cluster.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2&gt;Step 4 – Validate the configuration&lt;/h2&gt; 
+&lt;p&gt;Your configuration file should look something like the text that follows. If you opted to use the CLI instead of the UI, you will need to replace:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;code&gt;AdditionalSecurityGroups&lt;/code&gt; – this should contain an additional security group that allows connections to the Slurm REST API (Step 1).&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;OnNodeConfigured&lt;/code&gt;: thish should reference the post-install script: &lt;code&gt;&lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh&lt;/a&gt;&lt;/code&gt;&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;Imds:
+  ImdsSupport: v1.0
+HeadNode:
+  InstanceType: c5.xlarge
+  Imds:
+    Secured: true
+  Ssh:
+    KeyName: amzn2
+  LocalStorage:
+    RootVolume:
+      VolumeType: gp3
+  Networking:
+    SubnetId: subnet-xxxxxxxxxxxxxx
+    AdditionalSecurityGroups:
+      - sg-slurmrestapixxxxxxxxxx
+  Iam:
+    AdditionalIamPolicies:
+      - Policy: arn:aws:iam::aws:policy/SecretsManagerReadWrite
+  CustomActions:
+    OnNodeConfigured:
+      Script: &amp;gt;-
+        &lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh" rel="noopener noreferrer"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh&lt;/a&gt;
+Scheduling:
+  Scheduler: slurm
+  SlurmQueues:
+    - Name: queue-1
+      ComputeResources:
+        - Name: queue-1-cr-1
+          Instances:
+            - InstanceType: c5.xlarge
+          MinCount: 0
+          MaxCount: 4
+      ComputeSettings:
+        LocalStorage:
+          RootVolume:
+            VolumeType: gp3
+      Networking:
+        SubnetIds:
+          - subnet-xxxxxxxxxxxxxxxxxx
+Region: us-east-2
+Image:
+	Os: alinux2
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Step 5 – Call the API&lt;/h2&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Log in to a machine on the same network that you allowed via the Security Group in Step 1. Make sure this machine is able to talk to the HeadNode.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;ssh username@ip&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="2"&gt; 
+ &lt;li&gt;Set the following environment variable:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;export CLUSTER_NAME=[name of cluster]&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="3"&gt; 
+ &lt;li&gt;Find the information needed to call the API and construct an API request. To do this, we’ll need a few pieces of information. 
+  &lt;ul&gt; 
+   &lt;li&gt;&lt;strong&gt;JWT token&lt;/strong&gt;: The post install script will have created a secret in &lt;a href="http://console.aws.amazon.com/secretsmanager"&gt;AWS SecretsManager&lt;/a&gt; under the name &lt;code&gt;slurm_token_$CLUSTER_NAME&lt;/code&gt; . Either use the AWS console or the AWS CLI to find your secret based on the cluster name:&lt;/li&gt; 
+  &lt;/ul&gt; &lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;export JWT=$(aws secretsmanager get-secret-value --secret-id slurm_token_$CLUSTER_NAME | jq -r '.SecretString')&lt;/code&gt;NOTE: Since the Slurm REST API script is not integrated into ParallelCluster, this secret will not be automatically deleted along with the cluster. You may want to remove it manually on cluster deletion.&lt;/pre&gt; 
+&lt;ol&gt; 
+ &lt;li style="list-style-type: none"&gt; 
+  &lt;ul&gt; 
+   &lt;li&gt;&lt;strong&gt;Head node public IP:&lt;/strong&gt; This can be found in your Amazon EC2 dashboard or by using the ParallelCluster CLI:&lt;/li&gt; 
+  &lt;/ul&gt; &lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;export HEADNODE_IP=$(pcluster describe-cluster-instances -n $CLUSTER_NAME | jq -r '.instances[0].publicIpAddress')&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol&gt; 
+ &lt;li style="list-style-type: none"&gt; 
+  &lt;ul&gt; 
+   &lt;li&gt;&lt;strong&gt;Cluster user&lt;/strong&gt;: This depends on your AMI, but it will usually be either ec2-user , ubuntu , or centos.&lt;/li&gt; 
+  &lt;/ul&gt; &lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;export CLUSTER_USER=ec2-user&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="4"&gt; 
+ &lt;li&gt;Call the API using curl:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;curl -H "X-SLURM-USER-NAME: $CLUSTER_USER" -H "X-SLURM-USER-TOKEN: $JWT" https://$HEADNODE_IP/slurm/v0.0.39/ping -k&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You’ll get a response back like:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-json"&gt;{
+    "meta": {
+        "plugin": {
+            "type": "openapi\/v0.0.39",
+            "name": "REST v0.0.39"
+        },
+        "Slurm": {
+            "version": {
+            "major": 23,
+            "micro": 2,
+            "minor": 2
+        },
+         "release": "23.02.2"
+    }...
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Submit a job using the API. Specify the job parameters using JSON. You may need to modify the standard directories depending on the cluster user.&lt;/li&gt; 
+ &lt;li&gt;Post a job to the API:&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;curl -H "X-SLURM-USER-TOKEN: $CLUSTER_USER" -H "X-SLURM-USER-TOKEN: $JWT" -X POST https://$IP/slurm/v0.0.39/job/submit -H "Content-Type: application/json" -d @testjob.json -k&lt;/code&gt;&lt;/pre&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;c. Verify that the job is running:&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;curl -H "X-SLURM-USER-NAME: $CLUSTER_USER" -H "X-SLURM-USER-TOKEN: $JWT" https://$IP/slurm/v0.0.39/jobs -k&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Calling the API using the Python requests library&lt;/h2&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Create a script called &lt;code&gt;slurmapi.py&lt;/code&gt; with the following contents:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;#!/usr/bin/env python3
+import argparse
+import boto3
+import requests
+import json
+
+# Create argument parser
+parser = argparse.ArgumentParser()
+parser.add_argument('-n', '--cluster-name', type=str, required=True)
+parser.add_argument('-u', '--cluster-user', type=str, required=False)
+subparsers = parser.add_subparsers(dest='command', required=True)
+
+diag_parser = subparsers.add_parser('diag', help="Get diagnostics")
+ping_parser = subparsers.add_parser('ping', help="Ping test")
+
+submit_job_parser = subparsers.add_parser('submit-job', help="Submit a job")
+submit_job_parser.add_argument('-j', '--job', type=str, required=True)
+
+list_jobs_parser = subparsers.add_parser('list-jobs', help="List active jobs")
+
+describe_job_parser = subparsers.add_parser('describe-job', help="Describe a job by id")
+describe_job_parser.add_argument('-j', '--job-id', type=int, required=True)
+
+cancel_parser = subparsers.add_parser('cancel-job', help="Cancel a job")
+cancel_parser.add_argument('-j', '--job-id', type=int, required=True)
+
+args = parser.parse_args()
+
+# Get JWT token
+client = boto3.client('secretsmanager')
+boto_response = client.get_secret_value(SecretId=f'slurm_token_{args.cluster_name}')
+jwt_token = boto_response['SecretString']
+
+# Get cluster headnode IP
+client = boto3.client('ec2')
+filters = [{'Name': 'tag:parallelcluster:cluster-name', 'Values': [args.cluster_name]}]
+boto_response = client.describe_instances(Filters=filters)
+headnode_ip = boto_response['Reservations'][0]['Instances'][0]['PublicIpAddress']
+
+url = f'https://{headnode_ip}/slurm/v0.0.39'
+headers = {'X-SLURM-USER-TOKEN': jwt_token}
+if args.cluster_user:
+    headers['X-SLURM-USER-NAME'] = args.cluster_user
+
+# Make request
+if args.command == 'ping':
+    r = requests.get(f'{url}/ping', headers=headers, verify=False)
+elif args.command == 'diag':
+    r = requests.get(f'{url}/diag', headers=headers, verify=False)
+elif args.command == 'submit-job':
+    with open(args.job) as job_file:
+        job_json = json.load(job_file)
+    r = requests.post(f'{url}/job/submit', headers=headers, json=job_json, verify=False)
+elif args.command == 'list-jobs':
+    r = requests.get(f'{url}/jobs', headers=headers, verify=False)
+elif args.command == 'describe-job':
+    r = requests.get(f'{url}/job/{args.job_id}', headers=headers, verify=False)
+elif args.command == 'cancel-job':
+    r = requests.delete(f'{url}/job/{args.job_id}', headers=headers, verify=False)
+
+print(r.text)
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="2"&gt; 
+ &lt;li&gt;Submitt a job&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;./slurmapi.py -n [cluster_name] submit-job -u [cluster_user] -j testjob.json&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="3"&gt; 
+ &lt;li&gt;Getting more information&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;./slurmapi.py -h&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Setting up the Slurm REST API allows you to programmatically control the cluster, this makes it possible to build the cluster into an automated workflow. This enables new use cases such as automated secondary analysis of genomics data, risk analysis in financial markets, weather prediction, among a myriad of other use cases. We’re excited to see what you build, drop us a line on twitter to showcase what you come up with.&lt;/p&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-14.07.01.png" alt="Ryan Kilpadi " width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Ryan Kilpadi&lt;/h3&gt; 
+  &lt;p&gt;Ryan Kilpadi is a returning SDE intern on the HPC team working on AWS ParallelCluster. He worked on implementing the Slurm REST API on ParallelCluster as a summer internship project in 2022.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>New: Research and Engineering Studio on AWS</title>
 		<link>https://aws.amazon.com/blogs/hpc/new-research-and-engineering-studio-on-aws/</link>
 		
@@ -40,7 +302,7 @@
 		<guid isPermaLink="false">e085244ba2853fcab2e7687e1f7ed8d1e80e089c</guid>
 
 					<description>Today we’re announcing Research and Engineering Studio on AWS, a self-service portal to help scientists and engineers access and manage virtual desktops to see their data and run their interactive applications in the cloud.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="size-full wp-image-3095 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/08/Ingenio-icon_2pt-line-version-illustration.png" alt="" width="380" height="235"&gt;Your brain is extravagantly equipped for visualization. More than 50% of your cerebral cortex is dedicated to processing sensory input from your eyes, making it the information super highway that helps complex ideas form in your head incredibly quickly. Our output devices – our limbs and our voices – had to develop unique articulation skills, just to match the speed at which we can &lt;em&gt;learn from seeing&lt;/em&gt;.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-3095 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/08/Ingenio-icon_2pt-line-version-illustration.png" alt="" width="380" height="235"&gt;Your brain is extravagantly equipped for visualization. More than 50% of your cerebral cortex is dedicated to processing sensory input from your eyes, making it the information super highway that helps complex ideas form in your head incredibly quickly. Our output devices – our limbs and our voices – had to develop unique articulation skills, just to match the speed at which we can &lt;em&gt;learn from seeing&lt;/em&gt;.&lt;/p&gt; 
 &lt;p&gt;So, it’s fitting that today we’re announcing Research and Engineering Studio on AWS (RES), a self-service portal to help scientists and engineers access and manage their research and design workspaces, including virtual desktops to &lt;em&gt;see&lt;/em&gt; their data and run their interactive applications in the cloud.&lt;/p&gt; 
 &lt;p&gt;Setting up – and then managing – virtual desktops manually takes a lot of work, taking time away from the core mission of research and development groups: solving hard scientific problems. We’ve also noticed that when processes to access resources become complicated, users often take shortcuts (like sharing passwords or setting file permissions to be globally read/write).&lt;/p&gt; 
 &lt;p&gt;With RES, we’re putting all the launch and monitoring tools behind a single pane of glass, so administrators can deploy new desktop environments quickly, from their own pre-prepared library of software images and trusted applications. This gives their users the freedom to come and go when needed – incredibly important when chasing new lines of inquiry – without impacting their budgets or the security posture of their organization.&lt;/p&gt; 
@@ -2066,129 +2328,6 @@ ncview wrfout*
 &lt;p&gt;If you need more information, review this &lt;a href="https://aws.amazon.com/blogs/apn/reducing-the-cost-of-managing-multiple-aws-accounts-using-aws-control-tower/"&gt;blog post related to Landing Zone best-practices&lt;/a&gt; for cost and billing, and this blog post about &lt;a href="https://aws.amazon.com/blogs/aws-cloud-financial-management/cost-tagging-and-reporting-with-aws-organizations/"&gt;tagging and reporting strategy for organizations&lt;/a&gt;.&lt;/p&gt; 
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;Landing Zones are a best-practice “&lt;em&gt;plumbing&lt;/em&gt;” for enterprise-grade HPC and the most natural starting point for most HPC customers. Whether you intend to offer end-users flexible HPC as a service, or build a single monolithic HPC cluster shared by all users, we recommend you exercise &lt;strong&gt;shared responsibility&lt;/strong&gt; and collaborate with central IT services teams in your enterprise so you can layer HPC as a workload within the broader cloud strategy.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Deep-dive into Hpc7a, the newest AMD-powered member of the HPC instance family</title>
-		<link>https://aws.amazon.com/blogs/hpc/deep-dive-into-hpc7a-the-newest-amd-powered-member-of-the-hpc-instance-family/</link>
-		
-		<dc:creator><![CDATA[Stephen Sachs]]></dc:creator>
-		<pubDate>Tue, 22 Aug 2023 14:54:19 +0000</pubDate>
-				<category><![CDATA[*Post Types]]></category>
-		<category><![CDATA[Announcements]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[Computational Fluid Dynamics]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[MPI]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">3edbe371730c2bf0764bb5a4d71c99ec5a30d5c5</guid>
-
-					<description>Today we discuss the performance results we saw from the new hpc7a instance, running HPC workloads like CFD, molecular dynamics, and weather prediction codes.</description>
-										<content:encoded>&lt;p&gt;Last week, &lt;a href="https://aws.amazon.com/blogs/aws/new-amazon-ec2-hpc7a-instances-powered-by-4th-gen-amd-epyc-processors-optimized-for-high-performance-computing/"&gt;we announced the Hpc7a instance type&lt;/a&gt;, the latest generation AMD-based HPC instance, purpose-built for tightly-coupled high performance computing workloads. This joins our family of HPC instance types in the Amazon Elastic Compute Cloud (Amazon EC2) which began with Hpc7a’s predecessor — the Hpc6a in January 2022.&lt;/p&gt; 
-&lt;p&gt;Amazon EC2 Hpc7a instances, powered by 4th generation AMD EPYC processors, deliver up to 2.5x better performance compared to Amazon EC2 Hpc6a instances.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll discuss details of the new instance and show you some of the performance metrics we’ve gathered by running HPC workloads like computational fluid dynamics (CFD), molecular dynamics (MD) and numerical weather prediction (NWP).&lt;/p&gt; 
-&lt;h2&gt;Introducing the Hpc7a instance&lt;/h2&gt; 
-&lt;p&gt;We launched Hpc6a last year for customers to efficiently run their compute-bound HPC workloads on AWS. As their jobs grow in complexity, customers have asked for more cores with more compute performance, as well as more memory and network performance to reduce their time to results. The Hpc7a instances deliver on these asks, providing twice the number of cores, 1.5x the number of memory channels, and three-times the network bandwidth compared to the previous generation.&lt;/p&gt; 
-&lt;p&gt;It’s based on the 4th Generation AMD EPYC (code name Genoa) processor with up to 192 physical cores, an&amp;nbsp;all-core turbo frequency of 3.7 GHz,&amp;nbsp;768 GiB of memory, and 300 Gbps of Elastic Fabric Adapter (EFA) network performance. This is all possible because of the &lt;a href="https://aws.amazon.com/ec2/nitro/"&gt;AWS Nitro System&lt;/a&gt;, a combination of dedicated hardware and a lightweight hypervisor&amp;nbsp;that offloads many of the traditional virtualization functions to dedicated hardware, result in performance that’s &lt;a href="https://aws.amazon.com/blogs/hpc/bare-metal-performance-with-the-aws-nitro-system/"&gt;virtually indistinguishable&lt;/a&gt; from bare metal.&lt;/p&gt; 
-&lt;h2&gt;HPC instances sizes&lt;/h2&gt; 
-&lt;p&gt;Many off the shelf HPC applications use per-core commercial licensing that is often much greater in price per core than the cores themselves. Those customers have asked for more available memory bandwidth, and more network throughput available &lt;em&gt;per-core&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;Starting today, Hpc7a (along with other 7&lt;sup&gt;th&lt;/sup&gt; generation HPC instances) will be available in different sizes. Usually in Amazon EC2, a smaller instance size reflects a smaller slice of the underlying hardware. However, for the HPC instances — starting with Hpc7g and Hpc7a — each size option &lt;em&gt;will have the same engineering specs and price&lt;/em&gt;, and will differ only by the number of cores enabled.&lt;/p&gt; 
-&lt;p&gt;You have always been able to manually disable cores or use process pinning (affinity) to carefully place threads around the CPUs. But doing this optimally needs an in-depth knowledge of the chip architecture – like the number of NUMA domains and the memory layout. It also means you have to know MPI well, and have a clear sight to what your job submission scripts do when the scheduler receives them.&lt;/p&gt; 
-&lt;p&gt;By offering instance sizes that already have the &lt;em&gt;right pattern of cores turned off&lt;/em&gt;, you’ll be able to maximize the performance of your code with less work. This will be a boost for customers who need to achieve the absolute best performance &lt;em&gt;per core&lt;/em&gt; for their workloads, which often includes commercially-licensed ISV applications. In this case, customers are driven by pricing concerns to get the best possible results from each &lt;em&gt;per-core&lt;/em&gt; license they buy. You can find a &lt;a href="https://aws.amazon.com/blogs/hpc/instance-sizes-in-the-amazon-ec2-hpc7-family-a-different-experience/"&gt;detailed explanation in our post on this topic&lt;/a&gt;, along with performance comparisons that will help you understand our methodology.&lt;/p&gt; 
-&lt;p&gt;With the HPC instance sizes, the cost stays the same for all sizes because you still get access to the entire node’s memory and network, with selected cores turned off to leave extra memory bandwidth available for the remaining cores. We encourage you to benchmark your own codes and find the right balance for your specific needs.&lt;/p&gt; 
-&lt;p&gt;Hpc7a will be available in &lt;strong&gt;four different instances sizes&lt;/strong&gt;. Table 1 describes these in detail.&lt;/p&gt; 
-&lt;div id="attachment_2788" style="width: 901px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2788" loading="lazy" class="wp-image-2788 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-14.18.26.png" alt="Table 1 - Available instance sizes for Hpc7a. Customers choosing a smaller instance type will still have access to the full memory and network performance of the largest instance size but a different number of CPU cores." width="891" height="263"&gt;
- &lt;p id="caption-attachment-2788" class="wp-caption-text"&gt;Table 1 – Available instance sizes for Hpc7a. Customers choosing a smaller instance type will still have access to the full memory and network performance of the largest instance size but a different number of CPU cores.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Performance&lt;/h2&gt; 
-&lt;p&gt;Hpc7a shows significant performance gains over previous generations. While doubling the number of cores per instance, the performance, network, and memory bandwidth per-core have all increased. In many cases, this is leading to a doubling and more in overall simulation speed.&lt;/p&gt; 
-&lt;p&gt;To illustrate this, we’ll look at the relative performance improvement of five common HPC codes across two generations of instance. We’ll look at:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Siemens Simcenter STAR-CCM+ for CFD&lt;/li&gt; 
- &lt;li&gt;Ansys Fluent for CFD&lt;/li&gt; 
- &lt;li&gt;OpenFOAM for CFD&lt;/li&gt; 
- &lt;li&gt;GROMACS for MD&lt;/li&gt; 
- &lt;li&gt;Weather Research and Forecasting Model (WRF) for NWP&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Let’s take a detailed look at each code with performance comparisons to the previous generation Hpc6a instance. For the readers convenience, the previous generations’ specs are Hpc6a.48xlarge: 96 physical cores (3&lt;sup&gt;rd&lt;/sup&gt; Generation AMD EPYC, code name Milan), 384 GB memory, 4 GB memory per core, 3.6 GHz CPU Frequency, and 100 Gbps EFA Network Performance.&lt;/p&gt; 
-&lt;h2&gt;Siemens Simcenter STAR-CCM+&lt;/h2&gt; 
-&lt;p&gt;First, we take a look at Siemens Simcenter STAR-CCM+. We chose the AeroSUV 320M cell automotive test case – a useful public case with similar characteristics to production automotive external aerodynamics models. We ran this with Siemens Simcenter STAR-CCM+ 2306, using Intel MPI 2021.6. As this is an ISV application, no further tuning to match the architecture is necessary. The graphs below show the &lt;em&gt;iterations per minute&lt;/em&gt; as a metric for performance.&lt;/p&gt; 
-&lt;p&gt;We saw an up to 2.7x speed-up between Hpc7a and Hpc6a at 16 instances and similar scaling all the way to 12k cores, that’s around 26k cells per core.&lt;/p&gt; 
-&lt;div id="attachment_2768" style="width: 980px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2768" loading="lazy" class="size-full wp-image-2768" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.36.02.png" alt="Figure 1 – A graph of performance of Siemens Simcenter STAR-CCM+ on the AeroSUV 320M cell dataset. The figure shows that Hpc7a outperforms Hpc6a up to 3.2x on a per instance basis." width="970" height="538"&gt;
- &lt;p id="caption-attachment-2768" class="wp-caption-text"&gt;Figure 1 – A graph of performance of Siemens Simcenter STAR-CCM+ on the AeroSUV 320M cell dataset. The figure shows that Hpc7a outperforms Hpc6a up to 2.7x on a per instance basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2786" style="width: 978px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2786" loading="lazy" class="wp-image-2786 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-14.14.12.png" alt="Figure 2 – A graph of performance of Siemens Simcenter STAR-CCM+ on the AeroSUV 320M cell dataset. Hpc7a outperforms Hpc6a up to 1.29x on a per core basis." width="968" height="537"&gt;
- &lt;p id="caption-attachment-2786" class="wp-caption-text"&gt;Figure 2 – A graph of performance of Siemens Simcenter STAR-CCM+ on the AeroSUV 320M cell dataset. Hpc7a outperforms Hpc6a up to 1.29x on a per core basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Ansys Fluent&lt;/h2&gt; 
-&lt;p&gt;Next we took a look at ANSYS Fluent 2023R1 – where we ran the common public dataset &lt;a href="https://www.ansys.com/en-in/it-solutions/benchmarks-overview/ansys-fluent-benchmarks/ansys-fluent-benchmarks-release-19/external-flow-over-a-formula-1-race-car"&gt;External flow over a Formula-1 race car&lt;/a&gt; . The case has around 140-million cells and uses the realizable k-e turbulence model and the pressure-based coupled solver, least squares cell-based, pseudo transient solver. We ran it to over 9,000 cores, which is still well within the parallel scaling of this particular test case.&lt;/p&gt; 
-&lt;p&gt;The graphs show Solver rating as defined by Ansys as the number of benchmarks that can be run on a given machine (in sequence) in a 24-hour period. We compute this by dividing the number of seconds in a day (86,400 seconds) by the number of seconds required to run the benchmark.&lt;/p&gt; 
-&lt;p&gt;On a per instance basis Hpc7a exhibits up to 2.48x better performance than Hpc6a at 6 instances. The iso-core benefit to Hpc7as favor peaks with 1.29x at 6144 cores.&lt;/p&gt; 
-&lt;div id="attachment_2770" style="width: 981px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2770" loading="lazy" class="size-full wp-image-2770" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.37.23.png" alt="Figure 3 – A graph of performance of Ansys Fluent on the F1 race car 140M dataset. Hpc7a outperforms Hpc6a up to 2.48x on a per instance basis." width="971" height="537"&gt;
- &lt;p id="caption-attachment-2770" class="wp-caption-text"&gt;Figure 3 – A graph of performance of Ansys Fluent on the F1 race car 140M dataset. Hpc7a outperforms Hpc6a up to 2.48x on a per instance basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2771" style="width: 979px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2771" loading="lazy" class="size-full wp-image-2771" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.37.43.png" alt="Figure 4 – A graph of performance of Ansys Fluent on the F1 race car 140M dataset. Hpc7a outperforms Hpc6a up to 1.29x on a per core basis." width="969" height="538"&gt;
- &lt;p id="caption-attachment-2771" class="wp-caption-text"&gt;Figure 4 – A graph of performance of Ansys Fluent on the F1 race car 140M dataset. Hpc7a outperforms Hpc6a up to 1.29x on a per core basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;OpenFOAM&lt;/h2&gt; 
-&lt;p&gt;Next, we tested OpenFOAM with the &lt;em&gt;DrivAer fastback vehicle&lt;/em&gt; (from the &lt;a href="http://autocfd.eng.ox.ac.uk/"&gt;AutoCFD workshop&lt;/a&gt;) with 128M cells (generated using the ANSA preprocessing software by BETA-CAE Systems), and ran the case in hybrid RANS-LES mode using the pimpleFoam solver. We used OpenFOAM v2206 compiled with GNU C++ Compiler v12.3.0 and Open MPI v4.1.5. We use the architecture specific flags to tune the compilation for each instance type (“-march=x86-64-v4 -mtune=x86-64-v4” for Hpc7a and “-march=znver3 -mtune=znver3” for Hpc6a). We ran the case using 192 and 96 MPI ranks per instance, respectively, (fully-populated) and scaled to 3072 cores. The graphs below show the &lt;em&gt;iterations per minute&lt;/em&gt; as a metric for performance.&lt;/p&gt; 
-&lt;p&gt;We saw an up to 2.7x speed-up at 4 instances as this is the core count where Hpc7a is showing super linear scaling curve. Super linear scaling stops at 1536 cores for both instances types and further decreases towards 3072. This is 42k cores per MPI rank which is the expected scaling limit for OpenFOAM.&lt;/p&gt; 
-&lt;div id="attachment_2772" style="width: 977px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2772" loading="lazy" class="size-full wp-image-2772" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.38.19.png" alt="Figure 5 – A graph of performance of OpenFOAM on the DrivAer 128M dataset. Hpc7a outperforms Hpc6a by up 2.7x on a per instance basis." width="967" height="537"&gt;
- &lt;p id="caption-attachment-2772" class="wp-caption-text"&gt;Figure 5 – A graph of performance of OpenFOAM on the DrivAer 128M dataset. Hpc7a outperforms Hpc6a by up 2.7x on a per instance basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2773" style="width: 979px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2773" loading="lazy" class="size-full wp-image-2773" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.38.49.png" alt="Figure 6 – A graph of performance of OpenFOAM on the DrivAer 128M dataset. Hpc7a outperforms Hpc6a by up 1.3x on a per core basis." width="969" height="540"&gt;
- &lt;p id="caption-attachment-2773" class="wp-caption-text"&gt;Figure 6 – A graph of performance of OpenFOAM on the DrivAer 128M dataset. Hpc7a outperforms Hpc6a by up 1.3x on a per core basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;GROMACS&lt;/h2&gt; 
-&lt;p&gt;Next, we looked at Max Planck Institute provided test case for &lt;a href="https://www.mpinat.mpg.de/grubmueller/bench"&gt;2M atoms ribosome in water (benchRIB)&lt;/a&gt; using GROMACS version 2021.5. We used the Intel compiler version 2022.1.2 and Intel MPI 2021.5.1 to compile and run GROMACS. In this case we used the best matching Intel Compiler flags for Hpc7a (“-march=skylake-avx512 -mtune=skylake-avx512”) and Hpc6a (“-march=core-avx2”) and Intel MKL for the Fast Fourier Transform.&lt;/p&gt; 
-&lt;p&gt;For each scaling data point we used the optimal MPI rank versus OpenMP thread distribution, which means we start with 1 OpenMP thread and an MPI rank on each core at 1 instances and steadily increase the number of OpenMP threads when scaling further to better balance the workload. The maximum number of threads used is 2 threads at 8 instances and 4 at 16 instances for Hpc7a and Hpc6a, respectively. The graphs show simulated time per day (ns/day), higher is better.&lt;/p&gt; 
-&lt;p&gt;We saw up to 2.05x speed-up on 2 instances and similar scaling when comparing Hpc7a to Hpc6a. We also see an up to 1.2x speed-up at 768 cores when comparing on a per core level.&lt;/p&gt; 
-&lt;div id="attachment_2774" style="width: 974px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2774" loading="lazy" class="size-full wp-image-2774" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.39.25.png" alt="Figure 7 – A graph of performance of GROMACS on the benchRIB dataset. Hpc7a outperforms Hpc6a up to 2.05x on a per instance basis." width="964" height="536"&gt;
- &lt;p id="caption-attachment-2774" class="wp-caption-text"&gt;Figure 7 – A graph of performance of GROMACS on the benchRIB dataset. Hpc7a outperforms Hpc6a up to 2.05x on a per instance basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2775" style="width: 976px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2775" loading="lazy" class="size-full wp-image-2775" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.39.50.png" alt="Figure 8 – A graph of performance of GROMACS on the benchRIB dataset. Hpc7a outperforms Hpc6a up to 1.2x on a per core basis." width="966" height="535"&gt;
- &lt;p id="caption-attachment-2775" class="wp-caption-text"&gt;Figure 8 – A graph of performance of GROMACS on the benchRIB dataset. Hpc7a outperforms Hpc6a up to 1.2x on a per core basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;WRF&lt;/h2&gt; 
-&lt;p&gt;We looked at &lt;a href="https://www2.mmm.ucar.edu/wrf/src/conus2.5km.tar.gz"&gt;CONUS 2.5km benchmark&lt;/a&gt; performance using WRF v4.2.2. We used the Intel compiler version 2022.1.2 and Intel MPI 2021.9.0 to compile and run WRF using the same compiler flags as for GROMACS. We used 48 MPI ranks per instances filling up the remaining cores with 4 OpenMP threads to use all 192 cores per instance.&lt;/p&gt; 
-&lt;p&gt;We ran the scaling test up to 128 instances (24,576 cores) and used the total elapsed time to calculate the simulation speed as runs per day (higher is better). Comparing the instances types, we saw an up to 2.6x speed up at 8 instances, and better scalability for Hpc7a compared to previous generation Hpc6a due to the increase of on-node traffic.&lt;/p&gt; 
-&lt;div id="attachment_2776" style="width: 975px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2776" loading="lazy" class="size-full wp-image-2776" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.40.19.png" alt="Figure 9 – A graph of performance of WRF on the Conus 2.5km dataset. Hpc7a outperforms Hpc6a by up 2.6x on a per instance basis." width="965" height="535"&gt;
- &lt;p id="caption-attachment-2776" class="wp-caption-text"&gt;Figure 9 – A graph of performance of WRF on the Conus 2.5km dataset. Hpc7a outperforms Hpc6a by up 2.6x on a per instance basis.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_2777" style="width: 976px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2777" loading="lazy" class="size-full wp-image-2777" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.40.40.png" alt="Figure 10 – A graph of performance of WRF on the Conus 2.5km dataset. Hpc7a retains better scalability at &gt;10k cores due to increased on-node traffic." width="966" height="533"&gt;
- &lt;p id="caption-attachment-2777" class="wp-caption-text"&gt;Figure 10 – A graph of performance of WRF on the Conus 2.5km dataset. Hpc7a retains better scalability at &amp;gt;10k cores due to increased on-node traffic.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Performance is more than just higher core counts&lt;/h2&gt; 
-&lt;p&gt;Hpc7a shows a great performance increase over the previous generation and not only due to doubling the numbers of cores. Figure 11 shows the performance gain for each workload on a per-core basis, so this is additional to that doubling. We ran all instance comparisons using either real production workloads or a close substitute.&lt;/p&gt; 
-&lt;p&gt;Hpc7a instances show, on average, a performance improvement of 29% compared to the previous generation on a &lt;em&gt;per-core&lt;/em&gt; basis.&lt;/p&gt; 
-&lt;div id="attachment_2778" style="width: 977px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2778" loading="lazy" class="size-full wp-image-2778" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/18/CleanShot-2023-08-18-at-10.41.13.png" alt="Figure 11 - Relative performance of Hpc6a and Hpc7a for various applications. The performance results shown here use the same number of cores on HPC6a.48xlarge and Hpc7a.96xlarge to highlight the expected iso-core improvement. This translates to using only half the number Hpc7a instances per test case." width="967" height="539"&gt;
- &lt;p id="caption-attachment-2778" class="wp-caption-text"&gt;Figure 11 – Relative performance of Hpc6a and Hpc7a for various applications. The performance results shown here use the same number of cores on HPC6a.48xlarge and Hpc7a.96xlarge to highlight the expected iso-core improvement. This translates to using only half the number Hpc7a instances per test case.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this blog post we introduced the Amazon EC2 Hpc7a instance, which offers up to 2.5x better compute performance compared to previous generation AMD HPC instance. It has twice the cores per instance and yet still has increased per-core compute performance, better memory bandwidth, and greater network performance per core.&lt;/p&gt; 
-&lt;p&gt;We hope you’ll try them for your workloads, too. Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; and let us know how you fare.&lt;/p&gt;</content:encoded>
 					
 		
 		
