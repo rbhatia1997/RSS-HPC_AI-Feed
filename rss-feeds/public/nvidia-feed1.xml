@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 06 Dec 2023 17:24:52 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 06 Dec 2023 20:39:41 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,71 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.1</generator>
 	<item>
+		<title>Visual AI Takes Flight at Canada’s Largest, Busiest Airport</title>
+		<link>https://blogs.nvidia.com/blog/zensors-visual-ai/</link>
+		
+		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
+		<pubDate>Wed, 06 Dec 2023 21:00:39 +0000</pubDate>
+				<category><![CDATA[Autonomous Machines]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Computer Vision]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Metropolis]]></category>
+		<category><![CDATA[Transportation]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68650</guid>
+
+					<description><![CDATA[Toronto Pearson International Airport, in Ontario, Canada, is the country’s largest and busiest airport, serving some 50 million passengers each year. To enhance traveler experiences, the airport in June deployed the Zensors AI platform, which uses anonymized footage from existing security cameras to generate spatial data that helps optimize operations in real time. A member <a class="read-more" href="https://blogs.nvidia.com/blog/zensors-visual-ai/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Toronto Pearson International Airport, in Ontario, Canada, is the country’s largest and busiest airport, serving some 50 million passengers each year.</p>
+<p>To enhance traveler experiences, the airport in June deployed the Zensors AI platform, which uses anonymized footage from existing security cameras to generate spatial data that helps optimize operations in real time.</p>
+<p>A member of the <a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/">NVIDIA Metropolis</a> vision AI partner ecosystem, <a href="https://www.zensors.com/">Zensors</a> helped the Toronto Pearson operations team significantly reduce wait times in customs lines, decreasing the average time it took passengers to go through the arrivals process from an estimated 30 minutes during peak periods in 2022 to just under six minutes last summer.</p>
+<p>“Zensors is making visual AI easy for all to use,” said Anuraag Jain, the company’s cofounder and head of product and technology.</p>
+<p>Scaling multimodal, transformer-based AI isn’t easy for most organizations, Jain added, so airports have often defaulted to traditional, less effective solutions based on hardware sensors, lidar or 3D stereo cameras, or look to improve their operations by renovating or building new terminals instead — which can be multibillion-dollar projects.</p>
+<p>“We provide a platform that allows airports to instead think more like software companies, deploying quicker, cheaper and more accurate solutions using their existing cameras and the latest AI technologies,” Jain said.</p>
+<h2><b>Speeding Airport Operations</b></h2>
+<p>To meet the growing travel demands, Toronto Pearson needed a way to improve its operations in a matter of weeks, rather than the months or years it would normally take to upgrade or build new terminal infrastructure.</p>
+<p>The Zensors AI platform — deployed to monitor 20+ customs lines in two of the airport’s terminals — delivered such a solution. It converts video feeds from the airport’s existing camera systems into structured data.</p>
+<p>Using anonymized footage, the platform counts how many travelers are in a line, identifies congested areas and predicts passenger wait times, among other tasks — and it alerts staff in real time to speed operations.</p>
+<p>The platform also offers analytical reports that enable operations teams to assess performance, plan more effectively and redeploy staff for optimal efficiency.</p>
+<p>In addition to providing airport operators data-driven insights, live wait-time statistics from Zensors AI are published on Toronto Pearson’s <a href="https://www.torontopearson.com/en/airport-wait-time-dashboard">online dashboard</a>, as well as on electronic displays in the terminals. This lets passengers easily access accurate information about how long customs or security processes will take. And it increases customer satisfaction overall and reduces potential anxieties about whether they’ll be able to make connecting flights.</p>
+<p>“The analyses we get from the Zensors platform are proving to be very accurate,” said Zeljko Cakic, director of airport IT planning and development at the Greater Toronto Airport Authority, Toronto Pearson’s managing company. “Our goal is to improve overall customer experience and reduce wait times, and the data gathered through the Zensors platform is one of the key contributors for decision-making to drive these results.”</p>
+<h2><b>Accurate AI Powered by NVIDIA</b></h2>
+<p>Zensors AI — built with vision <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">transformer models</a> — offers insights with an impressive accuracy of about 96% compared to when humans validate the information manually. It’s all powered by NVIDIA technology.</p>
+<p>“The Zensors model development and inference run-time stack is effectively the NVIDIA AI stack,” Jain said.</p>
+<p>The company uses NVIDIA GPUs and the <a href="https://developer.nvidia.com/cuda-toolkit">CUDA</a> parallel computing platform to train its AI models, along with the <a href="https://developer.nvidia.com/cudnn">cuDNN</a> accelerated library of primitives for deep neural networks and the <a href="https://developer.nvidia.com/dali">NVIDIA DALI</a> library for decoding and augmenting images and videos.</p>
+<p>With checkpoints at Toronto Pearson open 24/7, Zensors AI inference runs around the clock on <a href="https://developer.nvidia.com/triton-inference-server">NVIDIA Triton Inference Server</a>, an open-source software available through the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> platform.</p>
+<p>The company estimates that using NVIDIA Triton to optimize its inference run-time decreased its monthly cloud GPU spending by more than 20%. In this way, NVIDIA technology enables Zensors to provide a high-availability, production-grade, fully managed service for Toronto Pearson and other clients, Jain said.</p>
+<p>“Today, lots of companies and organizations want to adopt AI, but the hard part is figuring out how to go about it,” he added. “Being a part of NVIDIA Metropolis gives us the best tools and enables more visibility for potential end users of Zensors technology, which ultimately lets users deploy AI with ease.”</p>
+<p>Zensors is also a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, a free program that nurtures cutting-edge startups.</p>
+<h2><b>Visual AI for the Future of Transportation</b></h2>
+<p>Among many other customers who use Zensors AI is Ireland’s Cork Airport, which uses the platform to optimize its operations from curb to gate. In June, Zensors AI was deployed across the airport in just 20 days and, in less than four months, the platform helped save about 90 hours of congestion time through proactive curbside traffic management.</p>
+<p>“Aviation is just one part of mobility,” Jain said. “We’re expanding to rail, bus and multimodal transit — and we believe Zensors will provide the layer of intelligence to eventually bring AI to all types of brick-and-mortar operators.”</p>
+<p>Looking forward, the company is working to incorporate <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">generative AI</a> and <a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/">large language models</a> into the question-answering capabilities of its platform in a safe, reliable way.</p>
+<p><i>Learn more about the </i><a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/"><i>NVIDIA Metropolis</i></a><i> platform and how it’s used to build </i><a href="https://resources.nvidia.com/en-us-metropolis-software-success-stories/metropolis-and-iva-airports?xs=369940"><i>smarter, safer travel hubs</i></a><i>, including at </i><a href="https://blogs.nvidia.com/blog/bengaluru-airport-vision-ai/"><i>Bengaluru Airport</i></a><i>, one of India’s busiest airports.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/people-airport.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/people-airport-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Visual AI Takes Flight at Canada’s Largest, Busiest Airport]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>17 Predictions for 2024: From RAG to Riches to Beatlemania and National Treasures</title>
 		<link>https://blogs.nvidia.com/blog/2024-ai-predictions/</link>
 		
@@ -167,7 +232,7 @@
 </b><b>Vice President of Financial Services </b></p>
 <p><b>AI-first financial services: </b>With AI advancements growing exponentially, financial services firms will bring the compute power to the data, rather than the other way around.</p>
 <p>Firms will undergo a strategic shift toward a highly scalable, hybrid combination of on-premises infrastructure and cloud-based computing, driven by the need to mitigate concentration risk and maintain agility amid rapid technological advancements. Firms that handle their most mission-critical workloads, including AI-powered customer service assistants, fraud detection, risk management and more, will lead.</p>
-<p><img loading="lazy" decoding="async" class="wp-image-68622 size-thumbnail alignleft" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1-150x150.jpg" alt="" width="150" height="150" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1-150x150.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1-400x400.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1-500x500.jpg 500w, https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1-768x768.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1-450x450.jpg 450w, https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1-215x215.jpg 215w, https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1-100x100.jpg 100w, https://blogs.nvidia.com/wp-content/uploads/2023/12/marcspieler-1.jpg 1080w" sizes="(max-width: 150px) 100vw, 150px" /></p>
+<p><img loading="lazy" decoding="async" class="alignleft wp-image-56797 size-thumbnail" src="https://blogs.nvidia.com/wp-content/uploads/2022/04/Marc-Spieler-e1670963488225-150x150.jpg" alt="Marc Spieler" width="150" height="150" srcset="https://blogs.nvidia.com/wp-content/uploads/2022/04/Marc-Spieler-e1670963488225-150x150.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2022/04/Marc-Spieler-e1670963488225-214x215.jpg 214w, https://blogs.nvidia.com/wp-content/uploads/2022/04/Marc-Spieler-e1670963488225-100x100.jpg 100w, https://blogs.nvidia.com/wp-content/uploads/2022/04/Marc-Spieler-e1670963488225.jpg 339w" sizes="(max-width: 150px) 100vw, 150px" /></p>
 <p><b>MARC SPIELER<br />
 </b><b>Senior Director of Energy</b></p>
 <p><b>Physics-ML for faster simulation: </b>Energy companies will increasingly turn to physics-informed machine learning (physics-ML) to accelerate simulations, optimize industrial processes and enhance decision-making.</p>
@@ -278,7 +343,7 @@
 					<description><![CDATA[‘Tis the season for friends, family and beautifully rendered Santa animations from this week’s In the NVIDIA Studio artist, 3D expert Božo Balov.]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. </i></p>
 <p>‘Tis the season for friends, family and beautifully rendered Santa animations from this week’s <i>In the NVIDIA Studio </i>artist, 3D expert Božo Balov.</p>
-<p>This week also marks an incredible milestone, with <a href="https://www.nvidia.com/en-us/geforce/news/rtx500-celebration-dlss-ray-tracing-new-games-win-prizes">over 500 NVIDIA RTX-powered games and creative apps</a> now available with support for ray tracing and AI-powered technologies like NVIDIA DLSS. Over 120 of the most popular apps — including the Adobe Creative Cloud suite, Autodesk Maya, Blender, Blackmagic Design’s Davinci Resolve, OBS, Unity and more — use RTX to accelerate workflows by orders of magnitude, power new AI tools and enhancements and enable real-time, ray-traced previews.</p>
+<p>This week also marks an incredible milestone, with <a href="https://www.nvidia.com/en-us/geforce/news/rtx500-celebration-dlss-ray-tracing-new-games-win-prizes">over 500 NVIDIA RTX-powered games and creative apps</a> now available with support for ray tracing and AI-powered technologies like NVIDIA DLSS. Over 120 of the most popular apps — including the Adobe Creative Cloud suite, Autodesk Maya, Blender, Blackmagic Design’s DaVinci Resolve, OBS, Unity and more — use RTX to accelerate workflows by orders of magnitude, power new AI tools and enhancements and enable real-time, ray-traced previews.</p>
 <p><iframe loading="lazy" title="500 RTX Games and Apps | RTX. It’s On." width="500" height="281" src="https://www.youtube.com/embed/YS8-smNHOhs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>To celebrate, NVIDIA GeForce is hosting a giveaway for gift cards, rare, sought-after #RTXON keyboard keycaps and more. Follow GeForce on <a href="https://www.facebook.com/NVIDIAGeForce/">Facebook</a>, <a href="https://www.instagram.com/nvidiageforce/?hl=en">Instagram</a>, <a href="https://www.tiktok.com/@nvidiageforce?lang=en">TikTok</a> or <a href="https://twitter.com/NVIDIAGeForce">X</a> (formerly known as Twitter) for instructions on how to enter.</p>
 <blockquote class="twitter-tweet" data-width="500" data-dnt="true">
@@ -1334,78 +1399,6 @@ Named after the majestic Amazonian Ceiba tree, the Project Ceiba DGX Cloud clust
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[3D Artist Cooks Up Stunningly Photorealistic Food Renders This Week ‘In the NVIDIA Studio’]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>What Is a SuperNIC?</title>
-		<link>https://blogs.nvidia.com/blog/what-is-a-supernic/</link>
-		
-		<dc:creator><![CDATA[Itay Ozery]]></dc:creator>
-		<pubDate>Mon, 20 Nov 2023 14:00:12 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Explainer]]></category>
-		<category><![CDATA[Networking]]></category>
-		<category><![CDATA[NVIDIA BlueField]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68257</guid>
-
-					<description><![CDATA[Generative AI is the latest turn in the fast-changing digital landscape. One of the groundbreaking innovations making it possible is a relatively new term: SuperNIC.  What Is a SuperNIC? SuperNIC is a new class of network accelerators designed to supercharge hyperscale AI workloads in Ethernet-based clouds. It provides lightning-fast network connectivity for GPU-to-GPU communication, achieving <a class="read-more" href="https://blogs.nvidia.com/blog/what-is-a-supernic/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><span data-contrast="auto">Generative AI is the latest turn in the fast-changing digital landscape. One of the groundbreaking innovations making it possible is a relatively new term: SuperNIC.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<h2 aria-level="1"><strong>What Is a SuperNIC?</strong></h2>
-<p><span data-contrast="auto">SuperNIC is a new class of network accelerators designed to supercharge hyperscale AI workloads in Ethernet-based clouds. It provides lightning-fast network connectivity for GPU-to-GPU communication, achieving speeds reaching 400Gb/s using remote direct memory access (RDMA) over converged Ethernet (RoCE) technology. </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">SuperNICs combine the following unique attributes:</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<ul>
-<li><span data-contrast="auto">High-speed packet reordering to ensure that data packets are received and processed in the same order they were originally transmitted. This maintains the sequential integrity of the data flow.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-<li><span data-contrast="auto">Advanced congestion control using real-time telemetry data and network-aware algorithms to manage and prevent congestion in AI networks.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-<li><span data-contrast="auto">Programmable compute on the input/output (I/O) path to enable customization and extensibility of network infrastructure in AI cloud data centers.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-<li><span data-contrast="auto">Power-efficient, low-profile design to efficiently accommodate AI workloads within constrained power budgets.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-<li><span data-contrast="auto">Full-stack AI optimization, including compute, networking, storage, system software, communication libraries and application frameworks.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-</ul>
-<p><span data-contrast="auto">NVIDIA recently unveiled the world’s first SuperNIC tailored for AI computing, based on the </span><a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/"><span data-contrast="none">BlueField-3 networking platform</span></a><span data-contrast="auto">. It’s a part of the NVIDIA Spectrum-X platform, where it integrates seamlessly with the Spectrum-4 Ethernet switch system. </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">Together, the NVIDIA BlueField-3 SuperNIC and Spectrum-4 switch system form the foundation of an accelerated computing fabric specifically designed to optimize AI workloads. Spectrum-X consistently delivers high network efficiency levels, outperforming traditional Ethernet environments.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">“In a world where AI is driving the next wave of technological innovation, the BlueField-3 SuperNIC is a vital cog in the machinery,” said Yael Shenhav, vice president of DPU and NIC products at NVIDIA. “SuperNICs ensure that your AI workloads are executed with efficiency and speed, making them foundational components for enabling the future of AI computing.”</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<h2 aria-level="1"><strong>The Evolving Landscape of AI and Networking </strong></h2>
-<p aria-level="1"><span data-contrast="auto">The AI field is undergoing a seismic shift, thanks to the advent of </span><a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/"><span data-contrast="none">generative AI</span></a><span data-contrast="auto"> and </span><a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/"><span data-contrast="none">large language models</span></a><span data-contrast="auto">. These powerful technologies have unlocked new possibilities, enabling computers to handle new tasks. </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">AI success relies heavily on GPU-accelerated computing to process mountains of data, train large AI models, and enable real-time inference. This new compute power has opened new possibilities, but it has also challenged Ethernet cloud networks.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">Traditional Ethernet, the technology that underpins internet infrastructure, was conceived to offer broad compatibility and connect loosely coupled applications. It wasn’t designed to handle the demanding computational needs of modern AI workloads, which involve tightly coupled parallel processing, rapid data transfers and unique communication patterns </span><span data-contrast="none">— all of which demand optimized </span><span data-contrast="auto">network connectivity. </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">Foundational network interface cards (NICs) were designed for general-purpose computing, universal data transmission</span> <span data-contrast="auto">and interoperability. They were never designed to cope with the unique challenges posed by the computational intensity of AI workloads. </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">Standard NICs lack the requisite features and capabilities for efficient data transfer, low latency and the deterministic performance crucial for AI tasks. SuperNICs, on the other hand, are purpose-built for modern AI workloads.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<h2 aria-level="1"><strong>SuperNIC Advantages in AI Computing Environments </strong></h2>
-<p aria-level="1"><a href="https://blogs.nvidia.com/blog/whats-a-dpu-data-processing-unit/"><span data-contrast="none">Data processing units</span></a><span data-contrast="auto"> (DPUs) deliver a wealth of advanced features, offering high throughput, low-latency network connectivity and more. Since their introduction in 2020, DPUs have gained popularity in the realm of cloud computing, primarily due to their capacity to offload, accelerate and isolate data center infrastructure processing.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">Although DPUs and SuperNICs share a range of features and capabilities, SuperNICs are uniquely optimized for accelerating networks for AI. The chart below shows how they compare:</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> <a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram.png"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-68294" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-672x366.png" alt="NVIDIA BlueField SuperNIC and DPU comparison chart" width="672" height="366" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-672x366.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-400x218.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-768x419.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-1536x838.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-825x450.png 825w, https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-394x215.png 394w, https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-183x100.png 183w, https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-diagram-1280x698.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></span></p>
-<p><span data-contrast="auto">Distributed AI training and inference communication flows depend heavily on network bandwidth availability for success. SuperNICs, distinguished by their sleek design, scale more effectively than DPUs, delivering an impressive 400Gb/s of network bandwidth per GPU. </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">The 1:1 ratio between GPUs and SuperNICs within a system can significantly enhance AI workload efficiency, leading to greater productivity and superior outcomes for enterprises. </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">The sole purpose of SuperNICs is to accelerate networking for AI cloud computing. Consequently, it achieves this goal using less computing power than a DPU, which requires substantial computational resources to offload applications from a host CPU. </span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">The reduced computing requirements also translate to lower power consumption, which is especially crucial in systems containing up to eight SuperNICs.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<p><span data-contrast="auto">Additional distinguishing features of the SuperNIC include its dedicated AI networking capabilities. When tightly integrated with an AI-optimized NVIDIA Spectrum-4 switch, it offers adaptive routing, out-of-order packet handling and optimized congestion control. These advanced features are instrumental in accelerating Ethernet AI cloud environments.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<h2 aria-level="1"><strong>Revolutionizing AI Cloud Computing</strong></h2>
-<p aria-level="1"><span data-contrast="auto">The NVIDIA BlueField-3 SuperNIC offers several benefits that make it key for AI-ready infrastructure:</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-<ul>
-<li><span data-contrast="auto">Peak AI workload efficiency: The BlueField-3 SuperNIC is purpose-built for network-intensive, massively parallel computing, making it ideal for AI workloads. It ensures that AI tasks run efficiently </span><span data-contrast="none">— </span><span data-contrast="auto">without bottlenecks.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-<li><span data-contrast="auto">Consistent and predictable performance: In multi-tenant data centers where numerous tasks are processed simultaneously, the BlueField-3 SuperNIC ensures that each job and tenant’s performance is isolated, predictable and unaffected by other network activities.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-<li><span data-contrast="auto">Secure multi-tenant cloud infrastructure: Security is a top priority, especially in data centers handling sensitive information. The BlueField-3 SuperNIC maintains high security levels, enabling multiple tenants to coexist while keeping data and processing isolated.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-<li><span data-contrast="auto">Extensible network infrastructure: The BlueField-3 SuperNIC isn’t limited in scope </span><span data-contrast="none">— </span><span data-contrast="auto">it’s highly flexible and adaptable to a myriad of other network infrastructure needs.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></li>
-<li><span data-contrast="auto">Broad server manufacturer support: The BlueField-3 SuperNIC fits seamlessly into most enterprise-class servers without excessive power consumption in data centers.</span></li>
-</ul>
-<p><i><span data-contrast="auto">Learn more about NVIDIA BlueField-3 SuperNICs, including how they integrate across NVIDIA’s data center platforms, in the whitepaper: </span></i><a href="https://resources.nvidia.com/en-us-accelerated-networking-resource-library/next-generation-netw"><i><span data-contrast="none">Next-Generation Networking for the Next Wave of AI</span></i></a><i><span data-contrast="auto">.</span></i><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"> </span></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/bluefield-supernic-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[What Is a SuperNIC?]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
