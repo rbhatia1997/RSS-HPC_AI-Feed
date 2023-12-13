@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 12 Dec 2023 19:55:57 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 13 Dec 2023 16:52:15 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,161 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.1</generator>
 	<item>
+		<title>How Is AI Used in Fraud Detection?</title>
+		<link>https://blogs.nvidia.com/blog/ai-fraud-detection-rapids-triton-tensorrt-nemo/</link>
+		
+		<dc:creator><![CDATA[Kevin Levitt]]></dc:creator>
+		<pubDate>Wed, 13 Dec 2023 17:00:43 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Explainer]]></category>
+		<category><![CDATA[NVIDIA Nemo]]></category>
+		<category><![CDATA[NVIDIA Triton]]></category>
+		<category><![CDATA[RAPIDS]]></category>
+		<category><![CDATA[Synthetic Data Generation]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68770</guid>
+
+					<description><![CDATA[The Wild West had gunslingers, bank robberies and bounties — today’s digital frontier has identity theft, credit card fraud and chargebacks. Cashing in on financial fraud has become a multibillion-dollar criminal enterprise. And generative AI in the hands of fraudsters only promises to make this more profitable. Credit card losses worldwide are expected to reach <a class="read-more" href="https://blogs.nvidia.com/blog/ai-fraud-detection-rapids-triton-tensorrt-nemo/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The Wild West had gunslingers, bank robberies and bounties — today’s digital frontier has identity theft, credit card fraud and chargebacks.</p>
+<p>Cashing in on financial fraud has become a multibillion-dollar criminal enterprise. And <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/">generative AI</a> in the hands of fraudsters only promises to make this more profitable.</p>
+<p>Credit card losses worldwide are expected to reach $43 billion by 2026, according to the <a href="https://nilsonreport.com/articles/card-fraud-losses-worldwide/"><i>Nilson Report</i></a>.</p>
+<p>Financial fraud is perpetrated in a growing number of ways, like harvesting hacked data from the dark web for credit card theft, using generative AI for phishing personal information, and laundering money between cryptocurrency, digital wallets and fiat currencies. Many other financial schemes are lurking in the digital underworld.</p>
+<p>To keep up, financial services firms are wielding AI for fraud detection. That’s because many of these digital crimes need to be halted in their tracks in real time so that consumers and financial firms can stop losses right away.</p>
+<p>So how is AI used for fraud detection?</p>
+<p>AI for fraud detection uses multiple machine learning models to detect anomalies in customer behaviors and connections as well as patterns of accounts and behaviors that fit fraudulent characteristics.</p>
+<h2><b>Generative AI Can Be Tapped as Fraud Copilot</b></h2>
+<p>Much of financial services involves text and numbers. Generative AI and <a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/?ncid=em-even-877400-vt46">large language models</a> (LLMs), capable of learning meaning and context, promise disruptive capabilities across industries with new levels of output and productivity. Financial services firms can harness generative AI to develop more intelligent and capable chatbots and improve fraud detection.</p>
+<p>On the opposite side, bad actors can circumvent AI guardrails with crafty generative AI prompts to use it for fraud. And LLMs are delivering human-like writing, enabling fraudsters to draft more contextually relevant emails without typos and grammar mistakes. Many different tailored versions of phishing emails can be quickly created, making generative AI an excellent copilot for perpetrating scams. There are also a number of dark web tools like FraudGPT, which can exploit generative AI for cybercrimes.</p>
+<p>Generative AI can be exploited for financial harm in voice authentication security measures as well. Some banks are using voice authentication to help authorize users. A banking customer’s voice can be cloned using deep fake technology if an attacker can obtain voice samples in an effort to breach such systems. The voice data can be gathered with spam phone calls that attempt to lure the call recipient into responding by voice.</p>
+<p>Chatbot scams are such a problem that the U.S. Federal Trade Commission <a href="https://www.ftc.gov/business-guidance/blog/2023/03/chatbots-deepfakes-voice-clones-ai-deception-sale">called out concerns</a> for the use of LLMs and other technology to simulate human behavior for deep fake videos and voice clones applied in imposter scams and financial fraud.</p>
+<h2><b>How Is Generative AI Tackling Misuse and Fraud Detection? </b></h2>
+<p>Fraud review has a powerful new tool. Workers handling manual fraud reviews can now be assisted with LLM-based assistants running RAG on the backend to tap into information from policy documents that can help expedite decision-making on whether cases are fraudulent, vastly accelerating the process.</p>
+<p>LLMs are being adopted to predict the next transaction of a customer, which can help payments firms preemptively assess risks and block fraudulent transactions.</p>
+<p>Generative AI also helps combat transaction fraud by improving accuracy, generating reports, reducing investigations and mitigating compliance risk.</p>
+<p>Generating <a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/">synthetic data</a> is another important application of generative AI for fraud prevention. Synthetic data can improve the number of data records used to train fraud detection models and increase the variety and sophistication of examples to teach the AI to recognize the latest techniques employed by fraudsters.</p>
+<p>NVIDIA offers tools to help enterprises embrace generative AI to build chatbots and virtual agents with a workflow that uses <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a>. RAG enables companies to use natural language prompts to access vast datasets for information retrieval.</p>
+<p>Harnessing <a href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/">NVIDIA AI workflows</a> can help accelerate building and deploying enterprise-grade capabilities to accurately produce responses for various use cases, using <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation models</a>, the <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a> framework, <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a> and GPU-accelerated vector database to deploy RAG-powered chatbots.</p>
+<p>There’s an industry focus on safety to ensure generative AI isn’t easily exploited for harm. NVIDIA <a href="https://blogs.nvidia.com/blog/ai-chatbot-guardrails-nemo/">released NeMo Guardrails</a> to help ensure that intelligent applications powered by LLMs, such as OpenAI’s ChatGPT, are accurate, appropriate, on topic and secure.</p>
+<p>The open-source software is designed to help keep AI-powered applications from being exploited for fraud and other misuses.</p>
+<h2><b>What Are the Benefits of AI for Fraud Detection?</b></h2>
+<p>Fraud detection has been a challenge across banking, finance, retail and e-commerce.  Fraud doesn’t only hurt organizations financially, it can also do reputational harm.</p>
+<p>It’s a headache for consumers, as well, when fraud models from financial services firms overreact and register false positives that shut down legitimate transactions.</p>
+<p>So financial services sectors are developing more advanced models using more data to fortify themselves against losses financially and reputationally. They’re also aiming to reduce false positives in fraud detection for transactions to improve customer satisfaction and win greater share among merchants.</p>
+<h2><b>Financial Services Firms Embrace AI for Identity Verification</b></h2>
+<p>The financial services industry is developing AI for identity verification. AI-driven applications using deep learning with graph neural networks (GNNs), natural language processing (NLP) and computer vision can improve identity verification for know-your customer (KYC) and anti-money laundering (AML) requirements, leading to improved regulatory compliance and reduced costs.</p>
+<p>Computer vision analyzes photo documentation such as drivers licenses and passports to identify fakes. At the same time, NLP reads the documents to measure the veracity of the data on the documents as the AI analyzes them to look for fraudulent records.</p>
+<p>Gains in KYC and AML requirements have massive regulatory and economic implications. Financial institutions, including banks, were fined nearly $5 billion for AML, breaching sanctions as well as failures in KYC systems in 2022, <a href="https://www.ft.com/content/7a4821e6-96f1-475c-ae55-6401e402061f">according to the <i>Financial Times</i></a>.</p>
+<h2><b>Harnessing Graph Neural Networks and NVIDIA GPUs </b></h2>
+<p>GNNs have been embraced for their ability to reveal suspicious activity. They’re capable of looking at billions of records and identifying previously unknown patterns of activity to make correlations about whether an account has in the past sent a transaction to a suspicious account.</p>
+<p>NVIDIA has an alliance with the Deep Graph Library team, as well as the PyTorch Geometric team, which provides a GNN framework containerized offering that includes the latest updates, <a href="https://developer.nvidia.com/rapids">NVIDIA RAPIDS</a> libraries and more to help users stay up to date on cutting-edge techniques.</p>
+<p>These GNN framework containers are NVIDIA-optimized and performance-tuned and tested to get the most out of NVIDIA GPUs.</p>
+<p>With access to the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform, developers can tap into NVIDIA RAPIDS, <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a> and the <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> software development kit to support enterprise deployments at scale.</p>
+<h2><b>Improving Anomaly Detection With GNNs</b></h2>
+<p>Fraudsters have sophisticated techniques and can learn ways to outmaneuver fraud detection systems. One way is by unleashing complex chains of transactions to avoid notice. This is where traditional rules-based systems can miss patterns and fail.</p>
+<p>GNNs build on a concept of representation within the model of local structure and feature context. The information from the edge and node features is propagated with aggregation and message passing among neighboring nodes.</p>
+<p>When GNNs run multiple layers of graph convolution, the final node states contain information from nodes multiple hops away. The larger receptive field of GNNs can track the more complex and longer transaction chains used by financial fraud perpetrators in attempts to obscure their tracks.</p>
+<h2><b>GNNs Enable Training Unsupervised or Self-Supervised </b></h2>
+<p>Detecting financial fraud patterns at massive scale is challenged by the tens of terabytes of transaction data that needs to be analyzed in the blink of an eye and a relative lack of labeled data for real fraud activity needed to train models.</p>
+<p>While GNNs can cast a wider detection net on fraud patterns, they can also train on an <a href="https://blogs.nvidia.com/blog/supervised-unsupervised-learning/">unsupervised or self-supervised</a> task.</p>
+<p>By using techniques such as <a href="https://arxiv.org/abs/2102.06514">Bootstrapped Graph Latents</a> — a graph representation learning method — or <a href="https://graph-neural-networks.github.io/static/file/chapter10.pdf">link prediction with negative sampling</a>, GNN developers can pretrain models without labels and fine-tune models with far fewer labels, producing strong graph representations. The output of this can be used for models like XGBoost, GNNs or techniques for clustering, offering better results when deployed for inference.</p>
+<h2><b>Tackling Model Explainability and Bias</b></h2>
+<p>GNNs also enable model explainability with a suite of tools. <a href="https://blogs.nvidia.com/blog/what-is-explainable-ai/">Explainable AI</a> is an industry practice that enables organizations to use such tools and techniques to explain how AI models make decisions, allowing them to safeguard against bias.</p>
+<p>Heterogeneous graph transformer and graph attention network, which are GNN models, enable attention mechanisms across each layer of the GNN, allowing developers to identify message paths that GNNs use to reach a final output.</p>
+<p>Even without an attention mechanism, techniques such as <a href="https://cs.stanford.edu/people/jure/pubs/gnnexplainer-neurips19.pdf">GNNExplainer</a>, <a href="https://github.com/flyingdoog/PGExplainer">PGExplainer</a> and <a href="https://openreview.net/pdf?id=WznmQa42ZAx">GraphMask</a> have been suggested to explain GNN outputs.</p>
+<h2><b>Leading Financial Services Firms Embrace AI for Gains</b><b></b></h2>
+<ul>
+<li aria-level="1"><a href="https://www.nvidia.com/en-us/case-studies/american-express-prevents-fraud-and-foils-cybercrime-with-nvidia-ai-solutions/"><b>American Express</b></a><b>:</b> Improved fraud detection accuracy by 6% with deep learning models and used <a href="https://developer.nvidia.com/tensorrt#tensorrt">NVIDIA TensorRT</a> on <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a>.</li>
+</ul>
+<ul>
+<li aria-level="1"><b>BNY Mellon: </b>Bank of New York Mellon improved fraud detection accuracy by 20% with <a href="https://blogs.nvidia.com/blog/what-is-federated-learning/">federated learning</a>. BNY built a collaborative fraud detection framework that runs Inpher’s secure multi-party computation, which safeguards third-party data on <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/">NVIDIA DGX</a> systems.​</li>
+</ul>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><a href="https://developer.nvidia.com/blog/gpu-inference-momentum-continues-to-build/"><b>PayPal</b></a><b>:</b> PayPal sought a new fraud detection system that could operate worldwide continuously to protect customer transactions from potential fraud​ in real time.​ The company delivered a new level of service, using NVIDIA GPU-powered inference to improve real-time fraud detection by 10% while lowering server capacity nearly 8x.</li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://developer.nvidia.com/blog/detecting-financial-fraud-using-gans-at-swedbank-with-hopsworks-and-gpus/"><b>Swedbank</b></a><b>: </b>Among Sweden’s largest banks, Swedbank trained NVIDIA GPU-driven generative adversarial networks to detect suspicious activities in efforts to stop fraud and money laundering, saving $150 million in a single year.</li>
+</ul>
+<p><i>Learn how NVIDIA AI Enterprise addresses fraud detection at </i><a href="https://info.nvidia.com/inference-financial-services-webinar"><i>this webinar</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/AIfrauddetection.jpg"
+			type="image/jpeg"
+			width="512"
+			height="272"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/AIfrauddetection.jpg"
+			width="512"
+			height="272"
+			/>
+			<media:title type="html"><![CDATA[How Is AI Used in Fraud Detection?]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Pie From the Sky: Drone Startup Delivers Pizza, Meds and Side of Excitement</title>
+		<link>https://blogs.nvidia.com/blog/zipline-drone-jetson-inception/</link>
+		
+		<dc:creator><![CDATA[Scott Martin]]></dc:creator>
+		<pubDate>Wed, 13 Dec 2023 16:00:11 +0000</pubDate>
+				<category><![CDATA[Autonomous Machines]]></category>
+		<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[NVIDIA Jetson]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68713</guid>
+
+					<description><![CDATA[Zipline isn’t just some pie-in-the-sky drone startup. The San Francisco-based company has completed more than 800,000 deliveries in seven countries since its start in 2011. It recently added services for Seattle’s Pagliacci Pizza, vitamin and supplement giant GNC, and large health systems like Intermountain Health, OhioHealth and Michigan Medicine. Zipline developed its drones — which <a class="read-more" href="https://blogs.nvidia.com/blog/zipline-drone-jetson-inception/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Zipline isn’t just some pie-in-the-sky drone startup.</p>
+<p>The San Francisco-based company has completed more than 800,000 deliveries in seven countries since its start in 2011. It recently added services for Seattle’s Pagliacci Pizza, vitamin and supplement giant GNC, and large health systems like Intermountain Health, OhioHealth and Michigan Medicine.</p>
+<p>Zipline developed its drones — which have now flown more than 55 million miles — for autonomous navigation and precision landings using the <a href="https://www.nvidia.com/en-us/ai-data-science/?ncid=pa-srch-goog-680280">NVIDIA Jetson</a> edge AI and robotics platform.</p>
+<p>The fast-growing company recently landed $330 million in funding at a more than $4 billion valuation.</p>
+<p>Zipline is a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, a program that provides startups with technological support and AI platform guidance.</p>
+<h2><b>Delivering With Jetson-Powered Fleets</b></h2>
+<p>The company’s P1 drone, or platform one, has been deployed in production for seven years and currently uses the <a href="https://www.nvidia.com/en-sg/autonomous-machines/embedded-systems/jetson-xavier-nx/">Jetson Xavier NX</a> system-on-module to process its sensor inputs. It’s guided by GPS, air traffic control communications, inertial measurement unit sensors and its onboard detection and avoidance system, with redundancy of guidance for safety.</p>
+<p>“The NVIDIA Jetson module in the wing is part of what delivers our acoustic detection and avoidance system, so it allows us to listen for other aircraft in the airspace around us and plot trajectories that avoid any conflict,” said A.J. Frantz, navigation lead at Zipline.</p>
+<p>The company’s fixed-wing drones can fly out more than 55 miles, at 70 miles per hour, for deliveries from one of several Zipline distribution centers and then return. Capable of hauling up to four pounds of cargo, they autonomously fly over delivery locations and release packages that float down to their destination by parachute.</p>
+<p>The company’s P2, or platform two, is a hybrid drone that can fly fast on fixed-wing flights — but also hover. It can carry eight pounds of cargo for 10 miles and packs a droid that can be lowered on a tether to complete deliveries with precision placement. It’s intended for use in dense, urban environments.</p>
+<p>The P2 uses two <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">Jetson Orin NX</a> modules. One is for the drone’s sensor fusion system to understand environments. The other is in the droid that descends by tether — for redundancy to provide added safety.</p>
+<p>“The P2 droid is about bringing the smallest, quickest, safest, quietest drone in for delivery, coming down precisely and leaving the package — and then going back up,” said Joseph Mardall, head of engineering at Zipline. “We want to integrate into people’s lives in a way that they love and that feels magical.”</p>
+<p>Zipline completes one delivery every 70 seconds globally.</p>
+<p><iframe title="Zipline releases new drone designed for rapid home deliveries" width="500" height="281" src="https://www.youtube.com/embed/BtKdLrJLZ5I?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Flying Away With a Roster of Customers</b></h2>
+<p>Zipline’s service offers advantages that are attracting customers. Its drones, fondly nicknamed ‘Zips,’ are capable of 7x faster delivery times compared with vehicle deliveries, according to the company.</p>
+<p>“Our aircraft fly at 70 miles per hour, as the crow flies, so no traffic, no waiting at lights — we’re talking minutes here in terms of delivery times,” said Mardall. “Single-digit minutes are common for deliveries, so it’s faster than any alternative, for sure.”</p>
+<p>In addition to services for pizza, vitamins and courier meds, Zipline works with Walmart, restaurant chain Sweetgreen, Michigan Medicine, MultiCare Health Systems, Intermountain Health and the government of Rwanda, among others. It also delivers to more than 4,000 hospitals and health centers, according to the company.</p>
+<p>Zipline started its service delivering blood in Rwanda seven years ago and later expanded into food and convenience.</p>
+<h2><b>Riding Jetson Orin for Energy Efficiency, Environmental Benefits </b></h2>
+<p>Delivering energy-efficient computing is mission-critical for the run-time of autonomous machines, used in everything from delivery services and agriculture to mining and undersea exploration. NVIDIA Jetson Orin modules offer up to 275 trillion operations per second while providing market-leading energy efficiency.</p>
+<p>“You can pick the right place for your algorithms to run to make sure you’re getting the most out of the hardware and the power that you are putting into the system,” said Frantz.</p>
+<p>Startups using Jetson-driven applications are also leading the way in sustainability, as more next-generation electric-driven autonomous machines replace those contributing to pollution.</p>
+<p>Deliveries by Zipline offer a 97% reduction in carbon emissions compared with gasoline-driven vehicles, according to the company.</p>
+<p>“We are super excited to significantly reduce carbon emissions,” said Mardall. “And when building an electric aircraft, efficiency is totally key — every watt, every fraction of a watt, every joule that we can claw back can be turned into payload and range.”</p>
+<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/"><i>NVIDIA Jetson Orin</i></a><i>.</i></p>
+<p>&nbsp;</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/Zip-package-drop_no_cross_red_wing-copy-1-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1367"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/Zip-package-drop_no_cross_red_wing-copy-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Pie From the Sky: Drone Startup Delivers Pizza, Meds and Side of Excitement]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Meet NANA, Moonshine Studio’s AI-Powered Receptionist Avatar</title>
 		<link>https://blogs.nvidia.com/blog/studio-moonshine-blender-marvelous-designer-adobe-unreal-engine/</link>
 		
@@ -49,7 +204,7 @@
 <p><iframe title="AccuFACE - Video-based AI Facial Mocap | Live from Webcam or Recorded Video | iClone 8" width="500" height="281" src="https://www.youtube.com/embed/WCzHLSss_xU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p><b>Contests and Challenges Calling All Creators</b></p>
 <p>Creative community The Rookies is hosting Meet Mat 3 — the 3D digital painting contest. Open to students and professionals with no more than a year of industry experience, it challenges contestants to use Adobe Substance 3D Painter to texture a blank character, MAT, in their own unique style. Prizes include <a href="https://www.nvidia.com/en-us/geforce/rtx/">GeForce RTX</a> GPUs, Wacom Cintiq displays and more. Register <a href="https://www.therookies.co/contests/groups/meet-mat-3">today</a> — entries close Jan. 5, 2024.</p>
-<figure id="attachment_68742" aria-describedby="caption-attachment-68742" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-68742" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68742" class="wp-caption-text">MAT, textured by artist Cino Lai in Adobe Substance 3D Painter.</figcaption></figure>
+<figure id="attachment_68742" aria-describedby="caption-attachment-68742" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68742" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68742" class="wp-caption-text">MAT, textured by artist Cino Lai in Adobe Substance 3D Painter.</figcaption></figure>
 <p>And though temperatures continue to drop, the #WinterArtChallenge is heating up with un-brrrrrr-lievable entries like this extraordinary #InstantNeRF by @RadianceFields.</p>
 <blockquote class="twitter-tweet" data-width="500" data-dnt="true">
 <p lang="en" dir="ltr">Let&#39;s see your creativity shine! <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/26f7.png" alt="⛷" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f3a8.png" alt="🎨" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
@@ -549,7 +704,7 @@
 <p>The world’s most influential software and practitioner companies from the manufacturing, product design, retail, e-commerce and robotics industries are committing to the newly established <a href="https://aousd.org/" target="_blank" rel="noopener">Alliance for OpenUSD</a>. <a href="https://www.nvidia.com/en-us/omniverse/usd/" target="_blank" rel="noopener">OpenUSD</a>, the universal language between 3D tools and data, will break down data siloes, enabling industrial enterprises to collaborate across data lakes, tool systems and specialized teams easier and faster than ever to accelerate the digitalization of previously cumbersome, manual industrial processes.</p>
 <p><img loading="lazy" decoding="async" class="wp-image-68637 size-thumbnail alignleft" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1-150x150.png" alt="" width="150" height="150" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2023/12/xinzhouwu-1.png 1080w" sizes="(max-width: 150px) 100vw, 150px" /></p>
 <p><b>XINZHOU WU<br />
-</b><b>Vice President and General Manager of Automotive</b></p>
+</b><b>Vice President of Automotive</b></p>
 <p><b>Modernizing the vehicle production lifecycle: </b>The automotive industry will further embrace generative AI to deliver physically accurate, photorealistic renderings that show exactly how a vehicle will look inside and out — while speeding design reviews, saving costs and improving efficiencies.</p>
 <p>More automakers will embrace this technology within their smart factories, connecting design and engineering tools to build digital twins of production facilities. This will reduce costs and streamline operations without the need to shut down factory lines.</p>
 <p>Generative AI will make consumer research and purchasing more interactive. From car configurators and 3D visualizations to augmented reality demonstrations and virtual test drives, consumers will be able to have a more engaging and enjoyable shopping experience.</p>
@@ -1298,147 +1453,6 @@ Named after the majestic Amazonian Ceiba tree, the Project Ceiba DGX Cloud clust
 			/>
 			<media:title type="html"><![CDATA[NVIDIA Powers Training for Some of the Largest Amazon Titan Foundation Models]]></media:title>
 			<media:description type="html">Amazon Titan logo, a foundation model trained with NVIDIA NeMo</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>3D Artist Nourhan Ismail Brings Isometric Innovation ‘In the NVIDIA Studio’ With Adobe After Effects and Blender</title>
-		<link>https://blogs.nvidia.com/blog/ismail-adobe-after-effects-blender/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Tue, 28 Nov 2023 14:00:44 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68394</guid>
-
-					<description><![CDATA[This week’s talented In the NVIDIA Studio artist, Nourhan Ismail, created a literal NVIDIA studio.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. </i></p>
-<p>This week’s talented <i>In the NVIDIA Studio</i> artist, Nourhan Ismail, created a literal NVIDIA studio.</p>
-<p>Her piece, called <i>Creator by Day, Gamer by Night</i>, was crafted with the isometric art style and impressive graphical fidelity Ismail’s known for, rich with vibrant colors and playful details. It also captures her “work hard, play hard” mentality as a 3D artist, interior designer and game level designer.</p>
-<p>The same art style is featured in the NVIDIA Studio Sessions YouTube miniseries led by Ismail, which provides step-by-step tutorials on how to create a low-poly bedroom, from inception to final render.</p>
-<p><iframe loading="lazy" title="Creating Low Poly Bedroom in Blender w/ Nourhan Ismail" width="500" height="281" src="https://www.youtube.com/embed/videoseries?list=PL4w6jm6S2lzso-UjuP-cB0Nsv9NloOThB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>Facial Animations Made Easier</b></h2>
-<p>Reallusion is the maker of <a href="https://www.reallusion.com/iclone/default.html">Reallusion iClone</a>, real-time 3D animation software built to produce professional animations for films and video games.</p>
-<p>To expedite character animation workflows, the company recently launched its <a href="https://mocap.reallusion.com/iclone-motion-live-mocap/accuface.html?_gl=1*1qxpyqc*_ga*MzYwNDE5ODQ4LjE3MDA2MDg2MDk.*_ga_Q3FS71VPKC*MTcwMDYwODYwOC4xLjEuMTcwMDYxMTQzNS40Mi4wLjA.">AccuFACE plug-in</a>, which accurately captures facial expressions from webcams and conventional video files, without the need for expensive, specialized equipment.</p>
-<p><iframe loading="lazy" title="AccuFACE - Video-based AI Facial Mocap | Live from Webcam or Recorded Video | iClone 8" width="500" height="281" src="https://www.youtube.com/embed/WCzHLSss_xU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>The <a href="https://developer.nvidia.com/maxine">NVIDIA Maxine</a> software development platform, the foundational technology behind the revolutionary <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast app</a>, powers this incredible capability by weighing output and analyzing facial expressions and blendshapes to predict facial mesh animations.</p>
-<p>From there, the AccuFACE plug-in converts this data into facial mesh assets for creators to apply seamlessly. It also fine-tunes lip and tongue articulation using proprietary AccuLIPS technology.</p>
-<p><iframe loading="lazy" title="Advanced Facial Animations With OpenUSD and AI" width="500" height="281" src="https://www.youtube.com/embed/XwtzEU91oAI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Download the <a href="https://mocap.reallusion.com/iclone-motion-live-mocap/accuface.html">plug-in</a> today, available to creators with <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> GPUs.</p>
-<h2><b>Turning Pain Into Beauty</b></h2>
-<p>Ismail’s creative journey began at age four as a form of escape from the armed conflict occurring in Syria, her homeland. During that time, Ismail’s family faced many difficulties, including the loss of their home.</p>
-<p>In the aftermath, she looked to her father, an accomplished artist and fashion designer, as a source of inspiration.</p>
-<p>“His encouragement propelled me to showcase the pinnacle of my abilities, reminding me that art has the power to transform pain into beauty,” she said.</p>
-<p>That encouragement has guided and fueled Ismail’s creative journey, eventually giving rise to her signature, single-room isometric style, an homage to the power of resilience and finding beauty in adversity.</p>
-<figure id="attachment_68401" aria-describedby="caption-attachment-68401" style="width: 500px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68401" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-500x500.png" alt="" width="500" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-living-room-1280w.png 1280w" sizes="(max-width: 500px) 100vw, 500px" /></a><figcaption id="caption-attachment-68401" class="wp-caption-text">Warm and homey.</figcaption></figure>
-<p>“Starting with a single room, I delve into interior design, crafting spaces that reflect the comfort and joy I yearned for during challenging times,” she said. “To me, overcoming adversity proves that even from the harshest circumstances, beauty can emerge.”</p>
-<p>Ismail started as a self-taught 3D artist, driven by a passion to learn the intricacies of creating digital masterpieces.</p>
-<p>“Posting my works became a personal gauge of improvement — not for validation, but as a record of my learning curve,” she said.</p>
-<figure id="attachment_68404" aria-describedby="caption-attachment-68404" style="width: 500px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68404" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-500x500.png" alt="" width="500" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-bathroom-1280w.png 1280w" sizes="(max-width: 500px) 100vw, 500px" /></a><figcaption id="caption-attachment-68404" class="wp-caption-text">Beautifully conceived, masterfully executed.</figcaption></figure>
-<p>Each of Ismail’s pieces is a testament to her evolving skills, dedication and love for sharing her craft, especially with her father.</p>
-<p>In fact, she dedicated her first isometric house to her father. “That was the happiest moment, to create something inspiring and make someone happy,” she said.</p>
-<h2><b>Isometric Art</b></h2>
-<p>Ismail first collects reference material on Adobe Behance to gain inspiration on ways to mix different art styles.</p>
-<p>She then opens Blender and starts sketching in 3D. Blender Cycles’ RTX-accelerated OptiX ray tracing, powered by her <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/">GeForce RTX 3080 Ti GPU</a>, ensured smooth viewport movement.</p>
-<figure id="attachment_68422" aria-describedby="caption-attachment-68422" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-scaled.jpg"><img loading="lazy" decoding="async" class="wp-image-68422 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-light-mode-1280w-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68422" class="wp-caption-text">A gorgeous work in progress.</figcaption></figure>
-<p>While the models are still fairly rudimentary, Ismail calculates the angles that light should be coming in from.</p>
-<p>“Lighting is an emotional element,” she said. “The lighting of each piece evokes different emotions and a certain idiosyncratic introspectiveness, making the experience unique to each person.”</p>
-<figure id="attachment_68407" aria-describedby="caption-attachment-68407" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68407" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-studio-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68407" class="wp-caption-text">The NVIDIA Studio has NVIDIA Canvas!</figcaption></figure>
-<p>Her trick is to regularly switch between rich, colorful scenes and plain color models to measure the emotional weight and visual impact. She either creates the custom textures herself or downloads premade ones online when on a time crunch.</p>
-<figure id="attachment_68410" aria-describedby="caption-attachment-68410" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68410" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-desk-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68410" class="wp-caption-text">Ismail’s incredible detail on full display.</figcaption></figure>
-<p>Then, she plays with camera angles to analyze depth shadows and lighting, setting up animations and sequence shots in Blender. There, Blender Cycles’ RTX-accelerated OptiX ray tracing delivered seamless viewport movement.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68394-10" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-nvidia-camera-animation-1280w.mp4?_=10" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-nvidia-camera-animation-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-nvidia-camera-animation-1280w.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>Final touch-ups are done in post-production in Adobe After Effects. Over 30 GPU-accelerated effects sped the process, allowed Ismail to complete the project with time to spare.</p>
-<figure id="attachment_68416" aria-describedby="caption-attachment-68416" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68416" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-dark-mode-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68416" class="wp-caption-text">“Creator by Day, Gamer by Night” in dark mode.</figcaption></figure>
-<p>“There will always be hard times, so never give up and keep believing in yourself,” Ismail encourages content creators.</p>
-<figure id="attachment_68419" aria-describedby="caption-attachment-68419" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68419" src="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-672x252.png" alt="" width="672" height="252" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-672x252.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-400x150.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-768x288.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-842x316.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-406x152.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w-188x71.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-itns-nourhan-ismail-wk85-artist-feature-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68419" class="wp-caption-text">Digital 3D artist Nourhan Ismail.</figcaption></figure>
-<p>Check out Ismail’s <a href="https://www.instagram.com/noah.pabllooll/">Instagram</a> for more spectacular isometric art.</p>
-<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/11/studio-nourhan-ismail-wk85-nvidia-camera-animation-1280w.mp4" length="1210576" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/nv-blog-header-preview-1280x680-3.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/nv-blog-header-preview-1280x680-3-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[3D Artist Nourhan Ismail Brings Isometric Innovation ‘In the NVIDIA Studio’ With Adobe After Effects and Blender]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Medical Imaging AI Made Easier: NVIDIA Offers MONAI as Hosted Cloud Service</title>
-		<link>https://blogs.nvidia.com/blog/monai-cloud-apis-rsna/</link>
-		
-		<dc:creator><![CDATA[Prerna Dogra]]></dc:creator>
-		<pubDate>Sun, 26 Nov 2023 14:00:26 +0000</pubDate>
-				<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<category><![CDATA[Science]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68260</guid>
-
-					<description><![CDATA[NVIDIA today launched a cloud service for medical imaging AI to further streamline and accelerate the creation of ground-truth data and training of specialized AI models through fully managed, cloud-based application programming interfaces. NVIDIA MONAI cloud APIs — announced at the annual meeting of RSNA, the Radiological Society of North America, taking place this week <a class="read-more" href="https://blogs.nvidia.com/blog/monai-cloud-apis-rsna/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA today launched a cloud service for medical imaging AI to further streamline and accelerate the creation of ground-truth data and training of specialized AI models through fully managed, cloud-based application programming interfaces.</p>
-<p><a href="https://www.nvidia.com/en-us/clara/monai/">NVIDIA MONAI</a> cloud APIs — announced at the annual meeting of RSNA, the Radiological Society of North America, taking place this week in Chicago — provide an expedited path for developers and platform providers to integrate AI into their medical imaging offerings using pretrained foundation models and AI workflows for enterprises. The APIs are built on the open-source MONAI project founded by NVIDIA and King’s College London.</p>
-<p>Medical imaging is critical across healthcare, making up approximately <a href="https://arxiv.org/pdf/2008.09104.pdf" target="_blank" rel="noopener">90% of healthcare data</a>. It’s used by radiologists and clinicians to do screening, diagnosis and intervention, by biopharma researchers to evaluate how clinical trial patients respond to new drugs and by medical device makers to provide real-time decision support.</p>
-<p>The scale of work across each of these areas requires a medical imaging-specific AI factory — an enterprise-grade platform that delivers large-scale data management, creates ground-truth annotations, accelerates model development and establishes seamless AI application deployment.</p>
-<p>With NVIDIA MONAI cloud APIs, solution providers can more easily integrate AI into their medical imaging platforms, enabling them to provide supercharged tools for radiologists, researchers and clinical trial teams to build domain-specialized AI factories. The APIs are <a href="https://developer.nvidia.com/nvidia-monai-cloud-api-early-access-program">available in early access</a> through the <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> AI supercomputing service.</p>
-<p>The NVIDIA MONAI cloud API is integrated into Flywheel, a leading medical imaging data and AI platform that supports end-to-end workflows for AI development. Developers at medical image annotation companies including <a href="https://redbrickai.com/" target="_blank" rel="noopener">RedBrick AI</a> and at machine learning operations (MLOps) platform providers including <a href="https://www.dataiku.com/" target="_blank" rel="noopener">Dataiku</a> are poised to integrate NVIDIA MONAI cloud APIs into their offerings.</p>
-<h2><b>Easy-to-Deploy Annotation and Training for Medical Imaging</b></h2>
-<p>Building efficient and cost-effective AI solutions requires a robust, domain-specialized development foundation that includes full-stack optimizations for software, scalable multi-node systems and state-of-the-art research. It also requires high-quality ground-truth data — which can be arduous and time-consuming to gather, particularly for 3D medical images that require a high level of expertise to annotate.</p>
-<p>NVIDIA MONAI cloud APIs feature interactive annotation powered by the VISTA-3D (Vision Imaging Segmentation and Annotation) foundation model. It’s purpose-built for continuous learning, a capability that improves AI model performance based on user feedback and new data.</p>
-<p>Trained on a dataset of annotated images from 3D CT scans from more than 4,000 patients, spanning various diseases and parts of the body, VISTA-3D accelerates the creation of 3D segmentation masks for medical image analysis. With continuous learning, the AI model’s annotation quality improves over time.</p>
-<p>To further accelerate AI training, this release includes APIs that make it seamless to build custom models based on MONAI pretrained models. NVIDIA MONAI cloud APIs also include Auto3DSeg, which automates hyperparameter tuning and AI model selection for a given 3D segmentation task, simplifying the model development process.</p>
-<p>NVIDIA researchers recently won four challenges at the MICCAI medical imaging conference using Auto3DSeg. These included AI models to analyze 3D CT scans of the kidneys and heart, brain MRIs and 3D ultrasounds of the heart.</p>
-<h2><b>Solutions Providers, Platform Builders Embrace NVIDIA MONAI Cloud APIs</b></h2>
-<p>Medical imaging solution providers and machine learning platforms are using NVIDIA MONAI cloud APIs to deliver critically valuable AI insights to accelerate their customers’ work.</p>
-<p>Flywheel has integrated MONAI through <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> and is now offering NVIDIA MONAI cloud APIs to accelerate medical image curation, labeling analysis and training. The Minneapolis-based company’s centralized, cloud-based platform powers biopharma companies, life science organizations, healthcare providers and academic medical centers to identify, curate and train medical imaging data for the development of trustworthy AI.</p>
-<p>“NVIDIA MONAI cloud APIs lower the cost of building high-quality AI models for radiology, disease research and the evaluation of clinical trial data,” said Dan Marcus, chief scientific officer at Flywheel. “With the addition of cloud APIs for interactive annotation and automated segmentation, customers of our medical imaging AI platform can accelerate AI model development to more quickly deliver innovative solutions.”</p>
-<p>Annotation and viewer solution providers, including Redbrick AI, <a href="https://radicalimaging.com/" target="_blank" rel="noopener">Radical Imaging</a> and <a href="https://www.v7labs.com/" target="_blank" rel="noopener">V7 Labs</a> will use NVIDIA MONAI cloud APIs to bring AI-assisted annotation and training capabilities to market faster, without having to host and manage the AI infrastructure on their own. Medical data labeling company <a href="https://centaurlabs.com/" target="_blank" rel="noopener">Centaur Labs</a> is also exploring MONAI cloud APIs to accelerate medical image annotation.</p>
-<p>RedBrick AI is integrating the VISTA-3D model available through NVIDIA MONAI cloud APIs to deliver interactive cloud annotation for its medical device customers that support distributed teams of clinicians.</p>
-<p>“VISTA-3D allows our clients to rapidly build models across different modalities and conditions,” said Shivam Sharma, CEO of RedBrick AI. “The foundation model is generalizable, making it easy to fine-tune for various clinical applications with accurate, reliable segmentation results.”</p>
-<p>To streamline enterprise AI model development, MLOps platform builders including Dataiku, ClearML and Weight &amp; Biases are also investigating the use of NVIDIA MONAI cloud APIs.</p>
-<p>Dataiku plans to integrate NVIDIA MONAI cloud APIs to further simplify AI model creation for medical imaging applications.</p>
-<p>“With NVIDIA MONAI cloud APIs, Dataiku users would be able to easily use Auto3DSeg, a low-code option to accelerate the development of state-of-the-art segmentation models, through Dataiku’s web interface connected to an NVIDIA-hosted, GPU-accelerated service,” said Kelci Miclaus, global head of AI health and life sciences solutions at Dataiku. “This democratizes AI in biomedical imaging by extending the power to create and apply AI-driven workflows to both data and domain experts.”</p>
-<p>Join the medical imaging innovators accelerating AI development with NVIDIA MONAI cloud APIs by signing up for <a href="https://developer.nvidia.com/nvidia-monai-cloud-api-early-access-program/join">early access</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/hc-corp-blog-monai-services-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/hc-corp-blog-monai-services-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Medical Imaging AI Made Easier: NVIDIA Offers MONAI as Hosted Cloud Service]]></media:title>
-			<media:description type="html"></media:description>
 			</media:content>
 			</item>
 	</channel>
