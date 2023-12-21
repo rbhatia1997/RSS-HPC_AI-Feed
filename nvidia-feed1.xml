@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 20 Dec 2023 17:04:00 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 20 Dec 2023 17:56:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -65,9 +65,9 @@
 <li>WHILL for its one-person vehicle that automatically guides a user inside places like airports or hospitals.</li>
 </ul>
 <h2><b>Dexterous Food Packer</b></h2>
-<p>Inception startup Soft Robotics, of Bedford, Mass., introduced its <a href="https://blogs.nvidia.com/blog/isaac-soft-robotics-simulation/">mGripAI system</a> to an $8 trillion food industry hungry for automation. It combines 3D vision and AI to grasp delicate items such as chicken wings, attracting investors that include Tyson Foods and Johnsonville.</p>
+<p>Inception startup Soft Robotics, of Bedford, Mass., introduced its mGripAI system to an $8 trillion food industry hungry for automation. It combines 3D vision and AI to grasp delicate items such as chicken wings, attracting investors that include Tyson Foods and Johnsonville.</p>
 <p>Soft Robotics uses the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform and <a href="https://developer.nvidia.com/isaac-sim">NVIDIA Isaac Sim</a> robotics simulator to create 3D renderings of chicken parts on conveyor belts or in bins. With help from AI and the ray-tracing capabilities of <a href="https://www.nvidia.com/en-us/design-visualization/ampere-architecture/">NVIDIA RTX</a> technology, they help the robot gripper handle as many as 100 picks per minute, even under glare or changing light conditions.</p>
-<p>“We’re all in on Omniverse and Isaac Sim, and that’s been working great for us,” said David Weatherwax, senior director of software engineering at Soft Robotics.</p>
+<p>“We’re all in on Omniverse and Isaac Sim, and that’s been working great for us,” David Weatherwax, senior director of software engineering at Soft Robotics, said in a <a href="https://blogs.nvidia.com/blog/isaac-soft-robotics-simulation/">January interview</a>.</p>
 <p><iframe title="mGripAI Poultry Automation" width="500" height="281" src="https://www.youtube.com/embed/YhfdyOa-XPQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <h2><b>A Keen Eye in the Factory</b></h2>
 <p>In a very different example of industrial digitalization, leading electronics manufacturer Quanta is inspecting the quality of its products using<a href="https://blogs.nvidia.com/blog/techman-robot-isaac-sim/"> the TM25S</a>, an AI-enabled robot from its subsidiary, Techman Robot.</p>
