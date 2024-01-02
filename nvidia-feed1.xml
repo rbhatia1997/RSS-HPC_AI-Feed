@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 29 Dec 2023 22:00:02 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 02 Jan 2024 05:44:21 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,143 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.2</generator>
 	<item>
+		<title>By Jove, It’s No Myth: NVIDIA Triton Speeds Inference on Oracle Cloud</title>
+		<link>https://blogs.nvidia.com/blog/ai-inference-oci-triton/</link>
+		
+		<dc:creator><![CDATA[Amr Elmeleegy]]></dc:creator>
+		<pubDate>Tue, 02 Jan 2024 16:00:52 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cloud Services]]></category>
+		<category><![CDATA[Computer Vision]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Data Science]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[NVIDIA Triton]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68931</guid>
+
+					<description><![CDATA[An avid cyclist, Thomas Park knows the value of having lots of gears to maintain a smooth, fast ride. So, when the software architect designed an AI inference platform to serve predictions for Oracle Cloud Infrastructure’s (OCI) Vision AI service, he picked NVIDIA Triton Inference Server. That’s because it can shift up, down or sideways <a class="read-more" href="https://blogs.nvidia.com/blog/ai-inference-oci-triton/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>An avid cyclist, Thomas Park knows the value of having lots of gears to maintain a smooth, fast ride.</p>
+<p>So, when the software architect designed an AI inference platform to serve predictions for Oracle Cloud Infrastructure’s (OCI) Vision AI service, he picked <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a>. That’s because it can shift up, down or sideways to handle virtually any AI model, framework and hardware and operating mode — quickly and efficiently.</p>
+<p>“The NVIDIA AI inference platform gives our worldwide cloud services customers tremendous flexibility in how they build and run their AI applications,” said Park, a Zurich-based computer engineer and competitive cycler who’s worked for four of the world’s largest cloud services providers.</p>
+<p>Specifically, Triton reduced OCI’s total cost of ownership by 10%, increased prediction throughput up to 76% and reduced inference latency up to 51% for OCI Vision and Document Understanding Service models that were migrated to Triton. The services run globally across more than 45 regional data centers, according to <a href="https://blogs.oracle.com/ai-and-datascience/post/oci-ai-vision-nvidia-triton-inference-server">an Oracle blog</a> Park and a colleague posted earlier this year.</p>
+<h2><b>Computer Vision Accelerates Insights</b></h2>
+<p>Customers rely on OCI Vision AI for a wide variety of object detection and image classification jobs. For instance, a U.S.-based transit agency uses it to automatically detect the number of vehicle axles passing by to calculate and bill bridge tolls, sparing busy truckers wait time at toll booths.</p>
+<p>OCI AI is also available in Oracle NetSuite, a set of business applications used by more than 37,000 organizations worldwide. It’s used, for example, to automate invoice recognition.</p>
+<p>Thanks to Park’s work, Triton is now being adopted across other OCI services, too.</p>
+<h2><b>A Triton-Aware Data Service</b></h2>
+<p>“We’ve built a Triton-aware AI platform for our customers,” said Tzvi Keisar, a director of product management for OCI’s Data Science service, which handles machine learning for Oracle’s internal and external users.</p>
+<p>“If customers want to use Triton, we’ll save them time by automatically doing the configuration work for them in the background, launching a Triton-powered inference endpoint for them,” said Keisar.</p>
+<p>His team also plans to make it even easier for its other users to embrace the fast, flexible inference server. Triton is included in <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, a platform that provides full security and support businesses need — and it’s available on <a href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/155314141">OCI Marketplace</a>.</p>
+<h2><b>A Massive SaaS Platform</b></h2>
+<p>OCI’s Data Science service is the machine learning platform for both NetSuite and Oracle Fusion software-as-a-service applications.</p>
+<p>“These platforms are massive, with tens of thousands of customers who are also building their work on top of our service,” he said.</p>
+<p>It’s a wide swath of mainly enterprise users in manufacturing, retail, transportation and other industries. They’re building and using AI models of nearly every shape and size.</p>
+<p>Inference was one of the group’s first services, and Triton came on the team’s radar not long after its launch.</p>
+<h2><b>A Best-in-Class Inference Framework</b></h2>
+<p>“We saw Triton pick up in popularity as a best-in-class serving framework, so we started experimenting with it,” Keisar said. “We saw really good performance, and it closed a gap in our existing offerings, especially on multi-model inference — it’s the most versatile and advanced inferencing framework out there.”</p>
+<p>Launched on OCI <a href="https://blogs.oracle.com/ai-and-datascience/post/oci-nvidia-triton-inference-server">in March</a>, Triton has already attracted the attention of many internal teams at Oracle hoping to use it for inference jobs that require serving predictions from multiple AI models running concurrently.</p>
+<p>“Triton has a very good track record and performance on multiple models deployed on a single endpoint,” he said.</p>
+<h2><b>Accelerating the Future</b></h2>
+<p>Looking ahead, Keisar’s team is evaluating <a href="https://developer.nvidia.com/tensorrt#inference">NVIDIA TensorRT-LLM</a> software to supercharge inference on the complex large language models (<a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>) that have captured the imagination of many users.</p>
+<p>An active blogger, Keisar’s <a href="https://blogs.oracle.com/ai-and-datascience/post/quantize-deploy-llama2-70b-costeffective-a10s-oci">latest article</a> detailed creative quantization techniques for running a Llama 2 LLM with a whopping 70 billion parameters on NVIDIA A10 Tensor Core GPUs.</p>
+<p>“Even down to four bits, the quality of model outputs is still quite good,” he said. “I can’t explain all the math, but we found a good balance, and I haven’t seen anyone else do this yet.”</p>
+<p>After announcements this fall that Oracle is deploying the latest <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, H200 GPUs, L40S GPUs and <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">Grace Hopper Superchips</a>, it’s just the start of many accelerated efforts to come.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/KV-OCI-Triton-vision-and-data-science.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/KV-OCI-Triton-vision-and-data-science-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[By Jove, It’s No Myth: NVIDIA Triton Speeds Inference on Oracle Cloud]]></media:title>
+			<media:description type="html">NVIDIA Triton on OCI for computer vision and data science services</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Ring in the New Year With 3D Artist Blendeered’s Futuristic, NVIDIA-Themed City</title>
+		<link>https://blogs.nvidia.com/blog/studio-blendeered-blender-davinci-resolve-canvas/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Tue, 02 Jan 2024 14:00:51 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[In the NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA Studio]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68979</guid>
+
+					<description><![CDATA[A new year means new creative opportunities and new In the NVIDIA Studio beats.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
+<p>A new year means new creative opportunities and new <i>In the NVIDIA Studio</i> beats.</p>
+<p>Each week, featured <i>In the NVIDIA Studio </i>artists share their unique artwork and content creation processes, as well as how <a href="https://www.nvidia.com/en-us/studio/">NVIDIA Studio</a> — a platform comprising <a href="https://www.nvidia.com/en-us/studio/laptops-desktops/">fine-tuned hardware</a> and <a href="https://www.nvidia.com/en-us/studio/software/">efficient software</a> powered by NVIDIA and <a href="https://www.nvidia.com/en-us/geforce/laptops/?nvid=nv-int-bnr-419233#cid=_nv-int-bnr_en-us">GeForce RTX GPUs</a> — elevates their work.</p>
+<p>This week’s featured 3D content creator, Pedro Soares, aka Blendeered, created a stunning NVIDIA-themed New Year’s celebration animation.</p>
+<p>Plus, tune in to the <a href="https://www.nvidia.com/en-us/events/ces/">NVIDIA Special Address at CES</a> on Monday, Jan. 8, at 8 a.m. PT for the latest on content creation, AI-related news and more.</p>
+<h2><b>Blendeered’s Beguiling Renders </b></h2>
+<p>Blendeered’s latest animation was inspired by NVIDIA and the power of technological innovation.</p>
+<p>“The scene, <i>New Year’s,</i> showcases a futuristic city with all the buildings funneling to the center point,” said Blendeered. “This evokes the feeling of accelerating toward a brighter future, which is what NVIDIA is all about: taking tech to the next level, every day.”</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">Happy New Year from NVIDIA Studio! <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f386.png" alt="🎆" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f387.png" alt="🎇" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>May your next year be filled with many beautiful renders. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f58c.png" alt="🖌" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f4fd.png" alt="📽" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Credit: <a href="https://twitter.com/blendeered?ref_src=twsrc%5Etfw">@Blendeered</a> <a href="https://t.co/dCM3Nq1ZeE">pic.twitter.com/dCM3Nq1ZeE</a></p>
+<p>&mdash; NVIDIA Studio (@NVIDIAStudio) <a href="https://twitter.com/NVIDIAStudio/status/1741866957631070681?ref_src=twsrc%5Etfw">January 1, 2024</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>The Portugal-based creator first conceptualized the scene.</p>
+<p>“The futuristic city needed to give a sense of speed,” he said. He accomplished this using highlighted arrows, neon-green street lines and light beams on digital screens across various high-rise buildings.</p>
+<p>Blendeered then built individual assets in Blender version 3.6 — by far his favorite 3D app, in case his stage name didn’t give it away.</p>
+<p>“Blender captivates users with its friendly interface, speed, power, real-time rendering and vibrant community — and the best part is that it’s free!” he shared.</p>
+<p>His <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/">NVIDIA GeForce RTX 4090 GPU</a> unlocked Blender Cycles’ <a href="https://developer.nvidia.com/rtx/ray-tracing/optix">RTX-accelerated OptiX ray tracing</a> in the viewport for interactive, photorealistic modeling sequences. He also textured and applied color schemes to his 3D assets in Blender.</p>
+<p>Next, the artist began lighting the scene using the new Panorama feature in the <a href="https://www.nvidia.com/en-us/studio/canvas/">NVIDIA Canvas</a> app. He tapped OptiX denoising to preview final render results in real time, speeding his workflow.</p>
+<p>Available for GeForce RTX GPU owners and free to download, NVIDIA Canvas uses AI to turn brushstrokes into realistic landscape images for quick creation of backgrounds and concept exploration.</p>
+<figure id="attachment_69001" aria-describedby="caption-attachment-69001" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-69001" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w-672x359.jpg" alt="" width="672" height="359" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w-672x359.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w-768x410.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w-842x450.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w-403x215.jpg 403w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-nvidia-canvas-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69001" class="wp-caption-text">NVIDIA Canvas can be used to generate full, spherical HDRi backdrops and brainstorm ideas.</figcaption></figure>
+<p>Blendeered generated a full, spherical, high-dynamic-range imaging (HDRi) backdrop for his computer-generated imagery workflows — based on AI rendering — with a few simple sketches. He then exported it as an HDR file and imported it into Blender. YouTuber Timo Helmers demonstrates this type of workflow in the video tutorial below.</p>
+<p><iframe title="Get unique HDRI backdrops for your CG renders. (Nvidia Canvas)" width="500" height="281" src="https://www.youtube.com/embed/z8AmOBCB8eI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>“NVIDIA Canvas is amazing software that allowed me to make an HDRi backdrop that fit my scene perfectly,” said Blendeered.</p>
+<p>From there, he completed the animation process before exporting the files to Blackmagic Design’s DaVinci Resolve version 18.</p>
+<figure id="attachment_69004" aria-describedby="caption-attachment-69004" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w.jpg"><img decoding="async" class="size-large wp-image-69004" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w-672x359.jpg" alt="" width="672" height="359" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w-672x359.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w-768x410.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w-842x450.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w-403x215.jpg 403w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-blender-animation-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69004" class="wp-caption-text">Completing animation work in Blender.</figcaption></figure>
+<p>DaVinci Resolve is a key app for GPU acceleration and AI-powered workflows. All of the AI effects in DaVinci Resolve version 18.6 run twice as fast on NVIDIA RTX GPUs with acceleration using the <a href="https://developer.nvidia.com/tensorrt-getting-started">NVIDIA TensorRT</a> software development kit.</p>
+<p>Blendeered’s post-production work included GPU-accelerated color grading, video editing and color scopes. And <a href="https://developer.nvidia.com/video-codec-sdk">NVENC</a>, a GPU hardware accelerator engine for video decoding, enabled faster, smoother playback and scrubbing of high-resolution video files.</p>
+<figure id="attachment_69007" aria-describedby="caption-attachment-69007" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-69007" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w-672x359.jpg" alt="" width="672" height="359" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w-672x359.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w-768x410.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w-842x450.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w-403x215.jpg 403w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-davinci-pp-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69007" class="wp-caption-text">Post-production work in DaVinci Resolve.</figcaption></figure>
+<p>For the final export, the eighth generation NVENC worked together with the built-in dual encoders on the artist’s GeForce RTX 4090 GPU to generate video files twice as fast. For Blendeered, NVIDIA GPUs are the clear choice for content creation because they provide “power, efficiency and reliability.”</p>
+<p>When asked to give advice for aspiring artists, Blendeered encouraged beginners to “embrace consistent practice, learn from failures, seek feedback and stay true to the inner artistic voice.”</p>
+<figure id="attachment_69010" aria-describedby="caption-attachment-69010" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69010" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w-672x245.png" alt="" width="672" height="245" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w-672x245.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w-400x146.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w-768x280.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w-842x307.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w-406x148.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w-188x69.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-pedro-soares-wk90-featured-setup-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69010" class="wp-caption-text">3D artist Pedro Soares, aka Blendeered.</figcaption></figure>
+<p>Check out Blendeered’s portfolio on <a href="https://www.instagram.com/blendeered/">Instagram</a>.</p>
+<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-nv-blog-header-preview-1280x680-blendeered.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-nv-blog-header-preview-1280x680-blendeered-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Ring in the New Year With 3D Artist Blendeered’s Futuristic, NVIDIA-Themed City]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Creature Feature: Safari Across 5 Animal-Focused AI Initiatives of 2023</title>
 		<link>https://blogs.nvidia.com/blog/animal-focused-ai-2023/</link>
 		
@@ -58,7 +195,7 @@
 <p>Researchers at the University of Hawaii at Mānoa are analyzing satellite imagery using NVIDIA GPU-powered AI to track halos — the rings of sand that surround coral reefs — as a way to assess ecosystem health.</p>
 <p>The presence of halos indicates that a coral reef has a healthy population of marine life, including fish and invertebrates. A change in their shape suggests a degrading environment that needs attention from conservationists.</p>
 <p>The researchers’ AI tool, which runs on an <a href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">NVIDIA RTX A6000 GPU</a>, can analyze hundreds of coral reef halos in around two minutes, a task that would take 10 hours for a human to complete.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos.jpg"><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-66706" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-672x357.jpg" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos.jpg"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-66706" src="https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-672x357.jpg" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2023/09/Coral-Reef-Halos.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <h2><a href="https://blogs.nvidia.com/blog/coral-reef-decline-curee-robot-jetson-isaac-omniverse/"><b>Reef-Roving Robot Tracks Undersea Life</b></a></h2>
 <p>An autonomous underwater robot powered by the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson Orin NX</a> module is roaming reef ecosystems to help scientists understand human impact on reefs and surrounding sea creatures.</p>
 <p>Developed by researchers at MIT and the Woods Hole Oceanographic Institution’s Autonomous Robotics and Perception Laboratory, the CUREE robot collects environmental data that informs 3D models of reefs.</p>
@@ -66,7 +203,7 @@
 <h2><b>Fantastic Fauna: Animals Inspire AI-Powered Digital Art</b></h2>
 <p>Greek philosopher Plato said that art imitates life — and digital art is no exception, as exemplified by artists who this year used NVIDIA technology to develop stunning animal-inspired visuals.</p>
 <p>Honoring marine life, BBC Studios’ Alessandro Mastronardi created a series of incredibly <a href="https://blogs.nvidia.com/blog/alessandro-mastronardi-blender-omniverse-broadcast/">realistic shark videos and renders</a> in Blender and <a href="https://www.nvidia.com/en-us/omniverse/creators/">NVIDIA Omniverse</a>, a platform for connecting and building custom 3D tools and applications with <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a>.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_.png"><img decoding="async" class="size-large wp-image-65608" src="https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-645x500.png" alt="" width="645" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-645x500.png 645w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-400x310.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-768x596.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-580x450.png 580w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-277x215.png 277w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-129x100.png 129w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_.png 1280w" sizes="(max-width: 645px) 100vw, 645px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_.png"><img loading="lazy" decoding="async" class="size-large wp-image-65608" src="https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-645x500.png" alt="" width="645" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-645x500.png 645w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-400x310.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-768x596.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-580x450.png 580w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-277x215.png 277w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_-129x100.png 129w, https://blogs.nvidia.com/wp-content/uploads/2023/07/week67-hammerhead-popup1-1280w_.png 1280w" sizes="(max-width: 645px) 100vw, 645px" /></a></p>
 <p>Taiwanese artist Steven Tung took a more whimsical approach in <i>The Given Fish</i>, an <a href="https://blogs.nvidia.com/blog/tung-msi-adobe-3d-painter-blender/">animation depicting stone fish</a> created using Adobe Photoshop, Adobe Substance 3D Painter and Blender — all accelerated by an <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/">NVIDIA GeForce RTX 4090 GPU</a>-powered system.</p>
 <p>London-based Dominic Harris used GPU-accelerated AI to render a <a href="https://blogs.nvidia.com/blog/ai-artist-dominic-harris/">real-time collage of 13,000 imagined butterflies</a>, which exhibit-goers could make flutter or change color. And Keerthan Sathya, based in Bangalore, used the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform to render a <a href="https://blogs.nvidia.com/blog/omniverse-usd-marvelous-designer-connector/">mammoth-themed animation</a>.</p>
 <div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68973-2" width="1280" height="680" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/05/elements-by-dominic-harris-banner-1280-x-680.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/05/elements-by-dominic-harris-banner-1280-x-680.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/05/elements-by-dominic-harris-banner-1280-x-680.mp4</a></video></div>
@@ -110,7 +247,7 @@
 <p>It’s been an amazing year of cloud gaming. The launch of the Ultimate tier brought high-performance cloud gaming across North America and Europe, streaming from newly rolled out <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-jan-19/">GeForce RTX 4080 SuperPODs</a>.</p>
 <p>For the first time in the cloud, members could stream up to 240 frames per second, or 4K 120 fps on the native PC and Mac apps, and experience support for ultrawide resolutions for the smoothest and most immersive gameplay — all thanks to the powerful <a href="https://www.nvidia.com/en-us/geforce/ada-lovelace-architecture/">NVIDIA Ada Lovelace GPU architecture</a>.</p>
 <p>To prove the power of the cloud, NVIDIA gave gamers the <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-aug-17/">ultimate test</a> of latency on <i>KovaaK’s</i>, a latency-sensitive, first-person-shooter aim trainer.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard.jpeg"><img decoding="async" class="aligncenter size-large wp-image-68965" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-672x372.jpeg" alt="GeForce NOW Kovaak's Ultimate Challenge Leaderboard" width="672" height="372" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-672x372.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-400x221.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-768x425.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-814x450.jpeg 814w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-389x215.jpeg 389w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-181x100.jpeg 181w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-1280x708.jpeg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard.jpeg 1441w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard.jpeg"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-68965" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-672x372.jpeg" alt="GeForce NOW Kovaak's Ultimate Challenge Leaderboard" width="672" height="372" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-672x372.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-400x221.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-768x425.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-814x450.jpeg 814w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-389x215.jpeg 389w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-181x100.jpeg 181w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard-1280x708.jpeg 1280w, https://blogs.nvidia.com/wp-content/uploads/2023/12/leaderboard.jpeg 1441w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>Gamers competed for top scores on the leaderboard, and the results were staggering — showing a 1.8x improvement in aiming just by playing with an Ultimate membership.</p>
 <p><iframe loading="lazy" title="GeForce NOW: Power The Cloud With Chromebook Plus" width="500" height="281" src="https://www.youtube.com/embed/Yf-zZWkyfLM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>NVIDIA also posed a challenge to <i>Cyberpunk 2077 </i>fans: to play the graphics-intensive game on an unknown system. Players were astonished to discover that they were playing with full ray tracing on a Chromebook with GeForce NOW. NVIDIA even brought the experience to The Game Awards, showing off the power of gaming on a Chromebook with GeForce NOW on a global stage.</p>
@@ -1192,172 +1329,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Pie From the Sky: Drone Startup Delivers Pizza, Meds and Side of Excitement]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Meet NANA, Moonshine Studio’s AI-Powered Receptionist Avatar</title>
-		<link>https://blogs.nvidia.com/blog/studio-moonshine-blender-marvelous-designer-adobe-unreal-engine/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Tue, 12 Dec 2023 14:00:49 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA Studio Driver]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68732</guid>
-
-					<description><![CDATA[The creative team at Moonshine Studio — an artist-focused visual effects (VFX) studio specializing in animation and motion design — was tasked to solve a problem.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
-<p>The creative team at <a href="https://moonshine.tw/">Moonshine Studio</a> — an artist-focused visual effects (VFX) studio specializing in animation and motion design — was tasked to solve a problem.</p>
-<p>At their Taiwan office, receptionists were constantly engaged in meeting and greeting guests, preventing them from completing other important administrative work. To make matters worse, the automated kiosk greeting system wasn’t working as expected.</p>
-<p>Senior Moonshine Studio 3D artist and this week’s <i>In the NVIDIA Studio </i>creator Eric Chiang stepped up to the challenge. He created a realistic, interactive 3D model that would serve as the foundation of a new AI-powered virtual assistant — NANA. The avatar can welcome guests and provide basic company info, easing the strain on the receptionist team.</p>
-<p>Chiang built NANA using GPU-accelerated features in his favorite creative apps — powered by his <a href="https://www.nvidia.com/en-us/studio/laptops-desktops/">NVIDIA Studio</a>-badged <a href="https://www.msi.com/Desktop/MEG-Trident-X2-13th">MSI MEG Trident X2 PC</a>, which is equipped with a <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/">GeForce RTX 4090 graphics card</a>.</p>
-<p>His creative workflow was enhanced by the Tensor Cores in his GPU, which supercharged AI-specific tasks — saving him time and elevating the quality of his work. <a href="https://www.nvidia.com/en-us/ai-on-rtx/">RTX and AI</a> also improve performance in gaming, boost productivity and more.</p>
-<p><iframe loading="lazy" title="Take Your Creativity Further with AI &amp; Faster with #AIonRTX" width="500" height="281" src="https://www.youtube.com/embed/ZmbKY44onpg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>These advanced features are supported by <a href="https://www.nvidia.com/en-us/studio/">NVIDIA Studio Drivers</a>, — free for RTX GPU owners — which add performance and reliability. The December Studio Driver provides support for the Reallusion iClone AccuFACE plugin, GPU audio enhancements, AV1 in HandBrake and more — and is now ready for download.</p>
-<p><iframe loading="lazy" title="AccuFACE - Video-based AI Facial Mocap | Live from Webcam or Recorded Video | iClone 8" width="500" height="281" src="https://www.youtube.com/embed/WCzHLSss_xU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p><b>Contests and Challenges Calling All Creators</b></p>
-<p>Creative community The Rookies is hosting Meet Mat 3 — the 3D digital painting contest. Open to students and professionals with no more than a year of industry experience, it challenges contestants to use Adobe Substance 3D Painter to texture a blank character, MAT, in their own unique style. Prizes include <a href="https://www.nvidia.com/en-us/geforce/rtx/">GeForce RTX</a> GPUs, Wacom Cintiq displays and more. Register <a href="https://www.therookies.co/contests/groups/meet-mat-3">today</a> — entries close Jan. 5, 2024.</p>
-<figure id="attachment_68742" aria-describedby="caption-attachment-68742" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68742" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-meet-mat-all-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68742" class="wp-caption-text">MAT, textured by artist Cino Lai in Adobe Substance 3D Painter.</figcaption></figure>
-<p>And though temperatures continue to drop, the #WinterArtChallenge is heating up with un-brrrrrr-lievable entries like this extraordinary #InstantNeRF by @RadianceFields.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">Let&#39;s see your creativity shine! <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/26f7.png" alt="⛷" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f3a8.png" alt="🎨" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>Winter is here, and we&#39;re excited to join the <a href="https://twitter.com/hashtag/WinterArtChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#WinterArtChallenge</a> <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2744.png" alt="❄" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f3bf.png" alt="🎿" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/26c4.png" alt="⛄" class="wp-smiley" style="height: 1em; max-height: 1em;" /> </p>
-<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f31f.png" alt="🌟" class="wp-smiley" style="height: 1em; max-height: 1em;" />Share your winter-themed art using the hashtag for a chance to be featured on our social channels.</p>
-<p>Get inspired by this incredible <a href="https://twitter.com/hashtag/InstantNeRF?src=hash&amp;ref_src=twsrc%5Etfw">#InstantNeRF</a> by <a href="https://twitter.com/RadianceFields?ref_src=twsrc%5Etfw">@RadianceFields</a>. <a href="https://t.co/IwUgXqXx6o">pic.twitter.com/IwUgXqXx6o</a></p>
-<p>&mdash; NVIDIA AI Developer (@NVIDIAAIDev) <a href="https://twitter.com/NVIDIAAIDev/status/1731750910345306211?ref_src=twsrc%5Etfw">December 4, 2023</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p>Be sure to include the #WinterArtChallenge hashtag for a chance to be featured on the @NVIDIAStudio, @NVIDIAOmniverse or @NVIDIAAIDev social channels.</p>
-<h2><b>An AI on the Future</b></h2>
-<p>Chiang began in Blender, sculpting intricate 3D models that served as the building blocks for NANA. Blender Cycles’ RTX-accelerated OptiX ray tracing in the viewport unlocked interactive, photorealistic modeling.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68732-7" width="1280" height="674" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-Blender-頭部雕刻-1280w.mp4?_=7" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-Blender-頭部雕刻-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-Blender-頭部雕刻-1280w.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>He then used the Marvelous Designer software for making, editing and reusing 3D clothes to create realistic clothing for NANA. This streamlined the design and simulation process, ensuring that the avatar is not only structurally sound but impeccably dressed.</p>
-<figure id="attachment_68748" aria-describedby="caption-attachment-68748" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68748" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-image1-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68748" class="wp-caption-text">NANA’s casual day outfit.</figcaption></figure>
-<p>Chiang deployed Quixel Mixer and Adobe Substance 3D Painter for shading, adding depth, texture and realism to the 3D models.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68732-8" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SP_衣服材質-1280w.mp4?_=8" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SP_衣服材質-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SP_衣服材質-1280w.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>He then used the Blender plug-in AccuRIG to efficiently create precise, adaptable character rigs.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68732-9" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SP_褲子-1280w.mp4?_=9" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SP_褲子-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SP_褲子-1280w.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>Chiang put everything together in Unreal Engine, where he seamlessly integrated 3D objects into the scene, leveraging real-time rendering to create visually stunning results.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-68732-10" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SSS-1280w.mp4?_=10" /><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SSS-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SSS-1280w.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>NVIDIA DLSS further increased viewport interactivity by using AI to upscale frames rendered at lower resolution while still retaining high-fidelity detail. All of this was powered by his GeForce RTX 4090 GPU.</p>
-<figure id="attachment_68754" aria-describedby="caption-attachment-68754" style="width: 582px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68754" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w-582x500.png" alt="" width="582" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w-582x500.png 582w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w-400x344.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w-768x660.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w-524x450.png 524w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w-250x215.png 250w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w-406x350.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w-116x100.png 116w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-msi-1280w.png 1280w" sizes="(max-width: 582px) 100vw, 582px" /></a><figcaption id="caption-attachment-68754" class="wp-caption-text">The NVIDIA Studio-badged MSI MEG Trident X2 PC, equipped with a GeForce RTX 4090 graphics card.</figcaption></figure>
-<p>Chiang is excited about what AI can do for creators and society at large.</p>
-<p>“What was once science fiction is now becoming reality, opening the door to a whole new stage of scientific and technological development,” he said. “We are fortunate to participate in and witness this new stage.”</p>
-<figure id="attachment_68757" aria-describedby="caption-attachment-68757" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-68757" src="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w-672x263.png" alt="" width="672" height="263" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w-672x263.png 672w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w-400x156.png 400w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w-768x300.png 768w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w-842x329.png 842w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w-406x159.png 406w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w-188x73.png 188w, https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-itns-eric-chiang-wk87-artist-feature-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-68757" class="wp-caption-text">Moonshine Studio digital 3D artist Eric Chiang.</figcaption></figure>
-<p>Visit <a href="https://moonshine.tw/">Moonshine Studio</a> and say hello to NANA.</p>
-<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>Twitter</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-Blender-頭部雕刻-1280w.mp4" length="1514259" type="video/mp4" />
-<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SP_衣服材質-1280w.mp4" length="1885913" type="video/mp4" />
-<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SP_褲子-1280w.mp4" length="1980545" type="video/mp4" />
-<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2023/12/studio-eric-chiang-wk87-SSS-1280w.mp4" length="1603022" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/nv-blog-header-preview-1280x680-2.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/nv-blog-header-preview-1280x680-2-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Meet NANA, Moonshine Studio’s AI-Powered Receptionist Avatar]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>How NVIDIA Fuels the AI Revolution With Investments in Game Changers and Market Makers</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-investments/</link>
-		
-		<dc:creator><![CDATA[Liz Archibald]]></dc:creator>
-		<pubDate>Mon, 11 Dec 2023 16:00:01 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Explainer]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68714</guid>
-
-					<description><![CDATA[Great companies thrive on stories. Sid Siddeek, who runs NVIDIA’s venture capital arm, knows this well. Siddeek still remembers one of his first jobs, schlepping presentation materials from one investor meeting to another, helping the startup’s CEO and management team get the story out while working from a trailer that “shook when the door opened,” <a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-investments/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Great companies thrive on stories. Sid Siddeek, who runs NVIDIA’s venture capital arm, knows this well.</p>
-<p>Siddeek still remembers one of his first jobs, schlepping presentation materials from one investor meeting to another, helping the startup’s CEO and management team get the story out while working from a trailer that “shook when the door opened,” he said.</p>
-<p>That CEO was Jensen Huang. The startup was NVIDIA.</p>
-<p>Siddeek, who has worked as an investor and an entrepreneur, knows how important it is to find the right people to share your company’s story with early on, whether they’re customers or partners, employees or investors.</p>
-<p>It’s this very principle that underpins NVIDIA’s multifaceted approach to investing in the next wave of innovation, a strategy also championed by Vishal Bhagwati, who leads NVIDIA’s corporate development efforts.</p>
-<p>It’s an effort that’s resulted in more than two dozen investments so far this year, accelerating as the pace of innovation in AI and accelerated computing quickens.</p>
-<h2>NVIDIA’s Three-Pronged Strategy to Support the AI Ecosystem</h2>
-<p>There are three ways that NVIDIA invests in the ecosystem, driving the transformation unleashed by accelerated computing. First, through NVIDIA’s corporate investments, overseen by Bhagwati. Second, through <a href="https://www.nventures.ai/">NVentures</a>, our venture capital arm, led by Siddeek. And finally, through <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, our vehicle for supporting startups and connecting them to venture capital.</p>
-<p>There couldn’t be a better time to support companies harnessing NVIDIA technologies. AI alone could contribute more than $15 trillion to the global economy by 2030, according to PwC.</p>
-<p>And if you’re working in AI and accelerated computing right now, NVIDIA stands ready to help. Developers across every industry in every country are building accelerated computing applications. And they’re just getting going.</p>
-<p>The result is a collection of companies that are advancing the story of AI every day. They include Cohere, CoreWeave, Hugging Face, Inflection, Inceptive and many more. And we’re right alongside them.</p>
-<p>“Partnering with NVIDIA is a game-changer,” said Ed Mehr, CEO of Machina Labs. “Their unmatched expertise will supercharge our AI and simulation capabilities.”</p>
-<h2>Corporate Investments: Growing Our Ecosystem</h2>
-<p>NVIDIA’s corporate investments arm focuses on strategic collaborations. These partnerships stimulate joint innovation, enhance the NVIDIA platform and expand the ecosystem. Since the beginning of 2023, announcements have been made about 14 investments.</p>
-<p>These target companies include Ayar Labs, specializing in chip-to-chip optical connectivity, and Hugging Face, a hub for advanced AI models.</p>
-<p>The portfolio also includes next-generation enterprise solutions. Databricks offers an industry-leading data platform for machine learning, while Cohere provides enterprise automation through AI. Other notable companies are Recursion, Kore.ai and Utilidata, each contributing unique solutions in drug discovery, conversational AI and smart electricity grids, respectively.</p>
-<p>Consumer services are another investment focus. Inflection is crafting a personal AI for creative expression, while Runway serves as a platform for art and creativity through generative AI.</p>
-<p>The investment strategy extends to autonomous machines. Ready Robotics is developing an operating system for industrial robotics, and Skydio builds autonomous drones.</p>
-<p>NVIDIA’s most recent investments are in cloud service providers like CoreWeave. These platforms cater to a diverse clientele, from startups to Fortune 500 companies seeking to build next-generation AI services.</p>
-<h2>NVentures: Investing Alongside Entrepreneurs</h2>
-<p>Through NVentures, we support innovators who are deeply relevant to NVIDIA. We aim to generate strong financial returns and expand the ecosystem by funding companies that use our platforms across a wide range of industries.</p>
-<p>To date, NVentures has made 19 investments in companies in healthcare, manufacturing and other key verticals. Some examples of our portfolio companies include:</p>
-<ul>
-<li style="font-weight: 400;" aria-level="1">Genesis Therapeutics, Inceptive, Terray, Charm, Evozyne, Generate, Superluminal: revolutionizing drug discovery</li>
-<li style="font-weight: 400;" aria-level="1">Machina Labs, Seurat Technologies: disrupting industrial processes to improve manufacturing</li>
-<li style="font-weight: 400;" aria-level="1">PassiveLogic: automating building systems with AI</li>
-<li style="font-weight: 400;" aria-level="1">MindsDB: for developers that need to connect enterprise data to AI</li>
-<li style="font-weight: 400;" aria-level="1">Moon Surgical: improving laparoscopic surgery with AI</li>
-<li style="font-weight: 400;" aria-level="1">Twelve Labs: developing multimodal foundation models for video understanding</li>
-<li style="font-weight: 400;" aria-level="1">Flywheel: accelerating medical imaging data development</li>
-<li style="font-weight: 400;" aria-level="1">Luma AI: developers of visual and multimodal models</li>
-<li style="font-weight: 400;" aria-level="1">Outrider: automating logistics hub operation</li>
-<li style="font-weight: 400;" aria-level="1">Synthesia: AI Video for the enterprise</li>
-<li style="font-weight: 400;" aria-level="1">Replicate: developer platform for open-source and custom models</li>
-</ul>
-<p>All these companies are building on work being done inside and outside NVIDIA.</p>
-<p>“NVentures has a network, not just within NVIDIA, but throughout the industry, to make sure we have access to the best technology and the best people to build all the different modules that have to come together to define the distribution and supply chain of the future,” said Andrew Smith, CEO of Outrider.</p>
-<h2>NVIDIA Inception: Supporting Startups and Connecting Them to Investors</h2>
-<p>In addition, we’re continuing to support startups with NVIDIA Inception. Launched in 2016, this free global program offers technology and marketing support to over 17,000 startups across multiple industries and over 125 countries.</p>
-<p>And, as part of Inception, we’re partnering with venture capitalists through our VC Alliance, a program that offers benefits to our valued network of venture capital firms, including connecting startups with potential investors.</p>
-<h2>Partnering With Innovators in Every Industry</h2>
-<p>Whatever our relationship, whether as a partner or investor, we can offer companies unique forms of support.</p>
-<p>NVIDIA has the technology. NVIDIA has the richest set of libraries and the deepest understanding of the frameworks needed to optimize training and inference pipelines.</p>
-<p>We have the go-to-market skills. NVIDIA has tremendous field sales, solution architect and developer relations organizations with a long track record of working with the most innovative startups and the largest companies in the world.</p>
-<p>We know how to grow. We have people throughout our organization who are recognized leaders in their respective fields and can offer expert advice to companies of all sizes and industries.</p>
-<p>“Partnering with NVIDIA was an easy choice,” said Victor Riparbelli, cofounder and CEO of Synthesia. “We use their hardware, benefit from their AI expertise and get valuable insights, allowing us to build better products faster.”</p>
-<h2>Accelerating the Greatest Breakthroughs of Our Time</h2>
-<p>In turn, these investments augment our R&amp;D in the software, systems and semiconductors undergirding this ecosystem.</p>
-<p>With NVIDIA’s technologies poised to accelerate the work of researchers and scientists, entrepreneurs, startups and Fortune 500 companies, finding ways to support companies that rely on our technologies— with engineering resources, marketing support and capital — is more vital than ever.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/NVIDIA-logo-exterior-park.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/NVIDIA-logo-exterior-park-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[How NVIDIA Fuels the AI Revolution With Investments in Game Changers and Market Makers]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
