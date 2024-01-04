@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 02 Jan 2024 05:44:21 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 03 Jan 2024 17:50:52 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -46,12 +46,12 @@
 <p>OCI AI is also available in Oracle NetSuite, a set of business applications used by more than 37,000 organizations worldwide. It’s used, for example, to automate invoice recognition.</p>
 <p>Thanks to Park’s work, Triton is now being adopted across other OCI services, too.</p>
 <h2><b>A Triton-Aware Data Service</b></h2>
-<p>“We’ve built a Triton-aware AI platform for our customers,” said Tzvi Keisar, a director of product management for OCI’s Data Science service, which handles machine learning for Oracle’s internal and external users.</p>
-<p>“If customers want to use Triton, we’ll save them time by automatically doing the configuration work for them in the background, launching a Triton-powered inference endpoint for them,” said Keisar.</p>
-<p>His team also plans to make it even easier for its other users to embrace the fast, flexible inference server. Triton is included in <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, a platform that provides full security and support businesses need — and it’s available on <a href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/155314141">OCI Marketplace</a>.</p>
+<p>“<!--StartFragment --><span class="cf0">Our AI platform is Triton-aware for the benefit of our customers</span><!--EndFragment -->,” said Tzvi Keisar, a director of product management for OCI’s Data Science service, which handles machine learning for Oracle’s internal and external users.</p>
+<p>“If customers want to use Triton, they don’t have to worry about the configuration because it will be done automatically by the service, launching a Triton-powered inference endpoint for them,” said Keisar.</p>
+<p>Triton is included in <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, a platform that provides full security and support businesses need — and it’s available on <a href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/155314141">OCI Marketplace</a>.</p>
 <h2><b>A Massive SaaS Platform</b></h2>
-<p>OCI’s Data Science service is the machine learning platform for both NetSuite and Oracle Fusion software-as-a-service applications.</p>
-<p>“These platforms are massive, with tens of thousands of customers who are also building their work on top of our service,” he said.</p>
+<p>OCI’s Data Science service is the machine learning platform for both Oracle NetSuite and Oracle Fusion Applications.</p>
+<p>“These business application suites are massive, with tens of thousands of customers who are also building their frameworks on top of our service,” he said.</p>
 <p>It’s a wide swath of mainly enterprise users in manufacturing, retail, transportation and other industries. They’re building and using AI models of nearly every shape and size.</p>
 <p>Inference was one of the group’s first services, and Triton came on the team’s radar not long after its launch.</p>
 <h2><b>A Best-in-Class Inference Framework</b></h2>
@@ -60,8 +60,8 @@
 <p>“Triton has a very good track record and performance on multiple models deployed on a single endpoint,” he said.</p>
 <h2><b>Accelerating the Future</b></h2>
 <p>Looking ahead, Keisar’s team is evaluating <a href="https://developer.nvidia.com/tensorrt#inference">NVIDIA TensorRT-LLM</a> software to supercharge inference on the complex large language models (<a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>) that have captured the imagination of many users.</p>
-<p>An active blogger, Keisar’s <a href="https://blogs.oracle.com/ai-and-datascience/post/quantize-deploy-llama2-70b-costeffective-a10s-oci">latest article</a> detailed creative quantization techniques for running a Llama 2 LLM with a whopping 70 billion parameters on NVIDIA A10 Tensor Core GPUs.</p>
-<p>“Even down to four bits, the quality of model outputs is still quite good,” he said. “I can’t explain all the math, but we found a good balance, and I haven’t seen anyone else do this yet.”</p>
+<p>An active blogger, Keisar’s <a href="https://blogs.oracle.com/ai-and-datascience/post/quantize-deploy-llama2-70b-costeffective-a10s-oci">latest article</a> detailed quantization techniques for running a Llama 2 LLM with a whopping 70 billion parameters on NVIDIA A10 Tensor Core GPUs.</p>
+<p>“Even down to four-bit parameters, the quality of model outputs is still quite good,” he said. “Deploying on NVIDIA GPUs gives us the flexibility to find a good balance in latency, throughput and cost.”</p>
 <p>After announcements this fall that Oracle is deploying the latest <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, H200 GPUs, L40S GPUs and <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">Grace Hopper Superchips</a>, it’s just the start of many accelerated efforts to come.</p>
 </div>]]></content:encoded>
 					
