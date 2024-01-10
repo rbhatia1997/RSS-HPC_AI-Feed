@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 12 Dec 2023 15:09:36 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 10 Jan 2024 15:46:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,95 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Create a Slurm cluster for semiconductor design with AWS ParallelCluster</title>
+		<link>https://aws.amazon.com/blogs/hpc/create-a-slurm-cluster-for-semiconductor-design-with-aws-parallelcluster/</link>
+		
+		<dc:creator><![CDATA[Allan Carter]]></dc:creator>
+		<pubDate>Wed, 10 Jan 2024 15:46:22 +0000</pubDate>
+				<category><![CDATA[Best Practices]]></category>
+		<category><![CDATA[Hi-Tech and Electronics]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Industries]]></category>
+		<category><![CDATA[Semiconductor]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">cdc660c35037e33dd83c140e30c100fc2cd1cd3a</guid>
+
+					<description>If you work in the semiconductor industry with electronic design automation tools and workflows, this guide will help you build an HPC cluster on AWS specifically configured for your needs. It covers AWS ParallelCluster and customizations specifically to cater to EDA.</description>
+										<content:encoded>&lt;p&gt;Chips are fingernail-sized pieces of glass that power all your electronic devices like cell phones, computers, and TVs. Chip designers use electronic design automation (EDA) tools to draw billions of microscopic switches and connect them with wires that are smaller than the finest hair.&lt;/p&gt; 
+&lt;p&gt;EDA engineers measure device sizes in nanometers (1×10&lt;sup&gt;-9 &lt;/sup&gt;m or 1 billionth of a meter) and time in picoseconds (1×10&lt;sup&gt;-12&lt;/sup&gt; s, or &lt;em&gt;one-trillionth&lt;/em&gt; of a second). They analyze their designs to ensure that they meet power, performance, and area (PPA) goals and that they meet rigorous design rules so that silicon foundries can manufacture them. The designers send the completed drawings to a foundry that manufactures them in automated factories that reliably create structures at atomic scale. The entire design and manufacturing process requires vast amounts of high-performance storage and high-performance computing (HPC) to run millions of EDA jobs for large teams of engineers.&lt;/p&gt; 
+&lt;p&gt;Today, we’re going to show you how to create a cluster on AWS, using AWS ParallelCluster, that’s purpose-built for this environment, and ready for the kinds of workloads that EDA users work with every day.&lt;/p&gt; 
+&lt;h2&gt;A world of complex constraints&lt;/h2&gt; 
+&lt;p&gt;EDA workflows impose complex requirements on the compute cluster. A workflow may consist of hundreds of different licensed EDA tools with very different requirements. The tool licenses are typically much more expensive than the infrastructure they run on so the scheduler must ensure that jobs only run when a license and the required compute resources are available.&lt;/p&gt; 
+&lt;p&gt;Large teams must share these critical resources so it’s also essential that the scheduler can enforce a fair-share allocation policy to prevent some users from monopolizing resources at the expense of others. The EDA jobs themselves have widely differing requirements, so the compute cluster must support a very diverse set of Amazon EC2 instance sizes and families from compute-optimized to high-memory variations.&lt;/p&gt; 
+&lt;h2&gt;A day in the life&lt;/h2&gt; 
+&lt;p&gt;Figure 1 shows the basic workflow for designing a chip. The front-end and back-end tasks have quite distinct requirements for compute and storage. An advantage of AWS is the diversity of compute and storage solutions available so design teams can tailor their infrastructure for the needs of each step in the workflow.&lt;/p&gt; 
+&lt;p&gt;The process is also extremely iterative. If engineers find a problem in the late stages of the project, the fix may require architectural changes that require the team to rerun all the steps of the workflow. This is where design teams can get into capacity crunches – and risk catastrophic schedule delays if they can’t access enough compute and storage capacity.&lt;/p&gt; 
+&lt;div id="attachment_3159" style="width: 567px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3159" class="size-full wp-image-3159" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/14/CleanShot-2023-12-14-at-12.33.30.png" alt="Figure 1 - Chip design workflow diagram. Architects create and edit the architecture. Designers create and edit the design and create RTL and circuit diagrams. Design verification engineers run simulations to verify that the design works and gather coverage information to verify completeness of tests. Back end design engineers synthesize RTL to create netlists. Then they do physical layout that converts the netlists to layout and GDSII. Then they run physical verification and power and signal analysis to make sure the layout meets power, performance, and area requirements and that the GDSII meets all design rules. After verification is complete, the developers tape out the GDSII to a silicon foundry for manufacturing." width="557" height="1055"&gt;
+ &lt;p id="caption-attachment-3159" class="wp-caption-text"&gt;Figure 1 – Chip design workflow diagram. Architects create and edit the architecture. Designers create and edit the design and create RTL and circuit diagrams. Design verification engineers run simulations to verify that the design works and gather coverage information to verify completeness of tests. Back end design engineers synthesize RTL to create netlists. Then they do physical layout that converts the netlists to layout and GDSII. Then they run physical verification and power and signal analysis to make sure the layout meets power, performance, and area requirements and that the GDSII meets all design rules. After verification is complete, the developers tape out the GDSII to a silicon foundry for manufacturing.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;At the beginning of a project, compute usage is typically low and sporadic. Usage peaks around project milestones and at the end of a project when it runs hot for several months – and is usually in the critical path for project completion. Figure 2 shows the number of jobs running on different instance types in an EDA cluster over a typical 24-hour window. Utilization would likely be higher and more sustained near the end of a project.&lt;/p&gt; 
+&lt;p&gt;Notice the variability and the diverse mix of instance types that the cluster uses ranging from high-frequency general purpose m5zn to memory-optimized and high-memory r6i and x2iezn instances. The scalability of AWS can ensure that jobs are able to run on instance types that are ideal for the jobs without infrastructure capacity constraints.&lt;/p&gt; 
+&lt;div id="attachment_3160" style="width: 887px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3160" loading="lazy" class="size-full wp-image-3160" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/14/CleanShot-2023-12-14-at-12.34.21.png" alt="Figure 2 - The EDA job profile is highly variable. This graph shows peaks and troughs of usage throughout a 24-hour window. Engineers run jobs that use different instance types as required by the job requirements." width="877" height="790"&gt;
+ &lt;p id="caption-attachment-3160" class="wp-caption-text"&gt;Figure 2 – The EDA job profile is highly variable. This graph shows peaks and troughs of usage throughout a 24-hour window. Engineers run jobs that use different instance types as required by the job requirements.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Enter Slurm and AWS ParallelCluster&lt;/h2&gt; 
+&lt;p&gt;Design teams have traditionally used commercial schedulers, but are increasingly showing interest in Slurm. Slurm is open-source, free to use, and meets all the requirements for running EDA workloads. &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; is an AWS service that allows Slurm to automatically scale up and down fleets of compute instances on AWS. It supports high job throughput and job capacity for even the most demanding workloads. It also supports the high security demands of the semiconductor industry by not requiring any internet access for its functionality.&lt;/p&gt; 
+&lt;p&gt;Starting with version 3.7.0, AWS ParallelCluster has all the features required to easily configure and deploy an EDA Slurm cluster that takes full advantage of the scalability of AWS to design the most advanced chips. It offers Slurm accounting, which allows administrators to configure license-sharing and enables fair-share allocation for cluster users. It can schedule jobs based on the number of cores and the amount of memory that the job requires, too. ParallelCluster also increased the number of instance types that it can support in a cluster. It added support for Redhat Enterprise version 8 which all EDA tools will require, starting in 2024. It added support for custom &lt;em&gt;instance type weighting&lt;/em&gt; so Slurm can schedule the lowest cost instance type that meets a job’s specific requirements. And finally, ParallelCluster added a Python management API that you can use in a Lambda Layer to &lt;a href="https://aws.amazon.com/blogs/hpc/automate-your-clusters-by-creating-self-documenting-hpc-with-aws-parallelcluster/"&gt;completely automate the deployment and updating of your cluster&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3&gt;Putting this all together&lt;/h3&gt; 
+&lt;p&gt;The &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster"&gt;aws-eda-slurm-cluster&lt;/a&gt; repository on GitHub uses all these new ParallelCluster features to quickly and easily create an EDA-specific ParallelCluster in the VPC of your choosing. The cluster supports CentOS 7, RHEL 7 and 8, x86_64 and arm64 architectures, On Demand and Spot Instances, heterogeneous queues, and up to 50 instance types. You can easily configure EDA license counts and fair share allocations using simple configuration files. By default, it selects the instance types that are best for EDA workloads. The cluster sets compute node weights based on the cost of instance types so that Slurm chooses the lowest cost node that meets job requirements.&lt;/p&gt; 
+&lt;p&gt;In addition to the normal ParallelCluster partitions, it defines a batch and an interactive partition that each contain all the compute nodes. The batch partition is the default and the interactive partition is identical except that it has a much higher weight. If you need a job to run quickly, for example to debug a simulation failure, and the batch partition is full, &lt;strong&gt;you can jump to the head of the line&lt;/strong&gt; by submitting your job to the interactive queue and Slurm will schedule it using the next available license and compute node.&lt;/p&gt; 
+&lt;p&gt;ParallelCluster and Slurm typically expect you to &lt;code&gt;ssh&lt;/code&gt; to a login node or the head node to use the cluster, but semiconductor engineers expect to be able to use the cluster from a shell on their virtual desktops. With &lt;em&gt;aws-eda-slurm-cluster&lt;/em&gt;, you can configure submitter hosts so that they can directly access one or more clusters. The cluster configures submitter hosts as Slurm login nodes and creates modulefiles you load to set up the shell environment to use the cluster. It also supports submitters that have a different OS or CPU architecture than the cluster.&lt;/p&gt; 
+&lt;h2&gt;Deployment&lt;/h2&gt; 
+&lt;p&gt;The &lt;a href="https://aws-samples.github.io/aws-eda-slurm-cluster/"&gt;aws-eda-slurm-cluster GitHub page&lt;/a&gt; documents the simple deployment process. The cluster uses the &lt;a href="https://aws.amazon.com/cdk/"&gt;AWS Cloud Development Kit&lt;/a&gt; (CDK) to create a &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster/blob/main/source/cdk/cdk_slurm_stack.py"&gt;custom application&lt;/a&gt; that reads a configuration file and creates an AWS CloudFormation stack that creates and configures the cluster in less than 30 minutes.&lt;/p&gt; 
+&lt;p&gt;The CloudFormation stack creates and configures your customized ParallelCluster. When you no longer need the cluster, you simply delete the CloudFormation &lt;em&gt;stack&lt;/em&gt; and CloudFormation deletes the cluster for you. If you need to update the cluster, then update the configuration file and rerun the CDK application.&lt;/p&gt; 
+&lt;p&gt;The cluster uses a YAML configuration file with a different &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster/blob/main/source/cdk/config_schema.py#L241-L454"&gt;schema&lt;/a&gt; than ParallelCluster’s configuration file. The following basic configuration will use ParallelCluster to create a RHEL 8 Slurm cluster configured for EDA workloads. Note the prerequisite items highlighted in red. It requires an AWS VPC, subnet, and EC2 key pair. If you don’t already have these, &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials_07_slurm-accounting-v3.html#slurm-accounting-vpc-v3"&gt;this tutorial&lt;/a&gt; shows how to create them. &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials_07_slurm-accounting-v3.html#slurm-accounting-db-stack-v3"&gt;This tutorial&lt;/a&gt; shows how to create a Slurm accounting database stack. Include the stack name in the configuration. The licenses section allows the configuration of 1 or more software licenses that Slurm will track to make sure that jobs don’t use more than the number of configured licenses.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;StackName: eda-pc-3-7-2-rhel8-x86-config
+Region: &amp;lt;region&amp;gt;
+SshKeyPair: &amp;lt;ec2-key-pair&amp;gt;
+VpcId: vpc-xxxx
+SubnetId: subnet-xxxx
+slurm:
+  ClusterName: eda-pc-3-7-2-rhel8-x86
+  MungeKeySecret: /slurm/munge_key
+  ParallelClusterConfig:
+    Version: '3.7.2'
+    Image:
+      Os: 'rhel8'
+    Architecture: 'x86_64'
+    Database:
+      DatabaseStackName: &amp;lt;parallel-cluster-database-stack&amp;gt;
+  SlurmCtl: {}
+  InstanceConfig:
+    NodeCounts:
+      DefaultMaxCount: 10
+Licenses:
+  &amp;lt;license-name&amp;gt;:
+    Count: 10
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Deployment is as simple as executing the following commands from the root of the git repository.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;$ source setup.sh
+$ ./install.sh --config-file &amp;lt;config-filename&amp;gt; --cdk-cmd create&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This will create a CloudFormation stack named &lt;strong&gt;eda-pc-3-7-2-rhel8-x86-config&lt;/strong&gt; that will create and configure a ParallelCluster called &lt;strong&gt;eda-pc-3-7-2-rhel8-x86&lt;/strong&gt;. If you need to update the configuration, for example to add a custom compute node AMI, then you just edit the configuration file and run the following command:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;$ source setup.sh
+$ ./install.sh --config-file &amp;lt;config-filename&amp;gt; --cdk-cmd update&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You can use they cluster by connecting to the head node or a login node. If you would like the convenience of accessing the cluster directly from a submitter host, &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-view-stack-data-resources.html"&gt;the output&lt;/a&gt; of the &lt;strong&gt;eda-pc-3-7-2-rhel8-x86-config&lt;/strong&gt; stack has commands for mounting the cluster’s NFS export on submitter hosts and configuring them to use the stack. After you configure the submitter host, you can easily use the cluster. Simply load the provided modulefile and run Slurm commands like in the following example which will open an interactive bash shell on a compute node with 1 GB of memory and 1 CPU core for, at most, an hour.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;$ module load eda-pc-3-7-2-rhel8-x86
+$ srun -p interactive --mem 1G -c 1 --time 1:00:00 --pty /bin/bash&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The module file sets up the environment for the Slurm cluster and configures Slurm defaults for the path, number of cores, default amount of memory, job timeout, and more. This makes it so that users must override the defaults to get more than minimal cluster resources. By default, their jobs will only get 1 core, 100 MB of memory, and a time limit of 1 hour.&lt;/p&gt; 
+&lt;p&gt;Another nice feature of the cluster is that it creates custom ParallelCluster AMI build configuration files. You can use them to create AMIs with all the packages typically required by EDA tools. You can find the build configuration files in the repo at &lt;em&gt;source/resources/parallel-cluster/config/&amp;lt;parallel-cluster-version&amp;gt;/&amp;lt;ClusterName&amp;gt;&lt;/em&gt; or on the head node or submitter host at &lt;em&gt;/opt/slurm/&amp;lt;ClusterName&amp;gt;/config/build-files&lt;/em&gt;. The GitHub page documents the &lt;a href="https://aws-samples.github.io/aws-eda-slurm-cluster/custom-amis/"&gt;process for building custom EDA AMIs&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;You can easily configure and deploy a Slurm cluster on AWS using AWS ParallelCluster and &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster"&gt;aws-eda-slurm-cluster&lt;/a&gt; that can run your most demanding EDA workloads and take advantage of the performance and scalability of AWS to meet your project needs.&lt;/p&gt; 
+&lt;p&gt;Contact your AWS account team and schedule a meeting with our semiconductor industry specialists for more information and help getting your EDA workloads running on AWS.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Using a Level 4 Digital Twin for scenario analysis and risk assessment of manufacturing production on AWS</title>
 		<link>https://aws.amazon.com/blogs/hpc/using-a-level-4-digital-twin-for-scenario-analysis-and-risk-assessment-of-manufacturing-production-on-aws/</link>
 		
@@ -2256,122 +2345,6 @@ ncview wrfout*
 &lt;p&gt;&lt;em&gt;Figure 5. Compute managed and share by teams with a single FSS queue improving utilization while retaining fairness in allocation&lt;/em&gt;&lt;/p&gt; 
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;In this post, we described how Amazon’s Search M5 team continuously optimized their compute resources while owning and operating one of the largest accelerated compute clusters at Amazon. By moving to a unified fair-share scheduling queue on AWS Batch, M5 met its requirements with 14% less resources, and improved GPU utilization by 19% while also eliminating downtime during capacity allocation changes. We also published a self-paced workshop on how to leverage AWS Batch multi-node processing jobs to train deep learning models, and you can try it out in your own account &lt;a href="https://frameworks.hpcworkshops.com/05-batch-mnp-train-gpu.html"&gt;here&lt;/a&gt;. If you are interested in more detailed information about fair share, read the previous &lt;a href="https://aws.amazon.com/blogs/hpc/deep-dive-on-fair-share-scheduling-in-aws-batch/"&gt;deep dive blog post&lt;/a&gt; on fair share scheduling policy parameters.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Bursting your HPC applications to AWS is now easier with Amazon File Cache and AWS ParallelCluster</title>
-		<link>https://aws.amazon.com/blogs/hpc/bursting-your-hpc-applications-to-aws-is-now-easier-with-amazon-file-cache-and-aws-parallelcluster/</link>
-		
-		<dc:creator><![CDATA[Shun Utsui]]></dc:creator>
-		<pubDate>Thu, 31 Aug 2023 14:35:36 +0000</pubDate>
-				<category><![CDATA[Amazon File Cache]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Hybrid Cloud Management]]></category>
-		<category><![CDATA[Storage]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[hybrid]]></category>
-		<guid isPermaLink="false">e9507e0b872282e4bb0b29af1c43a2a0ce6e8277</guid>
-
-					<description>Today we're announcing the integration between Amazon File Cache and AWS ParallelCluster - super important for hybrid scenarios. We'll show you how it works and how to deploy it.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright wp-image-2829 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/30/File-Cache-and-ParallelCluster-1.png" alt="Bursting your HPC applications to AWS is now easier with Amazon File Cache and AWS ParallelCluster" width="380" height="212"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;This post was contributed by Shun Utsui, Senior HPC Solutions Architect, Austin Cherian, Senior Product Manager&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Combining on-premises and cloud&amp;nbsp;computing resources has emerged as a powerful solution for organizations seeking to meet their&amp;nbsp;computing needs. While you can target compute to be on-premises &lt;em&gt;or&lt;/em&gt; in the cloud, your workloads’ accessibility to data in a fast and secure manner is critical to its performance.&lt;/p&gt; 
-&lt;p&gt;Customers have asked for more flexibility to send their workloads to AWS while keeping some data primarily on-premises, so today we’re announcing support for Amazon File Cache in ParallelCluster 3.7.&lt;/p&gt; 
-&lt;p&gt;Amazon File Cache offers a high-speed cache on AWS to facilitate efficient file data processing, regardless of its storage location. File Cache serves as temporary, high-performance cache layer in the cloud, for data stored on-premises. Once configured, workload data moves from on-premises storage to AWS as the workload accesses it via File Cache, which appears to the compute client as a Lustre file system.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll walk you through the features of File Cache that are important for HPC environments, and show you, step-by-step, how you can quickly deploy this and try it out for yourself.&lt;/p&gt; 
-&lt;h2&gt;Introducing Amazon File Cache&lt;/h2&gt; 
-&lt;p&gt;Previous versions of ParallelCluster already supported mounting multiple FSx file systems. A File Cache can be attached to a cluster using the same familiar mechanisms. These configurations are useful for building “cloud bursting” scenarios: you can attach a File Cache to your ParallelCluster and submit jobs to the cluster either through a federated cluster on-premises like a stretch cluster in Slurm, or by logging into the ParallelCluster directly.&lt;/p&gt; 
-&lt;p&gt;But beyond just data accessibility, there are other considerations that make Amazon File Cache an effective choice for your hybrid HPC use cases.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Scalability &amp;amp; Performance&lt;/strong&gt;: Amazon File Cache is built on Lustre, the popular, high-performance file system, and provides scale-out performance that &lt;em&gt;increases linearly with the cache storage capacity&lt;/em&gt;. File Cache is designed to accelerate cloud bursting workloads using cache storage designed to deliver sub-millisecond latencies, up to hundreds of GB/s of throughput, and millions of IOPS.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Data Management &amp;amp; Security:&lt;/strong&gt; Data encryption, access controls, and backup mechanisms ensure data integrity and confidentiality with robust storage solutions. File Cache provides data protection by encrypting data at rest and in-transit between the cache and Amazon Elastic Compute Cloud (Amazon EC2) instances. You can use AWS Key Management Service (KMS) to manage the encryption keys that are used to encrypt your data. File Cache also supports the use of AWS PrivateLink to access your cache resources without going over the internet. You can use Amazon Virtual Private Cloud (VPC) to control access to your cache resources by configuring the VPC Network ACLs to control access to your cache resources. Network ACLs enable you to create a firewall that controls inbound and outbound traffic at the subnet level.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Cost optimization&lt;/strong&gt;: &amp;nbsp;File Cache offers a flexible pricing model so you only pay for the resources you use and there are no minimum fees or setup charges. While pricing is quoted on a monthly basis, billing is &lt;em&gt;per-second&lt;/em&gt;.&lt;/p&gt; 
-&lt;h2&gt;Reference Architecture&lt;/h2&gt; 
-&lt;p&gt;Amazon File Cache can be associated with Amazon S3 buckets or Network File System (NFS) file systems that support NFS v3. Figure 1 shows a typical architecture for a hybrid HPC environment.&lt;/p&gt; 
-&lt;p&gt;Customers with large-scale HPC resources in their own data centers often already have a parallel file system for storage, like Lustre which can be exported using NFS.&lt;/p&gt; 
-&lt;p&gt;To deploy a hybrid infrastructure pattern like this, you’ll need to connect your corporate data center to your VPC using either an &lt;a href="https://aws.amazon.com/vpn/site-to-site-vpn/"&gt;AWS Site-to-Site VPN&lt;/a&gt;, or an &lt;a href="https://aws.amazon.com/directconnect/"&gt;AWS Direct Connect&lt;/a&gt;.&lt;/p&gt; 
-&lt;div id="attachment_2818" style="width: 1026px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2818" loading="lazy" class="size-full wp-image-2818" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/30/CleanShot-2023-08-30-at-13.30.08.png" alt="Figure 1 – High-level architecture of Amazon File Cache in AWS ParallelCluster with a data repository association (DRA) to an on-premises HPC storage system. To link an on-premises parallel file system to File Cache you can export the file system over NFS v3. " width="1016" height="450"&gt;
- &lt;p id="caption-attachment-2818" class="wp-caption-text"&gt;Figure 1 – High-level architecture of Amazon File Cache in AWS ParallelCluster with a data repository association (DRA) to an on-premises HPC storage system. To link an on-premises parallel file system to File Cache you can export the file system over NFS v3.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Deployment details&lt;/h2&gt; 
-&lt;p&gt;Attaching an Amazon File Cache to a ParallelCluster is straightforward. Let’s walk through a typical work flow so you get the idea. We’ll assume you already have an operational ParallelCluster.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Create a Security Group for Amazon File Cache following the “&lt;a href="https://docs.aws.amazon.com/fsx/latest/FileCacheGuide/limit-access-security-groups.html"&gt;Cache access control with Amazon VPC&lt;/a&gt;” section of the File Cache user guide.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Create a cache following the “&lt;a href="https://docs.aws.amazon.com/fsx/latest/FileCacheGuide/getting-started-step1.html"&gt;Create your cache&lt;/a&gt;” section of the File Cache User Guide. Copy the &lt;strong&gt;File Cache ID&lt;/strong&gt; to the clipboard.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Now we’ll modify the ParallelCluster configuration file. If you have an existing cluster deployed through ParallelCluster, you should have a YAML file that you specified during the deployment.&lt;/p&gt; 
-&lt;p&gt;The ParallelCluster configuration file is written in YAML and it defines the resources for your HPC cluster. You can refer to the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/configuration-v3.html"&gt;ParallelCluster User Guide&lt;/a&gt; to find out more about the details the file format.&lt;/p&gt; 
-&lt;p&gt;Under the &lt;code&gt;SharedStorage&lt;/code&gt; section of the configuration file, add &lt;code&gt;StorageType: FileCache&lt;/code&gt; with the name of the file system, the mount directory, and the File Cache ID that you copied onto your clipboard in the previous step.&lt;/p&gt; 
-&lt;p&gt;In this example, we’re configuring the cache to be mounted under the &lt;code&gt;/cache&lt;/code&gt; directory.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;SharedStorage:
-  - Name: FileCache0
-    MountDir: /cache
-    StorageType: FileCache
-    FileCacheSettings:
-      FileCacheId: &amp;lt;your_file_cache_ID&amp;gt;
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;You also need to specify the security group associated with the File Cache. Under the &lt;code&gt;HeadNode&lt;/code&gt; section and the &lt;code&gt;Scheduling&lt;/code&gt; section, enter the security group ID you just created in Step 1 (note that this entry has to be defined under &lt;strong&gt;both&lt;/strong&gt; the &lt;code&gt;HeadNode&lt;/code&gt; &lt;strong&gt;and&lt;/strong&gt; the &lt;code&gt;Scheduling&lt;/code&gt; section, otherwise the cache won’t be mounted on the entire cluster).&lt;/p&gt; 
-&lt;p&gt;If you’re configuring multiple queues, you’ll need to specify the &lt;code&gt;AdditionalSecurityGroups&lt;/code&gt; string under the Networking section of &lt;em&gt;all your queue definitions&lt;/em&gt;.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;Networking:
-  SubnetId: &amp;lt;your_subnet_ID&amp;gt;
-  AdditionalSecurityGroups:
-    - &amp;lt;file_cache_security_group&amp;gt;
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Update your running cluster.&lt;/p&gt; 
-&lt;p&gt;First, you’ll need to stop the compute fleet so you can update the cluster.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster update-compute-fleet --status STOP_REQUESTED -n &amp;lt;cluster name&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Once the compute fleet is stopped, update your cluster with the update-cluster sub-command.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster update-cluster -c &amp;lt;configuration file name&amp;gt; -n &amp;lt;cluster name&amp;gt;&amp;nbsp;&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;This will take about 10 minutes for the cluster update to complete. Once the update is complete, start the compute fleet again:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster update-compute-fleet --status START_REQUESTED -n &amp;lt;cluster name&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Confirm that your compute fleet’s status is “RUNNING” with the describe-compute-fleet sub-command.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster describe-compute-fleet -n &amp;lt;cluster name&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;You can now login to the head node and check that the cache is mounted under the directory you specified. In our example, we mounted the cache under the directory &lt;code&gt;/cache&lt;/code&gt;, which we’ve shown in Figure 2. You should now be able to access your cache like any other file system on a Linux machine.&lt;/p&gt; 
-&lt;div id="attachment_2819" style="width: 974px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2819" loading="lazy" class="size-full wp-image-2819" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/30/CleanShot-2023-08-30-at-13.34.36.png" alt="Figure 2 – Amazon File Cache mounted on /cache in AWS ParallelCluster " width="964" height="294"&gt;
- &lt;p id="caption-attachment-2819" class="wp-caption-text"&gt;Figure 2 – Amazon File Cache mounted on /cache in AWS ParallelCluster&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Now run your HPC workload on the cluster, using your new cache, and then export results to the data repository. You should be able to list files that you have already uploaded into your data repository.&lt;/p&gt; 
-&lt;p&gt;When a file is uploaded onto the data repository, Amazon File Cache will only fetch the metadata. At this point, the data itself is kept in the origin repository, and is only retrieved to the cache when accessed from an Amazon EC2 instance. This means the file access latency will be slightly higher for the first access, but will drop to a sub-millisecond levels once the content has cached. This is called lazy loading, and saves a lot of bandwidth between sites when you’re mounting a cache connected to a large remote file system.&lt;/p&gt; 
-&lt;p&gt;Similarly, you can also release a file from the cache without removing the metadata on it. Once your job is completed and the cache is no longer needed, we recommend you export the data onto the data repository and clear the cache. To force exporting of the data from the cache, you can run a command like this:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;nohup find &amp;lt;target directory on cache&amp;gt; -type f -print0 | xargs -0 -n 1 sudo lfs hsm_archive &amp;amp;&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Once the data export task is finished, you can evict the cache to free up capacity. To do that, run the following command on the files you want released:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;lfs hsm_release &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Find out more about &lt;a href="https://docs.aws.amazon.com/fsx/latest/FileCacheGuide/export-changed-data.html"&gt;exporting changes to the data repository&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/fsx/latest/FileCacheGuide/cache-eviction.html"&gt;cache eviction&lt;/a&gt; in the official Amazon File Cache user guide.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Step 6. (optional) &lt;/strong&gt;Remove the cache from the cluster and delete it. Once files are exported onto the data repository and the cache is cleared, you can remove the cache. To do that, open your ParallelCluster configuration file and remove the parts that you added in Step 3. Then, execute the exact same commands as in Step 4 to update the cluster. When the cluster is updated and the cache is not mounted anymore, you can safely delete it (follow &lt;a href="https://docs.aws.amazon.com/fsx/latest/FileCacheGuide/getting-started-step4.html"&gt;these steps&lt;/a&gt; for more detail) to save cost.&lt;/p&gt; 
-&lt;h2&gt;Verifying the effects of Amazon File Cache and lazy loading&lt;/h2&gt; 
-&lt;p&gt;To highlight the effect of Amazon File Cache and its lazy loading feature, we ran the &lt;a href="https://github.com/hpc/ior"&gt;IOR parallel I/O benchmarks&lt;/a&gt;. We created a multi-Availability Zone (AZ) environment to mimic a hybrid HPC set up. AZs are physically separated by a meaningful distance from other AZs in the same AWS Region, but they are all within 60 miles (~ 100 kilometers) of each other.&lt;/p&gt; 
-&lt;p&gt;First, we created a ParallelCluster in an AZ that we randomly selected in the North Virginia Region (us-east-1c). Then, we created an EC2 instance with an Amazon EBS volume attached to it in the same region, but in another AZ (us-east-1b).&lt;/p&gt; 
-&lt;p&gt;Next, we configured that EC2 instance to become an NFS server that exports the EBS volume we attached.&lt;/p&gt; 
-&lt;p&gt;Back in us-east-1c, we created a cache in the same AZ as our ParallelCluster. Then, we linked the cache to the NFS serving EC2 instance in us-east-1c as its data repository.&lt;/p&gt; 
-&lt;p&gt;Figure 3 illustrates this configuration.&lt;/p&gt; 
-&lt;div id="attachment_2832" style="width: 1287px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2832" loading="lazy" class="size-full wp-image-2832" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/30/IOR-diagram-1.png" alt="Figure 3 – High-level architecture for IOR Parallel I/O benchmarks. The EC2 instance in us-east-1b is an NFS server that exports the EBS volume over NFS v3, which is then linked to Amazon File Cache in us-east-1c as a data repository." width="1277" height="606"&gt;
- &lt;p id="caption-attachment-2832" class="wp-caption-text"&gt;Figure 3 – High-level architecture for IOR Parallel I/O benchmarks. The EC2 instance in us-east-1b is an NFS server that exports the EBS volume over NFS v3, which is then linked to Amazon File Cache in us-east-1c as a data repository.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We submitted our first IOR job onto the cluster to see the write performance to the cache. For this job we used 8x hpc7g.16xlarge instances (which have 64 physical cores per instance), and using all 512 cores in parallel. Each core runs a process which writes a 3.2 GiB file onto the cache, 1.56 TiB of data in aggregate. We instructed the job to run 5 times, so we could see a consistent trend.&lt;/p&gt; 
-&lt;p&gt;On a cache that we sized at 4.8 TiB (corresponding to a baseline performance of 4.8 GiB/s) we saw consistent write performance at around 4.48 GiB/s in all 5 iterations of the job. Results of the write performance test are shown in the graph in Figure 4.&lt;/p&gt; 
-&lt;div id="attachment_2821" style="width: 729px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2821" loading="lazy" class="size-full wp-image-2821" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/30/CleanShot-2023-08-30-at-13.37.14.png" alt="Figure 4 – A bar graph of IOR write performance tests. Performance is consistent across all 5 iterations. " width="719" height="420"&gt;
- &lt;p id="caption-attachment-2821" class="wp-caption-text"&gt;Figure 4 – A bar graph of IOR write performance tests. Performance is consistent across all 5 iterations.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We wanted to see the difference in read performance for the first and subsequent reads, so next we ran a &lt;em&gt;read-performance&lt;/em&gt; test on the data set that we generated during our &lt;em&gt;write-performance&lt;/em&gt; test.&lt;/p&gt; 
-&lt;p&gt;To avoid reading the data from the cache for the first iteration, we cleared the cache following the instructions in Step 5.&lt;/p&gt; 
-&lt;p&gt;We also used the same compute resources to perform the write test that we used for the read test. Like before, we instructed the job to run 5 iterations so that during the first iteration, the files are ingested from the data repository into the cache. For the subsequent iterations, the job will read the files from the cache. Results of the read-performance tests are shown in the graph in Figure 5.&lt;/p&gt; 
-&lt;div id="attachment_2822" style="width: 745px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2822" loading="lazy" class="size-full wp-image-2822" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/30/CleanShot-2023-08-30-at-13.37.37.png" alt="Figure 5 – A bar graph of IOR read performance tests. The first iteration is slower because the data is retrieved from the data repository through the lazy loading mechanism. The subsequent iterations are consistently fast because data is read from cache. " width="735" height="447"&gt;
- &lt;p id="caption-attachment-2822" class="wp-caption-text"&gt;Figure 5 – A bar graph of IOR read performance tests. The first iteration is slower because the data is retrieved from the data repository through the lazy loading mechanism. The subsequent iterations are consistently fast because data is read from cache.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The results show that the first iteration achieved around 0.12 GiB/s throughput, and in all the subsequent iterations it was consistently around 4.44 GiB/s (around 37 times better!).&lt;/p&gt; 
-&lt;p&gt;During the first read, the workload loaded the entire data set of 1.56 TiB onto the cache from the data repository, which resides in another AZ, a physically distant location. Hence the performance was slower. From the second read onwards, the workload read the data only from the cache.&lt;/p&gt; 
-&lt;p&gt;Of course, the performance gap between the first and subsequent iterations is dependent on a lot of factors including aggregate size of the data being transferred, some features of the data set (e.g. many small files vs one big file), the network bandwidth, and the NFS server specification. Your mileage &lt;em&gt;will&lt;/em&gt; vary, but you can test it quite quickly yourself, using the steps we’ve outlined in this post.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post we introduced you to the new Amazon File Cache integration feature with AWS ParallelCluster 3.7 to create a hybrid HPC environment with low latency to access your data.&lt;/p&gt; 
-&lt;p&gt;We walked you through the details of how to set up File Cache with ParallelCluster and showed you some benchmarks to highlight how lazy-loading can drastically improve IO performance in a hybrid scenario.&lt;/p&gt; 
-&lt;p&gt;When you consider Amazon File Cache as a solution for your hybrid workloads, you should consider the trade-offs between cost, performance, and (of course) business value. As we’ve seen with the IOR benchmarks, for data intensive workloads that read large data sets from the repository for the first time, it’ll take more time for a job to finish due to file access latency.&lt;/p&gt; 
-&lt;p&gt;Customers who require predictability in performance for &lt;em&gt;every single job&lt;/em&gt;, might want to consider other AWS services. &lt;a href="https://aws.amazon.com/datasync/"&gt;AWS DataSync&lt;/a&gt;, for example, can sync data between your site and AWS to maintain a constantly up to date mirror. This will ensure the workload you run on AWS will access its input data with low latency.&lt;/p&gt; 
-&lt;p&gt;Amazon File Cache is a powerful tool that enables customers to access their data on a cache with sub-millisecond latency. Support for Amazon File Cache is a great addition to AWS ParallelCluster for hybrid HPC workloads, making it easy for customers to deploy an HPC environment on AWS in a matter of minutes with a cache linked to data in their own data centers.&lt;/p&gt;</content:encoded>
 					
 		
 		
