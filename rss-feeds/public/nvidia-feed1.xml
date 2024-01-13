@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 11 Jan 2024 20:27:22 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 12 Jan 2024 18:31:04 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,65 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.2</generator>
 	<item>
+		<title>NVIDIA CEO: ‘This Year, Every Industry Will Become a Technology Industry’</title>
+		<link>https://blogs.nvidia.com/blog/nvidia-ceo-ai-drug-discovery-jp-morgan-healthcare-2024/</link>
+		
+		<dc:creator><![CDATA[Rory Kelleher]]></dc:creator>
+		<pubDate>Fri, 12 Jan 2024 18:30:17 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Genomics]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[NVIDIA Clara]]></category>
+		<category><![CDATA[NVIDIA DGX]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69339</guid>
+
+					<description><![CDATA[“This year, every industry will become a technology industry,” NVIDIA founder and CEO Jensen Huang told attendees Wednesday during the annual J.P. Morgan Healthcare Conference. “You can now recognize and learn the language of almost anything with structure, and you can translate it to anything with structure — so text-protein, protein-text,” Huang said in a <a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-ceo-ai-drug-discovery-jp-morgan-healthcare-2024/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>“This year, every industry will become a technology industry,” NVIDIA founder and CEO Jensen Huang told attendees Wednesday during the annual J.P. Morgan Healthcare Conference.</p>
+<p>“You can now recognize and learn the language of almost anything with structure, and you can translate it to anything with structure — so text-protein, protein-text,” Huang said in a fireside chat with Martin Chavez, partner and vice chairman of global investment firm Sixth Street Partners and board chair of Recursion, a biopharmaceutical company. “This is the generative AI revolution.”</p>
+<p>The conversation, which took place at the historic San Francisco Mint, followed a <a href="https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2024/JP-Morgan-Healthcare-Conference-2024-KwxXOv7uMk/default.aspx">presentation at the J.P. Morgan conference</a> Monday by Kimberly Powell, NVIDIA’s VP of healthcare. In her talk, Powell announced that <a href="https://www.recursion.com/news/nothing-short-of-phenomenal-new-deep-learning-model-available-on-nvidias-bionemo-platform" target="_blank" rel="noopener">Recursion is the first hosting partner</a> to offer a foundation model through the <a href="https://www.nvidia.com/en-us/clara/bionemo/">NVIDIA BioNeMo</a> cloud service, which is <a href="https://blogs.nvidia.com/blog/drug-discovery-bionemo-generative-ai/">advancing into beta</a> this month.</p>
+<p>She also said that Amgen, one of the first companies to employ BioNeMo, <a href="https://blogs.nvidia.com/blog/genomics-ai-amgen-superpod/">plans to advance drug discovery with generative AI</a> and <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a> — and that BioNeMo is used by a growing number of techbio companies, pharmas, AI software vendors and systems integrators. Among them are <a href="https://www.prnewswire.com/news-releases/deloitte-expands-quartz-ai-suite-with-atlas-ai-for-drug-discovery-302028784.html" target="_blank" rel="noopener">Deloitte</a>, <a href="https://innophore.com/innophore-is-folding-the-human-proteome-using-nvidia-bionemo-creating-a-fused-dataset-of-structural-models-for-machine-learning-purposes/" target="_blank" rel="noopener">Innophore</a>, <a href="https://www.linkedin.com/pulse/insilico-medicine-ai-revolution-drug-discovery-in-silico-medicine-zlwfe/" target="_blank" rel="noopener">Insilico Medicine</a>, <a href="https://www.linkedin.com/pulse/transforming-molecular-design-oneangstrom-integrates-nvidia-redon-eukpe%3FtrackingId=GwLwkk17I2oVvvfSB2KuPQ%253D%253D/?trackingId=GwLwkk17I2oVvvfSB2KuPQ%3D%3D" target="_blank" rel="noopener">OneAngstrom</a>, Recursion and <a href="https://resources.nvidia.com/en-us-dgx-cloud/terray-therapeutics-customer-success-story" target="_blank" rel="noopener">Terray Therapeutics</a>.</p>
+<h2><b>From Computer-Aided Chip Design to Drug Design</b></h2>
+<p>Healthcare customers and partners now consume well over a billion dollars in NVIDIA GPU computing each year — directly and indirectly through cloud partners.</p>
+<p>Huang traced NVIDIA’s involvement in accelerated healthcare back to two research projects that caught his attention around 15 years ago: one at Mass General tapped <a href="https://pubmed.ncbi.nlm.nih.gov/17881799/" target="_blank" rel="noopener">NVIDIA GPUs to reconstruct CT images</a>, another at the University of Illinois Urbana-Champaign <a href="https://www.nvidia.com/es-la/data-center/gpu-accelerated-applications/namd/">applied GPU acceleration to molecular dynamics</a>.</p>
+<p>“It opened my mind that we could apply the same methodology that we use in computer-aided chip design to help the world of drug discovery go from computer-aided drug discovery to computer-aided drug design,” he said, realizing that, “if we scale this up by a billion times, we could simulate biology.”</p>
+<p>After 40 years of advancements in computer-aided chip design, engineers can now build complex computing systems entirely in simulation, Huang explained. Over the next decade, the same could be true for AI-accelerated drug design.</p>
+<p>“Almost everything will largely start in silico, largely end in silico,” he said, using a term that refers to an experiment run on a computer.</p>
+<h2><b>Collaborating on the Future of Drug Discovery and Medical Instruments</b></h2>
+<p>With the progress made to date, computer-aided drug discovery is “genuinely miraculous,” Huang said.</p>
+<p>NVIDIA is propelling the field forward by building state-of-the-art AI models and powerful computing platforms, and by collaborating with domain experts and investing in techbio companies.</p>
+<p>“We are determined to work with you to advance this field,” Huang said, inviting healthcare innovators to reach out to NVIDIA. “We deeply believe that this is going to be the future of the way that drugs will be discovered and designed.”</p>
+<p>The company’s pipelines for accelerated healthcare include algorithms for cryo-electron microscopy, X-ray crystallography, gene sequencing, amino acid structure prediction and virtual drug molecule screening. And as AI advances, these computing tools are becoming much easier to access, Huang said.</p>
+<p>“Because of artificial intelligence and the groundbreaking work that our industry has done, we have closed the technology divide in a dramatic way,” he said. “Everybody is a programmer, and the programming language of the future is called ‘human.’”</p>
+<p>Beyond drug development, this transformation to a software-defined, AI-driven industry will also advance medical instruments.</p>
+<p>“A medical instrument is never going to be the same again. Ultrasound systems, CT scan systems, all kinds of instruments — they’re always going to be a device plus a whole bunch of AIs,” Huang said. “The value that will create, the opportunities you create, are going to be incredible.”</p>
+<p>For more from NVIDIA at the J.P. Morgan Healthcare Conference, <a href="https://jpmorgan.metameetings.net/events/healthcare24/sessions/49355-nvidia-corporation/webcast/general_signin?gpu_only=true&amp;kiosk=true" target="_blank" rel="noopener">listen to the audio recording</a> and <a href="https://nvidianews.nvidia.com/multimedia/corporate#gallery-1">view the presentation deck</a> of Powell’s session.</p>
+<p><i>Learn about </i><a href="https://www.nvidia.com/en-us/clara/"><i>NVIDIA’s AI platform for healthcare and life sciences</i></a><i> and subscribe to </i><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>NVIDIA healthcare news</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/hc-corp-jpm23-jhh-kp-jpm-3085763-1280x680-r2.png"
+			type="image/png"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/hc-corp-jpm23-jhh-kp-jpm-3085763-1280x680-r2-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA CEO: ‘This Year, Every Industry Will Become a Technology Industry’]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>AI Takes Center Stage: Survey Reveals Financial Industry’s Top Trends for 2024</title>
 		<link>https://blogs.nvidia.com/blog/ai-in-financial-services-survey-2024/</link>
 		
@@ -1184,70 +1243,6 @@ The first computer, referred to as an “AI factory,” is central to the creati
 			/>
 			<media:title type="html"><![CDATA[A New Year of Gaming: GeForce NOW Adds More Than 20 New Titles in January]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>By Jove, It’s No Myth: NVIDIA Triton Speeds Inference on Oracle Cloud</title>
-		<link>https://blogs.nvidia.com/blog/ai-inference-oci-triton/</link>
-		
-		<dc:creator><![CDATA[Amr Elmeleegy]]></dc:creator>
-		<pubDate>Tue, 02 Jan 2024 16:00:52 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Computer Vision]]></category>
-		<category><![CDATA[Customer Stories]]></category>
-		<category><![CDATA[Data Science]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[NVIDIA Triton]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68931</guid>
-
-					<description><![CDATA[An avid cyclist, Thomas Park knows the value of having lots of gears to maintain a smooth, fast ride. So, when the software architect designed an AI inference platform to serve predictions for Oracle Cloud Infrastructure’s (OCI) Vision AI service, he picked NVIDIA Triton Inference Server. That’s because it can shift up, down or sideways <a class="read-more" href="https://blogs.nvidia.com/blog/ai-inference-oci-triton/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>An avid cyclist, Thomas Park knows the value of having lots of gears to maintain a smooth, fast ride.</p>
-<p>So, when the software architect designed an AI inference platform to serve predictions for Oracle Cloud Infrastructure’s (OCI) Vision AI service, he picked <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a>. That’s because it can shift up, down or sideways to handle virtually any AI model, framework and hardware and operating mode — quickly and efficiently.</p>
-<p>“The NVIDIA AI inference platform gives our worldwide cloud services customers tremendous flexibility in how they build and run their AI applications,” said Park, a Zurich-based computer engineer and competitive cycler who’s worked for four of the world’s largest cloud services providers.</p>
-<p>Specifically, Triton reduced OCI’s total cost of ownership by 10%, increased prediction throughput up to 76% and reduced inference latency up to 51% for OCI Vision and Document Understanding Service models that were migrated to Triton. The services run globally across more than 45 regional data centers, according to <a href="https://blogs.oracle.com/ai-and-datascience/post/oci-ai-vision-nvidia-triton-inference-server">an Oracle blog</a> Park and a colleague posted earlier this year.</p>
-<h2><b>Computer Vision Accelerates Insights</b></h2>
-<p>Customers rely on OCI Vision AI for a wide variety of object detection and image classification jobs. For instance, a U.S.-based transit agency uses it to automatically detect the number of vehicle axles passing by to calculate and bill bridge tolls, sparing busy truckers wait time at toll booths.</p>
-<p>OCI AI is also available in Oracle NetSuite, a set of business applications used by more than 37,000 organizations worldwide. It’s used, for example, to automate invoice recognition.</p>
-<p>Thanks to Park’s work, Triton is now being adopted across other OCI services, too.</p>
-<h2><b>A Triton-Aware Data Service</b></h2>
-<p>“<!--StartFragment --><span class="cf0">Our AI platform is Triton-aware for the benefit of our customers</span><!--EndFragment -->,” said Tzvi Keisar, a director of product management for OCI’s Data Science service, which handles machine learning for Oracle’s internal and external users.</p>
-<p>“If customers want to use Triton, they don’t have to worry about the configuration because it will be done automatically by the service, launching a Triton-powered inference endpoint for them,” said Keisar.</p>
-<p>Triton is included in <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, a platform that provides full security and support businesses need — and it’s available on <a href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/155314141">OCI Marketplace</a>.</p>
-<h2><b>A Massive SaaS Platform</b></h2>
-<p>OCI’s Data Science service is the machine learning platform for both Oracle NetSuite and Oracle Fusion Applications.</p>
-<p>“These business application suites are massive, with tens of thousands of customers who are also building their frameworks on top of our service,” he said.</p>
-<p>It’s a wide swath of mainly enterprise users in manufacturing, retail, transportation and other industries. They’re building and using AI models of nearly every shape and size.</p>
-<p>Inference was one of the group’s first services, and Triton came on the team’s radar not long after its launch.</p>
-<h2><b>A Best-in-Class Inference Framework</b></h2>
-<p>“We saw Triton pick up in popularity as a best-in-class serving framework, so we started experimenting with it,” Keisar said. “We saw really good performance, and it closed a gap in our existing offerings, especially on multi-model inference — it’s the most versatile and advanced inferencing framework out there.”</p>
-<p>Launched on OCI <a href="https://blogs.oracle.com/ai-and-datascience/post/oci-nvidia-triton-inference-server">in March</a>, Triton has already attracted the attention of many internal teams at Oracle hoping to use it for inference jobs that require serving predictions from multiple AI models running concurrently.</p>
-<p>“Triton has a very good track record and performance on multiple models deployed on a single endpoint,” he said.</p>
-<h2><b>Accelerating the Future</b></h2>
-<p>Looking ahead, Keisar’s team is evaluating <a href="https://developer.nvidia.com/tensorrt#inference">NVIDIA TensorRT-LLM</a> software to supercharge inference on the complex large language models (<a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">LLMs</a>) that have captured the imagination of many users.</p>
-<p>An active blogger, Keisar’s <a href="https://blogs.oracle.com/ai-and-datascience/post/quantize-deploy-llama2-70b-costeffective-a10s-oci">latest article</a> detailed quantization techniques for running a Llama 2 LLM with a whopping 70 billion parameters on NVIDIA A10 Tensor Core GPUs.</p>
-<p>“Even down to four-bit parameters, the quality of model outputs is still quite good,” he said. “Deploying on NVIDIA GPUs gives us the flexibility to find a good balance in latency, throughput and cost.”</p>
-<p>After announcements this fall that Oracle is deploying the latest <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, H200 GPUs, L40S GPUs and <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">Grace Hopper Superchips</a>, it’s just the start of many accelerated efforts to come.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/KV-OCI-Triton-vision-and-data-science.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/12/KV-OCI-Triton-vision-and-data-science-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[By Jove, It’s No Myth: NVIDIA Triton Speeds Inference on Oracle Cloud]]></media:title>
-			<media:description type="html">NVIDIA Triton on OCI for computer vision and data science services</media:description>
 			</media:content>
 			</item>
 	</channel>
