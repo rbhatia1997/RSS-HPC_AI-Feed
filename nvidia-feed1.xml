@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 12 Jan 2024 18:31:04 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 13 Jan 2024 01:16:57 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,145 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.2</generator>
 	<item>
+		<title>Māori Speech AI Model Helps Preserve and Promote New Zealand Indigenous Language</title>
+		<link>https://blogs.nvidia.com/blog/te-hiku-media-maori-speech-ai/</link>
+		
+		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
+		<pubDate>Tue, 16 Jan 2024 16:00:13 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Conversational AI]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<category><![CDATA[Trustworthy AI]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69344</guid>
+
+					<description><![CDATA[Indigenous languages are under threat. Some 3,000 — three-quarters of the total — could disappear before the end of the century, or one every two weeks, according to UNESCO. As part of a movement to protect such languages, New Zealand’s Te Hiku Media, a broadcaster focused on the Maori people’s indigenous language known as te <a class="read-more" href="https://blogs.nvidia.com/blog/te-hiku-media-maori-speech-ai/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Indigenous languages are under threat. Some 3,000 — three-quarters of the total — could disappear before the end of the century, or one every two weeks, according to <a href="https://www.iesalc.unesco.org/en/2022/02/21/a-decade-to-prevent-the-disappearance-of-3000-languages/" target="_blank" rel="noopener">UNESCO</a>.</p>
+<p>As part of a movement to protect such languages, New Zealand’s Te Hiku Media, a broadcaster focused on the Maori people’s indigenous language known as te reo, is using <a href="https://blogs.nvidia.com/blog/tag/trustworthy-ai/" target="_blank" rel="noopener">trustworthy AI</a> to help preserve and revitalize the tongue.</p>
+<p>Using ethical, transparent methods of speech data collection and analysis to maintain data sovereignty for the Māori people, Te Hiku Media is developing <a href="https://developer.nvidia.com/blog/essential-guide-to-automatic-speech-recognition-technology/" target="_blank" rel="noopener">automatic speech recognition</a> (ASR) models for te reo, which is a Polynesian language.</p>
+<p>Built using the open-source <a href="https://nvidia.github.io/NeMo/" target="_blank" rel="noopener">NVIDIA NeMo toolkit</a> for ASR and <a href="https://www.nvidia.com/en-us/data-center/a100/" target="_blank" rel="noopener">NVIDIA A100 Tensor Core GPUs</a>, the speech-to-text models transcribe te reo with 92% accuracy. It can also transcribe bilingual speech using English and te reo with 82% accuracy. They’re pivotal tools, made by and for the Māori people, that are helping preserve and amplify their stories.</p>
+<p>“There’s immense value in using NVIDIA’s open-source technologies to build the tools we need to ultimately achieve our mission, which is the preservation, promotion and revitalization of te reo Māori,” said Keoni Mahelona, chief technology officer at Te Hiku Media, who leads a team of data scientists and developers, as well as Māori language experts and data curators, working on the project.</p>
+<p>“We’re also helping guide the industry on ethical ways of using data and technologies to ensure they’re used for the empowerment of marginalized communities,” added Mahelona, a Native Hawaiian now living in New Zealand.</p>
+<h2><b>Building a ‘House of Speech’</b></h2>
+<p>Te Hiku Media began more than three decades ago as a radio station aiming to ensure te reo had space on the airwaves. Over the years, the organization incorporated television broadcasting and, with the rise of the internet, it convened a meeting in 2013 with the community’s elders to form a strategy for sharing content in the digital era.</p>
+<p>“The elders agreed that we should make the stories accessible online for our community members — rather than just keeping our archives on cassettes in boxes — but once we had that objective, the challenge was how to do this correctly, in alignment with our strong roots in valuing sovereignty,” Mahelona said.</p>
+<p>Instead of uploading its video and audio sources to popular, global platforms — which, in their terms and conditions of use, require signing over certain rights related to the content — Te Hiku Media decided to build its own content distribution platform.</p>
+<p>Called Whare Kōrero — meaning “house of speech” — the platform now holds more than 30 years’ worth of digitized, archival material featuring about 1,000 hours of te reo native speakers, some of whom were born in the late 19th century, as well as more recent content from second-language learners and bilingual Māori people.</p>
+<p>Now, around 20 Māori radio stations use and upload their content to Whare Kōrero. Community members can access the content through an app.</p>
+<p>“It’s an invaluable reproduce of acoustic data,” Mahelona said.</p>
+<h2><b>Turning to Trustworthy AI</b></h2>
+<p>Such a trove held incredible value for those working to revitalize the language, the Te Hiku Media team quickly realized, but manual transcription required pulling lots of time and effort from limited resources. So began the organization’s trustworthy AI efforts, in 2016, to accelerate its work using ASR.</p>
+<p>“No one would have a clue that there are eight NVIDIA A100 GPUs in our derelict, rundown, musky-smelling building in the far north of New Zealand — training and building Māori language models,” Mahelona said. “But the work has been game-changing for us.”</p>
+<p>To collect speech data in a transparent, ethically compliant, community-oriented way, Te Hiku Media began by explaining its cause to elders, garnering their support and asking them to come to the station to read phrases aloud.</p>
+<p>“It was really important that we had the support of the elders and that we recorded their voices, because that’s the sort of content we want to transcribe,” Mahelona said. “But eventually these efforts didn’t scale — we needed second-language learners, kids, middle-aged people and a lot more speech data in general.”</p>
+<p>So, the organization ran a crowdsourcing campaign, <a href="https://koreromaori.com/" target="_blank" rel="noopener">Kōrero Māori</a>, to collect highly labeled speech samples according to the Kaitiakitanga license, which ensures Te Hiku Media uses the data only for the benefit of the Māori people.</p>
+<p>In just 10 days, more than 2,500 signed up to read 200,000+ phrases, providing over 300 hours of labeled speech data, which was used to build and train the te reo Māori ASR models.</p>
+<p>In addition to other open-source trustworthy AI tools, Te Hiku Media now uses the NVIDIA NeMo toolkit’s ASR module for speech AI throughout its entire pipeline. The NeMo toolkit comprises building blocks called neural modules and includes <a href="https://blogs.nvidia.com/blog/what-is-a-pretrained-ai-model/" target="_blank" rel="noopener">pretrained models</a> for language model development.</p>
+<p>“It’s been absolutely amazing — NVIDIA’s open-source NeMo enabled our ASR models to be bilingual and added automatic punctuation to our transcriptions,” Mahelona said.</p>
+<p>Te Hiku Media’s ASR models are the engines running behind Kaituhi, a te reo Māori transcription service now <a href="https://kaituhi.nz/" target="_blank" rel="noopener">available online</a>.</p>
+<p>The efforts have spurred similar ASR projects now underway by Native Hawaiians and the Mohawk people in southeastern Canada.</p>
+<p>“It’s indigenous-led work in trustworthy AI that’s inspiring other indigenous groups to think: ‘If they can do it, we can do it, too,’” Mahelona said.</p>
+<p><i>Learn more about NVIDIA-powered </i><a href="https://blogs.nvidia.com/blog/tag/trustworthy-ai/" target="_blank" rel="noopener"><i>trustworthy AI</i></a><i>, the </i><a href="https://nvidia.github.io/NeMo/" target="_blank" rel="noopener"><i>NVIDIA NeMo toolkit</i></a><i> and how it enabled a </i><a href="https://blogs.nvidia.com/blog/speech-ai-telugu-language-breakthrough/" target="_blank" rel="noopener"><i>Telugu language speech AI breakthrough</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/te-hiku-media-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/te-hiku-media-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Māori Speech AI Model Helps Preserve and Promote New Zealand Indigenous Language]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Starstruck: 3D Artist Brellias Brings Curiosity to Light This Week ‘In the NVIDIA Studio’</title>
+		<link>https://blogs.nvidia.com/blog/studio-brellias-blender-davinci-resolve-gpu-ai/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Tue, 16 Jan 2024 14:00:59 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[In the NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA Studio]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69286</guid>
+
+					<description><![CDATA[Curiosity leads the way for this week’s featured In the NVIDIA Studio 3D artist, Brellias.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
+<p>Curiosity leads the way for this week’s featured <i>In the NVIDIA Studio</i> 3D artist, Brellias.</p>
+<p>It’s what inspired the native Chilean’s latest artwork<i> Estrellitas</i>, which in English translates to “little stars.” The scene expresses the mixture of emotions that comes with curiosity, depicting a young girl holding little stars in her hand with a conflicted expression.</p>
+<p>“She’s excited to learn about them, but she’s also a little scared,” Brellias explained.</p>
+<p>The striking visual piece, rich with vibrant colors and expertly executed textures, underscores that while curiosity can invoke various emotions — both joyful and painful — it is always a source of change and growth.</p>
+<h2><b>A Sky Full of Stars</b></h2>
+<p>To start, Brellias first visualized and reworked an existing 3D scene of a woman in Blender. He used Blender’s built-in multi-resolution modifier for sculpting and added some shape keys to achieve the desired modifications.</p>
+<p>He also created a custom shader for the character’s skin — a stylistic choice to lend its appearance a galactic hue.</p>
+<figure id="attachment_69293" aria-describedby="caption-attachment-69293" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-69293" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-672x441.png" alt="" width="672" height="441" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-672x441.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-400x263.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-768x504.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-686x450.png 686w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-328x215.png 328w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-152x100.png 152w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69293" class="wp-caption-text">Brellias is an especially big fan of purple, blue and maroon hues.</figcaption></figure>
+<p>Next, Brellias tapped Blender’s OptiX GPU-accelerated viewport denoising, powered by his GeForce RTX GPU.</p>
+<p>“The technology helps reduce noise and improve the quality of the viewport image more quickly, allowing me to make decisions and iterate on the render faster,” he said.</p>
+<figure id="attachment_69296" aria-describedby="caption-attachment-69296" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w.png"><img decoding="async" class="size-large wp-image-69296" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69296" class="wp-caption-text">Out-of-this-world levels of detail.</figcaption></figure>
+<p>Next, Brellias animated the scene using a base model from Daz Studio, a free media design software developed by Daz 3D. Daz features an AI denoiser for high-performance interactive rendering that can also be accelerated by RTX GPUs.</p>
+<p>In addition, rig tools in Blender made the animation process easy, eliminating the need to modify file formats.</p>
+<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-69286-1" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/breathe-process.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/breathe-process.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/breathe-process.mp4</a></video></div>
+<p>&nbsp;</p>
+<p>To animate the character’s face, Brellias tied drivers to shape keys using empties, enabling greater fluidity and control over facial expressions.</p>
+<figure id="attachment_69302" aria-describedby="caption-attachment-69302" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w.png"><img decoding="async" class="size-large wp-image-69302" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image2-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69302" class="wp-caption-text">Geometry nodes bring “Estrellitas” to life.</figcaption></figure>
+<p>Brellias then used geometry nodes in Blender to animate the character’s hair, giving it a magical floating effect. To light the scene, Brellias added some ambient light behind the character’s face and between its hands. His RTX GPU accelerated OptiX ray tracing in Blender’s Cycles for the fastest final-frame renders.</p>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69286-2" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/breathe.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/breathe.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/breathe.mp4</a></video></div>
+<p>&nbsp;</p>
+<p>Finally, he moved to Blackmagic Design’s DaVinci Resolve to denoise and deflicker the scene for the smoothest-looking animation.</p>
+<p>Here, Brellias’ RTX GPU accelerated the color grading, video editing and color scoping processes, dramatically speeding his creative workflow. Other RTX-accelerated AI features, including facial recognition for automatically tagging clips and the tracking of effects, were available for his use.</p>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69286-3" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/estrellitas.mp4?_=3" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/estrellitas.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/estrellitas.mp4</a></video></div>
+<p>&nbsp;</p>
+<p><i>Estrellitas</i> was partially inspired by Brellias’ own curiosity in exploring NVIDIA and GeForce RTX GPU technologies to power content creation workflows — a venture that provided rewarding results.</p>
+<p>“Every step of my creative process involves GPU acceleration or AI in some way or another,” said Brellias. “I can’t imagine creating without a powerful GPU at my disposal.”</p>
+<p>His curiosity in AI extends to productivity. He recently installed the <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast</a> app, which can transform any room into a home studio.</p>
+<p><iframe loading="lazy" title="NVIDIA Broadcast 1.4 Update Featuring Eye Contact" width="500" height="281" src="https://www.youtube.com/embed/nR-vP_7XFHE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>The app has enhanced Brellias’ microphone performance by canceling external noise and echo — especially useful given his urban surroundings.</p>
+<p><iframe loading="lazy" title="Half-Life 2 RTX, An RTX Remix Project - Ravenholm Trailer" width="500" height="281" src="https://www.youtube.com/embed/nIE9gQt6WXQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Download the <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">Broadcast beta</a> and explore the rest of the <a href="https://www.nvidia.com/en-us/studio/resources/">Studio suite</a> of apps, including <a href="https://www.nvidia.com/en-us/studio/canvas/">Canvas</a>, which uses AI to turn simple brushstrokes into realistic landscape images, and <a href="https://www.nvidia.com/en-us/geforce/rtx-remix/">RTX Remix</a>, which allows modders to create AI-powered RTX remasters of classic games. The apps are all free for RTX GPU owners.</p>
+<figure id="attachment_69351" aria-describedby="caption-attachment-69351" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1.png"><img loading="lazy" decoding="async" class="size-large wp-image-69351" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1-672x263.png" alt="" width="672" height="263" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1-672x263.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1-400x156.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1-768x300.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1-842x329.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1-406x159.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1-188x73.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-brellias-wk92-artist-feature-1280w-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69351" class="wp-caption-text">Digital 3D artist Brellias.</figcaption></figure>
+<p>Check out Brellias’ portfolio on <a href="https://www.instagram.com/brellias">Instagram</a>.</p>
+<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>X</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
+</div>]]></content:encoded>
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/01/breathe-process.mp4" length="1451537" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/01/breathe.mp4" length="1968679" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/01/estrellitas.mp4" length="1814603" type="video/mp4" />
+
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/nv-blog-header-preview-1280x680-2.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/nv-blog-header-preview-1280x680-2-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Starstruck: 3D Artist Brellias Brings Curiosity to Light This Week ‘In the NVIDIA Studio’]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA CEO: ‘This Year, Every Industry Will Become a Technology Industry’</title>
 		<link>https://blogs.nvidia.com/blog/nvidia-ceo-ai-drug-discovery-jp-morgan-healthcare-2024/</link>
 		
@@ -154,13 +293,13 @@
 <h2><b>Cloud’s-Eye View of CES</b></h2>
 <p><a href="https://blogs.nvidia.com/blog/CES-2024-geforce-now-activision-blizzard-day-passes-g-sync">CES 2024</a> has come to a close, and GeForce NOW members have a lot to look forward to.</p>
 <p>Coming in February, day passes for <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate and Priority memberships</a> will offer a new way for members to play at up to GeForce RTX 4080 quality for up to 24 hours. Ultimate Day Pass will be available for $7.99, and Priority Day Pass for $3.99, providing all the benefits of both memberships to gamers before they decide to commit to the better-value one-month or six-month memberships.</p>
-<figure id="attachment_69329" aria-describedby="caption-attachment-69329" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-69329" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-672x336.jpg" alt="G-SYNC comes to GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69329" class="wp-caption-text">Nothing but a G-SYNC, baby.</figcaption></figure>
+<figure id="attachment_69329" aria-describedby="caption-attachment-69329" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-69329" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-672x336.jpg" alt="G-SYNC comes to GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Cloud_GSYNC.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69329" class="wp-caption-text">Nothing but a G-SYNC, baby.</figcaption></figure>
 <p>Cloud G-SYNC support will match the display refresh rate of variable refresh rate monitors and <a href="https://www.nvidia.com/en-us/geforce/products/g-sync-monitors/specs/">G-SYNC-compatible monitors</a> to the streaming rate. Paired with new 60 and 120 frames per second streaming options for GeForce NOW Reflex mode, this makes cloud gaming experiences nearly indistinguishable from using a local PC.</p>
 <p>Ultimate members will be able to turn their phones into portable gaming rigs with support for 1440p resolutions on compatible Android phones, as well as updated keyboard and mouse support connected through a USB hub. Thanks to the cloud, these smartphones are now capable of PC gaming at Ultimate quality.</p>
-<figure id="attachment_69326" aria-describedby="caption-attachment-69326" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion.jpg"><img decoding="async" class="size-large wp-image-69326" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-672x336.jpg" alt="Worldwide Expansion for GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69326" class="wp-caption-text">The cloud’s drifting into Japan.</figcaption></figure>
+<figure id="attachment_69326" aria-describedby="caption-attachment-69326" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-69326" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-672x336.jpg" alt="Worldwide Expansion for GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Worldwide_Expansion.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69326" class="wp-caption-text">The cloud’s drifting into Japan.</figcaption></figure>
 <p>GeForce NOW will also soon expand to Japan, operating alongside GeForce NOW Alliance partner KDDI. This will enable gamers across the country to play their favorite PC games in the cloud with Ultimate performance. <a href="https://www.nvidia.com/ja-jp/geforce-now/japan-notify-me">Learn more and sign up for notifications</a>.</p>
 <h2><b>Here Comes the Blizzard</b></h2>
-<p><iframe title="Play Your Favorite PC Games Streaming with GeForce NOW 4080-Class Power in the Cloud" width="500" height="281" src="https://www.youtube.com/embed/35kP2TgZ5hQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Play Your Favorite PC Games Streaming with GeForce NOW 4080-Class Power in the Cloud" width="500" height="281" src="https://www.youtube.com/embed/35kP2TgZ5hQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>That’s not all: GeForce NOW is bringing even more top titles to the cloud from celebrated publishers.</p>
 <p>Following the recent release of <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-call-of-duty/"><i>Call of Duty</i></a>, the latest games from top developer Blizzard Entertainment are coming soon to GeForce NOW. Members will be able to play the Steam versions of <i>Diablo IV</i> and <i>Overwatch 2</i> on nearly any device with the power of a GeForce RTX 4080 rig in the cloud, with support for Battle.net coming soon.</p>
 <figure id="attachment_69323" aria-describedby="caption-attachment-69323" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-scaled.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-69323" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-672x378.jpg" alt="Diablo IV on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Diablo_IV-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69323" class="wp-caption-text">Someone check the weather in hell — seems pretty cold.</figcaption></figure>
@@ -769,22 +908,21 @@
 <p>They used Adobe Firefly’s generative AI features, powered by NVIDIA GPUs in the cloud and accelerated with Tensor Cores in GeForce RTX GPUs, to animate a 2D illustration with special effects.</p>
 <p><iframe loading="lazy" title="Bring Illustrations to Life with Adobe AI Effects power by NVIDIA GPUs on PC &amp; in the Cloud" width="500" height="281" src="https://www.youtube.com/embed/7ELrpfVY4P4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>To begin, the pair separated the 2D image into multiple layers and expanded the canvas. Firefly’s <a href="https://www.adobe.com/products/photoshop/ai.html">Generative Expand</a> feature automatically filled the added space with AI-generated content.</p>
-<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-69135-1" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-1.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-1.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-4" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-1.mp4?_=4" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-1.mp4</a></video></div>
 <p>&nbsp;</p>
 <p>Next, the team separated select elements — starting with character — and used the AI Object Select feature to automatically mask the layer. The Generative Fill feature then created new content to fill in the background, saving even more time.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-2" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-2-1.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-2-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-2-1.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-5" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-2-1.mp4?_=5" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-2-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-2-1.mp4</a></video></div>
 <p>&nbsp;</p>
 <p>This process continued until all distinct layers were separated and imported into Adobe After Effects. Next, they used the Mercury 3D Engine on local RTX GPUs to accelerate playback, unlocking smoother movement in the viewport. Previews and adjustments like camera shake and depth of field were also GPU-accelerated.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-3" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-3.mp4?_=3" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-3.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-3.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-6" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-3.mp4?_=6" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-3.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-3.mp4</a></video></div>
 <p>&nbsp;</p>
 <p>Firefly’s Style Match feature then took the existing illustration and created new imagery in its likeness — in this case, a vibrant butterfly sporting similar colors and tones. The duo also used Adobe Illustrator’s <a href="https://www.adobe.com/products/illustrator/generative-recolor.html">Generative Recolor</a> feature, which enables artists to explore a wide variety of colors and themes without having to manually recolor their work.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-4" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-4.mp4?_=4" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-4.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-4.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-7" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-4.mp4?_=7" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-4.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-4.mp4</a></video></div>
 <p>&nbsp;</p>
 <p>Martino-Tarr and Jackson then chose their preferred assets and animated them in Adobe After Effects. Firefly’s powerful AI effects helped speed or entirely eliminate tedious tasks such as patching holes, handpainting set extensions and caching animation playbacks.</p>
 <figure id="attachment_69160" aria-describedby="caption-attachment-69160" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-69160" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w-672x359.jpg" alt="" width="672" height="359" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w-672x359.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w-768x410.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w-842x450.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w-403x215.jpg 403w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ces-wk91-style-match-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69160" class="wp-caption-text">A variety of high-quality images to choose from.</figcaption></figure>
 <p>The artists concluded post-production work by putting the finishing touches on their AI animation in After Effects.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-5" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-5.mp4?_=5" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-5.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-5.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69135-8" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-5.mp4?_=8" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-5.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/nvidia-studio-itns-wk91-firefly-demo-1280w-clip-5.mp4</a></video></div>
 <p>&nbsp;</p>
 <p>Firefly’s powerful AI capabilities were developed with the creative community in mind — guided by AI ethics principles of content and data transparency — to ensure morally responsible output. NVIDIA technology continues to power these features from the cloud for photographers, illustrators, designers, video editors, 3D artists and more.</p>
 <figure id="attachment_69163" aria-describedby="caption-attachment-69163" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69163" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w-672x245.png" alt="" width="672" height="245" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w-672x245.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w-400x146.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w-768x280.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w-842x307.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w-406x148.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w-188x69.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-ashlee-daniela-wk91-featured-setup-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69163" class="wp-caption-text">NVIDIA artists Ashlee Martino-Tarr and Daniela Flamm Jackson.</figcaption></figure>
@@ -1049,199 +1187,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Three’s a Cloud: New Activision and Blizzard Games, Day Passes, G-SYNC Technology Coming to GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Following the Prompts: Generative AI Powers Smarter Robots With NVIDIA Isaac Platform</title>
-		<link>https://blogs.nvidia.com/blog/generative-ai-robotics-isaac/</link>
-		
-		<dc:creator><![CDATA[Gerard Andrews]]></dc:creator>
-		<pubDate>Mon, 08 Jan 2024 16:25:11 +0000</pubDate>
-				<category><![CDATA[Autonomous Machines]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[CES 2024]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Isaac]]></category>
-		<category><![CDATA[Jetson]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[NVIDIA Jetson]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Robotics]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68988</guid>
-
-					<description><![CDATA[Generative AI is reshaping trillion-dollar industries, and NVIDIA, a front-runner in smart robotics, is seizing the moment. Speaking today as part of a special address ahead of CES, NVIDIA Vice President of Robotics and Edge Computing Deepu Talla detailed how NVIDIA and its partners are bringing generative AI and robotics together. It’s a natural fit, <a class="read-more" href="https://blogs.nvidia.com/blog/generative-ai-robotics-isaac/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/">Generative AI</a> is reshaping trillion-dollar industries, and NVIDIA, a front-runner in smart robotics, is seizing the moment.</p>
-<p>Speaking today as part of a <a href="https://www.nvidia.com/en-us/events/ces/">special address</a> ahead of CES, NVIDIA Vice President of Robotics and Edge Computing Deepu Talla detailed how NVIDIA and its partners are bringing generative AI and robotics together.</p>
-<p>It’s a natural fit, with a growing roster of partners — including Boston Dynamics, Collaborative Robotics, Covariant, Sanctuary AI, Unitree Robotics and others — embracing GPU-accelerated <a href="https://www.nvidia.com/en-us/glossary/data-science/large-language-models/">large language models</a> to bring unprecedented levels of intelligence and adaptability to machines of all kinds.</p>
-<p>The timing couldn’t be better.</p>
-<p>“Autonomous robots powered by artificial intelligence are being increasingly utilized for improving efficiency, decreasing costs and tackling labor shortages,” Talla said.</p>
-<h2><b>Present at the Creation</b></h2>
-<p>NVIDIA has been central to the generative AI revolution from the beginning. <i><br />
-</i><br />
-A decade ago, NVIDIA founder and CEO Jensen Huang hand-delivered the first <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/">NVIDIA DGX</a> AI supercomputer to OpenAI. Now, thanks to OpenAI’s ChatGPT, generative AI has become one of the fastest-growing technologies of our time. <i><br />
-</i><i><br />
-</i>And it’s just getting started.</p>
-<p>The impact of generative AI will go beyond text and image generation — and into homes and offices, farms and factories, hospitals and laboratories, Talla predicted.</p>
-<p>The key: LLMs, akin to the brain’s language center, will let robots understand and respond to human instructions more naturally.</p>
-<p>Such machines will be able to learn continuously from humans, from each other and from the world around them.</p>
-<p>“Given these attributes, generative AI is well-suited for robotics,” Talla said.</p>
-<h2><b>How Robots Are Using Generative AI</b></h2>
-<p>Agility Robotics, NTT, and others are incorporating generative AI into their robots to help them understand text or voice commands. Robot vacuum cleaners from Dreame Technology are being trained in simulated living spaces created by generative AI models. And Electric Sheep is developing a world model for autonomous lawn mowing.</p>
-<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/jdwjXbb5QfE?si=5bNlW-EPdSGbt4nx" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br />
-NVIDIA technologies such as the <a href="https://www.nvidia.com/en-us/deep-learning-ai/industries/robotics/">NVIDIA Isaac</a> and <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">Jetson</a> platforms, which facilitate the development and deployment of AI-powered robots, are <a href="https://blogs.nvidia.com/blog/metropolis-jetson-isaac-robotics-edge-ai-developers/">already relied</a> on by more than 1.2 million developers and 10,000 customers and partners.</p>
-<p>Many of them are at CES this week, including Analog Devices, Aurora Labs, Canonical, Dreame Innovation Technology, DriveU, e-con Systems, Ecotron, Enchanted Tools, GluxKind, Hesai Technology, Leopard Imaging, Segway-Ninebot, Nodar, Orbbec, Qt Group, Robosense, Spartan Radar, TDK Corporation, Telit, Unitree Robotics, Voyant Photonics and ZVISION Technologies Co., Ltd.</p>
-<h2>Two Brains Are Better Than One</h2>
-<p>In his talk at CES, Talla showed the dual-computer model (below) essential for deploying AI in robotics, demonstrating NVIDIA’s comprehensive approach to AI development and application.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-69073" src="https://blogs.nvidia.com/wp-content/uploads/2023/01/Building-Smart.jpg" alt="" width="600" height="375" srcset="https://blogs.nvidia.com/wp-content/uploads/2023/01/Building-Smart.jpg 600w, https://blogs.nvidia.com/wp-content/uploads/2023/01/Building-Smart-400x250.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2023/01/Building-Smart-344x215.jpg 344w, https://blogs.nvidia.com/wp-content/uploads/2023/01/Building-Smart-160x100.jpg 160w" sizes="(max-width: 600px) 100vw, 600px" /><br />
-The first computer, referred to as an “AI factory,” is central to the creation and continuous improvement of AI models.</p>
-<p>AI factories use NVIDIA’s data center compute infrastructure along with its AI and <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platforms for the simulation and training of AI models.</p>
-<p>The second computer represents the runtime environment of the robot.</p>
-<p>This varies depending on the application: It could be in the cloud or a data center; in an on-premises server for tasks like defect inspection in semiconductor manufacturing; or within an autonomous machine equipped with multiple sensors and cameras.</p>
-<h2>Generating Quality Assets and Scenes</h2>
-<p>Talla also highlighted the role of LLMs in breaking down technical barriers, turning typical users into technical artists capable of creating complex robotics workcells or entire warehouse simulations.</p>
-<p>With generative AI tools like <a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">NVIDIA Picasso</a>, users can generate realistic 3D assets from simple text prompts and add them to digital scenes for dynamic and comprehensive robot training environments.</p>
-<p>The same capability extends to creating diverse and physically accurate scenarios in Omniverse, enhancing the testing and training of robots to ensure real-world applicability.</p>
-<p>This dovetails with the transformative potential of generative AI in reconfiguring the deployment of robots.</p>
-<p>Traditionally, robots are purpose-built for specific tasks, and modifying them for different ones is a time-consuming process.</p>
-<p>But advancements in LLMs and vision language models are eliminating this bottleneck, enabling more intuitive interactions with robots through natural language, Talla explained.</p>
-<p>Such machines — adaptable and aware of the environment around them — will soon spill out across the world.</p>
-<p><i>To learn more, attend a </i><a href="https://www.ces.tech/sessions-events/rd/rd03.aspx"><i>virtual CES session</i></a><i> and watch Talla’s full talk below.</i></p>
-<p><iframe loading="lazy" title="NVIDIA Special Address at CES 2024" width="500" height="281" src="https://www.youtube.com/embed/-JbSg2UnK2k?start=1296&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/cesroboticsblogmainfeature.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/cesroboticsblogmainfeature-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Following the Prompts: Generative AI Powers Smarter Robots With NVIDIA Isaac Platform]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>A New Year of Gaming: GeForce NOW Adds More Than 20 New Titles in January</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-january-2024-new-games/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 04 Jan 2024 14:00:25 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69021</guid>
-
-					<description><![CDATA[Celebrate the new year with more cloud gaming. Experience the power and performance of the cloud with more than 20 new games to be added to GeForce NOW in January. Start with five games available this week, including The Finals from Embark Studios.  And tune in to the NVIDIA Special Address at CES on Monday, <a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-january-2024-new-games/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Celebrate the new year with more cloud gaming. Experience the power and performance of the cloud with more than 20 new games to be added to <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> in January.</p>
-<p>Start with five games available this week, including <i>The Finals</i> from Embark Studios<i>. </i></p>
-<p>And tune in to the <a href="https://www.nvidia.com/en-us/events/ces/">NVIDIA Special Address at CES</a> on Monday, Jan. 8, at 8 a.m. PT for the latest on gaming, AI-related news and more.</p>
-<h2><b>It’s the Final Countdown</b></h2>
-<figure id="attachment_69029" aria-describedby="caption-attachment-69029" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69029" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-The_Finals.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69029" class="wp-caption-text"><em>Fight for glory, fame and survival.</em></figcaption></figure>
-<p>Fight for fame on the world’s biggest stage with Embark Studios’ <i>The Finals</i>. The free-to-play, multiplayer, first-person shooter is newly supported in the cloud this week, with <a href="https://www.nvidia.com/en-us/geforce/rtx/">RTX ON</a> for the most cinematic lighting and visuals for GeForce NOW <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate and Priority members</a>.</p>
-<p>In <i>The Finals</i>, take part in a deadly TV game show that pits contestants against each other as they battle for a huge reward. Fight alongside teammates in virtual arenas that can be altered, exploited and even destroyed. Manipulate the environment as a weapon itself and use it to take down other players. Drive viewers wild with thrilling combat and flair, using tricks like crashing a wrecking ball into opponents.</p>
-<p>Harness the power of the cloud and reach the finals anywhere with the ability to stream across devices. Ultimate members can fight for glory with the advantage of longer gaming sessions, the highest frame rates, ray tracing and ultra-low latency.</p>
-<h2><b>In With the New</b></h2>
-<figure id="attachment_69026" aria-describedby="caption-attachment-69026" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69026" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-672x336.jpg" alt="Spotlight games on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-January_games.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69026" class="wp-caption-text"><em>Flame on! &#8216;Enshrouded&#8217; launches in the cloud Jan. 24.</em></figcaption></figure>
-<p>In <i>Enshrouded, </i>become Flameborn, the last ember of hope of a dying race. Awaken, survive the terror of a corrupting fog and reclaim the lost beauty of the kingdom. Venture into a vast world, vanquish punishing bosses, build grand halls and forge a path in this co-op survival action role-playing game for up to 16 players, launching in the cloud Jan. 24.</p>
-<p>Don’t miss the five newly supported games joining the GeForce NOW library this week:</p>
-<ul>
-<li style="font-weight: 400;"><i>Dishonored</i>, for Hungary, Czech Republic and Poland (<a href="https://store.steampowered.com/app/217980?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li style="font-weight: 400;"><i>The Finals </i>(<a href="https://store.steampowered.com/app/2073850?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li style="font-weight: 400;"><i>Redmatch 2 </i>(<a href="https://store.steampowered.com/app/1280770?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li style="font-weight: 400;"><i>Scorn </i>(<a href="https://www.xbox.com/games/store/scorn/9NM3TNRPQXLR?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available for PC Game Pass)</li>
-<li style="font-weight: 400;"><i>Sniper Elite 5 </i>(<a href="https://www.xbox.com/games/store/sniper-elite-5/9PP8Q82H79LC?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available for PC Game Pass)</li>
-</ul>
-<p>And here’s what’s coming throughout the rest of January:<i></i></p>
-<ul>
-<li><i>War Hospital </i>(New release on <a href="https://store.steampowered.com/app/1553000?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Jan. 11)</li>
-<li><i>Prince of Persia: The Lost Crown </i>(New release on <a href="https://store.ubi.com/6408bd687ee83d203cf3bda1.html#ucid=AFL-ID_152062&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;addinfo=">Ubisoft</a>, Jan. 18)</li>
-<li><i>Turnip Boy Robs a Bank </i>(New release on <a href="https://store.steampowered.com/app/2097230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/turnip-boy-robs-a-bank/9ndt1ms39fxz?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available for PC Game Pass, Jan.18)</li>
-<li><i>Stargate: Timekeepers </i>(New release on <a href="https://store.steampowered.com/app/1523650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Jan. 23)</li>
-<li><i>Enshrouded </i>(New release on <a href="https://store.steampowered.com/app/1203620?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Jan. 24)</li>
-<li><i>Bang-On Balls: Chronicles </i>(<a href="https://store.steampowered.com/app/1227650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Firefighting Simulator &#8211; The Squad </i>(<a href="https://store.steampowered.com/app/420560?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Jected &#8211; Rivals </i>(<a href="https://store.steampowered.com/app/1366850?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>The Legend of Nayuta: Boundless Trails </i>(<a href="https://store.steampowered.com/app/1668530?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>RAILGRADE </i>(<a href="https://store.steampowered.com/app/1355090?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Redmatch 2 </i>(<a href="https://store.steampowered.com/app/1280770?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Shadow Tactics: Blades of the Shogun </i>(<a href="https://store.steampowered.com/app/418240?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Shadow Tactics: Blades of the Shogun &#8211; Aiko’s Choice </i>(<a href="https://store.steampowered.com/app/1579380?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Solasta: Crown of the Magister </i>(<a href="https://store.steampowered.com/app/1096530?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Survivalist: Invisible Strain </i>(<a href="https://store.steampowered.com/app/1054510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Witch It </i>(<a href="https://store.steampowered.com/app/559650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Wobbly Life </i>(<a href="https://store.steampowered.com/app/1211020?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-</ul>
-<p><b>Doubled in December</b></p>
-<p>In addition to the 70 games announced last month, 34 extra joined GeForce NOW:<i></i></p>
-<ul>
-<li><i>Avatar: Frontiers of Pandora</i> (New release on <a href="https://store.ubi.com/60c30ca40d253c1914049e93.html#ucid=AFL-ID_152062&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;addinfo=">Ubisoft</a>, Dec. 7)</li>
-<li><i>Goat Simulator 3 </i>(New release on Xbox, available on PC Game Pass, Dec. 7)</li>
-<li><i>LEGO Fortnite </i>(New release on Epic Games Store, Dec. 7)</li>
-<li><i>Against the Storm </i>(New release on Xbox, available on PC Game Pass, Dec. 8)</li>
-<li><i>Rocket Racing </i>(New release on Epic Games Store, Dec. 8)</li>
-<li><i>Fortnite Festival </i>(New release on Epic Games Store, Dec. 9)</li>
-<li><i>Stellaris Nexus </i>(New release on <a href="https://store.steampowered.com/app/1983990?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Dec. 12)</li>
-<li><i>Tin Hearts </i>(New release on <a href="https://www.xbox.com/games/store/tn-hearts/9MZSWZD5TDZP?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available PC Game Pass, Dec. 12)</li>
-<li><i>Amazing Cultivation Simulator </i>(<a href="https://www.xbox.com/games/store/amazing-cultivation-simulator/9MXZSGCPVN2L?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Blasphemous 2 </i>(<a href="https://www.epicgames.com/store/p/blasphemous-2?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>Century: Age of Ashes </i>(<a href="https://www.xbox.com/games/store/century-age-of-ashes/9nrmxffd3k13?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Chorus </i>(<a href="https://www.xbox.com/games/store/chorus/9NN1Z8LHMFBV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Dungeons 4</i>  (<a href="https://www.xbox.com/games/store/dungeons-4-win/9nd9bbmdvd2c?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Edge of Eternity </i>(<a href="https://www.xbox.com/games/store/edge-of-eternity/9P934697Z4W4?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Farming Simulator 17 </i>(<a href="https://www.xbox.com/games/store/farming-simulator-17-platinum-edition/9NR95B3SHNGK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Farming Simulator 22</i> (<a href="https://www.xbox.com/games/store/farming-simulator-22-pc/9NBBCKL3LTRH?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Flashback 2</i> (<a href="https://store.steampowered.com/app/2008420?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Forza Horizon 4 </i>(<a href="https://store.steampowered.com/app/1293830?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Forza Horizon 5</i> (<a href="https://store.steampowered.com/app/1551360?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/forza-horizon-5-standard-edition/9nkx70bbcdrn?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
-<li><i>Hollow Knight</i> (<a href="https://www.xbox.com/games/store/hollow-knight-voidheart-edition/9MW9469V91LM?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>The Front </i>(<a href="https://store.steampowered.com/app/2285150?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Martha Iis Dead </i>(<a href="https://www.xbox.com/en-US/games/store/martha-is-dead-digital-deluxe/9PKB08G6JMQF?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Minecraft Dungeons</i> (<a href="https://store.steampowered.com/app/1672970?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/minecraft-dungeons-ultimate-edition-for-windows/9NZ12RV7B7R3/0010/B4K4SFFCW5VS?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
-<li><i>Monster Hunter: World </i>(<a href="https://store.steampowered.com/app/582010?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Neon Abyss </i>(<a href="https://www.xbox.com/games/store/neon-abyss/9PLWSGHFQ4PS?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Ori and the Will of the Wisps </i>(<a href="https://store.steampowered.com/app/1057090?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.xbox.com/games/store/ori-and-the-will-of-the-wisps/9n8cd0xzklp4?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
-<li><i>Ori and the Blind Forest: Definitive Edition </i>(<a href="https://store.steampowered.com/app/387290?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Raji: An Ancient Epic </i>(<a href="https://www.xbox.com/games/store/raji-an-ancient-epis/9NH2J7X3MPB0?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Remnant: From the Ashes </i>(<a href="https://www.xbox.com/games/store/remnant-from-the-ashes/9PBHXGWZTS2N?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Remnant II </i>(<a href="https://www.xbox.com/games/store/remnant-ii---standard-edition/9P9278ZMGQLJ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Richman 10 </i>(<a href="https://www.xbox.com/games/store/richman-10/9P4XHRM6T390?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Spirittea</i> (<a href="https://www.xbox.com/games/store/spirittea/9PPK59BXLD4N?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Surgeon Simulator 2 </i>(<a href="https://www.xbox.com/games/store/surgeon-simulator-2/9P1ZVVW7NRR3?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Sword and Fairy 7 </i>(<a href="https://www.xbox.com/games/store/sword-and-fairy-together-forever/9P8JHB7V4T5M?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-</ul>
-<p><i>Terminator: Dark Fate &#8211; Defiance </i>didn’t make it in December due to a change in its publish date. Stay tuned to GFN Thursday for updates.</p>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">what was the final game you played in 2023? <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1742591653846618444?ref_src=twsrc%5Etfw">January 3, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/gfn-thursday-1-4-nv-blog-1280x680-no-cta.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/gfn-thursday-1-4-nv-blog-1280x680-no-cta-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[A New Year of Gaming: GeForce NOW Adds More Than 20 New Titles in January]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
