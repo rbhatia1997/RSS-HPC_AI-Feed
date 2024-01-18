@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 17 Jan 2024 09:46:12 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 18 Jan 2024 15:48:09 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,142 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.2</generator>
 	<item>
+		<title>Buried Treasure: Startup Mines Clean Energy’s Prospects With Digital Twins</title>
+		<link>https://blogs.nvidia.com/blog/energy-storage-omniverse/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Thu, 18 Jan 2024 16:00:37 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Climate]]></category>
+		<category><![CDATA[Cloud Services]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Digital Twin]]></category>
+		<category><![CDATA[Energy]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[NVIDIA DGX]]></category>
+		<category><![CDATA[NVIDIA Modulus]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69354</guid>
+
+					<description><![CDATA[Mark Swinnerton aims to fight climate change by transforming abandoned mines into storage tanks of renewable energy. The CEO of startup Green Gravity is prototyping his ambitious vision in a warehouse 60 miles south of Sydney, Australia, and simulating it in NVIDIA Omniverse, a platform for building 3D workflows and applications. The concept requires some <a class="read-more" href="https://blogs.nvidia.com/blog/energy-storage-omniverse/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Mark Swinnerton aims to fight climate change by transforming abandoned mines into storage tanks of renewable energy.</p>
+<p>The CEO of startup Green Gravity is prototyping his ambitious vision in a warehouse 60 miles south of Sydney, Australia, and simulating it in <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform for building 3D workflows and applications.</p>
+<p>The concept requires some heavy lifting. Solar and wind energy will pull steel blocks weighing as much as 30 cars each up shafts taller than a New York skyscraper, storing potential energy that can turn turbines whenever needed.</p>
+<h2><b>A Distributed Energy Network</b></h2>
+<p>Swinnerton believes it’s the optimal way to save renewable energy because nearly a million abandoned mine shafts are scattered around the globe, many of them already connected to the grid. And his mechanical system is cheaper and greener than alternatives like massive lithium batteries better suited for electric vehicles.</p>
+<figure id="attachment_69364" aria-describedby="caption-attachment-69364" style="width: 150px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO.jpg"><img decoding="async" class="wp-image-69364 size-thumbnail" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-150x150.jpg" alt="Mark Swinnerton, CEO Green Gravity" width="150" height="150" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-150x150.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-400x400.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-502x500.jpg 502w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-768x765.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-452x450.jpg 452w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-216x215.jpg 216w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-100x100.jpg 100w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO-1280x1276.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Mark-Swinnerton-Green-Gravity-CEO.jpg 1430w" sizes="(max-width: 150px) 100vw, 150px" /></a><figcaption id="caption-attachment-69364" class="wp-caption-text">Mark Swinnerton</figcaption></figure>
+<p>Officials in Australia, India and the U.S. are interested in the concept, and a state-owned mine operator in Romania is conducting a joint study with Green Gravity.</p>
+<p>“We have a tremendous opportunity for repurposing a million mines,” said Swinnerton, who switched gears after a 20-year career at BHP Group, one of the world’s largest mining companies, determined to combat climate change.</p>
+<h2><b>A Digital-First Design</b></h2>
+<p>A longtime acquaintance saw an opportunity to accelerate Swinnerton’s efforts with a <a href="https://www.nvidia.com/en-us/omniverse/solutions/digital-twins/">digital twin</a>.</p>
+<p>“I was fascinated by the Green Gravity idea and suggested taking a digital-first approach, using data as a differentiator,” said Daniel Keys, an IT expert and executive at <a href="https://xamplify.com.au/">xAmplify</a>, a provider of accelerated computing services.</p>
+<p>AI-powered simulations could speed the design and deployment of the novel concept, said Keys, who met Swinnerton 25 years earlier at one of their first jobs, flipping burgers at a fast-food stand.</p>
+<p>Today, they’ve got a digital prototype cooking on xAmplify’s Scaile computer, based on <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/">NVIDIA DGX systems</a>. It’s already accelerating Green Gravity’s proof of concept.</p>
+<p>“Thanks to what we inferred with a digital twin, we’ve been able to save 40% of the costs of our physical prototype by shifting from three weights to two and moving them 10 instead of 15 meters vertically,” said Swinnerton.</p>
+<h2><b>Use Cases Enabled by Omniverse</b></h2>
+<p>It’s the first of many use cases Green Gravity is developing in Omniverse.</p>
+<p>Once the prototype is done, the simulation will help scale the design to mines as deep as 7,000 feet, or about six Empire State Buildings stacked on top of each other. Ultimately, the team will build in Omniverse a dashboard to control and monitor sensor-studded facilities without the safety hazards of sending a person into the mine.</p>
+<figure id="attachment_69367" aria-describedby="caption-attachment-69367" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-69367" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-672x367.jpg" alt="Green Gravity’s physical prototype and test lab." width="672" height="367" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-672x367.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-400x218.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-768x419.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-1536x838.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-825x450.jpg 825w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-394x215.jpg 394w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-183x100.jpg 183w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab-1280x698.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Green-Gravity-test-lab.jpg 1833w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69367" class="wp-caption-text">Green Gravity’s physical prototype and test lab.</figcaption></figure>
+<p>“We expect to cut tens of millions of dollars off the estimated $100 million for the first site because we can use simulations to lower our risks with banks and insurers,” said Swinnerton. “That’s a real tantalizing opportunity.”</p>
+<h2><b>Virtual Visualization Tools</b></h2>
+<p>Operators will track facilities remotely using visualization systems equipped with <a href="https://www.nvidia.com/en-us/data-center/a40/">NVIDIA A40 GPUs</a> and can stream their visuals to tablets thanks to the TabletAR extension in the Omniverse Spatial Framework.</p>
+<p>xAmplify’s workflow uses a number of software components such as <a href="https://developer.nvidia.com/modulus">NVIDIA Modulus</a>, a framework for physics-informed machine learning models.</p>
+<p>“We also use Omniverse as a core integration fabric that lets us connect a half-dozen third-party tools operators and developers need, like Siemens PLM for sensor management and Autodesk for design,” Keys said.</p>
+<p><iframe title="Green Gravity at Nvidia Day 2023 SIGGRAPH" src="https://player.vimeo.com/video/902088869?dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe></p>
+<p>Omniverse eases the job of integrating third-party applications into one 3D workflow because it’s based on the <a href="https://blogs.nvidia.com/blog/openusd-alliance-3d-standard/">OpenUSD standard</a>.</p>
+<p>Along the way, AI sifts reams of data about the thousands of available mines to select optimal sites, predicting their potential for energy storage. Machine learning will also help optimize designs for each site.</p>
+<p>Taken together, it’s a digital pathway Swinnerton believes will lead to commercial operations for Green Gravity within the next couple years.</p>
+<p>It’s the latest customer for xAmplify’s Canberra data center serving Australian government agencies, national defense contractors and an expanding set of enterprise users with a full stack of NVIDIA accelerated software.</p>
+<p>Learn more about how AI is transforming renewables, including <a href="https://blogs.nvidia.com/blog/siemens-gamesa-wind-farms-digital-twins/">wind farm optimization</a>, <a href="https://blogs.nvidia.com/blog/ai-startup-navigates-3d-aerial-images-for-inspections/">solar energy generation</a> and <a href="https://blogs.nvidia.com/blog/ai-hpc-nuclear-fusion/">fusion energy</a>.</p>
+<p><iframe loading="lazy" title="Powering the Future of Clean Energy | I AM AI" width="500" height="281" src="https://www.youtube.com/embed/zrcxLZmOyNA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/green-gravity-still-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/green-gravity-still-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Buried Treasure: Startup Mines Clean Energy’s Prospects With Digital Twins]]></media:title>
+			<media:description type="html">Startup Green Gravity&#039;s concept for renewable energy storage </media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Dino-Mite: Capcom’s ‘Exoprimal’ Joins GeForce NOW</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-exoprimal-prince-of-persia/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 18 Jan 2024 14:00:11 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69377</guid>
+
+					<description><![CDATA[Hold on to your seats — this GFN Thursday is unleashing dinosaurs, crowns and more in the cloud. Catch it all on Capcom’s Exoprimal and Ubisoft’s Prince of Persia: The Lost Crown, leading 10 new games joining the GeForce NOW library this week. Suit Up, Adapt, Survive Don cutting-edge exosuit technology and battle ferocious dinosaurs <a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-exoprimal-prince-of-persia/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Hold on to your seats — this GFN Thursday is unleashing dinosaurs, crowns and more in the cloud.</p>
+<p>Catch it all on Capcom’s <i>Exoprimal </i>and Ubisoft’s <i>Prince of Persia: The Lost Crown,</i> leading 10 new games joining the <a href="http://play.geforcenow.com">GeForce NOW library</a> this week.</p>
+<h2><b>Suit Up, Adapt, Survive</b></h2>
+<figure id="attachment_69381" aria-describedby="caption-attachment-69381" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-69381 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-672x378.jpg" alt="Exoprimal on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Exoprimal-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69381" class="wp-caption-text"><em>Life finds a way.</em></figcaption></figure>
+<p>Don cutting-edge exosuit technology and battle ferocious dinosaurs on an Earth overrun with waves of prehistoric predators. Capcom’s online team-based action game <i>Exoprimal </i>is now supported in the cloud.</p>
+<p>Face velociraptors, T. rex and mutated variants called Neosaurs using the exosuit’s unique weapons and abilities. Join other players in the game’s main mode, Dino Survival, to unlock snippets and special missions from the original story, piecing together the origins of the dinosaur outbreak. Change exosuits on the fly, switching between Assault, Tank and Support roles to suit the situation.</p>
+<p>Catch the game in the cloud this week alongside the release of Title Update 3, which brings a new mission and special <i>Monster Hunter</i> collaboration content, a new map, new rigs, plus the start of the third season. Ultimate members can enjoy it all at up to 4K resolution and 120 frames per second, and new players can purchase the game on <a href="https://store.steampowered.com/app/1286320?utm_source=NVIDIA&amp;utm_campaign=GFN">Steam</a> at 50% off for a limited time.</p>
+<h2><b>Return to the Sands of Time</b></h2>
+<figure id="attachment_69384" aria-describedby="caption-attachment-69384" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69384" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-672x336.jpg" alt="Prince of Persia on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Prince_of_Persia_The_Lost_Crown.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69384" class="wp-caption-text"><em>So stylish.</em></figcaption></figure>
+<p>Defy time and destiny to reclaim the crown and save a cursed world in <i>Prince of Persia: The Lost Crown</i>. It’s the newest adventure in the critically acclaimed action-adventure platformer series, available to stream in the cloud this week at the game’s PC launch.</p>
+<p>Step into the shoes of Sargon, a legendary prince with extraordinary acrobatic skills and the power to manipulate time. Travel to Mount Qaf to rescue the kidnapped Prince Ghassan. Wield blades and various time-related powers to fight enemies and solve puzzles in a Persia-inspired world filled with larger-than-life landmarks.</p>
+<p>Members can unleash their inner warrior with an <a href="https://www.nvidia.com/en-us/geforce-now/">Ultimate membership</a> for the highest-quality streaming. Dash into the thrilling game with support for up to 4K resolution at 120 fps on PCs and Macs, streaming from GeForce RTX 4080-powered servers in the cloud.</p>
+<h2><b>Time for New Games</b></h2>
+<figure id="attachment_69387" aria-describedby="caption-attachment-69387" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69387" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-672x336.jpg" alt="" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/01/GFN_Thursday-Turnip_Boy_Robs_A_Bank.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69387" class="wp-caption-text"><em>Turnip Boy&#8217;s back, allright!</em></figcaption></figure>
+<p>In addition, members can look for the following:</p>
+<ul>
+<li><i>Those Who Remain</i> (New release on <a href="https://www.xbox.com/games/store/those-who-remain/9NFC3G481KKQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, Jan. 16)</li>
+<li><i>Prince of Persia: The Lost Crown </i>(New release on <a href="https://store.ubi.com/6408bd687ee83d203cf3bda1.html#ucid=AFL-ID_152062&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;addinfo=">Ubisoft and Ubisoft+</a>, Jan. 18)</li>
+<li><i>Turnip Boy Robs a Bank </i>(New release on <a href="https://store.steampowered.com/app/2097230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/turnip-boy-robs-a-bank/9ndt1ms39fxz?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available for PC Game Pass, Jan. 18)</li>
+<li><i>New Cycle</i> (New release on <a href="https://store.steampowered.com/app/2198510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Jan. 18)</li>
+<li><i>Beacon Pines </i>(<a href="https://www.xbox.com/games/store/beacon-pines/9P4R2M0NRWNK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
+<li><i>Exoprimal</i> (<a href="https://store.steampowered.com/app/1286320?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>FAR: Changing Tides </i>(<a href="https://www.xbox.com/games/store/far-changing-tides-windows-edition/9MT3D7Z4NWDV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
+<li><i>Going Under </i>(<a href="https://www.xbox.com/games/store/going-under/9nx3g3z38cv2?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
+<li><i>The Legend of Nayuta: Boundless Trails </i>(<a href="https://store.steampowered.com/app/1668530?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Turnip Boy Commits Tax Evasion </i>(<a href="https://www.xbox.com/games/store/turnip-boy-commits-tax-evasion/9N0T8V0R7MBC?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
+</ul>
+<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X </a>or in the comments below.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="art" dir="ltr"><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f995.png" alt="🦕" class="wp-smiley" style="height: 1em; max-height: 1em;" /> + <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/231b.png" alt="⌛" class="wp-smiley" style="height: 1em; max-height: 1em;" /> = <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1747665084292219202?ref_src=twsrc%5Etfw">January 17, 2024</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/gfn-thursday-1-18-no-copy-kv-1536x920-1.jpg"
+			type="image/jpeg"
+			width="1536"
+			height="920"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/gfn-thursday-1-18-no-copy-kv-1536x920-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Dino-Mite: Capcom’s ‘Exoprimal’ Joins GeForce NOW]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>From Embers to Algorithms: How DigitalPath’s AI is Revolutionizing Wildfire Detection</title>
 		<link>https://blogs.nvidia.com/blog/ai-podcast-wildfires/</link>
 		
@@ -29,7 +165,7 @@
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69314</guid>
 
 					<description><![CDATA[The AI Podcast · DigitalPath&#8217;s Ethan Higgins On Using AI to Fight Wildfires &#8211; Ep. 211 DigitalPath is igniting change in the Golden State — using computer vision, generative adversarial networks and a network of thousands of cameras to detect signs of fire in real time. In the latest episode of NVIDIA’s AI Podcast, host <a class="read-more" href="https://blogs.nvidia.com/blog/ai-podcast-wildfires/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1713097308%3Fsecret_token%3Ds-qw4nclf83WA&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" width="100%" height="300" frameborder="no" scrolling="no"></iframe></p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1713097308%3Fsecret_token%3Ds-qw4nclf83WA&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" width="100%" height="300" frameborder="no" scrolling="no"></iframe></p>
 <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="DigitalPath's Ethan Higgins On Using AI to Fight Wildfires - Ep. 211" href="https://soundcloud.com/theaipodcast/ai-wildfire/s-qw4nclf83WA" target="_blank" rel="noopener">DigitalPath&#8217;s Ethan Higgins On Using AI to Fight Wildfires &#8211; Ep. 211</a></div>
 <p>DigitalPath is igniting change in the Golden State — using computer vision, generative adversarial networks and a network of thousands of cameras to detect signs of fire in real time.</p>
 <p>In the latest episode of <a href="https://blogs.nvidia.com/ai-podcast/">NVIDIA’s AI Podcast</a>, host Noah Kravtiz spoke with DigitalPath System Architect Ethan Higgins about the company’s role in the ALERTCalifornia initiative, a collaboration between California’s wildfire fighting agency <a href="https://www.fire.ca.gov/">CAL FIRE</a> and the University of California, San Diego.</p>
@@ -159,10 +295,10 @@
 <h2><b>A Sky Full of Stars</b></h2>
 <p>To start, Brellias first visualized and reworked an existing 3D scene of a woman in Blender. He used Blender’s built-in multi-resolution modifier for sculpting and added some shape keys to achieve the desired modifications.</p>
 <p>He also created a custom shader for the character’s skin — a stylistic choice to lend its appearance a galactic hue.</p>
-<figure id="attachment_69293" aria-describedby="caption-attachment-69293" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-69293" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-672x441.png" alt="" width="672" height="441" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-672x441.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-400x263.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-768x504.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-686x450.png 686w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-328x215.png 328w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-152x100.png 152w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69293" class="wp-caption-text">Brellias is an especially big fan of purple, blue and maroon hues.</figcaption></figure>
+<figure id="attachment_69293" aria-describedby="caption-attachment-69293" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69293" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-672x441.png" alt="" width="672" height="441" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-672x441.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-400x263.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-768x504.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-686x450.png 686w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-328x215.png 328w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w-152x100.png 152w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-collage-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69293" class="wp-caption-text">Brellias is an especially big fan of purple, blue and maroon hues.</figcaption></figure>
 <p>Next, Brellias tapped Blender’s OptiX GPU-accelerated viewport denoising, powered by his GeForce RTX GPU.</p>
 <p>“The technology helps reduce noise and improve the quality of the viewport image more quickly, allowing me to make decisions and iterate on the render faster,” he said.</p>
-<figure id="attachment_69296" aria-describedby="caption-attachment-69296" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w.png"><img decoding="async" class="size-large wp-image-69296" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69296" class="wp-caption-text">Out-of-this-world levels of detail.</figcaption></figure>
+<figure id="attachment_69296" aria-describedby="caption-attachment-69296" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69296" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-brellias-wk92-image4-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69296" class="wp-caption-text">Out-of-this-world levels of detail.</figcaption></figure>
 <p>Next, Brellias animated the scene using a base model from Daz Studio, a free media design software developed by Daz 3D. Daz features an AI denoiser for high-performance interactive rendering that can also be accelerated by RTX GPUs.</p>
 <p>In addition, rig tools in Blender made the animation process easy, eliminating the need to modify file formats.</p>
 <p>To animate the character’s face, Brellias tied drivers to shape keys using empties, enabling greater fluidity and control over facial expressions.</p>
@@ -1049,117 +1185,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Twitch, OBS and NVIDIA to Release Multi-Encode Livestreaming]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Picture This: Getty Images Releases Generative AI By iStock Powered by NVIDIA Picasso</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-picasso-istock-generative-ai/</link>
-		
-		<dc:creator><![CDATA[Jason Paul]]></dc:creator>
-		<pubDate>Mon, 08 Jan 2024 16:30:32 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[CES 2024]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69125</guid>
-
-					<description><![CDATA[Getty Images, a global visual content creator and marketplace, today at CES released Generative AI by iStock, an affordable and commercially safe image generation service trained on the company’s creative library of licensed, proprietary data. Built on NVIDIA Picasso, a foundry for custom AI models, Generative AI by iStock provides designers and businesses with a <a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-picasso-istock-generative-ai/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Getty Images, a global visual content creator and marketplace, today at CES released Generative AI by iStock, an affordable and commercially safe image generation service trained on the company’s creative library of licensed, proprietary data.</p>
-<p>Built on <a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">NVIDIA Picasso</a>, a foundry for custom AI models, Generative AI by iStock provides designers and businesses with a text-to-image generation tool to create ready-to-license visuals, with legal protection and usage rights for generated images included.</p>
-<p>Alongside the release of the service on the <a href="https://www.istockphoto.com/">iStock website</a>, Getty Images is also making advanced inpainting and outpainting features available via application programming interfaces, launching on iStock.com and Gettyimages.com soon. Developers can seamlessly integrate the new APIs with creative applications to add people and objects to images, replace specific elements and expand images in a wide range of aspect ratios.</p>
-<h2><b>Create With Im-AI-gination</b></h2>
-<p><iframe loading="lazy" title="NVIDIA Picasso Powers Generative AI by iStock (Commercially Safe AI Generator by Getty Images)" width="500" height="281" src="https://www.youtube.com/embed/cv_ozHmdoms?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>Generative AI by iStock is trained with NVIDIA Picasso on Getty Images’ vast creative library — including exclusive photos, illustrations and videos — providing users with a commercially safe way to generate visuals. Users can enter simple text prompts to generate photo-quality images at up to 4K resolution.</p>
-<figure id="attachment_69129" aria-describedby="caption-attachment-69129" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69129" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-672x378.jpg" alt="Generative AI by iStock Powered by Picasso Editing APIs" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/Editing-APIs-1-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69129" class="wp-caption-text"><em>Inpainting and outpainting APIs, with Replace feature coming soon.</em></figcaption></figure>
-<p>New editing APIs give customers powerful control over their generated images.</p>
-<p>The Inpainting feature allows users to mask a region of an image, then fill in the region with a person or object described via a text prompt.</p>
-<p>Outpainting enables users to expand images to fit various aspect ratios, filling in new areas based on the context of the original image. This is a powerful tool to create assets with unique aspect ratios for advertising or social media promotion.</p>
-<p>And coming soon, a Replace feature provides similar capabilities to Inpainting but with stricter adherence to the mask.</p>
-<h2><b>Transforming Visual Design</b></h2>
-<p>The NVIDIA Picasso foundry enables developers and service providers to seamlessly train, fine-tune, optimize and deploy generative AI models tailored to their visual design requirements. Developers can use their own AI models or train new ones using the NVIDIA Edify model architecture to generate images, videos, 3D assets, 360-degree high-dynamic-range imaging and physically based rendering materials from simple text prompts.</p>
-<p>Using NVIDIA Picasso, Getty Images trained a bespoke Edify image generator based on its catalog of licensed images and videos to power the Generative AI by iStock service.</p>
-<p>Customers can use Generative AI by iStock online today. Advanced editing features are now available via APIs and coming soon to the iStock website.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/Generative-AI-by-iStock-Powered-by-NVIDIA-Picasso-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/Generative-AI-by-iStock-Powered-by-NVIDIA-Picasso-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Picture This: Getty Images Releases Generative AI By iStock Powered by NVIDIA Picasso]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Omniverse Adopted by Global Automotive-Configurator Developer Ecosystem</title>
-		<link>https://blogs.nvidia.com/blog/omniverse-automotive-configurator-developer-ecosystem/</link>
-		
-		<dc:creator><![CDATA[James Mills]]></dc:creator>
-		<pubDate>Mon, 08 Jan 2024 16:30:19 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[CES 2024]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Graphics]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68983</guid>
-
-					<description><![CDATA[Whether building a super-capable truck or conjuring up a dream sports car, spending hours playing with online car configurators is easy. With auto industry insiders predicting that most new vehicle purchases will move online by 2030, these configurators are more than just toys. They’re crucial to the future of the world’s automakers — essential in <a class="read-more" href="https://blogs.nvidia.com/blog/omniverse-automotive-configurator-developer-ecosystem/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Whether building a super-capable truck or conjuring up a dream sports car, spending hours playing with online car configurators is easy.</p>
-<p>With auto industry insiders predicting that most new vehicle purchases will move online by 2030, these configurators are more than just toys.</p>
-<p>They’re crucial to the future of the world’s automakers — essential in showing off what their brand is all about, boosting average selling prices and helping customers select and personalize their vehicles.</p>
-<p>It’s also a natural use case for the sophisticated simulation capabilities of <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a software platform for developing and deploying advanced 3D applications and pipelines based on <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a>. It provides the ability to instantly visualize changes to a car’s color or customize its interior with luxurious finishes.</p>
-<p>Studies show that 80% of shoppers are drawn to brands that give them a personal touch while shopping.</p>
-<p>Aiming to meet these customer demands, a burgeoning ecosystem of partners and customers is putting to work elements of Omniverse.</p>
-<p>Key creative partners and developers like BITONE, Brickland, Configit, Gwantsi Productions<em>, </em>Katana Studio Ltd. (serving Craft Detroit), WPP and ZeroLight are pioneering Omniverse-powered configurators. And leading automakers such as Lotus are adopting these advanced solutions.</p>
-<p>That’s because traditional auto configurators, often limited by pre-rendered images, experience difficulty achieving personalization and dynamic environment representation.</p>
-<p>They use different kinds of data in various tools, such as static images of what users see on the website, lists of available options based on location, product codes and personal information.</p>
-<p>These challenges extend from the consumer experience — often characterized by limited interactivity and realism — to back-end processes for original equipment manufacturers (OEMs) and agencies, where inflexibility and inefficiencies in updating configurators and repurposing assets are common.</p>
-<h2><strong>Reconfiguring Configurators With NVIDIA Omniverse</strong></h2>
-<p>Omniverse helps software developers and service providers streamline their work.</p>
-<p>Service providers can now access the platform to craft state-of-the-art 3D experiences and showcase lifelike graphics and high-end, immersive environments with advanced lighting and textures.</p>
-<p>And OEMs can benefit from a unified asset pipeline that simplifies the integration of design and engineering data for marketing purposes. Omniverse’s enhanced tools also allow them to quickly produce diverse marketing materials, boosting customer engagement through customized content.</p>
-<p>Independent software vendors, or ISVs, can use the native OpenUSD platform as a foundation for creating scene construction tools — or to help develop tools for managing configuration variants.</p>
-<p>With the <a href="https://www.nvidia.com/en-us/omniverse/solutions/stream-3d-apps/">NVIDIA Graphics Delivery Network</a> (GDN) software development kit, high-quality, real-time <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> viewports can be embedded into web applications, ensuring seamless operation on nearly any device.</p>
-<p>This, along with support for large-scale scenes and physically accurate graphics, allows developers to concentrate on enhancing the user experience without compromising quality on lower-spec machines.</p>
-<p><a href="https://www.nvidia.com/en-us/omniverse/cloud/">Omniverse Cloud</a> taps GDN, which uses NVIDIA’s global cloud-streaming infrastructure to deliver seamless access to high-fidelity 3D interactive experiences.</p>
-<p>Configurators, when run on GDN, can be easily published at scale using the same GPU architecture on which they were developed and streamed to nearly any device.</p>
-<p>All this means less redundancy in data prep, aggregated and accessible data, fewer manual pipeline updates and instant access for the entire intended audience.</p>
-<h2><strong>Global Adoption by Innovators and Industry Leaders</strong></h2>
-<p>Omniverse is powering a new era in automotive design and customer interaction, heralded by a vibrant ecosystem of partners and customers.</p>
-<p>Lotus is at the forefront, developing an interactive dealership user experience using Omniverse and generative AI tools including <a href="https://developer.nvidia.com/ace">NVIDIA Avatar Cloud Engine</a> and <a href="https://www.nvidia.com/en-us/omniverse/apps/audio2face/">NVIDIA Omniverse Audio2Face</a>.</p>
-<p><i>To dive deeper into the world of advanced car configurators, read more on </i><a href="https://www.nvidia.com/en-us/omniverse/"><i>Omniverse</i></a><i> and </i><a href="https://www.nvidia.com/en-us/omniverse/solutions/stream-3d-apps/"><i>GDN</i></a><i>. </i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/automotive-configurator-developer-ecosystem.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/automotive-configurator-developer-ecosystem-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Omniverse Adopted by Global Automotive-Configurator Developer Ecosystem]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
