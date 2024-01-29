@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 25 Jan 2024 17:07:17 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 26 Jan 2024 23:21:52 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,64 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.2</generator>
 	<item>
+		<title>Boston Children’s Researchers, in Joint Effort, Deploy AI Across Their Hip Clinic to Support Patients, Doctors</title>
+		<link>https://blogs.nvidia.com/blog/boston-childrens-virtualhip-ai/</link>
+		
+		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
+		<pubDate>Mon, 29 Jan 2024 16:00:21 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Education]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[NVIDIA DGX]]></category>
+		<category><![CDATA[Trustworthy AI]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69469</guid>
+
+					<description><![CDATA[Hip disorders, comprising some of the world’s most common joint diseases, are especially prevalent among adolescents and young adults, causing stiffness, pain or a limp. But they can be hard to diagnose using solely 2D medical imaging. Helping to treat these disorders, the Boston Children’s Hospital’s (BCH’s) Adolescent and Young Adult Hip Preservation Program is <a class="read-more" href="https://blogs.nvidia.com/blog/boston-childrens-virtualhip-ai/">Read article &#62;</a>]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Hip disorders, comprising some of the world’s most common joint diseases, are especially prevalent among adolescents and young adults, causing stiffness, pain or a limp. But they can be hard to diagnose using solely 2D medical imaging.</p>
+<p>Helping to treat these disorders, the Boston Children’s Hospital’s (BCH’s) Adolescent and Young Adult Hip Preservation Program is the U.S.’s first to deploy a fully automated AI tool across its clinic.</p>
+<p>Called VirtualHip, the tool can create a 3D model of a hip from routine medical images, assess anatomy and movement-related issues, and provide clinicians with diagnostic and treatment guidance. It was built at an orthopedic research lab at BCH, Harvard Medical School’s primary pediatric hospital, using the <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/" target="_blank" rel="noopener">NVIDIA DGX platform</a>.</p>
+<p>A team of 10 researchers are working on the project, funded in part by an <a href="https://nvidia.my.site.com/HardwareGrant/s/Application" target="_blank" rel="noopener">NVIDIA Academic Hardware Grant</a>, including engineers, computer scientists, orthopedic surgeons, radiologists and software developers.</p>
+<p>“Using AI, clinicians can get more value out of the clinical data they routinely collect,” said Dr. Ata Kiapour, the lab’s principal investigator, director of the musculoskeletal informatics group at BCH and assistant professor of orthopedic surgery at Harvard Medical School. “This tool can augment their performance to make better choices in diagnosis and treatment, and free their time to focus on giving patients the best care.”</p>
+<h2><b>Getting Straight to the Joint</b></h2>
+<p>Often, clinicians must determine a treatment plan — with levels of intervention ranging from physical therapy to total hip replacement — based on just a 2D image, such as an X-ray, CT scan or MRI. Automatically creating 3D models from these images, and using them to conduct comprehensive joint assessments, can help improve the accuracy of diagnosis to inform treatment planning.</p>
+<p>“I started a postdoc with an orthopedic surgeon at BCH in 2013, when I saw how an engineer or scientist could help with patient treatment,” said Dr. Kiapour, who’s also trained as a biomedical engineer. “Over the years, I saw that hospitals have a ton of data, but efficient data processing for clinical use was a huge, unmet need.”</p>
+<p>VirtualHip, fully integrated with BCH’s hip clinic and radiology database, helps to fill this gap.</p>
+<p>Clinicians can log in to the software tool through a web-based portal, view and interact with 3D simulations of 2D medical images, submit analysis requests and see results within an hour — 4x quicker on average than receiving a radiology report after imaging.</p>
+<p>The tool, which produces 3D models with a margin of error less than one millimeter, can assess morphological abnormalities and identify issues related to hip motion, such as pain from hip bones rubbing against each other.</p>
+<p>VirtualHip was developed using a database with tens of millions of clinical notes and imaging data from patients seen at BCH over the past two decades. Using natural language processing models and computer vision algorithms, Dr. Kiapour’s team processed this data, training the tool to analyze normal versus pathologic hip development and identify factors influencing the injury risk and treatment outcomes.</p>
+<p>This will enable VirtualHip to offer patient-specific risk assessment and treatment planning by comparing current patients to previously treated ones with similar demographic backgrounds.</p>
+<p>“The hardware support that we got from NVIDIA made all of this possible,” Dr. Kiapour said. “DGX enabled advanced computations on more than 20 years’ worth of historical data for our fine-tuned clinical AI model.”</p>
+<h2><b>Clearer Explanations, Better Outcomes for Patients</b></h2>
+<p>In addition to assisting doctors in diagnosis and treatment planning, VirtualHip helps patients better understand their condition.</p>
+<p>“When patients look at an X-ray, it doesn’t look like a real hip — but with a 3D model that can be rotated, the doctor can show exactly where the joints are impinging or unstable,” Dr. Kiapour said. “This lets the patient better understand their disorder, which usually makes them more compliant with whatever the doctor’s prescribing.”</p>
+<p>This type of visualization is especially helpful for children and younger adults, Kiapour added.</p>
+<p>The VirtualHip project is under continuous development, including work toward a patient-facing platform — using <a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/" target="_blank" rel="noopener">large language models</a> and <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/" target="_blank" rel="noopener">generative AI</a> — for personalized analyses and treatment recommendations.</p>
+<p>The BCH researchers plan to commercialize the product for use in other hospitals.</p>
+<p><i>Subscribe to </i><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/" target="_blank" rel="noopener"><i>NVIDIA healthcare news</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/virtualhip-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/virtualhip-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Boston Children’s Researchers, in Joint Effort, Deploy AI Across Their Hip Clinic to Support Patients, Doctors]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Sharper Image: GeForce NOW Update Delivers Stunning Visuals to Android Devices</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-android-higher-resolutions/</link>
 		
@@ -1075,67 +1133,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[NVIDIA and Loss Prevention Retail Council Introduce AI Solution to Address Organized Retail Crime]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Amgen to Build Generative AI Models for Novel Human Data Insights and Drug Discovery</title>
-		<link>https://blogs.nvidia.com/blog/genomics-ai-amgen-superpod/</link>
-		
-		<dc:creator><![CDATA[Rory Kelleher]]></dc:creator>
-		<pubDate>Mon, 08 Jan 2024 18:00:59 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Customer Stories]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[Genomics]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[NVIDIA DGX]]></category>
-		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69015</guid>
-
-					<description><![CDATA[Generative AI is transforming drug research and development, enabling new discoveries faster than ever — and Amgen, one of the world’s leading biotechnology companies, is tapping the technology to power its research. Amgen will build AI models trained to analyze one of the world’s largest human datasets on an NVIDIA DGX SuperPOD, a full-stack data <a class="read-more" href="https://blogs.nvidia.com/blog/genomics-ai-amgen-superpod/">Read article &#62;</a>]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Generative AI is transforming drug research and development, enabling new discoveries faster than ever — and Amgen, one of the world’s leading biotechnology companies, is tapping the technology to power its research.</p>
-<p>Amgen will build AI models trained to analyze one of the world’s largest human datasets on an <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a>, a full-stack data center platform, that will be installed at Amgen’s deCODE genetics’ headquarters in Reykjavik, Iceland. The system will be named Freyja in honor of the powerful, life-giving Norse goddess associated with the ability to predict the future.</p>
-<p>Freyja will be used to build a human diversity atlas for drug target and disease-specific biomarker discovery, providing vital diagnostics for monitoring disease progression and regression. The system will also help develop AI-driven precision medicine models, potentially enabling individualized therapies for patients with serious diseases.</p>
-<p>Amgen plans to integrate the DGX SuperPOD, which will feature 31 <a href="https://www.nvidia.com/en-us/data-center/dgx-h100/">NVIDIA DGX H100</a> nodes totaling 248 <a href="https://www.nvidia.com/en-us/data-center/h100/">H100 Tensor Core GPUs</a>, to train state-of-the-art AI models in days rather than months, enabling researchers to more efficiently analyze and learn from data in their search for novel health and therapeutics insights.</p>
-<p>“For more than a decade, Amgen has been preparing for this hinge moment we are seeing in the industry, powered by the union of technology and biotechnology,” said David M. Reese, executive vice president and chief technology officer at Amgen. “We look forward to  combining the breadth and maturity of our world-class human data capabilities at Amgen with NVIDIA’s technologies.”</p>
-<p>The goal of deCODE founder and CEO Kári Stefánsson in starting the company was to understand human disease by looking at the diversity of the human genome. He predicted in a recent <a href="https://tslabtalk.podbean.com/e/the-human-data-era-the-role-of-human-diversity-in-progressing-precision-medicine/">Amgen podcast</a> that within the next 10 years, doctors will routinely use genetics to explore uncommon diseases in patients.</p>
-<p>“This SuperPOD has the potential to accelerate our research by training models more quickly and helping us generate questions we might not have otherwise thought to ask,” said Stefánsson.</p>
-<h2><strong>Putting the Tech in Biotechnology</strong></h2>
-<p>Since its founding in 1996, deCODE has curated more than 200 petabytes of de-identified human data from nearly 3 million individuals.</p>
-<p>The company started by collecting de-identified data from Icelanders, who have a rich heritage in genealogies that stretch back for centuries. This population-scale data from research volunteers provides unique insights into human diversity as it applies to disease.</p>
-<p>deCODE has also helped sequence more than half a million human genomes from volunteers in the <a href="https://www.ukbiobank.ac.uk/learn-more-about-uk-biobank/news/world-s-largest-genetic-project-opens-the-door-to-new-era-for-treatments-and-cures-uk-biobank-s-major-milestone">UK Biobank</a>.</p>
-<p>But drawing insights from this much data requires powerful AI systems.</p>
-<p>By integrating powerful new technology, Amgen has an opportunity to accelerate the discovery and development of life-changing medicines. In March 2023, NVIDIA announced that Amgen became one of the first companies <a href="https://nvidianews.nvidia.com/news/nvidia-unveils-large-language-models-and-generative-ai-services-to-advance-life-sciences-r-d">to employ NVIDIA BioNeMo</a>, which researchers have used to build generative AI models to accelerate drug discovery and development. Amgen researchers have also been accessing BioNeMo via <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>, an AI supercomputing service.</p>
-<p>“Models trained in BioNeMo can advance drug discovery on multiple fronts,” said Marti Head, executive director of computational and data sciences at Amgen. “In addition to helping develop drugs that are more effective, they can also help avoid unwanted effects like immune responses, and new biologics can be made in volume.”</p>
-<p>By adopting DGX SuperPOD, Amgen is poised to gain unprecedented data insights with the potential to change the pace and scope of drug discovery.</p>
-<p>“The fusion of advanced AI, groundbreaking developments in biology and molecular engineering and vast quantities of human data are not just reshaping how we discover and develop new medicines — they’re redefining medicine,” Reese said.</p>
-<p>Learn about <a href="https://www.nvidia.com/en-us/clara/">NVIDIA’s AI platform for healthcare and life sciences</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/amgenblog.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/amgenblog-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Amgen to Build Generative AI Models for Novel Human Data Insights and Drug Discovery]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
