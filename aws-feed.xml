@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 30 Jan 2024 13:11:38 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 23 Jan 2024 16:01:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,107 +13,6 @@
 	1	</sy:updateFrequency>
 	
 	<item>
-		<title>Accelerating molecule discovery with computational chemistry and Promethium on AWS</title>
-		<link>https://aws.amazon.com/blogs/hpc/accelerating-molecule-discovery-with-computational-chemistry-and-promethium-on-aws/</link>
-		
-		<dc:creator><![CDATA[Christoph Siegert]]></dc:creator>
-		<pubDate>Tue, 30 Jan 2024 13:06:40 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Life Sciences]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">c43bf42043ce54aab45c523d478b4877bab0956a</guid>
-
-					<description>Interested in performing high-accuracy computational chemistry simulations faster? Check out this new post about Promethium, a solution from QC Ware that leverages AWS to accelerate simulations by up to 100x.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Perminder Singh Quantum Solution Architect, ISV, and Satish Gandhi, partner development manager ISV at AWS; and Christoph Siegert, SVP Product at QC Ware&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Computational chemistry for small molecule discovery remains one of the major opportunities across many high impact industries, such as pharmaceuticals and chemicals, as highlighted by &lt;a href="https://www.nature.com/articles/d41573-022-00025-1"&gt;Nature&lt;/a&gt;, &lt;a href="https://www.bcg.com/publications/2022/ai-in-drug-discovery-impact"&gt;BCG&lt;/a&gt;, and &lt;a href="https://www.mckinsey.com/industries/life-sciences/our-insights/pharmas-digital-rx-quantum-computing-in-drug-research-and-development"&gt;McKinsey&lt;/a&gt;. Many of the world’s largest problems are chemistry problems at their core.&lt;/p&gt; 
-&lt;p&gt;For example, creating new catalysts is a high-impact chemistry problem that will benefit from accelerated molecular simulations. Discoveries in creating new catalysts could lower the gas requirements in the ammonia production process, which uses about 3% of &lt;a href="https://youtu.be/RfvL_423a-I?t=6553"&gt;global gas consumption&lt;/a&gt;. Another example is potentially shortening the drug development timeline, which currently can take 5 or more years. &lt;a href="https://www.bcg.com/publications/2023/enterprise-grade-quantum-computing-almost-ready"&gt;BCG estimates&lt;/a&gt; that molecular simulations could create a $60-130 billion value across pharma and chemistry alone.&lt;/p&gt; 
-&lt;p&gt;However, in computational chemistry, researchers typically &lt;a href="https://onlinelibrary.wiley.com/doi/10.1002/qua.26381"&gt;have to make a tradeoff&lt;/a&gt; between speed and accuracy. QC Ware saw an opportunity to deliver both speed &lt;em&gt;and&lt;/em&gt; accuracy. They developed a new computational chemistry solution called Promethium that leverages &lt;a href="https://aws.amazon.com/ec2/"&gt;Amazon Elastic Compute Cloud (Amazon EC2)&lt;/a&gt; GPU instances. Promethium performs up to 100 times faster than traditional high accuracy solutions. In this post, we’ll dive into Promethium and explain how it achieves this.&lt;/p&gt; 
-&lt;h2&gt;Computational chemistry capabilities&lt;/h2&gt; 
-&lt;p&gt;Promethium is a density-functional theory (DFT) computational chemistry solution. Density-functional theory is a highly accurate computational quantum chemistry method that &lt;em&gt;doesn’t require training data,&lt;/em&gt; making it immediately applicable across industries:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Pharma:&lt;/strong&gt; small molecule drugs, covalent inhibitors, protein-ligand binding, and PROTACs&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Agriculture:&lt;/strong&gt; pesticides, fertilizers, ammonia&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Energy:&lt;/strong&gt; oil &amp;amp; gas catalysts, reforming, battery materials&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Electronics:&lt;/strong&gt; organic light emitting diodes (OLEDs), organic electronics&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Chemicals: &lt;/strong&gt;polymers, polyurethane, catalysts, and beyond&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Automotive / Aerospace: &lt;/strong&gt;catalysts, new materials, polymers&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Environmental: &lt;/strong&gt;water treatment, air purification&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;However, the high accuracy provided by DFT comes at a price. It requires a high computational power, which limits the throughput, size, and complexity of simulated molecules. Promethium improves processing speed by using GPUs, specialized GPU software, and the scalability of AWS cloud. When using Promethium, computational chemists get highly accurate results, quickly.&lt;/p&gt; 
-&lt;p&gt;Promethium delivers significant speedups over current best-in-class DFT software. The following chart shows how many single point energy calculations can be run on Amazon EC2 instances with various DFT solutions.&lt;/p&gt; 
-&lt;div id="attachment_3246" style="width: 1135px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3246" class="size-full wp-image-3246" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.31.59.png" alt="Figure 1: Chart comparing single instance 24-hour simulation performance across solutions." width="1125" height="515"&gt;
- &lt;p id="caption-attachment-3246" class="wp-caption-text"&gt;Figure 1: Chart comparing single instance 24-hour simulation performance across solutions.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;This chart shows the number of molecules (Λ-FL172 organoruthenium complex) that can be simulated with DFT in 24hrs for each compute node across various commercial and open-source solutions.&lt;/p&gt; 
-&lt;p&gt;The computational requirement also impacts the size and complexity of molecules that can be simulated. The new solutions allow treating a large space of protein-ligand interaction as an active area. For example, a 2,056 atom protein with ωB97/def2-SVP level of theory runs for about 14 hours on a single GPU from an &lt;a href="https://aws.amazon.com/ec2/instance-types/p4/"&gt;Amazon EC2 P4d&lt;/a&gt; instance.&lt;/p&gt; 
-&lt;h2&gt;Scalable and secure architecture&lt;/h2&gt; 
-&lt;p&gt;Promethium is a software as a service (SaaS) solution built on AWS and uses Amazon EC2 GPU instances to provide customers on-demand scalable computational resources. Promethium uses a microservices-based architecture deployed on Kubernetes. The solution dynamically reacts to customer demand and automatically scales Amazon EC2 &lt;a href="https://aws.amazon.com/ec2/instance-types/p3/"&gt;P3&lt;/a&gt; and &lt;a href="https://aws.amazon.com/ec2/instance-types/p4/"&gt;P4&lt;/a&gt; instances with Karpenter, an open-source compute resource manager for Kubernetes.&lt;/p&gt; 
-&lt;p&gt;Molecule intellectual property is the most sensitive and important asset for QC Ware’s customers. Therefore, Promethium’s architecture follows AWS &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html"&gt;best practices for cloud security&lt;/a&gt;. For example, the solution includes least-privilege role-based access control, encryption at rest and in transit, multi-factor authentication (MFA), and single sign-on. The following diagram outlines Promethium’s architecture.&lt;/p&gt; 
-&lt;div id="attachment_3247" style="width: 1096px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3247" loading="lazy" class="size-full wp-image-3247" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.32.43.png" alt="Figure 2: Promethium’s architecture on AWS cloud" width="1086" height="539"&gt;
- &lt;p id="caption-attachment-3247" class="wp-caption-text"&gt;Figure 2: Promethium’s architecture on AWS cloud&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;User Interface&lt;/h2&gt; 
-&lt;p&gt;Promethium can be accessed through graphical and command-line interfaces. For ease of use, the graphical user interface (GUI) includes drag and drop, molecule visualizations, pre-set defaults, and automated error checking. As a SaaS solution hosted on AWS, customers don’t need to worry about managing the underlying AWS infrastructure, the dependency stack, or software updates. And thus, customers can focus on their chemistry work.&lt;/p&gt; 
-&lt;p&gt;Users can customize all common settings within the GUI, and additionally, use a JSON customization form for advanced settings.&lt;/p&gt; 
-&lt;p&gt;A REST API is also available for chaining workflows together and accessing advanced capabilities. Users can access the API through a Python SDK. The API can be integrated with other workflow tools and software products. For example, Electronic Lab Notebooks (ELBs) or data and workflow platforms, such as Schrodinger LiveDesign.&lt;/p&gt; 
-&lt;h2&gt;Example use case: Conformer Search&lt;/h2&gt; 
-&lt;p&gt;Promethium currently features nine different chemistry simulations focused on molecular properties, nonbonded interactions, and chemical reactions. Molecular property simulations include conformer searches (featured here), geometry optimizations, single point energies, and torsion scans. Non-bonded interactions include SAPT / F-SAPT; and reaction simulations include reaction path optimizations, transition states, and reactant-product transition states. Additional calculations, such as Vibrational Frequency and thermodynamics, are available for all workflows. This list is continuously growing as customers request new capabilities, such as spectroscopy, ligand ranking, and more.&lt;/p&gt; 
-&lt;p&gt;One common problem that chemists want to solve when designing new molecules is to understand the different 3D shapes that a molecule can take and how often each shape appears. Chemists can use Promethium’s Conformer Search capability to identify all of the molecule’s stable shapes (lowest relative energy) and their prevalence (Boltzmann probability distribution).&lt;/p&gt; 
-&lt;p&gt;Based on a given molecule input, Promethium goes through several stages of calculations and filtering. Each stage gets more precise until it has the final distribution of conformers with DFT-level accuracy. Promethium completes this process in three primary steps:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Launching Amazon EC2 instances for parallel processing&lt;/li&gt; 
- &lt;li&gt;Identifying and filtering potential conformers&lt;/li&gt; 
- &lt;li&gt;Analyzing conformers and visualizing the results&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;First, Promethium launches Amazon EC2 instances based on the number of molecules submitted. Customers can simultaneously submit as many molecules as they desire. Simultaneous submissions are parallelized across available EC2 instances. Within each molecule’s conformer search, Promethium parallelizes the DFT steps across multiple GPUs to ensure low wall clock time. Promethium uses a queuing system to manage submitted jobs and Amazon EC2 capacity.&lt;/p&gt; 
-&lt;div id="attachment_3248" style="width: 1187px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3248" loading="lazy" class="size-full wp-image-3248" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.33.31.png" alt="Figure 3: Promethium workflow diagram of processing parallel conformer searches in parallel. " width="1177" height="415"&gt;
- &lt;p id="caption-attachment-3248" class="wp-caption-text"&gt;Figure 3: Promethium workflow diagram of processing conformer searches in parallel.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The diagram represents the following workflow:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Customers submit multiple molecules for conformer searches&lt;/li&gt; 
- &lt;li&gt;Promethium scales Amazon EC2 instances to parallelize submitted jobs&lt;/li&gt; 
- &lt;li&gt;Promethium scales additional EC2 instances within each single job&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Second, Promethium identifies and filters potential conformers over four stages. In the first stage, Promethium generates a large set of potential conformers. These are subsequently filtered with a force field (FF), Artificial Narrow Intelligence (ANI) neural network potentials, or Geometry, Frequency, and Noncovalent Interaction (GFN) methods. This removes the conformers that are the least stable and leaves a smaller set to evaluate with DFT. Promethium evaluates the remaining conformers with two high accuracy DFT filters to determine the conformers with the lowest relative energy values. These conformers have the highest stability.&lt;/p&gt; 
-&lt;p&gt;Third, Promethium analyzes the results. The solution visualizes the three-dimensional structures, the stage progression, probability distribution and relative energies of each conformer.&lt;/p&gt; 
-&lt;div id="attachment_3249" style="width: 1111px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3249" loading="lazy" class="size-full wp-image-3249" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.34.01.png" alt="Figure 4: One of Promethium’s output charts from a conformer search." width="1101" height="739"&gt;
- &lt;p id="caption-attachment-3249" class="wp-caption-text"&gt;Figure 4: One of Promethium’s output charts from a conformer search.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The graphic represents the relative energy of possible conformers as they are filtered by a force field (1&lt;sup&gt;st&lt;/sup&gt; row), an ANI filter (2&lt;sup&gt;nd&lt;/sup&gt; row), and two separate DFT filters (3&lt;sup&gt;rd&lt;/sup&gt; and 4&lt;sup&gt;th&lt;/sup&gt; rows).&lt;/p&gt; 
-&lt;p&gt;The following graphic shows the visualization of the Boltzmann weight and probability distribution for the conformers that passed the final filter stage.&lt;/p&gt; 
-&lt;div id="attachment_3250" style="width: 1129px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3250" loading="lazy" class="size-full wp-image-3250" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.34.56.png" alt="Figure 5: Probability distribution of the computed conformers." width="1119" height="879"&gt;
- &lt;p id="caption-attachment-3250" class="wp-caption-text"&gt;Figure 5: Probability distribution of the computed conformers.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Pricing&lt;/h2&gt; 
-&lt;p&gt;Promethium uses a consumption-based pricing model, which means that customers only pay based on the actual GPU-hours used (accrued by the second). There are no upfront costs, no annual costs, and no per user or per seat costs. The total cost of ownership is often &lt;a href="https://www.promethium.qcware.com/pricing-details"&gt;lower&lt;/a&gt; than using legacy open source DFT software.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we started with the crucial opportunities and challenges of computational chemistry and its role in advancing pharmaceuticals and chemicals. We outlined Promethium, a SaaS solution running on Amazon EC2 GPU instances. Promethium takes a step towards resolving the speed-accuracy tradeoff, a longstanding obstacle in computational chemistry.&lt;/p&gt; 
-&lt;p&gt;We used a conformer search example to demonstrate Promethium tackling the challenges associated with larger and complex molecules through GPU-optimized algorithms. Promethium’s scalable architecture and solution approach make it a practical tool in molecule discovery. If you want to learn more, you can visit &lt;a href="https://www.promethium.qcware.com/"&gt;Promethium’s homepage&lt;/a&gt; or find additional details through &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-tyzdk5juffetu"&gt;Promethium on AWS Marketplace&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
-&lt;h3&gt;References&lt;/h3&gt; 
-&lt;p&gt;[1]: &lt;a href="https://www.nature.com/articles/d41573-022-00025-1"&gt;https://www.nature.com/articles/d41573-022-00025-1&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[2]: &lt;a href="https://www.bcg.com/publications/2022/ai-in-drug-discovery-impact"&gt;https://www.bcg.com/publications/2022/ai-in-drug-discovery-impact&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[3]: &lt;a href="https://www.mckinsey.com/industries/life-sciences/our-insights/pharmas-digital-rx-quantum-computing-in-drug-research-and-development"&gt;https://www.mckinsey.com/industries/life-sciences/our-insights/pharmas-digital-rx-quantum-computing-in-drug-research-and-development&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[4]: Werner Vogel at AWS re:Invent 2022 &lt;a href="https://youtu.be/RfvL_423a-I?t=6553"&gt;https://youtu.be/RfvL_423a-I?t=6553&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[5]: &lt;a href="https://www.bcg.com/publications/2023/enterprise-grade-quantum-computing-almost-ready"&gt;https://www.bcg.com/publications/2023/enterprise-grade-quantum-computing-almost-ready&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[6]: &lt;a href="https://onlinelibrary.wiley.com/doi/10.1002/qua.26381"&gt;https://onlinelibrary.wiley.com/doi/10.1002/qua.26381&lt;/a&gt;&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
 		<title>Leveraging Seqera Platform on AWS Batch for machine learning workflows – Part 2 of 2</title>
 		<link>https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-2-of-2/</link>
 		
@@ -131,7 +30,7 @@
 		<guid isPermaLink="false">0082e40ba30d67f985dcb877d3cb64053a9b9f0a</guid>
 
 					<description>In this second part of using Nextflow for machine learning for life science workloads, we provide a step-by-step guide, explaining how you can easily deploy a Seqera environment on AWS to run ML and other pipelines.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3236" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/18/Batch-and-Seqera.png" alt="Batch and Seqera" width="380" height="190"&gt;This post was contributed by Dr Ben Sherman (Seqera) and Dr Olivia Choudhury (AWS), Paolo Di Tomasso, and Gord Sissons from Seqera, and Aniket Deshpande and Abhijit Roy from AWS.&lt;br&gt; &lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright size-full wp-image-3236" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/18/Batch-and-Seqera.png" alt="Batch and Seqera" width="380" height="190"&gt;This post was contributed by Dr Ben Sherman (Seqera) and Dr Olivia Choudhury (AWS), Paolo Di Tomasso, and Gord Sissons from Seqera, and Aniket Deshpande and Abhijit Roy from AWS.&lt;br&gt; &lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;In &lt;a href="https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-1-of-2/"&gt;part one of this two-part series&lt;/a&gt;, we explained how Nextflow and &lt;a href="https://seqera.io/platform/"&gt;Seqera Platform&lt;/a&gt; work with AWS, and we provided a sample Nextflow pipeline that performs ML model training and inference for image analysis to illustrate how Nextflow can support custom ML-based workflows. We also discussed how AWS customers are using this today.&lt;/p&gt; 
 &lt;p&gt;In this second post, we will provide a step-by-step guide explaining how users new to Seqera Platform can rapidly get started on AWS, maximizing the use of &lt;a href="https://aws.amazon.com/batch"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Service (Amazon S3&lt;/a&gt;), and other AWS services.&lt;/p&gt; 
 &lt;p&gt;Depending on your familiarity with AWS, these steps should take around an hour to complete.&lt;/p&gt; 
@@ -2374,6 +2273,117 @@ Tags:
 &lt;p&gt;Best of all, we combined this into a single event-driven workflow thanks to &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; and &lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph&lt;/a&gt; – which allows for scaling out machine learning and simulation tasks.&lt;/p&gt; 
 &lt;p&gt;This work has been focused on running inference using generative AI models, but we could use &lt;a href="https://aws.amazon.com/bedrock/"&gt;Amazon Bedrock&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-jumpstart.html"&gt;Amazon SageMaker JumpStart&lt;/a&gt; to improve the developer experience when fine-tuning the &amp;nbsp;models. Amazon Bedrock is a fully managed service that provides foundation models from a collection of leading AI startups (and from Amazon itself) via an API. Bedrock allows you to speed up your development of generative AI applications that you can privately customize and scale using secure and reliable infrastructure in AWS. SageMaker Jumpstart offers you the capability to train and fine tune those foundation models in a managed environment.&lt;/p&gt; 
 &lt;p&gt;This approach still requires further development to be applicable to industry, but it demonstrates the potential of integrating generative AI techniques with physics-based simulations. This potential extends beyond automotive CFD design and holds promise to a lot of other scientific and engineering fields.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Implementing AWS ParallelCluster in a Shared VPC</title>
+		<link>https://aws.amazon.com/blogs/hpc/implementing-aws-parallelcluster-in-a-shared-vpc/</link>
+		
+		<dc:creator><![CDATA[Pedro Gil]]></dc:creator>
+		<pubDate>Tue, 26 Sep 2023 15:11:47 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">dbe82324fb2c3a9277531ded24917622b6e0ec25</guid>
+
+					<description>In this post we’ll show you how to deploy ParallelCluster in a shared VPC environment so you can separate infrastructure management, cluster operations, and help segregate costs, too.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was controbuted by Pedro Gil, Solutions Architect, and Ryan Anderson, Software Engineer HPC Engineering&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;AWS Shared Virtual Private Cloud (VPC) is a feature that allows multiple AWS accounts to share a single VPC, enabling them to collaborate on resources within the same network. This helps in managing and sharing network resources within an organization, and allows teams to work independently without compromising the security of the VPC.&lt;/p&gt; 
+&lt;p&gt;AWS ParallelCluster is an open source cluster management tool that makes it easy for you to deploy and manage high performance computing (HPC) clusters on AWS.&lt;/p&gt; 
+&lt;p&gt;Installing ParallelCluster in a shared VPC – when using Slurm as the scheduler – is often a challenge because ParallelCluster assumes that the Amazon Route53 Hosted Zone and the VPC belongs to the same account where the cluster is being created.&lt;/p&gt; 
+&lt;p&gt;In this post we’ll show you a solution that gets ParallelCluster up and running in a shared VPC environment where the VPC belongs to one account and it is shared to another account for resource deployment operations.&lt;/p&gt; 
+&lt;h2&gt;Overview of our solution&lt;/h2&gt; 
+&lt;p&gt;We’ll show you how to deploy ParallelCluster into Account B using a shared VPC from infrastructure in Account A.&lt;/p&gt; 
+&lt;div id="attachment_2808" style="width: 1624px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-2808" loading="lazy" class="size-full wp-image-2808" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/08/24/CleanShot-2023-08-24-at-16.41.52@2x.png" alt="Figure 1 – VPC Resource Share created on Account A (VPC infrastructure account) and shared to Account B (ParallelCluster creation account) using AWS Resource Access Manager." width="1614" height="1400"&gt;
+ &lt;p id="caption-attachment-2808" class="wp-caption-text"&gt;Figure 1 – VPC Resource Share created on Account A (VPC infrastructure account) and shared to Account B (ParallelCluster creation account) using AWS Resource Access Manager.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;These are the steps we’ll take for the solution:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Step 1- Create a Route 53 Private Hosted Zone and associate it with shared VPC&lt;/li&gt; 
+ &lt;li&gt;Step 2- Create an additional AWS Identity and Access Management&lt;/li&gt; 
+ &lt;li&gt;(IAM) Policy&lt;/li&gt; 
+ &lt;li&gt;Step 3- Install AWS ParallelCluster and its configuration file&lt;/li&gt; 
+ &lt;li&gt;Step 4- Modify the configuration file to add the additional policy and to include the &lt;code&gt;Hosted Zone ID&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;Step 5- Create a cluster using this configuration file&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2&gt;Prerequisites&lt;/h2&gt; 
+&lt;p&gt;For this walkthrough, you should have the following prerequisites:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;An AWS account B (cluster creation account) where the VPC was shared and an AWS account A (VPC account owner) where the VPC was created (like in Figure 1).&lt;/li&gt; 
+ &lt;li&gt;A user with sufficient privileges to create the IAM Policy, Amazon Route53 Private Zone and to install ParallelCluster.&lt;/li&gt; 
+ &lt;li&gt;AWS resources: AWS console access, AWS CLI using AWS Cloud9&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2&gt;Step 1 – Create Amazon Route53 Private Hosted Zone&lt;/h2&gt; 
+&lt;p&gt;ParallelCluster uses Amazon Route53 Private Hosted Zone to resolve cluster nodes and creating one across accounts requires the following specific procedure.&lt;/p&gt; 
+&lt;p&gt;First, log in to Account B and create a Private Hosted Zone using the Route53 service console. Associate it with any existing VPC in Account B (you’ll remove this association at the end of this section). Take note of the Private Hosted Zone id you just created.&lt;/p&gt; 
+&lt;p&gt;Next, using AWS Cloud9 in Account B, run the following command:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;aws route53 create-vpc-association-authorization --hosted-zone-id &amp;lt;hosted-zone-id&amp;gt; --vpc VPCRegion=&amp;lt;region&amp;gt;,VPCId=&amp;lt;vpc-id&amp;gt; --region &amp;lt;region&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This command authorizes the VPC association between the private hosted zone you just created and the VPC from Account A. Use the Hosted Zone ID that you obtained in previous step. Use the AWS region and ID of the shared VPC.&lt;/p&gt; 
+&lt;p&gt;Now, using AWS Cloud9 instance in Account A, run the following command:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;aws route53 associate-vpc-with-hosted-zone --hosted-zone-id &amp;lt;hosted-zone-id&amp;gt; --vpc VPCRegion=&amp;lt;region&amp;gt;,VPCId=&amp;lt;vpc-id&amp;gt; --region &amp;lt;region&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This command creates the association between the private hosted zone in Account B and the VPC in Account A. Use the Hosted Zone ID from earlier, and the Region and ID of the VPC in Account A.&lt;/p&gt; 
+&lt;p&gt;Finally, go back to the Route 53 service console on Account B and verify that the shared VPC association with the Private Hosted Zone is listed. Delete the association of the local VPC done in step A.&lt;/p&gt; 
+&lt;h2&gt;Step 2 – Create the IAM policy&lt;/h2&gt; 
+&lt;p&gt;We need to create an additional policy for the head node to have permissions to create cluster nodes in the shared VPC.&lt;/p&gt; 
+&lt;p&gt;First, login to Account B and create a new IAM Policy using the following template. Use ManageHeadnodePermissions as the name of new policy. Use ID for Account A and the subnet ID from the Shared VPC where the compute nodes will be created.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-json"&gt;{
+    "Version": "2012-10-17",
+   "Statement": [
+        {
+            "Sid": "SharedSubnets",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateTags",
+                "ec2:RunInstances",
+                "ec2:CreateFleet"
+            ],
+    "Resource": "arn:aws:ec2:&amp;lt;region&amp;gt;:&amp;lt;Account A ID&amp;gt;:subnet/&amp;lt;Subnet ID&amp;gt;"
+        }
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Step 3 – Install and configure ParallelCluster&lt;/h2&gt; 
+&lt;p&gt;You should follow the steps to &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-configuring.html"&gt;install ParallelCluster&lt;/a&gt; on a suitable instance or laptop. After doing so, you’ll need to create a config file for ParallelCluster to use. The pcluster configure will step you through this process, asking you some questions, and creating a new config file at the end.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster configure –config config-file.yaml&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Choose the AWS region ID where your shared VPC is located.&lt;/li&gt; 
+ &lt;li&gt;Choose your Amazon Elastic Compute Cloud (Amazon EC2) key pair – you’ll need to have one already.&lt;/li&gt; 
+ &lt;li&gt;Choose Slurm as your scheduler&lt;/li&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;&amp;lt;n&amp;gt;&lt;/strong&gt; for VPC creation and select the existing shared VPC&lt;/li&gt; 
+ &lt;li&gt;Choose an appropriate operating system&lt;/li&gt; 
+ &lt;li&gt;Select appropriate instance types and queue configurations for your workload&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;The next step would usually be to run pcluster create to build the cluster using the choices and parameters you just entered, however before we do that, we need to delve into the configuration file that this process produced and make some changes.&lt;/p&gt; 
+&lt;h2&gt;Step 4 – Modify ParallelCluster configuration file&lt;/h2&gt; 
+&lt;p&gt;Modify your ParallelCluster configuration file to include the following using your own Hosted Zone ID and the new Policy Name you created in the previous steps &lt;code&gt;ManageHeadnodePermissions&lt;/code&gt;&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;HeadNode:
+  Iam:
+    AdditionalIamPolicies:
+      - Policy: arn:aws:iam::&amp;lt;Account B ID&amp;gt;:policy/ManageHeadnodePermissions
+Scheduling:
+  Scheduler: slurm
+  SlurmSettings:
+    Dns:
+      HostedZoneId: &amp;lt;hosted-zone-id&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h4&gt;Step 5 – Create your cluster&lt;/h4&gt; 
+&lt;p&gt;It’s time to create your cluster. If you need to, you can find more details &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-configuring.html"&gt;in our documentation&lt;/a&gt;. But for now, you just need to run:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster –cluster-name test-cluster –cluster-configuration cluster-config.yaml&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Congratulations, you have finished the creation of your cluster using AWS ParallelCluster in a shared VPC.&lt;/p&gt; 
+&lt;h2&gt;Cleaning up&lt;/h2&gt; 
+&lt;p&gt;It is a best practice to delete the association authorization after you create the association. This step prevents you from recreating the same association later and will not prevent you to create new ParallelCluster instances later. To delete the authorization, reconnect to Account A. Then, run the following command:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;aws route53 delete-vpc-association-authorization --hosted-zone-id &amp;lt;hosted-zone-id&amp;gt; --vpc VPCRegion=&amp;lt;region&amp;gt;,VPCId=&amp;lt;vpc-id&amp;gt; --region &amp;lt;region&amp;gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You might also want to delete cluster resources after you are done with your workload by running the following command:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster delete-cluster –region &amp;lt;region&amp;gt; --cluster-name test-cluster&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;We’ve shown you how to install AWS ParallelCluster in a shared VPC environment, which means you can use a common VPC between AWS accounts inside an organization, while keeping billing and ownership separate for the users of the cluster.&lt;/p&gt; 
+&lt;p&gt;When creating other clusters all you need to do is include the additional policy in the &lt;code&gt;headnode&lt;/code&gt; section of the configuration file and make sure you use the proper &lt;code&gt;Hosted Zone ID&lt;/code&gt;. Using AWS batch in ParallelCluster does &lt;em&gt;not&lt;/em&gt; require any changes to the cluster configuration or Route53 entry since it relies on its own internal mechanism to resolve hostnames.&lt;/p&gt;</content:encoded>
 					
 		
 		
