@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 12 Feb 2024 16:46:17 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 12 Feb 2024 21:55:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -88,7 +88,7 @@
 		</a>
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><a href="https://www.nvidia.com/en-us/glossary/generative-ai/">Generative AI</a> is driving change across industries — and to take advantage of its benefits, businesses must select the right hardware to power their workflows.</p>
-<p>The new NVIDIA RTX 2000 Ada Generation GPU delivers the latest AI, graphics and compute technology to compact workstations, offering up to 1.5x the performance of the previous-generation RTX A2000 12GB in professional workflows.</p>
+<p>The new <a href="https://www.nvidia.com/en-us/design-visualization/rtx-2000/">NVIDIA RTX 2000 Ada Generation GPU</a> delivers the latest AI, graphics and compute technology to compact workstations, offering up to 1.5x the performance of the previous-generation RTX A2000 12GB in professional workflows.</p>
 <p>From crafting stunning 3D environments to streamlining complex design reviews to refining industrial designs, the card’s capabilities pave the way for an AI-accelerated future, empowering professionals to achieve more without compromising on performance or capabilities.</p>
 <p>Modern multi-application workflows, such as AI-powered tools, multi-display setups and high-resolution content, put significant demands on GPU memory. With 16GB of memory in the RTX 2000 Ada, professionals can tap the latest technologies and tools to work faster and better with their data.</p>
 <p>Powered by <a href="https://www.nvidia.com/en-us/design-visualization/rtx/">NVIDIA RTX</a> technology, the new GPU delivers impressive realism in graphics with <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a>, delivering ultra-high-quality, photorealistic ray-traced images more than 3x faster than before. In addition, the RTX 2000 Ada enables an immersive experience for enterprise virtual-reality workflows, such as for product design and engineering design reviews.</p>
@@ -117,17 +117,18 @@
 <p>The AI-based, standard dynamic range to high dynamic range tone-mapping feature, called Video TrueHDR, expands the color range and brightness levels when viewing content in Chrome or Edge browsers. With added support for <a href="https://blogs.nvidia.com/blog/rtx-video-super-resolution/">Video Super Resolution</a> and TrueHDR to the <a href="https://docs.nvidia.com/ngx/index.html">NVIDIA NGX</a> software development kit, video quality of low-resolution sources can be enhanced, and SDR content can easily be converted to HDR.</p>
 <p><a href="https://www.nvidia.com/download/driverResults.aspx/218117/en-us/">Additional features</a> in this release include:</p>
 <ul>
-<li style="font-weight: 300;"><a href="https://developer.nvidia.com/tensorrt">TensorRT-LLM</a>, an <a href="https://github.com/NVIDIA/TensorRT-LLM">open-source library</a> that optimizes and accelerates inference performance for the latest <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language models</a> on NVIDIA GPUs.</li>
-<li style="font-weight: 300;">Video quality improvement and enhanced coding efficiency to video codecs through bit depth expansion techniques and new low-delay B frame.</li>
-<li style="font-weight: 300;">Ability to offload work from the CPU to the GPU with the execute indirect extension <a href="https://developer.nvidia.com/rtx/path-tracing/nvapi/get-started">NVIDIA API</a> for quicker task completion.</li>
-<li style="font-weight: 300;">Ability to display the GPU serial number in the NV Control Panel on desktops for easier registration to the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> and <a href="https://www.nvidia.com/en-us/omniverse/enterprise/">NVIDIA Omniverse Enterprise</a> platforms.</li>
+<li style="font-weight: 300"><a href="https://developer.nvidia.com/tensorrt">TensorRT-LLM</a>, an <a href="https://github.com/NVIDIA/TensorRT-LLM">open-source library</a> that optimizes and accelerates inference performance for the latest <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language models</a> on NVIDIA GPUs.</li>
+<li style="font-weight: 300">Video quality improvement and enhanced coding efficiency to video codecs through bit depth expansion techniques and new low-delay B frame.</li>
+<li style="font-weight: 300">Ability to offload work from the CPU to the GPU with the execute indirect extension <a href="https://developer.nvidia.com/rtx/path-tracing/nvapi/get-started">NVIDIA API</a> for quicker task completion.</li>
+<li style="font-weight: 300">Ability to display the GPU serial number in the NV Control Panel on desktops for easier registration to the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> and <a href="https://www.nvidia.com/en-us/omniverse/enterprise/">NVIDIA Omniverse Enterprise</a> platforms.</li>
 </ul>
 <h2><b>Availability</b></h2>
 <p>The NVIDIA RTX 2000 Ada is available now through global distribution partners such as Arrow Electronics, Ingram Micro, Leadtek, PNY, Ryoyo Electro and TD SYNNEX, and will be available from Dell Technologies, HP and Lenovo starting in April.</p>
 <h2><b>See the NVIDIA RTX 2000 Ada at Dassault Systèmes’ 3DEXPERIENCE World</b></h2>
 <p>Stop by the Dell, Lenovo and Z by HP booths at <a href="https://www.3dexperienceworld.com/website/59830/home">Dassault Systèmes’ 3DEXPERIENCE World</a>, running Feb. 11-14 at the Kay Bailey Hutchison Convention Center in Dallas, to view live demos of Dassault Systèmes SOLIDWORKS applications powered by the NVIDIA RTX 2000 Ada.</p>
 <p>Attend the Z by HP session on Tuesday, Feb. 13, where Wolkers will discuss the workflow used to design <a href="https://nemo-submarine.com/">NEMO</a>, the supercar of submarines.</p>
-<p><i>Learn more about the </i><a href="http://www.nvidia.com/rtx-2000/"><i>NVIDIA RTX 2000 Ada Generation GPU</i></a><i>.</i></p>
+<p>Read our solution brief to discover how<a href="https://resources.nvidia.com/en-us-mfg-briefcase/proviz-print-solidworks?lx=q8vaLh"> NVIDIA RTX GPUs supercharge SOLIDWORKS workflows</a>.</p>
+<p><i>Learn more about the </i><a href="https://www.nvidia.com/en-us/design-visualization/rtx-2000/"><i>NVIDIA RTX 2000 Ada Generation GPU</i></a><i>.</i></p>
 </div>]]></content:encoded>
 					
 		
