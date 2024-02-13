@@ -20,6 +20,55 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.2</generator>
 	<item>
+		<title>Say What? Chat With RTX Brings Custom Chatbot to NVIDIA RTX AI PCs</title>
+		<link>https://blogs.nvidia.com/blog/chat-with-rtx-available-now/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Tue, 13 Feb 2024 14:00:41 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69743</guid>
+
+					<description><![CDATA[Chatbots are used by millions of people around the world every day, powered by NVIDIA GPU-based cloud servers. Now, these groundbreaking tools are coming to Windows PCs powered by NVIDIA RTX for local, fast, custom generative AI. Chat with RTX, now free to download, is a tech demo that lets users personalize a chatbot with		<a class="read-more" href="https://blogs.nvidia.com/blog/chat-with-rtx-available-now/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Chatbots are used by millions of people around the world every day, powered by NVIDIA GPU-based cloud servers. Now, these groundbreaking tools are coming to Windows PCs powered by <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> for local, fast, custom <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>.</p>
+<p><a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">Chat with RTX</a>, now free to <a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">download</a>, is a tech demo that lets users personalize a chatbot with their own content, accelerated by a local <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/">NVIDIA GeForce RTX 30 Series GPU</a> or higher with at least 8GB of video random access memory, or VRAM.</p>
+<h2><b>Ask Me Anything</b></h2>
+<p>Chat with RTX uses <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a> (RAG), NVIDIA <a href="https://blogs.nvidia.com/blog/ignite-rtx-ai-tensorrt-llm-chat-api/">TensorRT-LLM</a> software and NVIDIA RTX acceleration to bring generative AI capabilities to local, GeForce-powered Windows PCs. Users can quickly, easily connect local files on a PC as a dataset to an open-source <a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/">large language model</a> like Mistral or Llama 2, enabling queries for quick, contextually relevant answers.</p>
+<p>Rather than searching through notes or saved content, users can simply type queries. For example, one could ask, “What was the restaurant my partner recommended while in Las Vegas?” and Chat with RTX will scan local files the user points it to and provide the answer with context.</p>
+<p>The tool supports various file formats, including .txt, .pdf, .doc/.docx and .xml. Point the application at the folder containing these files, and the tool will load them into its library in just seconds.</p>
+<p>Users can also include information from YouTube videos and playlists. Adding a video URL to Chat with RTX allows users to integrate this knowledge into their chatbot for contextual queries. For example, ask for travel recommendations based on content from favorite influencer videos, or get quick tutorials and how-tos based on top educational resources.</p>
+<figure id="attachment_69747" aria-describedby="caption-attachment-69747" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-scaled.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-69747" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Chat-with-RTX-Screenshot-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69747" class="wp-caption-text">Chat with RTX can integrate knowledge from YouTube videos into queries.</figcaption></figure>
+<p>Since Chat with RTX runs locally on Windows RTX PCs and workstations, the provided results are fast — and the user’s data stays on the device. Rather than relying on cloud-based LLM services, Chat with RTX lets users process sensitive data on a local PC without the need to share it with a third party or have an internet connection.</p>
+<p>In addition to a GeForce RTX 30 Series GPU or higher with a minimum 8GB of VRAM, Chat with RTX requires Windows 10 or 11, and the latest NVIDIA GPU drivers.</p>
+<h2><b>Develop LLM-Based Applications With RTX</b></h2>
+<p>Chat with RTX shows the potential of accelerating LLMs with RTX GPUs. The app is built from the <a href="https://github.com/NVIDIA/trt-llm-rag-windows">TensorRT-LLM RAG developer reference project, available on GitHub</a>. Developers can use the reference project to develop and deploy their own RAG-based applications for RTX, accelerated by TensorRT-LLM. Learn more about <a href="https://developer.nvidia.com/blog/get-started-with-generative-ai-development-for-windows-pcs-with-rtx-systems">building LLM-based applications</a>.</p>
+<p>Enter a generative AI-powered Windows app or plug-in to the <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/rtx-developer-contest">NVIDIA Generative AI on NVIDIA RTX</a> developer contest, running through Friday, Feb. 23, for a chance to win prizes such as a GeForce RTX 4090 GPU, a full, in-person conference pass to <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> and more.</p>
+<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/"><i>Chat with RTX</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-chat-with-rtx-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-chat-with-rtx-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Say What? Chat With RTX Brings Custom Chatbot to NVIDIA RTX AI PCs]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA CEO: Every Country Needs Sovereign AI</title>
 		<link>https://blogs.nvidia.com/blog/world-governments-summit/</link>
 		
@@ -216,13 +265,13 @@
 <p>“Congrats to four years of empowering gamers to play anywhere, anytime,” said Marco Nier, head of marketing and public relations at Kalypso Media. “We’re thrilled to raise a glass to GeForce NOW for their four-year anniversary and commitment to bringing AAA gaming to gamers — here’s to many more chapters in this cloud-gaming adventure!”</p>
 <p>Stream the dark fantasy adventure from Kalypso Media and more newly supported titles today across a variety of GeForce NOW-capable devices, whether at home, on a gaming rig, TV or Mac, or on the go with handheld streaming.</p>
 <h2><b>Gadgets Galore</b></h2>
-<figure id="attachment_69670" aria-describedby="caption-attachment-69670" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-69670" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-672x336.jpg" alt="GeForce NOW anniversary - device ecosystem" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69670" class="wp-caption-text"><em>Play on!</em></figcaption></figure>
+<figure id="attachment_69670" aria-describedby="caption-attachment-69670" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-69670" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-672x336.jpg" alt="GeForce NOW anniversary - device ecosystem" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69670" class="wp-caption-text"><em>Play on!</em></figcaption></figure>
 <p>Gone are the days of only being able to play full PC games on a decked-out gaming rig. GeForce NOW is a cloud gaming service accessible on a range of devices, from PCs and Macs to gaming handhelds, thanks to <a href="https://www.nvidia.com/en-us/geforce/rtx/">GeForce RTX</a>-powered servers in the cloud.</p>
 <p>Dive into the cloud streaming experience with the dedicated GeForce NOW app for Windows and macOS. Even on underpowered PCs, gamers can enjoy stunning visuals and buttery-smooth frame rates streaming at up to 240 frames per second or at ultrawide resolutions for Ultimate members, a cloud-gaming first.</p>
 <p>Take it to the big screen and stream graphically demanding titles, from <i>The Witcher 3</i> to <i>Alan Wake 2</i>, on GeForce NOW from the comfort of the couch at up to 4K natively on Samsung and LG Smart TVs, without the need for a console. Or stream across any TV with <a href="https://www.nvidia.com/en-us/shield/">NVIDIA SHIELD TV</a> for the ultimate living room gaming experience.</p>
 <p><iframe title="GeForce NOW: Power The Cloud With Chromebook Plus" width="500" height="281" src="https://www.youtube.com/embed/Yf-zZWkyfLM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Gamers on the go can drop into the neon lights of <i>Cyberpunk</i> <i>2077</i> and other ray tracing-supported titles on a portable, lightweight <a href="https://www.chromebook.com/gaming">Chromebook</a> and stream up to 1600p at 120 fps. GeForce NOW members can also stream to <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-android-higher-resolutions/">Android devices at new higher resolutions</a>, up to 1440p at 120 fps.</p>
-<figure id="attachment_69673" aria-describedby="caption-attachment-69673" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-69673" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-672x336.jpg" alt="Logitech G Cloud with GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69673" class="wp-caption-text"><em>Look, ma, no wires.</em></figcaption></figure>
+<figure id="attachment_69673" aria-describedby="caption-attachment-69673" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69673" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-672x336.jpg" alt="Logitech G Cloud with GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Logitech_G_Cloud.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69673" class="wp-caption-text"><em>Look, ma, no wires.</em></figcaption></figure>
 <p>Go hands-on with any of the new handheld gaming devices supported by GeForce NOW, from the <a href="https://www.asus.com/us/site/gaming/rog/gaming-handheld/rog-ally.html">ASUS ROG Ally</a> to the <a href="https://www.logitechg.com/">Logitech G Cloud</a>. The Logitech G Cloud is an Android device with a seven-inch 1080p 16:9 touchscreen, fully customizable controls and support for GeForce NOW right out of the box.</p>
 <p>The Logitech G Cloud is normally priced at $349.99, but Logitech and GeForce NOW are providing a 20% discount to the first 500 Ultimate and Priority members that grab the code from the <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW Rewards portal</a>, a deal available until March 8. On top of that, follow the <a href="https://www.instagram.com/nvidiagfn?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==">GeForce NOW</a> and Logitech social channels for a chance to win a Logitech G Cloud during the anniversary celebrations this month.</p>
 <p>Whether playing at home or on the go, members can game freely on GeForce NOW without having to worry about download times or system specs.</p>
@@ -1292,59 +1341,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[NVIDIA DRIVE Partners Showcase Cutting-Edge Innovations in Automated and Autonomous Driving]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>How Amazon and NVIDIA Help Sellers Create Better Product Listings With AI</title>
-		<link>https://blogs.nvidia.com/blog/amazon-product-listings/</link>
-		
-		<dc:creator><![CDATA[Fred Oh]]></dc:creator>
-		<pubDate>Tue, 23 Jan 2024 16:00:18 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Software]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Retail]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=68374</guid>
-
-					<description><![CDATA[It’s hard to imagine an industry more competitive — or fast-paced — than online retail. Sellers need to create attractive and informative product listings that must be engaging, capture attention and generate trust. Amazon uses optimized containers on Amazon Elastic Compute Cloud (Amazon EC2) with NVIDIA Tensor Core GPUs to power a generative AI tool		<a class="read-more" href="https://blogs.nvidia.com/blog/amazon-product-listings/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>It’s hard to imagine an industry more competitive — or fast-paced — than online retail.</p>
-<p>Sellers need to create attractive and informative product listings that must be engaging, capture attention and generate trust.</p>
-<p>Amazon uses optimized containers on Amazon Elastic Compute Cloud (Amazon EC2) with <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA Tensor Core GPUs</a> to power a <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/">generative AI</a> tool that finds this balance at the speed of modern retail.</p>
-<p><a href="https://www.aboutamazon.com/news/small-business/amazon-sellers-generative-ai-tool">Amazon’s new generative AI capabilities help sellers seamlessly create compelling </a>titles, bullet points, descriptions, and product attributes.</p>
-<p>To get started, Amazon identifies listings where content could be improved and leverages generative AI to generate high-quality content automatically. Sellers review the generated content and can provide feedback if they want to or accept the content changes to the Amazon catalog.</p>
-<p>Previously, creating detailed product listings required significant time and effort for sellers, but this simplified process gives them more time to focus on other tasks.</p>
-<p>The <a href="https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/">NVIDIA TensorRT-LLM</a> software is available today on <a href="https://github.com/NVIDIA/TensorRT-LLM">GitHub</a> and can be accessed through <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, which offers enterprise-grade security, support, and reliability for production AI.</p>
-<p>TensorRT-LLM open-source software makes AI inference faster and smarter. It works with <a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/">large language models</a>, such as Amazon’s models for the above capabilities, which are trained on vast amounts of text.</p>
-<p>On <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, TensorRT-LLM enables up to an <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">8x speedup on foundation</a> LLMs such as Llama 1 and 2, Falcon, Mistral, MPT, ChatGLM, Starcoder and more.</p>
-<p>It also supports multi-GPU and multi-node inference, in-flight batching, paged attention, and Hopper <a href="https://blogs.nvidia.com/blog/h100-transformer-engine/">Transformer Engine</a> with FP8 precision; all of which improves latencies and efficiency for the seller experience.</p>
-<p>By using TensorRT-LLM and NVIDIA GPUs, Amazon improved its generative AI tool’s inference efficiency in terms of cost or GPUs needed by 2x, and reduced inference latency by 3x compared with an earlier implementation without TensorRT-LLM.</p>
-<p>The efficiency gains make it more environmentally friendly, and the 3x latency improvement makes Amazon Catalog’s generative capabilities more responsive.</p>
-<p>The generative AI capabilities can save sellers time and provide richer information with less effort. For example, it can enrich a listing for a wireless mouse with an ergonomic design, long battery life, adjustable cursor settings, and compatibility with various devices. It can also generate product attributes such as color, size, weight, and material. These details can help customers make informed decisions and reduce returns.</p>
-<p>With generative AI, Amazon’s sellers can quickly and easily create more engaging listings, while being more energy efficient, making it possible to reach more customers and grow their business faster.</p>
-<p><i>Developers can start with </i><a href="https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/"><i>TensorRT-LLM</i></a><i> today, with enterprise support available through NVIDIA AI Enterprise.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/inference-corp-blog-nvidia-amazon-tensorrt-llm-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/inference-corp-blog-nvidia-amazon-tensorrt-llm-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[How Amazon and NVIDIA Help Sellers Create Better Product Listings With AI]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
