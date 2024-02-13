@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 08 Feb 2024 16:10:16 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 13 Feb 2024 15:03:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,87 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Amazon’s renewable energy forecasting: continuous delivery with Jupyter Notebooks</title>
+		<link>https://aws.amazon.com/blogs/hpc/amazons-renewable-energy-forecasting-continuous-delivery-with-jupyter-notebooks/</link>
+		
+		<dc:creator><![CDATA[Alec Hewitt]]></dc:creator>
+		<pubDate>Tue, 13 Feb 2024 15:03:26 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Sustainability]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">982561089e42b9831b7f993bd780876777cb7008</guid>
+
+					<description>You might associate the phrase ‘Jupyter Notebooks in production’ with a scrappy startup short on engineers or a hobbyist tinkering in their free time. However, this story unfolds at Amazon, where a team transitioned from requiring software engineers to replicate scientists’ work for production, to enabling scientists to seamlessly deploy Jupyter Notebooks into production. Amazon’s […]</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3301" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/boofla88_a_wind_farms_of_turbines_across_a_rolling_green_hills__e8683f7d-f097-4513-af62-46cbd2b6ad88.png" alt="Amazon’s renewable energy forecasting- continuous delivery with Jupyter Notebooks copy" width="380" height="212"&gt;&lt;/em&gt;You might associate the phrase ‘Jupyter Notebooks in production’ with a scrappy startup short on engineers or a hobbyist tinkering in their free time. However, this story unfolds at Amazon, where a team transitioned from requiring software engineers to replicate scientists’ work for production, to enabling scientists to seamlessly deploy Jupyter Notebooks into production.&lt;/p&gt; 
+&lt;p&gt;Amazon’s Renewable Energy Optimization team produces software to maximize the effectiveness of our portfolio of wind and solar farms. The team develops and runs machine learning models that forecast the state of the electricity grid in the next few days. As Amazon’s portfolio of wind and solar farms has expanded, the techniques that our scientists and software engineers use to create and run these machine learning models has evolved, too.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll walk you through a science-to-production workflow that’s probably familiar to you, explain the logic that supported our novel approach and – finally – let you benefit from what we learned implementing it all.&lt;/p&gt; 
+&lt;h2&gt;The problem&lt;/h2&gt; 
+&lt;p&gt;Initially, scientists and software engineers were separated. Scientists developed models and optimization techniques using Jupyter Notebooks. They’d pass these to a software engineer who would translate them into ‘production code’. Scientists &lt;em&gt;never&lt;/em&gt; wrote production code.&lt;/p&gt; 
+&lt;p&gt;Although this worked for our initial deployments, the process had several limitations:&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;It was slow.&lt;/strong&gt; Once a scientist settled on a model they wanted to use in production, it took two or three months for an engineer to translate that code into production. This created a bottleneck for the scientists and ran against the model of &lt;a href="https://aws.amazon.com/builders-library/going-faster-with-continuous-delivery/"&gt;continuous delivery&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Nobody understood the production code.&lt;/strong&gt; The engineer translating the notebook didn’t fully understand the science being used in the code. Once the code had been translated, it was difficult for the scientist to understand because the engineer changed the code structure. We ended up with code that no one understood. This made it difficult to debug errors and issues in the production code.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;There were inconsistencies between environments.&lt;/strong&gt; Scientists developed the notebooks using Amazon SageMaker or their local machine using dependencies they had installed manually. The engineer built the code using an Amazon internal build system. This frequently meant there were different versions of libraries in use. Subtle differences led to large differences between what scientists were expecting and what happened in production.&lt;/p&gt; 
+&lt;p&gt;We needed engineers and scientists to use the same platform. This meant either getting scientists to write production-level code or we had to run Jupyter Notebooks in production (a little heretical).&lt;/p&gt; 
+&lt;h2&gt;What’s a Jupyter Notebook and why do scientists like them?&lt;/h2&gt; 
+&lt;p&gt;A &lt;a href="https://docs.jupyter.org/en/latest/projects/architecture/content-architecture.html#the-jupyter-notebook-interface"&gt;Jupyter Notebook&lt;/a&gt; is a JSON document that contains both the source code and output of the code execution. Users execute cells of the notebook and then the output of each cell run is saved into the JSON notebook itself. Every time a notebook is run, it gets mutated and overwritten with the latest run.&lt;/p&gt; 
+&lt;div id="attachment_3292" style="width: 751px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3292" loading="lazy" class="size-full wp-image-3292" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.21.13.png" alt="Figure 1 – Jupyter Server reads the JSON Notebook file on disk and displays it to the user. The user then requests commands to be executed which the Jupyter Server send to the Jupyter Kernel to perform. The JupyteServer receives the output of the commands from the Jupyter Kernal and updates the Notebook on disk." width="741" height="325"&gt;
+ &lt;p id="caption-attachment-3292" class="wp-caption-text"&gt;Figure 1 – Jupyter Server reads the JSON Notebook file on disk and displays it to the user. The user then requests commands to be executed which the Jupyter Server send to the Jupyter Kernel to perform. The JupyteServer receives the output of the commands from the Jupyter Kernal and updates the Notebook on disk.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Jupyter Notebooks have a lot of advantages for scientists. They allow for quick iteration of ideas because a single operation can be run multiple times without having to run the entire program again. They’re also great for visualizing and analyzing the output from code. Tables, charts, or images can be displayed in the notebook, right next to the source code that generated them.&lt;/p&gt; 
+&lt;div id="attachment_3293" style="width: 905px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3293" loading="lazy" class="size-full wp-image-3293" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.21.42.png" alt="Figure 2 – Information displayed a graph in a Jupyter Notebook vs the same information in CloudWatch Logs." width="895" height="361"&gt;
+ &lt;p id="caption-attachment-3293" class="wp-caption-text"&gt;Figure 2 – Information displayed a graph in a Jupyter Notebook vs the same information in CloudWatch Logs.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;However, Jupyter Notebooks are not designed to run in production. There’s no built-in functionality to programmatically run a notebook with different parameters. They’re also not easy to test and they’re constantly evolving documents that change every time they are run which makes collaboration and reproducibility difficult. So despite Jupyter Notebooks offering desirable features, they weren’t compatible with our &lt;a href="https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/summary-of-best-practices.html"&gt;software engineering best practices&lt;/a&gt; for production deployments.&lt;/p&gt; 
+&lt;h2&gt;Why did we change our mind?&lt;/h2&gt; 
+&lt;p&gt;Our views changed when we discovered the framework &lt;a href="https://github.com/nteract/papermill/tree/main"&gt;Papermill&lt;/a&gt; and its &lt;a href="https://netflixtechblog.com/scheduling-notebooks-348e6c14cfd6"&gt;usage at Netflix&lt;/a&gt; and &lt;a href="https://arxiv.org/abs/2209.09125"&gt;other industry leaders.&lt;/a&gt; Papermill is a library for executing notebooks programmatically. Specifically, it allowed us to turn a Jupyter Notebook into an immutable object, and then parametrize it.&lt;/p&gt; 
+&lt;p&gt;Papermill replaces the user and UI. It acts as another client to the Jupyter Kernel using the same protocol as the Jupyter Server. However, rather than overriding the source notebook each time it runs, it will output a new notebook for each run. Therefore, each time Papermill runs a notebook, a new notebook is created. The notebook has gone from being a mutable document to immutable source code.&lt;/p&gt; 
+&lt;p&gt;Additionally, Papermill allows each run to have different parameters. This allows a single notebook to perform a solar forecast for different locations based on a parameter that’s passed to the notebook.&lt;/p&gt; 
+&lt;div id="attachment_3294" style="width: 851px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3294" loading="lazy" class="size-full wp-image-3294" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.22.13.png" alt="Figure 3 – With Papermill, the Jupyter Server is replaced. Papermill is responsible for sending the commands to the Jupyter Kernel and reading and writing the output notebooks to disk. " width="841" height="396"&gt;
+ &lt;p id="caption-attachment-3294" class="wp-caption-text"&gt;Figure 3 – With Papermill, the Jupyter Server is replaced. Papermill is responsible for sending the commands to the Jupyter Kernel and reading and writing the output notebooks to disk.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We now had a way to programmatically trigger a parametrized notebook. The next step was to ensure the scientists’ development environment matched the production environment.&lt;/p&gt; 
+&lt;h2&gt;Keeping science environment consistent with production&lt;/h2&gt; 
+&lt;p&gt;When we had to answer why one of our wind farms had been underperforming at one of Amazon’s infamous “&lt;a href="https://wa.aws.amazon.com/wat.concept.coe.en.html"&gt;Correction of Errors&lt;/a&gt;” meetings, it wasn’t the first time someone said, “&lt;em&gt;It worked on my machine!&lt;/em&gt;”. This was not a new problem and we knew existing technologies existed to solve it.&lt;/p&gt; 
+&lt;p&gt;Initially, scientists used the pre-built &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-images.html"&gt;SageMaker images&lt;/a&gt; to manage the dependencies for their notebooks. These images are useful for experimentation; however, &lt;em&gt;we didn’t have control of the exact version of each library that we were using&lt;/em&gt;. Specifically, some scientific Python libraries had the same version, but the systems used different &lt;a href="https://numpy.org/doc/stable/reference/routines.linalg.html"&gt;linear algebra libraries&lt;/a&gt; which affected the end result of our forecasts. We therefore decided to &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html"&gt;bring our own custom image into SageMaker&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html"&gt;SageMaker custom images&lt;/a&gt; allows you to import an image from &lt;a href="https://aws.amazon.com/ecr/"&gt;Amazon Elastic Container Registry (Amazon ECR)&lt;/a&gt; that you have built yourself. This could be built in AWS CodeBuild or in another build system outside of AWS. We used this feature of SageMaker to build our own custom images with all the dependencies decided by our internal AWS Code Artifact Repository.&lt;/p&gt; 
+&lt;p&gt;The same image being imported into SageMaker is exactly the same image that will be deployed to production and used on our development machines. This ensures when scientists are using a third party dependency, like &lt;a href="https://numpy.org/devdocs/index.html"&gt;Numpy&lt;/a&gt; or &lt;a href="https://pandas.pydata.org/"&gt;Pandas&lt;/a&gt;, they have the confidence that it’s exactly the same version that will be used in production.&lt;/p&gt; 
+&lt;p&gt;Once the scientist is happy with the notebook they’ve been experimenting with, they’ll submit it to our internal build system. The end result is a Docker image that contains the notebook as well as all of its dependencies.&lt;/p&gt; 
+&lt;div id="attachment_3295" style="width: 909px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3295" loading="lazy" class="size-full wp-image-3295" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.22.48.png" alt="Figure 4 – Scientists use Amazon SageMaker Studio for experimentation using the same docker image that is deployed into production." width="899" height="620"&gt;
+ &lt;p id="caption-attachment-3295" class="wp-caption-text"&gt;Figure 4 – Scientists use Amazon SageMaker Studio for experimentation using the same docker image that is deployed into production.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;How do the notebooks run in production?&lt;/h2&gt; 
+&lt;p&gt;Once a notebook has been built into the image, it can be run in production. The image has the notebook as well as a framework we built that runs the notebook using the Papermill library. An &lt;a href="https://aws.amazon.com/pm/eventbridge/"&gt;Amazon EventBridge&lt;/a&gt; rule triggers the notebook to run at the appropriate time with the appropriate parameters.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; runs the notebook in &lt;a href="https://aws.amazon.com/ecs/"&gt;Amazon Elastic Container Service&lt;/a&gt; using the image that we pushed to the ECR repository. After the notebook finishes executing, we save the raw JSON notebook and the HTML representation of the notebook to &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Services (Amazon S3).&lt;/a&gt; These output notebooks can also be viewed in a web browser via an &lt;a href="https://aws.amazon.com/cloudfront/"&gt;Amazon CloudFront distribution&lt;/a&gt; in front of the Amazon S3 bucket.&lt;/p&gt; 
+&lt;div id="attachment_3296" style="width: 834px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3296" loading="lazy" class="size-full wp-image-3296" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.23.33.png" alt="Figure 5 – Notebooks are run on Amazon ECS using AWS Batch. The Batch jobs are triggered by schedules in Amazon EventBridge." width="824" height="813"&gt;
+ &lt;p id="caption-attachment-3296" class="wp-caption-text"&gt;Figure 5 – Notebooks are run on Amazon ECS using AWS Batch. The Batch jobs are triggered by schedules in Amazon EventBridge.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We use &lt;a href="https://aws.amazon.com/dynamodb/"&gt;Amazon DynamoDB&lt;/a&gt; to store the status of each notebook run as well as additional metadata about the notebook run. Engineers and scientists can then use this information to debug the status of a notebook run. Even better, non-technical users can view that status of our forecasting and see key outputs in the notebook itself.&lt;/p&gt; 
+&lt;div id="attachment_3315" style="width: 892px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3315" loading="lazy" class="size-full wp-image-3315" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/12/CleanShot-2024-02-12-at-10.57.02.png" alt="Figure 6 – Internal website that displays the list of notebook runs that have been saved into DynamoDB." width="882" height="406"&gt;
+ &lt;p id="caption-attachment-3315" class="wp-caption-text"&gt;Figure 6 – Internal website that displays the list of notebook runs that have been saved into DynamoDB.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We set up the infrastructure and build pipeline using &lt;a href="https://aws.amazon.com/cdk/"&gt;AWS CDK&lt;/a&gt; which enables us to treat our &lt;a href="https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/infrastructure-as-code.html"&gt;infrastructure as code&lt;/a&gt;. This simplifies spinning up new environments, minimizes configuration errors, and leverages high-level constructs for faster, more reliable work.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;We started this project with the aim of allowing scientists to deploy more frequently without relying on engineers. We achieved that, but we &lt;em&gt;also&lt;/em&gt; improved how both scientists &lt;em&gt;and&lt;/em&gt; engineers interact with the production system. They can debug production notebooks through a web server that displays the output notebooks. This led to the use of these notebooks for reports and metrics presentations – accessible to others via shared links.&lt;/p&gt; 
+&lt;p&gt;The infrastructure choices also increased our velocity. Previously our system was computationally intensive and it took two weeks to evaluate it sequentially on a very large machine. AWS Batch allows us to run more than a thousand &lt;em&gt;much smaller&lt;/em&gt; instances in parallel so our model evaluation went down to 3 hours. Solving these problems allowed our small &lt;a href="https://aws.amazon.com/executive-insights/content/amazon-two-pizza-team/"&gt;2-pizza team&lt;/a&gt; to dramatically increase our iteration speed and at the same time increased the reliability of our system.&lt;/p&gt; 
+&lt;p&gt;At the outset of this work, scientists couldn’t tell their containers from their images – and the only thing engineers knew about Jupyter Notebooks was that they “&lt;em&gt;were not for production!&lt;/em&gt;”. But, by taking the time to understand each other’s tools and the problems that they were solving we built a system that let us to have consistent environments &lt;strong&gt;&lt;em&gt;and&lt;/em&gt;&lt;/strong&gt; continuous delivery of new science models.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Dynamic HPC budget control using a core-limit approach with AWS ParallelCluster</title>
 		<link>https://aws.amazon.com/blogs/hpc/dynamic-hpc-budget-control-using-a-core-limit-approach-with-aws-parallelcluster/</link>
 		
@@ -30,7 +111,7 @@
 		<guid isPermaLink="false">9bdb3110e846b9e53cd91e0e541ef049df9eb76f</guid>
 
 					<description>Balancing fixed budgets with fluctuating HPC needs is challenging. Discover a customizable solution for automatically setting weekly resource limits based on previous spending.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3283" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/07/boofla88_budgets_as_a_concept_ea608982-89d1-447e-8d4d-71e53e623d15.png" alt="Dynamic HPC budget control using a core-limit approach with AWS ParallelCluster" width="380" height="212"&gt;Cloud computing provides an experience similar to uncapped or unlimited resources for HPC workloads, helping organizations to accelerate research and development. When using cloud, the business owner typically allocates a fixed annual budget for HPC resources. The budget then needs to be split by multiple groups, across departments, business units, or projects.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3283" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/07/boofla88_budgets_as_a_concept_ea608982-89d1-447e-8d4d-71e53e623d15.png" alt="Dynamic HPC budget control using a core-limit approach with AWS ParallelCluster" width="380" height="212"&gt;Cloud computing provides an experience similar to uncapped or unlimited resources for HPC workloads, helping organizations to accelerate research and development. When using cloud, the business owner typically allocates a fixed annual budget for HPC resources. The budget then needs to be split by multiple groups, across departments, business units, or projects.&lt;/p&gt; 
 &lt;p&gt;But while budgets are fixed, HPC workload needs fluctuate throughout the year for nearly everyone. That’s challenging, and can often make the shift to cloud too much of a puzzle for some.&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll describe a solution for managing your budget using a&amp;nbsp;&lt;em&gt;dynamic&lt;/em&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;Amazon Elastic Compute Cloud (Amazon EC2) &lt;em&gt;core allocation limit&lt;/em&gt; for each group asking for HPC resources. It automatically sets the resource limit for each group &lt;em&gt;every week&lt;/em&gt; based on the spending of that group in the &lt;em&gt;previous week&lt;/em&gt;. The solution can be easily customized and enhanced to meet the specific workload and environmental needs.&lt;/p&gt; 
 &lt;h2&gt;HPC in the cloud is different, yet familiar&lt;/h2&gt; 
@@ -2197,170 +2278,6 @@ print(r.text)
 &lt;p&gt;AWS ParallelCluster 3.7 introduced login nodes – a powerful and flexible way to manage access and more carefully define the user experience for your HPC cluster users.&lt;/p&gt; 
 &lt;p&gt;By distributing interactive user sessions across a pool of dedicated login nodes, you can improve your cluster’s performance, expand the tools available to your end users, and streamline everyone’s data access. With careful configuration and management, login nodes can become an integral part of your cloud-based HPC infrastructure, enabling efficient and scalable computing for your organization.&lt;/p&gt; 
 &lt;p&gt;If you want to get started right away, you can use our &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/login_nodes"&gt;one-click launchable stack&lt;/a&gt; from the HPC Recipes Library to get a complete test environment launched quickly, which you can customize (or delete) later. This comes from the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipe Library&lt;/a&gt; which can help you quickly achieve feature-rich,&amp;nbsp;&lt;em&gt;reliable&lt;/em&gt;&amp;nbsp;HPC deployments that are ready to run a diverse range of workloads – regardless of where you’re starting from.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Financial services industry HPC migrations using AWS ParallelCluster with Slurm</title>
-		<link>https://aws.amazon.com/blogs/hpc/financial-services-industry-hpc-migrations-using-aws-parallelcluster-with-slurm/</link>
-		
-		<dc:creator><![CDATA[Vinay Arora]]></dc:creator>
-		<pubDate>Tue, 10 Oct 2023 13:14:45 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[FSI]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Slurm]]></category>
-		<guid isPermaLink="false">38335ed4c953ad6c7ef375c45681146e51ae92b4</guid>
-
-					<description>In this post, we’ll walk you through how banks and other financial services firms migrate or burst their grid workloads onto AWS using AWS ParallelCluster and the Slurm scheduler.</description>
-										<content:encoded>&lt;p&gt;If you’re reading this post, you’ll know that HPC is a way of solving hard problems by slicing the problem space up amongst a lot of computers. You might have also heard the term ‘&lt;em&gt;grid computing’&lt;/em&gt; in the context of financial services. This refers to centralized systems which are typically used to provide ‘utility computing’ to support HPC workloads.&lt;/p&gt; 
-&lt;p&gt;In financial services these types of jobs use complex algorithms to calculate as many risk or trading scenarios in parallel as possible, bound only by the amount of compute available. Financial services firms are always keen to reduce their operational costs and look to the cloud as a way to provide the elasticity and cost benefits to do this, but also: the ability to respond rapidly to changing economic conditions and market volatility.&lt;/p&gt; 
-&lt;p&gt;Customers from all the major Financial Services Industry (FSI) verticals (including banking, capital markets, and insurance) are moving their on-premises grid workloads partially, or entirely, to the cloud. These workloads typically include high volumes of short-running tasks.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll walk through how these firms can migrate or burst their grid workloads onto AWS using AWS ParallelCluster and the Slurm scheduler – and we’ll give you an introduction to those two packages, if you’ve not met them before.&lt;/p&gt; 
-&lt;h2&gt;Loosely-coupled Grid scenarios&lt;/h2&gt; 
-&lt;p&gt;Grid workloads often require hundreds of thousands, or millions, of parallel processes to complete a calculation or simulation. Generally, these jobs run on a single node, consuming one process or multiple processes with shared memory parallelization (SMP) for parallelization &lt;em&gt;within&lt;/em&gt; the node. The parallel processes, or the iterations in the simulation, are post-processed to create one solution or discovery from the simulation.&lt;/p&gt; 
-&lt;p&gt;During the simulation, the operations can take place in any order, and the loss of any one node or job in a loosely coupled workload usually doesn’t delay the entire calculation. The lost work can be picked up later or omitted altogether. The nodes involved in the calculation can vary in specification and power. This gives us some hints about the types of compute that we need to run these loosely-connected simulations.&lt;/p&gt; 
-&lt;h2&gt;Architectural considerations&lt;/h2&gt; 
-&lt;h3&gt;Networking&lt;/h3&gt; 
-&lt;p&gt;Grid processes run in parallel and don’t communicate with each other (at all) to exchange information. This means the performance of jobs isn’t impacted by latency between the nodes. This is great because it means that instead of optimizing for latency, we can instead optimize for &lt;em&gt;instance availability&lt;/em&gt;: we can spread the job out over several Availability Zones (AZs), each of which have their own capacity pools. This is especially useful when using the Amazon Elastic Compute Cloud (Amazon EC2) Spot purchasing model because the availability of Spot instances in any given AZ can be limited.&lt;/p&gt; 
-&lt;p&gt;By providing AWS ParallelCluster with options about where to place the compute, we can achieve an architecture that can scale up to tens or hundreds of thousands of cores.&lt;/p&gt; 
-&lt;h3&gt;Storage&lt;/h3&gt; 
-&lt;p&gt;Loosely coupled jobs also have a great characteristic when working with shared storage. Typically, they need to read data in, compute on it, and then write it out all without interfering with any other job. This is the perfect use case for &lt;em&gt;object storage&lt;/em&gt;. In this post, we’ll focus on Amazon Simple Storage Service (Amazon S3) as the storage layer because it provides internet-scale storage, it’s low cost, and it scales up to hundreds of thousands of tasks working simultaneously.&lt;/p&gt; 
-&lt;h3&gt;Compute&lt;/h3&gt; 
-&lt;p&gt;Choosing instance types means looking at the job’s requirement for memory:vCPU ratio, availability, and architecture support for the workload. (ie x86 or aarch64). In this post, we’ll stick with x86, to provide the greatest instance availability &lt;em&gt;and compatibility&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;ParallelCluster can request instances based on what’s available and will &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/slurm-short-capacity-fail-mode-v3.html"&gt;quickly “fail-over”&lt;/a&gt; if the instances can’t be launched. For the purposes of testing we chose instances from both x86 manufacturers’ families because they share the same instruction set and by choosing both we have a larger pool to draw from.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll use &lt;em&gt;vCPUs&lt;/em&gt; instead of &lt;em&gt;cores&lt;/em&gt; because most x86 instances onAWS have hyperthreading enabled. Hyperthreading allows two virtual cores to share the same arithmetic/logic unit (ALU). This increases overall throughput by doubling the core count but deceases the individual core’s &lt;em&gt;solve-time&lt;/em&gt;. This is sometimes a controversial topic in HPC, but for grid workloads in FSI, we’ve seen that hyperthreading is a net benefit, so we’re leaving it enabled.&lt;/p&gt; 
-&lt;h3&gt;Scheduling&lt;/h3&gt; 
-&lt;p&gt;Running a few tasks on a single instance is easy to manage by hand, but once you scale up the number of tasks, you’ll need a scheduler to manage their lifecycle. &lt;strong&gt;Slurm&lt;/strong&gt; is an open-source job scheduler that’s optimized for scheduling both tightly-coupled &lt;em&gt;and&lt;/em&gt; loosely-coupled tasks across multiple instances. It handles queuing, execution, retries, and accounting. ParallelCluster sets up Slurm using the &lt;a href="https://slurm.schedmd.com/elastic_computing.html"&gt;Slurm cloud bursting plugin&lt;/a&gt; and manages the scaling of Amazon EC2 instances.&lt;/p&gt; 
-&lt;p&gt;We recommend enabling Slurm’s &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/slurm-mem-based-scheduling-v3.html"&gt;memory based scheduling&lt;/a&gt; feature. This provides an easy way to request specific memory amounts and compute directly in the job submission, i.e. 1 vCPU and 4 GB of memory could be set in the Slurm &lt;code&gt;sbatch&lt;/code&gt; file. It also helps Slurm maximize the CPU utilization of all the cores across the fleet.&lt;/p&gt; 
-&lt;h2&gt;AWS ParallelCluster&lt;/h2&gt; 
-&lt;p&gt;AWS ParallelCluster is an open-source cluster management tool that makes it straightforward for you to deploy, manage, and scale Slurm-based clusters on AWS. ParallelCluster allows you to leverage the elasticity of AWS by providing an easy way to expand and contract compute queues that you define. You can use multiple instance types, in multiple Availability Zones, and create job submission queues with a lot of creative freedom.&lt;/p&gt; 
-&lt;p&gt;You can also quickly spin up clusters for experimenting and prototyping. Since ParallelCluster uses a simple YAML file to define all the resources you need, the process of standing up additional clusters – for production, dev, or testing – is an automated (and secure) process.&lt;/p&gt; 
-&lt;p&gt;Let’s look at a reference architecture and a tutorial that you can use to deploy this in your own AWS account.&lt;/p&gt; 
-&lt;div id="attachment_2873" style="width: 1077px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2873" loading="lazy" class="size-full wp-image-2873" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/18/CleanShot-2023-09-18-at-13.16.09.png" alt="Figure 1 –The reference architecture for FSI grid-style computing on AWS using AWS ParallelCluster. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region." width="1067" height="490"&gt;
- &lt;p id="caption-attachment-2873" class="wp-caption-text"&gt;Figure 1 –The reference architecture for FSI grid-style computing on AWS using AWS ParallelCluster. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Implementation details&lt;/h2&gt; 
-&lt;p&gt;In the following steps, we’ll show you how to setup a cluster with a &lt;strong&gt;headnode&lt;/strong&gt; and two &lt;strong&gt;compute queues&lt;/strong&gt;. The queues span over all the Availability Zones in the region and read and write data from an Amazon S3 bucket in that region. The Slurm scheduler process (&lt;code&gt;slurmctld&lt;/code&gt;) runs on the &lt;code&gt;HeadNode&lt;/code&gt; and users can login there to submit jobs via AWS Systems Manager (SSM), using SSH, or with a remote desktop connection using DCV as shown in the reference architecture in Figure 1.&lt;/p&gt; 
-&lt;p&gt;You can follow along with these steps in the &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster"&gt;FSI Tutorial&lt;/a&gt; hands-on lab.&lt;/p&gt; 
-&lt;p&gt;First, install AWS ParallelCluster CLI or UI. We’ll assume you’re using the CLI for now. In ParallelCluster, you initiate the creation of a cluster through the CLI by specifying the location of your configuration file, like this:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster -c cluster.yaml -n cluster-name&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Your config file might look something like the this:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;HeadNode:
-  InstanceType: c5a.xlarge
-  Networking:
-    SubnetId: subnet-846f1aff
-  LocalStorage:
-    RootVolume:
-      VolumeType: gp3
-  Iam:
-    AdditionalIamPolicies:
-      - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-      - Policy: arn:aws:iam::aws:policy/AmazonS3FullAccess
-  Dcv:
-    Enabled: true
-  CustomActions:
-    OnNodeConfigured:
-      Sequence:
-        - Script: &amp;gt;-
-            &lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/docker/postinstall.sh" rel="noopener noreferrer"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/docker/postinstall.sh&lt;/a&gt;
-        - Script: &amp;gt;-
-            &lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/pyxis/postinstall.sh" rel="noopener noreferrer"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/pyxis/postinstall.sh&lt;/a&gt;
-          Args:
-            - /fsx
-  Imds:
-    Secured: true
-Scheduling:
-  Scheduler: slurm
-  SlurmQueues:
-    - Name: c6i
-      AllocationStrategy: capacity-optimized
-      ComputeResources:
-        - Name: spot
-          Instances:
-            - InstanceType: c6i.32xlarge
-            - InstanceType: c6a.32xlarge
-            - InstanceType: m6i.32xlarge
-            - InstanceType: m6a.32xlarge
-            - InstanceType: r6i.32xlarge
-            - InstanceType: r6a.32xlarge
-          MinCount: 0
-          MaxCount: 100
-      CustomActions:
-        OnNodeConfigured:
-          Sequence:
-            - Script: &amp;gt;-
-                &lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/pyxis/postinstall.sh" rel="noopener noreferrer"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/pyxis/postinstall.sh&lt;/a&gt;
-              Args:
-                - /fsx
-      ComputeSettings:
-        LocalStorage:
-          RootVolume:
-            VolumeType: gp3
-      Networking:
-        SubnetIds:
-          - subnet-8b15a7c6
-          - subnet-04f44e9dc1c8ee425
-          - subnet-91ab80f8
-        PlacementGroup:
-          Enabled: false
-      CapacityType: SPOT
-      Iam:
-        AdditionalIamPolicies:
-          - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-          - Policy: arn:aws:iam::aws:policy/AmazonS3FullAccess
-Region: us-east-2
-Imds:
-  ImdsSupport: v2.0
-Image:
-  Os: alinux2
-SharedStorage:
-  - Name: Ebs0
-    StorageType: Ebs
-    MountDir: /shared
-    EbsSettings:
-      VolumeType: gp3
-      DeletionPolicy: Retain
-      Size: '100'
-Tags:
-  - Key: parallelcluster-ui
-    Value: 'true'
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;This config has a few key sections:&lt;/p&gt; 
-&lt;p&gt;&lt;code&gt;HeadNode&lt;/code&gt; – this is the Amazon EC2 instance that runs the Slurm scheduler processes (&lt;code&gt;slurmctld&lt;/code&gt;, for example). Because this instance is responsible for scaling up the cluster, scheduling jobs, and serving the config files, we recommend going with an instance like the c6i.2xlarge that has sufficient resources (8 vCPUs and 16 GB memory) to run Slurm comfortably.&lt;/p&gt; 
-&lt;p&gt;&lt;code&gt;SlurmQueues&lt;/code&gt; – these will depend on your resource requirements. For example, if you have jobs that requires 1 vCPUs and 2 GB memory, set up a queue with c6i instances. These instances all meet the memory to core ratio and specifying multiples different sizes of them will ensure you’re most likely to get your desired capacity. If you require more memory, the m6i and r6i instances offer 8 GB per vCPU and 16 GB per vCPU, respectively. We recommend you offer your users a choice by putting each instance family in their own &lt;code&gt;SlurmQueue&lt;/code&gt;. In addition to diversifying the instance types by providing multiple from each family, we also recommend you provide multiple Availability Zones, because this expands the number of pools you’re drawing from and is especially important for using Amazon EC2 Spot.&lt;/p&gt; 
-&lt;p&gt;&lt;code&gt;Storage&lt;/code&gt; – for grid workloads there’s rarely a need for a parallel filesystem – more important is a filesystem that can serve traffic in multiple Availability Zones and scale up to the thousands of jobs that can execute concurrently. We recommend using Amazon S3 or if there’s a need for a POSIX compliant filesystem, then Amazon FSx for OpenZFS. The creation of the filesystem is out of scope for this blog, but you can learn more by reading about &lt;a href="https://aws.amazon.com/blogs/hpc/expanded-filesystems-support-in-aws-parallelcluster-3-2/"&gt;Filesystem Support in AWS ParallelCluster&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;When ParallelCluster builds your cluster, it’ll attach any existing filesystems you specified in the config file. Those filesystems are typically used for applications, libraries, and users’ data. It’s important to have a separation between the filesystem and cluster configuration because it allows for easy upgrades later when ParallelCluster release a new version which you want to take advantage of. In the config file we showed, it calls for ParallelCluster itself to create an EBS-based shared file system, mounted as &lt;code&gt;/shared&lt;/code&gt;. This will be NFS-exported to the compute nodes in the cluster when they’re created.&lt;/p&gt; 
-&lt;p&gt;Once your cluster is up and running, you have several ways to interact with it:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;You can login to the head node: you can use normal SSH, or connect through SSM using the attached &lt;code&gt;SSMInstanceCore&lt;/code&gt; SSM allows access to instances that are not routable through SSH, like those in a private subnet.&lt;/li&gt; 
- &lt;li&gt;You can submit jobs using the default Slurm commands like &lt;code&gt;sbatch&lt;/code&gt;, &lt;code&gt;srun&lt;/code&gt;, and then monitor with &lt;code&gt;squeue&lt;/code&gt; and &lt;code&gt;sinfo&lt;/code&gt;. See Slurm &lt;a href="https://slurm.schedmd.com/sbatch.html"&gt;sbatch documentation&lt;/a&gt; for more details on options for submitting jobs, and the syntax for the run scripts.&lt;/li&gt; 
- &lt;li&gt;When Slurm detects new jobs in the queue, it uses the &lt;a href="https://slurm.schedmd.com/elastic_computing.html"&gt;Cloud Scheduling&lt;/a&gt; plugin, which calls a &lt;code&gt;ResumeProgram&lt;/code&gt; script that ParallelCluster manages. This script, in turn, calls the Amazon EC2 Fleet API to allocate instances to the queue. The jobs run soon after the instances bootstrap (typically 2-3 minutes).&lt;/li&gt; 
- &lt;li&gt;Once all jobs are complete, the instances are left running for a short ScaleDownIdleTime, in case more jobs arrive. This defaults to 10 minutes, but you can configure it yourself by specifying a &lt;code&gt;ScaleDownIdleTime&lt;/code&gt; &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/multiple-queue-mode-slurm-user-guide-v3.html"&gt;parameter in the ParallelCluster config file&lt;/a&gt;. After this time expires, ParallelCluster will terminate the instances, and wait again for new jobs to arrive in the queues.&lt;/li&gt; 
- &lt;li&gt;If the cluster is deleted, all instances &lt;em&gt;including the head node&lt;/em&gt; will be terminated.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;There’s an &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster/en-US"&gt;AWS Workshop available online&lt;/a&gt; to show you how to calculate the price of a financial &lt;em&gt;auto-callable option&lt;/em&gt; based on this ParallelCluster architecture. The workshop provides step-by-step guidance to create and configure ParallelCluster and to deploy the containerized workload.&lt;/p&gt; 
-&lt;h2&gt;Best Practices when using ParallelCluster with Slurm&lt;/h2&gt; 
-&lt;h3&gt;Smaller and heterogeneous job duration&lt;/h3&gt; 
-&lt;p&gt;If your job durations are small, for example in seconds and somewhat heterogeneous, we suggest following &lt;a href="https://slurm.schedmd.com/high_throughput.html"&gt;the recommendations from SchedMD&lt;/a&gt; (the makers of Slurm) to tune the cluster for the best job throughput – measured in tasks per second. It’s possible for Slurm to scale to 500 jobs/sec – under the right conditions and with the right architecture.&lt;/p&gt; 
-&lt;h3&gt;Large Scale Clusters&lt;/h3&gt; 
-&lt;p&gt;If your cluster exceeds 1024 instances, we recommend that following the &lt;a href="https://slurm.schedmd.com/big_sys.html"&gt;Slurm Large Cluster Administration guide.&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;You’ll also want to consider your &lt;strong&gt;HeadNode&lt;/strong&gt; architecture. Using a c6i.2xlarge won’t be sufficient for the network bandwidth demanded by slurmctld when it’s communicating with all the child nodes. We recommend using a network optimized instance with &lt;em&gt;at least&lt;/em&gt; 50 Gbps of dedicated bandwidth, like the c6in.8xlarge. Remember, the HeadNode instance communicates with the compute instances &lt;em&gt;and&lt;/em&gt; serves the Slurm config file, and application binaries via NFS.&lt;/p&gt; 
-&lt;p&gt;You’ll also need to review your AWS account limits, (which, we remind you, are set on a per-region basis):&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;strong&gt;Amazon EC2 Limits&lt;/strong&gt; – make sure you increase the Amazon EC2 limits for the compute nodes you plan to use. You can review these, and request limit increases via the AWS Service Quotas console.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;EBS limits&lt;/strong&gt; – each compute node mounts a 35 GB root volume (or larger) of gp3 EBS storage. If you plan to launch more instances than your quota (which defaults to 50 TiB), you should &lt;a href="https://console.aws.amazon.com/servicequotas/home/services/ebs/quotas"&gt;increase this limit&lt;/a&gt;, too.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Route53 limit&lt;/strong&gt; – each compute node is added to a Route53 Private Hosted Zone. This has a default limit of 10,000 records. If you plan to exceed this limit, make sure to &lt;a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html"&gt;request a limit increase&lt;/a&gt;.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h3&gt;Acadian did this – so you can you&lt;/h3&gt; 
-&lt;p&gt;Acadian chose to use Slurm in AWS ParallelCluster to execute thousands of these heterogeneous jobs. This cloud-native grid solution enables them to benefit from faster and seamless compute capacity provisioning &lt;em&gt;and&lt;/em&gt; on-demand auto scaling features, resulting in optimal results.&lt;/p&gt; 
-&lt;p&gt;According to Jian Pan, Head of Quantitative Systems at Acadian, “&lt;em&gt;we are able to reap immediate benefit such as maintaining consistent 4hr model runtime in AWS, comparing to 20~40hr runtime on-premise when resource is under stress&lt;/em&gt;”.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Slurm can handle a cluster that grows and shrinks – driven by demand. It’s able to this dynamically by scaling compute resources from Amazon EC2. Compute fleets can be spun up to complete the workload in the queue. When the jobs are complete, ParallelCluster scales those same fleets back down to the minimum level you set (usually zero).&lt;/p&gt; 
-&lt;p&gt;If you want to try this yourself, you can follow the steps in the &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster"&gt;FSI Tutorial&lt;/a&gt; hands-on lab, and when you’ve done that, you can try a real application to &lt;a href="https://catalog.workshops.aws/fsi-slurm-aws-parallelcluster/en-US/02-application/03-job-submit"&gt;calculate the price&lt;/a&gt; of a financial &lt;em&gt;auto-callable option&lt;/em&gt;. Let us know how to get on – you can reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 					
 		
 		
