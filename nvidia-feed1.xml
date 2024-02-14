@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 13 Feb 2024 17:42:48 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 14 Feb 2024 06:35:01 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,140 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.2</generator>
 	<item>
+		<title>Speak Like a Native: NVIDIA Parlays Win in Voice Challenge</title>
+		<link>https://blogs.nvidia.com/blog/generative-voice-challenge/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Wed, 14 Feb 2024 16:00:18 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Conversational AI]]></category>
+		<category><![CDATA[generative AI]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[Riva]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69734</guid>
+
+					<description><![CDATA[Thanks to their work driving AI forward, Akshit Arora and Rafael Valle could someday speak to their spouses’ families in their native languages. Arora and Valle — along with colleagues Sungwon Kim and Rohan Badlani — won the LIMMITS ’24 challenge which asks contestants to recreate in real time a speaker’s voice in English or		<a class="read-more" href="https://blogs.nvidia.com/blog/generative-voice-challenge/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Thanks to their work driving AI forward, Akshit Arora and Rafael Valle could someday speak to their spouses’ families in their native languages.</p>
+<p>Arora and Valle — along with colleagues Sungwon Kim and Rohan Badlani — won the <a href="https://sites.google.com/view/limmits24/home">LIMMITS ’24 challenge</a> which asks contestants to recreate in real time a speaker’s voice in English or any of six languages spoken in India with the appropriate accent. Their novel AI model only required a three-second speech sample.</p>
+<p>The NVIDIA team advanced the state of the art in an emerging field of personalized voice interfaces for more than a billion native speakers of Bengali, Chhattisgarhi, Hindi, Kannada, Marathi and Telugu.</p>
+<h2><b>Making Voice Interfaces Realistic</b></h2>
+<p>The technology for personalized text-to-speech translation is a work in progress. Existing services sometimes fail to accurately reflect the accents of the target language or nuances of the speaker’s voice.</p>
+<p>The challenge judged entries by listening for the naturalness of models’ resulting speech and its similarity to the original speaker’s voice.</p>
+<p>The latest improvements promise personalized, realistic conversations and experiences that break language barriers. Broadcasters, telcos, universities, as well as e-commerce and online gaming services are eager to deploy such technology to create multilingual movies, lectures and virtual agents.</p>
+<p>“We demonstrated we can do this at a scale not previously seen,” said Arora, who has two uses close to his heart.</p>
+<h2><b>Breaking Down Linguistic Barriers</b></h2>
+<p>A senior data scientist who supports one of NVIDIA’s biggest customers, Arora speaks Punjabi, while his wife and her family are native Tamil speakers.</p>
+<p>It’s a gulf he’s long wanted to bridge for himself and others. “I had classmates who knew their native languages much better than the Hindi and English used in school, so they struggled to understand class material,” he said.</p>
+<p>The gulf crosses continents for Valle, a native of Brazil whose wife and family speak Gujarati, a language popular in west India.</p>
+<p>“It’s a problem I face every day,” said Valle, an AI researcher with degrees in computer music and machine listening and improvisation. “We’ve tried many products to help us have clearer conversations.”</p>
+<p>Badlani, an AI researcher, said living in seven different Indian states, each with its own popular language, inspired him to work in the field.</p>
+<h2><b>A Race to the Finish Line</b></h2>
+<p>The initiative started nearly two years ago when Arora and Badlani formed the four-person team to work on the very different version of the challenge that would be held in 2023.</p>
+<p>Their efforts generated a working code base for the so-called Indic languages. But getting to the win announced in January required a full-on sprint because the 2024 challenge didn’t get on the team’s radar until 15 days before the deadline.</p>
+<p>Luckily, Kim, a deep learning researcher in NVIDIA’s Seoul office, had been working for some time on an AI model well suited to the challenge.</p>
+<p>A specialist in text-to-speech voice synthesis, Kim was designing a so-called P-Flow model prior to starting his second internship at NVIDIA in 2023. P-Flow models borrow the technique large language models employ of using short voice samples as prompts so they can respond to new inputs without retraining.</p>
+<p>“I created the model for English, but we were able to generalize it for any language,” he said.</p>
+<p>“We were talking and texting about this model even before he started at NVIDIA,” said Valle, who mentored Kim in two internships before he joined full time in January.</p>
+<h2><b>Giving Others a Voice</b></h2>
+<p>P-Flow will soon be part of <a href="https://www.nvidia.com/en-us/ai-data-science/products/riva/">NVIDIA Riva</a>, a framework for building multilingual speech and translation AI software, included in the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform.</p>
+<p>The new capability will let users deploy the technology inside their data centers, on personal systems or in public or private cloud services. Today, voice translation services typically run on public cloud services.</p>
+<p>“I hope our customers are inspired to try this technology,” Arora said. “I enjoy being able to showcase in challenges like this one the work we do every day.”</p>
+<p>The contest is part of <a href="https://syspin.iisc.ac.in/">an initiative</a> to develop open-source datasets and AI models for nine languages most widely spoken in India.</p>
+<p>Hear Arora and Badlani share their experiences in <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=S62517#/session/1696286805576001jEsz">a session</a> at GTC next month.</p>
+<p>And listen to the results of the team’s model below, starting with a <a href="https://huggingface.co/datasets/SYSPIN/LIMMITS24_target_speaker_fewshot_samples">three-second sample</a> of a native Kannada speaker:</p>
+<!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+<audio class="wp-audio-shortcode" id="audio-69734-1" preload="none" style="width: 100%;" controls="controls"><source type="audio/mpeg" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_prompt_3s-1.mp3?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_prompt_3s-1.mp3">https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_prompt_3s-1.mp3</a></audio>
+<p>&nbsp;</p>
+<p>Here’s a similar-sounding synthesized voice reading the first sentence of this blog in Hindi:</p>
+<audio class="wp-audio-shortcode" id="audio-69734-2" preload="none" style="width: 100%;" controls="controls"><source type="audio/mpeg" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_speaking_hindi_3-2.mp3?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_speaking_hindi_3-2.mp3">https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_speaking_hindi_3-2.mp3</a></audio>
+<p>&nbsp;</p>
+<p>And then in English:</p>
+<audio class="wp-audio-shortcode" id="audio-69734-3" preload="none" style="width: 100%;" controls="controls"><source type="audio/mpeg" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_speaking_english-1.mp3?_=3" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_speaking_english-1.mp3">https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_speaking_english-1.mp3</a></audio>
+<p><i>See </i><a href="https://www.nvidia.com/en-us/about-nvidia/legal-info/"><i>notice</i></a><i> regarding software product information.</i></p>
+</div>]]></content:encoded>
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_prompt_3s-1.mp3" length="28510" type="audio/mpeg" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_speaking_hindi_3-2.mp3" length="93931" type="audio/mpeg" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/02/pr_kannada_f_indictts_speaking_english-1.mp3" length="74733" type="audio/mpeg" />
+
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/NVIDIA-Voice-Challenge-Team-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1095"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/NVIDIA-Voice-Challenge-Team-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Speak Like a Native: NVIDIA Parlays Win in Voice Challenge]]></media:title>
+			<media:description type="html">NVIDIA text-to-speech team wins LIMMITS &#039;24 Challenge</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>How the Ohio Supercomputer Center Drives the Future of Computing</title>
+		<link>https://blogs.nvidia.com/blog/ohio-supercomputer-center/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 14 Feb 2024 14:00:44 +0000</pubDate>
+				<category><![CDATA[The AI Podcast]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69787</guid>
+
+					<description><![CDATA[NASCAR races are all about speed, but even the fastest cars need to factor in safety, especially as rules and tracks change. The Ohio Supercomputer Center is ready to help. In this episode of NVIDIA’s AI Podcast, host Noah Kravitz speaks with Alan Chalker, the director of strategic programs at the OSC, about all things		<a class="read-more" href="https://blogs.nvidia.com/blog/ohio-supercomputer-center/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NASCAR races are all about speed, but even the fastest cars need to factor in safety, especially as rules and tracks change. The Ohio Supercomputer Center is ready to help. In this episode of NVIDIA’s AI Podcast, host Noah Kravitz speaks with Alan Chalker, the director of strategic programs at the OSC, about all things supercomputing. The center’s Open OnDemand program, which takes the form of a web-based interface, empowers Ohio higher education institutions and industries with accessible, reliable and secure computational services and training and educational programs. Chalker dives into the history and evolution of the OSC, and explains how it’s working with client companies like NASCAR, which is simulating race car designs virtually. Tune in to learn more about Chalker’s outlook on the future of supercomputing and OSC’s role in realizing it.</p>
+<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1746649332%3Fsecret_token%3Ds-p1ZnmwGiAp3&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="How the Ohio Supercomputer Center Drives the Future of Computing - Ep. 213" href="https://soundcloud.com/theaipodcast/ai-alan-chalker/s-p1ZnmwGiAp3" target="_blank" rel="noopener">How the Ohio Supercomputer Center Drives the Future of Computing &#8211; Ep. 213</a></div>
+<div>
+<h2>Time Stamps:</h2>
+<p>1:39: History of the Ohio Supercomputer Center<br />
+3:18: What are supercomputers?<br />
+5:08: How the Open OnDemand program came to be<br />
+11:50 How is Open OnDemand being used across higher education, industries?<br />
+22:45: OSC’s work with NASCAR<br />
+26:57: What’s on the horizon for Open OnDemand?</p>
+<h2>You Might Also Like…</h2>
+<p><a href="https://soundcloud.com/theaipodcast/edtech">MIT’s Anant Agarwal on AI in Education &#8211; Ep. 197</a></p>
+<p>AI could help students work smarter, not harder. Anant Agarwal, founder of edX and Chief Platform Officer at 2U, shares his vision for the future of online education and the impact of AI in revolutionizing the learning experience.</p>
+<p><a href="https://soundcloud.com/theaipodcast/university-of-florida-ai">UF Provost Joe Glover on Building a Leading AI University &#8211; Ep. 186</a></p>
+<p>Joe Glover, provost and senior vice president of academic affairs at the University of Florida, discusses the university’s efforts to implement AI across all aspects of higher education, including a public-private partnership with NVIDIA that has helped transform UF into one of the leading AI universities in the country.</p>
+<p><a href="https://soundcloud.com/theaipodcast/nvidias-marc-hamilton-on-building-the-cambridge-1-supercomputer-during-a-pandemic">NVIDIA’s Marc Hamilton on Building the Cambridge-1 Supercomputer During a Pandemic &#8211; Ep. 137</a></p>
+<p>Cambridge-1, U.K.’s most powerful supercomputer, ranks among the world’s top 3 most energy-efficient supercomputers and was built to help healthcare researchers make new discoveries. Marc Hamilton, vice president of solutions architecture and engineering at NVIDIA, speaks on how he remotely oversaw its construction.</p>
+<h2><b>Subscribe to the AI Podcast</b></h2>
+<p>Get the<a href="https://blogs.nvidia.com/ai-podcast/"> AI Podcast</a> through<a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439"> iTunes</a>,<a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz"> Google Podcasts</a>,<a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm"> Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music, </a><a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher,<a href="https://overcast.fm/itunes1186480811/the-ai-podcast"> Overcast</a>,<a href="https://player.fm/series/the-ai-podcast"> PlayerFM</a>, Pocket Casts,<a href="http://www.podbay.fm/show/1186480811"> Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast"> PodBean</a>, PodCruncher, PodKicker,<a href="https://soundcloud.com/theaipodcast"> Soundcloud</a>,<a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L"> Spotify</a>,<a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr"> Stitcher</a> and<a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/"> TuneIn</a>.</p>
+<p>Make the AI Podcast better: Have a few minutes to spare? Fill out<a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short"> this listener survey</a>.</p>
+</div>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast.jpg"
+			type="image/jpeg"
+			width="1400"
+			height="931"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[How the Ohio Supercomputer Center Drives the Future of Computing]]></media:title>
+			<media:description type="html">NVIDIA AI Podcast</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Say What? Chat With RTX Brings Custom Chatbot to NVIDIA RTX AI PCs</title>
 		<link>https://blogs.nvidia.com/blog/chat-with-rtx-available-now/</link>
 		
@@ -266,7 +400,7 @@
 <p>“Congrats to four years of empowering gamers to play anywhere, anytime,” said Marco Nier, head of marketing and public relations at Kalypso Media. “We’re thrilled to raise a glass to GeForce NOW for their four-year anniversary and commitment to bringing AAA gaming to gamers — here’s to many more chapters in this cloud-gaming adventure!”</p>
 <p>Stream the dark fantasy adventure from Kalypso Media and more newly supported titles today across a variety of GeForce NOW-capable devices, whether at home, on a gaming rig, TV or Mac, or on the go with handheld streaming.</p>
 <h2><b>Gadgets Galore</b></h2>
-<figure id="attachment_69670" aria-describedby="caption-attachment-69670" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-69670" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-672x336.jpg" alt="GeForce NOW anniversary - device ecosystem" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69670" class="wp-caption-text"><em>Play on!</em></figcaption></figure>
+<figure id="attachment_69670" aria-describedby="caption-attachment-69670" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69670" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-672x336.jpg" alt="GeForce NOW anniversary - device ecosystem" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Devices.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69670" class="wp-caption-text"><em>Play on!</em></figcaption></figure>
 <p>Gone are the days of only being able to play full PC games on a decked-out gaming rig. GeForce NOW is a cloud gaming service accessible on a range of devices, from PCs and Macs to gaming handhelds, thanks to <a href="https://www.nvidia.com/en-us/geforce/rtx/">GeForce RTX</a>-powered servers in the cloud.</p>
 <p>Dive into the cloud streaming experience with the dedicated GeForce NOW app for Windows and macOS. Even on underpowered PCs, gamers can enjoy stunning visuals and buttery-smooth frame rates streaming at up to 240 frames per second or at ultrawide resolutions for Ultimate members, a cloud-gaming first.</p>
 <p>Take it to the big screen and stream graphically demanding titles, from <i>The Witcher 3</i> to <i>Alan Wake 2</i>, on GeForce NOW from the comfort of the couch at up to 4K natively on Samsung and LG Smart TVs, without the need for a console. Or stream across any TV with <a href="https://www.nvidia.com/en-us/shield/">NVIDIA SHIELD TV</a> for the ultimate living room gaming experience.</p>
@@ -1189,159 +1323,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[US National Science Foundation Launches National AI Research Resource Pilot]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>High Can See Clearly Now: AI-Powered NVIDIA RTX Video HDR Transforms Standard Video Into Stunning High Dynamic Range</title>
-		<link>https://blogs.nvidia.com/blog/rtx-video-hdr-remix-studio-driver/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Wed, 24 Jan 2024 14:00:48 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA Studio Driver]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69412</guid>
-
-					<description><![CDATA[RTX Video HDR — first announced at CES — is now available for download through the January Studio Driver.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
-<p>RTX Video HDR — first announced at CES — is now available for download through the January Studio Driver. It uses AI to transform standard dynamic range video playing in internet browsers into stunning high dynamic range (HDR) on HDR10 displays.</p>
-<p>PC game modders now have a powerful new set of tools to use with the release of the <a href="https://www.nvidia.com/en-us/geforce/rtx-remix/">NVIDIA RTX Remix</a> open beta.</p>
-<p>It features full ray tracing, <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a>, <a href="https://www.nvidia.com/en-us/geforce/technologies/reflex/">NVIDIA Reflex</a>, modern physically based rendering assets and <a href="https://nvidianews.nvidia.com/news/generative-ai-rtx-pcs-and-workstations">generative AI texture tools</a> so modders can remaster games more efficiently than ever.</p>
-<p>Pick up the new <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/">GeForce RTX 4070 Ti SUPER</a> available from custom board partners in stock-clocked and factory-overclocked configurations to enhance creating, gaming and AI tasks.</p>
-<figure id="attachment_69440" aria-describedby="caption-attachment-69440" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1.png"><img loading="lazy" decoding="async" class="size-large wp-image-69440" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/geforce-rtx-4070-ti-super-out-now-social-post-1280x720-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69440" class="wp-caption-text">Get creative superpowers with the GeForce RTX 4070 Ti SUPER available now.</figcaption></figure>
-<p>Part of the <a href="https://blogs.nvidia.com/blog/studio-rtx-hdr-video-twitch-obs-istock-getty-super-laptop-desktop/">40 SUPER Series announced at CES</a>, it’s equipped with more CUDA cores than the RTX 4070, a frame buffer increased to 16GB, and a 256-bit bus — perfect for video editing and rendering large 3D scenes. It runs up to 1.6x faster than the RTX 3070 Ti and 2.5x faster with DLSS 3 in the most graphics-intensive games.</p>
-<p>And this week’s featured <i>In the NVIDIA Studio</i> technical artist Vishal Ranga shares his vivid 3D scene <i>Disowned </i>— powered by <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> and Unreal Engine with DLSS.</p>
-<h2><b>RTX Video HDR Delivers Dazzling Detail</b></h2>
-<p>Using the power of Tensor Cores on GeForce RTX GPUs, RTX Video HDR allows gamers and creators to maximize their HDR panel’s ability to display vivid, dynamic colors, preserving intricate details that may be inadvertently lost due to video compression.</p>
-<p><iframe loading="lazy" title="Introducing RTX Video HDR: AI-Upscale Video to HDR Quality" width="500" height="281" src="https://www.youtube.com/embed/FHAjydnpos8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>RTX Video HDR and <a href="https://blogs.nvidia.com/blog/rtx-video-super-resolution/">RTX Video Super Resolution</a> can be used together to produce the clearest streamed video anywhere, anytime. These features work on Chromium-based browsers such as Google Chrome or Microsoft Edge.</p>
-<p>To enable RTX Video HDR:</p>
-<ol>
-<li><i>Download and install the January Studio Driver.</i></li>
-<li><i>Ensure Windows HDR features are enabled by navigating to System &gt; Display &gt; HDR.</i></li>
-<li><i>Open the NVIDIA Control Panel and navigate to Adjust video image settings &gt; RTX Video Enhancement — then enable HDR.</i></li>
-</ol>
-<p>Standard dynamic range video will then automatically convert to HDR, displaying remarkably improved details and sharpness.</p>
-<p>RTX Video HDR is among the RTX-powered apps enhancing everyday PC use, productivity, creating and gaming. <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast</a> supercharges mics and cams; <a href="https://www.nvidia.com/en-us/studio/canvas/">NVIDIA Canvas</a> turns simple brushstrokes into realistic landscape images; and <a href="https://www.nvidia.com/en-us/omniverse/creators/">NVIDIA Omniverse</a> seamlessly connects 3D apps and creative workflows. Explore exclusive Studio tools, including industry-leading NVIDIA Studio Drivers — free for <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">RTX graphics card</a> owners — which support the latest creative app updates, AI-powered features and more.</p>
-<p>RTX Video HDR requires an RTX GPU connected to an HDR10-compatible monitor or TV. For additional information, check out the <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5448/~/rtx-video-super-resolution-faq">RTX Video FAQ</a>.</p>
-<h2><b>Introducing the Remarkable RTX Remix Open Beta</b></h2>
-<p>Built on <a href="https://www.nvidia.com/en-us/omniverse/creators/">NVIDIA Omniverse</a>, the <a href="https://www.nvidia.com/en-us/geforce/rtx-remix/">RTX Remix</a> open beta is available now.</p>
-<figure id="attachment_69437" aria-describedby="caption-attachment-69437" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69437" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/rtx-remix-studio-vishal-ranga-wk93-vishal-ranga-007-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69437" class="wp-caption-text">The NVIDIA RTX open beta is out now.</figcaption></figure>
-<p>It allows modders to easily capture game assets, automatically enhance materials with generative AI tools, reimagine assets via Omniverse-connected apps and <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a>, and quickly create stunning RTX remasters of classic games with full ray tracing and NVIDIA DLSS technology.</p>
-<p><iframe loading="lazy" title="[Open Beta Out Now] RTX Remix: Easily Remaster Classic Games with RTX" width="500" height="281" src="https://www.youtube.com/embed/ELJe1jJfOhs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>RTX Remix has already delivered stunning remasters, such as <a href="https://www.nvidia.com/en-us/geforce/news/portal-with-rtx-full-ray-tracing-december-8/"><i>Portal with RTX</i></a> and the modder-made <a href="https://www.nvidia.com/en-us/geforce/news/portal-prelude-rtx-available-now-for-free/"><i>Portal: Prelude RTX</i></a>. Orbifold Studios is now using the technology to develop <a href="https://www.nvidia.com/en-us/geforce/news/half-life-2-rtx-remix-in-development/"><i>Half-Life 2 RTX: An RTX Remix Project</i></a>, a community remaster of one of the <a href="https://www.metacritic.com/browse/games/score/metascore/all/pc/filtered">highest-rated games of all time</a>. Check out the gameplay trailer, showcasing Orbifold Studios’ latest updates to Ravenholm:</p>
-<p><iframe loading="lazy" title="Half-Life 2 RTX, An RTX Remix Project - Ravenholm Trailer" width="500" height="281" src="https://www.youtube.com/embed/nIE9gQt6WXQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p><a href="https://www.nvidia.com/en-us/geforce/news/rtx-remix-open-beta-half-life-2-rtx-trailer">Learn more about the RTX Remix open beta</a> and <a href="https://www.nvidia.com/en-us/geforce/rtx-remix/">sign up to gain access</a>.</p>
-<h2><b>Leveling Up With RTX</b></h2>
-<p>Vishal Ranga has a decade’s worth of experience in the gaming industry, where he pursues level design.</p>
-<p>“I&#8217;ve loved playing video games since forever, and that curiosity led me to game design,” he said. “A few years later, I found my sweet spot in technical art.”</p>
-<figure id="attachment_69434" aria-describedby="caption-attachment-69434" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69434" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-a3-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69434" class="wp-caption-text">Ranga specializes in level design.</figcaption></figure>
-<p>His stunning scene <i>Disowned </i>was born out of experimentation with Unreal Engine’s new ray-traced global illumination lighting capabilities.</p>
-<p>Remarkably, he skipped the concepting process — the entire project was conceived solely from Ranga’s imagination.</p>
-<p>Applying the water shader and mocking up the lighting early helped Ranga set up the mood of the scene. He then updated old assets and searched the Unreal Engine store for new ones — what he couldn’t find, like fishing nets and custom flags, he created from scratch.</p>
-<figure id="attachment_69431" aria-describedby="caption-attachment-69431" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69431" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w-672x335.png" alt="" width="672" height="335" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w-672x335.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w-400x199.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w-768x383.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w-842x420.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w-406x202.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w-188x94.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0005-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69431" class="wp-caption-text">Ranga meticulously organizes assets.</figcaption></figure>
-<div class="simplePullQuote right"><p>“I chose a GeForce RTX GPU to use ray-traced dynamic global illumination with RTX cards for natural, more realistic light bounces.” — Vishal Ranga</p>
-</div>
-<p>Ranga’s GeForce RTX graphics card unlocked RTX-accelerated rendering for high-fidelity, interactive visualization of 3D designs during virtual production.</p>
-<p>Next, he tackled shader work, blending in moss and muck into models of wood, nets and flags. He also created a volumetric local fog shader to complement the assets as they pass through the fog, adding greater depth to the scene.</p>
-<figure id="attachment_69428" aria-describedby="caption-attachment-69428" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69428" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0004-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69428" class="wp-caption-text">Shaders add extraordinary depth and visual detail.</figcaption></figure>
-<p>Ranga then polished everything up. He first used a water shader to add realism to reflections, surface moss and subtle waves, then tinkered with global illumination and reflection effects, along with other post-process settings.</p>
-<figure id="attachment_69425" aria-describedby="caption-attachment-69425" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69425" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-0002-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69425" class="wp-caption-text">Materials come together to deliver realism and higher visual quality.</figcaption></figure>
-<p>Ranga used Unreal Engine’s internal high-resolution screenshot feature and sequencer to capture renders. This was achieved by cranking up screen resolution to 200%, resulting in crisper details.</p>
-<p>Throughout, DLSS enhanced Ranga’s creative workflow, allowing for smooth scene movement while maintaining immaculate visual quality.</p>
-<p>When finished with adjustments, Ranga exported the final scene in no time thanks to his RTX GPU.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-69412-5" width="1280" height="720" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-swamp_01-1280w.mp4?_=5" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-swamp_01-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-swamp_01-1280w.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>Ranga encourages budding artists who are excited by the latest creative advances but wondering where to begin to “practice your skills, prioritize the basics.”</p>
-<p>“Take the time to practice and really experience the highs and lows of the creation process,” he said. “And don’t forget to maintain good well-being to maximize your potential.”</p>
-<figure id="attachment_69422" aria-describedby="caption-attachment-69422" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69422" src="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w-672x263.png" alt="" width="672" height="263" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w-672x263.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w-400x156.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w-768x300.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w-842x329.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w-406x159.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w-188x73.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-itns-vishal-ranga-wk93-artist-feature-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69422" class="wp-caption-text">3D artist Vishal Ranga.</figcaption></figure>
-<p>Check out Ranga’s portfolio on <a href="https://www.artstation.com/vishalranga">ArtStation</a>.</p>
-<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>X</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/01/studio-vishal-ranga-wk93-swamp_01-1280w.mp4" length="1843388" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/nv-blog-header-preview-1280x680-1-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/nv-blog-header-preview-1280x680-1-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[High Can See Clearly Now: AI-Powered NVIDIA RTX Video HDR Transforms Standard Video Into Stunning High Dynamic Range]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA DRIVE Partners Showcase Cutting-Edge Innovations in Automated and Autonomous Driving</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-drive-partners-innovations-video/</link>
-		
-		<dc:creator><![CDATA[Katie Young]]></dc:creator>
-		<pubDate>Tue, 23 Jan 2024 17:07:41 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69401</guid>
-
-					<description><![CDATA[The automotive industry is being transformed by the integration of cutting-edge technologies into software-defined cars. At CES, NVIDIA invited industry leaders to share their perspectives on how technology, especially AI and computing power, is shaping the future of transportation. Watch the video to learn more from NVIDIA’s auto partners. Redefining Possibilities Through Partnership Magnus Ostberg,		<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-drive-partners-innovations-video/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The automotive industry is being transformed by the integration of cutting-edge technologies into software-defined cars.</p>
-<p>At CES, NVIDIA invited industry leaders to share their perspectives on how technology, especially AI and computing power, is shaping the future of transportation.</p>
-<p>Watch the video to learn more from NVIDIA’s auto partners.</p>
-<p><iframe loading="lazy" title="NVIDIA DRIVE Partners Showcase Cutting-Edge Innovations in Automated and Autonomous Driving" width="500" height="281" src="https://www.youtube.com/embed/pBjcI-OrI2U?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><strong>Redefining Possibilities Through Partnership</strong></h2>
-<p>Magnus Ostberg, chief software officer at Mercedes-Benz, underscores how the company’s partnership with NVIDIA helps push technological boundaries. “[NVIDIA] enables us to go further to bring automated driving to the next level and into areas that we couldn’t go before,” he says.</p>
-<h2><strong>Computing Power: The Driving Force Behind Autonomy</strong></h2>
-<p>Shawn Kerrigan, chief operating officer and cofounder at Plus, emphasizes the role of computing power, saying, “Autonomous technology requires immense computing power in order to really understand the world around it and make safe driving decisions.”</p>
-<p>“What was impossible to do previously because computing wasn’t strong enough is now doable,” says Eran Ofir, CEO of Imagry. “This is an enabler for the progress of the autonomous driving industry.”</p>
-<p>“We wanted a platform that has a track record of being deployed in the automotive industry,” adds Stefan Solyom, chief technology officer at Pebble. “This is what NVIDIA can give us.”</p>
-<p>And Martin Kristensson, head of product strategy at Volvo Cars, says, “We partner with NVIDIA to get the best compute that we can. More compute in the car means that we can be more aware of the environment around us and reacting earlier and being even safer.”</p>
-<h2><strong>The Critical Role of AI</strong></h2>
-<p>Don Burnette, CEO and founder of Kodiak Robotics, states, “NVIDIA makes best-in-class hardware accelerators, and I think it’s going to play a large role in the AI developments for self-driving going forward.”</p>
-<p>“Driving as a routine task is tedious,” adds Tony Han, CEO and cofounder of WeRide. “We want to alleviate people from the burden of driving to give back the time. NVIDIA is the backbone of our AI engine.”</p>
-<p>And Thomas Ingenlath, CEO of Polestar, says, “Our Polestar 3 sits on the NVIDIA DRIVE platform. This is, of course, very much based on AI technology — and it’s really fascinating and a completely new era for the car.”</p>
-<h2><strong>Simulation Is Key</strong></h2>
-<p>Ziv Binyamini, CEO of Foretellix, highlights the role of simulation in development and verification. “Simulation is crucial for the development of autonomous systems,” he says.</p>
-<p>Bruce Baumgartner, vice president of supply chain at Zoox, adds, “We have been leveraging NVIDIA’s technology first and foremost on-vehicle to power the Zoox driver. We also leverage NVIDIA technologies in our cloud infrastructure. In particular, we do a lot of work in our simulator.”</p>
-<h2><strong>Saving Lives With Autonomy</strong><i><br />
-</i><i></i></h2>
-<p>Austin Russell, CEO and founder of Luminar, highlights the opportunity to save lives by using new technology, saying, “The DRIVE platform has been incredibly helpful to be able to actually enable autonomous driving capabilities as well as enhance safety capabilities on vehicles. To be able to have an opportunity to save as many as 100 million lives and 100 trillion hours of people’s time over the next 100 years — everything that we do at the company rolls up to that.”</p>
-<p>“Knowing that [our technology] is in vehicles worldwide and saves lives on the road each and every day — the impact that you deliver as you keep people and family safe is amazingly rewarding,” adds Tal Krzypow, vice president of product and strategy at Cipia.</p>
-<h2><strong>Technology Helps Solve Major Challenges</strong></h2>
-<p>Shiv Tasker, global industry vice president at Capgemini, reflects on the role of technology in addressing global challenges, saying, “Our modern world is driven by technology, and yet we face tremendous challenges. Technology is the answer. We have to solve the major issues so that we leave a better place for our children and our grandchildren.”</p>
-<p>Learn more about the <a href="https://developer.nvidia.com/drive" target="_blank" rel="noopener">NVIDIA DRIVE platform</a> and how it’s helping industry leaders redefine transportation.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/autovideoblog.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/01/autovideoblog-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA DRIVE Partners Showcase Cutting-Edge Innovations in Automated and Autonomous Driving]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
