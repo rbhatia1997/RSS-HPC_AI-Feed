@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 16 Feb 2024 23:05:52 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 19 Feb 2024 18:08:31 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -240,7 +240,7 @@ Xinzhou Wu, vice president, automotive, NVIDIA<br />
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Providing a peek at the architecture powering advanced AI factories, NVIDIA Thursday released a video that offers the first public look at Eos, its latest data-center-scale supercomputer.</p>
 <p>An extremely large-scale <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a>, Eos is where NVIDIA developers create their AI breakthroughs using accelerated computing infrastructure and fully optimized software.</p>
-<p>Eos is built with 576 <a href="https://www.nvidia.com/en-us/data-center/dgx-h100/">NVIDIA DGX H100</a> systems, <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand networking</a> and software, providing a total of 18.4 exaflops of FP8 AI performance.</p>
+<p>Eos is built with 576 <a href="https://www.nvidia.com/en-us/data-center/dgx-h100/">NVIDIA DGX H100</a> systems, <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand networking</a> and software, providing a total of 18.4 exaflops of FP8 AI performance. This system is a sister to a <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fblogs.nvidia.com%2Fblog%2Fscaling-ai-training-mlperf%2F&amp;data=05%7C02%7Cgrainville%40nvidia.com%7Cc7f631fdf68a4870460808dc3174aac0%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638439624354202777%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=t8JYd63NQeTU341PEhKkonuqdW7wsCTU%2FP7Fm8AR7Jo%3D&amp;reserved=0" data-auth="NotApplicable">separate Eos DGX SuperPOD with 10,752 NVIDIA H100 GPUs</a>, used for MLPerf training in November.</p>
 <p>Revealed in November at the Supercomputing 2023 trade show, Eos — named for the Greek goddess said to open the gates of dawn each day — reflects NVIDIA’s commitment to advancing AI technology.</p>
 <h2>Eos Supercomputer Fuels Innovation</h2>
 <p>Each DGX H100 system is equipped with eight <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>. Eos features a total of 4,608 H100 GPUs.</p>
@@ -251,11 +251,12 @@ Xinzhou Wu, vice president, automotive, NVIDIA<br />
 <p>Eos delivers. <a href="https://www.top500.org/lists/top500/2023/11/">Ranked No. 9 in the TOP500</a> list of the world’s fastest supercomputers, Eos pushes the boundaries of AI technology and infrastructure.</p>
 <p>It includes NVIDIA’s advanced accelerated computing and networking alongside sophisticated software offerings such as <a href="https://www.nvidia.com/en-us/data-center/base-command/">NVIDIA Base Command</a> and <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>.</p>
 <p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/J8-CgG5ewJQ?si=Ke2AmFde1VPZS2Jf" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><i></i><br />
-Eos&#8217;s architecture is optimized for AI workloads demanding ultra-low-latency and high-throughput interconnectivity across a large cluster of accelerated computing nodes, making it an ideal solution for enterprises looking to scale their AI capabilities.</p>
+Eos’s architecture is optimized for AI workloads demanding ultra-low-latency and high-throughput interconnectivity across a large cluster of accelerated computing nodes, making it an ideal solution for enterprises looking to scale their AI capabilities.</p>
 <p>Based on NVIDIA Quantum-2 InfiniBand with In-Network Computing technology, its network architecture supports data transfer speeds of up to 400Gb/s, facilitating the rapid movement of large datasets essential for training complex AI models.</p>
-<p>At the heart of Eos lies the groundbreaking DGX SuperPOD architecture powered by NVIDIA&#8217;s DGX H100 systems.</p>
+<p>At the heart of Eos lies the groundbreaking DGX SuperPOD architecture powered by NVIDIA’s DGX H100 systems.</p>
 <p>The architecture is built to provide the AI and computing fields with tightly integrated full-stack systems capable of computing at an enormous scale.</p>
 <p>As enterprises and developers worldwide seek to harness the power of AI, Eos stands as a pivotal resource, promising to accelerate the journey towards AI-infused applications that fuel every organization.</p>
+<p><em>Editor’s note: This post was updated on Feb. 19, 2024, to clarify that there are two Eos systems.</em></p>
 </div>]]></content:encoded>
 					
 		
