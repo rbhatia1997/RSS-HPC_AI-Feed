@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 20 Feb 2024 19:29:19 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 21 Feb 2024 16:10:37 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,57 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>Shining Brighter Together: Google’s Gemma Optimized to Run on NVIDIA GPUs</title>
+		<link>https://blogs.nvidia.com/blog/google-gemma-llm-rtx-ai-pc/</link>
+		
+		<dc:creator><![CDATA[Ankit Patel]]></dc:creator>
+		<pubDate>Wed, 21 Feb 2024 13:00:31 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69874</guid>
+
+					<description><![CDATA[NVIDIA, in collaboration with Google, today launched optimizations across all NVIDIA AI platforms for Gemma — Google’s state-of-the-art new lightweight 2 billion&#8211; and 7 billion-parameter open language models that can be run anywhere, reducing costs and speeding innovative work for domain-specific use cases. Teams from the companies worked closely together to accelerate the performance of		<a class="read-more" href="https://blogs.nvidia.com/blog/google-gemma-llm-rtx-ai-pc/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA, in collaboration with Google, today launched optimizations across all NVIDIA AI platforms for <a href="https://blog.google/technology/developers/gemma-open-models/">Gemma</a> — Google’s state-of-the-art new lightweight <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-2b">2 billion</a>&#8211; and <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-7b">7 billion</a>-parameter open language models that can be run anywhere, reducing costs and speeding innovative work for domain-specific use cases.</p>
+<p>Teams from the companies worked closely together to accelerate the performance of Gemma — built from the same research and technology used to create the Gemini models — with <a href="https://github.com/NVIDIA/TensorRT-LLM">NVIDIA TensorRT-LLM</a>, an open-source library for optimizing large language model inference, when running on NVIDIA GPUs in the data center, in the cloud and on PCs with <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> GPUs.</p>
+<p>This allows developers to target the installed base of over 100 million NVIDIA RTX GPUs available in high-performance AI PCs globally.</p>
+<p>Developers can also run Gemma on NVIDIA GPUs in the cloud, including on Google Cloud’s A3 instances based on the H100 Tensor Core GPU and soon, NVIDIA’s <a href="https://nvidianews.nvidia.com/news/nvidia-supercharges-hopper-the-worlds-leading-ai-computing-platform">H200 Tensor Core GPUs</a> — featuring 141GB of HBM3e memory at 4.8 terabytes per second — which Google will deploy this year.</p>
+<p>Enterprise developers can additionally take advantage of NVIDIA’s rich ecosystem of tools — including <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> with the <a href="https://github.com/NVIDIA/NeMo">NeMo framework</a> and <a href="https://github.com/NVIDIA/TensorRT-LLM">TensorRT-LLM</a> — to fine-tune Gemma and deploy the optimized model in their production applications.</p>
+<p>Learn more about how <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-revs-up-inference-for-google-gemma/">TensorRT-LLM is revving up inference for Gemma</a>, along with additional information for developers. This includes several model checkpoints of Gemma and the FP8-quantized version of the model, all optimized with TensorRT-LLM.</p>
+<p>Experience <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-2b">Gemma 2B</a> and <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-7b">Gemma 7B</a> directly from your browser on the NVIDIA AI Playground.</p>
+<h2><b>Gemma Coming to Chat With RTX</b></h2>
+<p>Adding support for Gemma soon is <a href="https://blogs.nvidia.com/blog/chat-with-rtx-available-now/">Chat with RTX</a>, an NVIDIA tech demo that uses <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a> and TensorRT-LLM software to give users generative AI capabilities on their local, RTX-powered Windows PCs.</p>
+<p><iframe title="Create A Personalized AI Chatbot with Chat With RTX" width="500" height="281" src="https://www.youtube.com/embed/gdsRJZT3IJw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>The Chat with RTX lets users personalize a chatbot with their own data by easily connecting local files on a PC to a large language model.</p>
+<p>Since the model runs locally, it provides results fast, and user data stays on the device. Rather than relying on cloud-based LLM services, Chat with RTX lets users process sensitive data on a local PC without the need to share it with a third party or have an internet connection.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/nv-google-blog-header-preview-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/nv-google-blog-header-preview-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Shining Brighter Together: Google’s Gemma Optimized to Run on NVIDIA GPUs]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>AI’s Hottest Ticket: NVIDIA GTC Brings Together Automotive Leaders and Visionaries Transforming the Future of Transportation</title>
 		<link>https://blogs.nvidia.com/blog/gtc-2024-auto-sessions/</link>
 		
@@ -180,7 +231,7 @@ Xinzhou Wu, vice president, automotive, NVIDIA<br />
 <p>Esteban Toro, senior community relationship manager at Adobe and this week’s featured <i>In the NVIDIA Studio </i>artist, expertly wields AI-powered features in Adobe Photoshop and Lightroom to create his emotionally moving <i>Cinematic Portraits </i>series.</p>
 <figure id="attachment_69822" aria-describedby="caption-attachment-69822" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w.png"><img decoding="async" class="size-large wp-image-69822" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w-672x446.png" alt="" width="672" height="446" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w-672x446.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w-400x266.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w-768x510.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w-678x450.png 678w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w-324x215.png 324w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w-151x100.png 151w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-esteban-toro-wk96-pos-et-03-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69822" class="wp-caption-text">A sneak peek of Toro’s work.</figcaption></figure>
 <p>Have a <a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">Chat with RTX</a> — the tech demo app that lets GeForce RTX owners personalize a generative pretrained transformer <a href="https://www.nvidia.com/en-us/glossary/large-language-models/#:~:text=Large%20language%20models%20(LLMs)%20are,content%20using%20very%20large%20datasets.">large language model</a> connected to their own content, whether in documents, notes, videos or other data formats. Since it runs locally on a Windows RTX PC or workstation, results are fast and secure. <a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">Download</a> Chat with RTX today.</p>
-<p><iframe title="Create A Personalized AI Chatbot with Chat With RTX" width="500" height="281" src="https://www.youtube.com/embed/gdsRJZT3IJw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Create A Personalized AI Chatbot with Chat With RTX" width="500" height="281" src="https://www.youtube.com/embed/gdsRJZT3IJw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Don’t forget <a href="https://www.nvidia.com/gtc/pricing/">GTC registration is open</a> for virtual or in-person attendance. Running March 18-21 in San Jose, Calif., the event delivers something for every technical level and interest area, including <a href="https://www.nvidia.com/gtc/session-catalog/">sessions</a> on how to power content creation using OpenUSD and generative AI.</p>
 <p>And Omniverse OpenUSD month rolls on, spotlighting the open and extensible ecosystem for describing, composing, simulating and collaborating within 3D worlds. Follow NVIDIA Studio on <a href="https://www.instagram.com/nvidiastudio/">Instagram</a>, <a href="https://twitter.com/NVIDIAStudio">X</a> and <a href="https://www.facebook.com/NVIDIAStudio/">Facebook</a> to learn more.</p>
 <h2><b>Storytelling With Adobe AI and RTX </b></h2>
@@ -1177,135 +1228,6 @@ Eos’s architecture is optimized for AI workloads demanding ultra-low-latency a
 			/>
 			<media:title type="html"><![CDATA[New Study Cites AI as Strategic Tool to Combat Climate Change]]></media:title>
 			<media:description type="html">Earth-2 simulation using AI for climate science</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>GeForce NOW Leaps Into Its Fourth Year With 27 New Games and More Celebrations All Month Long</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-feb-games-list-four-year-anniversary-celebration/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 01 Feb 2024 14:00:06 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69560</guid>
-
-					<description><![CDATA[GeForce NOW is celebrating its fourth anniversary all month — plus an extra day for leap year — during February’s GFN Thursdays, with 2 new games joining the cloud. Keep an eye out for more new games and other announcements for members to come. Diablo IV and Overwatch 2 heat up the cloud this GFN		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-feb-games-list-four-year-anniversary-celebration/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> is celebrating its fourth anniversary all month — plus an extra day for leap year — during February’s GFN Thursdays, with 2 new games joining the cloud. Keep an eye out for more new games and other announcements for members to come.</p>
-<figure id="attachment_69579" aria-describedby="caption-attachment-69579" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69579" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-672x336.jpg" alt="Diablo IV and Overwatch 2 on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-2-1-this-week-social-2048x1024-no-copy.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69579" class="wp-caption-text"><em>The cloud is getting hotter.</em></figcaption></figure>
-<p><i>Diablo IV </i>and <i>Overwatch 2</i> heat up the cloud this GFN Thursday to kick off the anniversary celebrations. They’re the next Activision and Blizzard games to join GeForce NOW as part of the <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-feb-23/">NVIDIA and Microsoft partnership</a>, following <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-call-of-duty/"><i>Call of Duty</i></a>.</p>
-<p>The titles join the <i>RAGE </i>franchise as part of five new games joining the ever-expanding GeForce NOW library this week.</p>
-<figure id="attachment_69564" aria-describedby="caption-attachment-69564" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69564" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-672x378.jpg" alt="New GeForce NOW IG channel" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-social-on-ig-1920x1080-1.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69564" class="wp-caption-text"><em>Did it for the ‘Gram.</em></figcaption></figure>
-<p>Follow the #4YearsofGFN celebration and get the latest cloud gaming news on the newly launched GeForce NOW <a href="https://www.instagram.com/nvidiagfn/">Instagram</a> and <a href="https://www.threads.net/@nvidiagfn">Threads</a> channels. Use #GFNShare and tag these accounts for a chance to be featured.</p>
-<p>&nbsp;</p>
-<h2><b>Oh, Heck</b></h2>
-<figure id="attachment_69573" aria-describedby="caption-attachment-69573" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69573" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/Screenshot-diablo-672x379.jpg" alt="Diablo 4 on GeForce NOW" width="672" height="379" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/Screenshot-diablo-672x379.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Screenshot-diablo-400x226.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Screenshot-diablo-768x433.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Screenshot-diablo-798x450.jpg 798w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Screenshot-diablo-381x215.jpg 381w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Screenshot-diablo-177x100.jpg 177w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Screenshot-diablo.jpg 1247w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69573" class="wp-caption-text"><em>Don’t be a chicken.</em></figcaption></figure>
-<p>Join the fight to protect the world of Sanctuary in the highly acclaimed online action role-playing game <i>Diablo IV</i> with the power of a <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080/">GeForce RTX 4080</a> gaming rig in the cloud. Members can look forward to playing the Steam version, with support for the Battle.net launcher coming soon.</p>
-<p>The battle between the High Heavens and Burning Hells rages on as chaos threatens to consume Sanctuary. Create customized characters and choose between five classes: Barbarian, Druid, Necromancer, Rogue and Sorcerer. Each features unique skills and talents to help in battle.</p>
-<p>Jump into the dark, thrilling campaign solo or with friends. Explore a shared open world where players can form parties to take down World Bosses, or join the fray in player vs. player zones to test skills against others. Explore and loot over 120 monster-filled dungeons, and clear out Strongholds to use as safe havens for Sanctuary citizens.</p>
-<p>Ultimate members can stand triumphant at up to 4K resolution and 120 frames per second with support for <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a> technology and experience the action even on low-powered devices.</p>
-<h2><b>Be a Hero</b></h2>
-<figure id="attachment_69567" aria-describedby="caption-attachment-69567" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69567" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-672x378.jpg" alt="Overwatch 2 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/ss_89c69ddd0e566518d5d1d13936087f947f0b1d73-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69567" class="wp-caption-text"><em>Time to save the world again.</em></figcaption></figure>
-<p>Team up and answer the call of heroes in <i>Overwatch 2</i>, streaming today on GeForce NOW. Members can look forward to playing the Steam version, with support for the Battle.net launcher coming soon.</p>
-<p><i>Overwatch 2</i> features 30+ epic heroes, each with game-changing abilities. Battle across all-new maps and modes in this ultimate team-based game. Lead the charge, ambush enemies or aid allies as one of <i>Overwatch</i>’s distinct heroes. Join the battle across dozens of futuristic maps inspired by real-world locations, and master unique game modes in the always-on, ever-evolving, live game.</p>
-<p>Ultimate members can join the action with support for 4K and ultra-low latency. It’s the perfect upgrade for teammates on low-powered devices, ensuring everyone’s playing at heroic quality.</p>
-<h2><b>Rage Out</b></h2>
-<figure id="attachment_69576" aria-describedby="caption-attachment-69576" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69576" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-672x336.jpg" alt="Rage 2 on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-spotlight-rage-2-tw-li-2048x1024-2.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69576" class="wp-caption-text"><em>No rules, no limits, no mercy!</em></figcaption></figure>
-<p>Get ready for action with this week’s five new additions, including the <i>RAGE</i> series:</p>
-<ul>
-<li><i>Bang-On Balls: Chronicles</i> (<a href="https://store.steampowered.com/app/1227650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Diablo IV </i>(<a href="https://store.steampowered.com/app/2344520?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Overwatch 2 </i>(<a href="https://store.steampowered.com/app/2357570?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>RAGE </i>(<a href="https://store.steampowered.com/app/9200?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>RAGE 2 </i>(<a href="https://store.steampowered.com/app/548570?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, <a href="https://www.epicgames.com/store/p/rage-2?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, <a href="https://www.xbox.com/games/store/rage-2-pc/9P2J7WHV0K4N?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass)</li>
-</ul>
-<p>And check out what’s coming throughout the rest of the month:</p>
-<ul>
-<li><i>Stormgate </i>(Demo on <a href="https://store.steampowered.com/app/2012510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, available Feb. 5-12 during Steam Next Fest)</li>
-<li><i>The Inquisitor </i>(New release on <a href="https://store.steampowered.com/app/1880470?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 8)</li>
-<li><i>Banishers: Ghosts of New Eden </i>(New release on <a href="https://store.steampowered.com/app/1493640?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 13)</li>
-<li><i>Solium Infernum </i>(New release on <a href="https://store.steampowered.com/app/1893810?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 14)</li>
-<li><i>Skull and Bones </i>(New release on <a href="https://store.ubisoft.com/us/skull-and-bones/6295077a27efc536e38350a0.html#ucid=AFL-ID_152062&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;addinfo=">Ubisoft</a>, Feb. 16)</li>
-<li><i>The Thaumaturge </i>(New release on <a href="https://store.steampowered.com/app/1684350?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 20)</li>
-<li><i>Myth of Empires </i>(New re-release on <a href="https://store.steampowered.com/app/1371580?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 21)</li>
-<li><i>Terminator: Dark Fate &#8211; Defiance </i>(New release on <a href="https://store.steampowered.com/app/1839950?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 21)</li>
-<li><i>Nightingale </i>(New release on <a href="https://store.steampowered.com/app/1928980?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 22)</li>
-<li><i>Garden Life: A Cozy Simulator </i>(New release on <a href="https://store.steampowered.com/app/1915380?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 22)</li>
-<li><i>Pacific Drive </i>(New release on <a href="https://store.steampowered.com/app/1458140?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 22)</li>
-<li><i>STAR WARS: Dark Forces Remaster </i>(New release on <a href="https://store.steampowered.com/app/2292260?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 28)</li>
-<li><i>Welcome to ParadiZe </i>(New release on <a href="https://store.steampowered.com/app/1519090?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 29)</li>
-<li><i>Aragami 2 </i>(Xbox, available on <a href="https://www.xbox.com/games/store/aragami-2/9PN9WG83X4XF?utm_source=nvidia&amp;utm_campaign=geforce_now">Microsoft Store</a>)</li>
-<li><i>dotAGE </i>(<a href="https://store.steampowered.com/app/638510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Fort Solis </i>(<a href="https://store.steampowered.com/app/1931730?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Katamari Damacy REROLL </i>(<a href="https://store.steampowered.com/app/848350?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Klonoa Phantasy Reverie Series </i>(<a href="https://store.steampowered.com/app/1730680?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>PAC-MAN MUSEUM+ </i>(<a href="https://store.steampowered.com/app/1665130?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>PAC-MAN WORLD Re-PAC </i>(<a href="https://store.steampowered.com/app/1859470?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Tales of Arise </i>(<a href="https://store.steampowered.com/app/740130?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Tram Simulator Urban Transit </i>(<a href="https://store.steampowered.com/app/2546690?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>The Walking Dead: The Telltale Definitive Series </i>(<a href="https://store.steampowered.com/app/1449690?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-</ul>
-<h2><b>Joyful January</b></h2>
-<p>In addition to the 20 games announced last month, 14 more joined the <a href="http://play.geforcenow.com">GeForce NOW library</a>:</p>
-<ul>
-<li><i>Those Who Remain</i> (New release on <a href="https://www.xbox.com/games/store/those-who-remain/9NFC3G481KKQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, Jan. 16)</li>
-<li><i>New Cycle</i> (New release on <a href="https://store.steampowered.com/app/2198510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Jan. 18)</li>
-<li><i>Assassin’s Creed: Valhalla </i>(<a href="https://gamepass.ubisoft.com/">Xbox</a>, available for PC Game Pass)</li>
-<li><i>Beacon Pines </i>(<a href="https://www.xbox.com/games/store/beacon-pines/9P4R2M0NRWNK?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Exoprimal</i> (<a href="https://store.steampowered.com/app/1286320?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>FAR: Changing Tides </i>(<a href="https://www.xbox.com/games/store/far-changing-tides-windows-edition/9MT3D7Z4NWDV?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Going Under </i>(<a href="https://www.xbox.com/games/store/going-under/9nx3g3z38cv2?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Metal: Hellsinger</i> (<a href="https://www.xbox.com/games/store/metal-hellsinger-xbox-series-xs--pc/9PDXJP3805DN?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Road 96: Mile 0</i> (<a href="https://www.xbox.com/games/store/road-96-mile-0/9P8RTRSDBDMG?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>The Talos Principle 2</i> (<a href="https://www.epicgames.com/store/p/the-talos-principle-2-ab1034?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>TUNIC</i> (<a href="https://www.xbox.com/games/store/tunic/9NLRT31Z4RWM?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available for PC Game Pass)</li>
-<li><i>Turbo Golf Racing </i>(<a href="https://www.xbox.com/games/store/turbo-golf-racing-game-preview/9N6781PMXC02?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available for PC Game Pass)</li>
-<li><i>Turnip Boy Commits Tax Evasion </i>(<a href="https://www.xbox.com/games/store/turnip-boy-commits-tax-evasion/9N0T8V0R7MBC?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on the Microsoft Store)</li>
-<li><i>Zombie Army 4: Dead War</i> (<a href="https://www.xbox.com/games/store/zombie-army-4-dead-war/9PLSCHRN5715?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available for PC Game Pass)</li>
-</ul>
-<p>Discussions with Spike Chunsoft have confirmed that the publisher’s games will remain on GeForce NOW. Members can continue to stream these titles from the cloud:<i></i></p>
-<ul>
-<li><i>428 Shibuya Scramble</i></li>
-<li><i>AI: The Somnium Files</i></li>
-<li><i>Conception PLUS: Maidens of the Twelve Stars</i></li>
-<li><i>Danganronpa: Trigger Happy Havoc</i></li>
-<li><i>Danganronpa 2: Goodbye Despair</i></li>
-<li><i>Danganronpa V3: Killing Harmony</i></li>
-<li><i>Danganronpa Another Episode: Ultra Despair Girls</i></li>
-<li><i>Fire Pro Wrestling World</i></li>
-<li><i>Re: ZERO &#8211; Starting Life in Another World &#8211; The Prophecy of the Throne</i></li>
-<li><i>RESEARCH and DESTROY</i></li>
-<li><i>Shiren the Wanderer: The Tower of Fortune and the Dice of Fate</i></li>
-<li><i>STEINS;GATE</i></li>
-<li><i>Zanki Zero: Last Beginning</i></li>
-<li><i>Zero Escape: The Nonary Games</i></li>
-</ul>
-<p>What are you looking forward to streaming? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">Who&#39;s tryna be a hero in the cloud? <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f60f.png" alt="😏" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1752738512959381883?ref_src=twsrc%5Etfw">January 31, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-4-year-anniversary-nv-blog-1280x680-no-cta.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/gfn-thursday-4-year-anniversary-nv-blog-1280x680-no-cta-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[GeForce NOW Leaps Into Its Fourth Year With 27 New Games and More Celebrations All Month Long]]></media:title>
-			<media:description type="html"></media:description>
 			</media:content>
 			</item>
 	</channel>
