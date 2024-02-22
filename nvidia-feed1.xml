@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 21 Feb 2024 16:10:37 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 21 Feb 2024 18:40:45 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -39,7 +39,7 @@
 		</a>
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA, in collaboration with Google, today launched optimizations across all NVIDIA AI platforms for <a href="https://blog.google/technology/developers/gemma-open-models/">Gemma</a> — Google’s state-of-the-art new lightweight <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-2b">2 billion</a>&#8211; and <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-7b">7 billion</a>-parameter open language models that can be run anywhere, reducing costs and speeding innovative work for domain-specific use cases.</p>
-<p>Teams from the companies worked closely together to accelerate the performance of Gemma — built from the same research and technology used to create the Gemini models — with <a href="https://github.com/NVIDIA/TensorRT-LLM">NVIDIA TensorRT-LLM</a>, an open-source library for optimizing large language model inference, when running on NVIDIA GPUs in the data center, in the cloud and on PCs with <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> GPUs.</p>
+<p>Teams from the companies worked closely together to accelerate the performance of Gemma — built from the same research and technology used to create the Gemini models — with <a href="https://github.com/NVIDIA/TensorRT-LLM">NVIDIA TensorRT-LLM</a>, an open-source library for optimizing large language model inference, when running on NVIDIA GPUs in the data center, in the cloud, and locally on workstations with <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> GPUs or PCs with <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX</a> GPUs.</p>
 <p>This allows developers to target the installed base of over 100 million NVIDIA RTX GPUs available in high-performance AI PCs globally.</p>
 <p>Developers can also run Gemma on NVIDIA GPUs in the cloud, including on Google Cloud’s A3 instances based on the H100 Tensor Core GPU and soon, NVIDIA’s <a href="https://nvidianews.nvidia.com/news/nvidia-supercharges-hopper-the-worlds-leading-ai-computing-platform">H200 Tensor Core GPUs</a> — featuring 141GB of HBM3e memory at 4.8 terabytes per second — which Google will deploy this year.</p>
 <p>Enterprise developers can additionally take advantage of NVIDIA’s rich ecosystem of tools — including <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> with the <a href="https://github.com/NVIDIA/NeMo">NeMo framework</a> and <a href="https://github.com/NVIDIA/TensorRT-LLM">TensorRT-LLM</a> — to fine-tune Gemma and deploy the optimized model in their production applications.</p>
@@ -48,7 +48,7 @@
 <h2><b>Gemma Coming to Chat With RTX</b></h2>
 <p>Adding support for Gemma soon is <a href="https://blogs.nvidia.com/blog/chat-with-rtx-available-now/">Chat with RTX</a>, an NVIDIA tech demo that uses <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a> and TensorRT-LLM software to give users generative AI capabilities on their local, RTX-powered Windows PCs.</p>
 <p><iframe title="Create A Personalized AI Chatbot with Chat With RTX" width="500" height="281" src="https://www.youtube.com/embed/gdsRJZT3IJw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>The Chat with RTX lets users personalize a chatbot with their own data by easily connecting local files on a PC to a large language model.</p>
+<p>The Chat with RTX lets users personalize a chatbot with their own data by easily connecting local files on an RTX PC to a large language model.</p>
 <p>Since the model runs locally, it provides results fast, and user data stays on the device. Rather than relying on cloud-based LLM services, Chat with RTX lets users process sensitive data on a local PC without the need to share it with a third party or have an internet connection.</p>
 </div>]]></content:encoded>
 					
