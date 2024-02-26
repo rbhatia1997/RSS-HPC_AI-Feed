@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 20 Feb 2024 12:02:54 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 26 Feb 2024 11:02:29 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,84 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Accelerating agent-based simulation for autonomous driving</title>
+		<link>https://aws.amazon.com/blogs/hpc/accelerating-agent-based-simulation-for-autonomous-driving-with-hpc/</link>
+		
+		<dc:creator><![CDATA[Ilan Gleiser]]></dc:creator>
+		<pubDate>Mon, 26 Feb 2024 11:02:29 +0000</pubDate>
+				<category><![CDATA[Automotive]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Industries]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">b5625f70c17b5e2ef046c36732be097d809e0318</guid>
+
+					<description>AWS is powering the future of self-driving cars. Check out this post to see how high performance computing is transforming agent-based models for the CARLA RAI Challenge.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3356" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/23/boofla88_a_robot_wearing_a_hat_and_driving_a_car_on_a_sunny_day_6f8f05d1-fe46-48fc-9828-a49a1cf22794.png" alt="" width="380" height="212"&gt;Driving innovation has always been at the core of AWS and one of the realms in which this innovation is most palpable is in the burgeoning industry of autonomous vehicles. By accelerating agent-based models (ABM) simulations with high performance computing, AWS is at the forefront of this technological revolution, and nowhere is this more evident than in their support of the CARLA RAI Challenge and their commitment to Responsible AI (RAI).&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll tell you about the challenge itself, the tools we’ve leveraged to set it up, and show you how you can participate.&lt;/p&gt; 
+&lt;h2&gt;The CARLA RAI challenge and autonomous driving&lt;/h2&gt; 
+&lt;p&gt;In the realm of autonomous driving, the &lt;a href="https://carla-rai-challenge.github.io/"&gt;CARLA Responsible AI Challenge&lt;/a&gt; is an initiative led by the Oxford Robotics Institute, using a virtual environment created by the CARLA open-source autonomous driving simulator.&lt;/p&gt; 
+&lt;p&gt;We’re hoping to stimulate creative minds to build capable artificial intelligence (AI) agents with the ability to navigate diverse and complex driving scenarios. The challenge has a strong emphasis on the principles of Responsible AI to promote safety in AI systems through rigorous assessment of models under &lt;em&gt;robustness&lt;/em&gt;, &lt;em&gt;environmental sustainability&lt;/em&gt;, and &lt;em&gt;transparency&lt;/em&gt; lenses.&lt;/p&gt; 
+&lt;p&gt;The role of AI in autonomous driving has never been more crucial, and the CARLA RAI Challenge serves to highlight this fact. Participants are encouraged to push the limits of technology and create AI agents that can navigate in all possible driving conditions – not just ideal ones. From bustling city traffic to desolate country roads, from bright sunny days to foggy nights – the AI agent should be prepared to handle it all.&lt;/p&gt; 
+&lt;div id="attachment_3349" style="width: 909px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3349" loading="lazy" class="size-full wp-image-3349" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/23/CleanShot-2024-02-23-at-13.16.47.png" alt="Fig 1: The main goal of the challenge remains the assessment of the driving proficiency of autonomous agents in realistic traffic situations, as defined in the leaderboard mechanics. Teams will have to complete 10 routes in 2 weather conditions through 5 repetitions." width="899" height="382"&gt;
+ &lt;p id="caption-attachment-3349" class="wp-caption-text"&gt;Fig 1: The main goal of the challenge remains the assessment of the driving proficiency of autonomous agents in realistic traffic situations, as defined in the &lt;a href="https://leaderboard.carla.org/#task"&gt;leaderboard mechanics&lt;/a&gt;. Teams will have to complete 10 routes in 2 weather conditions through 5 repetitions.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The competition goes beyond just AI innovation. By challenging participants to ensure their AI systems can adapt to varying traffic, weather, and hardware conditions, the competition ensures driving models’ robustness.&lt;/p&gt; 
+&lt;p&gt;But &lt;em&gt;Responsible AI&lt;/em&gt; is important, too. Participants are encouraged to develop transparent or explainable models to facilitate accountability. This allows for better understanding, and therefore, improvements in AI behavior.&lt;/p&gt; 
+&lt;p&gt;Finally, the challenge promotes environmental sustainability by encouraging model development activities that cut down on carbon dioxide (CO2) emissions.&lt;/p&gt; 
+&lt;p&gt;The timeline for the challenge is as follows:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;The challenge will be opened on April 10th, 2024.&lt;/li&gt; 
+ &lt;li&gt;The closing date for the challenge is July 9th, 2024.&lt;/li&gt; 
+ &lt;li&gt;Teams are required to submit their video presentation by July 21st, 2024.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2&gt;Role of AWS in agent-based simulations&lt;/h2&gt; 
+&lt;p&gt;Using AWS for agent-based simulations helps to provide a robust and scalable environment for testing – and refining – the AI agents participating in the challenge. AWS offers expansive computational resources via its cloud-based infrastructure.&lt;/p&gt; 
+&lt;p&gt;AWS operates at a huge scale, making it possible to run the resource-intensive simulations needed for testing the AI agents. Each simulation is a high-fidelity virtual representation of various driving scenarios, involving many variables and needing a lot of processing power. These simulations are not just one-off events, but need to be run repeatedly as the AI agents are continuously tweaked and improved.&lt;/p&gt; 
+&lt;p&gt;But it’s not just about resources: collaboration is critical for innovation. The cloud provides an environment where researchers, developers, and AI enthusiasts can come together to share ideas, learn from each other, and drive forward the development of autonomous driving technology.&lt;/p&gt; 
+&lt;p&gt;This means that AWS is a collaborator and enabler in the world of autonomous driving, making significant contributions to the advancement of agent-based simulations and, by extension, the entire field of autonomous vehicles.&lt;/p&gt; 
+&lt;h2&gt;The power of agent-based models in autonomous driving&lt;/h2&gt; 
+&lt;p&gt;Agent-based models (ABM) are changing the world of autonomous driving. Their power lies in their ability to replicate real-world driving conditions at a local level, with remarkable accuracy and detail – the perfect environment for testing AI agents.&lt;/p&gt; 
+&lt;p&gt;An agent-based model is a complex system where each entity (agent), operates independently according to a set of rules. In the context of autonomous driving, these agents might represent other vehicles, pedestrians, or even elements of the environment like traffic lights and road markings. By simulating the actions and interactions of these agents, ABMs &amp;nbsp;can recreate a wide range of driving scenarios – from rush hour in a busy city to a quiet country road at night.&lt;/p&gt; 
+&lt;p&gt;Agent-based models are also flexible. We can easily modify them to include new types of agents, or adjust the behavior of existing ones, allowing researchers to simulate virtually any driving scenario imaginable. This adaptability is key for the development of AI systems trying to replicate what they might encounter on real roads.&lt;/p&gt; 
+&lt;p&gt;But the true power of ABMs is that they can learn and evolve. As the agents navigate the virtual environment, they learn. Each run provides data that can be used to fine-tune the agent and optimize its algorithm. This iterative process of learning and adaptation is what makes agent-based models such a powerful tool for autonomous driving research.&lt;/p&gt; 
+&lt;h2&gt;How the CARLA RAI Challenge runs on AWS&lt;/h2&gt; 
+&lt;p&gt;Running multiple simulations simultaneously drastically reduces the time spent testing and refining the agents, clearly a boon for developers, who can iterate faster. That means we need to have a scalable mechanism to grow the resources when we need to do a lot of work.&lt;/p&gt; 
+&lt;p&gt;Once a developer creates and containerizes their agents, they can deploy them on AWS. In Figure 1, you can tell that the first step involves using the EvalAI website to submit Docker containers to the Amazon&amp;nbsp;Elastic Container Registry (ECR), makes it easy to store, share, and deploy container images.&lt;/p&gt; 
+&lt;p&gt;In step 2, the user submits the simulation configuration data, which will be forwarded by EvalAI into an Amazon Simple Queue Service (Amazon SQS) queue, which then triggers an Amazon EventBridge event (step 3) that connects applications with data from diverse sources.&lt;/p&gt; 
+&lt;p&gt;The event initiated by SQS leads to the execution of an AWS Step Functions pipeline (step 4), which carries out a series of tasks based on the established deployment graph. The Step Functions then execute step 5, where a Lambda function is used to stash user information into Amazon DynamoDB, which is a NoSQL database that offers excellent scalability.&lt;/p&gt; 
+&lt;p&gt;Step 6 involves the actual simulation itself, which is done using the Amazon Elastic Kubernetes Service (Amazon EKS). EKS facilitates the scaling of containerized applications across a cluster. This elasticity allows for the automatic shutdown of all unused resources, too. All the operational logs and simulation results are logged into Amazon CloudWatch for analysis and diagnostics later.&lt;/p&gt; 
+&lt;p&gt;Finally – at step 7 – another Lambda function stores the simulation results in an Amazon Simple Storage Service bucket (Amazon S3). This is an excellent solution for storing a lot of files. The last step also returns the results using a REST API to the user through the EvalAI web interface.&lt;/p&gt; 
+&lt;div id="attachment_3350" style="width: 781px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3350" loading="lazy" class="size-full wp-image-3350" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/23/CleanShot-2024-02-23-at-13.18.08.png" alt="Figure 1 – The elastic cloud architecture for the CARLA RAI Challenge. Each stage is designed to scale, which means multiple simulations can run simultaneously. This drastically reduces the time spent on testing and refining the agents." width="771" height="390"&gt;
+ &lt;p id="caption-attachment-3350" class="wp-caption-text"&gt;Figure 1 – The elastic cloud architecture for the CARLA RAI Challenge. Each stage is designed to scale, which means multiple simulations can run simultaneously. This drastically reduces the time spent on testing and refining the agents.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Challenge breakdown&lt;/h2&gt; 
+&lt;p&gt;Here’s a breakdown of the challenge.&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;&lt;strong&gt;Getting Started with CARLA&lt;/strong&gt;: Participants need to &lt;a href="https://carla-rai-challenge.github.io/create/"&gt;download&lt;/a&gt; and set up a specific version of CARLA (0.9.10.1) on their computers. This version is necessary because it matches the environment used in the online servers where the agents are assessed.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Configuration and Setup&lt;/strong&gt;: After installing CARLA, participants must adjust some configurations to link additional components specific for the challenge. This include the &lt;em&gt;Leaderboard&lt;/em&gt; system the &lt;em&gt;Scenario Runner&lt;/em&gt;, and &lt;em&gt;Routes:&lt;/em&gt; 
+  &lt;ol&gt; 
+   &lt;li&gt;&lt;strong&gt;Leaderboard&lt;/strong&gt;: the control center for the challenge. It runs the autonomous agent created by participants through a series of tests across different routes and traffic conditions. It evaluates how well the agent performs in each scenario.&lt;/li&gt; 
+   &lt;li&gt;&lt;strong&gt;Scenarios&lt;/strong&gt;: These are predefined traffic situations that the autonomous agent must navigate through successfully. There are ten types of scenarios, each with different parameters. These simulate real-world traffic situations in the virtual towns available in CARLA.&lt;/li&gt; 
+   &lt;li&gt;&lt;strong&gt;Routes&lt;/strong&gt;: These are paths from one point to another that the agent must follow. Routes have start and end points and may include specific weather conditions they have to simulate. Participants can train their agents using the provided routes, but the routes used for final evaluation in the challenge are a secret.&lt;/li&gt; 
+  &lt;/ol&gt; &lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Testing the Agent&lt;/strong&gt;: Before submitting, we encourage participants to test their agents using a basic setup. This test them manually control an agent through a simulation, to get clear understanding of what the agent will face during the challenge.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Final Submission and Evaluation&lt;/strong&gt;: Once they complete the program, we’ll ask participants to prepare their autonomous agent as a Docker image, which will undergo rigorous testing by the Leaderboard on undisclosed routes and scenarios. It’s crucial that the agent is able to successfully navigate these routes while following traffic laws and handling a variety of traffic situations. We’ll evaluate the performance of the agent in these tasks, focusing on how the agents cope in degraded driving and traffic conditions. Special metrics in the challenge include things like robustness against harsh environmental situations, data drift, sensor failures, and environmental impacts of running the agents.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2&gt;What’s next? AWS and autonomous driving&lt;/h2&gt; 
+&lt;p&gt;As the landscape of autonomous driving continues to advance, we see AWS continuing to advance. Their ongoing dedication to delivering robust, high performance computing solutions, and their support for forward-thinking initiatives like the CARLA RAI Challenge is a promising combination.&lt;/p&gt; 
+&lt;p&gt;That’s because rapid progress in autonomous driving demands powerful, scalable, and reliable computational resources – definitely the cloud’s wheelhouse.&lt;/p&gt; 
+&lt;p&gt;Beyond this, the contribution that AWS makes to promoting a culture of collaboration and innovation within the AI and autonomous driving communities is an important driver. The cloud is important for researchers, developers, and AI enthusiasts to exchange ideas and learn from each other. And all of this collectively pushes the boundaries of what’s possible.&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>How agent-based models powered by HPC are enabling large scale economic simulations</title>
 		<link>https://aws.amazon.com/blogs/hpc/how-agent-based-models-powered-by-hpc-are-enabling-large-scale-economic-simulations/</link>
 		
@@ -29,7 +107,7 @@
 		<guid isPermaLink="false">cc9fc285c87dc520b888f3312bbdbf1f55224dd6</guid>
 
 					<description>See how agent-based models, driven to scale by HPC in the cloud, are shedding new light on macroprudential policies with this post from Oxford's Institute for New Economic Thinking.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright wp-image-3306 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/12/boofla88_conways_game_of_life_3d_photo_realistic_06f8a4e2-75eb-4a1e-adba-4be1f3ce34b3.png" alt="How agent-based models powered by HPC are enabling large scale economic simulations" width="380" height="212"&gt;This post was contributed by J. Doyne&amp;nbsp;Farmer, Institute of New Economic Thinking, Oxford University, Jagoda&amp;nbsp;Kaszowska-Mojsa, Oxford University &amp;amp; Institute of Economics, Polish Academy of Sciences, Sam&amp;nbsp;Bydlon, Senior Solutions Architect and Ilan&amp;nbsp;Gleiser, Principal Machine Learning Specialist, WWSO Emerging Technologies, AWS&lt;br&gt; &lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright wp-image-3306 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/12/boofla88_conways_game_of_life_3d_photo_realistic_06f8a4e2-75eb-4a1e-adba-4be1f3ce34b3.png" alt="How agent-based models powered by HPC are enabling large scale economic simulations" width="380" height="212"&gt;This post was contributed by J. Doyne&amp;nbsp;Farmer, Institute of New Economic Thinking, Oxford University, Jagoda&amp;nbsp;Kaszowska-Mojsa, Oxford University &amp;amp; Institute of Economics, Polish Academy of Sciences, Sam&amp;nbsp;Bydlon, Senior Solutions Architect and Ilan&amp;nbsp;Gleiser, Principal Machine Learning Specialist, WWSO Emerging Technologies, AWS&lt;br&gt; &lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Economists and policy makers have maintained a sustained interest in understanding the effects of macroprudential economic policies. Recently, a novel approach using agent-based models has emerged, which provides insights into the complexity of these policies.&lt;/p&gt; 
 &lt;p&gt;Agent-based models (ABM) are a type of computer simulation that has proven instrumental in shedding light on how different types of economic agents interact in a heterogeneous environment.&lt;/p&gt; 
 &lt;p&gt;In this post, we will explore the use of agent-based models and high performance computing on AWS used by researchers at the University of Oxford’s Institute for New Economic Thinking (INET) to enhance our comprehension of macroprudential policies and their potential implications on economic systems.&lt;/p&gt; 
@@ -2241,60 +2319,6 @@ print(r.text)
   &lt;p&gt;Dr. Namid Stillman is a Quantitative Researcher at Simudyne. He has a background in multi-disciplinary research, including in fields of material science, cell migration and nanotechnology, with a focus on developing interpretable AI method for scientific research. He is the author of the GNNs in Action textbook from Manning Press and co-organizer of the Simulation-based Science interest group at the Alan Turing Institute.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Why you should use Fargate with AWS Batch for your serverless batch architectures</title>
-		<link>https://aws.amazon.com/blogs/hpc/why-use-fargate-with-aws-batch-for-serverless-batch-compute/</link>
-		
-		<dc:creator><![CDATA[Angel Pizarro]]></dc:creator>
-		<pubDate>Thu, 19 Oct 2023 16:35:41 +0000</pubDate>
-				<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS Fargate]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Serverless]]></category>
-		<guid isPermaLink="false">ed6ef3c81c5346f412fd19dd442308e952baeb55</guid>
-
-					<description>AWS Batch recently added support for Graviton and Windows containers on Fargate. Read about how these and other features like large task sizes and configurable local storage make AWS Batch on Fargate a fantastic serverless solution for your batch workloads.</description>
-										<content:encoded>&lt;p&gt;The AWS Batch team recently &lt;a href="https://aws.amazon.com/about-aws/whats-new/2023/08/aws-batch-fargate-linux-arm64-windows-x86-containers-console/"&gt;launched&lt;/a&gt; support for Graviton and Windows containers running on AWS Fargate resources. Combine that announcement with other recent additions such as larger task sizes and configurable local storage and Fargate becomes an &lt;em&gt;even better&lt;/em&gt; serverless solution for your batch and asynchronous workloads.&lt;/p&gt; 
-&lt;p&gt;Let’s take a look at the features that make Fargate a great choice for your small to medium scale AWS Batch environments, starting with the most recent announcements.&lt;/p&gt; 
-&lt;h2&gt;Graviton resources&lt;/h2&gt; 
-&lt;p&gt;Previously, Batch on Fargate only supported running containers that leverage an x86 CPU architecture, even though Fargate itself was able to run tasks using Linux containers built for the Graviton2 Arm architecture. We closed that gap with this release and you can now leverage Graviton2 which delivers 2-3.5 times better CPU performance per watt than any other processors of the same generation for your Batch jobs, making them a sustainable choice. They also have very capable price/performance characteristics and so are idea for analyzing data, logs, or other batch processing. Fargate does not yet support Graviton3.&lt;/p&gt; 
-&lt;p&gt;The best way to find out whether x86 or aarch64 resources give you better price/performance is to try them out on your own application. You can leverage &lt;a href="https://aws.amazon.com/codepipeline/"&gt;AWS CodePipeline&lt;/a&gt; to build multi-architecture container images and store them in &lt;a href="https://aws.amazon.com/blogs/containers/introducing-multi-architecture-container-images-for-amazon-ecr/"&gt;Amazon Elastic Container Registry (Amazon ECR)&lt;/a&gt;. If you need some guidance for building multi-architecture container images, this AWS samples &lt;a href="https://github.com/aws-samples/aws-multiarch-container-build-pipeline"&gt;GitHub repository&lt;/a&gt; is a good place to start.&lt;/p&gt; 
-&lt;p&gt;To leverage Fargate Graviton resources, you set the job definition’s runtimePlatform.cpuArchitecture parameter to ARM64. Then submit a job to a job queue that is configured to use Fargate resources. Graviton with Fargate is available in most AWS Regions, but there are some limitations for you should consider such as being limited to Linux containers. The full set of considerations are outlined in the documentation in &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-arm64.html"&gt;&lt;em&gt;Working with 64-bit ARM workloads on Amazon ECS&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Windows containers&lt;/h2&gt; 
-&lt;p&gt;Since its release, AWS Batch has only supported running containers on top of the Linux operating system. Customers could build against the .NET Core for Linux, but not native Windows containers. Those containers are required to run Windows-only applications. Windows Batch jobs can also automate tasks that would benefit from a Windows environment, for example when you want to integrate with Microsoft Active Directory. Now customers can leverage the runtimePlatform.operatingSystemFamily parameter to designate that the container should run on a variety of &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform-windows-fargate.html"&gt;Windows Server releases supported by Fargate&lt;/a&gt;. With Fargate taking care of the licensing, running batch processing jobs on Windows is simpler than managing your own licensing for the ephemeral resources.&lt;/p&gt; 
-&lt;p&gt;One thing to keep in mind when working with Windows containers is the larger size of the windows base layer compared to most Linux versions. Even with the recent Server Core image size reduction introduced with Windows Core 2022, at the time of writing it’s still 3.91GB. Additionally, you need to ensure &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform-windows-fargate.html"&gt;compatibility&lt;/a&gt; between the Windows version of the job and the Windows version used on the Batch compute environment. For a full set of considerations, refer to the documentation on using &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html#windows-considerations"&gt;Windows containers on AWS Fargate&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Lastly, we recommend that you map Windows and Linux compute environments to platform-specific job queues to avoid trying to run jobs using the wrong operating system.&lt;/p&gt; 
-&lt;h2&gt;Larger task sizes&lt;/h2&gt; 
-&lt;p&gt;Last October &lt;a href="https://aws.amazon.com/about-aws/whats-new/2022/10/aws-batch-increases-compute-memory-resource-configurations-fargate-type-jobs-4x/"&gt;we announced&lt;/a&gt; the ability to launch larger Fargate type jobs that use up to 16 vCPUs and up to 120 GiB of memory. This is approximately a 4x increase from previous limits.&lt;/p&gt; 
-&lt;p&gt;These larger task sizes enable you to run more compute-heavy and/or memory-intensive applications like machine learning inference, scientific modeling, and distributed analytics on Fargate. Larger vCPU and memory options may also make migration to serverless container compute simpler for jobs that need more compute resources and cannot be easily re-architected into smaller sized containers.&lt;/p&gt; 
-&lt;p&gt;To take advantage of these larger task sizes, set the appropriate values for the resourceRequirements parameter of your containerProperties. You’ll want to pay attention to the &lt;a href="https://docs.aws.amazon.com/batch/latest/APIReference/API_ResourceRequirement.html"&gt;API documentation&lt;/a&gt; about the valid combination of values for Fargate for VCPU and MEMORY. For example, if your value for VCPU is &lt;em&gt;1&lt;/em&gt;, then the valid values for MEMORY (in MiB) are &lt;em&gt;2048, 3072, 4096, 5120, 6144, 7168&lt;/em&gt;, or &lt;em&gt;8192&lt;/em&gt;.&lt;/p&gt; 
-&lt;h2&gt;Configurable local storage volumes&lt;/h2&gt; 
-&lt;p&gt;More recently, the AWS Batch team &lt;a href="https://aws.amazon.com/about-aws/whats-new/2023/03/aws-batch-configurable-ephemeral-storage-fargate/"&gt;released a feature&lt;/a&gt; that allows you to configure ephemeral storage up to 200 GiB in size on Fargate job definitions. The previous default was 20 GiB, which was not nearly enough for data-heavy processes like genomics or video processing. If you need even more storage space, you still have the option to configure a shared Amazon Elastic File System (Amazon EFS) mountpoint as part of the job definition.&lt;/p&gt; 
-&lt;p&gt;To define the size of an ephemeral volume for a job, use the ephemeralStorage &lt;a href="https://docs.aws.amazon.com/batch/latest/APIReference/API_EphemeralStorage.html"&gt;parameter&lt;/a&gt; in the job definition’s containerProperties. You can set a value from 21 up to 200 GiB. Not specifying this parameter results in the default value of 20 GiB for local storage. This parameter is available only when you’re using Fargate.&lt;/p&gt; 
-&lt;h2&gt;Other great Fargate features for batch workloads&lt;/h2&gt; 
-&lt;p&gt;Even before adding support for larger tasks, larger local storage, and Graviton and Windows containers, Fargate had some nice advantages for running batch workloads.&lt;/p&gt; 
-&lt;h3&gt;Job level cost allocation&lt;/h3&gt; 
-&lt;p&gt;When running Batch jobs on EC2 resources, it can take some effort to accurately determine the compute cost of any given job that ran on the shared instance. Since Fargate jobs are metered individually, you have an easier time determining the cost of jobs as opposed to joining the metered usage against &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/usage-reports.html#task-cur"&gt;split cost allocation data for tasks&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3&gt;Fargate with Amazon EC2 Spot capacity provider&lt;/h3&gt; 
-&lt;p&gt;Fargate resources can leverage EC2 Spot capacity to run jobs at a discounted rate compared to the on-demand price. The usual Spot criteria apply — meaning that your jobs could be interrupted but you’ll get two-minute warning. For Fargate, the warning is sent as a task state change event to Amazon EventBridge and as a SIGTERM signal to the running task.&lt;/p&gt; 
-&lt;p&gt;You can take advantage of the SIGTERM signal in your application code to gracefully exit the process, possibly checkpointing data to shared storage so that the task can start at a later time when capacity becomes available. The SIGTERM signal must be received from within the container to perform any cleanup actions. Failure to process this signal results in the task receiving a SIGKILL signal and that, in turn, may result in data loss or corruption.&lt;/p&gt; 
-&lt;p&gt;Please note that Fargate Spot is not supported for&amp;nbsp;ARM64&amp;nbsp;and Windows-based containers on Fargate, but we still think it is a great option for your other Batch on Fargate workloads.&lt;/p&gt; 
-&lt;h3&gt;Shared storage across jobs using Amazon Elastic File System&lt;/h3&gt; 
-&lt;p&gt;Expanded local storage is great, but sometimes you need to send the output of one task as the input to another, and copying all that data around can take time (and hence money). Sometimes it is easier and faster to share data across tasks directly using a shared file system. A shared filesystem would also be advantageous for checkpointing processes for later restart, as in the case of Spot interruptions.&lt;/p&gt; 
-&lt;p&gt;You can define mountpoints Amazon Elastic File System (EFS) at the job definition level. If you define two job definitions with the same mount point, they effectively have a common place to read and write data. You can read more about how to do that &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-support-for-per-job-amazon-efs-volumes-in-aws-batch/"&gt;in our “how to use EFS with AWS Batch” blog post&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Finally, whenever you leverage shared storage across jobs and applications, you should always pay attention to how they may interact with each other. Specifically you should identify and address any security boundaries or data overwriting scenarios that may occur when separate job definitions mount the same volume.&lt;/p&gt; 
-&lt;h2&gt;“Is Fargate right for me?”&lt;/h2&gt; 
-&lt;p&gt;If you’re thinking about leveraging Fargate with AWS Batch, it’s worth taking a moment to consider your overall scale and throughput needs.&lt;/p&gt; 
-&lt;p&gt;Batch maps a single job request to a single Fargate resource. This means that your maximum jobs-per-minute dispatch rate is limited at 500 task launches per minute. Alternatively, if you use Batch with EC2, multiple tasks are placed on running instances resulting in faster job placement.&lt;/p&gt; 
-&lt;p&gt;Fargate also has a service limit defining the total number of concurrent Fargate vCPUs you can launch in a Region. Depending on the size of your jobs, it defines the number of concurrent jobs you can run. You can find your Fargate service limits using the &lt;a href="https://console.aws.amazon.com/servicequotas/home/services/fargate/quotas"&gt;AWS Service Quotas management console&lt;/a&gt;. You’ll also find a mechanism there for requesting an increase, should you need it.&lt;/p&gt; 
-&lt;p&gt;Depending on your workload (e.g. the size of the tasks, duration of each job, and frequency of the jobs), it’s recommended to reach out to AWS Support in advance if you’re planning on running very large workloads using&amp;nbsp;Batch&amp;nbsp;and Fargate.&amp;nbsp;For more information on how to choose the underlying compute model, see our best practices documentation on &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/best-practices.html#bestpractice4"&gt;how to choose the right compute environment resource&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;With the release of Graviton and Windows container support, AWS Batch with Fargate has become a very capable serverless batch computing solution. It’s a great fit if you’re using AWS Batch for background, asynchronous tasks or for data processing.&lt;/p&gt; 
-&lt;p&gt;If you want to try out the features mentioned in this post, log into the &lt;a href="https://console.aws.amazon.com/batch/home?"&gt;AWS Batch management console&lt;/a&gt; and try out the features yourself!&lt;/p&gt;</content:encoded>
 					
 		
 		
