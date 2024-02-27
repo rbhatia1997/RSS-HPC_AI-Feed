@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 26 Feb 2024 16:32:39 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Feb 2024 16:44:45 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,157 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>Rack ‘n’ Roll: NVIDIA Grace Hopper Systems Gather at GTC</title>
+		<link>https://blogs.nvidia.com/blog/mgx-accelerated-systems-gtc/</link>
+		
+		<dc:creator><![CDATA[Ivan Goldwasser]]></dc:creator>
+		<pubDate>Tue, 27 Feb 2024 16:00:36 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[generative AI]]></category>
+		<category><![CDATA[GPU Computing]]></category>
+		<category><![CDATA[GTC 2024]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[NVIDIA Quantum-2]]></category>
+		<category><![CDATA[NVLink]]></category>
+		<category><![CDATA[Recommender Systems]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70025</guid>
+
+					<description><![CDATA[The spirit of Grace Hopper will live on at NVIDIA GTC. Accelerated systems using powerful processors — named in honor of the pioneer of software programming — will be on display at the global AI conference running March 18-21, ready to take computing to the next level. System makers will show more than 500 servers		<a class="read-more" href="https://blogs.nvidia.com/blog/mgx-accelerated-systems-gtc/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The spirit of Grace Hopper will live on at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>.</p>
+<p>Accelerated systems using powerful processors — named in honor of the pioneer of software programming — will be on display at the global AI conference running March 18-21, ready to take computing to the next level.</p>
+<p>System makers will show more than 500 servers in multiple configurations across 18 racks, all packing <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA GH200 Grace Hopper Superchips</a>. They’ll form the largest display at NVIDIA’s booth in the San Jose Convention Center, filling the MGX Pavilion.</p>
+<h2><b>MGX Speeds Time to Market</b></h2>
+<p><a href="https://www.nvidia.com/en-us/data-center/products/mgx/">NVIDIA MGX</a> is a blueprint for building accelerated servers with any combination of GPUs, CPUs and data processing units (<a href="https://blogs.nvidia.com/blog/whats-a-dpu-data-processing-unit/">DPUs</a>) for a wide range of AI, high performance computing and <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> applications. It’s a modular reference architecture for use across multiple product generations and workloads.</p>
+<p>GTC attendees can get an up-close look at MGX models tailored for enterprise, cloud and telco-edge uses, such as <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> inference, <a href="https://blogs.nvidia.com/blog/whats-a-recommender-system/">recommenders</a> and data analytics.</p>
+<p>The pavilion will showcase accelerated systems packing single and dual GH200 Superchips in 1U and 2U chassis, linked via <a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/">NVIDIA BlueField-3 DPUs</a> and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2</a> 400Gb/s InfiniBand networks over <a href="https://www.nvidia.com/en-us/networking/interconnect/">LinkX</a> cables and transceivers.</p>
+<p>The systems support industry standards for 19- and 21-inch rack enclosures, and many provide E1.S bays for nonvolatile storage.</p>
+<h2><b>Grace Hopper in the Spotlight</b></h2>
+<p>Here’s a sampler of MGX systems now available:</p>
+<ul>
+<li>ASRock RACK’s MECAI, measuring 450 x 445 x 87mm, accelerates AI and 5G services in constrained spaces at the edge of telco networks.</li>
+<li>ASUS’s MGX server, the ESC NM2N-E1, slides into a rack that holds up to 32 GH200 processors and supports air- and water-cooled nodes.</li>
+<li>Foxconn provides a suite of MGX systems, including a 4U model that accommodates up to eight NVIDIA H100 NVL PCIe Tensor Core GPUs.</li>
+<li>GIGABYTE’s <a href="https://www.gigabyte.com/Enterprise/Server/XH23-VG0-rev-AAJ1">XH23-VG0-MGX</a> can accommodate plenty of storage in its six 2.5-inch Gen5 NVMe hot-swappable bays and two M.2 slots.</li>
+<li>Inventec’s systems can slot into 19- and 21-inch racks and use three different implementations of liquid cooling.</li>
+<li>Lenovo supplies a range of 1U, 2U and 4U MGX servers, including models that support direct liquid cooling.</li>
+<li>Pegatron’s air-cooled AS201-1N0 server packs a BlueField-3 DPU for software-defined, hardware-accelerated networking.</li>
+<li>QCT can stack 16 of its QuantaGrid D74S-IU systems, each with two GH200 Superchips, into a single QCT QoolRack.</li>
+<li>Supermicro’s ARS-111GL-NHR with nine hot-swappable fans is part of a portfolio of air- and liquid-cooled GH200 and <a href="https://www.nvidia.com/en-us/data-center/grace-cpu/">NVIDIA Grace CPU</a> systems.</li>
+<li>Wiwynn’s SV7200H, a 1U dual GH200 system, supports a BlueField-3 DPU and a liquid-cooling subsystem that can be remotely managed.</li>
+<li>Wistron’s MGX servers are 4U GPU systems for AI inference and mixed workloads, supporting up to eight accelerators in one system.</li>
+</ul>
+<p>The new servers are in addition to three accelerated systems using MGX<a href="https://blogs.nvidia.com/blog/computex-keynote-generative-ai/"> announced at COMPUTEX</a> last May — Supermicro’s ARS-221GL-NR using the Grace CPU and QCT’s QuantaGrid S74G-2U and S74GM-2U powered by the GH200.</p>
+<h2><b>Grace Hopper Packs Two in One</b></h2>
+<p>System builders are adopting the hybrid processor because it packs a punch.</p>
+<p>GH200 Superchips combine a high-performance, power-efficient Grace CPU with a muscular <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 GPU</a>. They share hundreds of gigabytes of memory over a fast <a href="https://www.nvidia.com/en-us/data-center/nvlink-c2c/">NVIDIA NVLink-C2C</a> interconnect.</p>
+<p>The result is a processor and memory complex well-suited to take on today’s most demanding jobs, such as running <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language models</a>. They have the memory and speed needed to link generative AI models to data sources that can improve their accuracy using <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a>, aka RAG.</p>
+<h2><b>Recommenders Run 4x Faster</b></h2>
+<p>In addition, the GH200 Superchip delivers greater efficiency and <a href="https://blogs.nvidia.com/blog/grace-hopper-recommender-systems/">up to 4x more performance</a> than using the H100 GPU with traditional CPUs for tasks like making recommendations for online shopping or media streaming.</p>
+<p>In its <a href="https://blogs.nvidia.com/blog/grace-hopper-inference-mlperf/">debut</a> on the <a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">MLPerf</a> industry benchmarks last November, GH200 systems ran all data center inference tests, extending the already leading performance of H100 GPUs.</p>
+<p>In all these ways, GH200 systems are taking to new heights a computing revolution their namesake helped start on the first mainframe computers more than seven decades ago.</p>
+<p><i>Register for </i><a href="https://www.nvidia.com/gtc/"><i>NVIDIA GTC</i></a><i>, the conference for the era of AI, running March 18-21 at the San Jose Convention Center and virtually.</i></p>
+<p><i>And get the 30,000-foot view from NVIDIA CEO and founder Jensen Huang in his GTC<a href="https://www.nvidia.com/gtc/keynote/"> keynote</a>. </i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/MGX-modular-server-KV.png"
+			type="image/png"
+			width="1919"
+			height="1020"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/MGX-modular-server-KV-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Rack ‘n’ Roll: NVIDIA Grace Hopper Systems Gather at GTC]]></media:title>
+			<media:description type="html">Picture of MGX modular servers</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Meet the Omnivore: Mode Maison Harnesses OpenUSD to Drive Innovations in Retail With High-Fidelity Digital Twins</title>
+		<link>https://blogs.nvidia.com/blog/mode-maison-openusd-omniverse/</link>
+		
+		<dc:creator><![CDATA[Nicole Castro]]></dc:creator>
+		<pubDate>Tue, 27 Feb 2024 16:00:34 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Meet the Omnivore]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<category><![CDATA[Universal Scene Description]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69980</guid>
+
+					<description><![CDATA[Editor’s note: This post is a part of our Meet the Omnivore series, which features individual creators and developers who use OpenUSD to build tools, applications and services for 3D workflows and physically accurate virtual worlds. A failed furniture-shopping trip turned into a business idea for Steven Gay, cofounder and CEO of company Mode Maison.		<a class="read-more" href="https://blogs.nvidia.com/blog/mode-maison-openusd-omniverse/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is a part of our </i><a href="https://blogs.nvidia.com/blog/tag/meet-the-omnivore/"><i>Meet the Omnivore</i></a><i> series, which features individual creators and developers who use </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>OpenUSD</i></a><i> to build tools, applications and services for 3D workflows and physically accurate virtual worlds.</i></p>
+<p>A failed furniture-shopping trip turned into a business idea for Steven Gay, cofounder and CEO of company <a href="https://www.modemaisonlabs.com/" target="_blank" rel="noopener">Mode Maison</a>.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/Steven_Gay_photo.jpg"><img decoding="async" class="alignright wp-image-69984 size-thumbnail" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/Steven_Gay_photo-150x150.jpg" alt="" width="150" height="150" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/Steven_Gay_photo-150x150.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Steven_Gay_photo-400x400.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Steven_Gay_photo-450x450.jpg 450w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Steven_Gay_photo-215x215.jpg 215w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Steven_Gay_photo-100x100.jpg 100w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Steven_Gay_photo.jpg 495w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+<p>Gay grew up in Houston and studied at the University of Texas before working in New York as one of the youngest concept designers at Ralph Lauren. He was inspired to start his own company after a long day of trying — and failing — to pick out a sofa.</p>
+<p>The experience illuminated how the luxury home-goods industry has traditionally lagged in adopting digital technologies, especially those for creating immersive, interactive experiences for consumers.</p>
+<p>Gay founded Mode Maison in 2018 with the goal of solving this challenge and paving the way for scalability, creativity and a generative future in retail. Using the Universal Scene Description framework, aka <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a>, and the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform, Gay, along with Mode Maison Chief Technology Officer Jakub Cech and the Mode Maison team, are helping enhance and digitalize entire product lifecycle processes — from design and manufacturing to consumer experiences.</p>
+<hr />
+<p style="padding-left: 40px;"><em>Register for <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, which takes place March 17-21, to hear how leading companies are using the latest innovations in AI and graphics. </em><em>And join us for <a href="https://www.nvidia.com/gtc/sessions/openusd-day/">OpenUSD Day</a> to learn how to build generative AI-enabled 3D pipelines and tools using Universal Scene Description.</em></p>
+<hr />
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-scaled.jpg"><img fetchpriority="high" decoding="async" class="aligncenter wp-image-69981 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/12-rio-manso-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>They developed a photometric scanning system, called <a href="https://www.tmac.dev/about" target="_blank" rel="noopener">Total Material Appearance Capture</a>, which offers an unbiased, physically based approach to digitizing the material world that’s enabled by real-world embedded sensors.</p>
+<p>TMAC captures proprietary data and the composition of any material, then turns it into input that serves as a single source of truth, which can be used for creating a fully digitized retail model. Using the system, along with OpenUSD and NVIDIA Omniverse, Mode Maison customers can create highly accurate <a href="https://www.nvidia.com/en-us/omniverse/solutions/digital-twins/">digital twins</a> of any material or product.</p>
+<p>“By enabling this, we’re effectively collapsing and fostering a complete integration across the entire product lifecycle process — from design and production to manufacturing to consumer experiences and beyond,” said Gay.</p>
+<figure id="attachment_69987" aria-describedby="caption-attachment-69987" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-scaled.jpg"><img decoding="async" class="wp-image-69987 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/02/dsc_4290_3-copy2-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69987" class="wp-caption-text">Mode Maison developed a photometric scanning system called Total Material Appearance Capture.</figcaption></figure>
+<h2><b>Streamlining Workflows and Enhancing Productivity With Digital Twins</b></h2>
+<p>Previously, Mode Maison faced significant challenges in creating physically based, highly flexible and scalable digital materials. The limitations were particularly noticeable when rendering complex materials and textures, or integrating digital models into cohesive, multilayered environments.</p>
+<p>Using Omniverse helped Gay and his team overcome these challenges by offering advanced rendering capabilities, physics simulations and extensibility for AI training that unlock new possibilities in digital retail.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-scaled.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-69990 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-768x431.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-1536x863.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-801x450.jpg 801w, https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-383x215.jpg 383w, https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/random-page3-1280x719.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>Before using Omniverse and OpenUSD, Mode Maison used disjointed processes for digital material capture, modeling and rendering, often leading to inconsistencies, the inability to scale and minimal interoperability. After integrating Omniverse, the company experienced a streamlined, coherent workflow where high-fidelity digital twins can be created with greater efficiency and interoperability.</p>
+<p>The team primarily uses Autodesk 3ds Max for design, and they import the 3D data using Omniverse Connectors. Gay says OpenUSD is playing an increasingly critical role in its workflows, especially when developing composable, flexible, interoperable capabilities across asset creation.</p>
+<p>This enhanced pipeline starts with capturing high-fidelity material data using TMAC. The data is then processed and formatted into OpenUSD for the creation of physically based, scientifically accurate, high-fidelity digital twins.</p>
+<p>“OpenUSD allows for an unprecedented level of collaboration and interoperability in creating complex, multi-layered capabilities and advanced digital materials,” Gay said. “Its ability to seamlessly integrate diverse digital assets and maintain their fidelity across various applications is instrumental in creating realistic, interactive digital twins for retail.”</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-scaled.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-69993 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>OpenUSD and Omniverse have sped Mode Maison and their clients’ ability to bring products to market, reduced costs associated with building and modifying digital twins, and enhanced productivity through streamlined creation.</p>
+<p>“Our work represents a major step toward a future where digital and physical realities will be seamlessly integrated,” said Gay. “This shift enhances consumer engagement and paves the way for more sustainable business practices by reducing the need for physical prototyping while enabling more precise manufacturing.”</p>
+<p>As for emerging technological advancements in digital retail, Gay says AI will play a central role in creating hyper-personalized design, production, sourcing and front-end consumer experiences — all while reducing carbon footprints and paving the way for a more sustainable future in retail.</p>
+<h2><b>Join In on the Creation</b></h2>
+<p>Anyone can build their own <a href="https://developer.nvidia.com/omniverse">Omniverse extension or Connector</a> to enhance 3D workflows and tools.</p>
+<p>Learn more about how OpenUSD and NVIDIA Omniverse are transforming industries at <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG#/">NVIDIA GTC</a>, a global AI conference running March 18-21, online and at the San Jose Convention Center.</p>
+<p>Join <a href="https://www.nvidia.com/gtc/sessions/openusd-day/">OpenUSD Day</a> at GTC on Tuesday, March 19, to learn more about building generative AI-enabled 3D pipelines and tools using USD.</p>
+<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, access </i><a href="https://developer.nvidia.com/usd"><i>OpenUSD</i></a><i> resources, and learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise</i><i> can connect your team</i></a><i>. Stay up to date on </i><a href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse"><i>X</i></a><i>. For more, join the </i><a href="https://www.nvidia.com/en-us/omniverse/community/"><i>Omniverse community</i></a><i> on the  </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels. </i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1152"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/Detail_602-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Meet the Omnivore: Mode Maison Harnesses OpenUSD to Drive Innovations in Retail With High-Fidelity Digital Twins]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA RTX 500 and 1000 Professional Ada Generation Laptop GPUs Drive AI-Enhanced Workflows From Anywhere</title>
 		<link>https://blogs.nvidia.com/blog/rtx-ada-ai-workflows/</link>
 		
@@ -39,7 +190,7 @@
 <p>The new NVIDIA RTX 500 and 1000 Ada Generation Laptop GPUs will be available in new, highly portable mobile workstations, expanding the <a href="https://www.nvidia.com/en-us/geforce/ada-lovelace-architecture/">NVIDIA Ada Lovelace architecture</a>-based lineup, which includes the RTX 2000, 3000, 3500, 4000 and 5000 Ada Generation Laptop GPUs.</p>
 <p>AI is rapidly being adopted to drive efficiencies across professional design and content creation workflows and everyday productivity applications, underscoring the importance of having powerful local AI acceleration and sufficient processing power in systems.</p>
 <p>The next generation of mobile workstations with Ada Generation GPUs, including the RTX 500 and 1000 GPUs, will include both a neural processing unit (NPU), a component of the CPU, and an <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a> GPU, which includes Tensor Cores for AI processing. The NPU helps offload light AI tasks, while the GPU provides up to an additional 682 TOPS of AI performance for more demanding day-to-day AI workflows.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table.png"><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-69976" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-672x200.png" alt="" width="672" height="200" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-672x200.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-400x119.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-406x121.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-188x56.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table.png 675w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table.png"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-69976" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-672x200.png" alt="" width="672" height="200" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-672x200.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-400x119.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-406x121.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table-188x56.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/rtx500-1000-table.png 675w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>The higher level of AI acceleration delivered by the GPU is useful for tackling a wide range of AI-based tasks, such as video conferencing with high-quality AI effects, streaming videos with AI upscaling, or working faster with generative AI and content creation applications.</p>
 <p>The new RTX 500 GPU delivers up to 14x the generative AI performance for models like Stable Diffusion, up to 3x faster photo editing with AI and up to 10x the graphics performance for 3D rendering compared with a CPU-only configuration — bringing massive leaps in productivity for traditional and emerging workflows.</p>
 <h2><b>Enhancing Professional Workflows Across Industries</b></h2>
@@ -99,10 +250,10 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
 <p>The February NVIDIA Studio Driver, designed specifically to optimize creative apps, is now available for download. Developed in collaboration with app developers, Studio Drivers undergo extensive testing to ensure seamless compatibility with creative apps while enhancing features, automating processes and speeding workflows.</p>
 <p>Creators can download the latest driver on the public beta of the <a href="https://www.nvidia.com/en-us/software/nvidia-app/">new NVIDIA app</a>, the essential companion for creators and gamers with NVIDIA GPUs in their PCs and laptops. The NVIDIA app beta is a first step to modernize and unify the NVIDIA Control Panel, GeForce Experience and RTX Experience apps.</p>
-<figure id="attachment_69910" aria-describedby="caption-attachment-69910" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w.png"><img decoding="async" class="size-large wp-image-69910" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-672x377.png" alt="" width="672" height="377" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-801x450.png 801w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-383x215.png 383w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69910" class="wp-caption-text">The NVIDIA App offers easy access to the latest Studio Drivers, a suite of AI-powered Studio apps, games and more.</figcaption></figure>
+<figure id="attachment_69910" aria-describedby="caption-attachment-69910" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-69910" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-672x377.png" alt="" width="672" height="377" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-801x450.png 801w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-383x215.png 383w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-james-matthews-wk97-image5-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69910" class="wp-caption-text">The NVIDIA App offers easy access to the latest Studio Drivers, a suite of AI-powered Studio apps, games and more.</figcaption></figure>
 <p>The NVIDIA app simplifies the process of keeping PCs updated with the latest NVIDIA drivers, enables quick discovery and installation of NVIDIA apps like NVIDIA Broadcast and NVIDIA Omniverse, unifies the GPU control center, and introduces a redesigned in-app overlay for convenient access to powerful recording tools. Download the <a href="https://www.nvidia.com/en-us/software/nvidia-app/">NVIDIA app beta</a> today.</p>
 <p>Adobe Premiere Pro’s AI-powered <a href="https://blogs.nvidia.com/blog/studio-rtx-ai-adobe-premiere-pro-photoshop-lightroom/">Enhance Speech tool</a> is <a href="https://blog.adobe.com/en/publish/2024/02/22/enhance-your-video-editing-workflows-power-adobe-video-ecosystem">now available in general release</a>. Accelerated by <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a>, the new feature removes unwanted noise and improves the quality of dialogue clips so they sound professionally recorded. It’s 75% faster on a <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/">GeForce RTX 4090</a> laptop GPU compared with an RTX 3080 Ti.</p>
-<figure id="attachment_69962" aria-describedby="caption-attachment-69962" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-scaled.jpeg"><img decoding="async" class="size-large wp-image-69962" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-672x445.jpeg" alt="" width="672" height="445" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-672x445.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-400x265.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-768x508.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-1536x1016.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-680x450.jpeg 680w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-325x215.jpeg 325w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-151x100.jpeg 151w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-1280x847.jpeg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69962" class="wp-caption-text">Adobe Premiere Pro’s AI-powered Enhance Speech tool removes unwanted noise and improves dialogue quality.</figcaption></figure>
+<figure id="attachment_69962" aria-describedby="caption-attachment-69962" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-scaled.jpeg"><img loading="lazy" decoding="async" class="size-large wp-image-69962" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-672x445.jpeg" alt="" width="672" height="445" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-672x445.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-400x265.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-768x508.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-1536x1016.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-680x450.jpeg 680w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-325x215.jpeg 325w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-151x100.jpeg 151w, https://blogs.nvidia.com/wp-content/uploads/2024/02/processed-272475C9-9758-4893-B8E7-6C5C45840F70-1280x847.jpeg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-69962" class="wp-caption-text">Adobe Premiere Pro’s AI-powered Enhance Speech tool removes unwanted noise and improves dialogue quality.</figcaption></figure>
 <p>Have a <a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">Chat with RTX</a>, the tech demo app that lets <a href="https://www.nvidia.com/en-us/geforce/rtx/">GeForce RTX</a> owners personalize a <a href="https://www.nvidia.com/en-us/glossary/large-language-models/#:~:text=Large%20language%20models%20(LLMs)%20are,content%20using%20very%20large%20datasets.">large language model</a> connected to their own content. Results are fast and secure since it runs locally on a Windows RTX PC or workstation. <a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">Download</a> Chat with RTX today.</p>
 <p><iframe loading="lazy" title="Create A Personalized AI Chatbot with Chat With RTX" width="500" height="281" src="https://www.youtube.com/embed/gdsRJZT3IJw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>And this week <i>In the NVIDIA Studio</i>, filmmaker James Matthews shares his short film, <i>Dive</i>, which was created with an Adobe Premiere Pro-powered workflow supercharged by his ASUS ZenBook Pro <a href="https://www.nvidia.com/en-us/studio/laptops-desktops/">NVIDIA Studio</a> laptop with a GeForce RTX 4070 graphics card.</p>
@@ -1029,131 +1180,6 @@ Eos’s architecture is optimized for AI workloads demanding ultra-low-latency a
 			/>
 			<media:title type="html"><![CDATA[NVIDIA CEO: Every Country Needs Sovereign AI]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA RTX 2000 Ada Generation GPU Brings Performance, Versatility for Next Era of AI-Accelerated Design and Visualization</title>
-		<link>https://blogs.nvidia.com/blog/rtx-2000-ada/</link>
-		
-		<dc:creator><![CDATA[Stacy Ozorio]]></dc:creator>
-		<pubDate>Mon, 12 Feb 2024 16:00:50 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69652</guid>
-
-					<description><![CDATA[Generative AI is driving change across industries — and to take advantage of its benefits, businesses must select the right hardware to power their workflows. The new NVIDIA RTX 2000 Ada Generation GPU delivers the latest AI, graphics and compute technology to compact workstations, offering up to 1.5x the performance of the previous-generation RTX A2000		<a class="read-more" href="https://blogs.nvidia.com/blog/rtx-2000-ada/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><a href="https://www.nvidia.com/en-us/glossary/generative-ai/">Generative AI</a> is driving change across industries — and to take advantage of its benefits, businesses must select the right hardware to power their workflows.</p>
-<p>The new <a href="https://www.nvidia.com/en-us/design-visualization/rtx-2000/">NVIDIA RTX 2000 Ada Generation GPU</a> delivers the latest AI, graphics and compute technology to compact workstations, offering up to 1.5x the performance of the previous-generation RTX A2000 12GB in professional workflows.</p>
-<p>From crafting stunning 3D environments to streamlining complex design reviews to refining industrial designs, the card’s capabilities pave the way for an AI-accelerated future, empowering professionals to achieve more without compromising on performance or capabilities.</p>
-<p>Modern multi-application workflows, such as AI-powered tools, multi-display setups and high-resolution content, put significant demands on GPU memory. With 16GB of memory in the RTX 2000 Ada, professionals can tap the latest technologies and tools to work faster and better with their data.</p>
-<p>Powered by <a href="https://www.nvidia.com/en-us/design-visualization/rtx/">NVIDIA RTX</a> technology, the new GPU delivers impressive realism in graphics with <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a>, delivering ultra-high-quality, photorealistic ray-traced images more than 3x faster than before. In addition, the RTX 2000 Ada enables an immersive experience for enterprise virtual-reality workflows, such as for product design and engineering design reviews.</p>
-<p>With its blend of performance, versatility and AI capabilities, the RTX 2000 Ada helps professionals across industries achieve efficiencies.</p>
-<p>Architects and urban planners can use it to accelerate visualization workflows and structural analysis, enhancing design precision. Product designers and engineers using industrial PCs can iterate rapidly on product designs with fast, photorealistic rendering and AI-powered generative design. Content creators can edit high-resolution videos and images seamlessly, and use AI for realistic visual effects and content creation assistance.</p>
-<p>And in vital embedded applications and edge computing, the RTX 2000 Ada can power real-time data processing for medical devices, optimize manufacturing processes with predictive maintenance and enable AI-driven intelligence in retail environments.</p>
-<h2><b>Expanding the Reach of NVIDIA RTX</b></h2>
-<p>Among the first to tap the power and performance of the RTX 2000 Ada are Dassault Systèmes for its SOLIDWORKS applications, Rob Wolkers Design and Engineering, and WSP.</p>
-<p>“The new RTX 2000 Ada Generation GPU boasts impressive features compared to previous generations, with a compact design that offers exceptional performance and versatility,” said Mark Kauffman, assistant vice president and technical lead at WSP. “Its 16GB of RAM is a game-changer, enabling smooth loading of asset-heavy content, and its ability to run applications like Autodesk 3ds Max, Adobe After Effects and Unreal Engine, as well as support path tracing, expands my creative possibilities.”</p>
-<p>“The new NVIDIA RTX 2000 Ada — with its higher-efficiency, next-generation architecture, low power consumption and large frame buffer — will benefit SOLIDWORKS users,” said Olivier Zegdoun, graphics applications research and development director for SOLIDWORKS at Dassault Systèmes. “It delivers excellent performance for designers and engineers to accelerate the development of innovative product experiences with full-model fidelity, even with larger datasets.”</p>
-<p>“Today’s design and visualization workflows demand more advanced compute and horsepower,” said Rob Wolkers, owner and senior industrial design engineer at <a href="https://www.robwolkers.com/">Rob Wolkers Design and Engineering</a>. “Equipped with next-generation architecture and a large frame buffer, the RTX 2000 Ada Generation GPU improves productivity in my everyday industrial design and engineering workflows, allowing me to work with large datasets in full fidelity and generate renders with more lighting and reflection scenarios 3x faster.”</p>
-<h2><b>Elevating Workflows With Next-Generation RTX Technology </b></h2>
-<p>The NVIDIA RTX 2000 Ada features the latest technologies in the NVIDIA Ada Lovelace GPU architecture, including:</p>
-<ul>
-<li><b>Third-generation RT Cores: </b>Up to 1.7x faster ray-tracing performance for high-fidelity, photorealistic rendering.</li>
-<li><b>Fourth-generation Tensor Cores:</b> Up to 1.8x AI throughput over the previous generation, with structured sparsity and FP8 precision to enable higher inference performance for AI-accelerated tools and applications.</li>
-<li><b>CUDA cores: </b>Up to 1.5x the FP32 throughput of the previous generation for significant performance improvements in graphics and compute workloads.</li>
-<li><b>Power efficiency:</b> Up to a 2x performance boost across professional graphics, rendering, AI and compute workloads, all within the same 70W of power as the previous generation.</li>
-<li><b>Immersive workflows: </b>Up to 3x performance for virtual-reality workflows over the previous generation.</li>
-<li><b>16GB of GPU memory:</b> An expanded canvas enables users to tackle larger projects, along with support for error correction code memory to deliver greater computing accuracy and reliability for mission-critical applications.</li>
-<li><b>DLSS 3: </b>Delivers a breakthrough in AI-powered graphics, significantly boosting performance by generating additional high-quality frames.</li>
-<li><b>AV1 encoder:</b> Eighth-generation NVIDIA Encoder, aka NVENC, with AV1 support is 40% more efficient than H.264, enabling new possibilities for broadcasters, streamers and video callers.</li>
-</ul>
-<h2><b>NVIDIA RTX Enterprise Driver Delivers New Features, Adds Support for RTX 2000 Ada</b></h2>
-<p><a href="https://www.nvidia.com/download/driverResults.aspx/218117/en-us/">The latest RTX Enterprise Driver</a>, available now to download, includes a range of features that enhance graphics workflows, along with support for the RTX 2000 Ada.</p>
-<p>The AI-based, standard dynamic range to high dynamic range tone-mapping feature, called Video TrueHDR, expands the color range and brightness levels when viewing content in Chrome or Edge browsers. With added support for <a href="https://blogs.nvidia.com/blog/rtx-video-super-resolution/">Video Super Resolution</a> and TrueHDR to the <a href="https://docs.nvidia.com/ngx/index.html">NVIDIA NGX</a> software development kit, video quality of low-resolution sources can be enhanced, and SDR content can easily be converted to HDR.</p>
-<p><a href="https://www.nvidia.com/download/driverResults.aspx/218117/en-us/">Additional features</a> in this release include:</p>
-<ul>
-<li style="font-weight: 300"><a href="https://developer.nvidia.com/tensorrt">TensorRT-LLM</a>, an <a href="https://github.com/NVIDIA/TensorRT-LLM">open-source library</a> that optimizes and accelerates inference performance for the latest <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language models</a> on NVIDIA GPUs.</li>
-<li style="font-weight: 300">Video quality improvement and enhanced coding efficiency to video codecs through bit depth expansion techniques and new low-delay B frame.</li>
-<li style="font-weight: 300">Ability to offload work from the CPU to the GPU with the execute indirect extension <a href="https://developer.nvidia.com/rtx/path-tracing/nvapi/get-started">NVIDIA API</a> for quicker task completion.</li>
-<li style="font-weight: 300">Ability to display the GPU serial number in the NV Control Panel on desktops for easier registration to the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> and <a href="https://www.nvidia.com/en-us/omniverse/enterprise/">NVIDIA Omniverse Enterprise</a> platforms.</li>
-</ul>
-<h2><b>Availability</b></h2>
-<p>The NVIDIA RTX 2000 Ada is available now through global distribution partners such as Arrow Electronics, Ingram Micro, Leadtek, PNY, Ryoyo Electro and TD SYNNEX, and will be available from Dell Technologies, HP and Lenovo starting in April.</p>
-<h2><b>See the NVIDIA RTX 2000 Ada at Dassault Systèmes’ 3DEXPERIENCE World</b></h2>
-<p>Stop by the Dell, Lenovo and Z by HP booths at <a href="https://www.3dexperienceworld.com/website/59830/home">Dassault Systèmes’ 3DEXPERIENCE World</a>, running Feb. 11-14 at the Kay Bailey Hutchison Convention Center in Dallas, to view live demos of Dassault Systèmes SOLIDWORKS applications powered by the NVIDIA RTX 2000 Ada.</p>
-<p>Attend the Z by HP session on Tuesday, Feb. 13, where Wolkers will discuss the workflow used to design <a href="https://nemo-submarine.com/">NEMO</a>, the supercar of submarines.</p>
-<p>Read our solution brief to discover how<a href="https://resources.nvidia.com/en-us-mfg-briefcase/proviz-print-solidworks?lx=q8vaLh"> NVIDIA RTX GPUs supercharge SOLIDWORKS workflows</a>.</p>
-<p><i>Learn more about the </i><a href="https://www.nvidia.com/en-us/design-visualization/rtx-2000/"><i>NVIDIA RTX 2000 Ada Generation GPU</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/RTX-2000-GPU-Blog-Header.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/RTX-2000-GPU-Blog-Header-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA RTX 2000 Ada Generation GPU Brings Performance, Versatility for Next Era of AI-Accelerated Design and Visualization]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>National Institute of Standards and Technology Launches Artificial Intelligence Safety Institute Consortium</title>
-		<link>https://blogs.nvidia.com/blog/aisic-trustworthy-ai/</link>
-		
-		<dc:creator><![CDATA[Ruth Berry]]></dc:creator>
-		<pubDate>Thu, 08 Feb 2024 21:08:28 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cybersecurity]]></category>
-		<category><![CDATA[Open Source]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<category><![CDATA[Trustworthy AI]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69701</guid>
-
-					<description><![CDATA[NVIDIA has joined the National Institute of Standards and Technology’s new U.S. Artificial Intelligence Safety Institute Consortium as part of the company’s effort to advance safe, secure and trustworthy AI. AISIC will work to create tools, methodologies and standards to promote the safe and trustworthy development and deployment of AI. As a member, NVIDIA will		<a class="read-more" href="https://blogs.nvidia.com/blog/aisic-trustworthy-ai/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA has joined the National Institute of Standards and Technology’s <a href="https://www.commerce.gov/news/press-releases/2024/02/biden-harris-administration-announces-first-ever-consortium-dedicated">new U.S. Artificial Intelligence Safety Institute Consortium</a> as part of the company’s effort to advance safe, secure and <a href="https://www.nvidia.com/en-us/ai-data-science/trustworthy-ai/">trustworthy AI</a>.</p>
-<p><a href="https://www.nist.gov/artificial-intelligence/artificial-intelligence-safety-institute">AISIC</a> will work to create tools, methodologies and standards to promote the safe and trustworthy development and deployment of AI. As a member, NVIDIA will work with <a href="https://www.nist.gov/">NIST</a> — an agency of the U.S. Department of Commerce — and fellow consortium members to advance the consortium’s mandate.</p>
-<p>NVIDIA’s participation builds on a record of working with governments, researchers and industries of all sizes to help ensure AI is developed and deployed safely and responsibly.</p>
-<p>Through a broad range of development initiatives, including <a href="https://blogs.nvidia.com/blog/ai-chatbot-guardrails-nemo/">NeMo Guardrails,</a> open-source software for ensuring large language model responses are accurate, appropriate, on topic and secure, NVIDIA actively works to make AI safety a reality.</p>
-<p>In 2023, NVIDIA endorsed the Biden Administration’s <a href="https://blogs.nvidia.com/blog/ai-safety-washington/">voluntary AI safety</a> commitments. Last month, the company announced a $30 million contribution to the U.S. National Science Foundation’s <a href="https://blogs.nvidia.com/blog/national-ai-research-resource-pilot/">National Artificial Intelligence Research Resource pilot program</a>, which aims to broaden access to the tools needed to power responsible AI discovery and innovation.</p>
-<h2><b>AISIC Research Focus</b></h2>
-<p>Through the consortium, NIST aims to facilitate knowledge sharing and advance applied research and evaluation activities to accelerate innovation in trustworthy AI. AISIC members, which include more than 200 of the nation’s leading AI creators, academics, government and industry researchers, as well as civil society organizations, bring technical expertise in areas such as AI governance, systems and development, psychometrics and more.</p>
-<p>In addition to participating in working groups, NVIDIA plans to leverage a range of computing resources and best practices for implementing AI risk-management frameworks and AI model transparency, as well as several NVIDIA-developed, open-source AI safety, <a href="https://blogs.nvidia.com/blog/nvidia-generative-red-team-challenge/">red-teaming</a> and security tools.</p>
-<p><i>Learn more about NVIDIA’s guiding principles for </i><a href="https://www.nvidia.com/en-us/ai-data-science/trustworthy-ai/"><i>trustworthy AI</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/04/NeMo-Guardrails-KV-x1280.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/04/NeMo-Guardrails-KV-x1280-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[National Institute of Standards and Technology Launches Artificial Intelligence Safety Institute Consortium]]></media:title>
-			<media:description type="html">artist&#039;s concept image of NeMo Guardrails</media:description>
 			</media:content>
 			</item>
 	</channel>
