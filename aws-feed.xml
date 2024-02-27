@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Mon, 26 Feb 2024 11:02:29 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 27 Feb 2024 16:13:55 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,192 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Improve the speed and cost of HPC deployment with Mountpoint for Amazon S3</title>
+		<link>https://aws.amazon.com/blogs/hpc/improve-the-speed-and-cost-of-hpc-deployment-with-mountpoint-for-amazon-s3/</link>
+		
+		<dc:creator><![CDATA[Scott Ma]]></dc:creator>
+		<pubDate>Tue, 27 Feb 2024 16:13:55 +0000</pubDate>
+				<category><![CDATA[Amazon Simple Storage Service (S3)]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Storage]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">42afa6fa28622939a4baad7a9810532f4a323104</guid>
+
+					<description>Don't sacrifice performance OR ease of use with your HPC storage. Learn how Mountpoint for Amazon S3 combines high throughput and low latency with the simplicity of S3.</description>
+										<content:encoded>&lt;p&gt;HPC workloads like genome sequencing and protein folding involve processing huge amounts of input data. Genome sequencing aims to determine an organism’s complete DNA sequence by analyzing extensive genome databases containing gene and genome reference sequences from thousands of species. Protein folding uses molecular dynamics simulations to model the physical movements of atoms and molecules in a protein.&lt;/p&gt; 
+&lt;p&gt;These workloads require analyzing massive input datasets.&amp;nbsp;To support these kinds of applications that need high bandwidth, low latency, and parallel access to lots of data, AWS offers managed storage services like &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; and &lt;a href="https://aws.amazon.com/efs"&gt;Amazon EFS &lt;/a&gt;that provide file systems optimized for compute-intensive workloads.&amp;nbsp;This eliminates the need for customers to manage underlying storage infrastructure, but do involve more provisioning time (and have higher costs) than object storage options like Amazon Simple Storage Service (Amazon S3).&lt;/p&gt; 
+&lt;p&gt;This sets up an apparent tradeoff between increased performance with longer provisioning time versus lower cost but greater adoption overhead.&lt;/p&gt; 
+&lt;p&gt;Customers no longer have to make this tradeoff. When selecting storage for your machine learning training data, &lt;a href="https://aws.amazon.com/s3/features/mountpoint/"&gt;Mountpoint for Amazon S3&lt;/a&gt; can provide the best of both worlds.&amp;nbsp;Mountpoint for Amazon S3 is an open-source file client that you can use to &lt;em&gt;mount&lt;/em&gt; &lt;em&gt;an S3 bucket&lt;/em&gt; on your compute instances, accessing it as a local file system. It translates local file system API calls to REST API calls on S3 objects, and is optimized for high-throughput performance. It builds on the &lt;a href="https://docs.aws.amazon.com/sdkref/latest/guide/common-runtime.html"&gt;AWS Common Runtime&lt;/a&gt; (CRT) library, which is purpose-built for high-performance and low-resource usage to make efficient use of your fleet.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll deploy Mountpoint for Amazon S3 in an AWS ParallelCluster using the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;Community Recipe Library for HPC Infrastructure on AWS&lt;/a&gt;. We’ll then run the &lt;a href="https://ior.readthedocs.io/en/latest/index.html"&gt;IOR parallel I/O benchmark tool&lt;/a&gt;&amp;nbsp;to compare the performance of Mountpoint for Amazon S3 across the cluster, testing access speeds for reading files of varying sizes stored in Amazon S3.&lt;/p&gt; 
+&lt;h2&gt;Setting expectations&lt;/h2&gt; 
+&lt;p&gt;As shown in Figure 1, We should expect to see the parallel performance scaling well as we increase the number of nodes in the cluster accessing the shared Amazon S3 storage at the same time. We hope this shows you how to achieve high throughput access to virtually limitless Amazon S3 data using a simple approach running ParallelCluster.&lt;/p&gt; 
+&lt;div id="attachment_3338" style="width: 1810px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3338" class="size-full wp-image-3338" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/20/CleanShot-2024-02-20-at-13.25.38@2x.png" alt="Figure 1 - Read and write performance scales well with the number of nodes." width="1800" height="1058"&gt;
+ &lt;p id="caption-attachment-3338" class="wp-caption-text"&gt;Figure 1 – Read and write performance scales well with the number of nodes.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;What do you need to try this out?&lt;/h2&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;AWS ParallelCluster Command line interface (CLI) with Node installed. See &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-pip.html"&gt;Installing AWS ParallelCluster in a non-virtual environment using pip&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;An existing bucket for the performance test.&lt;/li&gt; 
+ &lt;li&gt;An existing Security Group, Subnet, EC2 Key&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2&gt;Steps to deployment with ParallelCluster&lt;/h2&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;For our deployment, we’ll download this ParallelCluster config file &lt;strong&gt;&lt;a href="https://raw.githubusercontent.com/aws-samples/aws-hpc-s3mountpoint/main/pcluster-example-config.yml"&gt;here&lt;/a&gt;&lt;/strong&gt;. This config file uses the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/storage/mountpoint_s3"&gt;HPC Github Sample Recipe for Mountpoint for Amazon S3&lt;/a&gt; to help to deploy the mountpoint to the cluster nodes.&lt;/li&gt; 
+ &lt;li&gt;Once you’ve downloaded the full ParallelCluster config file, update your own values in the config file,&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p style="padding-left: 40px"&gt;&lt;strong&gt;DEMO-BUCKET-NAME&lt;/strong&gt; – an existing bucket for testing. Create one if needed.&lt;br&gt; &lt;strong&gt;HOST-FILESYSTEM-PATH&lt;/strong&gt; – the path that the bucket will mount to inside the nodes. (e.g. &lt;code&gt;/testpath&lt;/code&gt;)&lt;br&gt; &lt;strong&gt;Your Subnet ID&lt;/strong&gt; – a subnet ID for deployment (e.g. &lt;code&gt;subnet-xxxxxxxx&lt;/code&gt;). Find the subnet Id in the &lt;a href="https://us-east-1.console.aws.amazon.com/vpcconsole/home?region=us-east-1#subnets:"&gt;Subnets home&lt;/a&gt;.&lt;br&gt; &lt;strong&gt;Your Security Group&lt;/strong&gt; – the id of the security group (e.g. &lt;code&gt;sg-xxxxxxxx&lt;/code&gt;). Find the security group id in the &lt;a href="https://us-east-1.console.aws.amazon.com/vpcconsole/home?region=us-east-1#SecurityGroups:"&gt;Security Groups home.&lt;/a&gt; Make sure the security group is for the same VPC the subnet is under.&lt;br&gt; &lt;strong&gt;Your ed25519 key&lt;/strong&gt; – the name of the EC2 Key Pair. You can find the name of your key in the &lt;a href="https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#KeyPairs:v=3;"&gt;Ec2 Key Pair home&lt;/a&gt;. If you do not have one, create a new one.&lt;/p&gt; 
+&lt;ol start="3"&gt; 
+ &lt;li&gt;Now, you can use this command to deploy a cluster:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster -c &amp;lt;template file&amp;gt; -r &amp;lt;region&amp;gt; -n &amp;lt;cluster_name&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Deep-dive into the configuration&lt;/h2&gt; 
+&lt;p&gt;To examine the config file further, it refers to three post-install scripts designed to work with &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/custom-bootstrap-actions-v3.html"&gt;ParallelCluster custom bootstrap actions&lt;/a&gt;. The first two scripts are from the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes"&gt;HPC recipes for AWS&lt;/a&gt;, whereas the last script was created specifically for this blog. These scripts are being run on the cluster head node &lt;em&gt;and&lt;/em&gt; all the compute nodes where the S3 bucket will be mounted. The script &lt;code&gt;s3-mp-install-ior.sh&lt;/code&gt; installs the IOR I/O performance benchmark suite and its necessary dependencies on the designated nodes. IOR is a parallel input/output benchmark that can test the performance of parallel storage systems using different interfaces and access patterns. The installation log, located at &lt;code&gt;/var/log/ior-install.log,&lt;/code&gt; provides debugging information about the installation process.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;install.sh&lt;/strong&gt; – installs Mountpoint for Amazon S3 and prepares the mount point directory&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;mount.sh&lt;/strong&gt; – configures a systemd service that uses Mountpoint for Amazon S3 to mount a bucket to a directory&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;s3-mp-install-ior.sh&lt;/strong&gt; – installs the IOR I/O performance benchmark suite. Since the performance testing is for the compute node to perform, this is optional for the head node.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2&gt;Cluster head node&lt;/h2&gt; 
+&lt;p&gt;Here’s an example of the Head Node section of the ParallelCluster configuration. The bucket &lt;code&gt;DEMO-BUCKET-NAME&lt;/code&gt;&amp;nbsp;is mounted to the location &lt;code&gt;HOST-FILESYSTEM-PATH&lt;/code&gt;&amp;nbsp;on the host&lt;strong&gt;.&amp;nbsp;&lt;/strong&gt;&lt;code&gt;HOST-FILESYSTEM-PATH&lt;/code&gt; is an absolute path like &lt;code&gt;/s3mountpoint&lt;/code&gt;&lt;strong&gt;.&lt;/strong&gt;&amp;nbsp;You can mount multiple buckets on a single host.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;HeadNode:
+  CustomActions:
+    OnNodeConfigured:
+      Sequence:
+        - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/install.sh
+        - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/mount.sh
+          Args:
+            - &amp;lt;&amp;lt;DEMO-BUCKET-NAME&amp;gt;&amp;gt;
+            - &amp;lt;&amp;lt;HOST-FILESYSTEM-PATH&amp;gt;&amp;gt;
+            - '--allow-delete --allow-root'
+  Iam:
+    AdditionalIamPolicies:
+      - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+    S3Access:
+      - BucketName: &amp;lt;&amp;lt;DEMO-BUCKET-NAME&amp;gt;&amp;gt;
+        EnableWriteAccess: true 
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;We’ll be using &lt;code&gt;--allow-delete --allow-root&lt;/code&gt; to enable read/write to the bucket because read/write access is required by the performance testing tool. If you’re using this mountpoint for a &lt;strong&gt;read only&lt;/strong&gt; scenario like storing training data, it’s recommended that you use &lt;code&gt;--read-only&lt;/code&gt; to prevent accidental overwriting to the training data set. For more options to configure the mount point, see the &lt;a href="https://github.com/awslabs/mountpoint-s3/blob/main/doc/CONFIGURATION.md"&gt;Mountpoint configuration documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;To access the S3 bucket from the header node, you need to enable S3 access through either the S3Access configuration under &lt;strong&gt;HeadNode/Iam/S3Access&lt;/strong&gt; or by attaching an additional IAM policy under &lt;strong&gt;HeadNode/Iam/AdditionalIamPolicies&lt;/strong&gt;. You can use a managed policy such as &lt;code&gt;AmazonS3ReadOnlyAccess&lt;/code&gt; to provide generic read-only access, or you can create a custom policy with more specific permissions tailored to your use case. The key requirement is that the &lt;code&gt;EC2 InstanceRole&lt;/code&gt; for the header node must have permissions to access the S3 bucket in order for it to read data from or write data to that location. The same will apply to the &lt;code&gt;ComputeNode&lt;/code&gt; section.&lt;/p&gt; 
+&lt;h3&gt;Compute nodes&lt;/h3&gt; 
+&lt;p&gt;Next, let’s look at an example of mounting the same bucket &lt;code&gt;DEMO-BUCKET-NAME&lt;/code&gt;&amp;nbsp;to a local path of&amp;nbsp;&lt;code&gt;HOST-FILESYSTEM-PATH&lt;/code&gt; in the Compute Nodes section of the ParallelCluster config file.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;Scheduling:
+    SlurmQueues:
+        - Name: demo
+          CustomActions:
+            OnNodeConfigured:
+                Sequence:
+                  - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/install.sh
+                  - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/mount.sh
+                    Args:
+                      - &amp;lt;&amp;lt;DEMO-BUCKET-NAME&amp;gt;&amp;gt;
+                      - &amp;lt;&amp;lt;HOST-FILESYSTEM-PATH&amp;gt;&amp;gt;
+                      - '--allow-delete --allow-root'
+                  - Script: https://raw.githubusercontent.com/aws-samples/aws-hpc-s3mountpoint/main/s3-mp-install-ior.sh
+Iam:
+        AdditionalIamPolicies:
+          - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        S3Access:
+          - BucketName: &amp;lt;&amp;lt;DEMO-BUCKET-NAME&amp;gt;&amp;gt;
+            EnableWriteAccess: true
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Steps to run Performance Testing&lt;/h2&gt; 
+&lt;p&gt;To execute the IOR benchmark across compute nodes, we’ll use &lt;code&gt;sbatch&lt;/code&gt; to submit a job to the HPC cluster. We’ll &lt;a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-sessions-start.html#start-ec2-console"&gt;SSH into the head node&lt;/a&gt; using Session Manager to author an &lt;code&gt;sbatch&lt;/code&gt; script that calls &lt;code&gt;mpirun&lt;/code&gt; to launch the IOR executable with our desired parameters as below. The &lt;code&gt;sbatch&lt;/code&gt; script will specify the number of tasks, and Slurm will manage the number of nodes required.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;## create the sbatch submission script
+cd ~
+cat &amp;gt; ior_submission.sbatch &amp;lt;&amp;lt; EOF
+#!/bin/bash
+#SBATCH --job-name=ior-perf-test
+#SBATCH --output=%N_%x_%j_%t.out
+#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks=8
+
+module load intelmpi
+mpirun bash -c " 
+     cd &amp;lt;&amp;lt;HOST-FILESYSTEM-PATH&amp;gt;&amp;gt;
+     ior -r -w -v -F -o=S@S@S -b=2000m -i=1 -t=50m -a=POSIX --posix.odirect"
+EOF
+
+## submit the script
+cd ~
+sbatch ior_submission.sbatch
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Slurm will spawn the MPI processes across the cluster worker nodes to perform the parallel I/O tests. The output file will be available on the first compute node.&lt;/p&gt; 
+&lt;h2&gt;Performance results&lt;/h2&gt; 
+&lt;p&gt;Using this setup, we can use IOR to do some load tests across all our cluster compute nodes. It’s worth noting that the actual mounting operation itself takes just a few seconds&lt;/p&gt; 
+&lt;p&gt;In our test runs, we used a single Amazon S3 bucket and attained exceptional read and write speeds – 4.23 GB/s (4.038 GiB/s) write throughput and 4.85 GB/s (4.622 GiB/s) read throughput per node (using c6i.16xlarge). This high read performance makes Mountpoint extremely well-suited for supporting the intensive read operations inherent in HPC workloads. Here’s some sample output from our own tests running on c6i.16xlarge instances:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="lang-bash"&gt;Loading intelmpi version 2021.9.0
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Dec 14 00:13:39 2023
+Command line        : /shared/ior/bin/ior -r -w -v -F -o=S@S@S -b=2000m -i=1 -t=50m -a=POSIX --posix.odirect
+Machine             : Linux queue1-st-pclustercr1-1
+TestID              : 0
+StartTime           : Thu Dec 14 00:13:39 2023
+Path                : S.00000000
+FS                  : 0.0 GiB   Used FS: -nan%   Inodes: 0.0 Mi   Used Inodes: -nan%
+Participating tasks : 64
+
+Options:
+api                 : POSIX
+apiVersion          :
+test filename       : S@S@S
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : no tasks offsets
+nodes               : 1
+tasks               : 64
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 50 MiB
+blocksize           : 1.95 GiB
+aggregate filesize  : 125 GiB
+verbose             : 1
+
+Results:
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Thu Dec 14 00:13:55 2023
+write     4038       83.06      0.039900    2048000    51200      28.34      30.82      30.06      31.70      0
+Commencing read performance test: Thu Dec 14 00:14:18 2023
+
+read      4622       92.53      0.682358    2048000    51200      0.086130   27.67      17.48      27.69      0
+remove    -          -          -           -          -          -          -          -          7.57       0
+Max Write: 4037.71 MiB/sec (4233.85 MB/sec)
+Max Read:  4622.06 MiB/sec (4846.58 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        4037.71    4037.71    4037.71       0.00      80.75      80.75      80.75       0.00   31.70114         NA            NA     0     64  64    1   1     0        1         0    0      1 2097152000 52428800  128000.0 POSIX      0
+read         4622.06    4622.06    4622.06       0.00      92.44      92.44      92.44       0.00   27.69330         NA            NA     0     64  64    1   1     0        1         0    0      1 2097152000 52428800  128000.0 POSIX      0
+Finished            : Thu Dec 14 00:14:53 2023&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;IOR’s test is designed to scale and maintain consistent throughput &lt;em&gt;per server&lt;/em&gt; as we add more compute nodes. You also have the option to modify the performance test settings like &lt;code&gt;blockSize&lt;/code&gt; (-b) and &lt;code&gt;transferSize&lt;/code&gt; (-t) to see how the throughput changes when you adjust those values.&lt;/p&gt; 
+&lt;p&gt;For our performance runs, we used the options listed in table 1. As you prepare your dataset for testing, take time to optimize the IOR settings. Tailor them to your specific data characteristics for improved accuracy. For instance, adjust the blockSize downward if holding many smaller files. Or remove the -f option if processes commonly read the same files. Taking these steps allows IOR to better simulate your real-world environment. For additional options, refer to the&lt;a href="https://ior.readthedocs.io/en/latest/userDoc/options.html"&gt; IOR official documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;div id="attachment_3339" style="width: 1846px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3339" loading="lazy" class="size-full wp-image-3339" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/20/CleanShot-2024-02-20-at-13.37.27@2x.png" alt="Table 1 - IOR Options used for our performance test runs." width="1836" height="574"&gt;
+ &lt;p id="caption-attachment-3339" class="wp-caption-text"&gt;Table 1 – IOR Options used for our performance test runs.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Mountpoint for Amazon S3 provides customers with a faster setup time for storage compared to provisioning and managing complex storage clusters required by other storage services.&lt;/p&gt; 
+&lt;p&gt;With data stored in Amazon S3 behind the scenes, Mountpoint delivers the durability, scalability, and high throughput needed to support demanding machine learning training workloads. It also provides a cost-efficient storage solution.&lt;/p&gt; 
+&lt;p&gt;Mountpoint for Amazon S3 is easy to integrate with other AWS ParallelCluster, and this extends to AWS Batch, and self-managed EC2 instances, too – all popular methods for distributed training workflows. The quick, scalable, and economical nature of Amazon S3 behind Mountpoint removes traditional data storage challenges customers often face when pursuing ML training.&lt;/p&gt; 
+&lt;p&gt;You can get started with Mountpoint for S3 today by building on the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/storage/mountpoint_s3"&gt;sample we’ve provided in the HPC Recipe Library&lt;/a&gt;. We highly encourage you to closely examine how the install/configure scripts operate and other recipes in the recipe library. These recipes are designed for cross-platform compatibility and robustness working with ParallelCluster, requiring little to no modification to use.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Accelerating agent-based simulation for autonomous driving</title>
 		<link>https://aws.amazon.com/blogs/hpc/accelerating-agent-based-simulation-for-autonomous-driving-with-hpc/</link>
 		
@@ -28,7 +214,7 @@
 		<guid isPermaLink="false">b5625f70c17b5e2ef046c36732be097d809e0318</guid>
 
 					<description>AWS is powering the future of self-driving cars. Check out this post to see how high performance computing is transforming agent-based models for the CARLA RAI Challenge.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3356" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/23/boofla88_a_robot_wearing_a_hat_and_driving_a_car_on_a_sunny_day_6f8f05d1-fe46-48fc-9828-a49a1cf22794.png" alt="" width="380" height="212"&gt;Driving innovation has always been at the core of AWS and one of the realms in which this innovation is most palpable is in the burgeoning industry of autonomous vehicles. By accelerating agent-based models (ABM) simulations with high performance computing, AWS is at the forefront of this technological revolution, and nowhere is this more evident than in their support of the CARLA RAI Challenge and their commitment to Responsible AI (RAI).&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3356" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/23/boofla88_a_robot_wearing_a_hat_and_driving_a_car_on_a_sunny_day_6f8f05d1-fe46-48fc-9828-a49a1cf22794.png" alt="" width="380" height="212"&gt;Driving innovation has always been at the core of AWS and one of the realms in which this innovation is most palpable is in the burgeoning industry of autonomous vehicles. By accelerating agent-based models (ABM) simulations with high performance computing, AWS is at the forefront of this technological revolution, and nowhere is this more evident than in their support of the CARLA RAI Challenge and their commitment to Responsible AI (RAI).&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll tell you about the challenge itself, the tools we’ve leveraged to set it up, and show you how you can participate.&lt;/p&gt; 
 &lt;h2&gt;The CARLA RAI challenge and autonomous driving&lt;/h2&gt; 
 &lt;p&gt;In the realm of autonomous driving, the &lt;a href="https://carla-rai-challenge.github.io/"&gt;CARLA Responsible AI Challenge&lt;/a&gt; is an initiative led by the Oxford Robotics Institute, using a virtual environment created by the CARLA open-source autonomous driving simulator.&lt;/p&gt; 
@@ -2237,88 +2423,6 @@ print(r.text)
 &lt;p&gt;&lt;strong&gt;The first&lt;/strong&gt; is that our engineering teams are always looking for ways to boost performance. Sometimes that happens in hardware, very often firmware, and – like today’s post – software, too. When we find those ways, we’ll roll them out as quick as we can, and they’ll form part of the pattern that cloud HPC users have come to expect: things just get faster (and easier) over time, without compromising security.&lt;/p&gt; 
 &lt;p&gt;&lt;strong&gt;The second&lt;/strong&gt; is that those same engineers work collaboratively with their counterparts at partners (and competitors, too) to make things better, and faster – for everyone. This collaborative angle, underscores a truth that innovation thrives in shared effort rather than isolated silos. We’re thankful to have been able to work with so many dedicated engineers from around the world to bring these results to you today.&lt;/p&gt; 
 &lt;p&gt;Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; if you have any questions – or if you want to find a way to contribute, too.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Unpacking the power of agent-based models for environmental and socio-economic impact</title>
-		<link>https://aws.amazon.com/blogs/hpc/unpacking-the-power-of-agent-based-models-for-environmental-and-socio-economic-impact/</link>
-		
-		<dc:creator><![CDATA[Ilan Gleiser]]></dc:creator>
-		<pubDate>Tue, 24 Oct 2023 13:16:52 +0000</pubDate>
-				<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Sustainability]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">7d5dc1a9167d60992b36e694dc5e534206fd493f</guid>
-
-					<description>Today we’ll help you understand agent-based models and their potential to impact the environment and socio-economic systems. We'll explore a few use cases and show how ABMs can improve our comprehension of environmental and social decision making.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-2848 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/08/boofla88_conways_game_of_life_as_a_concept_3D_close_zoom_photo__61aa6916-7a48-466e-93c7-00b102db121d.png" alt="" width="380" height="212"&gt;&lt;em&gt;This post was contributed by Namid Stillman, Quantitative Researcher at Simudyne, and Sam Bydlon and Ilan Gleiser from the Global Impact Computing team at AWS.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Agent-based modeling (ABM) is a powerful computational modeling approach that centers on the simulation of interactions between autonomous agents to understand the behavior of the broader system and its governing principles. Agent-based simulation can be traced back all the way to the mid-20&lt;sup&gt;th&lt;/sup&gt; century and John von Neumann’s universal constructor, but due to the large computational requirements of running agent-based simulations widespread development and application did not come until the 1990s.&lt;/p&gt; 
-&lt;p&gt;Since then, ABMs have evolved and gained prominence in helping us model and understand complex systems by representing the behaviors and interactions between agents. With the emergence of cloud technology, in particular high-performance computing services on AWS, agent-based simulation is poised to enter a new era of scale and accessibility. By developing simulations that mimic systems such as economies and scaling the number of agents to be comparable to reality, we can explore hypothetical scenarios that would not be possible, or might be too risky, to test in the real world.&lt;/p&gt; 
-&lt;p&gt;With the drop in computing costs and the democratization of HPC on AWS, ABMs have become a significant tool for analyzing the complexities of the environmental and socio-economic impacts of our decisions. By simulating interactions between individual ‘agents’, like households, governments, firms, trees, and vehicles, for example, ABMs can grant a deeper insight into effects of economic policy decisions, changes to supply chains, urban plastics flow, and climate risks, among others.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll help you understand agent-based models and their potential to impact the environment and socio-economic systems. We’ll explore a few use cases of ABMs and show how they can improve our comprehension of environmental and social decision making.&lt;/p&gt; 
-&lt;div id="attachment_2837" style="width: 989px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2837" loading="lazy" class="size-full wp-image-2837" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/08/CleanShot-2023-09-08-at-11.29.07.png" alt="Fig 1: Examples of Agent-Based Model simulations available from Simudyne SDK on AWS HPC " width="979" height="332"&gt;
- &lt;p id="caption-attachment-2837" class="wp-caption-text"&gt;Fig 1: Examples of Agent-Based Model simulations available from Simudyne SDK on AWS HPC&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Economic Policy Simulation&lt;/h2&gt; 
-&lt;p&gt;Economic policy simulation is a crucial application of ABMs for understanding the complex dynamics of social and economic systems. ABMs provide a unique approach to modeling the interactions between individuals and institutions within an economy, allowing for a more realistic representation of economic behaviors and policy outcomes.&lt;/p&gt; 
-&lt;p&gt;In stark contrast to traditional methods of economic modeling, ABMs revolutionize the way we analyze and model economic scenarios. Unlike classical approaches that analyze macroeconomic trends and assume the homogeneity of individuals, ABMs are built as bottom-up models that capture the intricate heterogeneity and complexity of human decision-making processes. This approach enables businesses, policymakers, and economists to simulate a broad range of economic models and analyze their potential impacts, giving them an edge over classical economic methods. ABMs are also useful for evaluating the outcomes of different policy interventions and projecting probable future scenarios, thereby improving policymaking in many domains.&lt;/p&gt; 
-&lt;p&gt;One area where ABMs have been particularly valuable is in the study of macroeconomic policy, which we described in a previous &lt;a href="https://aws.amazon.com/blogs/hpc/rigor-and-flexibility-the-benefits-of-agent-based-computational-economics/"&gt;post&lt;/a&gt;. ABMs can simulate the effects of fiscal and monetary policy – like changes in tax rates, government spending, or interest rates – on key economic variables like income distribution, inflation, and GDP growth. This allows policymakers to simulate the potential impacts of policy changes before implementing them in the real world, making for more informed decisions. For instance, policy makers can study the impact of introducing a universal basic income on the distribution of wealth among agents in an economy.&lt;/p&gt; 
-&lt;p&gt;ABMs can also capture the dynamics of financial markets and banking systems, providing insights into the effects of regulatory policies on financial stability and systemic risk. By simulating the interactions between banks, investors, and borrowers, ABMs can shed light on the transmission channels through which shocks (like climate events) propagate within the financial system, helping policymakers design more robust regulatory frameworks.&lt;/p&gt; 
-&lt;p&gt;As the science of economic agent-based modeling advances, incorporating reinforcement learning (RL) agents into simulations is becoming increasingly popular because the technique allows agents to learn from experience and make better decisions. In an RL framework, agents initially operate by trial and error but are rewarded or punished based on their actions. This means the agents learn to make optimal decisions under uncertain conditions, mimicking the way humans learn. Incorporating reinforcement learning into agent-based simulations can enhance the predictive power of the simulations through these feedback loops, where agents can learn and adjust their behavior based on past outcomes and their own &amp;nbsp;&amp;nbsp;mistakes. With each iteration, agents become more adept at predicting future outcomes and choosing the best course of action to achieve their goals.&lt;/p&gt; 
-&lt;p&gt;The scalability and computational power of cloud computing platforms like AWS have made it possible to build ABM simulations for economic policy research. AWS HPC services – AWS Batch and AWS ParallelCluster – allow researchers to run complex and computationally-intensive ABMs. This means researchers can simulate populations with millions of individuals and firms, where individuals can have differences in preferences, access to information and learning rates. They can also leverage these services to more efficiently explore a broader range of policy scenarios, conduct sensitivity analysis, and perform parameter calibration. Since they can distribute simulations across multiple virtual machines, researchers can reduce the time required for running simulations, accelerating the research process and enabling faster policy evaluation.&lt;/p&gt; 
-&lt;h2&gt;Supply-Chain Decarbonization&lt;/h2&gt; 
-&lt;p&gt;Supply-chain decarbonization is a critical aspect of sustainability efforts of businesses and policymakers who are aiming to reduce the greenhouse gas emissions associated with the production, transportation, and distribution of goods and services. The transition to a low-carbon economy requires significant changes in supply-chain operations and practices. In fact, many firms and governments are aiming for net-zero carbon emissions by 2040, so ABMs can play a crucial role supporting these firms to accurately model and optimize their supply chains and perhaps even achieving those targets sooner.&lt;/p&gt; 
-&lt;p&gt;ABMs enable businesses and policymakers to simulate the complex interactions between the various actors within a supply chain: manufacturers, suppliers, logistics providers, and consumers. By modeling the behavior and decision-making processes of these actors, ABMs can help identify opportunities and strategies for decarbonizing supply chains while minimizing disruptions and maximizing economic efficiency.&lt;/p&gt; 
-&lt;p&gt;One of the key benefits of ABMs for supply-chain decarbonization is their ability to capture the heterogeneity and dynamics of &lt;em&gt;real-world&lt;/em&gt; supply chains. Each agent in a supply chain has different characteristics, capabilities, and goals, and ABMs can represent this diversity. This lets companies analyze the impact of different agents’ behaviors and decision-making processes on the overall carbon footprint of the supply chain. For example, &amp;nbsp;Amazon can model their entire supply chain so that every facility (like inbound cross-docking facilities, or fulfillment centers) are modelled as agents. Each facility agent will have its own unique parameters – just like in the real world. Millions, or billions of products are then tracked moving through the supply chain. Various scenarios and policy changes that are aimed at reducing costs or carbon footprint can be simulated safely to identify the policies that meet the desired targets without sacrificing key business metrics, like on time delivery.&lt;/p&gt; 
-&lt;p&gt;For example, ABMs can simulate the effects of adopting more sustainable manufacturing processes or using renewable energy sources in transportation. By modeling the interactions between manufacturers, suppliers, and logistics providers, supply chain optimization teams can use their supply chain simulator to identify potential bottlenecks, trade-offs, and synergies that arise from different decarbonization strategies.&lt;/p&gt; 
-&lt;p&gt;ABMs can also capture the influence of external factors on supply-chain decarbonization, like government tax policies, consumer preferences, and technological advancements. They can simulate the impact of policy interventions, too – such as carbon pricing, or subsidies for renewable energy – on supply-chain emissions. By incorporating these factors into the simulation, ABMs can provide valuable insights into the potential effectiveness and unintended consequences of different policy options.&lt;/p&gt; 
-&lt;p&gt;To effectively run large scale ABM simulations for supply-chain decarbonization, HPC capabilities, such as those provided by AWS, are essential. The vast scale and intricacy of supply chains necessitate the use of large-scale simulations, which enable researchers to analyze data at various levels of granularity, ranging from individual warehouses up to the national and even international distribution networks. This allows for a more comprehensive evaluation of different decarbonization strategies, identifying those that are most effective and practical in different contexts. At the national and international level, the use of HPC on AWS is essential for providing the necessary scale of compute power to integrate these granular details and achieve accurate and actionable insights. These technologies are empowering supply chain optimization teams to make critical advances towards more sustainable and resilient supply chains that benefit society, and the planet, too.&lt;/p&gt; 
-&lt;p style="text-align: right"&gt;&lt;strong&gt;&lt;em&gt;“Overall, ABMs along with HPC is a novel approach to solving supply chain related problems and to decarbonize the supply chain by optimizing it.”&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt; 
-&lt;p style="text-align: right"&gt;&lt;strong&gt;&lt;em&gt;Siva Veluchamy, &lt;/em&gt;&lt;/strong&gt;Sr. Simulation Scientist, Amazon World-Wide Design Engineering&lt;/p&gt; 
-&lt;h2&gt;Plastic Flow Simulations&lt;/h2&gt; 
-&lt;p&gt;Plastic flow simulations are an important tool in understanding the movement and distribution of plastic waste in the environment. According to the UN, “&lt;em&gt;every year 19-23 million tonnes of plastic waste leaks into aquatic ecosystems, &lt;/em&gt;&lt;a href="mailto:https://www.unep.org/plastic-pollution"&gt;&lt;em&gt;polluting lakes, rivers and seas&lt;/em&gt;&lt;/a&gt;“. There is increasing concern about plastic pollution with 175 countries agreeing to implement legally binding guidelines by 2024. Given this, and plastic’s impact on ecosystems and human health, it’s crucial to develop strategies and policies that effectively manage and reduce plastic waste.&lt;/p&gt; 
-&lt;p&gt;ABMs offer a unique approach to simulating plastic flow by modeling the behavior and interactions of various agents involved in the plastic lifecycle. These agents can include manufacturers, consumers, waste management facilities, and natural processes like weather patterns and ocean currents.&lt;/p&gt; 
-&lt;p&gt;According to researchers at &lt;a href="mailto:mailto:https://www.iaria.org/conferences2021/filesSIMUL21/50033_SIMUL.pdf"&gt;Purdue University&lt;/a&gt; and the &lt;a href="mailto:https://doi.org/10.1016/j.procir.2020.01.083"&gt;National University of Singapore&lt;/a&gt;, one of the key benefits of ABMs for plastic flow simulations is their ability to capture the complex and dynamic nature of plastic waste movement. Plastic waste can travel through multiple pathways, like rivers, wind, and ocean currents, and can accumulate in place like beaches, riversides, or ocean gyres. ABMs can simulate these movement patterns and help identify areas of high plastic concentration, letting policymakers target their efforts for maximum impact.&lt;/p&gt; 
-&lt;p&gt;As Purdue researchers have shown, using data from the American Chemistry Council and the National Association for PET Container Resources, ABMs can also simulate the behavior of different actors within the plastic supply chain and waste management system. This includes modeling consumer behavior, like plastic consumption patterns and recycling habits, and the operations of waste management facilities and their capacity to handle plastic waste. By incorporating these factors into the simulation, ABMs can provide insights into the effectiveness of different interventions, such as implementing recycling programs or reducing single-use plastic consumption.&lt;/p&gt; 
-&lt;h2&gt;Green Urban Planning Simulation&lt;/h2&gt; 
-&lt;p&gt;The Green Urban Scenarios simulator (&lt;a href="https://run.greenurbanscenarios.com/"&gt;GUS&lt;/a&gt;), powered by AWS HPC, is a digital twin of a city that can be used to run environmental scenarios. The GUS simulator was launched by Lucid Minds, a start-up company from Germany, and uses agent-based modeling on top of a digital twin of proposed green urban projects, such as tree planting and maintenance in a city, to understand the effects of a project before it is implemented. The simulators allows urban planners to explore potential impacts of proposed projects, including the amount of carbon sequestered, or the quantity of pollution that might be removed from the local environment, or the ability of tree planting to retain water and mitigate the impacts of storms.&lt;/p&gt; 
-&lt;h2&gt;Circular Economy Simulations&lt;/h2&gt; 
-&lt;p&gt;A circular economy is a system where the goal is to minimize waste and pollution by keeping materials in use for as long as possible. This involves a shift away from the traditional linear economic model of “take, make, use, and dispose” and towards a more circular approach. As outlined by the University of Cambridge Judge Business School, the goal of a circular economy “is to put back into the system everything relating to production, distribution and consumption, in order to extract as much value as possible from the resources and materials we utilize.”&lt;/p&gt; 
-&lt;p&gt;Circular economy simulations are a critical tool in understanding the potential impact of circular economy strategies on social and environmental systems. Using ABMs, businesses and policymakers can analyze the effects of different circular economy strategies on the overall sustainability of a system.&lt;/p&gt; 
-&lt;p&gt;ABMs let organizations model the interactions between various actors and factors involved in circular economy initiatives, like businesses, consumers, waste management systems, and policymakers. By simulating the behavior and decision-making processes of these actors, ABMs can help evaluate the effectiveness of different circular economy strategies in reducing resource consumption, minimizing waste generation, and promoting sustainable economic growth. This allows researchers to explore a wider range of circular economy scenarios, evaluate different strategies, and identify the most effective interventions for transitioning to a sustainable and regenerative economic system.&lt;/p&gt; 
-&lt;p style="text-align: right"&gt;&lt;strong&gt;&lt;em&gt;“Agent Based Modeling (ABM) has been instrumental in several circular economy analysis projects at NREL. It has helped us to identify the potential barriers and enablers to &lt;/em&gt;&lt;/strong&gt;&lt;a href="https://www.nature.com/articles/s41560-021-00888-5"&gt;&lt;strong&gt;&lt;em&gt;increasing the circularity of renewable energy technologies&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt;, such as &lt;/em&gt;&lt;/strong&gt;&lt;a href="mailto:https://www.nrel.gov/docs/fy23osti/84141.pdf"&gt;&lt;strong&gt;&lt;em&gt;wind turbines and photovoltaic panels&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;&lt;em&gt;.”&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; 
-&lt;p style="text-align: right"&gt;&lt;strong&gt;Julien Walzberg&lt;/strong&gt;, Ph.D., Researcher, National Renewable Energy Laboratory&lt;/p&gt; 
-&lt;h2&gt;Simulating climate risk scenarios&lt;/h2&gt; 
-&lt;p&gt;As the world experiences increasingly severe and frequent climate events, all businesses will be affected to some degree. Simulations provide a powerful tool for decision makers to evaluate the range of possible scenarios they may face and prepare accordingly. More importantly, simulations give insights into the cost of inaction, like failing to invest in supply chain resilience or promoting recycling schemes. &amp;nbsp;Agent-based models extend the impact of simulations to human-dependent systems like logistic networks, waste management facilities, or even entire economies.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Simudyne&lt;/strong&gt;, a provider of simulation technologies, is a company leading the way in this space. They have developed a platform and software development kit (SDK) that uses patented graph-based computing to allow businesses to simulate different aspects of their operations using ABMs. These models range from national supply chains to firm-specific exposure to national climate shocks. Simulations of the supply chain are designed to account for various factors like different suppliers, transportation routes, and inventory levels. This granular view provides a comprehensive understanding of how different sections of the network are affected by extreme weather events and can be used to identify steps towards decarbonisation in line with net zero goals.&lt;/p&gt; 
-&lt;p&gt;Alternatively, Simudyne can model shocks at the scale of an entire economy, the kind caused by events like flooding or heatwaves. They can also account for government incentive schemes that reward early adopters in green innovation to develop new production processes and technologies with the explicit aim of reducing environmental risks. These models give insights into key vulnerabilities at the scale of the sector or an individual firm and options for offsetting these risks. This provides a valuable tool for business leaders and policy makers alike.&lt;/p&gt; 
-&lt;p&gt;By simulating climate risk events with ABMs, companies like Deloitte can make better-informed decisions on every aspect of their business, quickly assess the financial consequences of a risk scenario, and respond in a more coordinated and efficient manner. This means that companies can develop contingency plans for managing unexpected climate events rather than be caught off guard.&lt;/p&gt; 
-&lt;p style="text-align: right"&gt;&lt;strong&gt;&lt;em&gt;“Agent-based modelling gives us a clear view of the interplay between climate change and our economies. It’s a tool that sharpens our understanding, helping us pinpoint inefficiencies in supply chains, reduce costs, and cut carbon emissions. With it, we can make better decisions for a safer world.”&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;&amp;nbsp;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt; 
-&lt;p style="text-align: right"&gt;&lt;strong&gt;Justin Lyon&lt;/strong&gt;, CEO, Simudyne&lt;/p&gt; 
-&lt;h2&gt;Leveraging the Simudyne SDK with AWS HPC services&lt;/h2&gt; 
-&lt;p&gt;Developing agent-based models can be difficult both in terms of model construction and deployment. The Simudyne SDK is a Java-based simulation engine that makes model development easy and accessible, meaning businesses can spend more time understanding the results rather than developing them. Importantly, the Simudyne SDK leverages patented graph-computation to efficiently scale ABMs from tens to millions of agents. This allows for huge and complex systems to be modelled and forecast, such as simulating three weeks of nationwide supply chains with hundreds of millions of products flowing through the supply chain every week at the resolution of a single item in less than an hour.&lt;/p&gt; 
-&lt;p&gt;One of the central benefits of the Simudyne SDK is its flexibility. The SDK can be used to simulate supply chains, customer networks, fast moving consumer goods, or even entire economies. However, not all simulations are alike and identifying the right computational architecture depends on understanding&amp;nbsp;the specifics to each model. The number of agents in the simulation, the type of data that is passed between agents, the size or amount of data being passed, how the simulation is used by other processes such as ML workflows, and how both input and output data is accessed, are all factors that impact compute requirements. For now, let’s go through some of these considerations in turn.&lt;/p&gt; 
-&lt;p&gt;One of biggest considerations when building agent-based models is understanding how many agents will be in the simulation and how they interact. This relates to the agent interaction network, the communication framework for messages to be passed between agents. Some interaction networks can be very simple, such as financial exchanges which have a `star-like’ interaction network (all agents link to the market and not to each other) or they can be very complex, like a social network, where links between agents are dynamic, changing over time. The Simudyne SDK’s graph-based computational approach efficiently simulates millions of agents, allowing users to easily simulate real-world systems.&lt;/p&gt; 
-&lt;p&gt;Just as critical as the number of agents in the simulations is the type of data that passes between them. The Simudyne SDK uses a message passing framework to distribute information across the simulations. The size of the messages drives the amount of memory needed to run the simulations. Whether there are several million agents passing a small amount of data or tens of agents passing large volumes, memory consideration is key to enabling efficient scaling of the simulation. AWS supports high-performance high-memory computing resources. When deciding on which EC2 instances to use, it is critical that there is sufficient memory for each instance. Simulation profiling and benchmarking can help determine the amount of memory required.&lt;/p&gt; 
-&lt;p&gt;A simulation is only as useful as how it is used. Some simulations, like models of an entire economy, are standalone. They can be used for economic forecasting, highlighting the impact of shocks to the economy such as rising inflation. Other simulations, like supply chain models, can be used to chart the best course of action. By running multiple simulations with different supply chain structures (for example, choosing many small distributors or a few large ones), strategies can be compared, and an optimal structure can be identified. Optimization modules can find optimal strategies in an efficient way.&lt;/p&gt; 
-&lt;p&gt;When deciding on how to structure a simulation pipeline, it’s imperative that the data fed into the simulation is well described and understood. Related considerations include the format, frequency and mechanism by which data is passed to the simulation. For example, is the data a static source that is kept in an Amazon S3 bucket? Or is it continually updated, using real-time data streaming from &lt;a href="https://aws.amazon.com/kinesis/"&gt;Amazon Kinesis? &lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;Similarly, the output of the data must be properly structured to fit into other downstream tasks. If the data is required for reports, then a simple CSV or text file might suffice. More complex data pipelines might require parquet or H5 files which can be easily read by other code sources, such as in Python or C/C++ scripts.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;With the rise of HPC on AWS, agent-based modeling has become an even more powerful tool for understanding complex systems and their impact on our environment and society. The ability to simulate the behaviors and interactions of individual agents has led to deeper insights into the effects of economic policy decisions, urban plastics flow, and climate risks. ABMs have democratized the process of analyzing environmental and socio-economic impacts, making it easier and more affordable to understand the complex interactions that drive our world. AWS’ HPC services and wide selection of instance types make it an excellent tool to harness the power of ABMs and help us make better decisions for the future.&lt;/p&gt; 
-&lt;p&gt;Looking to learn more about how to use Simudyne’s SDK and AWS HPC resources to solve your current and future business problems? Simudyne has a team of expert simulation engineers ready to help. Reach out today to find out more. For an evaluation of your ABM simulation workloads, please &lt;a href="mailto:ask-hpc@amazon.com"&gt;reach out to&lt;/a&gt; the AWS Global Impact Computing Team and we will schedule a discovery session with you.&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/08/CleanShot-2023-09-08-at-11.52.13.png" alt="Namid Stillman" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Namid Stillman&lt;/h3&gt; 
-  &lt;p&gt;Dr. Namid Stillman is a Quantitative Researcher at Simudyne. He has a background in multi-disciplinary research, including in fields of material science, cell migration and nanotechnology, with a focus on developing interpretable AI method for scientific research. He is the author of the GNNs in Action textbook from Manning Press and co-organizer of the Simulation-based Science interest group at the Alan Turing Institute.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
 					
 		
 		
