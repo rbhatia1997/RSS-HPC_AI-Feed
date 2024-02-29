@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 28 Feb 2024 20:57:04 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 29 Feb 2024 05:02:04 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -402,7 +402,7 @@ Finished            : Thu Dec 14 00:14:53 2023&lt;/code&gt;&lt;/pre&gt;
 		<category><![CDATA[Weather]]></category>
 		<guid isPermaLink="false">982561089e42b9831b7f993bd780876777cb7008</guid>
 
-					<description>You might associate the phrase ‘Jupyter Notebooks in production’ with a scrappy startup short on engineers or a hobbyist tinkering in their free time. However, this story unfolds at Amazon, where a team transitioned from requiring software engineers to replicate scientists’ work for production, to enabling scientists to seamlessly deploy Jupyter Notebooks into production. Amazon’s […]</description>
+					<description>Interested in eliminating friction between data science and engineering teams? Read this post to learn how Amazon successfully transitioned Jupyter Notebooks from the lab to production.</description>
 										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3301" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/boofla88_a_wind_farms_of_turbines_across_a_rolling_green_hills__e8683f7d-f097-4513-af62-46cbd2b6ad88.png" alt="Amazon’s renewable energy forecasting- continuous delivery with Jupyter Notebooks copy" width="380" height="212"&gt;&lt;/em&gt;You might associate the phrase ‘Jupyter Notebooks in production’ with a scrappy startup short on engineers or a hobbyist tinkering in their free time. However, this story unfolds at Amazon, where a team transitioned from requiring software engineers to replicate scientists’ work for production, to enabling scientists to seamlessly deploy Jupyter Notebooks into production.&lt;/p&gt; 
 &lt;p&gt;Amazon’s Renewable Energy Optimization team produces software to maximize the effectiveness of our portfolio of wind and solar farms. The team develops and runs machine learning models that forecast the state of the electricity grid in the next few days. As Amazon’s portfolio of wind and solar farms has expanded, the techniques that our scientists and software engineers use to create and run these machine learning models has evolved, too.&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll walk you through a science-to-production workflow that’s probably familiar to you, explain the logic that supported our novel approach and – finally – let you benefit from what we learned implementing it all.&lt;/p&gt; 
