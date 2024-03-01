@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 01 Mar 2024 02:42:46 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 01 Mar 2024 17:04:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,166 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>What Is Trustworthy AI?</title>
+		<link>https://blogs.nvidia.com/blog/what-is-trustworthy-ai/</link>
+		
+		<dc:creator><![CDATA[Nikki Pope]]></dc:creator>
+		<pubDate>Fri, 01 Mar 2024 17:00:24 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Corporate Responsibility]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<category><![CDATA[Trustworthy AI]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70030</guid>
+
+					<description><![CDATA[Artificial intelligence, like any transformative technology, is a work in progress — continually growing in its capabilities and its societal impact. Trustworthy AI initiatives recognize the real-world effects that AI can have on people and society, and aim to channel that power responsibly for positive change. What Is Trustworthy AI? Trustworthy AI is an approach		<a class="read-more" href="https://blogs.nvidia.com/blog/what-is-trustworthy-ai/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p dir="ltr">Artificial intelligence, like any transformative technology, is a work in progress — continually growing in its capabilities and its societal impact. <a href="https://blogs.nvidia.com/blog/tag/trustworthy-ai/">Trustworthy AI initiatives</a> recognize the real-world effects that AI can have on people and society, and aim to channel that power responsibly for positive change.</p>
+<h2 dir="ltr">What Is Trustworthy AI?</h2>
+<p dir="ltr">Trustworthy AI is an approach to AI development that prioritizes safety and transparency for those who interact with it. <a href="https://developer.nvidia.com/blog/tag/trustworthy-ai/">Developers of trustworthy AI</a> understand that no model is perfect, and take steps to help customers and the general public understand how the technology was built, its intended use cases and its limitations.</p>
+<p dir="ltr">In addition to complying with privacy and consumer protection laws, trustworthy AI models are tested for safety, security and mitigation of unwanted bias. They’re also transparent — providing information such as accuracy benchmarks or a description of the training dataset — to various audiences including regulatory authorities, developers and consumers.</p>
+<h2 dir="ltr">Principles of Trustworthy AI</h2>
+<p dir="ltr"><a href="https://www.nvidia.com/en-us/ai-data-science/trustworthy-ai/">Trustworthy AI principles</a> are foundational to NVIDIA’s end-to-end AI development. They have a simple goal: to enable trust and transparency in AI and support the work of partners, customers and developers.</p>
+<h3 dir="ltr">Privacy: Complying With Regulations, Safeguarding Data</h3>
+<p dir="ltr">AI is often described as data hungry. Often, the more data an algorithm is trained on, the more accurate its predictions.</p>
+<p dir="ltr">But data has to come from somewhere. To develop trustworthy AI, it’s key to consider not just what data is legally available to use, but what data is socially responsible to use.</p>
+<p dir="ltr">Developers of AI models that rely on data such as a person’s image, voice, artistic work or health records should evaluate whether individuals have provided appropriate consent for their personal information to be used in this way.</p>
+<p dir="ltr">For institutions like hospitals and banks, building AI models means balancing the responsibility of keeping patient or customer data private while training a robust algorithm. NVIDIA has created technology that enables <a href="https://blogs.nvidia.com/blog/what-is-federated-learning/">federated learning</a>, where researchers develop AI models trained on data from multiple institutions without confidential information leaving a company’s private servers.</p>
+<p dir="ltr"><a href="https://www.nvidia.com/en-gb/data-center/dgx-systems/">NVIDIA DGX systems</a> and <a href="https://developer.nvidia.com/flare">NVIDIA FLARE</a> software have enabled several federated learning projects in <a href="https://blogs.nvidia.com/blog/federated-learning-nature-medicine/">healthcare</a> and <a href="https://developer.nvidia.com/blog/using-federated-learning-to-bridge-data-silos-in-financial-services/">financial services</a>, facilitating secure collaboration by multiple data providers on more accurate, generalizable AI models for <a href="https://blogs.nvidia.com/blog/israel-medical-center-ai-startups-radiology/">medical image analysis</a> and <a href="https://blogs.nvidia.com/blog/ai-fraud-detection-rapids-triton-tensorrt-nemo/">fraud detection</a>.</p>
+<h3 dir="ltr">Safety and Security: Avoiding Unintended Harm, Malicious Threats</h3>
+<p dir="ltr">Once deployed, AI systems have real-world impact, so it’s essential they perform as intended to preserve user safety.</p>
+<p dir="ltr">The freedom to use publicly available AI algorithms creates immense possibilities for positive applications, but also means the technology can be used for unintended purposes.</p>
+<p dir="ltr">To help mitigate risks, <a href="https://blogs.nvidia.com/blog/ai-chatbot-guardrails-nemo/">NVIDIA NeMo Guardrails</a> keeps AI language models on track by allowing enterprise developers to set boundaries for their applications. Topical guardrails ensure that chatbots stick to specific subjects. Safety guardrails set limits on the language and data sources the apps use in their responses. Security guardrails seek to prevent malicious use of a large language model that’s connected to third-party applications or application programming interfaces.</p>
+<p dir="ltr">NVIDIA Research is working with the DARPA-run SemaFor program to <a href="https://github.com/NVlabs/stylegan3-detector" target="_blank" rel="noopener">help digital forensics experts identify AI-generated images</a>. Last year, researchers published a novel method for <a href="https://arxiv.org/pdf/2302.07371.pdf" target="_blank" rel="noopener">addressing social bias using ChatGPT</a>. They’re also creating methods for <a href="https://research.nvidia.com/labs/nxp/avatar-fingerprinting/">avatar fingerprinting</a> — a way to detect if someone is using an AI-animated likeness of another individual without their consent.</p>
+<p dir="ltr">To protect data and AI applications from security threats, <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100</a> and <a href="https://www.nvidia.com/en-us/data-center/h200/">H200 Tensor Core GPUs</a> are built with <a href="https://blogs.nvidia.com/blog/what-is-confidential-computing/">confidential computing</a>, which ensures sensitive data is protected while in use, whether deployed on premises, in the cloud or at the edge. <a href="https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/">NVIDIA Confidential Computing</a> uses hardware-based security methods to ensure unauthorized entities can’t view or modify data or applications while they’re running — traditionally a time when data is left vulnerable.</p>
+<h3 dir="ltr">Transparency: Making AI Explainable</h3>
+<p dir="ltr">To create a trustworthy AI model, the algorithm can’t be a black box — its creators, users and stakeholders must be able to understand how the AI works to trust its results.</p>
+<p dir="ltr">Transparency in AI is a set of best practices, tools and design principles that helps users and other stakeholders understand how an AI model was trained and how it works. <a href="https://blogs.nvidia.com/blog/what-is-explainable-ai/">Explainable AI</a>, or XAI, is a subset of transparency covering tools that inform stakeholders how an AI model makes certain predictions and decisions.</p>
+<p dir="ltr">Transparency and XAI are crucial to establishing trust in AI systems, but there’s no universal solution to fit every kind of AI model and stakeholder. Finding the right solution involves a systematic approach to identify who the AI affects, analyze the associated risks and implement effective mechanisms to provide information about the AI system.</p>
+<p dir="ltr"><a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">Retrieval-augmented generation</a>, or RAG, is a technique that advances AI transparency by connecting generative AI services to authoritative external databases, enabling models to cite their sources and provide more accurate answers. NVIDIA is helping developers get started with a <a href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/generative-ai-chatbots/">RAG workflow</a> that uses the <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a> framework for developing and customizing generative AI models.</p>
+<p dir="ltr">NVIDIA is also part of the National Institute of Standards and Technology’s U.S. Artificial Intelligence Safety Institute Consortium, or AISIC, to <a href="https://blogs.nvidia.com/blog/aisic-trustworthy-ai/">help create tools and standards for responsible AI development</a> and deployment. As a consortium member, NVIDIA will promote trustworthy AI by leveraging best practices for implementing AI model transparency.</p>
+<p dir="ltr">And on NVIDIA’s hub for accelerated software, <a href="https://www.nvidia.com/en-us/gpu-cloud/">NGC</a>, <a href="https://developer.nvidia.com/blog/enhancing-ai-transparency-and-ethical-considerations-with-model-card/">model cards</a> offer detailed information about how each AI model works and was built. NVIDIA’s Model Card ++ format describes the datasets, training methods and performance measures used, licensing information, as well as specific ethical considerations.</p>
+<h3 dir="ltr">Nondiscrimination: Minimizing Bias</h3>
+<p dir="ltr">AI models are trained by humans, often using data that is limited by size, scope and diversity. To ensure that all people and communities have the opportunity to benefit from this technology, it’s important to reduce unwanted bias in AI systems.</p>
+<p dir="ltr">Beyond following government guidelines and antidiscrimination laws, trustworthy AI developers mitigate potential unwanted bias by looking for clues and patterns that suggest an algorithm is discriminatory, or involves the inappropriate use of certain characteristics. Racial and gender bias in data are well-known, but other considerations include cultural bias and bias introduced during data labeling. To reduce unwanted bias, developers might incorporate different variables into their models.</p>
+<p dir="ltr">Synthetic datasets offer one solution to reduce unwanted bias in training data used to develop AI for <a href="https://www.nvidia.com/en-us/self-driving-cars/">autonomous vehicles</a> and <a href="https://developer.nvidia.com/isaac-sim">robotics</a>. If data used to train self-driving cars underrepresents uncommon scenes such as extreme weather conditions or traffic accidents, synthetic data can help augment the diversity of these datasets to better represent the real world, helping improve AI accuracy.</p>
+<p dir="ltr"><a href="https://developer.nvidia.com/omniverse/replicator">NVIDIA Omniverse Replicator</a>, a framework built on the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform for creating and operating 3D pipelines and virtual worlds, helps developers set up custom pipelines for synthetic data generation. And by integrating the <a href="https://developer.nvidia.com/tao-toolkit">NVIDIA TAO Toolkit</a> for <a href="https://blogs.nvidia.com/blog/what-is-transfer-learning/">transfer learning</a> with Innotescus, a web platform for curating unbiased datasets for computer vision, developers can better <a href="https://developer.nvidia.com/blog/curating-data-for-transfer-learning-with-the-nvidia-tao-toolkit-and-innotescus/">understand dataset patterns and biases to help address statistical imbalances</a>.</p>
+<p dir="ltr">Learn more about trustworthy AI on <a href="https://www.nvidia.com/en-us/ai-data-science/trustworthy-ai/">NVIDIA.com</a> and the <a href="https://blogs.nvidia.com/blog/tag/trustworthy-ai/">NVIDIA Blog</a>. For more on tackling unwanted bias in AI, <a href="https://www.nvidia.com/en-us/on-demand/session/gtcspring22-se2696/">watch this talk</a> from <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> and attend the <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=S62411%2C%20S62221%2C%20S62594%2C%20S62292%2C%20S62300#/">trustworthy AI track</a> at the <a href="https://www.nvidia.com/gtc/pricing/">upcoming conference</a>, taking place March 18-21 in San Jose, Calif, and online.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/model-cards.png"
+			type="image/png"
+			width="1280"
+			height="720"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/model-cards-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[What Is Trustworthy AI?]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Live at GTC: Hear From Industry Leaders Using AI to Drive Innovation and Agility</title>
+		<link>https://blogs.nvidia.com/blog/industry-leaders-ai-innovation-gtc-2024/</link>
+		
+		<dc:creator><![CDATA[Ben Oliveri]]></dc:creator>
+		<pubDate>Fri, 01 Mar 2024 16:00:28 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Driving]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Energy]]></category>
+		<category><![CDATA[Financial Services]]></category>
+		<category><![CDATA[GTC 2024]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[Industrial and Manufacturing]]></category>
+		<category><![CDATA[Media and Entertainment]]></category>
+		<category><![CDATA[Public Sector]]></category>
+		<category><![CDATA[Retail]]></category>
+		<category><![CDATA[Telecommunications]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70083</guid>
+
+					<description><![CDATA[Enterprise execs across broad sectors to share their AI strategies and success stories.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Interest in new AI applications reached a fever pitch last year as business leaders began exploring AI pilot programs. This year, they’re focused on strategically implementing these programs to create new value and sharpen their competitive advantage.</p>
+<p><a href="https://www.nvidia.com/gtc/?ncid=pa-srch-goog-789978-prsp&amp;_bt=690120344873&amp;_bk=nvidia%20gtc&amp;_bm=p&amp;_bn=g&amp;_bg=157308081494&amp;gad_source=1&amp;gclid=EAIaIQobChMI8ITYoOy6hAMVmZxaBR2EhQB-EAAYASAAEgKOmfD_BwE">GTC</a>, NVIDIA’s conference on AI and accelerated computing, set for March 18-21 at the San Jose Convention Center, will feature leaders across a broad swath of industries discussing how they’re charting the path to AI-driven innovation.</p>
+<p>Execs from Bentley Systems, Lowe’s, Siemens and Verizon are among those sharing their companies’ AI journeys.</p>
+<p><i>Don’t miss NVIDIA founder and CEO </i><a href="https://www.nvidia.com/gtc/keynote/?regcode=pa-srch-goog-143845-prsp&amp;ncid=pa-srch-goog-143845-prsp"><i>Jensen Huang’s GTC keynote on Monday, March 18</i></a><i>, at 1 p.m. PT.</i></p>
+<h2><strong>AI Takes Center Stage in Enterprise Technology Priorities</strong></h2>
+<p>Nearly three-quarters of C-suite executives plan to increase their company’s tech investments this year, according to a <a href="https://www.bcg.com/publications/2024/from-potential-to-profit-with-genai">BCG survey of C-suite executives</a>, and 89% rank AI and generative AI among their top three priorities. More than half expect AI to deliver cost savings, primarily through productivity gains, improved customer service and IT efficiencies.</p>
+<p>However, challenges to driving value with AI remain, including reskilling workers, prioritizing the right AI use cases and developing a strategy to implement responsible AI.</p>
+<p>Join us in person or online to learn how industry leaders are overcoming these challenges to thrive with AI.</p>
+<p>Here’s a preview of top industry sessions:</p>
+<h2><strong>Financial Services</strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search.industry=option_1559593199335&amp;search=Navigating%20the%20Opportunity%20for%20GenAI%20in%20Financial%20Services#/session/1696518068816001oKTP"><i>Navigating the Opportunity for Generative AI in Financial Services</i></a>, featuring speakers from NVIDIA, MasterCard, Capital One and Goldman Sachs.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62357"><i>Enterprise AI in Banking: How One Leader Is Investing in “AI First,”</i></a> featuring Alexandra V. Mousavizadeh, CEO of Evident, and Chintan Mehta, chief information officer and head of digital technology and innovation at Wells Fargo.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62506"><i>How PayPal Reduced Cloud Costs by up to 70% With Spark RAPIDS</i></a>, featuring Illay Chen, software engineer at PayPal.</p>
+<h2><strong>Public Sector</strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62730&amp;tab.allsessions=1700692987788001F1cG#/session/1697653098220001o65m"><i>Generative AI Adoption and Operational Challenges in Government</i></a>, featuring speakers from Microsoft, NVIDIA and the U.S. Army.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62173&amp;tab.allsessions=1700692987788001F1cG#/session/1695253323624001BtLZ"><i>How to Apply Generative AI to Improve Cybersecurity</i></a>, featuring Bartley Richardson, director of cybersecurity engineering at NVIDIA.</p>
+<h2><strong>Healthcare</strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=Generative%20AI%20is%20Accelerating%20Healthcare%20into%20One%20of%20the%20Largest%20Technology%20Industries&amp;tab.allsessions=1700692987788001F1cG&amp;search.industry=option_1559593230294#/session/1696538040602001SPK9"><i>Healthcare Is Adopting Generative AI, Becoming One of the Largest Tech Industries</i></a>, featuring Kimberly Powell, vice president of healthcare and life sciences at NVIDIA.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=kimberly%20#/session/1698191176989001uYJy"><i>The Role of Generative AI in Modern Medicine</i></a>, featuring speakers from ARK Investment Management, NVIDIA, Microsoft and Scripps Research.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=priscilla#/session/1695916048653001DMnh"><i>How Artificial Intelligence Is Powering the Future of Biomedicine</i></a>, featuring Priscilla Chan, cofounder and co-CEO of the Chan Zuckerberg Initiative, and Mona Flores, global head of medical AI at NVIDIA.</p>
+<h2><strong>Retail and Consumer Packaged Goods</strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62335&amp;tab.allsessions=1700692987788001F1cG#/session/1695974018770001Nx65"><i>Augmented Marketing in Beauty With Generative AI</i></a>, featuring Asmita Dubey, chief digital and marketing officer at L’Oréal.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S63057&amp;tab.allsessions=1700692987788001F1cG#/session/1702686433551001kArq"><i>AI and the Radical Transformation of Marketing</i></a>, featuring Stephan Pretorius, chief technology officer at WPP.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62711&amp;tab.allsessions=1700692987788001F1cG#/session/1697478061549001Siwq"><i>How Lowe’s Is Driving Innovation and Agility With AI</i></a>, featuring Azita Martin, vice president of artificial intelligence for retail and consumer packaged goods at NVIDIA, and Seemantini Godbole, executive vice president and chief digital and information officer at Lowe’s.</p>
+<h2><strong>Telecommunications</strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search.industry=option_1559593261405#/session/1701877391479001i8Xl"><i>Special Address: Three Ways Artificial Intelligence Is Transforming Telecommunications</i></a><i>, </i>featuring Ronnie Vasishta, senior vice president of telecom at NVIDIA.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=Generative%20AI%20as%20an%20Innovative%20Accelerator%20in%20Telcos&amp;tab.allsessions=1700692987788001F1cG&amp;search.industry=option_1559593261405#/session/1696276835489001KIp8"><i>Generative AI as an Innovative Accelerator in Telcos</i></a>, featuring Asif Hasan, cofounder of Quantiphi; Lilach Ilan, global head of business development, telco operations at NVIDIA; and Chris Halton, vice president of product strategy and innovation at Verizon.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62491&amp;tab.allsessions=1700692987788001F1cG#/session/1696278201820001fGOk"><i>How Telcos Are Enabling National AI Infrastructure and Platforms</i></a>, featuring speakers from Indosat, NVIDIA, Singtel and Telconet.</p>
+<h2><strong>Manufacturing</strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62159&amp;tab.allsessions=1700692987788001F1cG#/session/1695154321196001N4qD"><i>Accelerating Aerodynamics Analysis at Mercedes-Benz</i></a>, featuring Liam McManus, technical product manager at Siemens; Erich Jehle-Graf of Mercedes Benz; and Ian Pegler, global business development, computer-aided design at NVIDIA.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62610&amp;tab.allsessions=1700692987788001F1cG#/session/1696547477246001wBZh"><i>Omniverse-Based Fab Digital Twin Platform for Semiconductor Industry</i></a>, featuring Seokjin Youn, corporate vice president and head of the management information systems team at Samsung Electronics.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62613&amp;tab.allsessions=1700692987788001F1cG#/session/1696557359747001pzFS"><i>Digitalizing Global Manufacturing Supply Chains With Digital Twins, Powered by OpenUSD</i></a>, featuring Kirk Fleischhaue, senior vice president at Foxconn.</p>
+<h2><strong>Automotive</strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62645&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/session/1696634065530001aPuZ"><i>Applying AI &amp; LLMs to Transform the Luxury Automotive Experience</i></a>, featuring Chrissie Kemp, chief data and digital product officer at JLR (Jaguar Land Rover).</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62804&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/session/1699240468937001wa2p"><i>Accelerating Automotive Workflows With Large Language Models</i></a>, featuring Bryan Goodman, director of artificial intelligence at Ford Motor Co.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62464&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/session/1696269758904001tFR9"><i>How LLMs and Generative AI Will Enhance the Way We Experience Self-Driving Cars</i></a>, featuring Alex Kendall, cofounder and CEO of Wayve.</p>
+<h2><strong>Robotics </strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62315&amp;tab.allsessions=1700692987788001F1cG#/session/1695934955725001WSFM"><i>Robotics and the Role of AI: Past, Present and Future</i></a>, featuring Marc Raibert, executive director at The AI Institute, and Dieter Fox, senior director of robotics research at NVIDIA.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=S63374#/session/1707740763445001P6MR"><i>Breathing Life into Disney’s Robotic Characters With Deep Reinforcement Learning</i></a>, featuring Mortiz Bächer, associate lab director of robotics at Disney Research.</p>
+<h2><strong>Media and Entertainment </strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62681&amp;tab.allsessions=1700692987788001F1cG#/session/1697058319445001UuNS"><i>Unlocking Creative Potential: The Synergy of AI and Human Creativity</i></a>, featuring Andrea Gagliano, senior director of data science, AI/ML at Getty Images.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=S63212&amp;tab.allsessions=1700692987788001F1cG#/session/1705543534428001emzA">Beyond the Screen: Unraveling the Impact of AI in the Film Industry</a>, featuring Nikola Todorovic, cofounder and CEO at Wonder Dynamics; Chris Jacquemin, head of digital strategy at WME; and Sanja Fidler, vice president of AI research at NVIDIA.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=media.monks#/session/1695842420299001v3xv"><i>Revolutionizing Fan Engagement: Unleashing the Power of AI in Software-Defined Production</i></a>, featuring ​​Lewis Smithingham, senior vice president of innovation and creative solutions at Media.Monks.</p>
+<h2><strong>Energy</strong></h2>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search.industry=1624401800869002y16T#/session/1694550684312001N8Iy"><i>Panel: Building a Lower-Carbon Future With HPC and AI in Energy</i></a>, featuring speakers from NVIDIA, Shell, ExxonMobil, Schlumberger and Petrobas.</p>
+<p><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search.industry=1624401800869002y16T#/session/1694200404853001wkzy"><i>The Increasing Complexity of the Electric Grid Demands Edge Computing</i></a>, featuring Marissa Hummon, chief technology officer at Utilidata.</p>
+<p><i>Browse a </i><a href="https://www.nvidia.com/gtc/sessions/business-insights/"><i>curated list</i><i> of GTC</i></a><i><a href="https://www.nvidia.com/gtc/sessions/business-insights/"> sessions</a> for business leaders of every technical level and area of interest.  </i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/industries-corp-blog-gtc24-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/industries-corp-blog-gtc24-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Live at GTC: Hear From Industry Leaders Using AI to Drive Innovation and Agility]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Battle.net Leaps Into the Cloud With GeForce NOW</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-battlenet-march-games-list/</link>
 		
@@ -1102,129 +1262,6 @@ Eos’s architecture is optimized for AI workloads demanding ultra-low-latency a
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[NVIDIA Eos Revealed: Peek Into Operations of a Top 10 Supercomputer]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>The Easiest Upgrade: Play at Ultimate Quality With GeForce NOW</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-skull-and-bones-halo-infinite/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 15 Feb 2024 14:00:13 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69789</guid>
-
-					<description><![CDATA[GFN Thursday keeps its fourth anniversary celebrations rolling by bringing Ubisoft’s Skull and Bones and Microsoft’s Halo Infinite to the cloud this week. They’re part of five newly supported games, and thanks to the power of the cloud, members can play them at unrivaled quality across nearly any device. The Ultimate Upgrade, Instantly When GeForce		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-skull-and-bones-halo-infinite/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>GFN Thursday keeps its fourth anniversary celebrations rolling by bringing Ubisoft’s <i>Skull and Bones</i> and Microsoft’s <i>Halo Infinite</i> to the cloud this week.</p>
-<p>They’re part of five newly supported games, and thanks to the power of the cloud, members can play them at unrivaled quality across nearly any device.</p>
-<p><b>The Ultimate Upgrade, Instantly</b></p>
-<p><iframe loading="lazy" title="New GeForce NOW Ultimate Membership | RTX 4080 Powered Cloud Gaming" width="500" height="281" src="https://www.youtube.com/embed/DVfWWZl1LQw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>When <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> launched in 2020, members flocked to take advantage of NVIDIA GeForce RTX 20 Series GPU-powered servers and experience real-time ray tracing on low-powered devices. For the first time, high-performance PC gaming was available to all.</p>
-<p>Later, members gained access to the <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate upgrade</a>, as NVIDIA cloud gaming servers brought GeForce RTX 3080-class power to users across the globe.</p>
-<p>Now, with the <a href="https://www.nvidia.com/en-us/geforce/ada-lovelace-architecture/">NVIDIA Ada Lovelace GPU architecture</a>, cloud gaming has taken another leap forward, powered by the <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-jan-19/">GeForce RTX 4080 SuperPOD</a>.</p>
-<figure id="attachment_69793" aria-describedby="caption-attachment-69793" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69793" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/001-672x378.png" alt="Alan Wake 2 Performance GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/001-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/001-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/001-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/001-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/001.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/001-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/02/001-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/02/001-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/001-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69793" class="wp-caption-text"><em>Oh deer, experience “Alan Wake 2” at the highest performance from the cloud.</em></figcaption></figure>
-<p>That means nearly anyone can experience groundbreaking PC gaming technologies like <a href="https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-3-5-ray-reconstruction/">NVIDIA DLSS 3.5</a>, with its AI-powered Frame Generation and upscaling features. Members can explore their favorite game worlds rendered with cinematic lighting and reflections thanks to <a href="https://www.nvidia.com/en-us/geforce/rtx/">RTX ON</a>, with full ray tracing supported in titles like <i>Cyberpunk 2077</i> and <i>Alan Wake 2</i>. Experience immersive gaming, even on old laptops or smartphones.</p>
-<p>Enjoy the greatest PC games available at up to 4K resolution with an Ultimate membership, and explore a whole new world with support for 21:9 ultrawide resolutions.</p>
-<p>Members also have the competitive edge in the cloud, thanks to support for <a href="https://www.nvidia.com/en-us/geforce/technologies/reflex/">NVIDIA Reflex</a> technology. Ultimate members can take aim and make every shot count with ultra-low latency and support for up to 240 frames per second performance — a first for cloud gaming — all made possible by GeForce NOW. Upgrade today to feel the difference.</p>
-<h2><b>Shiver Me Timbers</b></h2>
-<figure id="attachment_69799" aria-describedby="caption-attachment-69799" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69799" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-672x378.jpg" alt="Skull and Bones on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Skull_and_Bones.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69799" class="wp-caption-text"><em>Sail the seven seas in Ubisoft’s latest title.</em></figcaption></figure>
-<p>Enter the perilous world of <i>Skull and Bones</i>, Ubisoft’s nautical action-packed adventure streaming now on GeForce NOW.</p>
-<p>Sail the seas as a fearsome pirate kingpin, gaining infamy and gathering resources while building a smuggling empire. Engage in thrilling naval battles and risk it all for the biggest loot. Equip powerful weapons to outgun other ships and rain terror on enemy forts. Craft and sail up to 10 ships, each with unique perks, and become a force of destruction on the water.</p>
-<p>Upgrade to a <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">GeForce NOW Ultimate membership</a> to loot and plunder at full quality, with support for ultrawide resolutions and gameplay at up to 4K resolution and 120 fps on PCs and Macs.</p>
-<h2><b>Infinite Action</b></h2>
-<figure id="attachment_69796" aria-describedby="caption-attachment-69796" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-69796" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-672x378.png" alt="Halo Infinite on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Halo_Infinite-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69796" class="wp-caption-text"><em>“I need a weapon.”</em></figcaption></figure>
-<p>Step inside the armor of humanity’s greatest hero. <i>Halo Infinite</i> joins GeForce NOW this week, delivering the most expansive Master Chief campaign yet and a groundbreaking, free-to-play multiplayer experience. Plus, read this <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5462">article</a> and search for Halo Infinite for more details on how to launch the game.</p>
-<p>It’s part of five new games this week:</p>
-<ul>
-<li><i>Banishers: Ghosts of New Eden </i>(New release on <a href="https://store.steampowered.com/app/1493640?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 12)</li>
-<li><i>Deep Rock Galactic: Survivor</i> (New release on <a href="https://store.steampowered.com/app/2321470?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb. 14)</li>
-<li><i>Goat Simulator 3</i> (New release on <a href="https://store.steampowered.com/app/850190?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Feb 15)</li>
-<li><i>Skull and Bones </i>(New release on <a href="https://store.ubisoft.com/us/skull-and-bones/6295077a27efc536e38350a0.html#ucid=AFL-ID_152062&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;addinfo=">Ubisoft</a>, Feb. 16)</li>
-<li><i>Halo Infinite </i>(<a href="https://store.steampowered.com/app/1240440?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/en-US/games/store/halo-infinite/9PP5G1F0C2B6/0010?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-</ul>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">Happy Valentine&#39;s Day! <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f49a.png" alt="💚" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>Raise your hand if you&#39;re in a cirrus relationship. <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f590.png" alt="🖐" class="wp-smiley" style="height: 1em; max-height: 1em;" /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/2601.png" alt="☁" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a href="https://t.co/g9bVP4BmPX">pic.twitter.com/g9bVP4BmPX</a></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1757811961146810784?ref_src=twsrc%5Etfw">February 14, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Feb_15.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1024"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/GFN_Thursday-Feb_15-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[The Easiest Upgrade: Play at Ultimate Quality With GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Digitalization: A Game Changer for the Auto Industry</title>
-		<link>https://blogs.nvidia.com/blog/auto-digitalization/</link>
-		
-		<dc:creator><![CDATA[Katie Young]]></dc:creator>
-		<pubDate>Wed, 14 Feb 2024 20:28:18 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69803</guid>
-
-					<description><![CDATA[The fusion of the physical and digital worlds is reshaping the automotive industry. NVIDIA’s automotive partners are using digitalization to transform every phase of the product lifecycle — evolving primarily physical, manual processes into software-driven, AI-enhanced digital systems. Watch the video to learn more. Digitalization: A Game Changer From End to End Kaivan Karimi, global		<a class="read-more" href="https://blogs.nvidia.com/blog/auto-digitalization/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The fusion of the physical and digital worlds is reshaping the automotive industry. NVIDIA’s automotive partners are using digitalization to transform every phase of the product lifecycle — evolving primarily physical, manual processes into software-driven, AI-enhanced digital systems.</p>
-<p>Watch the video to learn more.</p>
-<p><iframe loading="lazy" title="Digitalization: A Game Changer for the Auto Industry" width="500" height="281" src="https://www.youtube.com/embed/2J-o0tO7-98?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>Digitalization: A Game Changer From End to End</b></h2>
-<p>Kaivan Karimi, global partner strategy lead at Microsoft, observes that companies are achieving “huge” results from “digitizing the physical entity, running simulations and rendering in 3D, whether it’s factory automation or modernizing the design and development of the car.”</p>
-<p>Brian Ullem, vice president of engineering at Capgemini, explains that, with “the 30,000 parts that go into a car, it takes approximately five years to develop a vehicle end to end. Instead of building 50 or 100 cars, we can use digitalization to simulate without having to build prototypes. That saves a lot of time and money in the process.”</p>
-<p>Thomas Mueller, chief technology officer of engineering at Wipro, adds that with digitalization, “we are now able to run simulations at a low cost…and improve the user experience.”</p>
-<h2><b>Simulation: Critical for Autonomous Driving</b></h2>
-<p>“Simulation is crucial to the development of autonomous systems,” says Ziv Binyamini, CEO of Foretellix. “On one hand, you need the real world, but this is highly costly. So you have to complement it with the ability to simulate a virtual world where everything is possible. And then you can, in a very cost-effective way, iterate quickly and ensure the system operates under all of these conditions.”</p>
-<p>Simulation “gives our customers the power to validate their ADAS or autonomous systems virtually — with highly accurate sensors in the camera, lidar and radar domains — without having to rely on actual physical drives,” adds Tony Karam, global sales director at Ansys.</p>
-<p>Austin Russell, founder and CEO of Luminar, agrees that &#8220;simulation is absolutely critical for autonomous driving. It’s great to see the work that NVIDIA has been doing in that domain, with not just the hardware but also the software.”</p>
-<h2><b>NVIDIA Omniverse: The Digital-Physical Convergence</b></h2>
-<p>“Software is a new component in the value proposition,” notes Walid Negm, chief technology officer of product engineering at Deloitte. The companies that will “survive and thrive are going to have to become much more efficient using the digital-physical convergence. The Omniverse experience is going to be important for the automotive sector.”</p>
-<p>Shiv Tasker, global vice president of engineering at Capgemini, adds that the “visualization and production of digital twins relies on an efficient, high-performance infrastructure as well as the platforms that make it easy for customers to adopt the technology.”</p>
-<p><a href="https://www.nvidia.com/en-us/omniverse/">Omniverse</a> “will allow your worldwide team to simultaneously collaborate,” says Karimi of Microsoft. “Design engineers, migration engineers, test engineers — everybody collaborates simultaneously. That’s the power of NVIDIA Omniverse.”</p>
-<p>Learn more about the <a href="https://developer.nvidia.com/drive">NVIDIA DRIVE platform</a> and how it’s helping industry leaders redefine transportation.</p>
-<p><i>Join NVIDIA at </i><a href="https://www.nvidia.com/gtc/"><i>GTC</i></a><i> from March 18-21 in San Jose, Calif., to learn more about digitalization in the </i><a href="https://images.nvidia.com/nvimages/gtc/pdf/GTC24_March_Automotive_Brochure.pdf?ncid=so-yout-794329-vt03"><i>automotive industry</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/autodigitalizationblog.jpeg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/autodigitalizationblog-842x450.jpeg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Digitalization: A Game Changer for the Auto Industry]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
