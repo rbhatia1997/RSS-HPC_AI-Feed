@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 04 Mar 2024 22:43:07 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 05 Mar 2024 15:13:01 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,85 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>The Magic Behind the Screen: Celebrating the 96th Academy Awards Nominees for Best Visual Effects</title>
+		<link>https://blogs.nvidia.com/blog/academy-awards-vfx-openusd/</link>
+		
+		<dc:creator><![CDATA[Rick Champagne]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 17:00:50 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GTC 2024]]></category>
+		<category><![CDATA[Media and Entertainment]]></category>
+		<category><![CDATA[Universal Scene Description]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70139</guid>
+
+					<description><![CDATA[The 96th Academy Awards nominees for Best Visual Effects are a testament to the incredible technological advancements pushing the boundaries of what’s possible in film. Whether showcasing colossal destruction scenes, heart-pumping action sequences or interstellar adventures, each nominee demonstrates unique contributions in visual effects, or VFX — and they all used cutting-edge NVIDIA technologies in		<a class="read-more" href="https://blogs.nvidia.com/blog/academy-awards-vfx-openusd/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The 96th Academy Awards nominees for Best Visual Effects are a testament to the incredible technological advancements pushing the boundaries of what’s possible in film.</p>
+<p>Whether showcasing colossal destruction scenes, heart-pumping action sequences or interstellar adventures, each nominee demonstrates unique contributions in visual effects, or VFX — and they all used cutting-edge NVIDIA technologies in their workflows to bring their magic to the screen.</p>
+<p>This year’s nominees include:</p>
+<ul>
+<li><b><i>The Creator</i></b> (20th Century Studios) — Jay Cooper, Ian Comley, Andrew Roberts and Neil Corbould</li>
+<li><b><i>Godzilla: Minus One</i></b> (Toho) — Takashi Yamazaki, Kiyoko Shibuya, Masaki Takahashi and Tatsuji Nojima</li>
+<li><b><i>Guardians of the Galaxy Vol. 3</i></b> (Marvel Studios) — Stephane Ceretti, Alexis Wajsbrot, Guy Williams and Theo Bialek</li>
+<li><b><i>Napoleon</i></b> (Apple Original Films/Sony Pictures) — Charley Henley, Luc-Ewen Martin-Fenouillet, Simone Coco and Neil Corbould</li>
+<li><b><i>Mission: Impossible – Dead Reckoning Part One</i></b> (Paramount Pictures) — Alex Wuttke, Simone Coco, Jeff Sutherland and Neil Corbould</li>
+</ul>
+<h2><b>Reinventing the Monster Movie</b></h2>
+<p><i>Godzilla: Minus One</i> presented a unique challenge: making a well-known giant monster, or kaijū, feel terrifying anew.</p>
+<p>With a budget under $15 million, small by today’s standards, the film’s VFX team relied on rapid iterations with the director to eliminate long review cycles, along with a heavily detailed computer-generated imagery (CGI) model to bring Godzilla to life.</p>
+<p>Godzilla was ready for its closeup, the monster’s head alone containing over 200 million polygons. The animators injected nuanced, lifelike behaviors into the creature to round out its performance.</p>
+<p>In addition, the film’s destruction scenes used a sophisticated, memory-intensive physics engine, allowing for realistic simulations of crumbling buildings and landscapes under destruction to further immerse audiences in the chaos.</p>
+<h2><b>A Cosmic Spectacle</b></h2>
+<p><i>Guardians of the Galaxy Vol. 3</i> continued the series’s tradition of blending humor with breathtaking cosmic visuals. This installment pushed the envelope with its use of real-time rendering, enabling its artists to visualize complex space environments and characters on set.</p>
+<p>The film brought together Wētā FX, Framestore and Sony Pictures Imageworks, among others, to create a whopping 3,000+ VFX shots. The dense, immersive 3D environments allowed for a seamless integration of live-action and CGI elements and characters, resulting in a visually stunning space opera that maintained the series’ signature style while exploring new visual territories.</p>
+<p>One of <i>Guardians</i>’s greatest achievements is the hallway fight scene filmed at 120 frames per second and delivered as a single continuous shot with variable speed ramps and nonstop action.</p>
+<h2><b>Epic Storytelling Through Detailed VFX</b></h2>
+<p>The historical epic <i>Napoleon </i>was brought to life with meticulous attention to detail and scale. The film used various set extensions and practical effects to recreate the vast battlefields and period-specific architecture of early 19th-century Europe.</p>
+<p>Advanced crowd simulation was used to depict the massive armies of Napoleon’s time, each soldier animated with individual behaviors to enhance the battle scenes’ realism. These touches, combined with high-resolution textures and dynamic lighting, created a visually compelling narrative grounded in reality.</p>
+<h2><b>Exploring AI’s Boundaries</b></h2>
+<p><i>The Creator</i> explored the themes of AI and virtual reality, requiring VFX that could realistically depict advanced technology and digital worlds.</p>
+<p>The film made significant use of CG animation and visual effects to create environments both futuristic and plausible. Director Gareth Edwards, also known for <i>Rogue One</i> and <i>Godzilla (2014),</i> has been widely applauded for delivering a film with the look of an expensive summer blockbuster using a fraction of the typical budget.</p>
+<p>The portrayal of AI entities involved a combination of motion-capture and procedural animation to create characters that moved and interacted with complexity and fluidity at human level. The VFX team developed custom software to simulate the intricate patterns of digital consciousness, blurring the lines between the virtual and the real.</p>
+<h2><b>High-Octane Action Meets Precision VFX</b></h2>
+<p>For <i>Mission: Impossible &#8211; Dead Reckoning Part One</i>, the visual effects team faced the challenge of enhancing the film’s signature action sequences without detracting from the series’s reputation for practical stunts. To achieve this, they took a hybrid approach, using CGI to seamlessly augment practical effects.</p>
+<p>High-speed drone footage integrated with CG elements created breathtaking chase scenes, while advanced compositing techniques added layers of detail and depth to explosions and hand-to-hand combat scenes, elevating the film’s action to new heights.</p>
+<h2><b>NVIDIANs at the SciTech Awards</b></h2>
+<figure id="attachment_70149" aria-describedby="caption-attachment-70149" style="width: 352px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2.jpg"><img fetchpriority="high" decoding="async" class="wp-image-70149 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-352x400.jpg" alt="" width="352" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-352x400.jpg 352w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-440x500.jpg 440w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-396x450.jpg 396w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-189x215.jpg 189w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-88x100.jpg 88w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2.jpg 599w" sizes="(max-width: 352px) 100vw, 352px" /></a><figcaption id="caption-attachment-70149" class="wp-caption-text">NVIDIA’s Christopher Jon Horvath, joined by Steve LaVietes and Joe Ardent, on stage to accept their award.</figcaption></figure>
+<p><i></i>The Academy Awards for Scientific and Technical Achievements highlight technical contributions that have significantly affected the way movies are made, as well as the brilliant inventors behind them.</p>
+<p><a href="https://aousd.org/blog/explainer-series-what-is-openusd/">OpenUSD</a> was <a href="https://aousd.org/blog/openusd-wins-academy-award-for-scientific-and-technical-achievement/">honored in the science and engineering subcategory</a> for its importance as the first open-source scene description framework that streamlines the entire production workflow. Its innovative layering system and efficient crate file format have established it as the de facto standard for 3D scene interchange, facilitating unparalleled collaboration across the industry.<b> </b></p>
+<p>The science and engineering subcategory also celebrated other remarkable technologies, including the <a href="https://www.openvdb.org/">OpenVDB</a> open-source library, for sparse 3D volumes, which has become an industry standard for visual-effects simulations and renderings of water, fire, smoke and clouds.</p>
+<p>Initially created in 2009 by Ken Museth, senior director of physics research at NVIDIA, OpenVDB has been further developed by Museth, Peter Cucka and Mihai Aldén. Learn more about the latest advancements in OpenVDB including <a href="https://developer.nvidia.com/nanovdb">NanoVDB</a> and <a href="https://developer.nvidia.com/rendering-technologies/neuralvdb">NeuralVDB</a>.</p>
+<p>In addition, the <a href="https://www.alembic.io/index.html">Alembic</a> Caching and Interchange system, developed by Lucas Miller, NVIDIA’s Christopher Jon Horvath, Steve LaVietes and Joe Ardent, received recognition for its efficient algorithms in storing and retrieving baked, time-sampled data, facilitating high-efficiency caching and scene sharing across the digital production pipeline.</p>
+<p>OpenVDB and Alembic are both interoperable with OpenUSD, enhancing their utility and integration within the industry’s production workflows.</p>
+<h2><b>See How Oscar-Nominated VFX Are Created at GTC</b></h2>
+<p>Learn more about visual effects, AI, virtual production and animation at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, a global AI conference taking place March 18-21 at the San Jose Convention Center and online. Register to hear from <a href="https://www.nvidia.com/gtc/sessions/media-and-entertainment/">industry luminaries creating stunning visuals in film and TV</a>.</p>
+<p>Academy Award-winner Ken Museth will present a session, <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=museth#/session/1697498197036001JVKp">Open-Source Software for Visual Effects: OpenUSD and OpenVDB</a>, on Monday, March 18, at 9 a.m. PT.</p>
+<p>And join us for <a href="https://www.nvidia.com/gtc/sessions/openusd-day/">OpenUSD Day</a> to learn how to build generative AI-enabled 3D pipelines and tools using Universal Scene Description. Browse the full list of <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search.industry=option_1559593250529#/">media and entertainment sessions</a> at GTC.</p>
+<p><i>Featured image courtesy of Toho Co., Ltd. TOHO CO., LTD.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Header.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Header-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[The Magic Behind the Screen: Celebrating the 96th Academy Awards Nominees for Best Visual Effects]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Robo Rendezvous: Robotics Innovators and AI Leaders to Converge at NVIDIA GTC</title>
 		<link>https://blogs.nvidia.com/blog/robotics-innovators-ai-gtc-2024/</link>
 		
@@ -102,7 +181,7 @@
 <p>The premium EV brand by SAIC and Alibaba, <b>IM Motors</b>, unveiled its IM L6 mid-size electric  saloon (aka sedan), which will soon be available to the European market.</p>
 <p>The L6 features IM’s proprietary Intelligent Mobility Autonomous Driving System, powered by NVIDIA DRIVE Orin. The advanced system uses a comprehensive sensor suite, including one lidar, three radars, 11 cameras and 12 ultrasonic sensors. IM reports that the L6 is capable of highway navigation on autopilot, marking a milestone in the company’s mission to bring advanced self-driving vehicles to market.</p>
 <p><a href="https://blogs.nvidia.com/blog/auto-shanghai-nvidia-drive/" target="_blank" rel="noopener">IM Motors</a> has been working with NVIDIA since 2021, using NVIDIA DRIVE Orin as the AI brain for its flagship LS7 SUV and L7 sedan.</p>
-<figure id="attachment_70125" aria-describedby="caption-attachment-70125" style="width: 672px" class="wp-caption alignnone"><img fetchpriority="high" decoding="async" class="wp-image-70125 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70125" class="wp-caption-text">IM Motors IM L6</figcaption></figure>
+<figure id="attachment_70125" aria-describedby="caption-attachment-70125" style="width: 672px" class="wp-caption alignnone"><img decoding="async" class="wp-image-70125 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70125" class="wp-caption-text">IM Motors IM L6</figcaption></figure>
 <h2><b>Lucid </b></h2>
 <p>The Geneva Motor Show marks the European debut of Lucid’s Gravity SUV.</p>
 <p>The Gravity aims to set fresh benchmarks for sustainability and technological innovation when its production commences in late 2024. Powered by NVIDIA DRIVE, the luxury SUV features supercar levels of performance and an impressive battery range to mitigate range anxiety.</p>
@@ -147,7 +226,7 @@
 <p>Two team members of the QA team — friendly colleagues in the office but fierce rivals in the esports arena — recently competed against one another at the finals of the Guildhouse Fighters tournament, a local circuit in Northern California.</p>
 <p>Eduardo “PR Balrog” Perez-Frangie, a veteran <i>Street Fighter</i> player, fought his way to the Grand Final to face Miky “Samurai” Chea.</p>
 <p>Perez-Frangie came out on top, but there was a twist: he’d brought to the contest his two-year-old son, who fell asleep on his father’s chest mid-match. “I played the rest of the game with a deadweight in my lap,” he said.</p>
-<figure id="attachment_70005" aria-describedby="caption-attachment-70005" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-70005" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70005" class="wp-caption-text">Perez-Frangie and Chea play at work — guess who won? QA team members Alyssa Ruiz and DaJuan McDaniel cheer them on.</figcaption></figure>
+<figure id="attachment_70005" aria-describedby="caption-attachment-70005" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70005" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/02/Copy-of-NZ9_4730_L-1-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70005" class="wp-caption-text">Perez-Frangie and Chea play at work — guess who won? QA team members Alyssa Ruiz and DaJuan McDaniel cheer them on.</figcaption></figure>
 <h2><b>A Competitive Spirit</b></h2>
 <p>Perez-Frangie has competed for 15 years in a series of fighting game titles, including <i>Marvel vs. Capcom</i>, <i>Killer Instinct</i> and <i>Mortal Kombat</i>. He was part of the Evil Geniuses esports organization when he joined NVIDIA almost a decade ago but now plays without a sponsor so he can enjoy more family time.</p>
 <p>He’s played against Chea in esports events for years, and they’re just as competitive in the office as in the stadiums.</p>
@@ -518,6 +597,7 @@
 		<pubDate>Wed, 28 Feb 2024 14:00:55 +0000</pubDate>
 				<category><![CDATA[Generative AI]]></category>
 		<category><![CDATA[The AI Podcast]]></category>
+		<category><![CDATA[AI Decoded]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70034</guid>
 
 					<description><![CDATA[These days, just about everyone is a content creator. But can generative AI help make people create high-quality films and other content affordably? Find out from Pinar Seyhan Demirdag, cofounder and CEO of Cuebric, during his conversation with NVIDIA AI Podcast host Noah Kravitz. Cuebric is on a mission to offer new solutions in filmmaking		<a class="read-more" href="https://blogs.nvidia.com/blog/pinar-demirdag-cuebric/">
@@ -527,8 +607,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>These days, just about everyone is a content creator. But can generative AI help make people create high-quality films and other content affordably? Find out from Pinar Seyhan Demirdag, cofounder and CEO of <a href="https://cuebric.com/">Cuebric</a>, during his conversation with NVIDIA <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> host Noah Kravitz.</p>
 <p>Cuebric is on a mission to offer new solutions in filmmaking and content creation through immersive, two-and-a-half-dimensional cinematic environments. Its AI-powered application aims to help creators quickly bring their ideas to life, making high-quality production more accessible.</p>
 <p>Demirdag discusses how Cuebric uses <a href="https://courses.nvidia.com/courses/course-v1:DLI+S-FX-07+V1">generative AI</a> to enable the creation of engaging environments affordably. Listen in to find out about the current landscape of content creation, the role of AI in simplifying the creative process, and Cuebric’s participation in NVIDIA’s <a href="https://www.nvidia.com/gtc/">GTC technology conference</a>.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1759544883%3Fsecret_token%3Ds-4wmCp5pXKIv&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Exploring Filmmaking with Cuebric's AI: Insights from Pinar Seyhan Demirdag - Ep. 314" href="https://soundcloud.com/theaipodcast/pinar-demirdag-cuebric/s-4wmCp5pXKIv" target="_blank" rel="noopener">Exploring Filmmaking with Cuebric&#8217;s AI: Insights from Pinar Seyhan Demirdag &#8211; Ep. 314</a></div>
+<div style="font-size: 10px;color: #cccccc;overflow: hidden;font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100"><a style="color: #cccccc;text-decoration: none" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc;text-decoration: none" title="Exploring Filmmaking with Cuebric's AI: Insights from Pinar Seyhan Demirdag - Ep. 314" href="https://soundcloud.com/theaipodcast/pinar-demirdag-cuebric/s-4wmCp5pXKIv" target="_blank" rel="noopener">Exploring Filmmaking with Cuebric&#8217;s AI: Insights from Pinar Seyhan Demirdag &#8211; Ep. 314</a></div>
 <p><em>Explore <a title="Original URL: https://www.nvidia.com/gtc/sessions/generative-ai/?nvid=nv-int-txtad-141445 Click to follow link." href="https://www.nvidia.com/gtc/sessions/generative-ai/?nvid=nv-int-txtad-141445" data-outlook-id="97194cbf-406f-48c7-a83a-cd48b46329c6">generative AI</a> sessions and experiences at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, the global conference on AI and accelerated computing, running March 18-21 in San Jose, Calif., and online.</em></p>
 <h2><strong>Time Stamps:</strong></h2>
 <p>1:15: Getting to know Pinar Seyhan Demirdag and Cuebric<br />
@@ -1133,6 +1212,7 @@
 		<pubDate>Wed, 21 Feb 2024 13:00:31 +0000</pubDate>
 				<category><![CDATA[Deep Learning]]></category>
 		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
 		<category><![CDATA[GeForce]]></category>
 		<category><![CDATA[GPU]]></category>
@@ -1174,83 +1254,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Shining Brighter Together: Google’s Gemma Optimized to Run on NVIDIA GPUs]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>AI’s Hottest Ticket: NVIDIA GTC Brings Together Automotive Leaders and Visionaries Transforming the Future of Transportation</title>
-		<link>https://blogs.nvidia.com/blog/gtc-2024-auto-sessions/</link>
-		
-		<dc:creator><![CDATA[Marie Labrie]]></dc:creator>
-		<pubDate>Fri, 16 Feb 2024 19:17:57 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69865</guid>
-
-					<description><![CDATA[Generative AI and software-defined computing are transforming the automotive landscape — making the journey behind the wheel safer, smarter and more enjoyable. Dozens of automakers and NVIDIA DRIVE ecosystem partners will be demonstrating their developments in mobility, along with showcasing their next-gen vehicles at GTC, the conference for the era of AI, running from March		<a class="read-more" href="https://blogs.nvidia.com/blog/gtc-2024-auto-sessions/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Generative AI and software-defined computing are transforming the automotive landscape — making the journey behind the wheel safer, smarter and more enjoyable.</p>
-<p>Dozens of automakers and <a href="https://www.nvidia.com/en-us/self-driving-cars/">NVIDIA DRIVE</a> ecosystem <a href="https://www.nvidia.com/en-us/self-driving-cars/partners/">partners</a> will be demonstrating their developments in mobility, along with showcasing their next-gen vehicles at GTC, the conference for the era of AI, running from March 18-21 in San Jose, Calif., and online. These include the Mercedes-Benz Concept CLA Class, the new Volvo EX90, Polestar 3, WeRide Robobus, Nuro R3 autonomous delivery vehicle and more.</p>
-<p>Explore myriad sessions to learn about the latest developments in mobility — from highly automated and autonomous driving, <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> and <a href="https://www.nvidia.com/en-us/glossary/large-language-models/#:~:text=Large%20language%20models%20(LLMs)%20are,content%20using%20very%20large%20datasets.">large language models</a> to simulation, safety, design and manufacturing.</p>
-<p>Featured sessions include:<b><i></i></b></p>
-<ul>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62464&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>How LLMs and Generative AI Will Enhance the Way We Experience Self-Driving Cars</b></a><br />
-Alex Kendall, cofounder and CEO, Wayve<br />
-<em>Tuesday, March 19, 9 a.m. PT</em></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=s62621&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>Accelerating the New Era of Autonomous Vehicles With Generative AI</b></a><br />
-Raquel Urtasun, founder and CEO, Waabi<br />
-<em>Tuesday, March 19, 10 a.m. PT</em></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62645&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>Applying AI &amp; LLMs to Transform the Luxury Automotive Experience</b></a><br />
-Chrissie Kemp, chief data and digital product officer, Jaguar Land Rover<br />
-<em>Tuesday, March 19, 11 a.m. PT</em></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62380&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>Generative AI and Industrial Digitalization in the Automotive Industry</b></a><br />
-Alex Kendall, cofounder and CEO, Wayve<br />
-Raquel Urtasun, founder and CEO, Waabi<br />
-Chrissie Kemp, chief data and digital product officer, Jaguar Land Rover<br />
-Norm Marks, vice president, automotive enterprise, NVIDIA<br />
-<em>Tuesday, March 19, 2 p.m. PT</em></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62804&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>Accelerating Automotive Workflows With Large Language Models</b></a><br />
-Bryan Goodman, director, artificial intelligence, Ford Motor Co.<br />
-<em>Tuesday, March 19, 3 p.m. PT</em></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62472&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>Infusing the Car’s Cockpit With AI</b></a><br />
-Dr. Ephrem Chemaly, vice president and general manager, automotive business unit, MediaTek<br />
-<em>Wednesday, March 20, 9 a.m. PT</em></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S63294&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>The Nuro Driver: An AI-First Autonomous Driving System</b></a><br />
-Albert Meixner, head of Software, Nuro<br />
-<em>Wednesday, March 20, 3 p.m. PT</em></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=SE63001&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>Accelerating the Shift to AI-Defined Vehicles</b></a><br />
-Xinzhou Wu, vice president, automotive, NVIDIA<br />
-<em>Thursday, March 21, 8 a.m. PT</em></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62919&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/"><b>Transforming Factory Planning and Manufacturing Operations Within Digital Mega Plants</b><b><br />
-</b></a>Benjamin Huber, head of advanced automation and digitalization – business area UX, Continental<br />
-<em>Wednesday, March 20, 10 a.m. PT</em></li>
-</ul>
-<p>Rounding out the week will be <a href="https://www.nvidia.com/gtc/sessions/drive-developer-day/">DRIVE Developer Day</a> on Thursday, March 21 — featuring a series of deep-dive sessions on how to build safe and robust self-driving systems. Led by NVIDIA’s engineering experts, these talks will highlight the latest DRIVE features and developments.</p>
-<p>Find additional details on <a href="https://images.nvidia.com/nvimages/gtc/pdf/GTC24_March_Automotive_Brochure.pdf">automotive-specific programming at GTC</a>.</p>
-<p>Don’t stall — <a href="http://www.nvidia.com/gtc/?ncid=GTC-NVHWQQGN">register</a> today to learn how generative AI and software-defined computing are transforming the auto industry.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/autosessionsgtc24.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/autosessionsgtc24-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[AI’s Hottest Ticket: NVIDIA GTC Brings Together Automotive Leaders and Visionaries Transforming the Future of Transportation]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
