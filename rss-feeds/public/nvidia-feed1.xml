@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 06 Mar 2024 04:54:51 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 06 Mar 2024 14:45:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,162 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>Bria Builds Responsible Generative AI for Enterprises Using NVIDIA NeMo, Picasso</title>
+		<link>https://blogs.nvidia.com/blog/bria-builds-responsible-generative-ai-using-nemo-picasso/</link>
+		
+		<dc:creator><![CDATA[Arham Mehta]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 16:00:52 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cloud Services]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Media and Entertainment]]></category>
+		<category><![CDATA[Retail]]></category>
+		<category><![CDATA[Trustworthy AI]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70173</guid>
+
+					<description><![CDATA[As visual generative AI matures from research to the enterprise domain, businesses are seeking responsible ways to integrate the technology into their products. Bria, a startup based in Tel Aviv, is responding with an open platform for visual generative AI that emphasizes model transparency alongside fair attribution and copyright protections. Currently offering models that convert		<a class="read-more" href="https://blogs.nvidia.com/blog/bria-builds-responsible-generative-ai-using-nemo-picasso/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>As visual generative AI matures from research to the enterprise domain, businesses are seeking responsible ways to integrate the technology into their products.</p>
+<p>Bria, a startup based in Tel Aviv, is responding with an open platform for visual generative AI that emphasizes model transparency alongside fair attribution and copyright protections. Currently offering models that convert text prompts to images or transform existing images, the company will this year add text-to-video and image-to-video AI.</p>
+<p>“Creating generative AI models requires time and expertise,” said Yair Adato, co-founder and CEO of Bria. “We do the heavy lifting so product teams can adopt our models to achieve a technical edge and go to market quickly, without investing as many resources.”</p>
+<p>Advertising agencies and retailers can use Bria’s tools to quickly generate visuals for marketing campaigns. And creative studios can adopt the models to develop stock imagery or edit visuals. Dozens of enterprise clients have integrated the startup’s pretrained models or use its application programming interfaces.</p>
+<p>Bria develops its models with the <a href="https://docs.nvidia.com/nemo-framework/user-guide/latest/index.html">NVIDIA NeMo</a> framework, which is <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo/tags">available on NGC</a>, NVIDIA’s hub for accelerated software. The company uses reference implementations from the <a href="https://docs.nvidia.com/nemo-framework/user-guide/latest/multimodalmodels/index.html">NeMo Multimodal</a> collection, trained on <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a>, to enable high-throughput, low-latency image generation. It’s also adopting <a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">NVIDIA Picasso</a>, a foundry for visual generative AI models, to run inference.</p>
+<p>“We were looking for a framework to train our models efficiently — one that would minimize compute cost while scaling AI training to more quickly reach model convergence,” said Misha Feinstein, vice president of research and development at Bria. “NeMo features optimization techniques that allow us to maximize the GPUs’ performance during both training and inference.”</p>
+<h2><b>Creative Solutions to Creative Challenges</b></h2>
+<p>Bria, founded in 2020, offers flexible options for enterprises adopting visual generative AI. By adopting Bria’s platform, its customers can gain a competitive edge by creating visual content at scale while retaining control of their data and technology. Developers can access its pretrained models through APIs or by directly licensing the source code and model weights for further fine-tuning.</p>
+<p>“We want to build a company where we respect privacy, content ownership, data ownership and copyright,” said Adato. “To create a healthy, sustainable industry, it’s important to incentivize individuals to keep creating and innovating.”</p>
+<p>Adato likens Bria’s <a href="https://bria.ai/fair-diffusion/">attribution program</a> to a music streaming service that pays artists each time one of their songs is played. It’s required for all customers who use Bria’s models — even if they further train and fine-tune the model on their own.</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-70178" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-672x336.png" alt="" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-672x336.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-400x200.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-768x384.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-1536x768.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-842x421.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-406x203.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-188x94.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2-1280x640.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-2.png 1920w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p>Using licensed datasets provides additional benefits: the Bria team doesn’t need to spend time cleaning the data or sorting out inappropriate content and misinformation.</p>
+<h2><b>A Growing Suite of NVIDIA-Accelerated Models</b></h2>
+<p>Bria offers two versions of its text-to-image model. One islatency-optimized to rapidly accomplish tasks like image background generation. The other offers higher image resolution. Additional foundation models enable super-resolution, object removal, object generation, inpainting and outpainting.</p>
+<p>The company is working to continuously increase the resolution of its generated images, further reduce latency and develop domain-specific models for industries such as ecommerce and stock imagery. Inference is accelerated by the <a href="https://developer.nvidia.com/triton-inference-server">NVIDIA Triton Inference Server</a> software and the <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> software development kit.</p>
+<p>“We’re running on NVIDIA frameworks, hardware and software,” said Feinstein. “NVIDIA experts have helped us optimize these tools for our needs — we would probably run much slower without their help.”</p>
+<p><img decoding="async" class="aligncenter size-large wp-image-70181" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-672x419.png" alt="" width="672" height="419" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-672x419.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-400x250.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-768x479.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-1536x958.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-721x450.png 721w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-345x215.png 345w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-160x100.png 160w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1-1280x799.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/BRIA-AI-1.png 1920w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p>To keep up with the latest hardware and networking infrastructure, Bria uses cloud computing resources: <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> for AI training and a variety of <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a> for inference.</p>
+<p>Bria is a member of <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, a program that provides startups with technological support and AI platform guidance. Visit Bria in the Inception Pavilion at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, running March 18-21 in San Jose and online.</p>
+<p>To train optimized text-to-image models, check out the NeMo Multimodal <a href="https://docs.nvidia.com/nemo-framework/user-guide/latest/multimodalmodels/index.html">user guide</a> and <a href="https://github.com/NVIDIA/NeMo/tree/main/examples/multimodal" target="_blank" rel="noopener">GitHub repository</a>. NeMo Multimodal is also available as part of the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo">NeMo container on NGC</a>.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Bria_Blog_banner.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Bria_Blog_banner-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Bria Builds Responsible Generative AI for Enterprises Using NVIDIA NeMo, Picasso]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>AI Decoded: Demystifying AI and the Hardware, Software and Tools That Power It</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-rtx-pc/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 06 Mar 2024 14:00:30 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Mobile]]></category>
+		<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Chat with RTX]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70162</guid>
+
+					<description><![CDATA[With the 2018 launch of RTX technologies and the first consumer GPU built for AI — GeForce RTX — NVIDIA accelerated the shift to AI computing. Since then, AI on RTX PCs and workstations has grown into a thriving ecosystem with more than 100 million users and 500 AI applications. ]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>With the 2018 launch of <a href="https://www.nvidia.com/en-us/geforce/rtx/">RTX technologies</a> and the first consumer GPU built for AI — GeForce RTX — NVIDIA accelerated the shift to AI computing. Since then, <a href="https://www.nvidia.com/en-us/ai-on-rtx/">AI on RTX PCs and workstations</a> has grown into a thriving ecosystem with more than 100 million users and 500 AI applications.</p>
+<p>Generative AI is now ushering in a new wave of capabilities from PC to cloud. And <a href="https://www.nvidia.com/en-us/about-nvidia/i-am-ai/">NVIDIA’s rich history and expertise in AI</a> is helping ensure all users have the performance to handle a wide range of AI features.</p>
+<p>Users at home and in the office are already taking advantage of AI on RTX with productivity- and entertainment-enhancing software. Gamers feel the benefits of AI on <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX GPUs</a> with higher frame rates at stunning resolutions in their favorite titles. Creators can focus on creativity, instead of watching spinning wheels or repeating mundane tasks. And developers can streamline workflows using generative AI for prototyping and to automate debugging.</p>
+<p>The field of AI is moving fast. As research advances, AI will tackle more complex tasks. And the demanding performance needs will be handled by RTX.</p>
+<h2><b>What Is AI?</b></h2>
+<p>In its most fundamental form, <a href="https://blogs.nvidia.com/blog/what-is-ai-computing/#:~:text=AI%20computing%20is%20the%20work,Email0">artificial intelligence</a> is a smarter type of computing. It’s the capability of a computer program or a machine to think, learn and take actions without being explicitly coded with commands to do so, or a user having to control each command.</p>
+<p>AI can be thought of as the ability for a device to perform tasks autonomously, by ingesting and analyzing enormous amounts of data, then recognizing patterns in that data — often referred to as being “trained.”</p>
+<p>AI development is always oriented around developing systems that perform tasks that would otherwise require human intelligence, and often significant levels of input, to complete — only at speeds beyond any individual’s or group’s capabilities. For this reason, AI is broadly seen as both disruptive and highly transformational.</p>
+<p>A key benefit of AI systems is the ability to learn from experiences or patterns inside data, adjusting conclusions on their own when fed new inputs or data. This self-learning allows AI systems to accomplish a stunning variety of tasks, including image recognition, speech recognition, language translation, medical diagnostics, car navigation, image and video enhancement, and hundreds of other use cases.</p>
+<p>The next step in the evolution of AI is content generation — referred to as <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>. It enables users to quickly create new content, and iterate on it, based on a variety of inputs, which can include text, images, sounds, animation, 3D models or other types of data. It then generates new content in the same or a new form.</p>
+<p>Popular language applications, like the cloud-based ChatGPT, allow users to generate long-form copy based on a short text request. Image generators like Stable Diffusion turn descriptive text inputs into the desired image. New applications are turning text into video and 2D images into 3D renderings.</p>
+<h2><b>GeForce RTX AI PCs and NVIDIA RTX Workstations</b></h2>
+<p>AI PCs are computers with dedicated hardware designed to help AI run faster. It’s the difference between sitting around waiting for a 3D image to load, and seeing it update instantaneously with an AI denoiser.</p>
+<p><iframe title="NVIDIA Studio | Arnold for Maya" width="500" height="281" src="https://www.youtube.com/embed/N5PBActlYJw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>On RTX GPUs, these specialized AI accelerators are called <a href="https://nvidianews.nvidia.com/news/generative-ai-rtx-pcs-and-workstations#:~:text=NVIDIA%20RTX%20GPUs%20%E2%80%94%20capable%20of,applications%20for%20work%20and%20play.">Tensor Cores</a>. And they dramatically speed up AI performance across the most demanding applications for work and play.</p>
+<p>One way that AI performance is measured is in teraops, or trillion operations per second (TOPS). Similar to an engine’s horsepower rating, TOPS can give users a sense of a PC’s AI performance with a single metric. The current generation of GeForce RTX GPUs offers performance options that range from roughly 200 AI TOPS all the way to over 1,300 TOPS, with many options across laptops and desktops in between. Professionals get even higher AI performance with the <a href="https://www.nvidia.com/en-us/design-visualization/rtx-6000/">NVIDIA RTX 6000 Ada Generation GPU</a>.</p>
+<p>To put this in perspective, the current generation of AI PCs without GPUs range from 10 to 45 TOPS.</p>
+<p>More and more types of AI applications will require the benefits of having a PC capable of performing certain AI tasks locally — meaning on the device rather than running in the cloud. Benefits of running on an AI PC include that computing is always available, even without an internet connection; systems offer low latency for high responsiveness; and increased privacy so that users don’t have to upload sensitive materials to an online database before it becomes usable by an AI.</p>
+<h2><b>AI for Everyone</b></h2>
+<p>RTX GPUs bring more than just performance. They introduce capabilities only possible with RTX technology. Many of these AI features are accessible — and impactful — to millions, regardless of the individual’s skill level.</p>
+<p>From AI upscaling to improved video conferencing to intelligent, personalizable chatbots, there are tools to benefit all types of users.</p>
+<p><iframe loading="lazy" title="Introducing RTX Video HDR: AI-Upscale Video to HDR Quality" width="500" height="281" src="https://www.youtube.com/embed/FHAjydnpos8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><a href="https://blogs.nvidia.com/blog/rtx-video-hdr-remix-studio-driver/">RTX Video</a> uses AI to upscale streaming video and display it in HDR. Bringing lower-resolution video in standard dynamic range to vivid, up to 4K high-resolution high dynamic range. RTX users can enjoy the feature with one-time, one-click enablement on nearly any video streamed in a Chrome or Edge browser.</p>
+<p><iframe loading="lazy" title="NVIDIA Broadcast 1.4 Update Featuring Eye Contact" width="500" height="281" src="https://www.youtube.com/embed/nR-vP_7XFHE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast</a>, a free app for RTX users with a straightforward user interface, has a host of AI features that improve video conferencing and livestreaming. It removes unwanted background sounds like clicky keyboards, vacuum cleaners and screaming children with Noise and Echo Removal. It can replace or blur backgrounds with better edge detection using Virtual Background. It smooths low-quality camera images with Video Noise Removal. And it can stay centered on the screen with eyes looking at the camera no matter where the user moves, using Auto Frame and Eye Contact.</p>
+<p><a href="https://blogs.nvidia.com/blog/chat-with-rtx-available-now/">Chat with RTX</a> is a local, personalized AI chatbot demo that’s easy to use and <a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">free to download</a>.</p>
+<figure id="attachment_70166" aria-describedby="caption-attachment-70166" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX.png"><img loading="lazy" decoding="async" class="size-large wp-image-70166" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Chat-with-RTX.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70166" class="wp-caption-text">The tech demo, originally released in January, will get an update with Google’s Gemma soon.</figcaption></figure>
+<p>Users can easily connect local files on a PC to a supported large language model simply by dropping files into a single folder and pointing the demo to the location. It enables queries for quick, contextually relevant answers.</p>
+<p>Since Chat with RTX runs locally on Windows with GeForce RTX PCs and <a href="https://www.nvidia.com/en-us/design-visualization/workstations/">NVIDIA RTX workstations</a>, results are fast — and the user’s data stays on the device. Rather than relying on cloud-based services, Chat with RTX lets users process sensitive data on a local PC without the need to share it with a third party or have an internet connection.</p>
+<h2><b>AI for Gamers</b></h2>
+<p>Over the past six years, game performance has seen the greatest leaps with AI acceleration. Gamers have been turning <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a> on since 2019, boosting frame rates and improving image quality. It’s a technique that uses AI to generate pixels in video games automatically. With ongoing improvements, it now increases frame rates by up to 4x.</p>
+<p><iframe loading="lazy" title="NVIDIA DLSS 3.5 | New Ray Reconstruction Enhances Ray Tracing with AI" width="500" height="281" src="https://www.youtube.com/embed/sGKCrcNsVzo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>And with the introduction of Ray Reconstruction in the latest version, DLSS 3.5, visual quality is further enhanced in some of the world’s top titles, setting a new standard for visually richer and more immersive gameplay.</p>
+<p>There are now over 500 games and applications that have revolutionized the ways people play and create with ray tracing, DLSS and AI-powered technologies.</p>
+<p>Beyond frames, AI is set to improve the way gamers interact with characters and remaster classic games.</p>
+<p><iframe loading="lazy" title="NVIDIA ACE Brings Digital Characters to Life with Generative AI ft. Convai" width="500" height="281" src="https://www.youtube.com/embed/psrXGPh80UM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><a href="https://nvidianews.nvidia.com/news/ace-avatar-cloud-engine-microservices">NVIDIA ACE microservices</a> — including generative AI-powered speech and animation models — are enabling developers to add intelligent, dynamic digital avatars to games. Demonstrated at CES, ACE won multiple awards for its ability to bring game characters to life as a glimpse into the future of PC gaming.</p>
+<p><a href="https://www.nvidia.com/en-us/geforce/rtx-remix/">NVIDIA RTX Remix</a>, a platform for modders to create stunning RTX remasters of classic games, delivers generative AI tools that can transform basic textures from classic games into modern, 4K-resolution, physically based rendering materials. Several projects have already been released or are in the works, including <i>Half-Life 2 RTX</i> and <i>Portal with RTX</i>.</p>
+<h2><b>AI for Creators</b></h2>
+<p>AI is unlocking creative potential by reducing or automating tedious tasks, freeing up time for pure creativity. These features run fastest or solely on PCs with NVIDIA RTX or GeForce RTX GPUs.</p>
+<figure id="attachment_70169" aria-describedby="caption-attachment-70169" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech.png"><img loading="lazy" decoding="async" class="size-large wp-image-70169" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-672x445.png" alt="" width="672" height="445" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-672x445.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-400x265.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-768x508.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-1536x1017.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-680x450.png 680w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-325x215.png 325w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-151x100.png 151w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech-1280x847.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Adobe-enhance-speech.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70169" class="wp-caption-text">Adobe Premiere Pro’s AI-powered Enhance Speech tool removes unwanted noise and improves dialogue quality.</figcaption></figure>
+<p>Adobe Premiere Pro’s <a href="https://blogs.nvidia.com/blog/studio-driver-app-rtx-ai-adobe-premiere-pro/">Enhance Speech tool is accelerated by RTX</a>, using AI to remove unwanted noise and improve the quality of dialogue clips so they sound professionally recorded. It’s up to 4.5x faster on RTX vs. Mac. Another Premiere feature, Auto Reframe, uses GPU acceleration to identify and track the most relevant elements in a video and intelligently reframes video content for different aspect ratios.</p>
+<p><iframe loading="lazy" title="The DaVinci Resolve Effect I&#039;ve been Waiting For!" width="500" height="281" src="https://www.youtube.com/embed/NM6PGGXiBeE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Another time-saving AI feature for video editors is DaVinci Resolve’s Magic Mask. Previously, if editors needed to adjust the color/brightness of a subject in one shot or remove an unwanted object, they’d have to use a combination of rotoscoping techniques or basic power windows and masks to isolate the subject from the background.</p>
+<p>Magic Mask has completely changed that workflow. With it, simply draw a line over the subject and the AI will process for a moment before revealing the selection. And GeForce RTX laptops can run the feature 2.5x faster than the fastest non-RTX laptops.</p>
+<p>This is just a sample of the ways that AI is increasing the speed of creativity. There are now more than 125 AI applications accelerated by RTX.</p>
+<h2><b>AI for Developers</b></h2>
+<p>AI is enhancing the way developers build software applications through scalable environments, hardware and software optimizations, and new APIs.</p>
+<p><a href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/">NVIDIA AI Workbench</a> helps developers quickly create, test and customize pretrained generative AI models and LLMs using PC-class performance and memory footprint. It’s a unified, easy-to-use toolkit that can scale from running locally on RTX PCs to virtually any data center, public cloud or <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>.</p>
+<p>After building AI models for PC use cases, developers can optimize them using <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> — the software that helps developers take full advantage of the Tensor Cores in RTX GPUs.</p>
+<p>TensorRT acceleration is now available in text-based applications with <a href="https://blogs.nvidia.com/blog/ignite-rtx-ai-tensorrt-llm-chat-api/">TensorRT-LLM for Windows</a>. The open-source library increases LLM performance and includes pre-optimized checkpoints for popular models, including <a href="https://blogs.nvidia.com/blog/google-gemma-llm-rtx-ai-pc/">Google’s Gemma</a>, Meta Llama 2, Mistral and Microsoft Phi-2.</p>
+<p>Developers also have access to a TensorRT-LLM wrapper for the OpenAI Chat API. With just one line of code change, <a href="https://continue.dev/docs/intro">continue.dev</a> — an open-source autopilot for VS Code and JetBrains that taps into an LLM — can use TensorRT-LLM locally on an RTX PC for fast, local LLM inference using this popular tool.</p>
+<p>Every week, we’ll demystify AI by making the technology more accessible, and we’ll showcase new hardware, software, tools and accelerations for RTX AI PC users.</p>
+<p>The iPhone moment of AI is here, and it’s just the beginning. Welcome to AI Decoded.</p>
+<p><i>Get weekly updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ai-decoded-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ai-decoded-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[AI Decoded: Demystifying AI and the Hardware, Software and Tools That Power It]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>The Magic Behind the Screen: Celebrating the 96th Academy Awards Nominees for Best Visual Effects</title>
 		<link>https://blogs.nvidia.com/blog/academy-awards-vfx-openusd/</link>
 		
@@ -66,7 +222,7 @@
 <p>For <i>Mission: Impossible &#8211; Dead Reckoning Part One</i>, the visual effects team faced the challenge of enhancing the film’s signature action sequences without detracting from the series’s reputation for practical stunts. To achieve this, they took a hybrid approach, using CGI to seamlessly augment practical effects.</p>
 <p>High-speed drone footage integrated with CG elements created breathtaking chase scenes, while advanced compositing techniques added layers of detail and depth to explosions and hand-to-hand combat scenes, elevating the film’s action to new heights.</p>
 <h2><b>NVIDIANs at the SciTech Awards</b></h2>
-<figure id="attachment_70149" aria-describedby="caption-attachment-70149" style="width: 352px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2.jpg"><img fetchpriority="high" decoding="async" class="wp-image-70149 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-352x400.jpg" alt="" width="352" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-352x400.jpg 352w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-440x500.jpg 440w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-396x450.jpg 396w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-189x215.jpg 189w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-88x100.jpg 88w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2.jpg 599w" sizes="(max-width: 352px) 100vw, 352px" /></a><figcaption id="caption-attachment-70149" class="wp-caption-text">NVIDIA’s Christopher Jon Horvath, joined by Steve LaVietes and Joe Ardent, on stage to accept their award.</figcaption></figure>
+<figure id="attachment_70149" aria-describedby="caption-attachment-70149" style="width: 352px" class="wp-caption alignright"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2.jpg"><img loading="lazy" decoding="async" class="wp-image-70149 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-352x400.jpg" alt="" width="352" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-352x400.jpg 352w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-440x500.jpg 440w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-396x450.jpg 396w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-189x215.jpg 189w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2-88x100.jpg 88w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Oscars-Blog-Copy-2.jpg 599w" sizes="(max-width: 352px) 100vw, 352px" /></a><figcaption id="caption-attachment-70149" class="wp-caption-text">NVIDIA’s Christopher Jon Horvath, joined by Steve LaVietes and Joe Ardent, on stage to accept their award.</figcaption></figure>
 <p><i></i>The Academy Awards for Scientific and Technical Achievements highlight technical contributions that have significantly affected the way movies are made, as well as the brilliant inventors behind them.</p>
 <p><a href="https://aousd.org/blog/explainer-series-what-is-openusd/">OpenUSD</a> was <a href="https://aousd.org/blog/openusd-wins-academy-award-for-scientific-and-technical-achievement/">honored in the science and engineering subcategory</a> for its importance as the first open-source scene description framework that streamlines the entire production workflow. Its innovative layering system and efficient crate file format have established it as the de facto standard for 3D scene interchange, facilitating unparalleled collaboration across the industry.<b> </b></p>
 <p>The science and engineering subcategory also celebrated other remarkable technologies, including the <a href="https://www.openvdb.org/">OpenVDB</a> open-source library, for sparse 3D volumes, which has become an industry standard for visual-effects simulations and renderings of water, fire, smoke and clouds.</p>
@@ -181,11 +337,11 @@
 <p>The premium EV brand by SAIC and Alibaba, <b>IM Motors</b>, unveiled its IM L6 mid-size electric  saloon (aka sedan), which will soon be available to the European market.</p>
 <p>The L6 features IM’s proprietary Intelligent Mobility Autonomous Driving System, powered by NVIDIA DRIVE Orin. The advanced system uses a comprehensive sensor suite, including one lidar, three radars, 11 cameras and 12 ultrasonic sensors. IM reports that the L6 is capable of highway navigation on autopilot, marking a milestone in the company’s mission to bring advanced self-driving vehicles to market.</p>
 <p><a href="https://blogs.nvidia.com/blog/auto-shanghai-nvidia-drive/" target="_blank" rel="noopener">IM Motors</a> has been working with NVIDIA since 2021, using NVIDIA DRIVE Orin as the AI brain for its flagship LS7 SUV and L7 sedan.</p>
-<figure id="attachment_70125" aria-describedby="caption-attachment-70125" style="width: 672px" class="wp-caption alignnone"><img decoding="async" class="wp-image-70125 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70125" class="wp-caption-text">IM Motors IM L6</figcaption></figure>
+<figure id="attachment_70125" aria-describedby="caption-attachment-70125" style="width: 672px" class="wp-caption alignnone"><img loading="lazy" decoding="async" class="wp-image-70125 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/IM_L6_NEW-IMAGE-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70125" class="wp-caption-text">IM Motors IM L6</figcaption></figure>
 <h2><b>Lucid </b></h2>
 <p>The Geneva Motor Show marks the European debut of Lucid’s Gravity SUV.</p>
 <p>The Gravity aims to set fresh benchmarks for sustainability and technological innovation when its production commences in late 2024. Powered by NVIDIA DRIVE, the luxury SUV features supercar levels of performance and an impressive battery range to mitigate range anxiety.</p>
-<figure id="attachment_70121" aria-describedby="caption-attachment-70121" style="width: 672px" class="wp-caption alignnone"><img decoding="async" class="wp-image-70121 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70121" class="wp-caption-text">Lucid Gravity SUV</figcaption></figure>
+<figure id="attachment_70121" aria-describedby="caption-attachment-70121" style="width: 672px" class="wp-caption alignnone"><img loading="lazy" decoding="async" class="wp-image-70121 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Lucid_Gravity-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70121" class="wp-caption-text">Lucid Gravity SUV</figcaption></figure>
 <p>Explore the latest developments in mobility and meet NVIDIA DRIVE ecosystem partners showcasing their next-gen vehicles at <a href="https://www.nvidia.com/gtc/" target="_blank" rel="noopener">GTC</a>, the conference for the era of AI, running from March 18-21 at the San Jose Convention Center and online.</p>
 <p>Find additional details on <a href="https://images.nvidia.com/nvimages/gtc/pdf/GTC24_March_Automotive_Brochure.pdf" target="_blank" rel="noopener">automotive-specific programming at GTC</a>.</p>
 </div>]]></content:encoded>
@@ -1150,110 +1306,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Time to Play: GeForce NOW Now Offers 1,800 Games to Stream]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>FOMO Alert: Discover 7 Unmissable Reasons to Attend GTC 2024</title>
-		<link>https://blogs.nvidia.com/blog/do-not-miss-gtc-2024/</link>
-		
-		<dc:creator><![CDATA[Claudia Cook]]></dc:creator>
-		<pubDate>Thu, 22 Feb 2024 14:00:07 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69950</guid>
-
-					<description><![CDATA[“I just got back from GTC and ….” In four weeks, those will be among the most powerful words in your industry. But you won’t be able to use them if you haven’t been here. NVIDIA’s GTC 2024 transforms the San Jose Convention Center into a crucible of innovation, learning and community from March 18-21,		<a class="read-more" href="https://blogs.nvidia.com/blog/do-not-miss-gtc-2024/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>“I just got back from GTC and ….”</p>
-<p>In four weeks, those will be among the most powerful words in your industry. But you won’t be able to use them if you haven’t been here.</p>
-<p><a href="https://www.nvidia.com/gtc/">NVIDIA’s GTC 2024</a> transforms the San Jose Convention Center into a crucible of innovation, learning and community from March 18-21, marking a return to in-person gatherings that can’t be missed.</p>
-<p>Tech enthusiasts, industry leaders and innovators from around the world are set to present and explore over 900 sessions and close to 300 exhibits.</p>
-<p>They’ll dive into the future of AI, computing and beyond, with contributions from some of the brightest minds at companies such as Amazon, Amgen, Character.AI, Ford Motor Co., Genentech, L&#8217;Oréal, Lowe’s, Lucasfilm and Industrial Light &amp; Magic, Mercedes-Benz, Pixar, Siemens, Shutterstock, xAI and many more.</p>
-<p>Among the most anticipated events is the Transforming AI Panel, featuring the original architects behind the concept that revolutionized the way we approach AI today: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin.</p>
-<p>All eight authors of &#8220;<a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>,&#8221; the seminal 2017 NeurIPS paper that introduced the trailblazing transformer neural network architecture will appear in person at GTC on a panel hosted by NVIDIA Founder and CEO Jensen Huang.</p>
-<p>Located in the vibrant heart of Silicon Valley, GTC stands as a pivotal gathering where the convergence of technology and community shapes the future. This conference offers more than just presentations; it&#8217;s a collaborative platform for sharing knowledge and sparking innovation.</p>
-<ol>
-<li style="font-weight: 400;" aria-level="1"><strong>Exclusive Insights:</strong> <a href="https://blogs.nvidia.com/blog/gtc-keynote-spring-2023/">Last year, Huang announced a “lightspeed” leap in computing</a> and partnerships with giants like Microsoft to set the stage. This year, anticipate more innovations at the SAP Center, giving attendees a first look at the next transformative breakthroughs.</li>
-<li style="font-weight: 400;" aria-level="1"><strong>Networking Opportunities:</strong> GTC’s networking events are designed to transform casual encounters into pivotal career opportunities. Connect directly with industry leaders and innovators, making every conversation a potential gateway to your next big role or project.</li>
-<li style="font-weight: 400;" aria-level="1"><strong>Cutting-Edge Exhibits: </strong>Step into the future with exhibits that showcase the latest in AI and robotics. Beyond mere displays, these exhibits offer hands-on learning experiences, providing attendees with invaluable knowledge to stay ahead.
-<p><figure id="attachment_69951" aria-describedby="caption-attachment-69951" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-69951 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-672x354.png" alt="" width="672" height="354" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-672x354.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-400x211.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-768x405.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-1536x810.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-842x444.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/WEF_Press_Stills_LED.0001-1-1280x675.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-69951" class="wp-caption-text">AI is spilling out in all directions, and GTC is the best way to capture it all. Pictured: The latest installation from AI artist Refik Anadol, whose work will be featured at GTC.</figcaption></figure></li>
-<li style="font-weight: 400;" aria-level="1"><strong>Diversity and Innovation:</strong> Begin your day at the Women In Tech breakfast. This, combined with unique experiences like generative AI art installations and street food showcases, feeds creativity and fosters innovation in a relaxed setting.</li>
-<li style="font-weight: 400;" aria-level="1"><strong>Learn From the Best:</strong> Engage with sessions led by visionaries from organizations such as Disney Research, Google DeepMind, Johnson &amp; Johnson Innovative Medicine, Stanford University and beyond. These aren’t just lectures but opportunities to question, engage and turn insights into actionable knowledge that can shape your career trajectory.</li>
-<li style="font-weight: 400;" aria-level="1"><strong>Silicon Valley Experience: </strong>Embrace the energy of the world’s foremost tech hub. Inside the conference, GTC connects attendees with the latest technologies and minds. Beyond the show floor, it’s a gateway to building lasting relationships with leaders and thinkers across industries.</li>
-<li style="font-weight: 400;" aria-level="1"><strong>Seize the Future Now:</strong> Don’t just join a story — write one. Be part of this moment in AI. <a href="https://www.nvidia.com/gtc/pricing/?regcode=no-ncid&amp;ncid=no-ncid">Register now for GTC</a> to write your own story in the epicenter of technological advancement. Be part of this transformative moment in AI.</li>
-</ol>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/gtc24-spring-web-browser-notification-sjcc-1280x680-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/gtc24-spring-web-browser-notification-sjcc-1280x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[FOMO Alert: Discover 7 Unmissable Reasons to Attend GTC 2024]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Shining Brighter Together: Google’s Gemma Optimized to Run on NVIDIA GPUs</title>
-		<link>https://blogs.nvidia.com/blog/google-gemma-llm-rtx-ai-pc/</link>
-		
-		<dc:creator><![CDATA[Ankit Patel]]></dc:creator>
-		<pubDate>Wed, 21 Feb 2024 13:00:31 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[AI Decoded]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=69874</guid>
-
-					<description><![CDATA[NVIDIA, in collaboration with Google, today launched optimizations across all NVIDIA AI platforms for Gemma — Google’s state-of-the-art new lightweight 2 billion&#8211; and 7 billion-parameter open language models that can be run anywhere, reducing costs and speeding innovative work for domain-specific use cases. Teams from the companies worked closely together to accelerate the performance of		<a class="read-more" href="https://blogs.nvidia.com/blog/google-gemma-llm-rtx-ai-pc/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA, in collaboration with Google, today launched optimizations across all NVIDIA AI platforms for <a href="https://blog.google/technology/developers/gemma-open-models/">Gemma</a> — Google’s state-of-the-art new lightweight <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-2b">2 billion</a>&#8211; and <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-7b">7 billion</a>-parameter open language models that can be run anywhere, reducing costs and speeding innovative work for domain-specific use cases.</p>
-<p>Teams from the companies worked closely together to accelerate the performance of Gemma — built from the same research and technology used to create the Gemini models — with <a href="https://github.com/NVIDIA/TensorRT-LLM">NVIDIA TensorRT-LLM</a>, an open-source library for optimizing large language model inference, when running on NVIDIA GPUs in the data center, in the cloud, and locally on workstations with <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> GPUs or PCs with <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX</a> GPUs.</p>
-<p>This allows developers to target the installed base of over 100 million NVIDIA RTX GPUs available in high-performance AI PCs globally.</p>
-<p>Developers can also run Gemma on NVIDIA GPUs in the cloud, including on Google Cloud’s A3 instances based on the H100 Tensor Core GPU and soon, NVIDIA’s <a href="https://nvidianews.nvidia.com/news/nvidia-supercharges-hopper-the-worlds-leading-ai-computing-platform">H200 Tensor Core GPUs</a> — featuring 141GB of HBM3e memory at 4.8 terabytes per second — which Google will deploy this year.</p>
-<p>Enterprise developers can additionally take advantage of NVIDIA’s rich ecosystem of tools — including <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> with the <a href="https://github.com/NVIDIA/NeMo">NeMo framework</a> and <a href="https://github.com/NVIDIA/TensorRT-LLM">TensorRT-LLM</a> — to fine-tune Gemma and deploy the optimized model in their production applications.</p>
-<p>Learn more about how <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-revs-up-inference-for-google-gemma/">TensorRT-LLM is revving up inference for Gemma</a>, along with additional information for developers. This includes several model checkpoints of Gemma and the FP8-quantized version of the model, all optimized with TensorRT-LLM.</p>
-<p>Experience <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-2b">Gemma 2B</a> and <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/ai-foundation/models/gemma-7b">Gemma 7B</a> directly from your browser on the NVIDIA AI Playground.</p>
-<h2><b>Gemma Coming to Chat With RTX</b></h2>
-<p>Adding support for Gemma soon is <a href="https://blogs.nvidia.com/blog/chat-with-rtx-available-now/">Chat with RTX</a>, an NVIDIA tech demo that uses <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a> and TensorRT-LLM software to give users generative AI capabilities on their local, RTX-powered Windows PCs.</p>
-<p><iframe loading="lazy" title="Create A Personalized AI Chatbot with Chat With RTX" width="500" height="281" src="https://www.youtube.com/embed/gdsRJZT3IJw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>The Chat with RTX lets users personalize a chatbot with their own data by easily connecting local files on an RTX PC to a large language model.</p>
-<p>Since the model runs locally, it provides results fast, and user data stays on the device. Rather than relying on cloud-based LLM services, Chat with RTX lets users process sensitive data on a local PC without the need to share it with a third party or have an internet connection.</p>
-<p><em>Explore <a title="Original URL: https://www.nvidia.com/gtc/sessions/generative-ai/?nvid=nv-int-txtad-141445 Click to follow link." href="https://www.nvidia.com/gtc/sessions/generative-ai/?nvid=nv-int-txtad-141445" data-outlook-id="97194cbf-406f-48c7-a83a-cd48b46329c6">generative AI</a> sessions and experiences at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, the global conference on AI and accelerated computing, running March 18-21 in San Jose, Calif., and online.</em></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/nv-google-blog-header-preview-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/nv-google-blog-header-preview-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Shining Brighter Together: Google’s Gemma Optimized to Run on NVIDIA GPUs]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
