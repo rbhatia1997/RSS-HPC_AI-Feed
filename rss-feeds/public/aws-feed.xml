@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Fri, 01 Mar 2024 00:04:16 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 05 Mar 2024 12:34:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,96 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Using large-language models for ESG sentiment analysis using Databricks on AWS</title>
+		<link>https://aws.amazon.com/blogs/hpc/using-large-language-models-for-esg-sentiment-analysis-using-databricks-on-aws/</link>
+		
+		<dc:creator><![CDATA[Ilan Gleiser]]></dc:creator>
+		<pubDate>Tue, 05 Mar 2024 12:34:23 +0000</pubDate>
+				<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Sustainability]]></category>
+		<guid isPermaLink="false">5ff183a8b5fd12c0deb708f5dd9760595e67a42c</guid>
+
+					<description>ESG is now a boardroom issue. See how Databricks' AI solution helps understand emissions data and meet new regulations.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="size-full wp-image-3333 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/14/boofla88_environmental_social_and_governance_policies_as_a_conc_58e6417e-1244-4776-8eef-c48fb6d9cb32.png" alt="Using large-language models for ESG sentiment analysis using Databricks on AWS" width="380" height="212"&gt;This post was contributed by Ilan Gleiser, Principal ML Specialist, Global Impact Computing, AWS, &lt;/em&gt;&lt;em&gt;Antoine Amend, Sr. Technical Director, Databricks, &lt;/em&gt;&lt;em&gt;Venkat Viswanathan, Senior Solutions Architect, AWS&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Regulators worldwide recognize the threat of climate change to economies and financial systems, forcing public companies in the US and Europe to be aware of – and disclose – their greenhouse emissions. This has led to a surge in demand from various stakeholders, including asset managers, asset owners, investors, and regulators, for machine-learning models that can analyze the plethora of data on their environmental, social and governance (ESG) policies.&lt;/p&gt; 
+&lt;p&gt;Alongside regulatory change, there is a financial incentive to this endeavor. Typically, ESG ratings have a positive correlation with both valuation and profitability, &lt;a href="https://corpgov.law.harvard.edu/2020/01/14/esg-matters/"&gt;while showing a negative correlation with volatility&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;In this post, we’re going to look at the challenge posed by ESG, as a data and AI problem. In the &lt;a href="https://www.databricks.com/blog/2020/07/10/a-data-driven-approach-to-environmental-social-and-governance.html"&gt;Databricks ESG Solution Accelerator&lt;/a&gt;, we will use natural language processing (NLP) to sort through the vast amounts of structured, and unstructured, data.&lt;/p&gt; 
+&lt;h2&gt;Why Databricks?&lt;/h2&gt; 
+&lt;p&gt;The main benefits for using the Databricks ESG Solution Accelerator are:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Detect differences between sustainability reports and real-time news data in portfolios of securities. Differences between sustainability reports and real-time news data may lead consumers and stakeholders to overvalue a company’s ESG score.&lt;/li&gt; 
+ &lt;li&gt;View how companies’ business relationships with one another within a global marketplace can impact their respective ESG scores.&lt;/li&gt; 
+ &lt;li&gt;Show how companies on the top decile of the ESG rank have half the volatility (as measured by &lt;em&gt;value-at-risk&lt;/em&gt;) of companies on the bottom end of the ESG ranks and better returns, indicating superior Sharpe ratios.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Users of the Databricks ESG Solution Accelerator can turn ESG risk into a source of excess returns (or &lt;em&gt;alpha&lt;/em&gt;) if spotted early in the process. This is done by processing unstructured data, like PDFs and real time news data and using machine learning (ML) algorithms that analyses the sentiment of the news data and compares with the sentiment of the data coming from the companies’ sustainability report on the same ESG policy&lt;/p&gt; 
+&lt;h2&gt;The critical problem of unstructured data&lt;/h2&gt; 
+&lt;p&gt;The ESG world generates data that is inherently unstructured. Out of the 40 frequently-disclosed ESG policies by companies, only ten can be measured as tangible figures while the rest are policy initiatives expressed in textual form across various IT systems. This raises the question of how AI can be applied to quantify and compare organizations ESG policies in a more objective manner.&lt;/p&gt; 
+&lt;p&gt;To help customers unlock the value of their sustainability data stored in the AWS cloud, we are highlighting Databricks ESG Solution Accelerator as described in “&lt;a href="https://www.databricks.com/blog/2020/07/10/a-data-driven-approach-to-environmental-social-and-governance.html"&gt;&lt;em&gt;A Data-driven Approach to Environmental, Social, and Governance using the Databricks Solutions Accelerator&lt;/em&gt;&lt;/a&gt;” and showing you step by step, how to run the accelerator on AWS.&lt;/p&gt; 
+&lt;p&gt;The notebooks show you how machine learning can enable asset managers, regulators, and investors to assess the sustainability exposure of their investments and empower their businesses with a holistic and data-driven view of their environmental, social, and corporate governance strategies.&lt;/p&gt; 
+&lt;p&gt;Specifically, the first notebook will extract key ESG initiatives communicated in yearly sustainability PDF reports and compare these with real time actual media coverage from news analytics data as in Figure 1. The idea behind this approach is to spot differences between sustainability reports and real-time news data to offer decision makers with the most accurate and promptly available information.&lt;/p&gt; 
+&lt;div id="attachment_3323" style="width: 840px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3323" loading="lazy" class="size-full wp-image-3323" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/13/CleanShot-2024-02-13-at-11.02.26.png" alt="Figure 1. Extract the key ESG initiatives as communicated in yearly PDF reports and compare these with the actual media coverage from news analytics data" width="830" height="406"&gt;
+ &lt;p id="caption-attachment-3323" class="wp-caption-text"&gt;Figure 1. Extract the key ESG initiatives as communicated in yearly PDF reports and compare these with the actual media coverage from news analytics data&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Databricks Solution Accelerators on AWS: speedways to innovation&lt;/h2&gt; 
+&lt;p&gt;Databricks ESG Solution Accelerator for AWS provides an expedited path to production for AWS customers who store their data on Amazon S3. Businesses can simplify the migration of their data and AI workloads to Databricks on AWS and quickly start utilizing the accelerator notebooks. The Databricks ESG Solution Accelerator come in a pair of notebooks that are easy to set up and provide prompt feedback, enabling asset management, MLOPS governance, and risk teams to achieve their goals in a much shorter time frame. Customers can take advantage of AWS’s computing power and virtually limitless storage, resulting in increased flexibility, scalability, and dependability at a reduced cost compared to developing an in-house solution.&lt;/p&gt; 
+&lt;p&gt;To support users from different lines of business, these accelerators are designed to meet the different goals of multiple teams – portfolio managers and asset owners can use them to maximize alpha or minimize risk; regulators can identify new potential hot spots; and corporations can gather public sentiment of their news in the media.&lt;/p&gt; 
+&lt;h2&gt;ESG Accelerator Logic&lt;/h2&gt; 
+&lt;p&gt;Although all these accelerators work together, businesses can apply them as stand-alone projects or layer them. The process goes as follows:&lt;/p&gt; 
+&lt;p&gt;Extract ESG initiatives from ESG reports using PyPDF2 and categorize them based on different topics. Then, tokenize and lemmatize the content for algorithmic ingestion. The next step is to automatically classify sentences extracted from ESG reports using atopic modeling algorithm. This classification allows customer/users to compare different companies’ by clustering them side-by-side to identify key focus areas (or ESG policies) voluntarily disclosed by companies in their sustainability reports.&lt;/p&gt; 
+&lt;p&gt;To create a data-driven ESG score, the Databricks ESG Solution Accelerator runs a sentiment analysis on financial news articles related to each company is conducted using the Global Database of Event Location and Tones (GDELT) files, updated every 15mins. The assumption is that overall tone captured from financial news articles is a good proxy for companies’ ESG scores. This approach generates scores for each company across all its ESG dimensions. A propagated weighted ESG (PW-ESG) metric is then calculated to provide a global view of risk by quantifying the links between companies and assessing their importance.&lt;/p&gt; 
+&lt;p&gt;Finally, to validate the assumption that high-ranked ESG companies offer better risk-adjusted returns than low-ranked ESG companies, the portfolio is split into two books – best and worst 10% ESG scores, respectively – and their historical returns and corresponding 95% Value-at-Risk are computed. The results show that low-ranked ESG portfolio has 2 times more risk than high-ranked ESG portfolio for the same level of returns.&lt;/p&gt; 
+&lt;h3&gt;Benefits of notebook 1 – spotting differences between sustainability reports and real-time news data&lt;/h3&gt; 
+&lt;p&gt;The goal of notebook #1 is to understand what the statements are all about, learning a vocabulary that is ESG specific with themes like diversity and inclusion, code of conduct, supporting communities and renewable energy.&lt;/p&gt; 
+&lt;p&gt;The ESG Solution Accelerator supports Databricks/AWS customers who host their data on AWS, offering a machine learning platform that educates itself on a wide array of subjects and themes that are significant in today’s corporate social responsibility environment. These themes range from ‘diversity and inclusion’, ‘code of conduct’, and ‘supporting communities’, to ‘renewable energy’, ‘impact investing’, and ‘valuing employees’. The automated learning feature enables the algorithm to provide valuable insights in these specific fields, allowing businesses the opportunity to better understand and incorporate these aspects into their investment and risk management strategies.&lt;/p&gt; 
+&lt;div id="attachment_3324" style="width: 765px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3324" loading="lazy" class="size-full wp-image-3324" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/13/CleanShot-2024-02-13-at-11.03.22.png" alt="Fig 2: Cluster analysis of machine learned policies emerging from unstructured Sustainability Reports PDF files" width="755" height="433"&gt;
+ &lt;p id="caption-attachment-3324" class="wp-caption-text"&gt;Fig 2: Cluster analysis of machine learned policies emerging from unstructured Sustainability Reports PDF files&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3325" style="width: 774px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3325" loading="lazy" class="size-full wp-image-3325" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/13/CleanShot-2024-02-13-at-11.03.29.png" alt="Fig 3: Comparing organizations side-by-side, based on how much they disclose in each of those categories." width="764" height="554"&gt;
+ &lt;p id="caption-attachment-3325" class="wp-caption-text"&gt;Fig 3: Comparing organizations side-by-side, based on how much they disclose in each of those categories.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;em&gt;&amp;nbsp;&lt;/em&gt;In a separate blog post, we show you how you can fine-tune a large language model and accelerate hyperparameter grid search for sentiment analysis with BERT models using Weights &amp;amp; Biases, Amazon EKS, and TorchElastic.&lt;/p&gt; 
+&lt;h3&gt;Benefit of Notebook 2 – Understand How ESG Scores correlate with market risk and returns&lt;/h3&gt; 
+&lt;p&gt;The second notebook presents a method for constructing a synthetic portfolio and incorporating ESG insights into the market risk framework. This involves considering not only a company’s outward appearance, but also its potential for performance. Research and literature suggest that companies with strong ESG practices typically exhibit lower market volatility. Our examination of value at risk highlights that a synthetic portfolio lacking such practices can be twice as volatile. Ultimately, we aim to connect research and product by integrating our findings into a comprehensive BI to AI Dashboard.&lt;/p&gt; 
+&lt;p&gt;Combining all those insights, to understand what a company says about ESG vs how much a company does across those 24 machines learned policies, informs us in real time about news events that may positively or negatively affect the ESG score of every company, and in turn, the impact it may have on its market performance.&lt;/p&gt; 
+&lt;p&gt;Combining all those insights into one platform helps us understand what a company says about ESG versus how much it actually does across the 24 machine-learned policies. This platform informs us in real time about news events that may positively or negatively affect the ESG score of every company, and subsequently, the impact it may have on its market performance.&lt;/p&gt; 
+&lt;p&gt;ESG factors are among major market factors, like value, momentum, and volatility. The taxonomy of ESG factors has proved adaptive, as the market empirically prices new indicators. In addition, the recent advances in quantifying the effect of ESG factors on performance, in developing a regulatory and legal framework for ESG, and in establishing new ESG ratings should continue to have a positive effect on asset flows into ESG-related strategies&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt; 
+&lt;h2&gt;Running the Accelerator on AWS&lt;/h2&gt; 
+&lt;p&gt;Databricks built the ESG Solution Accelerator using the Delta Lake &lt;a href="https://www.databricks.com/glossary/medallion-architecture"&gt;Medallion Architecture&lt;/a&gt; to ingest data from raw, enriched, and purpose-built tables categorized as Bronze, Silver, and Gold Delta Lake tables.&lt;/p&gt; 
+&lt;p&gt;Delta Lake is an open-source project built for data ‘lakehouses’ with compute engines, including Apache Spark, Trino, PrestoDB, Flink, and Hive, and with APIs for Scala, Java, Rust, Ruby, and Python. Delta Lake is an &lt;em&gt;ACID table storage layer&lt;/em&gt; over cloud object stores like S3 that provides data reliability including, but not limited to, schema enforcement and evolution, time travel, scalable metadata handling, audit history, DML operations, and unifies stream and batch processing. You can store the data in Delta Lake tables in your encrypted S3 bucket.&lt;/p&gt; 
+&lt;div id="attachment_3326" style="width: 876px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3326" loading="lazy" class="size-full wp-image-3326" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/13/CleanShot-2024-02-13-at-11.04.47.png" alt="Fig 4. This schematic depicts how the Solutions Accelerator leverages corporate disclosures, news feeds, and portfolio ticker symbols to collect, transform, enrich, and apply machine learning models to create ESG scores from corporate disclosures and from the news feeds. This depicts the gaps between the corporate disclosures and the news feeds." width="866" height="424"&gt;
+ &lt;p id="caption-attachment-3326" class="wp-caption-text"&gt;Figure 4. This schematic depicts how the Solutions Accelerator leverages corporate disclosures, news feeds, and portfolio ticker symbols to collect, transform, enrich, and apply machine learning models to create ESG scores from corporate disclosures and from the news feeds. This depicts the gaps between the corporate disclosures and the news feeds.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;A machine learning model is created using open-source MLFlow to enrich the data with ML-based approach. Databricks workloads are run within the customer’s VPC account in either Amazon EC2 instances or in Amazon Elastic Container Registry (Amazon ECR) containers.&lt;/p&gt; 
+&lt;p&gt;AWS native services and AWS partner services further consume the data from Delta Lake. Some examples include using Amazon QuickSight for BI and visualization, Amazon Athena for advanced analytics, AWS Glue for data catalog, and Amazon SageMaker for more models, inference, and serving.&lt;/p&gt; 
+&lt;p&gt;Along with these are ancillary components like AWS Identity &amp;amp; Access Management (IAM), which control access and set guardrails to the applications and services, and Amazon CloudWatch for monitoring the applications and services to ensure proper functioning, can be implemented.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Steps to use the template for the ESG Sentiment use case&lt;/strong&gt;&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;If you are new to AWS, &lt;a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/"&gt;create and activate a new account&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;If you are new to Databricks on AWS, &lt;a href="https://aws.amazon.com/quickstart/architecture/databricks/#:~:text=If%20you%20don't%20already,existing%20cross%2Daccount%20IAM%20role"&gt;create and setup the Databricks account&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;Login to Databricks &lt;code&gt;&amp;lt;account_name&amp;gt;.cloud.databricks.com&lt;/code&gt; with your username and password.&lt;/li&gt; 
+ &lt;li&gt;Clone your repos using &lt;strong&gt;Repos&lt;/strong&gt; → &lt;strong&gt;Add Repo&lt;/strong&gt; → &lt;strong&gt;Select Git Hub&lt;/strong&gt; from the &lt;strong&gt;Git provider&lt;/strong&gt; → Enter &lt;code&gt;https://github.com/databricks-industry-solutions/esg-scoring&lt;/code&gt; in &lt;strong&gt;Git repository URL field&lt;/strong&gt; → provide your repository name in &lt;strong&gt;Repository name&lt;/strong&gt; field. Then &lt;strong&gt;submit&lt;/strong&gt;.&lt;/li&gt; 
+ &lt;li&gt;Go to &lt;strong&gt;Compute&lt;/strong&gt; → &lt;strong&gt;Create Cluster&lt;/strong&gt; and select &lt;strong&gt;ML and 10.4 LTS ML&lt;/strong&gt; (Scala 2.12, Spark 3.2.1 and above) → &lt;strong&gt;Worker Type Instance Type&lt;/strong&gt;, &lt;strong&gt;Min workers&lt;/strong&gt; as 2, &lt;strong&gt;Max workers&lt;/strong&gt; as 8), and &lt;strong&gt;Driver Type&lt;/strong&gt; as Worker Type, Check &lt;strong&gt;Enable Auto scaling&lt;/strong&gt;, Check &lt;strong&gt;Terminate&lt;/strong&gt; after 60 minutes of inactivity&lt;/li&gt; 
+ &lt;li&gt;Create your cluster&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Repos&lt;/strong&gt; → Select your repo → Select the Notebook (there are 5 note books) → Open the Notebook sequentially → Attach Cluster from the &lt;strong&gt;Connect&lt;/strong&gt; drop down and select the one you created in the last step —&amp;gt; &lt;strong&gt;Run&lt;/strong&gt; → &lt;strong&gt;Run All&lt;/strong&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;You can read the &lt;a href="https://www.databricks.com/blog/2020/07/10/a-data-driven-approach-to-environmental-social-and-governance.html"&gt;Databricks ESG solution accelerator explainer&lt;/a&gt; to learn more, or watch the &lt;a href="https://www.youtube.com/watch?v=tEjacxTxS_4"&gt;video&lt;/a&gt;. And you can check out the Databricks page in AWS Marketplace to get started with &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-ubybkhtmjqhhc"&gt;Databricks on AWS&lt;/a&gt;, and visit the &lt;a href="https://aws.amazon.com/marketplace/solutions/sustainability/?ref_=mp_nav_solution_sus"&gt;AWS Sustainability Solutions&lt;/a&gt; page for ready-to-deploy ESG solutions.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Through this blog, we have illustrated a streamlined method for summarizing complex documents into key ESG initiatives that offer a deeper comprehension of the sustainability aspects of your investments. With the implementation of machine learning methods powered by large language models (LLMs), we have introduced a unique approach to ESG that more effectively identifies the impact of global markets on both organizational strategy and reputational risk. Additionally, we have highlighted the significant economic influence of ESG factors on market risk calculation.&lt;/p&gt; 
+&lt;p&gt;As a starting point to a data-driven ESG journey, this approach can be further improved by bringing the internal data you hold about your various investments and the additional metrics you could bring from third-party data, propagating the risks through the propagated-weighted ESG framework to keep driving more sustainable finance and impactful investments.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Improve the speed and cost of HPC deployment with Mountpoint for Amazon S3</title>
 		<link>https://aws.amazon.com/blogs/hpc/improve-the-speed-and-cost-of-hpc-deployment-with-mountpoint-for-amazon-s3/</link>
 		
@@ -36,7 +126,7 @@
 &lt;h2&gt;Setting expectations&lt;/h2&gt; 
 &lt;p&gt;As shown in Figure 1, We should expect to see the parallel performance scaling well as we increase the number of nodes in the cluster accessing the shared Amazon S3 storage at the same time. We hope this shows you how to achieve high throughput access to virtually limitless Amazon S3 data using a simple approach running ParallelCluster.&lt;/p&gt; 
 &lt;div id="attachment_3338" style="width: 1810px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3338" class="size-full wp-image-3338" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/20/CleanShot-2024-02-20-at-13.25.38@2x.png" alt="Figure 1 - Read and write performance scales well with the number of nodes." width="1800" height="1058"&gt;
+ &lt;img aria-describedby="caption-attachment-3338" loading="lazy" class="size-full wp-image-3338" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/20/CleanShot-2024-02-20-at-13.25.38@2x.png" alt="Figure 1 - Read and write performance scales well with the number of nodes." width="1800" height="1058"&gt;
  &lt;p id="caption-attachment-3338" class="wp-caption-text"&gt;Figure 1 – Read and write performance scales well with the number of nodes.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h2&gt;What do you need to try this out?&lt;/h2&gt; 
@@ -2299,128 +2389,6 @@ print(r.text)
   &lt;p&gt;Orang has over 20 years of experience in system-level modeling, advanced dynamic systems, frictional vibration and control, automotive noise and vibration, and mechanical engineering design. He is a frequent invited speaker and has published numerous papers on various topics in engineering design. At Maplesoft he is Director of Engineering Services, with a focus on the use and development of MapleSim solutions.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>EFA: how fixing one thing, led to an improvement for … everyone</title>
-		<link>https://aws.amazon.com/blogs/hpc/efa-how-fixing-one-thing-lead-to-an-improvement-for-everyone/</link>
-		
-		<dc:creator><![CDATA[Shi Jin]]></dc:creator>
-		<pubDate>Thu, 26 Oct 2023 14:30:25 +0000</pubDate>
-				<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[Computational Fluid Dynamics]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[Finite Element Analysis]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[ML]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[MPI]]></category>
-		<category><![CDATA[Protein Folding]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">ba7892a9031f1d2a300dccb5eeca53894380222e</guid>
-
-					<description>Today, we're diving deep into the open-source frameworks that move MPI messages around, and showing you how work we did in the Open MPI and libfabrics community lead to an improvement for EFA users - and everyone else, too.</description>
-										<content:encoded>&lt;p&gt;We routinely test a lot of HPC applications to make sure they work well on AWS, because we think that’s the only benchmark that matters. Hardware improvements from generation to generation are always important, but software is more frequently the place we find gains for customers.&lt;/p&gt; 
-&lt;p&gt;Last summer, our performance teams alerted us to a discrepancy in runtimes when a single application ran with several different MPIs, while on the same hardware. At a high level, codes running with Open MPI were coming in a little slower than when using other commercial or open-source MPIs. This concerned us, because Open MPI is the most popular MPI option for customers using AWS Graviton (our home-grown Arm64 CPU) and we don’t want customers working on that processor to be disadvantaged.&lt;/p&gt; 
-&lt;p&gt;In today’s post, we’ll explain how deep our engineers had to go to solve this puzzle (spoiler: it didn’t end with Open MPI). We’ll show you the outcomes from that work with some benchmark results including a real workload.&lt;/p&gt; 
-&lt;p&gt;Along the way, we’ll give you a peek at how our engineers work in the open-source community to improve performance for everyone, and you’ll get a sense of the valuable contributions from the people in those communities who support these MPIs.&lt;/p&gt; 
-&lt;p&gt;And – of course – we’ll show you how to get your hands on this so your code just runs faster – on every CPU (not just Graviton).&lt;/p&gt; 
-&lt;h2&gt;First, some architecture&lt;/h2&gt; 
-&lt;p&gt;If you’ve been paying &lt;em&gt;close attention&lt;/em&gt; to the posts on this channel&lt;em&gt;,&lt;/em&gt; you’ll know that the Elastic Fabric Adapter (EFA) is key to much of the performance you see in our posts. EFA works underneath your MPI and is often (we hope) just plain invisible to you and your application. EFA’s responsibility is to move messages securely – and rapidly – across our fabric between the instances that form parts of your cluster job. Doing this in a cloud environment adds an element or two to the task, because the cloud is both always under construction, and truly &lt;a href="https://youtu.be/JIQETrFC_SQ?t=1484"&gt;massive in scale&lt;/a&gt;. Scale isn’t the enemy however, and &lt;a href="https://aws.amazon.com/blogs/hpc/in-the-search-for-performance-theres-more-than-one-way-to-build-a-network/"&gt;we’ve exploited that fact&lt;/a&gt; to pull off &lt;a href="https://aws.amazon.com/blogs/hpc/second-generation-efa-improving-hpc-and-ml-application-performance-in-the-cloud/"&gt;great performance for HPC and ML codes&lt;/a&gt; with an interconnect built on the existing AWS network from existing technologies like Ethernet.&lt;/p&gt; 
-&lt;p&gt;EFA remains largely invisible, because we chose to expose it through libfabric, which is also known as Open Fabrics Interfaces (OFI). This is a communications API for lots of parallel and distributed computing applications. By design, it’s lower-level than, say, MPI, and so allows lots of hardware makers (like AWS) to abstract their networking fabrics, so application programmers don’t need to pay attention to too many details of how they’re built.&lt;/p&gt; 
-&lt;div id="attachment_2860" style="width: 976px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2860" loading="lazy" class="size-full wp-image-2860" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.04.03.png" alt="Figure 1 - Open Fabrics Interfaces (OFI), or libfabric is the abstraction we've chosen to expose EFA to MPIs and NCCL. This allows application programmers to be productive without needing to know too much about how the fabric underneath does its work." width="966" height="466"&gt;
- &lt;p id="caption-attachment-2860" class="wp-caption-text"&gt;Figure 1 – Open Fabrics Interfaces (OFI), or libfabric is the abstraction we’ve chosen to expose EFA to MPIs and NCCL. This allows application programmers to be productive without needing to know too much about how the fabric underneath does its work.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;As Figure 1 shows, there are several components and APIs in libfabric that MPI interacts with. While it’s impossible to explain them all in this post, let’s take a minute to work through a simple API flow for MPI that sends and receives a message between two ranks – using libfabric.&lt;/p&gt; 
-&lt;h3&gt;An aside: a simple data flow example&lt;/h3&gt; 
-&lt;p&gt;There are 3 groups of libfabric APIs involved: a &lt;em&gt;data sending&lt;/em&gt; API, a &lt;em&gt;data receiving&lt;/em&gt; API, and a &lt;em&gt;completion polling&lt;/em&gt; API. We’ve illustrated their connections in Figure 2.&lt;/p&gt; 
-&lt;div id="attachment_2861" style="width: 553px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2861" loading="lazy" class="size-full wp-image-2861" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.05.04.png" alt="Figure 2 – API flow for MPI to send and receive a message between two ranks using libfabric." width="543" height="474"&gt;
- &lt;p id="caption-attachment-2861" class="wp-caption-text"&gt;Figure 2 – API flow for MPI to send and receive a message between two ranks using libfabric.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;On the sender side, MPI initiates a message sending via the &lt;code&gt;fi_tsend&lt;/code&gt; function (&lt;a href="https://ofiwg.github.io/libfabric/main/man/fi_tagged.3.html"&gt;or its variants&lt;/a&gt;). This allows MPI to post a sending request that includes the address, length, and tag of the &lt;em&gt;sending&lt;/em&gt; buffer. On the receiver side, MPI posts a receiving request via the &lt;code&gt;fi_trecv&lt;/code&gt; call. This includes the address, length, and tag of the &lt;em&gt;receiving&lt;/em&gt; buffer. The tags are used for the receiver to filter what messages should be received from one or more senders.&lt;/p&gt; 
-&lt;p&gt;Both sending and receiving APIs return &lt;em&gt;asynchronously&lt;/em&gt;, which means the sending and receiving operations don’t necessarily complete when the calls return. Except for some special cases, MPI needs to poll a completion queue (CQ) to get the completion events for sending and receiving operations, through &lt;code&gt;fi_cq_read&lt;/code&gt;.&lt;/p&gt; 
-&lt;p&gt;Hopefully this gives you a picture of what goes on under the hood when MPI ranks want to communicate with each other. Anyhow, back to our main story now …&lt;/p&gt; 
-&lt;h2&gt;Intra-node comms&lt;/h2&gt; 
-&lt;p&gt;Digging deeper, the other MPIs seemed to have better &lt;em&gt;intra-node performance&lt;/em&gt; than Open MPI. This might sound a little surprising – you could be forgiven for presuming that &lt;em&gt;intra&lt;/em&gt;-node performance would be … more of a &lt;em&gt;solved problem&lt;/em&gt;. It’s literally cores sending messages to other cores &lt;em&gt;inside the same compute node&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;Open MPI is designed to use a layer called the &lt;strong&gt;matching transport layer&lt;/strong&gt; (MTL) whenever libfabric is used to manage the two-sided tagged message sending and receiving operations (there &lt;em&gt;is&lt;/em&gt; another layer called the &lt;em&gt;byte transfer layer&lt;/em&gt; that uses libfabric for one-sided operations, like write and read, but we’re not going to discuss it in this post). This layer offloads &lt;em&gt;all communications&lt;/em&gt;, whether they’re intra-node or inter-node, to the libfabric layer. This is different from how the others do it, because they use their own shared-memory implementations for intra-node communications, &lt;em&gt;by default&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;Other MPIs allow you to define which underlying libfabric provider they should use for shared memory operations (usually by tweaking some environment variables). Open MPI &lt;em&gt;also&lt;/em&gt; has its own shared-memory implementation in its BTL (Byte Transfer Layer) component (BTL/vader in Open MPI 4, and BTL/sm in Open MPI 5). This allowed us to explore several pathways to narrow down the specific portions of code where trouble was occurring.&lt;/p&gt; 
-&lt;p&gt;We noticed that when running on a single instance, Open MPI with BTL/SM had similar performance to the others when they were using their native routines. As we noted above, due to low-level implementation details in Open MPI, when libfabric is being used, BTL/SM &lt;em&gt;cannot&lt;/em&gt; be used.&lt;/p&gt; 
-&lt;p&gt;This is where some subtle effects can have quite an impact on outcomes. When Open MPI sends an intra-node message through the libfabric EFA provider, the EFA provider actually hands over the message to the libfabric SHM provider, which is yet another provider in libfabric – &lt;em&gt;that supports pure intra-node communications&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;When we put this to the test with &lt;a href="http://mvapich.cse.ohio-state.edu/benchmarks/"&gt;OSU’s benchmarking suite&lt;/a&gt; and some instrumented code, the high level performance gap we noticed between Open MPI with libfabric EFA and the other MPI’s native implementations could be decomposed into – mainly – two parts:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;The gap between libfabric’s SHM provider itself and the others’ shared memory implementation.&lt;/li&gt; 
- &lt;li&gt;The gap between libfabric with (EFA + SHM)&amp;nbsp;and libfabric SHM on its own.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;For a sense of scale, for small message sizes under 64 bytes (using a c5n.18xlarge instance) these gaps were adding around 0.4-0.5 µsec extra ping-pong latency. Given these are messages travelling &lt;em&gt;inside&lt;/em&gt; a machine and never making it to a PCI bus (let alone a network cable), this was a big penalty.&lt;/p&gt; 
-&lt;h2&gt;Community efforts&lt;/h2&gt; 
-&lt;p&gt;To address these two gaps, we needed to pursue directions of effort, in parallel.&lt;/p&gt; 
-&lt;p&gt;Addressing the first gap involving the libfabric SHM provider performance became an effort with the help of the libfabric maintainers to optimize the locking mechanisms in the queues, and some other details – which we’ll dive into in a future post.&lt;/p&gt; 
-&lt;p&gt;For the second gap involving the handoff between the EFA provider and the SHM provider, the AWS team worked to onboard the EFA provider using a newly-developed libfabric interface called&amp;nbsp;the &lt;a href="https://ofiwg.github.io/libfabric/main/man/fi_peer.3.html"&gt;Peer API&lt;/a&gt; so we could use the SHM provider as a &lt;em&gt;peer provider&lt;/em&gt;.&amp;nbsp;Peer providers are a way for independently developed providers to be used together in a tight fashion, which helps everyone (a) avoid layering overhead; and (b) resist the urge to duplicate each other’s’ provider functionality.&lt;/p&gt; 
-&lt;div id="attachment_2862" style="width: 1178px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2862" loading="lazy" class="size-full wp-image-2862" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.06.37.png" alt="Figure 3 - The base case before our improvement work began, characterized by a long pathway through all the layers of the stack, even though intra-node traffic should be able to short circuit much of it." width="1168" height="489"&gt;
- &lt;p id="caption-attachment-2862" class="wp-caption-text"&gt;Figure 3 – The base case before our improvement work began, characterized by a long pathway through all the layers of the stack, even though intra-node traffic should be able to short circuit much of it.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We’ve illustrated the contrasting pathways that small messages traverse when using the Peer API. Figures 3 and 4 depict these two paradigms – before and after we introduced peering through this new API. We’ll summarize it from two angles: the data movement and the completion-events population.&lt;/p&gt; 
-&lt;div id="attachment_2863" style="width: 1151px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2863" loading="lazy" class="size-full wp-image-2863" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/09/13/CleanShot-2023-09-13-at-09.08.18.png" alt="Figure 4 - After we introduced the Peer API, which effectively short-circuits the pathways an intra-node message needs to travel." width="1141" height="594"&gt;
- &lt;p id="caption-attachment-2863" class="wp-caption-text"&gt;Figure 4 – After we introduced the Peer API, which effectively short-circuits the pathways an intra-node message needs to travel.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Data movement&lt;/h3&gt; 
-&lt;p&gt;&lt;strong&gt;Before using the Peer API&lt;/strong&gt;, when MPI sends a message using the libfabric EFA provider, it cside, MPI posts a receiving requestalls &lt;code&gt;fi_tsend()&lt;/code&gt;(&lt;a href="https://ofiwg.github.io/libfabric/main/man/fi_tagged.3.html"&gt;or its variants&lt;/a&gt;) through the EFA endpoint. The EFA provider performs protocol selection logic and adds EFA headers to the message body before posting the message again though the SHM endpoint. After getting the send request from EFA, SHM does its &lt;em&gt;own &lt;/em&gt;protocol selection and message packaging &lt;em&gt;again,&lt;/em&gt; before copying the message into a ‘bounce’ buffer, which is shared in both the sender’s and receiver’s memory spaces. Over on the receiver’s side, SHM will copy the received message to a bounce buffer in the EFA provider, before delivering the message to the application’s buffer via another memory copy. That’s a lot of memory copies.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;After using the Peer API&lt;/strong&gt;, on the sender’s side, EFA will check to see if SHM is enabled, and if the destination is on the same instance. If that’s true, EFA will immediately forward the &lt;code&gt;fi_tsend()&lt;/code&gt; request from MPI to SHM. On the receiver side, SHM copies the received message directly to the application buffer without the extra forwarding through the bounce buffer in the EFA layer.&lt;/p&gt; 
-&lt;h3&gt;Completion events population&lt;/h3&gt; 
-&lt;p&gt;The improvement on the completion events population is almost as dramatic. MPI gets a notification for the send/receive completion events by polling the completion queues.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Before using the Peer API&lt;/strong&gt;, the completion events generated by SHM when the actual send/receive operation completed needed another forwarding &lt;em&gt;inside&lt;/em&gt; the EFA provider before populating to the completion queues that the MPI polls from.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;After using the Peer API&lt;/strong&gt;, EFA and SHM just share the same completion queue allocated by MPI, and SHM can write the completion events directly to the queue.&lt;/p&gt; 
-&lt;h2&gt;Performance improvements&lt;/h2&gt; 
-&lt;p&gt;Let’s show you the performance improvements we saw when we ran both micro-benchmarks and real applications – the ultimate test.&lt;/p&gt; 
-&lt;p&gt;For micro benchmarks, we use the &lt;a href="https://mvapich.cse.ohio-state.edu/benchmarks/"&gt;OSU Latency benchmark&lt;/a&gt; to measure the latency of point-to-point comms for two ranks, and OSU’s &lt;code&gt;MPI_Alltoallw&lt;/code&gt; test to measure the latency for collective comms.&lt;/p&gt; 
-&lt;p&gt;For a real-world application, we ran &lt;a href="https://openfoam.org/"&gt;OpenFOAM&lt;/a&gt; with a 4M cell motorbike model.&lt;/p&gt; 
-&lt;p&gt;In our testing, we used Open MPI 4.1.5 with two different versions of libfabric: 1.18.1 (&lt;em&gt;before&lt;/em&gt; the Peer API), and 1.19.0 (&lt;em&gt;after&lt;/em&gt; implementing Peer API).&lt;/p&gt; 
-&lt;h3&gt;OSU latency&lt;/h3&gt; 
-&lt;p&gt;This is where the improvements from our combined efforts are most visible – by measuring the point-to-point (two-rank) MPI send and receive ping-pong latency.&lt;/p&gt; 
-&lt;p&gt;Figure 5 shows the OSU latency benchmark when running Open MPI with libfabric 1.18.1 (before using Peer API), and again with the newer libfabric 1.19.0 (after implementing the Peer API). We ran all these tests on two ranks on two different instance types: An hpc6a.48xlarge built around an x86 architecture, and the hpc7g.32xlarge, which is built using the AWS Graviton 3E – an Arm64 architecture.&lt;/p&gt; 
-&lt;div id="attachment_2988" style="width: 1090px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2988" loading="lazy" class="size-full wp-image-2988" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/23/CleanShot-2023-10-23-at-18.41.29.png" alt="Figure 5 - Peer to peer intra-node MPI ping-pong latency measurements, before and after we implemented the Peering API in our libfabric providers. Latency approximately halved, which is a dramatic improvement." width="1080" height="463"&gt;
- &lt;p id="caption-attachment-2988" class="wp-caption-text"&gt;Figure 5 – Peer to peer intra-node MPI ping-pong latency measurements, before and after we implemented the Peering API in our libfabric providers. Latency approximately halved, which is a dramatic improvement.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The latency we measured approximately halved – a dramatic result, but in line with what we should expect when we removed all the unnecessary memory copies and method calls by using the Peer API, and the improvements in SHM itself.&lt;/p&gt; 
-&lt;p&gt;The work continues in this area: the gap between libfabric 1.19.0 and the other private implementations will likely be reduced further – our teams are working together with the libfabric community to optimize the SHM provider further, with a goal of making it comparable to MPICH. This is a space to watch.&lt;/p&gt; 
-&lt;h3&gt;OSU all-to-all communication&lt;/h3&gt; 
-&lt;p&gt;To see the impact on MPI &lt;em&gt;collective operations&lt;/em&gt;, we benchmarked &lt;code&gt;MPI_Alltoallw&lt;/code&gt; – well known for stressing MPI communications.&lt;/p&gt; 
-&lt;div id="attachment_2989" style="width: 1057px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2989" loading="lazy" class="size-full wp-image-2989" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/23/CleanShot-2023-10-23-at-18.42.06.png" alt="Figure 6 - The impact on collective operations. Latency dropped by between a third (in the case of the Hpc6a nodes) and a half (for Hpc7g)." width="1047" height="464"&gt;
- &lt;p id="caption-attachment-2989" class="wp-caption-text"&gt;Figure 6 – The impact on collective operations. Latency dropped by between a third (in the case of the Hpc6a nodes) and a half (for Hpc7g).&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 6 shows the results again for running Open MPI with libfabric 1.18.1 (before Peer API), libfabric 1.19.0 (after Peer API). This time we used 64 ranks and conducted the tests as before: using Hpc6a and Hpc7g instances.&lt;/p&gt; 
-&lt;p&gt;The impact was significant. On Hpc6a, the latency fell generally by about a third. For Hpc7g, it fell by half.&lt;/p&gt; 
-&lt;h3&gt;OpenFOAM motorbike 4M case&lt;/h3&gt; 
-&lt;p&gt;The real test of our work is always an actual application that a customer runs: micro-benchmarks can only tell you so much. We ran the same &lt;em&gt;OpenFOAM motorBike 4M cell&lt;/em&gt; case on 4 x hpc6a.48xlarge (96 ranks per node) and 6 x hpc7g.16xlarge (64 ranks per node) – 386 total ranks in both cases. And in this case, we only tested with Open MPI, but with both our newer and older libfabric versions.&lt;/p&gt; 
-&lt;p&gt;We measured &lt;em&gt;runs per day&lt;/em&gt; to focus on what a customer will care about – the pace at which they can results from different CFD models. The runs showed around a 10% improvement from libfabric 1.18.1 to libfabric 1.19.0 across both instance types. We’ve graphed this in Figure 7.&lt;/p&gt; 
-&lt;div id="attachment_2990" style="width: 642px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2990" loading="lazy" class="size-full wp-image-2990" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/23/CleanShot-2023-10-23-at-18.42.58.png" alt="Figure 7 - Runs per day for our OpenFOAM workload across two instance types, both before and after Peer API was used. Both show around 10% improvement from the new methods." width="632" height="483"&gt;
- &lt;p id="caption-attachment-2990" class="wp-caption-text"&gt;Figure 7 – Runs per day for our OpenFOAM workload across two instance types, both before and after Peer API was used. Both show around 10% improvement from the new methods.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;How to get this new code for your workloads&lt;/h2&gt; 
-&lt;p&gt;The improvements we’ve shown here are already in the main branch of the &lt;a href="https://github.com/ofiwg/libfabric"&gt;OFIWG/libfabric GitHub repo&lt;/a&gt; and they’re part of libfabric 1.19, which was released at the end of August. We ingested that into EFA installer 1.27.0, which also shipped recently. You can always &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa-start.html"&gt;check our documentation&lt;/a&gt; to find out how to get the latest version.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;The enhancements we’ve described in this post should make everyone’s lives easier. In most cases, the intra-node latency between ranks using Open MPI will drop by around a half – without any code changes in the end user application. In our real-world test using a CFD benchmark, we saw a 10% performance gain.&lt;/p&gt; 
-&lt;p&gt;We think there are two significant takeaways from this for the HPC community.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;The first&lt;/strong&gt; is that our engineering teams are always looking for ways to boost performance. Sometimes that happens in hardware, very often firmware, and – like today’s post – software, too. When we find those ways, we’ll roll them out as quick as we can, and they’ll form part of the pattern that cloud HPC users have come to expect: things just get faster (and easier) over time, without compromising security.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;The second&lt;/strong&gt; is that those same engineers work collaboratively with their counterparts at partners (and competitors, too) to make things better, and faster – for everyone. This collaborative angle, underscores a truth that innovation thrives in shared effort rather than isolated silos. We’re thankful to have been able to work with so many dedicated engineers from around the world to bring these results to you today.&lt;/p&gt; 
-&lt;p&gt;Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; if you have any questions – or if you want to find a way to contribute, too.&lt;/p&gt;</content:encoded>
 					
 		
 		
