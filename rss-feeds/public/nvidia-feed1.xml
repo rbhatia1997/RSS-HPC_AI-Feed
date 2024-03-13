@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 12 Mar 2024 17:13:14 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 13 Mar 2024 17:25:50 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,139 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>AI Decoded: Demystifying Large Language Models, the Brains Behind Chatbots</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-rtx-pc-llms-chatbots/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 13 Mar 2024 13:00:36 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Conversational AI]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[generative AI]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70273</guid>
+
+					<description><![CDATA[If AI is having its iPhone moment, then chatbots are one of its first popular apps.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which aims to demystify AI by making the technology more accessible, while showcasing new hardware, software, tools and accelerations for RTX PC and workstation users.</i></p>
+<p>If AI is having its iPhone moment, then chatbots are one of its first popular apps.</p>
+<p>They’re made possible thanks to <a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/">large language models</a>, deep learning algorithms pretrained on massive datasets — as expansive as the internet itself — that can recognize, summarize, translate, predict and generate text and other forms of content. They can run locally on PCs and workstations powered by <a href="https://www.nvidia.com/en-us/geforce/">NVIDIA GeForce</a> and <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">RTX</a> GPUs.</p>
+<p>LLMs excel at summarizing large volumes of text, classifying and mining data for insights, and generating new text in a user-specified style, tone or format. They can facilitate communication in any language, even beyond ones spoken by humans, such as computer code or protein and genetic sequences.</p>
+<p>While the first LLMs dealt solely with text, later iterations were trained on other types of data. These multimodal LLMs can recognize and generate images, audio, videos and other content forms.</p>
+<p>Chatbots like ChatGPT were among the first to bring LLMs to a consumer audience, with a familiar interface built to converse with and respond to natural-language prompts. LLMs have since been used to help developers write code and scientists to drive drug discovery and vaccine development.</p>
+<p>But the AI models that power those functions are computationally intensive. Combining advanced optimization techniques and algorithms like quantization with RTX GPUs, which are purpose-built for AI, helps make LLMs compact enough and PCs powerful enough to run locally — no internet connection required. And a new breed of lightweight LLMs like Mistral — one of the LLMs powering <a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">Chat with RTX</a> — sets the stage for state-of-the-art performance with lower power and storage demands.</p>
+<h2><strong>Why Do LLMs Matter?</strong></h2>
+<p>LLMs can be adapted for a wide range of use cases, industries and workflows. This versatility, combined with their high-speed performance, offers performance and efficiency gains across virtually all language-based tasks.</p>
+<figure id="attachment_70279" aria-describedby="caption-attachment-70279" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-70279" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs-672x433.png" alt="" width="672" height="433" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs-672x433.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs-400x258.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs-768x495.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs-698x450.png 698w, https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs-333x215.png 333w, https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs-155x100.png 155w, https://blogs.nvidia.com/wp-content/uploads/2024/03/DeepL_LLMs.png 1050w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70279" class="wp-caption-text">DeepL, running on NVIDIA GPUs in the cloud, uses advanced AI to provide accurate text translations.</figcaption></figure>
+<p>LLMs are widely used in language translation apps such as <a href="https://www.deepl.com/translator">DeepL</a>, which uses AI and machine learning to provide accurate outputs.</p>
+<p>Medical researchers are training LLMs on textbooks and other medical data to enhance patient care. Retailers are leveraging LLM-powered chatbots to deliver stellar customer support experiences. Financial analysts are tapping LLMs to transcribe and summarize earning calls and other important meetings. And that’s just the tip of the iceberg.</p>
+<p>Chatbots — like Chat with RTX — and writing assistants built atop LLMs are making their mark on every facet of knowledge work, from content marketing and copywriting to legal operations. Coding assistants were among the first LLM-powered applications to point toward the AI-assisted future of software development. Now, projects like ChatDev are combining LLMs with AI agents — smart bots that act autonomously to help answer questions or perform digital tasks — to spin up an on-demand, virtual software company. Just tell the system what kind of app is needed and watch it get to work.</p>
+<p><a href="https://developer.nvidia.com/blog/introduction-to-llm-agents/">Learn more about LLM agents</a> on the NVIDIA developer blog.</p>
+<h2><strong>Easy as Striking Up a Conversation </strong></h2>
+<p>Many people’s first encounter with generative AI came by way of a chatbot such as ChatGPT, which simplifies the use of LLMs through natural language, making user action as simple as telling the model what to do.</p>
+<p>LLM-powered chatbots can help generate a draft of marketing copy, offer ideas for a vacation, craft an email to customer service and even spin up original poetry.</p>
+<p>Advances in image generation and multimodal LLMs have extended the chatbot’s realm to include analyzing and generating imagery — all while maintaining the wonderfully simple user experience. Just describe an image to the bot or upload a photo and ask the system to analyze it. It’s chatting, but now with visual aids.</p>
+<div class="simplePullQuote right"></p>
+<p>For more on how these bots are designed, check out the on-demand webinar on <a href="https://info.nvidia.com/building-intelligent-ai-chatbots-using-rag-webinar.html?ondemandrgt=yes#">Building Intelligent AI Chatbots Using RAG</a>.</p>
+<p>
+</div>
+<p>Future advancements will help LLMs expand their capacity for logic, reasoning, math and more, giving them the ability to break complex requests into smaller subtasks.</p>
+<p>Progress is also being made on AI agents, applications capable of taking a complex prompt, breaking it into smaller ones, and engaging autonomously with LLMs and other AI systems to complete them. ChatDev is an example of an AI agent framework, but agents aren’t limited to technical tasks.</p>
+<p>For example, users could ask a personal AI travel agent to book a family vacation abroad. The agent would break that task into subtasks — itinerary planning, booking travel and lodging, creating packing lists, finding a dog walker — and independently execute them in order.</p>
+<h2><strong>Unlock Personal Data With RAG</strong></h2>
+<p>As powerful as LLMs and chatbots are for general use, they can become even more helpful when combined with an individual user’s data. By doing so, they can help analyze email inboxes to uncover trends, comb through dense user manuals to find the answer to a technical question about some hardware, or summarize years of bank and credit card statements.</p>
+<p><a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">Retrieval-augmented generation</a>, or RAG, is one of the easiest and most effective ways to hone LLMs for a particular dataset.</p>
+<figure id="attachment_70282" aria-describedby="caption-attachment-70282" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs.png"><img decoding="async" class="size-large wp-image-70282" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs-672x369.png" alt="" width="672" height="369" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs-672x369.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs-400x220.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs-768x422.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs-819x450.png 819w, https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs-392x215.png 392w, https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs-182x100.png 182w, https://blogs.nvidia.com/wp-content/uploads/2024/03/RAG_Locally_LLMs.png 1200w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70282" class="wp-caption-text">An example of RAG on a PC.</figcaption></figure>
+<p>RAG enhances the accuracy and reliability of generative AI models with facts fetched from external sources. By connecting an LLM with practically any external resource, RAG lets users chat with data repositories while also giving the LLM the ability to cite its sources. The user experience is as simple as pointing the chatbot toward a file or directory.</p>
+<p>For example, a standard LLM will have general knowledge about content strategy best practices, marketing tactics and basic insights into a particular industry or customer base. But connecting it via RAG to marketing assets supporting a product launch would allow it to analyze the content and help plan a tailored strategy.</p>
+<p>RAG works with any LLM, as the application supports it. NVIDIA’s Chat with RTX tech demo is an example of RAG connecting an LLM to a personal dataset. It runs locally on systems with a GeForce RTX or NVIDIA RTX professional GPU.</p>
+<p>To learn more about RAG and how it compares to fine-tuning an LLM, read the tech blog, <a href="https://developer.nvidia.com/blog/rag-101-retrieval-augmented-generation-questions-answered/">RAG 101: Retrieval-Augmented Generation Questions Answered</a>.</p>
+<h2><strong>Experience the Speed and Privacy of Chat with RTX</strong></h2>
+<p><a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">Chat with RTX</a> is a local, personalized chatbot demo that’s easy to use and <a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">free to download</a>. It’s built with RAG functionality and <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">TensorRT-LLM</a> and RTX acceleration. It supports multiple open-source LLMs, including Meta’s Llama 2 and Mistral’s Mistral. Support for Google’s Gemma is coming in a future update.</p>
+<figure id="attachment_70285" aria-describedby="caption-attachment-70285" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx.png"><img decoding="async" class="wp-image-70285 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/chat-wth-rtx.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70285" class="wp-caption-text">Chat with RTX connects users to their personal data through RAG.</figcaption></figure>
+<p>Users can easily connect local files on a PC to a supported LLM simply by dropping files into a folder and pointing the demo to that location. Doing so enables it to answer queries with quick, contextually relevant answers.</p>
+<p>Since Chat with RTX runs locally on Windows with GeForce RTX PCs and NVIDIA RTX workstations, results are fast — and the user’s data stays on the device. Rather than relying on cloud-based services, Chat with RTX lets users process sensitive data on a local PC without the need to share it with a third party or have an internet connection.</p>
+<p><i>To learn more about how AI is shaping the future, tune in to </i><a href="https://www.nvidia.com/gtc/"><i>NVIDIA GTC</i></a><i>, a global AI developer conference running March 18-21 in San Jose, Calif., and online.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-ai-decoded-week-2-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-ai-decoded-week-2-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[AI Decoded: Demystifying Large Language Models, the Brains Behind Chatbots]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Currents of Change: ITIF President Daniel Castro on Energy-Efficient AI and Climate Change</title>
+		<link>https://blogs.nvidia.com/blog/itif-daniel-castro/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 13 Mar 2024 13:00:32 +0000</pubDate>
+				<category><![CDATA[The AI Podcast]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70264</guid>
+
+					<description><![CDATA[AI-driven change is in the air, as are concerns about the technology’s environmental impact. In this episode of NVIDIA’s AI Podcast, Daniel Castro, vice president of the Information Technology and Innovation Foundation and director of its Center for Data Innovation, speaks with host Noah Kravitz about the motivation behind his AI energy use report, which		<a class="read-more" href="https://blogs.nvidia.com/blog/itif-daniel-castro/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>AI-driven change is in the air, as are concerns about the technology’s environmental impact. In this episode of NVIDIA’s <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a>, Daniel Castro, vice president of the Information Technology and Innovation Foundation and director of its Center for Data Innovation, speaks with host Noah Kravitz about the motivation behind his <a href="https://datainnovation.org/2024/01/rethinking-concerns-about-ais-energy-use/">AI energy use report</a>, which addresses misconceptions about the technology’s energy consumption. Castro also touches on the need for policies and frameworks that encourage the development of energy-efficient technology. Tune in to discover the crucial role of GPU acceleration in enhancing sustainability and how AI can help address climate change challenges.</p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1772793834%3Fsecret_token%3Ds-MWFun29XaR3&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="ITIF President Daniel Castro on Energy-Efficient AI and Climate Change" href="https://soundcloud.com/theaipodcast/ai-daniel-castro-itif/s-MWFun29XaR3" target="_blank" rel="noopener">ITIF President Daniel Castro on Energy-Efficient AI and Climate Change</a></div>
+<p>Register for <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, a global AI developer conference running March 18-21 in San Jose, Calif., to explore sessions on <a href="https://www.nvidia.com/gtc/session-catalog/?search=&amp;tab.allsessions=1700692987788001F1cG&amp;search.industry=1624401800869002y16T#/">energy-efficient computing</a> and <a href="https://www.nvidia.com/gtc/session-catalog/?search=climate&amp;tab.allsessions=1700692987788001F1cG#/">using AI to combat climate change</a>.</p>
+<h2>You Might Also Like…</h2>
+<p><a href="https://soundcloud.com/theaipodcast/ai-overjet"><b>Overjet on Bringing AI to Dentistry &#8211; Ep. 179</b><b><br />
+</b><br />
+</a>Dentists get a bad rap. Dentists also get more people out of more aggravating pain than just about anyone, which is why the more technology dentists have, the better. Overjet, a member of the NVIDIA Inception program for startups, is moving fast to bring AI to dentists’ offices.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-wildfire"><b>DigitalPath’s Ethan Higgins on Using AI to Fight Wildires &#8211; Ep. 211</b></a></p>
+<p>DigitalPath is igniting change in the golden state — using computer vision, generative adversarial networks and a network of thousands of cameras to detect signs of fire in real-time.</p>
+<p><a href="https://soundcloud.com/theaipodcast/anima-anandkumar"><b>Anima Anandkumar on Using Generative AI to Tackle Global Challenges &#8211; Ep. 204</b></a></p>
+<p>Anima Anandkumar, Bren Professor at Caltech and senior director of AI research at NVIDIA, speaks to generative AI’s potential to make splashes in the scientific community, from accelerating drug and vaccine research to predicting extreme weather events like hurricanes or heat waves.</p>
+<p><a href="https://soundcloud.com/theaipodcast/everestlabs"><b>Doing the Best They Can: EverestLabs Ensures Fewer Recyclables Go to Landfills &#8211; Ep. 184</b></a></p>
+<p>All of us recycle. Or, at least, all of us should. Now, AI is joining the effort. JD Ambati, founder and CEO of EverestLabs, developer of RecycleOS, discusses developing first AI-enabled operating system for recycling.</p>
+<h2><b>Show Notes</b></h2>
+<p>1:41: Context on and findings from the AI energy use report<br />
+10:36: How GPU acceleration has transformed the energy efficiency of AI, particularly in weather and climate forecasting<br />
+12:31: Examples of how GPU acceleration has improved the energy efficiency of AI operations<br />
+15:51: Castro’s insights on sustainability and AI<br />
+20:01: Policies and frameworks to encourage energy-efficient AI<br />
+26:43: Castro’s outlook on the interplay among advancing AI technology, energy sustainability and climate change</p>
+<h2><b>Subscribe to the AI Podcast</b></h2>
+<p>Get the<a href="https://blogs.nvidia.com/ai-podcast/"> AI Podcast</a> through<a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439"> iTunes</a>,<a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz"> Google Podcasts</a>,<a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm"> Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music, </a><a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher,<a href="https://overcast.fm/itunes1186480811/the-ai-podcast"> Overcast</a>,<a href="https://player.fm/series/the-ai-podcast"> PlayerFM</a>, Pocket Casts,<a href="http://www.podbay.fm/show/1186480811"> Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast"> PodBean</a>, PodCruncher, PodKicker,<a href="https://soundcloud.com/theaipodcast"> Soundcloud</a>,<a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L"> Spotify</a>,<a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr"> Stitcher</a> and<a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/"> TuneIn</a>.</p>
+<p>Make the AI Podcast better: Have a few minutes to spare? Fill out<a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short"> this listener survey</a>.</p>
+<p>&nbsp;</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/04/earth-pixabay-x1280.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/04/earth-pixabay-x1280-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Currents of Change: ITIF President Daniel Castro on Energy-Efficient AI and Climate Change]]></media:title>
+			<media:description type="html">Earth pixabay for &quot;I Am AI&quot; video</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Head of the Class: Explore AI’s Potential in Higher Education and Research at GTC</title>
 		<link>https://blogs.nvidia.com/blog/gtc-2024-ai-education-research-sessions/</link>
 		
@@ -348,16 +481,16 @@
 <p>Plus, an update for GeForce NOW Windows and macOS adds support for <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5504">G-SYNC in the cloud</a>. By pairing it with new <a href="https://www.nvidia.com/en-us/geforce/technologies/reflex/">NVIDIA Reflex</a> support for 60 and 120 frames per second streaming options, Ultimate members can experience ultra-low-latency streaming that’s nearly indistinguishable from using a local PC.</p>
 <h2><b>Seize the Day</b></h2>
 <p>Day Passes offer access to 24 hours of <a href="https://www.nvidia.com/en-us/geforce/rtx/">GeForce RTX</a>-powered cloud gaming. Users can get all the benefits of <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate and Priority memberships</a> for a day without committing to longer-term monthly memberships, and choose how and when they access the cloud.</p>
-<figure id="attachment_70194" aria-describedby="caption-attachment-70194" style="width: 605px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-70194" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-605x500.png" alt="Day Pass Matrix on GeForce NOW" width="605" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-605x500.png 605w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-400x331.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-768x635.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-544x450.png 544w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-260x215.png 260w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-121x100.png 121w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-1280x1058.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass.png 1512w" sizes="(max-width: 605px) 100vw, 605px" /><figcaption id="caption-attachment-70194" class="wp-caption-text"><em>Play for a day.</em></figcaption></figure>
+<figure id="attachment_70194" aria-describedby="caption-attachment-70194" style="width: 605px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70194" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-605x500.png" alt="Day Pass Matrix on GeForce NOW" width="605" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-605x500.png 605w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-400x331.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-768x635.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-544x450.png 544w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-260x215.png 260w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-121x100.png 121w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass-1280x1058.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Day_Pass.png 1512w" sizes="(max-width: 605px) 100vw, 605px" /><figcaption id="caption-attachment-70194" class="wp-caption-text"><em>Play for a day.</em></figcaption></figure>
 <p>Ultimate Day Pass users can stream at either 4K 120 fps, up to 240 fps, or with ultrawide resolutions. Plus, they can get all the same benefits as gamers using NVIDIA GeForce RTX 40 Series GPUs, with access to <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS 3</a> and NVIDIA Reflex technologies for the smoothest gameplay and lowest latency, even on underpowered devices. Both Ultimate and Priority Day Pass users can turn <a href="https://www.nvidia.com/en-us/geforce/rtx/">RTX ON</a> in supported games for immersive, cinematic gameplay.</p>
 <p>The Ultimate Day Pass is available for $7.99 and the Priority Day Pass for $3.99. Twenty-four hours of continuous play begins at purchase. Day Passes are available in limited quantities each day, so grab one before the opportunity passes.</p>
 <h2><b>Head in the Clouds</b></h2>
-<figure id="attachment_70197" aria-describedby="caption-attachment-70197" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-70197" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-672x336.jpg" alt="Granblue Fantasy: Relink on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70197" class="wp-caption-text"><em>Going on a grand adventure.</em></figcaption></figure>
+<figure id="attachment_70197" aria-describedby="caption-attachment-70197" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70197" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-672x336.jpg" alt="Granblue Fantasy: Relink on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Granblue_Fantasy_Relink.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70197" class="wp-caption-text"><em>Going on a grand adventure.</em></figcaption></figure>
 <p>Cygames, known for developing popular online game <i>Granblue Fantasy, </i>brings their full-fledged action role-playing game to GeForce NOW. <i>Granblue Fantasy: Relink</i> is now available for fans to stream across devices.</p>
 <p>Set in the same universe as the web browser and mobile version of the title<i>, Granblue Fantasy: Relink</i> is an ARPG that features many of the beloved characters from the franchise in an all-new original story. Step into the shoes of a captain leading a Skyfaring crew, alongside a scrappy dragon named Vyrn and a mysterious girl named Lyria, as they navigate the Sky Realm, a world of islands drifting in the clouds.</p>
 <p>Slash, shoot and hex treacherous foes with up to three other gaming buddies. GeForce NOW Priority and Ultimate members can become Skyfarers in the cloud with longer game sessions and faster access to GeForce RTX-class servers.</p>
 <h2><b>Spring Into New Games</b></h2>
-<figure id="attachment_70200" aria-describedby="caption-attachment-70200" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-70200" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-672x336.jpg" alt="Undisputed on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70200" class="wp-caption-text"><em>Pull no punches.</em></figcaption></figure>
+<figure id="attachment_70200" aria-describedby="caption-attachment-70200" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70200" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-672x336.jpg" alt="Undisputed on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Undisputed.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70200" class="wp-caption-text"><em>Pull no punches.</em></figcaption></figure>
 <p>Step into the ring in <i>Undisputed</i>, an authentic boxing game from Steel City Interactive. Featuring bone-jarring action and more licensed boxers than ever, <i>Undisputed</i>, currently in early access<i>, </i>gives members unprecedented control to master every inch of the ring.</p>
 <p>It’s available to stream from the cloud this week, along with the following games:</p>
 <ul>
@@ -1118,128 +1251,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[What Is Sovereign AI?]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>And … Action! Cuebric CEO Provides Insights Into Filmmaking Using AI</title>
-		<link>https://blogs.nvidia.com/blog/pinar-demirdag-cuebric/</link>
-		
-		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
-		<pubDate>Wed, 28 Feb 2024 14:00:55 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[The AI Podcast]]></category>
-		<category><![CDATA[AI Decoded]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70034</guid>
-
-					<description><![CDATA[These days, just about everyone is a content creator. But can generative AI help make people create high-quality films and other content affordably? Find out from Pinar Seyhan Demirdag, cofounder and CEO of Cuebric, during his conversation with NVIDIA AI Podcast host Noah Kravitz. Cuebric is on a mission to offer new solutions in filmmaking		<a class="read-more" href="https://blogs.nvidia.com/blog/pinar-demirdag-cuebric/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>These days, just about everyone is a content creator. But can generative AI help make people create high-quality films and other content affordably? Find out from Pinar Seyhan Demirdag, cofounder and CEO of <a href="https://cuebric.com/">Cuebric</a>, during his conversation with NVIDIA <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> host Noah Kravitz.</p>
-<p>Cuebric is on a mission to offer new solutions in filmmaking and content creation through immersive, two-and-a-half-dimensional cinematic environments. Its AI-powered application aims to help creators quickly bring their ideas to life, making high-quality production more accessible.</p>
-<p>Demirdag discusses how Cuebric uses <a href="https://courses.nvidia.com/courses/course-v1:DLI+S-FX-07+V1">generative AI</a> to enable the creation of engaging environments affordably. Listen in to find out about the current landscape of content creation, the role of AI in simplifying the creative process, and Cuebric’s participation in NVIDIA’s <a href="https://www.nvidia.com/gtc/">GTC technology conference</a>.</p>
-<div style="font-size: 10px;color: #cccccc;overflow: hidden;font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100"><a style="color: #cccccc;text-decoration: none" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc;text-decoration: none" title="Exploring Filmmaking with Cuebric's AI: Insights from Pinar Seyhan Demirdag - Ep. 314" href="https://soundcloud.com/theaipodcast/pinar-demirdag-cuebric/s-4wmCp5pXKIv" target="_blank" rel="noopener">Exploring Filmmaking with Cuebric&#8217;s AI: Insights from Pinar Seyhan Demirdag &#8211; Ep. 314</a></div>
-<p><em>Explore <a title="Original URL: https://www.nvidia.com/gtc/sessions/generative-ai/?nvid=nv-int-txtad-141445 Click to follow link." href="https://www.nvidia.com/gtc/sessions/generative-ai/?nvid=nv-int-txtad-141445" data-outlook-id="97194cbf-406f-48c7-a83a-cd48b46329c6">generative AI</a> sessions and experiences at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, the global conference on AI and accelerated computing, running March 18-21 in San Jose, Calif., and online.</em></p>
-<h2><strong>Time Stamps:</strong></h2>
-<p>1:15: Getting to know Pinar Seyhan Demirdag and Cuebric<br />
-2:30: The beginnings and goals of Cuebric<br />
-4:45: How Cuebric’s AI application works for filmmakers<br />
-9:00: Advantages of AI in content creation<br />
-13:20: Making high-quality production budget-friendly<br />
-17:35: The future of AI in creative endeavors<br />
-22:00: Cuebric at NVIDIA GTC</p>
-<h2>You Might Also Like…</h2>
-<h3><a href="https://soundcloud.com/theaipodcast/edtech">MIT’s Anant Agarwal on AI in Education – Ep. 197</a></h3>
-<p>AI could help students work smarter, not harder. Anant Agarwal, founder of edX and chief platform officer at 2U, shares his vision for the future of online education and the impact of AI in revolutionizing the learning experience.</p>
-<h3><a href="https://soundcloud.com/theaipodcast/university-of-florida-ai">UF Provost Joe Glover on Building a Leading AI University – Ep. 186</a></h3>
-<p>Joe Glover, provost and senior vice president of academic affairs at the University of Florida, discusses the university’s efforts to implement AI across all aspects of higher education, including a public-private partnership with NVIDIA that has helped transform UF into one of the leading AI universities in the country.</p>
-<h3><a href="https://soundcloud.com/theaipodcast/nvidias-marc-hamilton-on-building-the-cambridge-1-supercomputer-during-a-pandemic">NVIDIA’s Marc Hamilton on Building the Cambridge-1 Supercomputer During a Pandemic – Ep. 137</a></h3>
-<p>Cambridge-1, the U.K.’s most powerful supercomputer, ranks among the world’s top 3 most energy-efficient supercomputers and was built to help healthcare researchers make new discoveries. Marc Hamilton, vice president of solutions architecture and engineering at NVIDIA, speaks on how he remotely oversaw its construction.</p>
-<h2><strong>Subscribe to the AI Podcast</strong></h2>
-<p>Get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
-<h4>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</h4>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/Cuebric-App-3.png"
-			type="image/png"
-			width="1920"
-			height="1080"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/Cuebric-App-3-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[And … Action! Cuebric CEO Provides Insights Into Filmmaking Using AI]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Time to Skill Up: Game Reviewer Ralph Panebianco Wields NVIDIA RTX for the Win</title>
-		<link>https://blogs.nvidia.com/blog/skillup-adobe-premiere-pro-photoshop/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Wed, 28 Feb 2024 14:00:13 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70040</guid>
-
-					<description><![CDATA[YouTube content creator Ralph Panebianco really, really loves video games. ]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our weekly </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/" target="_blank" rel="noopener"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
-<p>YouTube content creator Ralph Panebianco really, <i>really</i> loves video games.</p>
-<p>Since getting an original Nintendo Entertainment System at the age of four, Panebianco, this week’s featured <i>In the NVIDIA Studio</i> creator, has spent much of his free time playing video games. He pursued a career in gaming in his native country of Australia before pivoting to content creation, opening a YouTube channel called <a href="https://www.youtube.com/c/SkillUp">Skill Up</a>, where he reviews the latest video games.</p>
-<p>“When I wasn’t playing video games, I was reading about them, and now I get to talk about them for a living,” he said.</p>
-<p>And calling all art fans: the latest Studio Standouts video features film noir-themed artwork brought to life with dramatic, monochromatic flair.</p>
-<p><iframe loading="lazy" title="Film Noir: A Community Digital Art Showcase | NVIDIA Studio Standouts" width="500" height="281" src="https://www.youtube.com/embed/Uzp-5r8DluY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>Video Editing Skillz</b></h2>
-<p>Panebianco works with his partner to create in-depth, insightful reviews of the latest video games on his Skill Up YouTube channel, which has garnered nearly 1 million subscribers. Below is a recent video reviewing <i>Pacific Drive, </i>a title available on the <a href="https://www.nvidia.com/en-us/geforce-now/">NVIDIA GeForce NOW</a> cloud gaming service, powered by GeForce RTX GPUs.</p>
-<p><iframe loading="lazy" title="I strongly recommend: Pacific Drive (Review)" width="500" height="281" src="https://www.youtube.com/embed/WXxJ_66ksD4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>“Creatively, we don’t view game reviews as functional buying guides with a list of pros and cons,” said Panebianco. “We view reviews as a chance to crack a game open and really show the audience what makes it tick. They’re sort of mini-essays on game design, delving deep into why specific game mechanics do or don’t work.”</p>
-<p>The content creation process begins with booting up the game on his PC, powered by the recently launched <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/">GeForce RTX 4080 SUPER</a> graphics card. This allows the Skill Up team to tap <a href="https://www.nvidia.com/en-us/geforce/rtx/">RTX ray tracing</a> and <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a> — breakthrough technologies that use AI to create additional frames and improve image quality.</p>
-<p>He records video footage primarily using <a href="https://www.nvidia.com/en-us/geforce/geforce-experience/">GeForce Experience</a>, a companion to NVIDIA GeForce GPUs that enables users to capture assets, optimize game settings and keep drivers up to date, among other features.</p>
-<p>When footage requires high-dynamic range, the team uses the OBS Studio open-source software with AV1 hardware encoding to achieve <a href="https://blogs.nvidia.com/blog/av1-obs29-youtube/">40% more efficient encoding</a> on average than H.264 and deliver higher quality than competing GPUs.</p>
-<p>“The AV1 encoder is ridiculously efficient in terms of file size,” he said.</p>
-<figure id="attachment_70041" aria-describedby="caption-attachment-70041" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-70041" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w-672x475.jpg" alt="" width="672" height="475" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w-672x475.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w-400x283.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w-768x543.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w-636x450.jpg 636w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w-304x215.jpg 304w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w-141x100.jpg 141w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-obs-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70041" class="wp-caption-text">NVIDIA GPUs and OBS Studio software work in synergy.</figcaption></figure>
-<p>Once the footage is ready, Panebianco writes a video script in Microsoft Word and then records himself, using Audacity. He uses the AI-powered <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast</a> app, free for RTX GPU owners, to eliminate background noise and achieve professional studio quality.</p>
-<p>Panebianco then hands off the files to his editor for production in Adobe Premiere Pro, where a number of GPU-accelerated, AI-powered features such as Enhance Speech, Auto Reframe and Unsharp Mask help speed the video editing process.</p>
-<figure id="attachment_70047" aria-describedby="caption-attachment-70047" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-70047" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w-672x359.jpg" alt="" width="672" height="359" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w-672x359.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w-768x410.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w-842x450.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w-403x215.jpg 403w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-nvdec-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70047" class="wp-caption-text">NVIDIA’s GPU-accelerated video decoder (NVDEC) enables smooth playback and scrubbing of high-resolution videos.</figcaption></figure>
-<p>Next, Panebianco exports the final files twice as fast thanks to the dual AV1 encoders in his RTX GPU. Lastly, his editor creates a YouTube thumbnail in Adobe Photoshop, and then the video is ready for publishing.</p>
-<figure id="attachment_70050" aria-describedby="caption-attachment-70050" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-70050" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w-672x359.jpg" alt="" width="672" height="359" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w-672x359.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w-768x410.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w-842x450.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w-403x215.jpg 403w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-photoshop-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70050" class="wp-caption-text">Adobe Photoshop has over 30 GPU-accelerated features that help modify and adjust images smoothly and quickly.</figcaption></figure>
-<p>“Almost my entire workflow was enhanced by NVIDIA’s hardware,” Panebianco shared. “It’s not just about the hardware making for efficient encoding or lightning-fast, hardware-enabled rendering — it’s about the end-to-end toolset.”</p>
-<p>Panebianco has words of wisdom for aspiring content creators.</p>
-<p>“Worry less about the numbers and more about the quality,” he said. “The metrics grind pays little in the way of dividends, but putting out truly excellent content is an almost failure-proof path to growth.”</p>
-<figure id="attachment_70053" aria-describedby="caption-attachment-70053" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-70053" src="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w-672x248.png" alt="" width="672" height="248" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w-672x248.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w-400x148.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w-768x284.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w-842x311.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w-406x150.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w-188x69.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/02/studio-itns-ralph-panebianco-wk98-featured-setup-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70053" class="wp-caption-text">Video game content creator Ralph Panebianco.</figcaption></figure>
-<p>Catch Panebianco’s video game reviews on the <a href="https://www.youtube.com/@SkillUp/featured">Skill Up YouTube channel</a>.</p>
-<p><i>Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/skill-up-nv-blog-header-preview-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/02/skill-up-nv-blog-header-preview-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Time to Skill Up: Game Reviewer Ralph Panebianco Wields NVIDIA RTX for the Win]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
