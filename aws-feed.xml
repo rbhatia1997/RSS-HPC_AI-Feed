@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 05 Mar 2024 12:34:23 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 14 Mar 2024 18:29:42 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,162 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Introducing new alerts to help users detect and react to blocked job queues in AWS Batch</title>
+		<link>https://aws.amazon.com/blogs/hpc/introducing-new-alerts-to-help-users-detect-and-react-to-blocked-job-queues-in-aws-batch/</link>
+		
+		<dc:creator><![CDATA[Naina Thangaraj]]></dc:creator>
+		<pubDate>Thu, 14 Mar 2024 18:29:42 +0000</pubDate>
+				<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[Drug Discovery]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">4dfd9662b13958ccd5756233dff2259adb1eb906</guid>
+
+					<description>Heads up AWS Batch users! Learn how to get notifications when your job queue gets blocked so you can quickly troubleshoot and keep your workflows moving. Details in our blog.</description>
+										<content:encoded>&lt;p&gt;As many readers will know, AWS Batch provides functionality that enables you to run batch workloads on the managed container orchestration services in AWS: Amazon ECS and Amazon EKS. One of the core concepts of Batch is that it provides a job queue you can submit your work to. Batch is designed to transition your jobs from &lt;code&gt;SUBMITTED&lt;/code&gt; to &lt;code&gt;RUNNABLE&lt;/code&gt; states if they pass preliminary checks, and from &lt;code&gt;RUNNING&lt;/code&gt; to either &lt;code&gt;FAILED&lt;/code&gt; or &lt;code&gt;SUCCEEDED&lt;/code&gt; after the job is placed on a compute resource and completes. Batch is also sends an event to Amazon CloudWatch Events for each corresponding job state update.&lt;/p&gt; 
+&lt;p&gt;Sometimes, though, a &lt;code&gt;RUNNABLE&lt;/code&gt; job at the head of the queue can block all other jobs behind it from running. This could be caused by a misconfiguration in your AWS account, or it might be because your account doesn’t have access to the specific instances required for the job (like a GPU, for example). We’ve&amp;nbsp;&lt;a href="https://repost.aws/knowledge-center/batch-job-stuck-runnable-status"&gt;documented several common causes&lt;/a&gt;&amp;nbsp;– and their resolutions – but to fix the issue you&amp;nbsp;&lt;em&gt;first need to know that the blocked job queue condition exists&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;Today we’re introducing&amp;nbsp;CloudWatch Events notifications for blocked job queues. We’ve designed this new feature to provide you with an event any time Batch detects that a job queue is blocked by a &lt;code&gt;RUNNABLE&lt;/code&gt; job at the head of the queue. Even better, the feature is designed to show the reason the job is stuck in&amp;nbsp;&lt;em&gt;both&lt;/em&gt;&amp;nbsp;the CloudWatch event and the&amp;nbsp;&lt;code&gt;statusReason&lt;/code&gt;&amp;nbsp;of the job&amp;nbsp;returned from &lt;code&gt;DescribeJobs&lt;/code&gt;&amp;nbsp;and&amp;nbsp;&lt;code&gt;ListJobs&lt;/code&gt;&amp;nbsp;API calls.&lt;/p&gt; 
+&lt;h2&gt;Common causes of blocked job queues&lt;/h2&gt; 
+&lt;p&gt;There are many reasons why a job at the head of the queue can block other jobs behind it from running.&lt;/p&gt; 
+&lt;p&gt;IAM roles, network, and security settings are often the culprits, but there are several more reasons for a blocked job queue&amp;nbsp;&lt;em&gt;that Batch can detect&lt;/em&gt;&amp;nbsp;in your environment:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;your queue’s attached compute environments (CEs) have all received insufficient capacity errors&lt;/li&gt; 
+ &lt;li&gt;your CEs have a&amp;nbsp;&lt;code&gt;maxVcpu&lt;/code&gt;&amp;nbsp;that’s too small for the job requirements&lt;/li&gt; 
+ &lt;li&gt;your CEs lack any instances that meet the job requirements&lt;/li&gt; 
+ &lt;li&gt;your service role has a permission issue&lt;/li&gt; 
+ &lt;li&gt;all your CEs are in an &lt;code&gt;INVALID&lt;/code&gt; state (which usually means networking or IAM roles are preventing instances joining the compute fleet)&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;With the new CloudWatch Events notifications we’re announcing today, Batch can now send a notification when it detects a common reason for jobs being stuck in &lt;code&gt;RUNNABLE&lt;/code&gt;, but&amp;nbsp;&lt;em&gt;not&lt;/em&gt; for every &lt;code&gt;RUNNABLE&lt;/code&gt; job simply waiting for its turn. Finally, sometimes Batch will detect a blocked job queue but can’t determine the specific reason. In this case, Batch can still send a notification of a blocked job queue, but you’ll need to do a bit of detective work to figure out the root cause.&lt;/p&gt; 
+&lt;h2&gt;Taking action&lt;/h2&gt; 
+&lt;p&gt;There are two ways you can programmatically act on the blocked job queue events that Batch sends to CloudWatch Events.&lt;/p&gt; 
+&lt;h3&gt;Acting on events with Amazon EventBridge&lt;/h3&gt; 
+&lt;p&gt;The first way you can automate an action (based on a matching event pattern) is to define Amazon EventBridge &lt;a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rules.html"&gt;rules&lt;/a&gt; with different&amp;nbsp;EventBridge &lt;a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html"&gt;targets&lt;/a&gt;&amp;nbsp;for each event type.&lt;/p&gt; 
+&lt;p&gt;For example, when you receive a message about a job that requires more memory than any instance can provide, you could use an AWS Lambda function to terminate the job request—to unblock the job queue—and then send the event information into an Amazon SQS queue so you can inspect the job details later.&lt;/p&gt; 
+&lt;p&gt;When you review those SQS messages, you can decide if you want to adjust the CE to meet the needs of these types of jobs,&amp;nbsp;&lt;em&gt;or&lt;/em&gt;&amp;nbsp;create a new Batch environment to handle more resource-intensive jobs.&lt;/p&gt; 
+&lt;p&gt;The Batch user guide has examples showing how to&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/batch_cwet.html"&gt;listen for&lt;/a&gt;&amp;nbsp;and&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/batch_sns_tutorial.html"&gt;react to&lt;/a&gt;&amp;nbsp;the CloudWatch events using EventBridge.&lt;/p&gt; 
+&lt;h3&gt;Auto terminating stuck jobs&lt;/h3&gt; 
+&lt;p&gt;The second way you can act to address blocked job queues is at the level of the job queue itself.&lt;/p&gt; 
+&lt;p&gt;Batch now has a&amp;nbsp;&lt;code&gt;jobStateTimeLimitActions&lt;/code&gt;&amp;nbsp;parameter for job queues that lets you automatically cancel a stuck job after a defined period of time,&amp;nbsp;&lt;code&gt;maxTimeSeconds&lt;/code&gt;. If you opt to define this parameter, Batch is designed to start the timeout clock ticking when it detects that a job is blocking the queue. Batch will also update the&amp;nbsp;&lt;code&gt;statusReason&lt;/code&gt;&amp;nbsp;field at this time. Once the stuck job at the head of the queue is cancelled, a “&lt;em&gt;Batch Job State Change”&lt;/em&gt;&amp;nbsp;CloudWatch event is emitted with the underlying reason. If Batch detects that another job at the head of the queue is blocking the queue, a &lt;em&gt;“Batch Job Queue Blocked”&lt;/em&gt; CloudWatch event is emitted, and starts a new &lt;code&gt;maxTimeSeconds&lt;/code&gt; timer to take the action you defined once the limit is reached.&lt;/p&gt; 
+&lt;p&gt;Here’s an example showing how to specify that the job queue will wait for a job that is blocked by compute environments having reached maximum capacity for 4 hours (maxTimeSeconds=14400) before cancelling the job.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-json"&gt;"jobStateTimeLimitActions": [
+      {                              
+         "reason" :  "MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE", 
+         "state": "RUNNABLE",            
+         "maxTimeSeconds" : 14400,
+         "action" : "CANCEL"            
+      }
+]
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Table 1 lists the scenarios we discussed, the output message in CloudWatch Events, and the&amp;nbsp;&lt;code&gt;jobStateTimeLimitAction.reason&lt;/code&gt;&amp;nbsp;that you can specify to cancel the stuck job in the job queue. The table also lists the “&lt;em&gt;Batch Job State Change”&lt;/em&gt;&amp;nbsp;CloudWatch event message if the job was automatically canceled.&lt;/p&gt; 
+&lt;table class="alignleft" style="border-color: #000000" border="0"&gt; 
+ &lt;caption&gt;
+  &lt;em&gt;Table 1: AWS Batch CloudWatch Events messages for blocked job queue events. The &lt;strong&gt;Scenerio&lt;/strong&gt; column describes the context Batch determined that a queue was blocked. &lt;strong&gt;Status Parameter&lt;/strong&gt; refers to key fields in event messages that are provided for an event. &lt;strong&gt;Status Parameter Value&lt;/strong&gt; lists an example value for the corresponding parameter. Note that the CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY message will provide a specific instance type name, not just the one in the example.&amp;nbsp;&lt;/em&gt;
+ &lt;/caption&gt; 
+ &lt;thead&gt; 
+  &lt;tr style="color: white;font-weight: bold;background-color: #000000"&gt; 
+   &lt;td width="95"&gt;Scenario&lt;/td&gt; 
+   &lt;td width="248"&gt;Status Parameter&lt;/td&gt; 
+   &lt;td width="288"&gt;Status Parameter value&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/thead&gt; 
+ &lt;tbody&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All your job queue’s connected compute environments have received insufficient capacity errors.&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY – Service cannot fulfill the capacity requested for instance type [instanceTypeName].&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
+   &lt;td width="288"&gt;Canceled by JobStateTimeLimit action due to reason: CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All compute environments have maxVcpu that is smaller than job requirements.&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE – CE(s) associated with the job queue cannot meet the CPU requirement of the job.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
+   &lt;td width="288"&gt;Canceled by JobStateTimeLimit action due to reason: MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All compute environments have no connected instances that meet job requirements.&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT – The job resource requirement (vCPU/memory/GPU) is higher than that can be met by the CE(s) attached to the job queue.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
+   &lt;td width="288"&gt;Canceled by JobStateTimeLimit action due to reason: MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All compute environments have service role issues.&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS – Batch service role has a permission issue.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
+   &lt;td width="288"&gt;Canceled by JobStateTimeLimit action due to reason: MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All connected compute environments are invalid.&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;ACTION_REQUIRED – CE(s) associated with the job queue are invalid.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;&lt;em&gt;Not applicable&lt;/em&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
+   &lt;td width="288"&gt;&lt;em&gt;Not applicable&lt;/em&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;Batch has detected a blocked queue, but is unable to determine the reason.&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;UNDETERMINED – Batch job is blocked, root cause is undetermined.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #f2f2f2"&gt; 
+   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
+   &lt;td width="288"&gt;&lt;em&gt;Not applicable&lt;/em&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
+   &lt;td width="288"&gt;&lt;em&gt;Not applicable&lt;/em&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;You’ll note that some reasons are not able to be used in the &lt;code&gt;jobStateTimeLimitActions&lt;/code&gt; parameter. One example is when all your queue’s attached compute environments are INVALID, or when Batch is unable to determine the root cause of the blockage. In both of those cases, we recommend setting up EventBridge rules to notify you when they occur.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;AWS Batch has introduced new functionality designed to help you detect and act on blocked job queues, where a job that’s at the head of a queue can’t run for one reason or another and prevents all the others behind it from running, too. We shared how to use EventBridge to catch these new CloudWatch Events, and the Batch job queue API to automatically terminate the stuck job and unblock the queue of jobs behind it.&lt;/p&gt; 
+&lt;p&gt;Finally, we covered the most common root causes along with the error messages to look for. In most cases Batch can automatically determine the root cause of the blockage, allowing you to define specific automated actions for each class of error to take action on and unblock the queue.&lt;/p&gt; 
+&lt;p&gt;To get started using AWS Batch, log into the&amp;nbsp;&lt;a href="https://console.aws.amazon.com/batch/home"&gt;AWS Management Console&lt;/a&gt;, or read the&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/what-is-batch.html"&gt;AWS Batch User Guide&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;For specific guidance on using these new events, refer to the AWS Batch Troubleshooting guide for &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#job_stuck_in_runnable"&gt;jobs stuck in RUNNABLE&lt;/a&gt;, the &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/batch_cwe_events.html#batch-job-queue-blocked-events"&gt;blocked job queue events&lt;/a&gt; documentation, and the &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/cloudwatch_event_stream.html"&gt;Batch EventBridge&lt;/a&gt; documentation on how react to these events.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Using large-language models for ESG sentiment analysis using Databricks on AWS</title>
 		<link>https://aws.amazon.com/blogs/hpc/using-large-language-models-for-esg-sentiment-analysis-using-databricks-on-aws/</link>
 		
@@ -2269,124 +2425,6 @@ print(r.text)
   &lt;/div&gt; 
   &lt;h3 class="lb-h4"&gt;Jake Doran&lt;/h3&gt; 
   &lt;p&gt;Jake Doran originally studied theoretical physics before transitioning to a career in software. Most recently he works as a researcher and engineer at LucidMinds, hoping to build and promote systems of societal good through technology.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Deploying Level 4 Digital Twin Self-Calibrating Virtual Sensors on AWS</title>
-		<link>https://aws.amazon.com/blogs/hpc/deploying-level-4-digital-twin-self-calibrating-virtual-sensors-on-aws/</link>
-		
-		<dc:creator><![CDATA[Ross Pivovar]]></dc:creator>
-		<pubDate>Mon, 30 Oct 2023 15:04:39 +0000</pubDate>
-				<category><![CDATA[AWS IoT TwinMaker]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Internet of Things]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[HPC]]></category>
-		<guid isPermaLink="false">13884cdb21d9f5d41adb23e1c678c023812d8ed6</guid>
-
-					<description>Digital twins can be hard if they deviate from real-world behavior as real systems degrade and change over time. Today we’ll show digital twins that calibrate on operational data, using TwinFlow on AWS.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Ross Pivovar, Solution Architect, Autonomous Computing, and Adam Rasheed, Head of Autonomous Computing at AWS; and Kayla Rossi, Application Engineer, and Orang Vahid, Director of Engineering Services at Maplesoft.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;In a &lt;a href="https://aws.amazon.com/blogs/hpc/deploying-a-level-3-digital-twin-virtual-sensor-with-ansys-on-aws/"&gt;previous post&lt;/a&gt; we shared the common customer use case of deploying &lt;a href="https://aws.amazon.com/blogs/hpc/deploying-a-level-3-digital-twin-virtual-sensor-with-ansys-on-aws/"&gt;Level 3 Digital Twin (L3 DT) virtual sensors&lt;/a&gt; to help operators make more informed decisions in situations where using physical sensors is difficult, expensive, or impractical. One of the challenges is that L3 DT virtual sensors use pre-trained models that deviate from real-world behavior as the physical system degrades and changes over time. Operators then become hesitant to base operational decisions solely on the L3 DT virtual sensor predictions.&lt;/p&gt; 
-&lt;p&gt;Today we’ll describe how to build and deploy L4 DT self-calibrating virtual sensors where operational data is used to automatically calibrate the virtual sensor. This automated self-calibration allows the virtual sensor predictions to adapt and more closely match the real-world, allowing the operators to take proactive corrective actions to prevent failures and optimize performance. For more discussion on the different levels for digital twins, check out &lt;a href="https://aws.amazon.com/blogs/iot/digital-twins-on-aws-unlocking-business-value-and-outcomes/"&gt;our previous post describing the AWS L1-L4 Digital Twin framework&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;In this post, we use a&lt;a href="https://en.wikipedia.org/wiki/Modelica"&gt; Modelica&lt;/a&gt;-based model created using &lt;a href="https://www.maplesoft.com/products/maplesim/"&gt;Maplesoft’s MapleSim simulation and engineering design software&lt;/a&gt;. MapleSim provides the tools to create engineering simulation models of machine equipment and exports them as Functional Mockup Units (FMUs) which is an industry standard file format for simulation models. We then use &lt;a href="https://aws.amazon.com/blogs/hpc/predictive-models-and-simulations-with-twinflow-on-aws/"&gt;TwinFlow&lt;/a&gt; to deploy the model on AWS and calibrate the FMU using probabilistic Bayesian estimation techniques to statistically infer the unmeasured model coefficients – using the incoming sensor data to calibrate against. TwinFlow is an AWS open-source framework for building and deploying predictive models at scale.&lt;/p&gt; 
-&lt;h2&gt;Roll-to-roll manufacturing&lt;/h2&gt; 
-&lt;p&gt;For our use case, we’ll consider the web-handling process in roll-to-roll manufacturing (depicted in Figure 1) used for continuous materials such as paper, film, and textiles. The web-handling process involves unwinding the material from a spool, guiding it through various treatments such as printing or coating, and then winding it onto individual rolls. Precise control of tension, alignment, and speed is essential to ensure smooth processing and maintain product quality.&lt;/p&gt; 
-&lt;p&gt;&lt;iframe loading="lazy" title="Web Line Perspective 2023 07 20" width="500" height="281" src="https://www.youtube-nocookie.com/embed/gouyAMuY6fs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
-&lt;div class="wp-caption aligncenter" style="width: 945px"&gt; 
- &lt;p id="caption-attachment-2964" class="wp-caption-text"&gt;Figure 1: A short movie showing the dynamics of the web material handling process in roll to roll manufacturing. The web material is the sheet passing through the rollers which control the tension and speed of the manufacturing process. The driven rollers set the web speed and tension.&lt;/p&gt; 
-&lt;/div&gt; 
-&lt;p&gt;There are many different failure mechanisms, however for this post, we’ll focus on two failure modes: &lt;strong&gt;high tension failures&lt;/strong&gt; and &lt;strong&gt;slip failures&lt;/strong&gt;.&lt;/p&gt; 
-&lt;p&gt;Figure 2 shows a schematic diagram of the web-handling equipment with the material spans between the rollers labeled from S1 through S12. Figure 2b shows a screenshot of the MapleSim web-handling simulation model of the roll-to-roll manufacturing line.&lt;/p&gt; 
-&lt;div id="attachment_2964" style="width: 945px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2964" loading="lazy" class="size-full wp-image-2964" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure2.jpg" alt="Figure 2: a) Schematic diagram of the web handling equipment in which each span is labeled, and b) Screenshot of the MapleSim simulation model of the web handling equipment." width="935" height="560"&gt;
- &lt;p id="caption-attachment-2964" class="wp-caption-text"&gt;Figure 2: a) Schematic diagram of the web handling equipment in which each span is labeled, and b) Screenshot of the MapleSim simulation model of the web handling equipment.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Referring to Figure 2, tension failures occur when the tension within the material at a particular span exceeds a threshold (175 Newtons in this example) resulting in web deformities like wrinkling and troughing. Slip failures are more subtle and occur when the relative movement between the web material and rollers isn’t in sync, causing the web to be dragged across the roller. Slip failures are quantified by measuring the slip velocity which is the difference between the linear velocity of the web material and the tangential velocity of the roller. We consider it a slip failure when the slip velocity exceeds a threshold (0.0001 m/s in this case). It can result in difficult-to-detect defects, misalignment, and reduced product quality if not controlled.&lt;/p&gt; 
-&lt;p&gt;Tension and slip are measurable variables, but it’s expensive and intrusive to add these sensors at every location along the manufacturing line. It’s more common to have a limited number of these sensors at key locations while measuring the angular velocity (rotation speed, often colloquially referred to as RPM) of each of the rollers and relying on best practices to control the manufacturing process. This results in sub-optimal process control and relies heavily on operator experience. A digital twin of this process can be used to calculate the tension and slip velocity when combined with the proper IoT data.&lt;/p&gt; 
-&lt;p&gt;Both failure mechanisms are the direct result of the rollers becoming more difficult to turn because of dirt and grime fouling the bearings, increasing the viscous friction. In our example, the viscous friction of the rollers is accounted for in the MapleSim model. The model solves the equations of motion, but requires estimates of the viscous friction coefficients to use for the rollers in the model. Viscous friction (damping) is not a directly measurable variable but can be inferred by calibrating the model using the measured angular velocities.&lt;/p&gt; 
-&lt;p&gt;In essence, we’re seeking to infer the viscous friction coefficient by leveraging statistics, the FMU model, and our probabilistic Bayesian estimation methods.&lt;/p&gt; 
-&lt;p&gt;We use the calibrated L4 Digital Twin to create self-calibrating virtual sensors of tension and slip velocity. These L4 DT self-calibrating virtual sensors can then be used by operators to support operational decisions to control the manufacturing process.&lt;/p&gt; 
-&lt;h2&gt;Example failure scenario&lt;/h2&gt; 
-&lt;p&gt;To understand the process of combining IoT data streams with the FMU model to create an L4 Digital Twin, we’ll examine a failure scenario that we simulated. In our synthetic failure scenario, we introduced defects for rollers 3 and 9 in the form of contamination – leading to increased friction. Here, we linearly increased the bearing viscous damping coefficients from 0 on Day 15 to 0.2 on Day 23 (which we’ve shown in Figure 3).&lt;/p&gt; 
-&lt;div id="attachment_2965" style="width: 896px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2965" loading="lazy" class="size-full wp-image-2965" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure3.jpg" alt="Figure 3: Plot showing the artificially induced increase in viscous damping for rollers 3 and 9 starting from 0 on Day 15 to 0.2 on Day 23." width="886" height="480"&gt;
- &lt;p id="caption-attachment-2965" class="wp-caption-text"&gt;Figure 3: Plot showing the artificially induced increase in viscous damping for rollers 3 and 9 starting from 0 on Day 15 to 0.2 on Day 23.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 4 shows the angular velocity measurements (both plots show the same data with different y-axis scale) for each of the rollers. Figure 4b shows that – as expected – at Day 15, the angular velocity for rollers 3 and 9 begin to change because of the increasing viscous damping we introduced to simulate dirt build-up. Since the entire web line is linked via the material, a single roller increasing in resistance impacts the angular velocities of the surrounding rollers. In our case, we see that rollers 1,2,3,7,8,9, and 10 all experience changes in angular velocity.&lt;/p&gt; 
-&lt;p&gt;By Day 21, the dirt build-up is sufficient to cause a very large change in the angular velocity of roller 9 as we’ve shown in Figure 4.&lt;/p&gt; 
-&lt;div id="attachment_2966" style="width: 1384px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2966" loading="lazy" class="size-full wp-image-2966" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure4.jpg" alt="Figure 4: Incoming IoT data streams for angular velocity. Left and right figures are the same data with the scaling of the y-axis changed to enable observing tiny differences." width="1374" height="442"&gt;
- &lt;p id="caption-attachment-2966" class="wp-caption-text"&gt;Figure 4: Incoming IoT data streams for angular velocity. Left and right figures are the same data with the scaling of the y-axis changed to enable observing tiny differences.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 5 shows the corresponding span tensions and slip velocities (that we would measure with IoT sensors if they were installed) leading to tension failures in spans 4, 5, and 6 and slip failure at roller 9. Figure 5a shows spans 4, 5, and 6 exceeding the 175N threshold and Figure 5b shows roller 9 with non-zero slip velocity.&lt;/p&gt; 
-&lt;div id="attachment_2967" style="width: 1351px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2967" loading="lazy" class="size-full wp-image-2967" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure5.jpg" alt="Figure 5: a) Measured span tensions during the dirt build up scenario in which spans 4,5, and 6 exceed the failure threshold for the webbing material, and b) measured roller slip velocities during the dirt build up scenario in which roller 9 eventually exhibits significant slippage around day 21." width="1341" height="399"&gt;
- &lt;p id="caption-attachment-2967" class="wp-caption-text"&gt;Figure 5: a) Measured span tensions during the dirt build up scenario in which spans 4,5, and 6 exceed the failure threshold for the webbing material, and b) measured roller slip velocities during the dirt build up scenario in which roller 9 eventually exhibits significant slippage around day 21.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;As mentioned already, in practice, operators typically only measure the angular velocity of the rollers – and span tension might be measured using a load cell for only one span across the entire production line.&lt;/p&gt; 
-&lt;p&gt;This example shows the importance of calibrating the system model to use the correct viscous friction coefficients. Without regular calibrations, the model predictions for span tension and roller slip velocity will be incorrect, resulting in the operator being unaware of potential, impending failures.&lt;/p&gt; 
-&lt;h2&gt;Using TwinFlow to calibrate the L4 Digital Twin&lt;/h2&gt; 
-&lt;p&gt;&lt;a href="https://aws.amazon.com/blogs/hpc/predictive-models-and-simulations-with-twinflow-on-aws/"&gt;TwinFlow&lt;/a&gt; is the AWS open-source framework for building and deploying millions of predictive models at scale on a distributed, heterogeneous architecture. TwinFlow incorporates the &lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph&lt;/a&gt; module to orchestrate the model deployment and the &lt;a href="https://github.com/aws-samples/twinstat"&gt;TwinStat&lt;/a&gt; module which includes statistical methods for building and deploying L4 Digital Twins. These methods include techniques to build quick-execution (seconds or less) response surface models (RSMs) from complex simulation models that could take hours to run and would be too costly and too slow to support operational decisions.&lt;/p&gt; 
-&lt;p&gt;The TwinStat module also includes methods to probabilistically update and calibrate L4 Digital Twins. In our case, the MapleSim model is exported as an FMU which already has a very quick execution time on the order of a few seconds. Since the degradation effect due to roller dirt accumulation is gradual (hours to days), our FMU execution time is more than sufficient – and cost-efficient.&lt;/p&gt; 
-&lt;p&gt;The model calibration techniques in TwinStat include probabilistic Bayesian estimation methods like &lt;a href="https://en.wikipedia.org/wiki/Kalman_filter"&gt;Unscented Kalman Filters (UKF)&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Particle_filter"&gt;Particle Filters (PF)&lt;/a&gt;, and &lt;a href="https://en.wikipedia.org/wiki/Gaussian_process"&gt;Gaussian Processes&lt;/a&gt;. Each of the methods have pros and cons and preferred scenarios, which we’ll discuss in a future post. For our present use case, UKF provides the necessary accuracy while minimizing the compute time. We used UKF in TwinFlow with the MapleSim FMU model to calibrate the viscous coefficients using the measured angular velocity IoT data.&lt;/p&gt; 
-&lt;p&gt;To use TwinFlow, we needed an appropriately-sized Amazon EC2 instance. For our specific scenario (fast FMU with low memory requirements) we wanted to minimize the network overhead, hardware procurement time, and container download and activation time needed to run UKF. We know that UKF scales with the number of FMU executions by 2*D+1, where D is the number of variables included in the UKF. For our example, we have 9 measured angular velocities and 9 unmeasured viscous damping coefficients for a total of 18 variables. For each incoming IoT data point, UKF will run the FMU 37 times. Thus, we select an EC2 instance with around 37 cores for optimal runtime performance. In this scenario, the FMU is single-threaded (you’d need to increase your instance size if you used a multi-threaded FMU with UKF). TwinFlow parallelizes the UKF execution with multi-processing, thus the more CPUs, the shorter the runtime.&lt;/p&gt; 
-&lt;p&gt;In our calibration example, we used the synthetic dataset for the angular velocity plotted in Figure 4 to represent the real-world measured sensor data. We used UKF to iterate and determine the correct viscous damping coefficients in the FMU model to match the measured angular velocities. Figure 6a shows the values determined by UKF for the viscous damping coefficients, as well as the estimates of uncertainty (shaded regions around the lines).&lt;/p&gt; 
-&lt;p&gt;We see that UKF correctly estimates the coefficients to be approximately zero for all rollers &lt;em&gt;except 3 and 9&lt;/em&gt;, which increased to a value of approximately 0.20, giving us confidence that UKF is successfully calibrating the L4 Digital Twin to model the evolving behavior of the web-handling system.&lt;/p&gt; 
-&lt;p&gt;Figure 6b shows how the UKF estimates for angular velocity lies directly on top of the IoT sensor data (open circle data points). The shaded region represents uncertainty.&lt;/p&gt; 
-&lt;div id="attachment_2968" style="width: 634px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2968" loading="lazy" class="size-full wp-image-2968" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure6.jpg" alt="Figure 6: a) UKF estimates for a) viscous damping coefficients (commonly denoted with letter ”b” ) and b) angular velocity of each roller with uncertainty estimations (shaded region). We see that the viscous damping coefficients for rollers 3 and 9 increase from 0 to 0.2, corresponding to the failure scenario we manually introduced when creating the synthetic data, and we see the UKF angular velocity estimates matching the IoT synthetic data." width="624" height="244"&gt;
- &lt;p id="caption-attachment-2968" class="wp-caption-text"&gt;Figure 6: a) UKF estimates for a) viscous damping coefficients (commonly denoted with letter ”b” ) and b) angular velocity of each roller with uncertainty estimations (shaded region). We see that the viscous damping coefficients for rollers 3 and 9 increase from 0 to 0.2, corresponding to the failure scenario we manually introduced when creating the synthetic data, and we see the UKF angular velocity estimates matching the IoT synthetic data.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We can now examine the performance of the L4 Digital Twin self-calibrated virtual sensor for tension and slip by checking the residuals are close to zero. The &lt;em&gt;residual&lt;/em&gt; is the difference between the virtual sensor predicted value and the actual IoT measured data value (in this case our synthetic dataset).&lt;/p&gt; 
-&lt;p&gt;Figure 7 shows the residuals for tension and slip velocity are near zero, meaning that the virtual sensor predicted values closely match the true values, and we can eliminate the costly physical sensors for measuring tension and slip velocity.&lt;/p&gt; 
-&lt;div id="attachment_2969" style="width: 768px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2969" loading="lazy" class="size-full wp-image-2969" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure7.jpg" alt="Figure 7: Residuals of the digital twin output comparing tension on the left and slip velocity on the right. Due to the example scenario using synthetic data that is noiseless, the residuals are almost perfectly zero." width="758" height="312"&gt;
- &lt;p id="caption-attachment-2969" class="wp-caption-text"&gt;Figure 7: Residuals of the digital twin output comparing tension on the left and slip velocity on the right. Due to the example scenario using synthetic data that is noiseless, the residuals are almost perfectly zero.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Now, we compare the results of using an uncalibrated L3 virtual sensor model with the L4 self-calibrating virtual sensor.&lt;/p&gt; 
-&lt;p&gt;Figure 8a shows that the L3 digital twin initially matches the measured angular velocity, but then misses the changes as the system performance degrades due to dirt accumulation, whereas the L4 self-calibrated digital twin virtual sensor evolves with the real physical system and matches the measured data closely. Similarly, Figure 8b and Figure 8c show that the L3 (uncalibrated) virtual sensors initially match the measured data, but then underpredict the roller 9 slip velocity and the span 6 tension as the system degrades and the operator is completely unaware of the impending failure.&lt;/p&gt; 
-&lt;p&gt;The L4 (self-calibrating) virtual sensor predictions, however, closely match the measured data, allowing the operator to take corrective actions &lt;em&gt;prior to failure&lt;/em&gt;. The slip failure is particularly noteworthy since it induces difficult-to-detect material imperfections that can make their way into the final product. We see that the L3 uncalibrated virtual sensor initially makes reasonable predictions, but as the web-handling system behavior evolves over time (due to real-world degradation), a self-calibrating L4 virtual sensor is required to adapt the model to the changing real-world conditions.&lt;/p&gt; 
-&lt;div id="attachment_2970" style="width: 634px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2970" loading="lazy" class="size-full wp-image-2970" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/AWS_DeployingL4DTSelfCalibratingVirtualSensor_Figure8.jpg" alt="Figure 8: Comparison of a digital twins that are either calibrated or uncalibrated relative to measured data." width="624" height="204"&gt;
- &lt;p id="caption-attachment-2970" class="wp-caption-text"&gt;Figure 8: Comparison of a digital twins that are either calibrated or uncalibrated relative to measured data.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;AWS Architecture&lt;/h2&gt; 
-&lt;p&gt;These are great results, so it’s worth taking a moment to explain what architectural decisions we made that allowed us to get here.&lt;/p&gt; 
-&lt;p&gt;The AWS architecture used for the L4 Digital Twin virtual sensor calibration is shown in Figure 9. In our scenario, we periodically collected sensor data every 10-20 mins – a sufficient time resolution to capture the failure phenomena of interest.&lt;/p&gt; 
-&lt;p&gt;It’s important to balance the trade-off of increased time resolution versus what is needed for the use case, as gathering a lot of data at high frequency results in unnecessary data storage and additional compute costs. We used an &lt;a href="https://aws.amazon.com/eventbridge/"&gt;Amazon EventBridge&lt;/a&gt; scheduler to enable periodic calibration. We could have alternatively added logic to the container code to first calculate the error of the digital twin and decided to only calibrate if an error threshold is violated. And since Amazon EventBridge can only handle a maximum of 100 scheduling rules, we’d need to modify the architecture to use a Lambda function between Amazon EventBridge and &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, if we needed to scale to millions of tasks.&lt;/p&gt; 
-&lt;p&gt;In Step 1 in Figure 9, we’ve shown how you can download &lt;a href="https://github.com/aws-samples/twinflow"&gt;TwinFlow&lt;/a&gt; to a temporary EC2 instance where they can customize, build, and push containers to cloud repositories, and then deploy your infrastructure as code (IaC).&lt;/p&gt; 
-&lt;p&gt;Next, you can modify the example container and insert your own model into the container. The container gets pushed up to Amazon Elastic Container Registry (Amazon ECR) where it’s now available to all AWS services.&lt;/p&gt; 
-&lt;p&gt;At step 4, you connect your IoT data from an edge location into a cloud database like &lt;a href="https://aws.amazon.com/iot-sitewise/"&gt;AWS IoT SiteWise&lt;/a&gt;, which is a serverless database designed to handle sensors with user defined attributes.&lt;/p&gt; 
-&lt;p&gt;At this point, the Amazon EventBridge scheduler calls tasks in an &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; compute environment which loads the customized container, pulls data from &lt;a href="https://aws.amazon.com/iot-sitewise/"&gt;AWS IoT SiteWise&lt;/a&gt;, calibrates the L4 Digital Twin, saves the calibration to an S3 bucket, makes physics predictions, and saves them back in AWS IoT SiteWise.&lt;/p&gt; 
-&lt;p&gt;AWS Batch selects the optimal EC2 instance type, auto-scales up or out, and logs all task output in Amazon CloudWatch. Finally, we used &lt;a href="https://aws.amazon.com/iot-twinmaker/"&gt;AWS IoT TwinMaker&lt;/a&gt; to create dashboards in Grafana so operators can review the measured and predicted data in near real time – and make operational decisions.&lt;/p&gt; 
-&lt;div id="attachment_2971" style="width: 987px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-2971" loading="lazy" class="size-full wp-image-2971" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/HPCBlog-244-fig9.png" alt="Figure 9: AWS Cloud architecture needed to achieve digital twin periodic-calibration" width="977" height="550"&gt;
- &lt;p id="caption-attachment-2971" class="wp-caption-text"&gt;Figure 9: AWS Cloud architecture needed to achieve digital twin periodic-calibration.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we showed how to build an L4 Digital Twin self-calibrating virtual sensor on AWS using an FMU model created by MapleSim.&lt;/p&gt; 
-&lt;p&gt;MapleSim provides the physics model in the form of an FMU, and TwinFlow allows us to use incoming IoT data to probabilistically calibrate the L4 Digital Twin virtual sensor for &lt;em&gt;span tension&lt;/em&gt; and &lt;em&gt;roller slip velocity&lt;/em&gt;. In future posts, we’ll discuss how to use the calibrated L4 Digital Twin to perform scenario analysis, risk assessment, and process optimization.&lt;/p&gt; 
-&lt;p&gt;If you want to request a proof of concept or if you have feedback on the AWS tools, reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Some of the content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/kayla-rossi-profile.png" alt="Kayla Rossi" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Kayla Rossi&lt;/h3&gt; 
-  &lt;p&gt;Kayla is an Application Engineer at Maplesoft providing customers with advanced engineering support for the digital modeling of their complex production machines. Her project experience includes the simulation and analysis of web handling and converting systems across various industrial applications, including printing and battery production.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/18/orang-vahid-profile.png" alt="Dr. Orang Vahid" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Dr. Orang Vahid&lt;/h3&gt; 
-  &lt;p&gt;Orang has over 20 years of experience in system-level modeling, advanced dynamic systems, frictional vibration and control, automotive noise and vibration, and mechanical engineering design. He is a frequent invited speaker and has published numerous papers on various topics in engineering design. At Maplesoft he is Director of Engineering Services, with a focus on the use and development of MapleSim solutions.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
 					
