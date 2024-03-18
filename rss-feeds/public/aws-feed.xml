@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 14 Mar 2024 18:29:42 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 18 Mar 2024 15:59:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,105 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Protein language model training with NVIDIA BioNeMo framework on AWS ParallelCluster</title>
+		<link>https://aws.amazon.com/blogs/hpc/protein-language-model-training-with-nvidia-bionemo-framework-on-aws-parallelcluster/</link>
+		
+		<dc:creator><![CDATA[Marissa Powers]]></dc:creator>
+		<pubDate>Mon, 18 Mar 2024 15:59:38 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Amazon FSx for Lustre]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[Protein Folding]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">61fad9f084c647737166e7ff7d7a263d356d7d5e</guid>
+
+					<description>In this new post, we discuss pre-training ESM-1nv for protein language modeling with NVIDIA BioNeMo on AWS. Learn how you can efficiently deploy and customize generative models like ESM-1nv on GPU clusters with ParallelCluster. Whether you're studying protein sequences, predicting properties, or discovering new therapeutics, this post has tips to accelerate your protein AI workloads on the cloud.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Marissa Powers and Ankur Srivastava from AWS, and Neel Patel from NVIDIA.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Proteins are large, complex biomolecules. They make up muscles, form into enzymes and antibodies, and perform signaling throughout the body. Today, &lt;a href="https://www.proteinatlas.org/humanproteome/tissue/druggable"&gt;proteins are the therapeutic target&lt;/a&gt; for the majority of pharmaceutical drugs. Increasingly, scientists are using language models to better understand protein function, generate new protein sequences, and predict protein properties [1].&lt;/p&gt; 
+&lt;p&gt;With the recent proliferation of new models and tools in this field, researchers are looking for help to simplify the training, customization, and deployment of these generative AI models. And our high performance computing (HPC) customers are asking for how to easily perform distributed training with these models on AWS.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll demonstrate how to pre-train the &lt;code&gt;ESM-1nv&lt;/code&gt; model with the &lt;a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/clara/containers/bionemo-framework"&gt;NVIDIA BioNeMo framework&lt;/a&gt; using NVIDIA GPUs on AWS ParallelCluster, an open-source cluster management tool that makes it easy for you to deploy and manage HPC clusters on AWS. &lt;a href="https://www.nvidia.com/en-us/clara/bionemo/"&gt;NVIDIA BioNeMo&lt;/a&gt; is a generative AI platform for drug discovery. It supports running commonly used models, including ESM-1, ESM-2, ProtT5nv, DNABert, MegaMolBART, DiffDock, EquiDock, and OpenFold. For the latest information on supported models, see the &lt;a href="https://docs.nvidia.com/bionemo-framework/latest/"&gt;BioNeMo framework documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;div id="attachment_3420" style="width: 911px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3420" class="size-full wp-image-3420" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/18/CleanShot-2024-03-18-at-14.35.22.png" alt="Figure 1: This image shows the workflow for developing models on NVIDIA BioNeMo. The process is divided into phases for model development and customization and then fine-tuning and deployment." width="901" height="392"&gt;
+ &lt;p id="caption-attachment-3420" class="wp-caption-text"&gt;Figure 1: This image shows the workflow for developing models on NVIDIA BioNeMo. The process is divided into phases for model development and customization and then fine-tuning and deployment.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;This example deployment also leverages Amazon FSx for Lustre and the Elastic Fabric Adapter (EFA), which can both be provisioned and configured by ParallelCluster. With ParallelCluster, users can scale out distributed training jobs across hundreds or thousands of vCPUs. Code examples, including cluster configuration files, are &lt;a href="https://github.com/aws-samples/awsome-distributed-training/tree/main/3.test_cases/14.bionemo"&gt;available on GitHub&lt;/a&gt;&lt;strong&gt;. &lt;/strong&gt;&lt;/p&gt; 
+&lt;h2&gt;Walkthrough&lt;/h2&gt; 
+&lt;p&gt;For this example, we will (1) create an HPC cluster using AWS ParallelCluster, (2) configure the cluster with BioNeMo framework and download datasets, and (3) execute a pre-training job on the cluster.&lt;/p&gt; 
+&lt;h3&gt;Prerequisites&lt;/h3&gt; 
+&lt;p&gt;We assume you have access to an AWS account and are authenticated in that account. The configuration file used here uses &lt;a href="https://aws.amazon.com/ec2/instance-types/p4/"&gt;p4de.24xlarge&lt;/a&gt; instance types powered by 8 x &lt;a href="https://www.nvidia.com/en-us/data-center/a100/"&gt;NVIDIA A100&lt;/a&gt; 80GB Tensor Core GPUs and was tested in the us-east-1 region. We have also tested it with &lt;a href="https://aws.amazon.com/ec2/instance-types/p5/"&gt;p5.48xlarge&lt;/a&gt; instances powered by 8 x &lt;a href="https://www.nvidia.com/en-us/data-center/h100/"&gt;NVIDIA H100&lt;/a&gt; Tensor Core GPUs, which delivered better performance. Check your AWS service quotas to ensure you have sufficient access to these instance types.&lt;/p&gt; 
+&lt;p&gt;ParallelCluster must be installed on a local node or instance. &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-virtual-environment.html"&gt;Follow the instructions&lt;/a&gt; in our documentation to install ParallelCluster in a virtual environment.&lt;/p&gt; 
+&lt;p&gt;Finally, to pull down the BioNeMo container, you will need an NVIDIA NGC API key. To set this up, follow the guidance under “NGC Setup” in the &lt;a href="https://docs.nvidia.com/bionemo-framework/latest/quickstart-fw.html#ngc-setup"&gt;&lt;strong&gt;BioNeMo documentation&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Create a cluster&lt;/h2&gt; 
+&lt;p&gt;The AWS &lt;code&gt;awsome-distributed-training&lt;/code&gt; &lt;a href="https://github.com/aws-samples/awsome-distributed-training"&gt;GitHub repo&lt;/a&gt; provides configuration templates for running distributed training on multiple AWS services, including Amazon EKS, AWS Batch, and AWS ParallelCluster. In this example, we’ll create a cluster using one of the provided ParallelCluster configuration files. You can see an overview of the architecture in Figure 2.&lt;/p&gt; 
+&lt;div id="attachment_3421" style="width: 841px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3421" loading="lazy" class="size-full wp-image-3421" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/18/CleanShot-2024-03-18-at-14.36.56.png" alt="Figure 2 – In this distributed training architecture, ParallelCluster deploys a cluster consisting of a head node in a public subnet, a single queue of p4de.24xlarge instances in a private subnet, an FSx for Lustre filesystem, and a shared Amazon Elastic Block Storage (EBS) volume. FSx is used for input and output datasets, and the EBS volume is used to store job-specific submission scripts and log files. All the resources are deployed within a user’s own VPC." width="831" height="570"&gt;
+ &lt;p id="caption-attachment-3421" class="wp-caption-text"&gt;Figure 2 – In this distributed training architecture, ParallelCluster deploys a cluster consisting of a head node in a public subnet, a single queue of p4de.24xlarge instances in a private subnet, an FSx for Lustre filesystem, and a shared Amazon Elastic Block Storage (EBS) volume. FSx is used for input and output datasets, and the EBS volume is used to store job-specific submission scripts and log files. All the resources are deployed within a user’s own VPC.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;To start, clone the awsome-distributed-training GitHub repository:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;git clone https://github.com/aws-samples/awsome-distributed-training.git&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Navigate to the &lt;em&gt;templates&lt;/em&gt; directory in the locally cloned repository:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd 1.architectures/2.aws-parallelcluster&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The configuration file we will use is distributed-training-p4de_postinstall_scripts.yaml. Open the file and update to use an ubuntu-based AMI:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;Image:
+  Os: ubuntu2004
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;ParallelCluster will deploy the head node and compute nodes in subnets you specify in the YAML file. You can choose to deploy all resources in the same subnet or use separate subnets for the head node and compute nodes. We recommend that you deploy all resources in the same Availability Zone (AZ). That’s because ParallelCluster will create a Lustre file system for the cluster – which resides in a single AZ, and deploying workloads across multiple Availability Zones will cause additional cost incursions due to the cross-AZ traffic.&lt;/p&gt; 
+&lt;p&gt;Update the head node subnet in L13 in the YAML file. Update the compute nodes subnet in L50:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;HeadNode:
+  InstanceType: m5.8xlarge
+  Networking:
+    SubnetId: PLACEHOLDER_PUBLIC_SUBNET
+  Ssh:
+    KeyName: PLACEHOLDER_SSH_KEY
+...
+  SlurmQueues:
+    - Name: compute-gpu
+      CapacityType: ONDEMAND
+      Networking:
+        SubnetIds:
+          - PLACEHOLDER_PRIVATE_SUBNET
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;If you are using an On-Demand Capacity Reservation (ODCR), provide the resource id in the YAML file. If not, comment out these two lines:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;      CapacityReservationTarget:
+        CapacityReservationId: PLACEHOLDER_CAPACITY_RESERVATION_ID
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Once the YAML file has been updated, use ParallelCluster to create the cluster:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster \
+   --cluster-name bionemo-cluster \
+   --cluster-configuration distributed-training-p4de_postinstall_scripts.yaml \
+   --region us-east-1 \
+   --dryrun true
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Cluster creation will take 20-30 minutes. You can monitor the status of cluster creation with:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;watch pcluster describe-cluster \
+   --cluster-name bionemo-cluster \
+   --region us-east-1 \
+   --query clusterStatus
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The cluster will be deployed as an AWS CloudFormation stack. You can also monitor resource creation from the CloudFormation console or by querying CloudFormation in the CLI.&lt;/p&gt; 
+&lt;h3&gt;Configure cluster and input datasets&lt;/h3&gt; 
+&lt;p&gt;Once the cluster status is complete, follow the guidance in the &lt;a href="https://github.com/aws-samples/awsome-distributed-training/tree/main/3.test_cases/14.bionemo"&gt;GitHub repo&lt;/a&gt; to finish setup and model pre-training. At a high level, these steps walk through how to (1) pull down the BioNeMo framework container; (2) build an AWS-optimized image; (3) download and pre-process the &lt;code&gt;UniRef50&lt;/code&gt; dataset; and (4) run the &lt;code&gt;ESM-1nv&lt;/code&gt; pre-training job.&lt;/p&gt; 
+&lt;p&gt;Once you submit the pre-training job, you can monitor progress by running tail on the output log file:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;tail -f /apps/slurm-esm1nv-&amp;lt;job-id&amp;gt;.out&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;For more detailed monitoring of the cluster, including memory, networking, and storage usage on both the head node and compute nodes, consider creating a Grafana dashboard. A detailed guide for creating a dashboard for ParallelCluster clusters is &lt;a href="https://github.com/aws-samples/aws-parallelcluster-monitoring"&gt;available on Github&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we demonstrated how to pre-train ESM-1nv with the NVIDIA BioNeMo framework and NVIDIA GPUs on AWS ParallelCluster. For information about other models supported by the NVIDIA BioNeMo framework, see the BioNeMo framework documentation. For guides on deploying other distributed training jobs on AWS, check out the additional test case in the awsome-distributed-training repository in GitHub.&lt;/p&gt; 
+&lt;p&gt;For alternative options for deploying BioNeMo framework on AWS, check out our guide for &lt;a href="https://aws.amazon.com/blogs/industries/find-the-next-blockbuster-with-nvidia-bionemo-framework-on-amazon-sagemaker/"&gt;Amazon SageMaker&lt;/a&gt;.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
+&lt;h3&gt;Reference&lt;/h3&gt; 
+&lt;p&gt;[1] Ruffolo, J.A., Madani, A. Designing proteins with language models. Nat Biotechnol 42, 200–202 (2024). &lt;a href="https://doi.org/10.1038/s41587-024-02123-4"&gt;https://doi.org/10.1038/s41587-024-02123-4&lt;/a&gt;&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Introducing new alerts to help users detect and react to blocked job queues in AWS Batch</title>
 		<link>https://aws.amazon.com/blogs/hpc/introducing-new-alerts-to-help-users-detect-and-react-to-blocked-job-queues-in-aws-batch/</link>
 		
@@ -184,7 +283,7 @@
 		<guid isPermaLink="false">5ff183a8b5fd12c0deb708f5dd9760595e67a42c</guid>
 
 					<description>ESG is now a boardroom issue. See how Databricks' AI solution helps understand emissions data and meet new regulations.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="size-full wp-image-3333 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/14/boofla88_environmental_social_and_governance_policies_as_a_conc_58e6417e-1244-4776-8eef-c48fb6d9cb32.png" alt="Using large-language models for ESG sentiment analysis using Databricks on AWS" width="380" height="212"&gt;This post was contributed by Ilan Gleiser, Principal ML Specialist, Global Impact Computing, AWS, &lt;/em&gt;&lt;em&gt;Antoine Amend, Sr. Technical Director, Databricks, &lt;/em&gt;&lt;em&gt;Venkat Viswanathan, Senior Solutions Architect, AWS&lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="size-full wp-image-3333 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/14/boofla88_environmental_social_and_governance_policies_as_a_conc_58e6417e-1244-4776-8eef-c48fb6d9cb32.png" alt="Using large-language models for ESG sentiment analysis using Databricks on AWS" width="380" height="212"&gt;This post was contributed by Ilan Gleiser, Principal ML Specialist, Global Impact Computing, AWS, &lt;/em&gt;&lt;em&gt;Antoine Amend, Sr. Technical Director, Databricks, &lt;/em&gt;&lt;em&gt;Venkat Viswanathan, Senior Solutions Architect, AWS&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Regulators worldwide recognize the threat of climate change to economies and financial systems, forcing public companies in the US and Europe to be aware of – and disclose – their greenhouse emissions. This has led to a surge in demand from various stakeholders, including asset managers, asset owners, investors, and regulators, for machine-learning models that can analyze the plethora of data on their environmental, social and governance (ESG) policies.&lt;/p&gt; 
 &lt;p&gt;Alongside regulatory change, there is a financial incentive to this endeavor. Typically, ESG ratings have a positive correlation with both valuation and profitability, &lt;a href="https://corpgov.law.harvard.edu/2020/01/14/esg-matters/"&gt;while showing a negative correlation with volatility&lt;/a&gt;.&lt;/p&gt; 
 &lt;p&gt;In this post, we’re going to look at the challenge posed by ESG, as a data and AI problem. In the &lt;a href="https://www.databricks.com/blog/2020/07/10/a-data-driven-approach-to-environmental-social-and-governance.html"&gt;Databricks ESG Solution Accelerator&lt;/a&gt;, we will use natural language processing (NLP) to sort through the vast amounts of structured, and unstructured, data.&lt;/p&gt; 
@@ -2284,147 +2383,6 @@ print(r.text)
   &lt;/div&gt; 
   &lt;h3 class="lb-h4"&gt;Matt Adams&lt;/h3&gt; 
   &lt;p&gt;Matt has 11 years of experience in developing machine learning methods to enhance physics-based simulations. Matt is a Lead Product Specialist at Ansys where he leads the development of software tools for building hybrid digital twins.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Accelerating green-urban planning simulations with AWS Batch</title>
-		<link>https://aws.amazon.com/blogs/hpc/accelerating-green-urban-planning-simulations-with-aws-batch/</link>
-		
-		<dc:creator><![CDATA[Ilan Gleiser]]></dc:creator>
-		<pubDate>Wed, 01 Nov 2023 17:44:48 +0000</pubDate>
-				<category><![CDATA[Amazon EC2 Container Registry]]></category>
-		<category><![CDATA[Amazon EC2 Container Service]]></category>
-		<category><![CDATA[Amazon Elastic Container Service]]></category>
-		<category><![CDATA[AWS Fargate]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[Containers]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[HPC]]></category>
-		<guid isPermaLink="false">1df35da35e864e989a1ccd4ad78a766bee85fee9</guid>
-
-					<description>In this blog post, we’ll explore how Green Urban Scenarios simulator (GUS) helps urban planners explore the impact of green infrastructure on the urban environment using digital twins and simulations scaled using AWS Batch.</description>
-										<content:encoded>&lt;p&gt;Despite the increasing risk of environmental threats to cities across the world, and the critical role the natural world plays in protecting cities and their residents from climate extremes, effective green urban planning receives little representation in city-planning and infrastructure decisions.&lt;/p&gt; 
-&lt;p&gt;We know that urban forests [1][2] have a &lt;a href="https://www.researchgate.net/profile/David-Nowak-6/publication/312470680_Understanding_the_benefits_and_costs_of_urban_forest_ecosystems/links/5bf543bf299bf1124fe26670/Understanding-the-benefits-and-costs-of-urban-forest-ecosystems.pdf"&gt;wide range&lt;/a&gt; of economic and social benefits, and are one of the most effective ways to reduce climate risk in cities.&lt;/p&gt; 
-&lt;p&gt;In this blog post, we’ll explore how the Netherlands-based organization &lt;em&gt;Lucidminds AI&lt;/em&gt; is addressing this challenge through their Green Urban Scenarios simulator (GUS). The team initially built GUS to power the TreesAI project, a collaboration between Lucidminds and Dark Matter Labs. It’s a tool built on AWS so that urban planners, researchers, green portfolio managers, and others can explore the impact of green infrastructure on the urban environment through the power of digital twins and numerical simulations scaled using AWS Batch.&lt;/p&gt; 
-&lt;h2&gt;Trees – a natural city defender&lt;/h2&gt; 
-&lt;p&gt;Trees are natural carbon sinks. As trees grow, they absorb the greenhouse gas CO2 and sequester carbon in their fibers until an event like combustion or decomposition releases the carbon back into the atmosphere as CO2. Even if a tree is harvested for wood, the carbon remains locked away and out of the atmosphere. Trees provide essential habitat for wildlife like birds and their canopies provide shade and shelter which reduces the amount of energy needed to cool buildings. Their roots help prevent soil erosion, and they improve air quality by removing and breaking down pollutants such as sulfur dioxide.&lt;/p&gt; 
-&lt;p&gt;In short, planting trees is one of the most effective ways to combat climate change and promote biodiversity in cities. But urban planners and decision makers need tools to understand what the best strategies are for building or strengthening their urban forests, such as where trees should be placed, what types of trees to plant, and the optimal level of tree maintenance required. Critically, it’s also important to understand the impacts of proposed urban forest plans, in particular the estimated amount of carbon sequestered under different scenarios.&lt;/p&gt; 
-&lt;p&gt;Nature-based solutions that use digital technologies, like Green Urban Scenarios (GUS), are making it easier for cities to understand how trees can benefit their communities. With a better understanding of how trees reduce emissions, governments and businesses can make more informed decisions about which trees to plant where, and how-to best care for them.&lt;/p&gt; 
-&lt;h2&gt;How the “Green Urban Simulator” works&lt;/h2&gt; 
-&lt;p&gt;To accurately simulate hypothetical green urban planning projects for a city, the simulations must reflect the unique characteristics of the city in question. Every city has its own built environment and geography that defines its associated urban forest.&lt;/p&gt; 
-&lt;div id="attachment_3024" style="width: 825px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3024" loading="lazy" class="size-full wp-image-3024" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/31/CleanShot-2023-10-31-at-17.21.58.png" alt="Figure 1 - Green Urban Scenarios simulator (GUS) is a tool built on AWS so that urban planners, researchers, green portfolio managers, and others can explore the impact of green infrastructure on the urban environment." width="815" height="495"&gt;
- &lt;p id="caption-attachment-3024" class="wp-caption-text"&gt;Figure 1 – Green Urban Scenarios simulator (GUS) is a tool built on AWS so that urban planners, researchers, green portfolio managers, and others can explore the impact of green infrastructure on the urban environment.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;For simulations to be useful, they must be initialized with data that reflects the real environment. Therefore, the first step in the process of green urban simulation is to capture and digitize the unique aspects of a city’s urban forest, namely the spatial coordinates, species, diameter, height, and current condition of individual trees across a city.&lt;/p&gt; 
-&lt;p&gt;Lucidmind’s team uses a combination of available datasets including satellite imagery, street view images, and field surveys, to build digital urban forests. This data is collected into a CSV file where each line represents a single tree and columns that correspond to the tree characteristics we described. The CSV file is then fed into the simulation modules to initialize the computational domain of a green urban simulation.&lt;/p&gt; 
-&lt;div id="attachment_3025" style="width: 827px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3025" loading="lazy" class="size-full wp-image-3025" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/31/CleanShot-2023-10-31-at-17.22.39.png" alt="Figure 2 - Characteristics of Urban Forests Complex Systems consider specificity, heterogeneity and dynamic interaction between trees and their environment" width="817" height="487"&gt;
- &lt;p id="caption-attachment-3025" class="wp-caption-text"&gt;Figure 2 – Characteristics of Urban Forests Complex Systems consider specificity, heterogeneity and dynamic interaction between trees and their environment&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;To illustrate the capabilities of GUS, the Lucidminds team performed simulations of the city of Amsterdam, the Dutch capital, that incorporated over 250,000 individual trees. That is just the trees currently growing in Amsterdam. One of the powerful features of simulations is the ability to examine hypothetical scenarios – such as the city of Amsterdam planting another 100,000 trees &amp;nbsp;– to understand how their urban forest might evolve and sequester carbon over the next 30 years.&lt;/p&gt; 
-&lt;p&gt;There’s an endless number of possible arrangements for trees that can be simulated for any city in the world. Of course, as the number of trees in any simulation grows, so can the computational expense required to complete the simulation. To ensure that their simulations could scale along with the simulation ambitions, the Lucidminds looked to the power of AWS’s massive computing capacity and HPC services like AWS Batch.&lt;/p&gt; 
-&lt;h2&gt;Running GUS on AWS&lt;/h2&gt; 
-&lt;p&gt;The GUS engine is written in Python and is available as an &lt;a href="https://pypi.org/project/pygus/2.0.4/"&gt;open source Python package called ‘pygus’&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Like many simulations, there are phenomena represented in the simulations that behave probabilistically, such as the chance on any individual simulated day that a storm materializes resulting in precipitation that impacts some or all the trees in the city.&lt;/p&gt; 
-&lt;p&gt;If you’re not familiar with simulations with probabilistic mechanisms, the important thing to understand is that if probabilities are embedded in a simulation engine, a user can run the exact same simulation code with the exact same simulation inputs (like tree data) and the two simulations will almost certainly produce different results. This is a perfectly acceptable outcome, one that comes with the territory of simulating scenarios where we can’t know for sure every single sub-event of a simulation, but we can assign a probability distribution to the occurrence of those events and draw from that distribution during the simulation.&lt;/p&gt; 
-&lt;p&gt;The drawback to incorporating probabilities in simulations, however, is that it becomes necessary to run the simulations many times over to understand all the different possible outcomes. This mathematical technique is called &lt;a href="https://aws.amazon.com/what-is/monte-carlo-simulation/"&gt;Monte Carlo simulation&lt;/a&gt; and is widely used in simulations across the fields of physics, finance, biology, and engineering, to name a few. Depending on the complexity of the simulation and the number of probabilistic variables/events, hundreds or thousands of simulations might be necessary to understand the emerging behavior. And that’s just for one scenario or set of input parameters. If you want to simulate a different scenario, say where you replace a few dozen trees near the city center with trees of a different species, then you might need to run those thousands of simulations again.&lt;/p&gt; 
-&lt;p&gt;If a single simulation iteration (a term used in this context to describe just one run of a simulation) takes a fraction of a second, then it’s not a big deal to run a thousand simulations one after the other to get an ensemble. That would only take a few minutes and you’d have a robust set of results to examine. Many simulations, however, take much longer to run. For instance, a single GUS iteration for Amsterdam’s 250k trees takes a little over an hour (~75 minutes) on a typical laptop or equivalent EC2 instance and the number of iterations needed to confidently simulate a single scenario is around a thousand.&lt;/p&gt; 
-&lt;p&gt;Running each iteration back-to-back on a single laptop or a similar EC2 instance would take about 2 months, which is obviously not a feasible time frame to make these simulations useful for decision makers, especially considering that there are likely dozens or hundreds of scenarios that should be simulated when developing an urban planning project.&lt;/p&gt; 
-&lt;p&gt;The solution to this problem is to embrace the highly parallel nature of Monte Carlo-based simulation. For the 1,000-simulation set described above, each iteration is independent of the other 999, meaning that we can split up the 1,000 simulations, run them separately and even at the same time, and then combine the results at the end. So, in theory we could spin up 1,000 EC2 instances, run our simulation code with the same inputs on each instance, dump the results to a shared storage location (say, an Amazon S3 bucket), and complete all of that in roughly the same 75 minutes that it would take to run a single simulation iteration.&lt;/p&gt; 
-&lt;p&gt;But how do we go about orchestrating all those compute instances and getting our simulation code on each one? Enter AWS Batch.&lt;/p&gt; 
-&lt;p&gt;AWS Batch is a fully managed batch computing service that plans, schedules, and runs containerized batches or machine learning (ML) workloads across the full range of AWS compute offerings, such as&amp;nbsp;Amazon ECS,&amp;nbsp;Amazon EKS,&amp;nbsp;AWS Fargate, using Spot or On-Demand Amazon EC2 instances.&lt;/p&gt; 
-&lt;p&gt;Batch is a great solution for performing Monte Carlo solutions because it handles a lot of the undifferentiated heavy lifting of setting up the compute resources needed to run simulations leaving you more time to focus more on developing the &lt;em&gt;actual simulation&lt;/em&gt; code and analyzing it’s results.&lt;/p&gt; 
-&lt;p&gt;To run a GUS of Amsterdam, Lucidminds took simplicity a step further by using AWS Fargate in combination with AWS Batch. AWS Fargate is a serverless, pay-as-you-go compute engine that lets you focus on building applications without managing servers or choosing instance types. With Fargate you simply package your application in containers, specify the CPU and memory requirements, define networking and IAM policies, and launch the application. Fargate then launches and scales the compute to closely match the resource requirements that you specify for the container.&lt;/p&gt; 
-&lt;p&gt;To illustrate what running Monte Carlo simulations using AWS Batch looks like in practice, let’s look at the steps that Lucidminds took to get their Python-based simulation application running at scale using AWS resources. We’ll break down the steps into two distinct phases: 1) containerizing and testing the simulation application and; 2) scaling the simulation application using AWS Batch.&lt;/p&gt; 
-&lt;p&gt;As a helpful guide to understand how the various AWS services used in this post (simulation application and scaling) fit together, refer to the reference architecture diagram in Figure 3.&lt;/p&gt; 
-&lt;div id="attachment_3026" style="width: 857px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3026" loading="lazy" class="size-full wp-image-3026" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/31/CleanShot-2023-10-31-at-17.24.02.png" alt="Figure 3 - Reference architecture diagram for running Monte Carlo simulations." width="847" height="632"&gt;
- &lt;p id="caption-attachment-3026" class="wp-caption-text"&gt;Figure 3 – Reference architecture diagram for running Monte Carlo simulations.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Phase 1: containerize, set up, and test simulation application on Amazon Elastic Container Service (Amazon ECS)&lt;/h3&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;strong&gt;Containerize the simulation application&lt;/strong&gt; – AWS Batch runs jobs using Docker container images. In this post we’re not going to cover how to containerize applications, just mention that is a part of the process. If you’re new to containers, check out this quick primer on the subject: &lt;a href="https://aws.amazon.com/what-is/containerization/"&gt;AWS: What is Containerization?&lt;/a&gt; You can containerize applications using Docker technology on your local machine or using AWS services like AWS Cloud9, depending on where you are developing your applications. Lucidminds built and tested their containers on their local machines.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Push container image to Amazon Elastic Container Registry (Amazon ECR) – &lt;/strong&gt;Once you have a containerized application, we need to get it to an image repository. Lucidminds used ECR, which is a fully managed container registry offering high-performance hosting, so you can reliably deploy application images and artifacts anywhere. The first step is to &lt;a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html"&gt;create an image repository&lt;/a&gt;, which can be done via the AWS Command Line Interface (CLI) or using the AWS console. If you’re unsure about what commands are needed to tag and push images to an ECR repository, simply create a repository through the AWS console, navigate to the repository and click &lt;strong&gt;View push commands&lt;/strong&gt; to view the steps to push an image to your new repository.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;div id="attachment_3027" style="width: 854px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3027" loading="lazy" class="size-full wp-image-3027" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/31/CleanShot-2023-10-31-at-17.25.58.png" alt="Figure 4 - Creating an Image repository for your containerized application on Amazon Elastic Container Registry" width="844" height="277"&gt;
- &lt;p id="caption-attachment-3027" class="wp-caption-text"&gt;Figure 4 – Creating an Image repository for your containerized application on Amazon Elastic Container Registry&lt;/p&gt;
-&lt;/div&gt; 
-&lt;ol start="3"&gt; 
- &lt;li&gt;&lt;strong&gt;Set up databases that connect to the simulation container&lt;/strong&gt; – The GUS application connects to two databases to store data needed during the simulations (Amazon MemoryDB for Redis) and outputs of simulation runs for caching purposes (Amazon RDS for PostgreSQL). Caching simulation outputs allows Lucidminds to reduce their need for compute when users enter a set of simulation parameters that have already been computed in the past. Not all simulations require a database connection and it is not a requirement for running Monte Carlo simulations using AWS Batch, that’s just how the Green Urban Simulator application works. GUS also writes simulation results to an S3 bucket. It’s strongly recommended that container instances are launched within a Virtual Private Cloud (VPC), and required when using managed compute instances (discussed later), so for the simulation containers to output results to S3 buckets, you’ll need a VPC endpoint. For more information, see &lt;a href="https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints-s3.html"&gt;Gateway endpoints for Amazon S3&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Test application on Amazon Elastic Container Service (ECS) cluster&lt;/strong&gt; – Make sure to test that the application is working as anticipated before trying to scale. Lucidminds tested their simulation application using an ECS cluster, to ensure that the container could be loaded and run, and that the application can successfully connect to and read/write results to the associated data stores. Once GUS was performing sas expected, it was time to get running with AWS Batch.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h3&gt;Phase 2: set up and run simulations using AWS Batch&lt;/h3&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;strong&gt;Create a compute environment (CE) &lt;/strong&gt;– A compute environment is a collection of compute resources used to run batch jobs. Before you can run jobs in AWS Batch, you need a CE. You can set up a managed CE which is managed by AWS, or an unmanaged CE that you manage yourself. You can configure managed CEs to use Fargate or On-demand Amazon EC2 instances. For each of those options you can choose to use Spot Instances at a deep discount, however they can be stopped suddenly and restarted at any time with a 2-minute warning (potentially from a checkpoint). If you’re not familiar with Spot Instances, check out the &lt;a href="https://aws.amazon.com/ec2/spot/"&gt;Amazon EC2 Spot Instances product page&lt;/a&gt;. For the simulations of Amsterdam, Lucidminds chose to use a managed CE, configured with AWS Fargate. During setup of a Fargate-configured CE, you choose a name for the environment, select whether you want to run with Spot Instances, set the maximum number of vCPUs the environment can use, and set up the network configuration by choosing (or creating) a VPC, subnets into which resources are launched, and the security groups to be associated with the launched instances.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Create a job queue, associate to CE &lt;/strong&gt;– Jobs queues are the place that submitted jobs sit until they are scheduled to run and are associated with CEs. You can set up multiple job queues and set a priority order to determine what jobs get run first in an environment where multiple types of jobs are being submitted. For example, you can create a queue that uses Amazon EC2 On-Demand instances for high priority jobs and another queue that uses Amazon EC2 Spot Instances for low-priority jobs. For additional details on setting up job queues, see the &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/job_queues.html"&gt;AWS Batch job queues&lt;/a&gt;&lt;u&gt; documentation&lt;/u&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Create and register a job definition&lt;/strong&gt; – Job definitions describe the job to be executed, including parameters, environment variables, and compute requirements. Job definitions are how you tell AWS Batch the location of the container image you’re running, the number of vCPUs and amount of memory the container should use with the container, IAM roles the job might need, and any commands the container should run when starting. Once you create a job definition, it can be reused or shared by multiple jobs. In the Lucidminds case for Amsterdam, the GUS container used 1 vCPU (it’s a single-threaded application) and 2 GB per container.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Submit an AWS Batch array job&lt;/strong&gt; – Now that all AWS Batch resources are set up, we’re ready to run simulations. You can submit jobs using the AWS Console or the AWS CLI. When submitting a job, you select the CE, job queue, and job definition. If needed, you can override many of the parameters specified in the job definition at runtime. One additional parameter we can set that is particularly useful in the case of the GUS (and Monte Carlo simulations in general) is: &lt;strong&gt;Array Size&lt;/strong&gt;. This parameter can be set between 2 and 10,000 and is used to run &lt;em&gt;array jobs&lt;/em&gt;: jobs that share common parameters, like the job definition, vCPUs, and memory. These jobs run as a collection of related, yet separate, basic jobs that might be distributed across multiple hosts and might run concurrently. Array jobs are the most efficient way to run extremely-parallel jobs like Monte Carlo simulations or parametric sweeps.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;As we mentioned earlier, running an ensemble of simulations for a green urban scenario does not require any simulation input parameters to be different, because the inherent probabilistic nature of the simulations provides different results for the same set of inputs. If you have an application or simulation to which you’d like to pass a sequence of different input parameters, such as for parameter sweeps or grid search cases, you can use the AWS_BATCH_JOB_ARRAY_INDEX environment variable to differentiate the child jobs. For a quick, simple, and yet highly-illustrative tutorial that demonstrates this concept, see &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/array_index_example.html"&gt;Tutorial: Using the array job index to control job differentiation&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Once you submit your job, you can track it on the AWS Batch dashboard. In Figure 5, we’ve shown a screenshot of an example array job with 100 child jobs submitted and mid-run. As the jobs get scheduled and processed, they move across the dashboard from &lt;strong&gt;Submitted&lt;/strong&gt; to either &lt;strong&gt;Succeeded&lt;/strong&gt; or &lt;strong&gt;Failed&lt;/strong&gt;.&lt;/p&gt; 
-&lt;div id="attachment_3028" style="width: 854px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3028" loading="lazy" class="size-full wp-image-3028" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/31/CleanShot-2023-10-31-at-17.27.20.png" alt="Figure 5 - Reviewing results from induvidual jobs on Amazon CloudWatch" width="844" height="363"&gt;
- &lt;p id="caption-attachment-3028" class="wp-caption-text"&gt;Figure 5 – Reviewing results from induvidual jobs on Amazon CloudWatch&lt;/p&gt;
-&lt;/div&gt; 
-&lt;ol start="5"&gt; 
- &lt;li&gt;&lt;strong&gt;Consolidate and view results&lt;/strong&gt; – Once the job completes, it’s time to review the results. You can navigate into individual jobs and view the logs via CloudWatch. In the array job screenshot shown in Figure 4, you’d get there by clicking one of the hyperlinked numbers in the column &lt;strong&gt;Job Index&lt;/strong&gt; and by clicking the link under &lt;strong&gt;Log stream name&lt;/strong&gt;. If your application writes results to an Amazon S3 bucket as the GUS does, you might need to include an extra step where the results are consolidated to make for easier analysis.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h2&gt;GUS in action&lt;/h2&gt; 
-&lt;p&gt;Lucidmind’s pilot project with the City of Glasgow, aimed at supporting the city’s climate targets by growing canopy cover in deprived neighborhoods, has yielded promising results. Soon the city of Stuttgart (in Germany) will adopt the GUS Framework. With GUS, these cities can run city-scale simulations and explore multiple scenarios to identify optimal projects that align with their net-zero climate targets. By leveraging the GUS framework, they can harness the numerous benefits of trees, including carbon sequestration and storage, storm-water retention, and mitigating heatwave effects.&lt;/p&gt; 
-&lt;p&gt;The GUS framework, consisting of a set of meticulously designed microservices, serves as a powerful tool for various organizations worldwide. VAIV, a South Korean company specializing in AI and big data solutions, will utilize the GUS API to create digital twins of their projects, specifically leveraging the heatwave effects module to address their unique use-case. This demonstrates the versatility and adaptability of the GUS framework, catering to diverse requirements across different regions and sectors. Stuttgart is another example where GUS is used for long term urban deforestation planning and decision making.&lt;/p&gt; 
-&lt;p&gt;A GUS demo is now available for anyone who’d like to run city-scale simulations and explore multiple scenarios, gaining valuable insights into the impact of your decisions on urban environments. You can visit &lt;a href="http://run.greenurbanscenarios.com/"&gt;run.greenurbanscenarios.com/&lt;/a&gt;, set up an example scenario, and click “run on AWS” to run a simulation and view the results. The science behind GUS is explained in a peer-reviewed journal article [3].&lt;/p&gt; 
-&lt;div id="attachment_3029" style="width: 767px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3029" loading="lazy" class="size-full wp-image-3029" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/31/CleanShot-2023-10-31-at-17.27.55.png" alt="Figure 6 - GUS is available to run online" width="757" height="628"&gt;
- &lt;p id="caption-attachment-3029" class="wp-caption-text"&gt;Figure 6 – GUS is available to run online&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_3030" style="width: 851px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3030" loading="lazy" class="size-full wp-image-3030" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/31/CleanShot-2023-10-31-at-17.29.25.png" alt="Figure 7 - Insights generated by GUS Simulations ran on AWS HPC. Impact Analysis Dashboard for Carbon, Water retention, Air Quality and Canopy Cover" width="841" height="522"&gt;
- &lt;p id="caption-attachment-3030" class="wp-caption-text"&gt;Figure 7 – Insights generated by GUS Simulations ran on AWS HPC. Impact Analysis Dashboard for Carbon, Water retention, Air Quality and Canopy Cover&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The GUS dashboard’s standardized outputs are generated through Monte Carlo experiments, considering the probabilistic nature of climate and tree growth dynamics influenced by their surroundings.&lt;/p&gt; 
-&lt;p&gt;GUS leverages AWS computing services to perform Monte Carlo experiments. In Figure 8, we illustrate a simulation ensemble of fifty different simulations for three different maintenance scenarios (high, medium, and low maintenance). The solid line represents the mean carbon sequestration of the fifty forest growth trajectories. The high-maintenance scenario assumes state-of-the-art pruning, replanting, and disease treatment, while lower maintenance scenarios involve reduced or nonexistent care provisions.&lt;/p&gt; 
-&lt;p&gt;These simulation results would tell a decision maker the amount of carbon a proposed green urban project could be expected to sequester over time, and the decision maker could use that information in combination with cost estimates for each maintenance scenario specific to their area to better understand the cost-benefit tradeoffs associated with green urban planning.&lt;/p&gt; 
-&lt;div id="attachment_3031" style="width: 854px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3031" loading="lazy" class="size-full wp-image-3031" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/10/31/CleanShot-2023-10-31-at-17.30.16.png" alt="Figure 8 - Monte Carlo simulations of sequestration showing that the higher the tree maintenance, the more carbon will be captured over time." width="844" height="493"&gt;
- &lt;p id="caption-attachment-3031" class="wp-caption-text"&gt;Figure 8 – Monte Carlo simulations of sequestration showing that the higher the tree maintenance, the more carbon will be captured over time.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Urban forests are an important part of the fight against climate change. Digital technologies such as scenario analysis, digital twins, agent-based modeling, and high performance computing on AWS using services like AWS Batch can help us simulate urban forests and examine how different potential green urban projects can have an impact on our cities.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ve not only examined why simulation techniques like Lucidmind’s Green Urban Simulator (GUS) are important tools for the future or urban planning and green cities, but also how AWS Batch can be used to scale simulations and drastically reduce the amount of time to get results.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
-&lt;h3&gt;References&lt;/h3&gt; 
-&lt;p&gt;[1] Journal of Arboriculture 18(5): September 1992 227 ASSESSING THE BENEFITS AND COSTS OF THE URBAN FOREST by John F. Dwyer, E. Gregory McPherson, Herbert W. Schroeder, and Rowan A. Rowntree&lt;/p&gt; 
-&lt;p&gt;[2] David J. Nowak and John F. Dwyer, Understanding the Benefits and Costs of Urban Forest Ecosystems. &amp;nbsp;&lt;a href="https://www.researchgate.net/publication/321619207_Urban_and_Community_Forestry_in_the_Northeast"&gt;Urban and Community Forestry in the Northeast.&amp;nbsp;&lt;/a&gt;Doi: 10.1007/978-1-4020-4289-8_2.&lt;/p&gt; 
-&lt;p&gt;[3] Bulent Ozel and Marko Petrovic. 2023. Green Urban Scenarios: A framework for digital twin representation and simulation for urban forests and their impact analysis, &lt;a href="https://joa.isa-arbor.com/index.asp"&gt;Journal of Arboriculture &amp;amp; Urban Forestry &lt;/a&gt;(Forthcoming).&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-17.40.16.png" alt="Oguzhan Yayla" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Oguzhan Yayla&lt;/h3&gt; 
-  &lt;p&gt;Oguzhan Yayla is Co-Founder of Lucidminds, a driving force behind the transition towards regenerative economies. With a strong background as a Complex Systems Engineer and Digital Infrastructure Architect, Oguzhan is dedicated to building the necessary infrastructure and tools that will shape the transition toward a more sustainable, prosperous future and break out of the carbon tunnel vision.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-17.40.20.png" alt="Roni Bulent Ozel" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Roni Bulent Ozel&lt;/h3&gt; 
-  &lt;p&gt;Roni Bulent Ozel is the co-founder and CEO of Lucidminds AI, with a double PhD in complex systems, economics, and computer science. He excels in bridging business, technology, science, and policy-making, leading innovations published in peer-reviewed articles, books, patents, and software packages. His mission is to drive systemic change for an equitable planet, benefiting humans, non-humans, and future generations.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/01/CleanShot-2023-11-01-at-17.40.27.png" alt="Jake Doran" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Jake Doran&lt;/h3&gt; 
-  &lt;p&gt;Jake Doran originally studied theoretical physics before transitioning to a career in software. Most recently he works as a researcher and engineer at LucidMinds, hoping to build and promote systems of societal good through technology.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
 					
