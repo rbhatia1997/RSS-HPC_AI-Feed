@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 19 Mar 2024 11:07:52 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 19 Mar 2024 16:52:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,320 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>Secure by Design: NVIDIA AIOps Partner Ecosystem Blends AI for Businesses</title>
+		<link>https://blogs.nvidia.com/blog/aiops-partners-gtc-2024/</link>
+		
+		<dc:creator><![CDATA[Michael Balint]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 16:33:43 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cybersecurity]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70624</guid>
+
+					<description><![CDATA[In today’s complex business environments, IT teams face a constant flow of challenges, from simple issues like employee account lockouts to critical security threats. These situations demand both quick fixes and strategic defenses, making the job of maintaining smooth and secure operations ever tougher. That’s where AIOps comes in, blending artificial intelligence with IT operations		<a class="read-more" href="https://blogs.nvidia.com/blog/aiops-partners-gtc-2024/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>In today’s complex business environments, IT teams face a constant flow of challenges, from simple issues like employee account lockouts to critical security threats. These situations demand both quick fixes and strategic defenses, making the job of maintaining smooth and secure operations ever tougher.</p>
+<p>That’s where AIOps comes in, blending artificial intelligence with IT operations to not only automate routine tasks, but also enhance security measures. This efficient approach allows teams to quickly deal with minor issues and, more importantly, to identify and respond to security threats faster and with greater accuracy than before.</p>
+<p>By using machine learning, AIOps becomes a crucial tool in not just streamlining operations but also in strengthening security across the board. It’s proving to be a game-changer for businesses looking to integrate advanced AI into their teams, helping them stay a step ahead of potential security risks.</p>
+<p>According to <a href="https://www.idc.com/getdoc.jsp?containerId=US51160523&amp;pageType=PRINTFRIENDLY">IDC</a>, the IT operations management software market is expected to grow at a rate of 10.3% annually, reaching a projected revenue of $28.4 billion by 2027. This growth underscores the increasing reliance on AIOps for operational efficiency and as a critical component of modern cybersecurity strategies.</p>
+<p>As the rapid growth of machine learning operations continues to transform the era of generative AI, a broad ecosystem of NVIDIA partners are offering AIOps solutions that leverage NVIDIA AI to improve IT operations.</p>
+<p>NVIDIA is helping a broad ecosystem of AIOps partners with accelerated compute and AI software. This includes <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, a cloud-native stack that can run anywhere and provides a basis for AIOps through software like NVIDIA NIM for accelerated inference of AI modes, <a href="https://developer.nvidia.com/morpheus-cybersecurity">NVIDIA Morpheus</a> for AI-based cybersecurity and <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a> for custom generative AI. This software facilitates GenAI-based chatbot, summarization and search functionality.</p>
+<p>AIOps providers using NVIDIA AI include:</p>
+<ul>
+<li><b>Dynatrace</b> <a href="https://www.dynatrace.com/platform/aiops/">Davis AI</a>, through its Davis CoPilot feature, advances AIOps by integrating casual, predictive and generative AI techniques with the addition of David CoPilot. This combination enhances observability and security across IT, development, security and business operations by offering precise and actionable AI-driven answers and automation.</li>
+<li><b>Elastic</b> offers <a href="https://www.elastic.co/elasticsearch/elasticsearch-relevance-engine">Elasticsearch Relevance Engine (ESRE)</a> for semantic and vector search, which integrates with popular LLMs like GPT-4 to power AI Assistants in their Observability and Security solutions. The Observability AI Assistant is a next-generation AI Ops capability that helps IT teams understand complex systems, monitor health and automate remediation of operational issues<b>.</b></li>
+<li><b>New Relic</b> is advancing AIOps by leveraging its <a href="https://newrelic.com/platform/applied-intelligence">machine learning</a>,<a href="https://newrelic.com/platform/new-relic-ai"> generative AI assistant frameworks</a> and longstanding expertise in observability. Its machine learning and advanced logic helps IT teams reduce alerting noise, improve mean time to detect and mean time to repair, automate root cause analysis and generate retrospectives. Its GenAI assistant, New Relic AI, accelerates issue resolution by allowing users to identify, explain and resolve errors without switching contexts, and suggests and applies code fixes directly in a developer’s integrated development environment. It also extends incident visibility and prevention to non-technical teams by automatically producing high-level system health reports, analyzing and summarizing dashboards and answering plain-language questions about a user’s applications, infrastructure and services. New Relic also provides full-stack observability for AI-powered applications benefitting from NVIDIA GPUs.</li>
+<li><b>PagerDuty</b> has introduced a new feature in <a href="https://www.pagerduty.com/platform/generative-ai/">PagerDuty Copilot</a>, integrating a generative AI assistant within Slack to offer insights from incident start to resolution, streamlining the incident lifecycle and reducing manual task loads for IT teams.</li>
+<li><b>ServiceNow</b>’s <a href="https://www.servicenow.com/products/predictive-aiops.html">commitment to creating a proactive IT operations</a> encompasses automating insights for rapid incident response, optimizing service management and detecting anomalies. Now, in collaboration with NVIDIA, it is pushing into generative AI to further innovate technology service and operations.</li>
+<li><b>Splunk’s</b> technology platform<a href="https://www.splunk.com/en_us/solutions/splunk-artificial-intelligence.html"> applies artificial intelligence and machine learning</a> to automate the processes of identifying, diagnosing and resolving operational issues and threats, thereby enhancing IT efficiency and security posture. Splunk<a href="https://www.splunk.com/en_us/products/it-service-intelligence.html"> IT Service Intelligence</a> serves as Splunk’s primary AIOps offering, providing embedded AI-driven incident prediction, detection and resolution all from one place.</li>
+</ul>
+<p>Cloud service providers including Amazon Web Services (AWS), Google Cloud and Microsoft Azure enable organizations to automate and optimize their IT operations, leveraging the scale and flexibility of cloud resources.</p>
+<ul>
+<li><b>AWS</b> offers a suite of services conducive to AIOps, including Amazon CloudWatch for monitoring and observability; AWS CloudTrail for tracking user activity and API usage; Amazon SageMaker for creating repeatable and responsible machine learning workflows; and AWS Lambda for serverless computing, allowing for the automation of response actions based on triggers.</li>
+<li><b>Google Cloud</b> supports AIOps through services like Google Cloud Operations, which provides monitoring, logging and diagnostics across applications on the cloud and on-premises. Google Cloud’s AI and machine learning products include Vertex AI for model training and prediction and BigQuery for fast SQL queries using the processing power of Google’s infrastructure.</li>
+<li><b>Microsoft Azure</b> facilitates AIOps with Azure Monitor for comprehensive monitoring of applications, services and infrastructure. Azure Monitor’s built-in AIOps capabilities help predict capacity usage, enable autoscaling, identify application performance issues and detect anomalous behaviors in virtual machines, containers and other resources. Microsoft Azure Machine Learning (AzureML) offers a cloud-based MLOps environment for training, deploying and managing machine learning models responsibly, securely and at scale.</li>
+</ul>
+<p>Platforms specializing in MLOps primarily focus on streamlining the lifecycle of machine learning models, from development to deployment and monitoring. While the core mission centers on making machine learning more accessible, efficient and scalable, their technologies and methodologies indirectly support AIOps by enhancing AI capabilities within IT operations: <b></b></p>
+<ul>
+<li><b>Anyscale’s </b>platform, based on Ray, allows for the easy scaling of AI and machine learning applications, including those used in AIOps for tasks like anomaly detection and automated remediation. By facilitating distributed computing, Anyscale helps AIOps systems process large volumes of operational data more efficiently, enabling real-time analytics and decision-making.</li>
+<li><b>Dataiku</b> can be used to create models that predict IT system failures or optimize resource allocation, with features that allow IT teams to quickly deploy and iterate on these models in production environments.</li>
+<li><b>Dataloop’s</b> platform delivers full data lifecycle management and a flexible way to plug in AI models for an end-to-end workflow, allowing users to develop AI applications using their data.</li>
+<li><b>DataRobot</b> is a full AI lifecycle platform that enables IT operations teams to rapidly build, deploy and govern AI solutions, improving operational efficiency and performance.</li>
+<li><b>Domino Data Lab’s</b> platform lets enterprises and their data scientists build, deploy and manage AI on a unified, end-to-end platform. Data, tools, compute, models and projects across all environments are centrally managed so teams can collaborate, monitor production models and standardize best practices for governed AI innovation. This approach is vital for AIOps as it balances the self-service needed by data science teams with complete reproducibility, granular cost tracking and proactive governance for IT operational needs.</li>
+<li><b>Weights &amp; Biases</b> provides tools for experiment tracking, model optimization, and collaboration, crucial for developing and fine-tuning AI models used in AIOps. By offering detailed insights into model performance and facilitating collaboration across teams, Weights &amp; Biases helps ensure that AI models deployed for IT operations are both effective and transparent.</li>
+</ul>
+<p>Learn more about NVIDIA’s partner ecosystem and their work at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/aiops-corp-blog-1280x680-1.png"
+			type="image/png"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/aiops-corp-blog-1280x680-1-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Secure by Design: NVIDIA AIOps Partner Ecosystem Blends AI for Businesses]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Climate Pioneers: 3 Startups Harnessing NVIDIA’s AI and Earth-2 Platforms</title>
+		<link>https://blogs.nvidia.com/blog/climate-startups-ai-earth-2/</link>
+		
+		<dc:creator><![CDATA[Tenika Versey Walker]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 16:00:13 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Climate]]></category>
+		<category><![CDATA[GTC 2024]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[NVIDIA Modulus]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Scientific Visualization]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70597</guid>
+
+					<description><![CDATA[To help mitigate climate change — one of humanity’s greatest challenges — researchers are turning to AI and sustainable computing to accelerate and operationalize their work. At this week’s NVIDIA GTC global AI conference, startups, enterprises and scientists are highlighting their environmental sustainability initiatives and latest climate innovations. Many are using NVIDIA Earth-2, a full-stack,		<a class="read-more" href="https://blogs.nvidia.com/blog/climate-startups-ai-earth-2/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>To help mitigate climate change — one of humanity’s greatest challenges — researchers are turning to AI and <a href="https://blogs.nvidia.com/blog/what-is-green-computing/" target="_blank" rel="noopener">sustainable computing</a> to accelerate and operationalize their work.</p>
+<p>At this week’s <a href="https://www.nvidia.com/gtc/" target="_blank" rel="noopener">NVIDIA GTC</a> global AI conference, startups, enterprises and scientists are highlighting their environmental sustainability initiatives and latest climate innovations. Many are using <a href="https://www.nvidia.com/en-us/high-performance-computing/earth-2/" target="_blank" rel="noopener">NVIDIA Earth-2</a>, a full-stack, open platform for accelerating climate and weather simulation and predictions.</p>
+<p>Earth-2 comprises GPU-accelerated numerical weather and climate prediction models, including ICON and IFS; state-of-the-art AI-driven weather models, such as FourCastNet, GraphCast and Deep Learning Weather Prediction, offered through the <a href="https://developer.nvidia.com/modulus" target="_blank" rel="noopener">NVIDIA Modulus</a> framework; and large-scale, interactive, high-resolution data visualization and simulation enabled by the <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse</a> platform. These capabilities are also available via cloud APIs, or application programming interfaces.</p>
+<p>Various members of <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener">NVIDIA Inception</a> — a free, global program for cutting-edge startups — are pioneering climate AI advancements with Earth-2. It’s critical work, as extreme-weather events are <a href="https://authors.library.caltech.edu/records/k959a-53q45" target="_blank" rel="noopener">expected</a> to take a million lives and cost $1.7 trillion per year by 2050.</p>
+<h2><b>Tomorrow.io Powers Weather Predictions of Tomorrow</b></h2>
+<p><img fetchpriority="high" decoding="async" class="alignright size-full wp-image-70604" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/tomorrow.io_.jpeg" alt="" width="512" height="358" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/tomorrow.io_.jpeg 512w, https://blogs.nvidia.com/wp-content/uploads/2024/03/tomorrow.io_-400x280.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/tomorrow.io_-307x215.jpeg 307w, https://blogs.nvidia.com/wp-content/uploads/2024/03/tomorrow.io_-143x100.jpeg 143w" sizes="(max-width: 512px) 100vw, 512px" /></p>
+<p>Boston-based <a href="http://tomorrow.io" target="_blank" rel="noopener">Tomorrow.io</a> provides actionable, weather-related insights to countries, businesses and individuals by applying advanced AI and machine learning models to a proprietary global dataset collected from satellites, radar and other sensors. Its weather intelligence and climate adaptation platform delivers high-resolution, accurate weather forecasts across time zones for both short- and long-term projections.</p>
+<p>The startup is using Earth-2 to study the potential impacts of its suite of satellites on global model forecasts. By conducting observing-system simulation experiments, or OSSEs, with Earth-2 AI forecast models, Tomorrow.io can identify the optimal configurations of satellites and other instruments to improve weather-forecasting conditions. The work ultimately aims to offer users precision and simplicity, helping them easily understand complex weather situations and make the right operational decisions at the right time.</p>
+<p>Learn more about Tomorrow.io’s work with Earth-2 by joining the GTC session, “<a href="https://www.nvidia.com/gtc/session-catalog/?search=tenika&amp;tab.allsessions=1700692987788001F1cG&amp;search=tenika#/session/1696445353484001C0A2" target="_blank" rel="noopener">Global Strategies: Startups, Venture Capital, and Climate Change Solutions</a>,” taking place today, March 19, at 3 p.m. PT, at the San Jose Convention Center and online.</p>
+<h2><b>ClimaSens Advances Flood-Risk Management With AI</b></h2>
+<p><a href="https://climasens.com/" target="_blank" rel="noopener">ClimaSens</a>, based in Melbourne, Australia, and New York, fuses historical, real-time and future climate and weather information using advanced AI models. FloodSens, its upcoming flood risk analysis model, informs clients about the probability of flooding from rainfall, offering high-resolution assessments of flash flooding, riverine flooding and all types of flooding in between.</p>
+<p><img decoding="async" class="aligncenter size-large wp-image-70607" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-672x210.png" alt="" width="672" height="210" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-672x210.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-400x125.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-768x240.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-1536x480.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-842x263.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-406x127.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-188x59.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-1280x400.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p>FloodSens, now in beta, was developed using Earth-2 APIs and the FourCastNet model for high-fidelity, physically accurate representations of future weather conditions, as well as an ensemble of other models for assessing the probabilities of low-likelihood, high-impact flooding events. Through this work, the startup aims to enable a more resilient, sustainable future for communities worldwide.</p>
+<h2><b>North.io Garners Ocean Insights With AI and Accelerated Modeling</b></h2>
+<p><img decoding="async" class="alignright size-full wp-image-70611" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_.jpeg" alt="" width="512" height="288" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_.jpeg 512w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-400x225.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-382x215.jpeg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-178x100.jpeg 178w" sizes="(max-width: 512px) 100vw, 512px" />Based in Kiel, Germany, <a href="http://north.io" target="_blank" rel="noopener">north.io</a> is helping to map the Earth’s largest carbon sink: oceans. Only about 25% of the ocean floor — a critical source of the world’s renewable energy and food security — has been mapped so far.</p>
+<p>North.io is collecting and analyzing massive amounts of data from autonomous underwater vehicles (AUVs) and making it accessible, shareable, visualizable and understandable for users across the globe through its TrueOcean platform.</p>
+<p>Using Earth-2 APIs, north.io is developing AI weather forecasts for intelligent operational planning, system management and risk assessment for its AUVs. The combination of high-precision weather modeling and the use of autonomous systems drastically reduces human safety risks in rough, offshore environments.</p>
+<p><i>Learn more about the latest AI, </i><a href="https://www.nvidia.com/gtc/sessions/hpc/" target="_blank" rel="noopener"><i>high performance computing</i></a><i> and </i><a href="https://www.nvidia.com/gtc/sessions/sustainable-computing/" target="_blank" rel="noopener"><i>sustainable computing</i></a><i> advancements for climate research at GTC, running through Thursday, March 21.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/earth-2-startups-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/earth-2-startups-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Climate Pioneers: 3 Startups Harnessing NVIDIA’s AI and Earth-2 Platforms]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Celebrates Americas Partners Driving AI-Powered Transformation</title>
+		<link>https://blogs.nvidia.com/blog/nvidia-partner-network-npn-awards-2024/</link>
+		
+		<dc:creator><![CDATA[Craig Weinstein]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 15:00:03 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[GTC 2024]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70621</guid>
+
+					<description><![CDATA[NVIDIA recognized 14 partners in the Americas for their achievements in transforming businesses with AI, this week at GTC. The winners of the NVIDIA Partner Network Americas Partner of the Year awards have helped customers across industries advance their operations with the software, systems and services needed to integrate AI into their businesses. NPN awards		<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-partner-network-npn-awards-2024/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA recognized 14 partners in the Americas for their achievements in transforming businesses with AI, this week at <a href="https://www.nvidia.com/gtc/">GTC</a>.</p>
+<p>The winners of the <a href="https://www.nvidia.com/en-us/about-nvidia/partners/">NVIDIA Partner Network</a> Americas Partner of the Year awards have helped customers across industries advance their operations with the software, systems and services needed to integrate AI into their businesses.</p>
+<p>NPN awards categories span a multitude of competencies and industries, including service delivery, data center networking, public sector, healthcare and higher education.</p>
+<p>Three new categories were created this year. One recognizes a partner driving AI-powered success in the financial services industry; one celebrates a partner exhibiting overall AI excellence; and another honors a partner’s dedication to advancing NVIDIA’s full-stack portfolio across a multitude of industries.</p>
+<p>All awards reflect the spirit of the NPN ecosystem in driving business success through accelerated full-stack computing and software.</p>
+<p>“NVIDIA’s work driving innovation in generative AI has helped partners empower their customers with cutting-edge technology — as well reduced costs and fostered growth opportunities while solving intricate business challenges,” said Rob Enderle, president and principal analyst at the Enderle Group. “The recipients of the 2024 NPN awards embody a diverse array of AI expertise, offering rich knowledge to help customers deploy transformative solutions across industries.”</p>
+<p>The 2024 NPN award winners for the Americas are:</p>
+<ul>
+<li><b>AI Excellence Partner of the Year </b>— <a href="https://lambdalabs.com/blog/lambda-selected-as-2024-nvidia-partner-network-ai-excellence-partner-of-the-year">Lambda</a> received this award for its dedication to providing end-to-end AI solutions featuring NVIDIA accelerated computing and <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fdata-center%2Fproducts%2Fai-enterprise%2F&amp;data=05%7C02%7Cpfox%40nvidia.com%7Ccbecb31fb679424fadac08dc396b3015%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638448379745806343%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=u%2BO8WhrVvhtQkP%2BY9RtsErHoavYXnxjUhSeV7yzwYew%3D&amp;reserved=0">NVIDIA AI Enterprise</a> across <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fdata-center%2Fdgx-platform%2F&amp;data=05%7C02%7Cpfox%40nvidia.com%7Ccbecb31fb679424fadac08dc396b3015%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638448379745822830%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=FhLA50UmnmAe758yM1opSLX3wk4ltUUWdZRNXyOu8hg%3D&amp;reserved=0">NVIDIA DGX</a> and <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Flambdalabs.com%2F&amp;data=05%7C02%7Cpfox%40nvidia.com%7Ccbecb31fb679424fadac08dc396b3015%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638448379745836001%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=2whFijjHbYNxNXKKBgK%2FzW5ED0XeQIJl5XPDYkqpFzI%3D&amp;reserved=0">Lambda Cloud</a>.</li>
+<li><b>Enterprise Partner of the Year </b>— <a href="https://www.wwt.com/press-release/world-wide-technology-named-ai-enterprise-partner-of-the-year">World Wide Technology</a> received this newly introduced award for its leadership, dedication and expertise in advancing the adoption of AI with NVIDIA’s portfolio of purpose-built systems, data center networking, software and accelerated computing solutions across machine learning, digital twins, <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> and visualization.</li>
+<li><b>Canadian Partner of the Year </b>— Converge Technology Solutions is recognized for its dedication and expertise in NVIDIA DGX systems and for its Canadian customer support services, leveraging training courses from NVIDIA, to further industry knowledge of the NVIDIA software stack.</li>
+<li><b>Financial Services Partner of the Year</b> — <a href="https://www.cdw.com/content/cdw/en/newsroom/articles/awards/2024/03/19/cdw-named-nvidia-partner-network-financial-services-partner-of-the-year.html">CDW</a> received this newly introduced award for its ecosystem partnerships, strategic investments and targeted domain expertise serving financial customers seeking HPC solutions and customer experience solutions such as chatbots and agentless routing.</li>
+<li><b>Global Consulting Partner of the Year </b>— <a href="https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/deloitte-named-nvidia-partner-network-global-consulting-partner-of-the-year-for-the-fourth-consecutive-year.html">Deloitte</a> is recognized for the fourth consecutive time for its embrace of generative AI and for leveraging the capabilities of <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>.</li>
+<li><b>Healthcare Partner of the Year </b>— <a href="https://www.markiiisys.com/blog/mark-iii-recognized-as-2024-nvidia-partner-network-americas-healthcare-partner-of-the-">Mark III </a>is recognized for the second consecutive year for its utilization for the NVIDIA healthcare portfolio, which supports biopharma research, academic medical centers, research institutions, healthcare systems and life sciences organizations with NVIDIA infrastructure, software and cloud technologies.</li>
+<li><b>Higher Education Partner of the Year </b>— <a href="https://www.cambridgecomputer.com/partner-of-the-year-2024/">Cambridge Computer</a> is recognized for the fourth consecutive year for its customer service and technical expertise, bringing NVIDIA AI solutions to the life sciences, education and research sectors.</li>
+<li><b>Networking Partner of the Year </b>— Converge Technology Solutions is recognized for its expertise in <a href="https://www.nvidia.com/en-us/networking/">NVIDIA high-performance networking</a> solutions to support state-of-the-art accelerated computing deployments.</li>
+<li><b>Public Sector Partner of the Year </b>— <a href="https://sterling.com/sterling-named-nvidia-partner-network-public-sector-partner-of-the-year">Sterling</a> is recognized for its investment and achievements in developing a robust AI practice. This includes assembling a team of dedicated AI software engineers focused on the full-stack NVIDIA platform, establishing Sterling Labs — an AI briefing center near Washington, D.C. — and collaborating with NVIDIA to launch ARC, a 5G/6G platform targeted for next-gen wireless networks.</li>
+<li><b>Rising Star Partner of the Year </b>— <a href="https://www.icc-usa.com/icc-named-nvidia-partner-of-the-year-at-GTC-2024">International Computer Concepts</a> is recognized for its growth in developing AI and machine learning solutions for cloud service providers and financial services customers to power machine learning training, real-time inference and other AI workloads.</li>
+<li><b>Service Delivery Partner of the Year </b>— <a href="https://quantiphi.com/press-release/quantiphi-awarded-nvidia-partner-network-ai-service-delivery-partner-of-the-year-for-third-consecutive-time/">Quantiphi</a> is recognized for the third consecutive year for its commitment to driving adoption of NVIDIA software and hardware in the enterprise. Its AI Service Delivery team has demonstrated expertise in using LLMs, information retrieval, imaging and data analytics to solve complex business problems in the telecom, life sciences, retail and energy industries for its global customers.</li>
+<li><b>Distribution Partner of the Year </b>— <a href="https://news.tdsynnex.com/?p=3883">TD SYNNEX</a> is recognized for demonstrating its commitment to building its AI business on the NVIDIA AI platform, with year-over-year growth that underscores its operational excellence in distribution.</li>
+<li><b>Software Partner of the Year </b>— <a href="https://investor.insight.com/news-releases/news-release-details/2024/Insight-Named-NVIDIAs-2024-Americas-Software-Partner-of-the-Year/default.aspx">Insight</a> is recognized for its leadership in NVIDIA AI Enterprise deployments, establishing cutting-edge innovation labs and certifications that cultivate expertise while seamlessly embedding generative AI into its operations.</li>
+<li><b>Solution Integration Partner of the Year </b>— <a href="https://www.exxactcorp.com/News-Events/2024-NVIDIA-Partner-Network-Solution-Integration-Partner-of-the-Year">EXXACT</a> is recognized for its commitment and expertise in providing end-to-end NVIDIA AI and high performance computing solutions, including NVIDIA software and data center products across multiple industries.</li>
+</ul>
+<p>Learn how to <a href="https://www.nvidia.com/en-us/about-nvidia/partners/become-a-partner/">join NPN</a>, or find your local NPN partner.<br />
+<b></b></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2022/01/NVIDIA-Endeavor-building-logo-1.jpg"
+			type="image/jpeg"
+			width="1300"
+			height="868"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2022/01/NVIDIA-Endeavor-building-logo-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Celebrates Americas Partners Driving AI-Powered Transformation]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA, Huang Win Top Honors in Innovation, Engineering</title>
+		<link>https://blogs.nvidia.com/blog/fast-company-nae-honors/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 13:45:55 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[CUDA]]></category>
+		<category><![CDATA[Digital Twin]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70494</guid>
+
+					<description><![CDATA[NVIDIA today was named the world’s most innovative company by Fast Company magazine. The accolade comes on the heels of company founder and CEO Jensen Huang being inducted into the U.S. National Academy of Engineering. A team of several dozen journalists at Fast Company — a business media brand launched in 1995 by two Harvard		<a class="read-more" href="https://blogs.nvidia.com/blog/fast-company-nae-honors/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA today was named the world’s most innovative company by <i>Fast Company</i> magazine.</p>
+<p>The accolade comes on the heels of company founder and CEO Jensen Huang being inducted into the U.S. National Academy of Engineering.</p>
+<p>A team of several dozen journalists at <i>Fast Company</i> — a business media brand launched in 1995 by two <i>Harvard Business Review</i> editors — ranked NVIDIA the leader in its <a href="https://www.fastcompany.com/most-innovative-companies/list">2024 list</a> of the world’s 50 most innovative companies.</p>
+<h2><b>“Putting AI to Work”</b></h2>
+<p>“Nvidia isn’t just in the business of providing ever-more-powerful computing hardware and letting everybody else figure out what to do with it,” <i>Fast Company</i> wrote in <a href="https://www.fastcompany.com/91033514/nvidia-most-innovative-companies-2024">an article</a> detailing its selection.</p>
+<p>“Across an array of industries, the company’s technologies, platforms, and partnerships are doing much of the heavy lifting of putting AI to work,” citing advances in automotive, drug discovery, gaming and retail announced in one recent week.</p>
+<p>The article noted the central role of the <a href="https://developer.nvidia.com/about-cuda">CUDA</a> compute platform. It also shared an eye-popping experience using <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> to interact with a digital twin of a Nissan Z sport coupe.</p>
+<h2><b>In a League With Giants</b></h2>
+<p>“Even for AI’s titans, building on what Nvidia has created — the more ambitiously, the better — is often how progress happens,” the article concluded.</p>
+<p>Last year, OpenAI led the list for ChatGPT, the <a href="https://www.nvidia.com/en-us/glossary/large-language-models">large language model</a> that started a groundswell in <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>. In 2021, Moderna and Pfizer-BioNTech topped the ranking for rapidly developing a Covid vaccine.</p>
+<p><i>Fast Company</i> bases its ranking on four criteria: innovation, impact, timeliness and relevance. Launched in 2008, the annual list recognizes organizations that have introduced groundbreaking products, fostered positive social impact and reshaped industries.</p>
+<p>NVIDIA invented the GPU in 1999, redefining computer graphics and igniting the era of modern AI. NVIDIA is now driving the platform shift to <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> and generative AI, transforming the world’s largest industries.</p>
+<h2><b>Fueling an AI Revolution</b></h2>
+<p>Last month, Huang was elected to the National Academy of Engineering (<a href="https://www.nae.edu/">NAE</a>) for contributions in “high-powered graphics processing units, fueling the artificial intelligence revolution.”</p>
+<p>Academy membership honors those who have made outstanding contributions such as pioneering new fields of technology. Founded in 1964, the NAE provides a trusted source of engineering advice for creating a healthier, more secure and sustainable world.</p>
+<p>“Jensen Huang’s induction into the National Academy of Engineering is a testament to his enduring contributions to our industry and world,” said Satya Nadella, chairman and CEO of Microsoft.</p>
+<p>“His visionary leadership has forever transformed computing, from the broad adoption of advanced 3D graphics to today’s GPUs — and, more importantly, has driven foundational innovations across every sector, from gaming and productivity, to digital biology and healthcare. All of us at Microsoft congratulate Jensen on this distinction, and we are honored to partner with him and the entire NVIDIA team on defining this new era of AI,” he added.</p>
+<p>“Jensen’s election is incredibly well deserved,” said John Hennessy, president emeritus of Stanford University and an NAE member since 1992.</p>
+<p>“His election recognizes both his transformative technical contributions, as well as his incredible leadership of NVIDIA for almost 30 years. I have seen many NAE nominations over the past 30 years, Jensen’s was one of the best!”</p>
+<p>Morris Chang, founder of Taiwan Semiconductor Manufacturing Co. and an NAE member since 2002, added his congratulations.</p>
+<p>“Jensen is one of the most visionary engineers and charismatic business leaders I have had the pleasure to work with in the last three decades,” he said.</p>
+<p>Huang is also a recipient of the Semiconductor Industry Association’s highest honor, the Robert N. Noyce Award, as well as honorary doctorate degrees from Taiwan’s National Chiao Tung University, National Taiwan University and Oregon State University.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/FC-NAE-logos.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/FC-NAE-logos-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA, Huang Win Top Honors in Innovation, Engineering]]></media:title>
+			<media:description type="html">Fast Company, NAE logos</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Generation Sensation: New Generative AI and RTX Tools Boost Content Creation</title>
+		<link>https://blogs.nvidia.com/blog/studio-gtc-ai-studio-driver/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Tue, 19 Mar 2024 13:00:20 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[In the NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA Studio Driver]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70408</guid>
+
+					<description><![CDATA[Creators are getting a generative AI boost with tools announced at NVIDIA GTC, a global AI conference bringing together the brightest minds in AI content creation and accelerated computing. ]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/" target="_blank" rel="noopener"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/" target="_blank" rel="noopener"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/" target="_blank" rel="noopener"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
+<p>Creators are getting a generative AI boost with tools announced at <a href="https://www.nvidia.com/gtc/" target="_blank" rel="noopener">NVIDIA GTC</a>, a global AI conference bringing together the brightest minds in AI content creation and accelerated computing.</p>
+<p>Adobe Substance 3D Stager and Sampler via Adobe Firefly, the OBS 30.1 YouTube HDR Beta and <a href="https://www.nvidia.com/en-us/omniverse/apps/audio2face/" target="_blank" rel="noopener">NVIDIA Omniverse Audio2Face</a> for iClone 8 will also receive sizable upgrades.</p>
+<p>DLSS 3.5 with Ray Reconstruction is coming soon to the <a href="https://www.nvidia.com/en-us/geforce/rtx-remix/" target="_blank" rel="noopener">NVIDIA RTX Remix Open Beta</a>, enabling modders to upgrade their projects with the power of AI. Sample this leap in high graphical fidelity with the new <a href="https://www.nvidia.com/en-us/geforce/campaigns/play-portal-with-rtx/" target="_blank" rel="noopener"><i>Portal With RTX</i></a> update available on <a href="https://store.steampowered.com/app/2012840/Portal_with_RTX/" target="_blank" rel="noopener">Steam</a> with DLSS Ray Reconstruction, which provides enhanced ray-traced imagery. <a href="https://www.nvidia.com/en-us/geforce/news/portal-with-rtx-dlss-3-5-ray-reconstruction-update" target="_blank" rel="noopener">Learn more</a> about the DLSS 3.5 update to <i>Portal With RTX</i>.</p>
+<p>The March NVIDIA Studio Driver, optimizing the latest creative app updates, is available for download today.</p>
+<h2><b>A March of Creative App Upgrades</b></h2>
+<p>The Adobe Substance 3D Stager beta announced a new Generative Background feature — powered by Adobe Firefly — to create backdrops for rendered images. Stager’s Match Image tool uses machine learning to accurately place 3D models within the generated background, optimizing lighting and perspective for greater flexibility and realism.</p>
+<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-70408-1" width="1280" height="1920" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-gen-ai-bg.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-gen-ai-bg.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-gen-ai-bg.mp4</a></video></div>
+<p>&nbsp;</p>
+<p>Meanwhile, Substance 3D Sampler’s announced Text to Texture beta — also powered by Adobe Firefly — gives artists a new way to source texture imagery using only a description. All Text to Texture images are square and tileable with proper perspective, ready for material-creation workflows.</p>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-70408-2" width="1280" height="1080" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-wood-sampler.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-wood-sampler.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-wood-sampler.mp4</a></video></div>
+<p>&nbsp;</p>
+<p>Learn more about both apps in the GTC session “<a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=maheut#/session/1695393531751001EoQy" target="_blank" rel="noopener">Elevating 3D Concepts: GenAI-Infused Design</a>.” Search the <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG#/" target="_blank" rel="noopener">GTC session catalog</a> and check out the “Content Creation / Rendering / Ray Tracing” and “Generative AI” topics for additional creator-focused sessions.</p>
+<p>The recently launched OBS 30.1 beta will enable content creators to use Real-Time Messaging Protocol — an Adobe open-source protocol designed to stream audio and video by maintaining low-latency connections — to stream high-dynamic range, high-efficiency video coding content to YouTube. Download OBS Beta 30.1 on the <a href="https://obsproject.com/forum/threads/obs-studio-30-1-beta.172987/" target="_blank" rel="noopener">OBS website</a> to get started.</p>
+<p><iframe loading="lazy" title="***please delete***" width="500" height="281" src="https://www.youtube.com/embed/_kiMqnbTjgg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>NVIDIA Omniverse Audio2Face for iClone 8 uses AI to produce expressive facial animations solely from audio input. In addition to generating natural lip-sync animations for multilingual dialogue, the latest standalone release supports multilingual lip-sync and singing animations, as well as full-spectrum editing with slider controls and a keyframe editor.</p>
+<p>For more information on how RTX is powering premium AI capabilities and performance, check out the new <a href="https://blogs.nvidia.com/blog/ai-decoded-rtx-pc" target="_blank" rel="noopener">AI Decoded</a> blog series and <a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai" target="_blank" rel="noopener">sign up</a> to receive updates weekly.</p>
+<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/" target="_blank" rel="noopener"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio" target="_blank" rel="noopener"><i>X</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/" target="_blank" rel="noopener"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw" target="_blank" rel="noopener"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon" target="_blank" rel="noopener"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
+</div>]]></content:encoded>
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-gen-ai-bg.mp4" length="1899762" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-wood-sampler.mp4" length="1837458" type="video/mp4" />
+
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nv-blog-header-preview-1280x680-1-gen-ai-gtc-2024.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nv-blog-header-preview-1280x680-1-gen-ai-gtc-2024-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Generation Sensation: New Generative AI and RTX Tools Boost Content Creation]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>GTC Wrap-Up: ‘We Created a Processor for the Generative AI Era,’ NVIDIA CEO Says</title>
 		<link>https://blogs.nvidia.com/blog/2024-gtc-keynote/</link>
 		
@@ -49,12 +363,12 @@
 <p>NVIDIA founder and CEO Jensen Huang on Monday introduced that technology — the company’s new Blackwell computing platform — as he outlined the major advances that increased computing power can deliver for everything from software to services, robotics to medical technology and more.</p>
 <p>“Accelerated computing has reached the tipping point — general purpose computing has run out of steam,” Huang told more than 11,000 GTC attendees gathered in-person — and many tens of thousands more online — for his keynote address at Silicon Valley’s cavernous SAP Center arena.</p>
 <p>“We need another way of doing computing — so that we can continue to scale so that we can continue to drive down the cost of computing, so that we can continue to consume more and more computing while being sustainable. Accelerated computing is a dramatic speedup over general-purpose computing, in every single industry.”</p>
-<p><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-70552" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-scaled.jpg" alt="" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-70552" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-scaled.jpg" alt="" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MC1_4926-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
 <p>Huang spoke in front of massive images on a 40-foot tall, 8K screen the size of a tennis court to a crowd packed with CEOs and developers, AI enthusiasts and entrepreneurs, who walked together 20 minutes to the arena from the San Jose Convention Center on a dazzling spring day.</p>
 <p>Delivering a massive upgrade to the world’s AI infrastructure, Huang introduced the NVIDIA Blackwell platform to unleash real-time generative AI on trillion-parameter large language models.</p>
 <p>Huang presented NVIDIA NIM — a reference to NVIDIA inference microservices — a new way of packaging and delivering software that connects developers with hundreds of millions of GPUs to deploy custom AI of all kinds.</p>
 <p>And bringing AI into the physical world, Huang introduced Omniverse Cloud APIs to deliver advanced simulation capabilities.</p>
-<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/Y2F8yisiS6E?si=b9Y8b7x-sTGY4n-J" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/Y2F8yisiS6E?si=b9Y8b7x-sTGY4n-J" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 <p>Huang punctuated these major announcements with powerful demos, partnerships with some of the world’s largest enterprises and more than a score of announcements detailing his vision.</p>
 <p><a href="https://www.nvidia.com/gtc/">GTC</a> — which in 15 years has grown from the confines of a local hotel ballroom to the world’s most important AI conference — is returning to a physical event for the first time in five years.</p>
 <p>This year’s has over 900 sessions — including a panel discussion on transformers moderated by Huang with the eight pioneers who first developed the technology, more than 300 exhibits and 20-plus technical workshops.</p>
@@ -69,7 +383,7 @@
 <p>And the <a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/">NVIDIA GB200 Grace Blackwell Superchip</a> connects two Blackwell <a href="https://www.nvidia.com/en-us/data-center/b200/">NVIDIA B200 Tensor Core GPUs</a> to the NVIDIA Grace CPU over a 900GB/s ultra-low-power NVLink chip-to-chip interconnect.</p>
 <p>Huang held up a board with the system. “This computer is the first of its kind where this much computing fits into this small of a space,” Huang said. “Since this is memory coherent, they feel like it’s one big happy family working on one application together.”</p>
 <p>For the highest AI performance, GB200-powered systems can be connected with the NVIDIA Quantum-X800 InfiniBand and Spectrum-X800 Ethernet platforms, also <a href="https://nvidianews.nvidia.com/news/networking-switches-gpu-computing-ai">announced today</a>, which deliver advanced networking at speeds up to 800Gb/s.</p>
-<p><img decoding="async" class="aligncenter size-full wp-image-70577" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-scaled.jpg" alt="" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-70577" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-scaled.jpg" alt="" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/VIVY0652-1-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
 <p>“The amount of energy we save, the amount of networking bandwidth we save, the amount of wasted time we save, will be tremendous,” Huang said. “The future is generative &#8230; which is why this is a brand new industry. The way we compute is fundamentally different. We created a processor for the generative AI era.”</p>
 <p>To scale up Blackwell, NVIDIA built a new chip called NVLink Switch. Each can connect four NVLink interconnects at 1.8 terabytes per second and eliminate traffic by doing in-network reduction.</p>
 <p>NVIDIA Switch and GB200 are key components of what Huang described as “one giant GPU,” the <a href="https://developer.nvidia.com/blog/nvidia-gb200-nvl72-delivers-trillion-parameter-llm-training-and-real-time-inference/">NVIDIA GB200 NVL72</a>, a multi-node, liquid-cooled, rack-scale system that harnesses Blackwell to offer supercharged compute for trillion-parameter models, with 720 petaflops of AI training performance and 1.4 exaflops of AI inference performance in a single rack.</p>
@@ -113,7 +427,7 @@
 <p>Supporting that effort, Huang unveiled a new computer, Jetson Thor, for humanoid robots based on the NVIDIA Thor system-on-a-chip and significant upgrades to the NVIDIA Isaac robotics platform.</p>
 <p>In his closing minutes, Huang brought on stage a pair of diminutive NVIDIA-powered robots from Disney Research.</p>
 <p>“The soul of NVIDIA — the intersection of computer graphics, physics, artificial intelligence,” he said. “It all came to bear at this moment.”</p>
-<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/Y2F8yisiS6E?si=b9Y8b7x-sTGY4n-J" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/Y2F8yisiS6E?si=b9Y8b7x-sTGY4n-J" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 </div>]]></content:encoded>
 					
 		
@@ -296,7 +610,7 @@
 <li><b>Waabi</b> is building AI for self-driving and will use the generative AI capabilities afforded by NVIDIA DRIVE Thor for its breakthrough autonomous trucking solutions, bringing safe and reliable autonomy to the trucking industry.</li>
 <li><b>Lenovo</b> is unveiling a new AI acceleration engine, dubbed UltraBoost, which will run on NVIDIA DRIVE, and features an AI model engine and AI compiler tool chains to facilitate the deployment of LLMs within vehicles.</li>
 <li><b>SoundHound AI</b> is using NVIDIA to run its in-vehicle voice interface — which combines both real-time and generative AI capabilities — even when a vehicle has no cloud connectivity. This solution also offers drivers access to SoundHound’s Vehicle Intelligence product, which instantly delivers settings, troubleshooting and other information directly from the car manual and other data sources via natural speech, as opposed to through a physical document.</li>
-<li><b>Tata Consulting Services</b> (part of the TATA Group), through its AI-based technology and engineering innovation, has built its automotive GenAI suite powered by NVIDIA GPUs and software frameworks. It accelerates the design, development, and validation of software-defined vehicles, leveraging the various LLMs and VLMs for in-vehicle and cloud-based systems.</li>
+<li><b>Tata Consultancy Services</b> (part of the TATA Group), through its AI-based technology and engineering innovation, has built its automotive GenAI suite powered by NVIDIA GPUs and software frameworks. It accelerates the design, development, and validation of software-defined vehicles, leveraging the various LLMs and VLMs for in-vehicle and cloud-based systems.</li>
 <li><b>MediaTek</b> is announcing four automotive systems-on-a-chip within its Dimensity Auto Cockpit portfolio, offering powerful AI-based in-cabin experiences for the next generation of intelligent vehicles that span from premium to entry level. To support deep learning capabilities, the Dimensity Auto Cockpit chipsets integrate NVIDIA’s next-gen GPU-accelerated AI computing and <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a>-powered graphics to run LLMs in the car, allowing vehicles to support chatbots, rich content delivery to multiple displays, driver alertness detection and other AI-based safety and entertainment applications.</li>
 </ul>
 <p>Check out the many <a href="https://images.nvidia.com/nvimages/gtc/pdf/GTC24_March_Automotive_Brochure.pdf">automotive talks</a> on generative AI and LLMs throughout the week of GTC.</p>
@@ -457,7 +771,7 @@
 <h2><b>Raising a Quantum Generation</b></h2>
 <p>In education, NVIDIA is working with nearly two dozen universities to prepare the next generation of computer scientists for the quantum era. The collaboration will design curricula and teaching materials around CUDA-Q.</p>
 <p>&#8220;Bridging the divide between traditional computers and quantum systems is essential to the future of computing,&#8221; said Theresa Mayer, vice president for research at Carnegie Mellon University. &#8220;NVIDIA is partnering with institutions of higher education, Carnegie Mellon included, to help students and researchers navigate and excel in this emerging hybrid environment.&#8221;</p>
-<p>To help working developers get hands-on with the latest tools, NVIDIA co-sponsored QHack, a quantum hackathon in February. The winning project, developed by Gopesh Dahale of Qkrishi — a quantum company in Gurgaon, India — used CUDA-Q to develop an algorithm to simulate a material critical in designing better batteries.</p>
+<p>To help working developers get hands-on with the latest tools, NVIDIA co-sponsored QHack, a quantum hackathon in February. The winning project, developed by Gopal Dahale of Qkrishi — a quantum company in Gurgaon, India — used CUDA-Q to develop an algorithm to simulate a material critical in designing better batteries.</p>
 <h2><b>A Trio of New Systems</b></h2>
 <p>Two new systems being deployed further expand the ecosystem for hybrid quantum-classical computing.</p>
 <p>The largest of the two, <a href="https://nvidianews.nvidia.com/news/nvidia-powers-japans-abci-q-supercomputer-for-quantum-research">ABCI-Q</a> at Japan’s National Institute of Advanced Industrial Science and Technology, will be one of the largest supercomputers dedicated to research in quantum computing. It will use CUDA-Q on <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">NVIDIA H100 GPUs</a> to advance the nation’s efforts in the field.</p>
@@ -898,328 +1212,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[BNY Mellon, First Global Bank to Deploy AI Supercomputer Powered by NVIDIA DGX SuperPOD With DGX H100]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Isaac Taps Generative AI for Manufacturing and Logistics Applications</title>
-		<link>https://blogs.nvidia.com/blog/isaac-generative-ai-manufacturing-logistics/</link>
-		
-		<dc:creator><![CDATA[Gerard Andrews]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 21:54:57 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[Isaac]]></category>
-		<category><![CDATA[NVIDIA Jetson]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70271</guid>
-
-					<description><![CDATA[The NVIDIA Isaac robotics platform is tapping into the latest generative AI and advanced simulation technologies to accelerate AI-enabled robotics. At GTC today, NVIDIA announced Isaac Manipulator and Isaac Perceptor — a collection of foundation models, robotics tools and GPU-accelerated libraries. On stage before a crowd of 10,000-plus, NVIDIA founder and CEO Jensen Huang demonstrated		<a class="read-more" href="https://blogs.nvidia.com/blog/isaac-generative-ai-manufacturing-logistics/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The <a href="https://www.nvidia.com/en-us/deep-learning-ai/industries/robotics/">NVIDIA Isaac robotics platform</a> is tapping into the latest generative AI and advanced simulation technologies to accelerate AI-enabled robotics.</p>
-<p>At <a href="https://www.nvidia.com/gtc/">GTC</a> today, NVIDIA announced <a href="https://developer.nvidia.com/isaac/manipulator">Isaac Manipulator</a> and <a href="https://developer.nvidia.com/isaac/perceptor">Isaac Perceptor</a> — a collection of foundation models, robotics tools and GPU-accelerated libraries.</p>
-<p>On stage before a crowd of 10,000-plus, NVIDIA founder and CEO Jensen Huang demonstrated <a href="https://nvidianews.nvidia.com/news/foundation-model-isaac-robotics-platform">Project GR00T</a>, which stands for Generalist Robot 00 Technology, a general-purpose foundation model for humanoid robot learning. Project GR00T leverages  various tools from the NVIDIA Isaac robotics platform to create AI for humanoid robots.</p>
-<p>“Building foundation models for general humanoid robots is one of the most exciting problems to solve in AI today,” said Huang. “The enabling technologies are coming together for leading roboticists around the world to take giant leaps toward artificial general robotics.”</p>
-<p>NVIDIA also announced a new computer for humanoid robots based on the NVIDIA Thor system-on-a-chip, and new tools for the NVIDIA Isaac robotics platform, including Isaac Lab for robot learning and <a href="https://developer.nvidia.com/blog/scale-ai-enabled-robotics-development-workloads-with-nvidia-osmo/">NVIDIA OSMO</a> for hybrid-cloud workflow orchestration, which are instrumental in the development of Project GR00T and foundation models for robots.</p>
-<h2><b>Introducing Isaac Manipulator for Robotic Arms</b></h2>
-<p>&nbsp;</p>
-<p style="text-align: center;"><img loading="lazy" decoding="async" class="alignnone wp-image-70405" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1-400x166.png" alt="" width="809" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1-400x166.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1-672x279.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1-768x319.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1-842x350.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1-406x169.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1-188x78.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1-1280x532.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Orchestrator-1.png 1374w" sizes="(max-width: 809px) 100vw, 809px" /></p>
-<p>NVIDIA Isaac Manipulator offers a collection of state-of-the-art motion generation and modular AI capabilities for robotic arms, with a robust collection of foundation models and GPU-accelerated libraries.</p>
-<p>Robotics developers can use combinations of software components customized for specific tasks to perceive and interact with surroundings, enabling the building of scalable and repeatable workflows for dynamic manipulation tasks by accelerating AI model training and task programming. <img loading="lazy" decoding="async" class="size-full wp-image-70449 alignright" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/cuMotion.gif" alt="" width="320" height="240" /></p>
-<p>“Incorporating new tools for foundation model generation into the Isaac platform accelerates the development of smarter, more flexible robots that can be generalized to do many tasks,&#8221; said Deepu Talla, vice president of robotics and edge computing at NVIDIA.</p>
-<p>Leading robotics companies Yaskawa, Solomon, PickNik Robotics, READY Robotics, Franka Robotics, and Universal Robots, a Teradyne company, are partnering with NVIDIA to bring Isaac Manipulator to their customers.</p>
-<p>&#8220;By bringing NVIDIA AI tools and capabilities to Yaskawa&#8217;s automation solutions, we&#8217;re pushing the boundaries of where robots can be deployed across industries,“ said Masahiro Ogawa, President,  Yaskawa. “This will significantly influence various industries.&#8221;</p>
-<p><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-70412" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/LeftMacNCheese-400x302.gif" alt="" width="400" height="302" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/LeftMacNCheese-400x302.gif 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/LeftMacNCheese-284x215.gif 284w, https://blogs.nvidia.com/wp-content/uploads/2024/03/LeftMacNCheese-132x100.gif 132w" sizes="(max-width: 400px) 100vw, 400px" /></p>
-<p>NVIDIA is introducing foundation models to augment existing robot manipulation systems. These will help develop robots to sense, adapt and reprogram for varied environments and applications in smart manufacturing, handling pick-and-place tasks, machine tending and assembly with the following:</p>
-<p><img loading="lazy" decoding="async" class="wp-image-70527 alignright" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/FoundationGrasp-Lego-Jensen-v2.gif" alt="" width="455" height="256" /></p>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><a href="https://arxiv.org/pdf/2312.08344.pdf">FoundationPose</a> is a pioneering foundation model for 6D pose estimation and tracking of previously unseen objects.</li>
-<li style="font-weight: 400;" aria-level="1">cuMotion taps into the parallel processing of NVIDIA GPUs for solving robot motion planning problems at industrial scale by running many trajectory optimizations at the same time to provide the best solution.</li>
-<li style="font-weight: 400;" aria-level="1">FoundationGrasp is a transformer based model that can make dense grasp predictions for unknown 3D objects.</li>
-<li style="font-weight: 400;" aria-level="1">SyntheticaDETR is an object detection model for indoor environments that allows faster detection, rendering and training with new objects.</li>
-</ul>
-<h2><b>Introducing Isaac Perceptor for Autonomous Mobile Robots Visual AI</b></h2>
-<p><img loading="lazy" decoding="async" class="alignnone wp-image-70425 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/NovaOrin-400x132.jpg" alt="" width="724" height="239" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/NovaOrin-400x132.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NovaOrin-406x134.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NovaOrin-188x62.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NovaOrin.jpg 624w" sizes="(max-width: 724px) 100vw, 724px" /></p>
-<p>Manufacturing and fulfillment operations are adopting <a href="https://blogs.nvidia.com/blog/isaac-amr-nova-orin-autonomous-mobile-robots/">autonomous mobile robots</a> (AMRs) to improve efficiency and worker safety as well as to reduce error rates and costs.</p>
-<p>Isaac Perceptor provides multi-camera, 360-degree vision capabilities, offering early industry partners  such as ArcBest, BYD and KION Group advanced visual AI for their AMR installations that assist in material handling operations.</p>
-<p>The NVIDIA Nova Orin DevKit — created in collaboration with <a href="https://robotics.segway.com/nova-dev-kit/">Segway Robotics</a> and <a href="https://leopardimaging.com/nvidia-nova-devkit/">Leopard Imaging</a> — allows companies to quickly develop, evaluate and deploy Isaac Perceptor.</p>
-<p>“ArcBest is collaborating with NVIDIA to bring leading-edge machine vision technology into the logistics space,” said Michael Newcity, chief innovation officer of ArcBest and president of ArcBest Technologies. “Using the Isaac Perceptor platform in our Vaux Smart Autonomy AMR forklifts and reach trucks enables better perception, semantic-aware navigation and 3D mapping for obstacle detection in material handling processes across warehouses, distribution centers and manufacturing facilities.”</p>
-<h2><b>Project GR00T for Humanoid Robotics Development Takes a Bow</b></h2>
-<p>Demonstrated at GTC, GR00T-powered humanoid robots can take multimodal instructions — text, video and demonstrations — as well as their previous interactions to produce the desired action for the robot. GR00T was shown on four humanoid robots from different companies, including Agility Robotics, <a href="https://apptronik.com/news-collection/apptronik-collaborates-with-nvidia">Apptronik</a>, Fourier Intelligence and Unitree Robotics.</p>
-<p>Humanoid robots are complex systems that require heterogeneous computing to meet the needs of high frequency low level controls, sensor fusion and perception, task planning and human-robot interaction. NVIDIA unveiled a new Jetson Thor-based computer for humanoid robots, built on the NVIDIA Thor SoC.</p>
-<p>Jetson Thor includes a next-generation GPU based on the NVIDIA Blackwell Architecture with a transformer engine delivering 800 teraflops of 8-bit floating point AI performance to run multimodal generative AI models like GR00T. With an integrated functional safety processor, a high-performance CPU cluster and 100GB of ethernet bandwidth, it significantly simplifies design and integration efforts.</p>
-<p>&nbsp;</p>
-<p><img loading="lazy" decoding="async" class="size-medium wp-image-70534 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-issac-robotics-blog-3167701-1280x680-1-400x213.jpg" alt="" width="400" height="213" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-issac-robotics-blog-3167701-1280x680-1-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-issac-robotics-blog-3167701-1280x680-1-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-issac-robotics-blog-3167701-1280x680-1-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-issac-robotics-blog-3167701-1280x680-1-842x450.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-issac-robotics-blog-3167701-1280x680-1-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-issac-robotics-blog-3167701-1280x680-1-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-issac-robotics-blog-3167701-1280x680-1.jpg 1280w" sizes="(max-width: 400px) 100vw, 400px" /></p>
-<p>&nbsp;</p>
-<p>Project GR00T uses Isaac tools that are available to robotics developers for building and testing foundation models. These include Isaac Lab, a new lightweight simulation app built in Isaac Sim to train this humanoid robot model at scale, and OSMO, a cloud workflow orchestration platform for managing the training and simulation workloads.</p>
-<h2><b>Accelerating Robot Learning With Isaac Lab</b></h2>
-<p>Robots that require advanced locomotion skills, whether with walking or grasping, need to use deep reinforcement learning in a simulated environment and be trained repeatedly in a virtual environment to learn skills. However, this utility becomes more useful when the model transfers to the real robot deployment, which has been demonstrated with Project GR00T.</p>
-<p>As the successor to Isaac Gym, Isaac Lab benefits from <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> technologies for physics-informed, photorealistic, perception-based reinforcement learning tasks. Isaac Lab is an open-source, performance-optimized application for robot learning built on the Isaac Sim platform. It incorporates reinforcement learning APIs and a developer-friendly tasking framework.</p>
-<h2><b>Enabling Cloud-Native Robotics Workflow Scheduling With NVIDIA OSMO </b></h2>
-<p><img loading="lazy" decoding="async" class="wp-image-70531 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/OSMO-1.gif" alt="" width="938" height="528" /></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><a href="https://developer.nvidia.com/blog/scale-ai-enabled-robotics-development-workloads-with-nvidia-osmo/">NVIDIA OSMO</a> scales workloads across distributed environments. For robotics workloads with complex multi-stage and multi-container workflows, the platform provides a location-agnostic deployment option and dataset management and traceability features for deployed models.</p>
-<p>“Boston Dynamics employs a range of machine learning, reinforcement learning and AI technologies to power our robots,” said Pat Marion, machine learning and perception lead at Boston Dynamics. “To effectively manage the large training workloads, we’re using NVIDIA OSMO, an infrastructure solution that lets our machine learning engineers streamline their workflows and dedicate their expertise to tackling the hard robotics problems.”</p>
-<p>OSMO supports GR00T, for example, by concurrently running models on NVIDIA DGX for training and NVIDIA OVX servers for live reinforcement learning in simulation. This workload involves generating and training models iteratively in a loop. OSMO’s ability to manage and schedule workloads across distributed environments allows for the seamless coordination of DGX and OVX systems, enabling efficient and iterative model development. Once the model is ready for testing and validation, OSMO can uniquely orchestrate software-in-the-loop workflows on OVX (x86-64) as well as hardware-in-the-loop workflows with NVIDIA Jetson (aarch64) compute resources.</p>
-<h2><b>Supporting the ROS Ecosystem of Developers</b></h2>
-<p>NVIDIA joined the Open Source Robotics Alliance (OSRA) as a founding member and platinum sponsor. OSRA is a new initiative by Open Source Robotics Foundation to foster collaboration, innovation and technical guidance in the robotics community by supporting several open-source robotics projects, including the Robot Operating System (ROS).</p>
-<p>“The increasing capability of autonomous robots is driving a rise in demand for more powerful but still energy-efficient onboard computing,” said Vanessa Yamzon Orsi, CEO of Open Robotics. “The ROS community is experiencing this demand firsthand, and our users are increasingly taking advantage of advanced accelerated computing hardware from industry leaders such as NVIDIA.&#8221;</p>
-<p><i>NVIDIA Isaac Perceptor with Nova Orin evaluation kit, Isaac Manipulator, Isaac Lab and OSMO will be made available to customers and partners in the second quarter of this year. </i><a href="https://developer.nvidia.com/project-gr00t"><i>Learn more about Project GR00T</i></a><i>. </i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Image-Isaac-Robotics-GenAI-Expansion.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Image-Isaac-Robotics-GenAI-Expansion-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Isaac Taps Generative AI for Manufacturing and Logistics Applications]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Omniverse Expands Worlds Using Apple Vision Pro</title>
-		<link>https://blogs.nvidia.com/blog/omniverse-apple-vision-pro/</link>
-		
-		<dc:creator><![CDATA[Max Bickley]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 21:45:36 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Virtual Reality]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<category><![CDATA[Universal Scene Description]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70350</guid>
-
-					<description><![CDATA[NVIDIA is bringing OpenUSD-based Omniverse enterprise digital twins to the Apple Vision Pro. Announced today at NVIDIA GTC, a new software framework built on Omniverse Cloud APIs, or application programming interfaces, lets developers easily send their Universal Scene Description (OpenUSD) industrial scenes from their content creation applications to the NVIDIA Graphics Delivery Network (GDN), a		<a class="read-more" href="https://blogs.nvidia.com/blog/omniverse-apple-vision-pro/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA is bringing OpenUSD-based Omniverse enterprise digital twins to the Apple Vision Pro.</p>
-<p>Announced today at NVIDIA GTC, a new software framework built on <a href="https://nvidianews.nvidia.com/news/omniverse-cloud-apis-industrial-digital-twin">Omniverse Cloud APIs</a>, or application programming interfaces, lets developers easily send their <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a> industrial scenes from their content creation applications to the <a href="https://www.nvidia.com/en-us/omniverse/solutions/stream-3d-apps/">NVIDIA Graphics Delivery Network (GDN)</a>, a global network of graphics-ready data centers that can stream advanced 3D experiences to Apple Vision Pro.</p>
-<p>In a demo unveiled at the global AI conference, NVIDIA presented an interactive, physically accurate <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/#:~:text=At%20GTC%2C%20NVIDIA%20unveiled%20Omniverse,for%20training%20deep%20neural%20networks.">digital twin</a> of a car streamed in full fidelity to Apple Vision Pro’s high-resolution displays.</p>
-<p>The demo featured a designer wearing the Vision Pro, using a car configurator application developed by CGI studio <a href="https://www.katanaus.com/">Katana</a> on the Omniverse platform. The designer toggles through paint and trim options and even enters the vehicle — leveraging the power of spatial computing by blending 3D photorealistic environments with the physical world.</p>
-<p><iframe loading="lazy" title="Supercharging Car Configurator Personalization With Generative AI" width="500" height="281" src="https://www.youtube.com/embed/LAVXuDK83iA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>Bringing the Power of RTX Enterprise Cloud Rendering to Spatial Computing</b></h2>
-<p>Spatial computing has emerged as a powerful technology for delivering immersive experiences and seamless interactions between people, products, processes and physical spaces. Industrial enterprise use cases require incredibly high-resolution displays and powerful sensors operating at high frame rates to make manufacturing experiences true to reality.</p>
-<p>This new Omniverse-based workflow combines Apple Vision Pro groundbreaking high-resolution displays with NVIDIA’s powerful RTX cloud rendering to deliver spatial computing experiences with just the device and an internet connection.</p>
-<p>This cloud-based approach allows real-time physically based renderings to be streamed seamlessly to Apple Vision Pro, delivering high-fidelity visuals without compromising details of the massive, engineering fidelity datasets.</p>
-<p>“The breakthrough ultra-high-resolution displays of Apple Vision Pro, combined with photorealistic rendering of OpenUSD content streamed from NVIDIA accelerated computing, unlocks an incredible opportunity for the advancement of immersive experiences,” said Mike Rockwell, vice president of the Vision Products Group at Apple. “Spatial computing will redefine how designers and developers build captivating digital content, driving a new era of creativity and engagement.”</p>
-<p>“Apple Vision Pro is the first untethered device which allows for enterprise customers to realize their work without compromise,” said Rev Lebaredian, vice president of simulation at NVIDIA. “We look forward to our customers having access to these amazing tools.”</p>
-<p>The workflow also introduces hybrid rendering, a groundbreaking technique that combines local and remote rendering on the device. Users can render fully interactive experiences in a single application from Apple’s native <a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a> and <a href="https://developer.apple.com/augmented-reality/realitykit/">Reality Kit</a> with the Omniverse RTX Renderer streaming from GDN.</p>
-<p>NVIDIA GDN, available in over 130 countries, taps NVIDIA’s global cloud-to-edge streaming infrastructure to deliver smooth, high-fidelity, interactive experiences. By moving heavy compute tasks to GDN, users can tackle the most demanding rendering use cases, no matter the size or complexity of the dataset.</p>
-<h2><b>Enhancing Spatial Computing Workloads Across Use Cases</b></h2>
-<p>The Omniverse-based workflow showed potential for a wide range of use cases. For example, designers could use the technology to see their 3D data in full fidelity, with no loss in quality or model decimation. This means designers can interact with trustworthy simulations that look and behave like the real physical product. This also opens new channels and opportunities for e-commerce experiences.</p>
-<p>In industrial settings, factory planners can view and interact with their full engineering factory datasets, letting them optimize their workflows and identify potential bottlenecks.</p>
-<p>For developers and independent software vendors, NVIDIA is building the capabilities that would allow them to use the native tools on Apple Vision Pro to seamlessly interact with existing data in their applications.</p>
-<p>Learn more about <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> and <a href="https://www.nvidia.com/en-us/omniverse/solutions/stream-3d-apps/">GDN</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc-ov-corp-blog-announcement-vision-pro-1280x680-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc-ov-corp-blog-announcement-vision-pro-1280x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Omniverse Expands Worlds Using Apple Vision Pro]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA and Siemens Bring Immersive Visualization and Generative AI to Industrial Design and Manufacturing</title>
-		<link>https://blogs.nvidia.com/blog/siemens-immersive-visualization-generative-ai/</link>
-		
-		<dc:creator><![CDATA[Rev Lebaredian]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 21:42:10 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70366</guid>
-
-					<description><![CDATA[Generative AI and digital twins are changing the way companies in multiple industries design, manufacture and operate their products. Siemens, a leading technology company for automation, digitalization and sustainability, announced today at NVIDIA GTC that it is expanding its partnership with NVIDIA by adopting new NVIDIA Omniverse Cloud APIs, or application programming interfaces, with its		<a class="read-more" href="https://blogs.nvidia.com/blog/siemens-immersive-visualization-generative-ai/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Generative AI and digital twins are changing the way companies in multiple industries design, manufacture and operate their products.</p>
-<p>Siemens, a leading technology company for automation, digitalization and sustainability, announced today at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> that it is expanding its partnership with NVIDIA by adopting new <a href="https://nvidianews.nvidia.com/news/omniverse-cloud-apis-industrial-digital-twin">NVIDIA Omniverse Cloud APIs</a>, or application programming interfaces, with its <a href="https://www.sw.siemens.com/en-US/digital-transformation/">Siemens Xcelerator</a> platform applications, starting with Teamcenter X. Teamcenter X is Siemens’ industry-leading cloud-based product lifecycle management (PLM) software.</p>
-<p><a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> is a platform of APIs and services based on <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a> that enables developers to build <a href="https://www.nvidia.com/en-us/glossary/generative-ai/#:~:text=Generative%20AI%20enables%20users%20to,or%20other%20types%20of%20data.">generative AI</a>-powered tools, applications and services for industrial <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/">digital twins</a> and automation.</p>
-<p>Enterprises of all sizes depend on Teamcenter software, part of the Siemens Xcelerator platform, to develop and deliver products at scale. By connecting <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> with Teamcenter X, Siemens will be able to provide engineering teams with the ability to make their physics-based digital twins more immersive and photorealistic, helping eliminate workflow waste and reduce errors.</p>
-<p>Through the use of Omniverse APIs, workflows such as applying materials, lighting environments and other supporting scenery assets in physically based renderings will be dramatically accelerated using generative AI.</p>
-<p>AI integrations will also allow engineering data to be contextualized as it would appear in the real world, allowing other stakeholders — from sales and marketing teams to decision-makers and customers — to benefit from deeper insight and understanding of real-world product appearance.</p>
-<h2>Unifying and Visualizing Complex Industrial Datasets</h2>
-<p>Traditionally, companies have relied heavily on physical prototypes and costly modifications to complete large-scale industrial projects and build complex, connected products. That approach is expensive and error-prone, limits innovation and slows time to market.</p>
-<p>By connecting Omniverse Cloud APIs to the Xcelerator platform, Siemens will enable its customers to enhance their digital twins with physically based rendering, helping supercharge industrial-scale design and manufacturing projects. With the ability to connect generative AI APIs or agents, users can effortlessly generate 3D objects or high-dynamic range image backgrounds to view their assets in context.</p>
-<p>This means that companies like <a href="https://english.hhi.co.kr/">HD Hyundai</a>, a leader in sustainable ship manufacturing, can unify and visualize complex engineering projects directly within Teamcenter X. At NVIDIA GTC, Siemens and NVIDIA demonstrated how HD Hyundai could use the software to visualize digital twins of liquified natural gas carriers, which can comprise over 7 million discrete parts, helping validate their product before moving to production.</p>
-<p>Interoperable, photoreal and physics-based digital twins like these accelerate engineering collaboration and allow customers to minimize workflow waste, save time and costs, and reduce risk of manufacturing defects.</p>
-<p><iframe loading="lazy" title="Siemens Teamcenter X Powered by NVIDIA Omniverse APIs" width="500" height="281" src="https://www.youtube.com/embed/rrb2tPHiLRo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2>Combining Digital and Physical Worlds With Omniverse APIs</h2>
-<p>Omniverse Cloud APIs enable data interoperability and physically based rendering for industrial-scale design and manufacturing projects in Teamcenter X. This starts with a real-time, embedded, photoreal viewport powered by the USD Render and USD Write APIs, which engineers can use to interactively navigate, edit and iterate on a shared model of their live data.</p>
-<p>The USD Query API lets Teamcenter X users navigate and interact with physically accurate scenes, while the USD Notify API automatically provides real-time design and scene updates. To facilitate cloud-based collaboration and data exchange, Teamcenter X will leverage the Omniverse Channel API to establish a secure connection between multiple users across devices.</p>
-<p>In the future, Siemens plans to bring NVIDIA accelerated computing, generative AI and Omniverse to more of its Siemens Xcelerator portfolio.</p>
-<p>Learn more about <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, <a href="https://www.sw.siemens.com/en-US/digital-transformation/">Siemens Xcelerator</a> and the <a href="https://www.nvidia.com/en-us/industrial/industrial-sector/siemens">partnership</a>.</p>
-<p><i>Get started with </i><a href="https://www.nvidia.com/en-us/omniverse/"><i>NVIDIA Omniverse</i></a><i>, access</i><a href="https://developer.nvidia.com/usd"> <i>OpenUSD</i></a><i> resources, and learn how</i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"> <i>Omniverse Enterprise can connect your team</i></a><i>. Stay up to date on</i><a href="https://www.instagram.com/nvidiaomniverse/"> <i>Instagram</i></a><i>,</i><a href="https://medium.com/@nvidiaomniverse"> <i>Medium</i></a><i> and</i><a href="https://twitter.com/nvidiaomniverse"> <i>Twitter</i></a><i>. For more, join the</i><a href="https://www.nvidia.com/en-us/omniverse/community/"> <i>Omniverse community</i></a><i> on the </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i> </i><i>forums</i></a><i>,</i><a href="https://discord.com/invite/XWQNJDNuaC"> <i>Discord server</i></a><i>,</i><a href="https://www.twitch.tv/nvidiaomniverse"> <i>Twitch</i></a><i> and</i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"> <i>YouTube</i></a><i> channels.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc-ov-corp-blog-announcement-siemens-1280x680-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc-ov-corp-blog-announcement-siemens-1280x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA and Siemens Bring Immersive Visualization and Generative AI to Industrial Design and Manufacturing]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Supercharges Autonomous System Development with Omniverse Cloud APIs</title>
-		<link>https://blogs.nvidia.com/blog/omniverse-cloud-apis/</link>
-		
-		<dc:creator><![CDATA[Zvi Greenstein]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 21:40:58 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70372</guid>
-
-					<description><![CDATA[While simulation is critical for training, testing and deploying autonomy,  achieving real-world fidelity is incredibly challenging. It requires accurate modeling of the physics and behavior of an autonomous system’s sensors and surroundings. Designed to address this challenge by delivering large-scale, high-fidelity sensor simulation, Omniverse Cloud APIs, announced today at NVIDIA GTC, are poised to accelerate		<a class="read-more" href="https://blogs.nvidia.com/blog/omniverse-cloud-apis/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>While simulation is critical for training, testing and deploying autonomy,  achieving real-world fidelity is incredibly challenging.</p>
-<p>It requires accurate modeling of the physics and behavior of an autonomous system’s sensors and surroundings.</p>
-<p>Designed to address this challenge by delivering large-scale, high-fidelity sensor simulation, <a href="https://nvidianews.nvidia.com/news/omniverse-cloud-apis-industrial-digital-twin">Omniverse Cloud APIs</a>, announced today at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, are poised to accelerate the path to autonomy. They bring together a rich ecosystem of simulation tools, applications and sensors.</p>
-<p><iframe loading="lazy" title="Autonomous Vehicle Sensor Simulation, Powered by Omniverse Cloud APIs" width="500" height="281" src="https://www.youtube.com/embed/XeHtw36h-eI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>The application programming interfaces address the critical need for high-fidelity sensor simulations to safely explore the myriad real-world scenarios autonomous systems will encounter.</p>
-<p>In addition, the Omniverse Cloud platform offers application developers access to a range of powerful <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description</a> (OpenUSD), <a href="https://developer.nvidia.com/rtx/ray-tracing">RTX</a> and generative AI-enabled service-level cloud APIs to bring interoperability and physically based rendering to next-generation tools.</p>
-<h2>Simulation Key to Unlocking New Levels of Safety</h2>
-<p>As demand increases for robots, AVs, and other AI systems, developers are seeking to accelerate their workflows. Sensor data powers these systems’ perception capabilities, enabling them to comprehend their environment and make informed decisions in real time.</p>
-<p>Traditionally, developers have used real-world data for training, testing and validation.</p>
-<p>However, these methods are limited in covering rare scenarios or data that can’t be captured in the real world. Sensor simulation provides a seamless way to effectively test countless “what if” scenarios and diverse environmental conditions.</p>
-<p>With Omniverse Cloud APIs, developers can enhance the workflows they’re already using with high-fidelity sensor simulation to tackle the challenge of developing full-stack autonomy.</p>
-<p>This not only streamlines the development process but also lowers the barriers to entry for companies of virtually all sizes developing autonomous machines.</p>
-<h2>The Ecosystem Advantage</h2>
-<p>By bringing together an expansive ecosystem of simulators, verification and validation (V&amp;V) tools, content and sensor developers, the Omniverse Cloud APIs enable a universal environment for AI system development.</p>
-<p>Developers and software vendors such as <a href="https://carla.org/2024/03/18/nvidia-omniverse-cloud-apis/">CARLA</a>, MathWorks, <a href="https://www.mitre.org/news-insights/fact-sheet/mitre-digital-proving-ground">MITRE</a>, <a href="https://www.foretellix.com/end-to-end-av-development-nvidia-omniverse/">Foretellix</a> and <a href="https://www.prnewswire.com/news-releases/voxel51-accelerates-autonomous-vehicle-development-with-nvidia-omniverse-integration-302091979.html">Voxel51</a> underscore the broad appeal of these APIs in autonomous vehicles.</p>
-<p><a href="http://carla.org">CARLA</a> is an open-source AV simulator used by more than 100,000 developers. With Omniverse Cloud APIs, CARLA users can enhance their existing workflows with high-fidelity sensor simulation.</p>
-<p>Similarly, <a href="https://www.mitre.org/">MITRE</a>, a nonprofit that operates federally funded R&amp;D centers and is dedicated to improving safety in technology, is building a Digital Proving Ground for the AV industry to validate self-driving solutions. The DPG will use the Omniverse APIs to enable core sensor simulation capabilities for their developers.</p>
-<p><a href="https://www.mathworks.com/">MathWorks</a> and <a href="https://www.foretellix.com/">Foretellix</a> provide critical simulation tools for authoring, executing, monitoring, and debugging of testing scenarios. As <a href="https://www.youtube.com/watch?v=XeHtw36h-eI">the GTC demo showed</a>, combining such simulation and test automation tools with the APIs forms a powerful test environment for AV development. On the showfloor, Foretellix is showing an in-depth look at this solution in Booth 630.</p>
-<p>And, by integrating the APIs with <a href="https://voxel51.com">Voxel51’s</a> FiftyOne platform, developers can easily visualize and organize ground-truth data generated in simulation for streamlined training and testing.</p>
-<p>Leading industrial-sensor solution provider <a href="https://www.sick.com/us/en/">SICK AG</a> is working on integrating these APIs in its sensor development process to reduce the number of physical prototypes, iterate quickly on design modifications and validate the eventual performance. These validated sensor models can eventually be used by autonomous systems developers in their applications.</p>
-<p>Developers will also have access to sensor models from a variety of manufacturers, including lidar makers <a href="https://www.hesaitech.com/">Hesai</a>, <a href="https://innoviz.tech/">Innoviz Technologies</a>, <a href="https://www.luminartech.com/">Luminar</a>, <a href="https://microvision.com/">MicroVision</a>, <a href="https://www.robosense.ai/en">Robosense</a>, and <a href="https://www.seyond.com/">Seyond</a>, visual sensor suppliers <a href="https://www.ovt.com/">OMNIVISION,</a> <a href="https://www.onsemi.com/">onsemi</a>, and <a href="https://www.sony-semicon.com/en/index.html">Sony Semiconductor Solutions</a>, and <a href="https://www.continental.com/en/">Continental</a>, <a href="https://www.hella.com/techworld/us/Forvia-72713/">FORVIA HELLA</a>, and <a href="https://arberobotics.com/">Arbe</a> for radar.</p>
-<p>Additionally, AI/ML developers can call on these APIs to generate large and diverse sets of <a href="https://www.nvidia.com/en-us/use-cases/synthetic-data/">synthetic data</a> — critical input for training and validating perception models that power these autonomous systems.</p>
-<h2>Empowering Developers and Accelerating Innovation</h2>
-<p>By reducing the traditional barriers to high-fidelity sensor simulation, NVIDIA Omniverse Cloud APIs empower developers to address complex AI problems without significant infrastructure overhauls.</p>
-<p>This democratization of access to advanced simulation tools promises to accelerate innovation, allowing developers to quickly adapt to and integrate the latest technological advancements into their testing and development processes.</p>
-<p><a href="https://developer.nvidia.com/omniverse">Apply here</a> for early access to Omniverse Cloud APIs.</p>
-<p><i>Get started with </i><a href="https://www.nvidia.com/en-us/omniverse/"><i>NVIDIA Omniverse</i></a><i>, access</i><a href="https://developer.nvidia.com/usd"> <i>OpenUSD</i></a><i> resources, and learn how</i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"> <i>Omniverse Enterprise can connect your team</i></a><i>. Stay up to date on</i><a href="https://www.instagram.com/nvidiaomniverse/"> <i>Instagram</i></a><i>,</i><a href="https://medium.com/@nvidiaomniverse"> <i>Medium</i></a><i> and</i><a href="https://twitter.com/nvidiaomniverse"> <i>Twitter</i></a><i>. For more, join the</i><a href="https://www.nvidia.com/en-us/omniverse/community/"> <i>Omniverse community</i></a><i> on the </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i> </i><i>forums</i></a><i>,</i><a href="https://discord.com/invite/XWQNJDNuaC"> <i>Discord server</i></a><i>,</i><a href="https://www.twitch.tv/nvidiaomniverse"> <i>Twitch</i></a><i> and</i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"> <i>YouTube</i></a><i> channels.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc-ov-corp-blog-announcement-fisheye-1280x680-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc-ov-corp-blog-announcement-fisheye-1280x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Supercharges Autonomous System Development with Omniverse Cloud APIs]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Staying in Sync: NVIDIA Combines Digital Twins With Real-Time AI for Industrial Automation</title>
-		<link>https://blogs.nvidia.com/blog/ai-digital-twins-industrial-automation-demo/</link>
-		
-		<dc:creator><![CDATA[Adam Scraba]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 21:38:41 +0000</pubDate>
-				<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[Industrial and Manufacturing]]></category>
-		<category><![CDATA[Isaac]]></category>
-		<category><![CDATA[Metropolis]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<category><![CDATA[Visual Computing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70267</guid>
-
-					<description><![CDATA[Real-time AI is helping with the heavy lifting in manufacturing, factory logistics and robotics. In such industries — often involving bulky products, expensive equipment, cobot environments and logistically complex facilities — a simulation-first approach is ushering in the next phase of automation. NVIDIA founder and CEO Jensen Huang today demonstrated in his GTC keynote how		<a class="read-more" href="https://blogs.nvidia.com/blog/ai-digital-twins-industrial-automation-demo/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Real-time AI is helping with the heavy lifting in manufacturing, factory logistics and robotics.</p>
-<p>In such industries — often involving bulky products, expensive equipment, cobot environments and logistically complex facilities — a simulation-first approach is ushering in the next phase of automation.</p>
-<p>NVIDIA founder and CEO Jensen Huang today demonstrated in his <a href="https://www.nvidia.com/gtc/keynote/" target="_blank" rel="noopener">GTC keynote</a> how developers can use <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/" target="_blank" rel="noopener">digital twins</a> to develop, test and refine their large-scale, real-time AIs entirely in simulation before rolling them out in industrial infrastructure, saving significant time and cost.</p>
-<p>NVIDIA <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">Omniverse</a>, <a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/" target="_blank" rel="noopener">Metropolis</a>, <a href="https://www.nvidia.com/en-us/deep-learning-ai/industries/robotics/" target="_blank" rel="noopener">Isaac</a> and <a href="https://www.nvidia.com/en-us/ai-data-science/products/cuopt/" target="_blank" rel="noopener">cuOpt</a> interact in AI gyms where developers can train AI agents to help robots and humans navigate unpredictable or complex events.</p>
-<p><iframe loading="lazy" title="Fusing Real-Time AI With Digital Twins" width="500" height="281" src="https://www.youtube.com/embed/JQdyzQdMRS0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>In the demo above, a digital twin of a 100,000-square-foot warehouse — built using the NVIDIA Omniverse platform for developing and connecting <a href="https://www.nvidia.com/en-us/omniverse/usd/" target="_blank" rel="noopener">OpenUSD</a> applications — operates as a simulation environment for dozens of digital workers and multiple autonomous mobile robots (AMRs), vision AI agents and sensors.</p>
-<p>Each AMR, running the NVIDIA <a href="https://developer.nvidia.com/isaac/perceptor" target="_blank" rel="noopener">Isaac Perceptor</a> multi-sensor stack, processes visual information from six sensors, all simulated in the digital twin.</p>
-<p>At the same time, the NVIDIA Metropolis platform for vision AI creates a single centralized map of worker activity across the entire warehouse, fusing together data from 100 simulated ceiling-mounted camera streams with <a href="https://developer.nvidia.com/metropolis-microservices" target="_blank" rel="noopener">multi-camera tracking</a>. This centralized occupancy map helps inform optimal AMR routes calculated by the NVIDIA cuOpt engine for solving complex routing problems.</p>
-<p>cuOpt, a record-breaking optimization AI microservice, solves complex routing problems with multiple constraints using GPU-accelerated evolutionary algorithms.</p>
-<p>All of this happens in real time, while <a href="https://docs.nvidia.com/isaac/doc/cloud/01_overview.html" target="_blank" rel="noopener">Isaac Mission Control</a> coordinates the entire fleet using map data and route graphs from cuOpt to send and execute AMR commands.</p>
-<h2><b>An AI Gym for Industrial Digitalization</b></h2>
-<p><a href="https://developer.nvidia.com/blog/introduction-to-llm-agents/#:~:text=What%20is%20an%20AI%20agent%3F" target="_blank" rel="noopener">AI agents</a> can assist in large-scale industrial environments by, for example, managing fleets of robots in a factory or identifying streamlined configurations for human-robot collaboration in supply chain distribution centers. To build these complex agents, developers need digital twins that function as AI gyms — physically accurate environments for AI evaluation, simulation and training.</p>
-<p>Such software-in-the-loop AI testing enables AI agents and AMRs to adapt to real-world unpredictability.</p>
-<p>In the above demo, an incident occurs along an AMR’s planned route, blocking the path and preventing it from picking up a pallet. NVIDIA Metropolis updates an occupancy grid, mapping all humans, robots and objects in a single view. cuOpt then plans an optimal route, and the AMR responds accordingly to minimize downtime.</p>
-<p>With Metropolis vision <a href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/" target="_blank" rel="noopener">foundation models</a> powering the <a href="https://www.nvidia.com/en-us/solutions/robotics-and-edge-computing/vision-ai/visual-insight-agent" target="_blank" rel="noopener">NVIDIA Visual Insight Agent (VIA)</a> framework, AI agents can be built to help operations teams answer questions like, “What situation occurred in aisle three of the factory?” And the generative AI-powered agent offers immediate insights such as, “Boxes fell from the shelves at 3:30 p.m., blocking the aisle.”</p>
-<p>Developers can use the VIA framework to build AI agents capable of processing large amounts of live or archived videos and images with vision-language models — whether deployed at the edge or in the cloud. This new generation of visual AI agents will help nearly every industry summarize, search and extract actionable insights from video using natural language.</p>
-<p>All of these AI functions can be enhanced through continuous, simulation-based training and are deployed as modular <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/" target="_blank" rel="noopener">NVIDIA NIM</a> inference microservices.</p>
-<p><i>Learn more about the latest advancements in </i><a href="https://www.nvidia.com/gtc/sessions/generative-ai/" target="_blank" rel="noopener"><i>generative AI</i></a><i> and </i><a href="https://www.nvidia.com/gtc/sessions/industrial-digitalization/" target="_blank" rel="noopener"><i>industrial digitalization</i></a><i> at </i><a href="https://www.nvidia.com/gtc/" target="_blank" rel="noopener"><i>NVIDIA GTC</i></a><i>, a global AI conference running through Thursday, March 21, at the San Jose Convention Center and online.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-metropolis-industrial-automation-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-metropolis-industrial-automation-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Staying in Sync: NVIDIA Combines Digital Twins With Real-Time AI for Industrial Automation]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
