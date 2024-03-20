@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 20 Mar 2024 12:18:27 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 20 Mar 2024 12:57:58 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -44,9 +44,9 @@
 &lt;h3&gt;AWS ParallelCluster for classic HPC clusters&lt;/h3&gt; 
 &lt;p&gt;&lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; is a flexible tool for building and managing HPC clusters on AWS. It’s ideal for tightly coupled workloads, like running simulations or analytics that require a traditional HPC cluster. It supports &lt;a href="https://aws.amazon.com/hpc/efa/"&gt;Elastic Fabric Adapter&lt;/a&gt; (EFA) networking out-of-the-box for low latency and high throughput inter-instance communication, and a high-performance file system (Lustre – available through the &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; managed service).&lt;/p&gt; 
 &lt;p&gt;ParallelCluster provides a familiar interface with a job scheduler &amp;nbsp;– Slurm – making it easy to migrate or burst workloads from an on-premises cluster environment you’re possibly already using.&lt;/p&gt; 
-&lt;div id="attachment_3366" style="width: 640px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3366" loading="lazy" class="size-full wp-image-3366" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/27/CleanShot-2024-02-27-at-14.13.20.png" alt="Figure 1 – Overview of AWS ParallelCluster's architecture and its components for HPC workload. Integration with Amazon EC2 Auto Scaling right sizes compute nodes based on the job queue. Amazon FSx for Lustre integration allows for access to a high-performance file system while also taking advantage of Amazon S3 object storage." width="630" height="336"&gt;
- &lt;p id="caption-attachment-3366" class="wp-caption-text"&gt;Figure 1 – Overview of AWS ParallelCluster’s architecture and its components for HPC workload. Integration with &lt;a href="https://aws.amazon.com/ec2/autoscaling/"&gt;Amazon EC2 Auto Scaling&lt;/a&gt; right sizes compute nodes based on the job queue. &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html"&gt;Amazon FSx for Lustre&lt;/a&gt; integration allows for access to a high-performance file system while also taking advantage of &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon S3&lt;/a&gt; object storage.&lt;/p&gt;
+&lt;div id="attachment_3432" style="width: 1234px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3432" loading="lazy" class="wp-image-3432 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/20/CleanShot-2024-03-20-at-12.55.01.png" alt="" width="1224" height="533"&gt;
+ &lt;p id="caption-attachment-3432" class="wp-caption-text"&gt;Figure 1 – Overview of AWS ParallelCluster and its components for HPC workloads. Integration with Slurm and Amazon EC2 right-sizes compute node numbers based on the job queue. Amazon FSx for Lustre allows for access to a high-performance file system while also taking advantage of Amazon S3 object storage. All of this is connected using Elastic Fabric Adapter (EFA) which provide extremely high-performance connectivity and scaling for tightly-coupled workloads.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h3&gt;AWS Batch for container-based jobs&lt;/h3&gt; 
 &lt;p&gt;&lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; is suited for highly parallel, container-based jobs, including tightly-coupled workloads. It provides a fully-managed scheduler with seamless integration into container orchestrators, like &lt;a href="https://aws.amazon.com/eks/"&gt;Amazon Elastic Kubernetes Service&lt;/a&gt; (EKS) and &lt;a href="https://aws.amazon.com/ecs/"&gt;Amazon Elastic Container Service&lt;/a&gt; (ECS), allowing researchers to leverage existing containerized applications. A typical workload might involve independently running jobs on generic/non-specific compute, leveraging native AWS integrations, or requiring horizontal scalability through MPI or NCCL.&lt;/p&gt; 
