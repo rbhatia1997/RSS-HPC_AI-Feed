@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 19 Mar 2024 17:48:47 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 20 Mar 2024 17:04:03 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,91 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>AI Decoded From GTC: The Latest Developer Tools and Apps Accelerating AI on PC and Workstation</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-gtc-chatrtx-workbench-nim/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 20 Mar 2024 13:00:02 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[GTC 2024]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[RTX Mobile Workstations]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70653</guid>
+
+					<description><![CDATA[NVIDIA’s RTX AI platform includes tools and software development kits that help Windows developers create cutting-edge generative AI features to deliver the best performance on AI PCs and workstations.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+<p>NVIDIA’s RTX AI platform includes tools and software development kits that help Windows developers create cutting-edge generative AI features to deliver the best performance on AI PCs and workstations.</p>
+<p>At GTC — NVIDIA’s annual technology conference — a dream team of industry luminaries, developers and researchers have come together to learn from one another, fueling what’s next in AI and accelerated computing.</p>
+<p>This special edition of AI Decoded from GTC spotlights the best AI tools currently available and looks at what’s ahead for the 100 million RTX PC and workstation users and developers.</p>
+<p><a href="https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/">Chat with RTX</a>, the tech demo and developer reference project that quickly and easily allows users to connect a powerful LLM to their own data, showcased new capabilities and new models in the GTC exhibit hall.</p>
+<p>The winners of the <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/rtx-developer-contest/">Gen AI on RTX PCs contest</a> were announced Monday. OutlookLLM, Rocket League BotChat and CLARA were highlighted in one of the AI Decoded talks in the <a href="https://www.nvidia.com/gtc/exhibits/#:~:text=Generative%20AI%20Theater">generative AI theater</a> and each are accelerated by <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a>. Two other AI Decoded talks included using generative AI in content creation and a deep dive on Chat with RTX.</p>
+<p>Developer frameworks and interfaces with TensorRT-LLM integration continue to grow as Jan.ai, Langchain, LlamaIndex and Oobabooga will all soon be accelerated — helping to grow the already more than 500 AI applications for RTX PCs and workstations.</p>
+<p>NVIDIA NIM microservices are coming to RTX PCs and workstations. They provide pre-built containers, with industry standard APIs, enabling developers to accelerate deployment on RTX PCs and workstations. <a href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/">NVIDIA AI Workbench</a>, an easy-to-use developer toolkit to manage AI model customization and optimization workflows, is now generally available for RTX developers.</p>
+<p>These ecosystem integrations and tools will accelerate development of new Windows apps and features. And today’s contest winners are an inspiring glimpse into what that content will look like.</p>
+<h2><b>Hear More, See More, Chat More</b></h2>
+<p>Chat with RTX, or ChatRTX for short, uses <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a>, NVIDIA TensorRT-LLM software and NVIDIA RTX acceleration to bring local generative AI capabilities to RTX-powered Windows systems. Users can quickly and easily connect local files as a dataset to an open large language model like Mistral or Llama 2, enabling queries for quick, contextually relevant answers.</p>
+<p><iframe title="Create A Personalized AI Chatbot with ChatRTX" width="500" height="281" src="https://www.youtube.com/embed/fc_NSAu41b0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>Moving beyond text, ChatRTX will soon add support for voice, images and new models.</p>
+<p>Users will be able to talk to ChatRTX with Whisper — an automatic speech recognition system that uses AI to process spoken language. When the feature becomes available, ChatRTX will be able to “understand” spoken language, and provide text responses.</p>
+<p>A future update will also add support for photos. By integrating OpenAI’s CLIP — Contrastive Language-Image Pre-training — users will be able to search by words, terms or phrases to find photos in their private library.</p>
+<p>In addition to Google’s Gemma, ChatGLM will get support in a future update.</p>
+<p>Developers can start with the latest version of the <a href="https://github.com/NVIDIA/trt-llm-rag-windows">developer reference project on GitHub</a>.</p>
+<h2><b>Generative AI for the Win</b></h2>
+<p>The <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/rtx-developer-contest/">NVIDIA Generative AI on NVIDIA RTX developer contest</a> prompted developers to build a Windows app or plug-in.</p>
+<div class="simplePullQuote right"><p>“I found that playing against bots that react to game events with in-game messages in near real time adds a new level of entertainment to the game, and I’m excited to share my approach to incorporating AI into gaming as a participant in this developer contest. The target audience for my project is anyone who plays <i>Rocket League</i> with RTX hardware.” — <a href="https://briancaffey.github.io/2024/02/17/rocket-league-botchat-nvidia-generative-ai-on-rtx-pcs-developer-contest/">Brian Caffey</a>, Rocket League BotChat developer</p>
+</div>
+<p>Submissions were judged on three criteria, including a short demo video posted to social media, relative impact and ease of use of the project, and how effectively NVIDIA’s technology stack was used in the project. <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/rtx-developer-contest/winners/">Each of the three winners</a> received a pass to GTC, including a spot in the NVIDIA Deep Learning Institute GenAI/LLM courses, and a GeForce RTX 4090 GPU to power future development work.</p>
+<p><a href="https://github.com/fgblanch/OutlookLLM">OutlookLLM</a> gives Outlook users generative AI features — such as email composition — securely and privately in their email client on RTX PCs and workstations. It uses a local LLM served via TensorRT-LLM.</p>
+<p><a href="https://github.com/briancaffey/RocketLeagueBotChat">Rocket League BotChat</a>, for the popular <i>Rocket League</i> game, is a plug-in that allows bots to send contextual in-game chat messages based on a log of game events, such as scoring a goal or making a save. Designed to be used only in offline games against bot players, the plug-in is configurable in many ways via its settings menu.</p>
+<p><a href="https://github.com/0xMatthew/CLARA">CLARA</a> (short for Command Line Assistant with RTX Acceleration) is designed to enhance the command line interface of PowerShell by translating plain English instructions into actionable commands. The extension runs locally, quickly and keeps users in their PowerShell context. Once it’s enabled, users type their English instructions and press the tab button to invoke CLARA. Installation is straightforward, and there are options for both script-based and manual setup.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr"><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f389.png" alt="🎉" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Congratulations to the <a href="https://twitter.com/hashtag/GenAIonRTX?src=hash&amp;ref_src=twsrc%5Etfw">#GenAIonRTX</a> <a href="https://twitter.com/hashtag/DevContest?src=hash&amp;ref_src=twsrc%5Etfw">#DevContest</a> winners:</p>
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f3c6.png" alt="🏆" class="wp-smiley" style="height: 1em; max-height: 1em;" /> CLARA &#8211; Talk with computers in human language &#8211; Matthew Yaeger<br /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f3c6.png" alt="🏆" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Rocket League BotChat &#8211; Generate in-game chat messages &#8211; Brian Caffey<br /><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f3c6.png" alt="🏆" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Outlook LLM &#8211; Compose emails securely with AI &#8211; Francisco Gonzalez Blanch</p>
+<p><img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f447.png" alt="👇" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a href="https://t.co/i52w5Pn1n9">pic.twitter.com/i52w5Pn1n9</a></p>
+<p>&mdash; NVIDIA AI Developer (@NVIDIAAIDev) <a href="https://twitter.com/NVIDIAAIDev/status/1770125161242493200?ref_src=twsrc%5Etfw">March 19, 2024</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2><b>From the Generative AI Theater</b></h2>
+<p>GTC attendees can attend three AI Decoded talks on Wednesday, March 20 at the generative AI theater. These 15-minute sessions will guide the audience through ChatRTX and how developers can productize their own personalized chatbot; how each of the three contest winners’ showed some of the possibilities for generative AI apps on RTX systems; and a celebration of artists, the tools and methods they use powered by NVIDIA technology.</p>
+<p>In the creator session, Lee Fraser, senior developer relations manager for generative AI media and entertainment at NVIDIA, will explore why generative AI has become so popular. He’ll show off new workflows and how creators can rapidly explore ideas. Artists to be featured include Steve Talkowski, Sophia Crespo, Lim Wenhui, Erik Paynter, Vanessa Rosa and Refik Anadol.</p>
+<p>Anadol also has an installation at the show that combines data visualization and imagery based on that data.</p>
+<h1><b>Ecosystem of Acceleration</b></h1>
+<p>Top creative app developers, like Blackmagic Design and Topaz Labs have integrated RTX AI acceleration in their software. TensorRT doubles the speed of AI effects like rotoscoping, denoising, super-resolution and video stabilization in the DaVinci Resolve and Topaz apps.</p>
+<p>“Blackmagic Design and NVIDIA’s ongoing collaborations to run AI models on RTX AI PCs will produce a new wave of groundbreaking features that give users the power to create captivating and immersive content, faster.” — Rohit Gupta, director of software development at Blackmagic Design</p>
+<p><iframe title="Faster Video Editing Using NVIDIA RTX GPUs &amp; AI (DaVinci Resolve)" width="500" height="281" src="https://www.youtube.com/embed/KxBXwa3rYpU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>TensorRT-LLM is being integrated with popular developer frameworks and ecosystems such as LangChain, LlamaIndex, Oobabooga and Jan.AI. Developers and enthusiasts can easily access the performance benefits of TensorRT-LLM through top LLM frameworks to build and deploy generative AI apps to both local and cloud GPUs.</p>
+<p>Enthusiasts can also try out their favorite LLMs — accelerated with TensorRT-LLM on RTX systems — through the Oobabooga and Jan.AI chat interfaces.</p>
+<h2><b>AI That’s NIMble, AI That’s Quick</b></h2>
+<p>Developers and tinkerers can tap into NIM microservices. These pre-built AI “containers,” with industry-standard APIs, provide an optimized solution that helps to reduce deployment times from weeks to minutes. They can be used with more than two dozen popular models from NVIDIA, Getty Images, Google, Meta, Microsoft, Shutterstock and more.</p>
+<p>NVIDIA AI Workbench is now generally available, helping developers quickly create, test and customize pretrained generative AI models and LLMs on RTX GPUs. It offers streamlined access to popular repositories like Hugging Face, GitHub and <a href="https://catalog.ngc.nvidia.com/">NVIDIA NGC</a>, along with a simplified user interface that enables developers to easily reproduce, collaborate on and migrate projects.</p>
+<p>Projects can be easily scaled up when additional performance is needed — whether to the data center, a public cloud or <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> — and then brought back to local RTX systems on a PC or workstation for inference and light customization. AI Workbench is a free download and provides example projects to help developers get started quickly.</p>
+<p>These tools, and many others announced and shown at GTC, are helping developers drive innovative AI solutions.</p>
+<p>From the Blackwell platform’s arrival, to a digital twin for Earth’s climate, it’s been a GTC to remember. For RTX PC and workstation users and developers, it was also a glimpse into what’s next for generative AI.</p>
+<p><i>See </i><a href="https://www.nvidia.com/en-us/about-nvidia/legal-info/"><i>notice</i></a><i> regarding software product information.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ai-decoded-week-3-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ai-decoded-week-3-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[AI Decoded From GTC: The Latest Developer Tools and Apps Accelerating AI on PC and Workstation]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Secure by Design: NVIDIA AIOps Partner Ecosystem Blends AI for Businesses</title>
 		<link>https://blogs.nvidia.com/blog/aiops-partners-gtc-2024/</link>
 		
@@ -28,6 +113,7 @@
 				<category><![CDATA[Generative AI]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
 		<category><![CDATA[Cybersecurity]]></category>
+		<category><![CDATA[GTC 2024]]></category>
 		<category><![CDATA[Machine Learning]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70624</guid>
 
@@ -123,10 +209,10 @@
 <p>Learn more about Tomorrow.io’s work with Earth-2 by joining the GTC session, “<a href="https://www.nvidia.com/gtc/session-catalog/?search=tenika&amp;tab.allsessions=1700692987788001F1cG&amp;search=tenika#/session/1696445353484001C0A2" target="_blank" rel="noopener">Global Strategies: Startups, Venture Capital, and Climate Change Solutions</a>,” taking place today, March 19, at 3 p.m. PT, at the San Jose Convention Center and online.</p>
 <h2><b>ClimaSens Advances Flood-Risk Management With AI</b></h2>
 <p><a href="https://climasens.com/" target="_blank" rel="noopener">ClimaSens</a>, based in Melbourne, Australia, and New York, fuses historical, real-time and future climate and weather information using advanced AI models. FloodSens, its upcoming flood risk analysis model, informs clients about the probability of flooding from rainfall, offering high-resolution assessments of flash flooding, riverine flooding and all types of flooding in between.</p>
-<p><img decoding="async" class="aligncenter size-large wp-image-70607" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-672x210.png" alt="" width="672" height="210" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-672x210.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-400x125.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-768x240.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-1536x480.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-842x263.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-406x127.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-188x59.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-1280x400.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-70607" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-672x210.png" alt="" width="672" height="210" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-672x210.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-400x125.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-768x240.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-1536x480.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-842x263.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-406x127.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-188x59.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/FloodSens-1280x400.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
 <p>FloodSens, now in beta, was developed using Earth-2 APIs and the FourCastNet model for high-fidelity, physically accurate representations of future weather conditions, as well as an ensemble of other models for assessing the probabilities of low-likelihood, high-impact flooding events. Through this work, the startup aims to enable a more resilient, sustainable future for communities worldwide.</p>
 <h2><b>North.io Garners Ocean Insights With AI and Accelerated Modeling</b></h2>
-<p><img decoding="async" class="alignright size-full wp-image-70611" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_.jpeg" alt="" width="512" height="288" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_.jpeg 512w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-400x225.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-382x215.jpeg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-178x100.jpeg 178w" sizes="(max-width: 512px) 100vw, 512px" />Based in Kiel, Germany, <a href="http://north.io" target="_blank" rel="noopener">north.io</a> is helping to map the Earth’s largest carbon sink: oceans. Only about 25% of the ocean floor — a critical source of the world’s renewable energy and food security — has been mapped so far.</p>
+<p><img loading="lazy" decoding="async" class="alignright size-full wp-image-70611" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_.jpeg" alt="" width="512" height="288" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_.jpeg 512w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-400x225.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-382x215.jpeg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/north.io_-178x100.jpeg 178w" sizes="(max-width: 512px) 100vw, 512px" />Based in Kiel, Germany, <a href="http://north.io" target="_blank" rel="noopener">north.io</a> is helping to map the Earth’s largest carbon sink: oceans. Only about 25% of the ocean floor — a critical source of the world’s renewable energy and food security — has been mapped so far.</p>
 <p>North.io is collecting and analyzing massive amounts of data from autonomous underwater vehicles (AUVs) and making it accessible, shareable, visualizable and understandable for users across the globe through its TrueOcean platform.</p>
 <p>Using Earth-2 APIs, north.io is developing AI weather forecasts for intelligent operational planning, system management and risk assessment for its AUVs. The combination of high-precision weather modeling and the use of autonomous systems drastically reduces human safety risks in rough, offshore environments.</p>
 <p><i>Learn more about the latest AI, </i><a href="https://www.nvidia.com/gtc/sessions/hpc/" target="_blank" rel="noopener"><i>high performance computing</i></a><i> and </i><a href="https://www.nvidia.com/gtc/sessions/sustainable-computing/" target="_blank" rel="noopener"><i>sustainable computing</i></a><i> advancements for climate research at GTC, running through Thursday, March 21.</i></p>
@@ -286,6 +372,7 @@
 		<category><![CDATA[Artificial Intelligence]]></category>
 		<category><![CDATA[Creators]]></category>
 		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[GTC 2024]]></category>
 		<category><![CDATA[In the NVIDIA Studio]]></category>
 		<category><![CDATA[NVIDIA RTX]]></category>
 		<category><![CDATA[NVIDIA Studio]]></category>
@@ -458,6 +545,7 @@
 		<pubDate>Mon, 18 Mar 2024 22:10:56 +0000</pubDate>
 				<category><![CDATA[Corporate]]></category>
 		<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[GTC 2024]]></category>
 		<category><![CDATA[NVIDIA Jetson]]></category>
 		<category><![CDATA[Omniverse]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70263</guid>
@@ -696,11 +784,11 @@
 		
 		<dc:creator><![CDATA[Jason Schroedl]]></dc:creator>
 		<pubDate>Mon, 18 Mar 2024 22:00:48 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
 		<category><![CDATA[Pro Graphics]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
 		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[Omniverse Enterprise]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70358</guid>
 
 					<description><![CDATA[A sharp increase in generative AI deployments is driving business innovation for enterprises across industries. But it’s also posing significant challenges for their IT teams, as slowdowns from long and complex infrastructure deployment cycles prevent them from quickly spinning up AI workloads using their own data. To help overcome these barriers, NVIDIA has introduced a		<a class="read-more" href="https://blogs.nvidia.com/blog/ovx-storage-partner-validation-program/">
@@ -857,7 +945,7 @@
 <p>Arsenal FC, a powerhouse franchise in England’s Premier League, is collaborating with Jugo to revolutionize the way the soccer club engages with its 600 million global fan base. The collaboration offers new virtual sports entertainment experiences to boost engagement for global supporters. Jugo brings the power of real, human interaction into Arsenal events, creating realistic virtual connections between supporters and the club’s sports heroes.</p>
 <p>“The Jugo Experience platform is transforming the market for brands in their pursuit of global awareness and engagement,” said Richard Stirk, CEO of Jugo Experience. “Arsenal F.C. is the perfect example of a global brand extension. The flexibility in creating an immersive brand experience is a key to Jugo’s offering and the Maxine AI Developer Platform is a basic building block of this flexibility.”</p>
 <h2><b>Setting a New Standard of AI-Enhanced Video Conferencing </b></h2>
-<p>Among the first customers to tap into the newest set of features within the early access program to create a professional audio-visual studio from commodity cameras and microphones are <a href="http://gemelo.ai">Gemelo</a>, Pexip, Spectacle and VideoRequest.</p>
+<p>Among the first customers to tap into the newest set of features within the early access program to create a professional audio-visual studio from commodity cameras and microphones are <a href="http://gemelo.ai">Gemelo</a>, <a href="https://www.pexip.com/">Pexip</a>, <a href="http://www.thespectacleapp.com/">Spectacle</a> and <a href="https://videorequest.io/">VideoRequest</a>.</p>
 <p>“Gemelo has been involved in testing prerelease builds of Maxine models for a number of years now, and we value the chance to give early input on Maxine features as they’re developed,” said Paul Jaski, CEO of Gemelo. “The latest feature, Speech Live Portrait, will provide our customers with greater flexibility in creating customized video messaging, opening the doors to a new era of personalization.”</p>
 <p>“Pexip welcomes the chance to test development versions of Maxine features and help guide the final product models,” said Ian Mortimer, chief technology officer at Pexip. “In testing the newest version of Maxine BNR, we are seeing significant improvements in intelligibility and speech quality and plan to continue refining our testing parameters to help optimize for accuracy in AI translation pipelines.”</p>
 <p>“The NVIDIA Maxine Eye Contact API significantly simplified our path to providing engaging video processing capabilities to the users of our Spectacle app, eliminating the need to worry about infrastructure and resource-intensive integrations,” said Benjamin Portman, president of Spectacle. “With it, we were able to create a proof of concept within a matter of days, speeding up our production application deployment timeline.”</p>
@@ -976,7 +1064,6 @@
 		<category><![CDATA[Cloud Services]]></category>
 		<category><![CDATA[Cybersecurity]]></category>
 		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[high]]></category>
 		<category><![CDATA[New GPU Uses]]></category>
 		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70246</guid>
@@ -1033,6 +1120,7 @@
 		<pubDate>Mon, 18 Mar 2024 22:00:20 +0000</pubDate>
 				<category><![CDATA[Gaming]]></category>
 		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[GTC 2024]]></category>
 		<category><![CDATA[NVIDIA DLSS]]></category>
 		<category><![CDATA[NVIDIA RTX]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70383</guid>
@@ -1160,60 +1248,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Johnson & Johnson MedTech Works With NVIDIA to Broaden AI’s Reach in Surgery]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>BNY Mellon, First Global Bank to Deploy AI Supercomputer Powered by NVIDIA DGX SuperPOD With DGX H100</title>
-		<link>https://blogs.nvidia.com/blog/bny-mellon-superpod/</link>
-		
-		<dc:creator><![CDATA[Malcolm deMayo]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 22:00:05 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70376</guid>
-
-					<description><![CDATA[Moving fast to accelerate its AI journey, BNY Mellon, a global financial services company celebrating its 240th anniversary, revealed Monday that it has become the first major bank to deploy an NVIDIA DGX SuperPOD with DGX H100 systems. Thanks to the strong collaborative relationship between NVIDIA Professional Services and BNY Mellon, the team was able		<a class="read-more" href="https://blogs.nvidia.com/blog/bny-mellon-superpod/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Moving fast to accelerate its AI journey, <a href="https://www.bnymellon.com/us/en.html">BNY Mellon</a>, a global financial services company celebrating its 240th anniversary, revealed Monday that it has become the first major bank to deploy an <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a> with <a href="https://www.nvidia.com/en-us/data-center/dgx-h100">DGX H100 systems</a>.</p>
-<p>Thanks to the strong collaborative relationship between <a href="https://www.nvidia.com/en-us/ai-data-science/professional-services/">NVIDIA Professional Services</a> and BNY Mellon, the team was able to install and configure the DGX SuperPOD ahead of typical timelines.</p>
-<p>The system, equipped with dozens of NVIDIA DGX systems and <a href="https://www.nvidia.com/en-us/networking/products/infiniband/">NVIDIA InfiniBand</a> networking and based on the DGX SuperPOD reference architecture, delivers computer processing performance that hasn’t been seen before at BNY Mellon.</p>
-<p>“Key to our technology strategy is empowering our clients through scalable, trusted platforms and solutions,” said BNY Mellon Chief Information Officer <a href="https://www.bnymellon.com/us/en/about-us/leadership/engle.html">Bridget Engle</a>. “By deploying NVIDIA’s AI supercomputer, we can accelerate our processing capacity to innovate and launch AI-enabled capabilities that help us manage, move and keep our clients’ assets safe.”</p>
-<p>Powered by its new system, BNY Mellon plans to use <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise software</a> to support the build and deployment of AI applications and manage AI infrastructure.</p>
-<h2>NVIDIA AI Software: A Key Component in BNY Mellon’s Toolbox</h2>
-<p>Founded by Alexander Hamilton in 1784, BNY Mellon oversees nearly $50 trillion in assets for its clients and helps companies and institutions worldwide access the money they need, support governments in funding local projects, safeguard investments for millions of individuals and more.</p>
-<p>BNY Mellon has long been at the forefront of AI and accelerated computing in the <a href="https://www.nvidia.com/en-us/industries/finance/">financial services industry</a>. Its AI Hub has more than 20 AI-enabled solutions in production. These solutions support predictive analytics, automation and anomaly detection, among other capabilities.</p>
-<p>While the firm recognizes that AI presents opportunities to enhance its processes to reduce risk across the organization, it is also actively working to consider and manage potential risks associated with AI through its robust risk management and governance processes.</p>
-<p>Some of the use cases supported by DGX SuperPOD include deposit forecasting, payment automation, predictive trade analytics and end-of-day cash balances.</p>
-<p>More are coming. The company identified more than 600 opportunities in AI during a firmwide exercise last year, and dozens are already in development using such NVIDIA AI Enterprise software as <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/nemo-framework/">NVIDIA NeMo</a>, <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a> and <a href="https://www.nvidia.com/en-us/data-center/base-command/">NVIDIA Base Command</a>.</p>
-<p>Triton Inference Server is inference-serving software that streamlines AI inferencing or puts trained AI models to work.</p>
-<p>Base Command powers the DGX SuperPOD, delivering the best of NVIDIA software that enables businesses and their data scientists to accelerate AI development.</p>
-<p>NeMo is an end-to-end platform for developing custom generative AI, anywhere. It includes tools for training, and retrieval-augmented generation, guardrailing and toolkits, data curation tools, and pretrained models, offering enterprises an easy, cost-effective, and fast way to adopt generative AI.</p>
-<h2>Fueling Innovation Through Top Talent</h2>
-<p>With the new DGX SuperPOD, these tools will enable BNY Mellon to streamline and accelerate innovation within the firm and across the global financial system.</p>
-<p>Hundreds of data scientists, solutions architects and risk, control and compliance professionals have been using the <a href="https://www.nvidia.com/en-us/data-center/dgx-platform">NVIDIA DGX platform</a>, which delivers the world’s leading solutions for enterprise AI development at scale, for several years.</p>
-<p>By leveraging their new NVIDIA DGX SuperPOD will help the company rapidly expand its on-premises AI infrastructure.</p>
-<p>The new system also underscores the company’s commitment to adopting new technologies and attracting top talent across the world to help drive its innovation agenda forward.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/finance-corp-blog-superpod-1280x680-2.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/finance-corp-blog-superpod-1280x680-2-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[BNY Mellon, First Global Bank to Deploy AI Supercomputer Powered by NVIDIA DGX SuperPOD With DGX H100]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
