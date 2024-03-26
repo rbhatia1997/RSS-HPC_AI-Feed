@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 20 Mar 2024 12:57:58 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 26 Mar 2024 13:21:20 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,84 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Renewable energy transition: examining the impacts of wind energy through simulation</title>
+		<link>https://aws.amazon.com/blogs/hpc/renewable-energy-transition-examining-the-impacts-of-wind-energy-through-simulation/</link>
+		
+		<dc:creator><![CDATA[Remco Verzijlbergh]]></dc:creator>
+		<pubDate>Tue, 26 Mar 2024 13:21:20 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Amazon FSx for Lustre]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[Sustainability]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">812815631cfcc972ff806cbc6735cc3480bc8fc4</guid>
+
+					<description>As we move towards a greener future, understanding wind energy's climate impacts is key. Check out this blog post by our friends at Whiffle, to learn how large-scale simulations reveal wind power's effect on our atmosphere.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright size-full wp-image-3403" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/06/Renewable-energy-transition-examining-the-impacts-of-wind-energy-through-simulation-mini.png" alt="Renewable energy transition: examining the impacts of wind energy through simulation" width="380" height="212"&gt;This post was contributed by&lt;/em&gt;&lt;em&gt; Remco&amp;nbsp;Verzijlbergh, co-founder and CEO, Peter Baas, &lt;/em&gt;&lt;em&gt;R&amp;amp;D Specialist &lt;/em&gt;&lt;em&gt;at&amp;nbsp;Whiffle, and Ilan Gleiser &lt;/em&gt;&lt;em&gt;Principal ML Specialist, &lt;/em&gt;&lt;em&gt;Milo Oostergo, Principal Startup SA, and Ross Pivovar Senior SA, Simulations at AWS&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;The world is currently facing a crucial turning point in the fight against climate change, and renewable energy sources like wind energy are playing a major role. As we continue to move towards a more sustainable future, it is important to understand the impacts of the anticipated large-scale roll-out of wind energy. This is where atmospheric model simulation comes into play.&lt;/p&gt; 
+&lt;p&gt;By performing large scale simulations on HPC clusters in the cloud, built using &amp;nbsp;Amazon EC2 P4d instances and powered by Nvidia A100 GPUs, we can get a better understanding of how wind energy affects our atmosphere and the environment as a whole.&lt;/p&gt; 
+&lt;p&gt;In this blog post, we’ll delve into the realm of simulations and explore the impact of wind energy on our planet.&lt;/p&gt; 
+&lt;h2&gt;The Rising Power of Wind Energy&lt;/h2&gt; 
+&lt;p&gt;In the quest for a sustainable future, wind energy has emerged as a powerful player in the fight against climate change. The rising power of wind energy has captured the attention of scientists, policymakers, and the general public alike. It has quickly become a driving force in the transition towards renewable sources of energy, and for good reason.&lt;/p&gt; 
+&lt;p&gt;Harnessing the power of wind is not a new concept. Humans have been utilizing wind energy for centuries, from simple windmills for grinding grains to more advanced wind turbines that generate electricity. However, it is only in recent decades that wind energy has gained significant momentum as a viable alternative to fossil fuels.&lt;/p&gt; 
+&lt;p&gt;One of the main reasons for the increasing popularity of wind energy is its environmental benefits. Unlike traditional energy sources such as coal or natural gas, wind energy does not produce harmful emissions or contribute to air pollution. This is a crucial advantage in the battle against climate change, as reducing greenhouse gas emissions is essential to mitigating its impact.&lt;/p&gt; 
+&lt;p&gt;Furthermore, wind energy is a renewable resource, meaning that it will never run out. As long as the wind keeps blowing, we can continue to harness its power. This is in stark contrast to fossil fuels, which are finite resources that will eventually be depleted.&lt;/p&gt; 
+&lt;p&gt;Another key factor driving the rise of wind energy is its economic potential. As technology has advanced, the cost of producing wind energy has steadily decreased. In fact, wind energy is now one of the cheapest sources of electricity in many parts of the world. This affordability, coupled with the growing demand for clean energy, has led to a boom in wind energy installations globally.&lt;/p&gt; 
+&lt;p&gt;In addition to its environmental and economic benefits, wind energy also has the potential to enhance energy security. Unlike fossil fuels, which are often imported from other countries, wind energy can be produced locally. This reduces dependence on foreign sources of energy and strengthens national energy independence.&lt;/p&gt; 
+&lt;p&gt;The increasing power of wind energy is evident in the rapid growth of wind farms around the world. These vast fields of turbines are capable of generating large amounts of electricity, powering homes, businesses, and even entire cities. As technology continues to advance, wind turbines are becoming more efficient and capable of harnessing even more energy from the wind.&lt;/p&gt; 
+&lt;p&gt;Harnessing wind energy has significant positive effects on the atmosphere. By replacing traditional energy sources with wind energy, we can reduce greenhouse gas emissions and combat climate change. Wind energy does not release carbon dioxide or other pollutants that contribute to air pollution and global warming.&lt;/p&gt; 
+&lt;p&gt;Moreover, wind energy can contribute to improved air quality. By reducing reliance on fossil fuels, which emit harmful pollutants such as sulfur dioxide and nitrogen oxide, wind energy helps to alleviate respiratory issues and promote healthier living conditions.&lt;/p&gt; 
+&lt;h2&gt;Unraveling the Data: Using Simulations to Predict Future Scenarios&lt;/h2&gt; 
+&lt;p&gt;As we strive for a greener future, simulations play a vital role in understanding the impacts of wind energy on our planet. Using superior computing power to solve the complexities of the weather with unparalleled accuracy, we can unravel the data and predict future scenarios. By simulating large-scale wind farms and analyzing the interaction with the atmosphere, we can gain valuable insights into the sustainability and environmental effects of renewable energy. These simulations offer a powerful tool for decision-making and policy development, ensuring a more informed and efficient transition to a sustainable energy future.&lt;/p&gt; 
+&lt;h2&gt;Who is Whiffle?&lt;/h2&gt; 
+&lt;p&gt;Whiffle services are designed to empower renewable energy industries and optimize operations by providing accurate meteorological forecasts, precise wind and solar power production forecasts, comprehensive wind resource modelling and detailed energy yield assessments. They are the driving force behind the revolutionary &lt;a href="https://whiffle.nl/solutions/whiffle-wind/"&gt;Whiffle Wind web app&lt;/a&gt;, which is significant in renewable energy development. With their cutting-edge Large-Eddy Simulation (LES)-powered weather Computational Fluid Dynamics (CFD) modelling technology, Whiffle is helping to pave the way for a greener and more sustainable future.&lt;/p&gt; 
+&lt;p&gt;What sets Whiffle Wind apart is its &lt;a href="https://whiffle.nl/solutions/whiffle-wind/"&gt;user-friendly interface&lt;/a&gt;, in contrast to traditional weather-modeling software which is often complicated and cumbersome. Whiffle Wind makes it easier to access and interpret the data with relative ease, making it a valuable tool for professionals and enthusiasts alike.&lt;/p&gt; 
+&lt;p&gt;Whiffle’s ultra-high resolution atmospheric model is also important to renewable energy development and operations. While traditional weather models work with grid blocks of 10 by 10 kilometers, Whiffle works on a resolution of 100 x 100 meters – a hundred times more information density on all weather-defining factors. With its hyper-local forecasts and simulations, Whiffle can help businesses plan for adverse weather events, ensuring the safety and efficiency of renewable energy operations.&lt;/p&gt; 
+&lt;p&gt;Whiffle’s stack can also deliver highly accurate predictions, allowing businesses to optimize their operational performance. Whiffle’s model includes elements like buildings and trees. High-resolution digital terrain models are used to allow for detailed simulation in complex terrain. Users can upload wind turbines at any desired location to assess their energy production. As a full-blown weather model, Whiffle’s LES also calculates cloud coverage, which allows for detailed solar radiation predictions. &amp;nbsp;This means that whether you need to consider wind farms or solar installations, Whiffle can help you to get the insights you need for making informed decisions.&lt;/p&gt; 
+&lt;p&gt;Core to Whiffle’s technology is &lt;strong&gt;Large-Eddy Simulation&lt;/strong&gt; (LES). This advanced approach to weather modelling follows the laws of atmospheric physics very closely, allowing for detailed simulations of turbulent atmospheric flows. By capturing the small-scale processes that traditional numerical weather prediction models miss, Whiffle can provide a more comprehensive understanding of weather conditions.&lt;/p&gt; 
+&lt;div id="attachment_3399" style="width: 703px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3399" loading="lazy" class="size-full wp-image-3399" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/06/CleanShot-2024-03-06-at-13.57.44.png" alt="Fig 1. Achieve accuracy tailored to your specific site requirements, irrespective of terrain complexity, location or the intricacies of wind turbine clusters." width="693" height="749"&gt;
+ &lt;p id="caption-attachment-3399" class="wp-caption-text"&gt;Fig 1. Achieve accuracy tailored to your specific site requirements, irrespective of terrain complexity, location or the intricacies of wind turbine clusters.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Delving into large-scale wind farms: impact and sustainability&lt;/h2&gt; 
+&lt;p&gt;As the renewable energy transition gains momentum, the installation of large-scale wind farms is becoming increasingly common. For example, the installed capacity of offshore wind energy in the Dutch part of the North Sea is expected to grow dramatically in the next few decades. Several research institutes and the Dutch government are examining scenarios with up to 100 GW (around 5,000 to 10,000 large wind turbines) of offshore wind in 2050. For comparison: the currently installed capacity is around 5 GW, so this means a 20-fold increase.&lt;/p&gt; 
+&lt;p&gt;However, the impact of such a large-scale roll-out of wind energy on the atmosphere and vice versa is highly uncertain. Understanding these interactions is crucial for the wind energy sector and policy makers as they strive to develop sustainable and environmentally friendly solutions.&lt;/p&gt; 
+&lt;p&gt;This is where the &lt;a href="https://wins50.nl/"&gt;WINS50&lt;/a&gt; project comes into play. The project, carried out by Whiffle,&amp;nbsp;&lt;a href="https://wins50.nl/projectpartners"&gt;TU Delft&lt;/a&gt;&amp;nbsp;and&amp;nbsp;&lt;a href="https://wins50.nl/projectpartners"&gt;KNMI, &lt;/a&gt;aims to reduce uncertainties surrounding the interaction between a large-scale roll-out of offshore wind energy and the atmosphere. To achieve this, the project uses Whiffle’s high-resolution turbine-resolving weather model, GRASP. With this advanced model, researchers from Whiffle are simulating the entire Dutch North Sea with the currently-installed wind power capacity &lt;em&gt;and&lt;/em&gt; with the projected 2050 capacity. The data they produce will be made available to the wind energy sector and will be used for in-depth studies.&lt;/p&gt; 
+&lt;p&gt;Within the WINS50 project, a multi-GPU LES model has been developed to enable computational domains of hundreds by hundreds of kilometers. This model will provide even more detailed and accurate information about the atmospheric interactions of large-scale wind farms, helping to inform future decision-making and policy development.&lt;/p&gt; 
+&lt;p&gt;With the combination of advanced simulation models and the collaboration between research institutes and the wind energy sector, we can gain a deeper understanding of the impact and sustainability of large-scale wind farms. By reducing uncertainties and improving our knowledge, we can continue to drive the renewable energy transition forward and create a greener and more sustainable future for all.&lt;/p&gt; 
+&lt;h2&gt;Reference Architecture&lt;/h2&gt; 
+&lt;div id="attachment_3400" style="width: 914px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3400" loading="lazy" class="size-full wp-image-3400" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/06/CleanShot-2024-03-06-at-13.58.30.png" alt=" Fig 2. AWS High Performance Compute reference architecture comprised of multi GPU AWS Parallel Cluster open-source tool that builds a complete HPC environment with all the benefits of the cloud built-in." width="904" height="412"&gt;
+ &lt;p id="caption-attachment-3400" class="wp-caption-text"&gt;&lt;br&gt;Fig 2. AWS High Performance Compute reference architecture comprised of multi GPU AWS Parallel Cluster open-source tool that builds a complete HPC environment with all the benefits of the cloud built-in.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;To run the simulations, Whiffle used&amp;nbsp;&lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt;&amp;nbsp;– a fully-supported open-source tool that builds a complete HPC environment with all the benefits of the cloud built-in. That includes the elasticity to scale horizontally (and contract) based on need, instant access to the latest technologies (CPUs, GPUs, and accelerators), and the flexibility to iterate resource selection in minutes to optimize costs or squeeze out better performance.&lt;/p&gt; 
+&lt;p&gt;For the cluster configuration, Whiffle used a single queue with four&lt;a href="https://aws.amazon.com/ec2/instance-types/p4/"&gt; P4d&lt;/a&gt; instances that are each powered by eight GPUs. The NVSwitch GPU interconnect enables each GPU to communicate with every other GPU in the same instance with 600 GB/s bidirectional throughput and single-hop latency.&lt;/p&gt; 
+&lt;p&gt;Whiffle’s testing showed that the LES model scaled extremely well when run with 8 GPUs in parallel. It supports their philosophy of keeping the model architecture as simple as possible so they can quickly adopt advances in computing and cloud infrastructures. As the performance of parallel GPU compute resources grow, we can all start planning for continental or global scale weather forecasting on a 100m resolution in the future.&lt;/p&gt; 
+&lt;p&gt;The data set and simulation results are stored on &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; which is mounted on the head node and compute nodes, and provides sub-millisecond latencies, high throughput, and millions of IOPS.&lt;/p&gt; 
+&lt;p&gt;The final results from the simulation are stored in &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Service&lt;/a&gt; (Amazon S3) after post-processing.&lt;/p&gt; 
+&lt;h2&gt;The dataset&lt;/h2&gt; 
+&lt;p&gt;The dataset is the result from the WINS50 LES described above and it’s &lt;a href="https://registry.opendata.aws/whiffle-wins50/"&gt;available in the Registry of Open Data on AWS&lt;/a&gt;. It’s approximately 40TB in size, and consists of three types of data:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Three-dimensional meteorological data over the entire domain at an hourly resolution for selected heights above the surface. Variables included here are wind speed, wind direction, temperature, etc. In addition, surface variables such as the surface pressure of downward solar radiation are available in two-dimensional format at hourly resolution.&lt;/li&gt; 
+ &lt;li&gt;For 600 locations distributed over the domain many meteorological variables are provided over the entire atmospheric column with a 10-minute resolution. Turbine data gives energy production, wind speed and thrust for all the simulated turbines, i.e. more than 10,000 for the 2050 scenario. Turbine data is available at 5-minute resolution.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;There are many possible use cases for the data, including scientific fields from the atmospheric sciences and energy system sciences, too. Within the energy sector, the data can inform grid operators, wind farm owners, developers of new wind farms and energy traders. Finally, the data can be used to train AI based models, opening more use cases where computationally-fast models are required.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;As we forge ahead in the renewable energy transition, there are bound to be both opportunities and challenges on the horizon. The growing popularity of wind energy presents a unique opportunity to transition towards a more sustainable future. By harnessing the power of the wind, we can significantly reduce our carbon footprint and combat climate change.&lt;/p&gt; 
+&lt;p&gt;Advancements in technology, like Whiffle’s simulation tools coupled with the use of HPC clusters on AWS, offer new avenues for improving the efficiency and accuracy of wind energy simulations.&lt;/p&gt; 
+&lt;p&gt;But there are challenges. Wildlife impact and visual concerns must be carefully addressed to ensure the widespread adoption of wind energy is safe and beneficial. Acknowledging these challenges and leveraging the power of simulation and HPC, we can work to achieve that.&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Choosing the right compute orchestration tool for your research workload</title>
 		<link>https://aws.amazon.com/blogs/hpc/choosing-the-right-compute-orchestration-tool-for-your-research-workload/</link>
 		
@@ -31,7 +109,7 @@
 		<guid isPermaLink="false">dacdd14c4bfac6c9245765550bc892676dd27683</guid>
 
 					<description>Running big research jobs on AWS but not sure where to start? We break down options like Batch, ECS, EKS, and others to pick the right tool for your needs. Lots of examples for genomics, ML, engineering, and more!</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright wp-image-3375 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/27/boofla88_a_scientist_choosing_between_several_options_manga_sty_6b82dff1-510f-404c-97aa-360c46741720.png" alt="Choosing the right compute orchestration tool for your research workload" width="380" height="212"&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright wp-image-3375 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/27/boofla88_a_scientist_choosing_between_several_options_manga_sty_6b82dff1-510f-404c-97aa-360c46741720.png" alt="Choosing the right compute orchestration tool for your research workload" width="380" height="212"&gt;&lt;/p&gt; 
 &lt;p&gt;Research organizations around the world run large-scale simulations, analyses, models, and other distributed, compute-intensive workloads on AWS every day. These jobs depend on an orchestration layer to coordinate tasks across the compute fleet.&lt;/p&gt; 
 &lt;p&gt;As a researcher or systems administrator providing services for researchers, it can be difficult to choose which AWS service or solution to use because there are various options for different kinds of workloads.&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll describe some typical research use cases and explain which AWS tool we think best fits that workload.&lt;/p&gt; 
@@ -2305,85 +2383,6 @@ print(r.text)
   &lt;p&gt;Nicole Diana is Director of research and development Verification for the computational fluids dynamics (CFD) product line at Ansys. She has over twenty-five years of experience in the development, verification, and application of Ansys CFD products.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Lattice Boltzmann simulation with Palabos on AWS using Graviton-based Amazon EC2 Hpc7g instances</title>
-		<link>https://aws.amazon.com/blogs/hpc/lattice-boltzmann-simulation-with-palabos-on-aws-using-graviton-based-amazon-ec2-hpc7g-instances/</link>
-		
-		<dc:creator><![CDATA[Jun Tang]]></dc:creator>
-		<pubDate>Wed, 08 Nov 2023 13:47:14 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<guid isPermaLink="false">ecb740a48f70c44fb346183b25ed64dbe70baea3</guid>
-
-					<description>In this post we’ll show you the performance when running the Parallel Lattice Boltzmann Solver (Palabos) on the latest generation of AWS Graviton CPUs in Hpc7g instances on AWS.</description>
-										<content:encoded>&lt;p&gt;Computational fluid dynamics (CFD) has grown over several decades to become a widely used tool to study a broad range of important industrial and academic problems, ranging from automotive and aircraft design to the study of blood flow inside the human body.&lt;/p&gt; 
-&lt;p&gt;Whilst traditional Navier-Stokes (NS) based codes using the finite-volume approach are still the most widely used, an alternative approach – the Lattice Boltzmann method (LBM) – has emerged in the last two decades. LBM methods are particularly attractive to both industry and academia.&lt;/p&gt; 
-&lt;p&gt;In this post we’ll show you the performance and cost benefits of running the Parallel Lattice Boltzmann Solver (&lt;em&gt;Palabos&lt;/em&gt;) [1] – a specific LBM solver – on the latest generation of Amazon Elastic Compute Cloud instances based on the AWS Graviton.&lt;/p&gt; 
-&lt;p&gt;Palabos is an open-source, C++ solver developed by the University of Geneva. It’s designed to run and scale efficiently on HPC clusters. Palabos is a highly versatile computational tool and has been widely used in the LBM community and is often a reference implementation for many Lattice Boltzmann models.&lt;/p&gt; 
-&lt;h2&gt;Lattice Boltzmann models (LBMs)&lt;/h2&gt; 
-&lt;p&gt;We mentioned LBMs are popular with both industry and academia. There are several reasons for this.&lt;/p&gt; 
-&lt;p&gt;First, they’re flexible. You can model complex geometries whether they’re stationary or moving. Second, they suffer from minimal numerical dissipation, which makes them ideal for high-fidelity scale-resolving methods and aeroacoustics.&lt;/p&gt; 
-&lt;p&gt;They also have superior computational performance, which stems from two key characteristics: data locality, and the fact that they’re easier to vectorize and set up for multithreading (on both CPUs and GPUs) compared to NS-based methods.&lt;/p&gt; 
-&lt;p&gt;To illustrate these points, we’re going to show you how Palabos simulates blood flows [2][3] that can help researchers better understand vascular diseases and cancer cell movement through blood vessels. This can also provide a controlled environment to evaluate different treatment options.&lt;/p&gt; 
-&lt;p&gt;There’s another reason LBMs are interesting. Given they’re highly scalable, researchers can run them on thousands or tens of thousands of cores to either get answers very quickly, or drive up the fidelity of the simulations themselves – or often both. But the availability of HPC resources can potentially become a bottleneck for many. As you can imagine, that causes a lot of researchers to look for large scale resources beyond their usual environments: enter AWS which can offer all the additional capacity they’re asking for. It’s also robust, secure by design, low cost and incredibly flexible.&lt;/p&gt; 
-&lt;h2&gt;Introducing AWS Graviton3E&lt;/h2&gt; 
-&lt;p&gt;Amazon EC2 offers hundreds of instance types optimized to fit different use cases. Instances vary based on CPU, memory, storage, and networking bandwidth giving customers the flexibility to choose the right mix of resources for their applications.&lt;/p&gt; 
-&lt;p&gt;Amazon EC2 Hpc7g instances are the &lt;a href="https://aws.amazon.com/blogs/hpc/application-deep-dive-into-the-graviton3e-based-amazon-ec2-hpc7g-instance/"&gt;latest addition&lt;/a&gt; to the extended family of Graviton-based EC2 instances. They carry DDR5 memory with an AWS Graviton3E processor, and 200Gbps low-latency networking delivered by Elastic Fabric Adapter – especially important when you’re scaling to a large number of instances.&lt;a href="https://aws.amazon.com/blogs/aws/new-amazon-ec2-hpc7g-instances-powered-by-aws-graviton3e-processors-optimized-for-high-performance-computing-workloads/"&gt; They also consume up to 60% less energy&lt;/a&gt; for the same workloads than other comparable x86-based instances tailored for HPC applications – this is great for the planet.&lt;/p&gt; 
-&lt;p&gt;In &lt;a href="https://aws.amazon.com/blogs/hpc/application-deep-dive-into-the-graviton3e-based-amazon-ec2-hpc7g-instance/"&gt;an earlier&amp;nbsp;post&lt;/a&gt;, we published some performance results for real world workloads from CFD, finite-element analysis (FEA), molecular dynamics, and numerical weather prediction (NWP).&lt;/p&gt; 
-&lt;p&gt;For this post, we compared Palabos performance across two HPC instance types offered by AWS and&amp;nbsp;we found that Hpc7g has competitive performance. In our tests, Hpc7g delivered up to&amp;nbsp;75% better performance and up to 3x better &lt;em&gt;price-performance&lt;/em&gt; compared to the previous generation Graviton instances (C6gn).&lt;/p&gt; 
-&lt;h2&gt;Benchmark simulation result and performance&lt;/h2&gt; 
-&lt;p&gt;For our tests, we used two instance types: Hpc7g.16xlarge (the latest processor in Graviton family customized for HPC applications) and C6gn.16xlarge (the previous generation processor in Graviton family).&amp;nbsp;We used AWS ParallelCluster to launch our environment, manage these fleets, and provide an Amazon FSx for Lustre (a popular parallel file system). ParallelCluster uses Slurm for its workload manager, making it familiar and easier to use. There’s an example ParallelCluster configuration file in &lt;a href="https://github.com/aws/aws-graviton-getting-started/blob/main/HPC/scripts-setup/hpc7g-ubuntu2004-useast1.yaml"&gt;the Graviton HPC best practices guide&lt;/a&gt;. You can also find a one-click launchable recipe in the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipes Library&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3&gt;Cavity 3D benchmark&lt;/h3&gt; 
-&lt;p&gt;In our first test, we used the “&lt;a href="https://gitlab.unige.ch/hpc/benchmark-aimp-2022/-/blob/main/Palabos/README.md"&gt;lid-driven cavity problem in a cuboid&lt;/a&gt;”, a three-dimension benchmark with 1 billion cells (1001x1001x1001). The top wall moves to the right with a constant velocity, while the other walls are stationary. Figure 1 is a snapshot of the simulated velocity field at 10.1 sec. We used Palabos v2.3.0, compiled with GNU Compiler v11.1.0 and Open MPI v4.1.4.&lt;/p&gt; 
-&lt;div id="attachment_3081" style="width: 767px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3081" loading="lazy" class="size-full wp-image-3081" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.24.40.png" alt="Figure 1. A display of Palabos output velocity field at 10.1 sec for the three-dimension lid driven cavity problem. Arrow shows flow direction and speed." width="757" height="495"&gt;
- &lt;p id="caption-attachment-3081" class="wp-caption-text"&gt;Figure 1. A display of Palabos output velocity field at 10.1 sec for the three-dimension lid driven cavity problem. Arrow shows flow direction and speed.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We ran the same benchmark on both Hpc7g and C6gn scaling from 2 to 128 instances (8192cores) in both cases. We calculated throughput in &lt;em&gt;million site updates per second&lt;/em&gt; (MLUPS)&amp;nbsp;which we’ve shown in Table 1.&lt;/p&gt; 
-&lt;p&gt;At 8192 cores, the solver maintains a strong scaling efficiency of 60% on Hpc7g (Figure 2), which also had 75% higher throughput than the previous generation Graviton 2 (C6gn) instance. The simulation cost on Hpc7g is close to 1/3 of the cost of doing it on C6gn (Figure 3).&lt;/p&gt; 
-&lt;div id="attachment_3082" style="width: 564px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3082" loading="lazy" class="size-full wp-image-3082" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.25.27.png" alt="Table 1. Cavity 3D benchmark performance (higher is better)" width="554" height="306"&gt;
- &lt;p id="caption-attachment-3082" class="wp-caption-text"&gt;Table 1. Cavity 3D benchmark performance (higher is better)&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_3083" style="width: 758px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3083" loading="lazy" class="size-full wp-image-3083" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.26.07.png" alt="Figure 2. Cavity 3D benchmark throughput (higher is better) on our two instance types; Hpc7g shows good efficiency at 8192 cores for this strong scaling test." width="748" height="561"&gt;
- &lt;p id="caption-attachment-3083" class="wp-caption-text"&gt;Figure 2. Cavity 3D benchmark throughput (higher is better) on our two instance types; Hpc7g shows good efficiency at 8192 cores for this strong scaling test.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_3084" style="width: 760px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3084" loading="lazy" class="size-full wp-image-3084" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.26.33.png" alt="Figure 3. Cavity 3D benchmark cost for 10000 iterations on our two instance types, lower is better." width="750" height="564"&gt;
- &lt;p id="caption-attachment-3084" class="wp-caption-text"&gt;Figure 3. Cavity 3D benchmark cost for 10000 iterations on our two instance types, lower is better.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Cellular blood flow simulation benchmark&lt;/h3&gt; 
-&lt;p&gt;Next, we studied the &lt;em&gt;cellular blood computation&lt;/em&gt;, which has three components: the &lt;em&gt;fluid solver&lt;/em&gt;, the &lt;em&gt;solid solver,&lt;/em&gt; and the &lt;em&gt;fluid-solid interaction&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;The fluid solver solves the weakly-compressible Navier-Stokes equations. The solid solver, based on nodal projective finite elements method (npFEM) resolves the trajectories and deformations of the blood cells. And the fluid-solid interaction is loosely coupled through an immersed boundary condition.&lt;/p&gt; 
-&lt;p&gt;The result of this hybrid simulation is shown in Figure 4.&amp;nbsp;For &lt;a href="https://gitlab.com/unigespc/palabos/-/blob/master/examples/showCases/bloodFlowDefoBodies/README.md?ref_type=heads"&gt;this second benchmark&lt;/a&gt;, we simulated the blood flow in a 50x50x50um cube with 476 red blood cells (RBCs) and 95 platelets (PLTs).&lt;/p&gt; 
-&lt;div id="attachment_3085" style="width: 767px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3085" loading="lazy" class="size-full wp-image-3085" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.27.17.png" alt="Figure 4. Hybrid simulation of blood plasma (Palabos) and deformable RBCs/PLTs (npFEM)." width="757" height="533"&gt;
- &lt;p id="caption-attachment-3085" class="wp-caption-text"&gt;Figure 4. Hybrid simulation of blood plasma (Palabos) and deformable RBCs/PLTs (npFEM).&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Table 2 and Figure 5 show the performance in the number of iterations we can simulate &lt;em&gt;per minute&lt;/em&gt; (so higher is better).&lt;/p&gt; 
-&lt;p&gt;Hpc7g delivered up to 50% better performance and 2.45x better price-performance over C6gn for these tests.&lt;/p&gt; 
-&lt;div id="attachment_3086" style="width: 678px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3086" loading="lazy" class="size-full wp-image-3086" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.27.55.png" alt="Table 2. Cellular bloodFlow benchmark throughput (higher is better)" width="668" height="211"&gt;
- &lt;p id="caption-attachment-3086" class="wp-caption-text"&gt;Table 2. Cellular bloodFlow benchmark throughput (higher is better)&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_3087" style="width: 717px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3087" loading="lazy" class="size-full wp-image-3087" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/07/CleanShot-2023-11-07-at-16.30.23.png" alt="Figure 5. Cellular blood flow benchmark throughput (higher is better) on our two instance types." width="707" height="552"&gt;
- &lt;p id="caption-attachment-3087" class="wp-caption-text"&gt;Figure 5. Cellular blood flow benchmark throughput (higher is better) on our two instance types.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusions&lt;/h2&gt; 
-&lt;p&gt;In this post we showed you that a popular LBM code can be easily run on Graviton-based Amazon EC2 instances with up to 8192 cores. The Amazon EC2 Hpc7g instances showed up to 70% better performance and up to 3x better price-performance over the previous generation Graviton instances for Palabos.&lt;/p&gt; 
-&lt;p&gt;The 3D Cavity benchmark scaled efficiently on Hpc7g instances up to 8192&amp;nbsp;cores and we think this illustrates how the combination of a computationally efficiency code, and large-scale cloud HPC facility can enable you to run larger cases than you could likely complete using limited on-prem HPC resources.&lt;/p&gt; 
-&lt;p&gt;You can find the instructions to set up and run HPC applications on Graviton in our &lt;a href="https://github.com/aws/aws-graviton-getting-started/tree/main/HPC"&gt;best practice guide&lt;/a&gt;. And you can find easy to consume recipes for building clusters to suite your taste in the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipe Library&lt;/a&gt;. These are open source projects on GitHub so you can &lt;a href="https://github.com/aws/aws-graviton-getting-started/issues"&gt;let us know&lt;/a&gt; directly if you run into any technical issues. Let us know how you get on.&lt;/p&gt; 
-&lt;h2&gt;References&lt;/h2&gt; 
-&lt;p&gt;[1] Latt, J., Malaspinas, O., Kontaxakis, D., Parmigiani, A., Lagrava, D., Brogi, F., Belgacem, M. B., Thorimbert, Y., Leclaire, S., Li, S., Marson, F., Lemus, J., Kotsalos, C., Conradin, R., Coreixas, C., Petkantchin, R., Raynaud, F., Beny, J., &amp;amp; Chopard, B. (2021). &lt;a href="https://www.sciencedirect.com/science/article/pii/S0898122120301267?via%3Dihub"&gt;Palabos: Parallel lattice boltzmann solver&lt;/a&gt;. Computers and Mathematics with Applications, 81, 334–350. https://doi.org/10.1016/j.camwa.2020.03.022&lt;/p&gt; 
-&lt;p&gt;[2] Kotsalos, C., Latt, J., Beny, J., &amp;amp; Chopard, B. (2020). &lt;a href="https://arxiv.org/abs/1911.03062"&gt;Digital Blood in massively parallel CPU/GPU systems for the study of platelet transport.&lt;/a&gt; Interface Focus, 11(1), 20190116. https://doi.org/10.1098/rsfs.2019.0116&lt;/p&gt; 
-&lt;p&gt;[3] Zavodszky, G., van Rooij, B., Azizi, V., Alowayyed, S., &amp;amp; Hoekstra, A. (2017). &lt;a href="https://www.sciencedirect.com/science/article/pii/S1877050917306245"&gt;Hemocell: A high-performance microscopic cellular library&lt;/a&gt;. &lt;em&gt;Procedia Computer Science&lt;/em&gt;, &lt;em&gt;108&lt;/em&gt;, 159–165. https://doi.org/10.1016/j.procs.2017.05.084&lt;/p&gt;</content:encoded>
 					
 		
 		
