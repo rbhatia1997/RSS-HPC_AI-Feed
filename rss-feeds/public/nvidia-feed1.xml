@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 26 Mar 2024 02:23:10 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 26 Mar 2024 17:06:44 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,152 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>Model Innovators: How Digital Twins Are Making Industries More Efficient</title>
+		<link>https://blogs.nvidia.com/blog/digital-twins-modulus-wistron/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Tue, 26 Mar 2024 15:00:51 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Digital Twin]]></category>
+		<category><![CDATA[Industrial and Manufacturing]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[NVIDIA in Europe]]></category>
+		<category><![CDATA[NVIDIA Modulus]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70673</guid>
+
+					<description><![CDATA[A manufacturing plant near Hsinchu, Taiwan’s Silicon Valley, is among facilities worldwide boosting energy efficiency with AI-enabled digital twins. A virtual model can help streamline operations, maximizing throughput for its physical counterpart, say engineers at Wistron, a global designer and manufacturer of computers and electronics systems. In the first of several use cases, the company		<a class="read-more" href="https://blogs.nvidia.com/blog/digital-twins-modulus-wistron/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>A manufacturing plant near Hsinchu, Taiwan’s Silicon Valley, is among facilities worldwide boosting <a href="https://www.nvidia.com/en-us/glossary/energy-efficiency/">energy efficiency</a> with AI-enabled digital twins.</p>
+<p>A virtual model can help streamline operations, maximizing throughput for its physical counterpart, say engineers at Wistron, a global designer and manufacturer of computers and electronics systems.</p>
+<p>In the first of several use cases, the company built a digital copy of a room where <a href="https://www.nvidia.com/en-gb/data-center/dgx-systems/">NVIDIA DGX systems</a> undergo thermal stress tests (pictured above). Early results were impressive.</p>
+<h2><b>Making Smart Simulations</b></h2>
+<p>Using <a href="https://developer.nvidia.com/modulus">NVIDIA Modulus</a>, a framework for building AI models that understand the laws of physics, Wistron created digital twins that let them accurately predict the airflow and temperature in test facilities that must remain between 27 and 32 degrees C.</p>
+<p>A simulation that would’ve taken nearly 15 hours with traditional methods on a CPU took just 3.3 seconds on an NVIDIA GPU running inference with an AI model developed using Modulus, a whopping 15,000x speedup.</p>
+<p>The results were fed into tools and applications built by Wistron developers with <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform for creating 3D workflows and applications based on OpenUSD.</p>
+<figure id="attachment_70847" aria-describedby="caption-attachment-70847" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-scaled.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-70847" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-672x357.jpg" alt="Bird's eye view of Wistron's digital twin" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-400x212.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-1536x816.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Wistron-simulated-test-room-KV2-1-1280x680.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70847" class="wp-caption-text">A bird&#8217;s eye view of Wistron&#8217;s digital twin</figcaption></figure>
+<p>With their Omniverse-powered software, Wistron created realistic and immersive simulations that operators interact with via VR headsets. And thanks to the AI models they developed using Modulus, the airflows in the simulation obey the laws of physics.</p>
+<p>“Physics-informed models let us control the test process and the room’s temperature remotely in near real time, saving time and energy,” said John Lu, a manufacturing operations director at Wistron.</p>
+<p>Specifically, Wistron combined separate models for predicting air temperature and airflow to eliminate risks of overheating in the test room. It also created a recommendation system to identify the best locations to test computer baseboards.</p>
+<p>The digital twin, linked to thousands of networked sensors, enabled Wistron to increase the facility’s overall energy efficiency up to 10%. That amounts to using up to 121,600 kWh less electricity a year, reducing carbon emissions by a whopping 60,192 kilograms.</p>
+<h2><b>An Expanding Effort</b></h2>
+<p>Currently, the group is expanding its AI model to track more than a hundred variables in a space that holds 50 computer racks. The team is also simulating all the mechanical details of the servers and testers.</p>
+<p>“The final model will help us optimize test scheduling as well as the energy efficiency of the facilities’ air conditioning system,” said Derek Lai, a Wistron technical supervisor with expertise in physics-informed neural networks.</p>
+<p>Looking ahead, “The tools and applications we’re building with Omniverse help us improve the layout of our DGX factories to provide the best throughput, further improving efficiency,” said Liu.</p>
+<h2><b>Efficiently Generating Energy</b></h2>
+<p>Half a world away, Siemens Energy is demonstrating the power of digital industrialization using Modulus and Omniverse.</p>
+<p>The Munich-based company, whose technology generates one-sixth of the world’s electricity, achieved a 10,000x speedup simulating a heat-recovery steam generator using a physics-informed AI model (see video below).</p>
+<p>Using a digital twin to detect corrosion early on, these massive systems can reduce downtime by 70%, potentially saving the industry $1.7 billion annually compared to a standard simulation that took half a month.</p>
+<p>“The reduced computational time enables us to develop <a href="https://nvdam.widen.net/s/6qxcqjqhmj/energy-efficiency-solution-brief-physics-ml-simulations-cta-2746611">energy-efficient digital twins</a> for a sustainable, reliable and affordable energy ecosystem,” said Georg Rollmann, head of advanced analytics and AI at Siemens Energy.</p>
+<p><iframe title="Siemens Energy HRSG Digital Twin Simulation Using NVIDIA Modulus and Omniverse" width="500" height="281" src="https://www.youtube.com/embed/JLboPXn6sKI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>Digital Twins Drive Science and Industry</b></h2>
+<p>Automotive companies are applying the technology to the design of new cars and manufacturing plants. Scientists are using it in fields as diverse as astrophysics, genomics and weather forecasting. It’s even being used to create a <a href="https://blogs.nvidia.com/blog/digital-twins-climate-collaboration/">digital twin of Earth</a> to understand and mitigate the impacts of climate change.</p>
+<p>Every year, physics simulations, typically run on supercomputer-class systems, consume an estimated 200 billion CPU core hours and 4 terawatt hours of energy. Physics-informed AI is accelerating these complex workflows 200x on average, saving time, cost and energy.</p>
+<p>For more insights, listen to a <a href="https://www.nvidia.com/gtc/session-catalog/?search=Wistron&amp;tab.allsessions=1700692987788001F1cG&amp;search=Wistron#/session/1696527142214001ZTwl">talk</a> from GTC describing Wistron’s work and <a href="https://www.nvidia.com/gtc/session-catalog/?search=Wistron&amp;tab.allsessions=1700692987788001F1cG&amp;search=Wistron#/session/1698243453095001ZyfC">a panel</a> about industries using generative AI.</p>
+<p>Learn more about the <a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/">impact accelerated computing is having on sustainability</a>.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Final-image-of-Wistrons-digital-twin-of-a-test-room.png"
+			type="image/png"
+			width="1920"
+			height="1021"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Final-image-of-Wistrons-digital-twin-of-a-test-room-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Model Innovators: How Digital Twins Are Making Industries More Efficient]]></media:title>
+			<media:description type="html">Image from Wistron&#039;s digital twin of a testing room</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Into the Omniverse: Groundbreaking OpenUSD Advancements Put NVIDIA GTC Spotlight on Developers</title>
+		<link>https://blogs.nvidia.com/blog/openusd-advancements-gtc-developers/</link>
+		
+		<dc:creator><![CDATA[Greer Hoyem]]></dc:creator>
+		<pubDate>Tue, 26 Mar 2024 13:00:50 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Digital Twin]]></category>
+		<category><![CDATA[GTC 2024]]></category>
+		<category><![CDATA[Into the Omniverse]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Universal Scene Description]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70752</guid>
+
+					<description><![CDATA[Editor’s note: This post is part of Into the Omniverse, a series focused on how artists, developers and enterprises can transform their workflows using the latest advances in OpenUSD and NVIDIA Omniverse. The Universal Scene Description framework, aka OpenUSD, has emerged as a game-changer for building virtual worlds and accelerating creative workflows. It can ease		<a class="read-more" href="https://blogs.nvidia.com/blog/openusd-advancements-gtc-developers/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of </i><a href="https://www.nvidia.com/en-us/omniverse/news/"><i>Into the Omniverse</i></a><i>, a series focused on how artists, developers and enterprises can transform their workflows using the latest advances in </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>OpenUSD</i></a><i> and </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>NVIDIA Omniverse</i></a><i>.</i></p>
+<p>The Universal Scene Description framework, aka <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a>, has emerged as a game-changer for building virtual worlds and accelerating creative workflows. It can ease the handling of complex datasets, facilitate collaboration and enable seamless interoperability between 3D applications.</p>
+<p>The latest news and demos from <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, a global AI conference that ran last week, put on display the power developers gain from <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> — a platform of application programming interfaces (APIs) and software development kits (SDKs) that enable them to build 3D pipelines, tools, applications and services.<b><br />
+</b><br />
+Newly announced <a href="https://nvidianews.nvidia.com/news/omniverse-cloud-apis-industrial-digital-twin">NVIDIA Omniverse Cloud APIs</a>, coming first to <a href="https://www.youtube.com/watch?v=3hLEj0i7fug" target="_blank" rel="noopener">Microsoft Azure</a>, allow developers to send their OpenUSD industrial scenes from content-creation applications to the <a href="https://www.nvidia.com/en-us/omniverse/solutions/stream-3d-apps/">NVIDIA Graphics Delivery Network</a>.</p>
+<p>Such a workflow was showcased in a demo featuring an interactive car configurator application, developed by computer-generated-imagery studio Katana using Omniverse, streamed in full fidelity to an <a href="https://blogs.nvidia.com/blog/omniverse-apple-vision-pro/">Apple Vision Pro</a>’s high-resolution display. A designer wearing the Vision Pro toggled through paint and trim options, and even entered the vehicle.</p>
+<p><iframe title="Develop 3D Product Configurators With Generative AI and OpenUSD" width="500" height="281" src="https://www.youtube.com/embed/LAVXuDK83iA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p>In a <a href="https://youtu.be/h30brb7-taU" target="_blank" rel="noopener">separate demo</a>, Dassault Systèmes showcased, using its 3DEXCITE portfolio, a powerful web-based application for 3D data preparation supercharged with NVIDIA AI and Omniverse Cloud APIs to deliver new generative storytelling capabilities.</p>
+<p>OpenUSD also played a part in the announcement of NVIDIA’s latest <a href="https://blogs.nvidia.com/blog/omniverse-next-gen-data-center/">AI supercomputer</a>, a powerful cluster based on the NVIDIA GB200 NVL72 liquid-cooled system, which was showcased as a <a href="https://www.nvidia.com/en-us/omniverse/solutions/digital-twins/">digital twin</a> in Omniverse.</p>
+<p>Engineers unified and visualized multiple computer-aided design datasets with full physical accuracy and photorealism using OpenUSD through the Cadence Reality digital twin platform, powered by Omniverse APIs. The technologies together provided a powerful computing platform for developing OpenUSD-based 3D tools, workflows and applications.</p>
+<p><iframe loading="lazy" title="Accelerating Data Center Design With Digital Twins" width="500" height="281" src="https://www.youtube.com/embed/h68kXLIRilM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><a href="https://blogs.nvidia.com/blog/siemens-immersive-visualization-generative-ai/">Siemens</a> announced it has integrated OpenUSD into its Xcelerator platform applications via Omniverse Cloud APIs, enabling its customers to unify their 3D data and services in digital twins with physically based rendering.</p>
+<p>A demo showcased how ship manufacturer HD Hyundai used Siemens’ Teamcenter X, which is part of Xcelerator, to design digital twins of complex engineering projects, delivering accelerated collaboration, minimized workflow waste, time and cost savings, and reduced manufacturing defects.</p>
+<p><iframe loading="lazy" title="Siemens Teamcenter X Powered by NVIDIA Omniverse APIs" width="500" height="281" src="https://www.youtube.com/embed/rrb2tPHiLRo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<h2><b>OpenUSD Ecosystem Updates on Replay</b></h2>
+<p>The latest OpenUSD ecosystem updates shared at GTC include:</p>
+<ul>
+<li><a href="http://www.ansys.com/news-center/press-releases/3-18-24-ansys-and-nvidia-pioneer-next-era-of-cae" target="_blank" rel="noopener"><b>Ansys</b></a> is adopting OpenUSD and Omniverse Cloud APIs to enable data interoperability and <a href="https://www.nvidia.com/en-us/design-visualization/">NVIDIA RTX</a> visualization in technologies such as Ansys AVxcelerate for autonomous vehicles, Ansys Perceive EM for 6G simulation, and NVIDIA-accelerated solvers such as Ansys Fluent.</li>
+<li><a href="https://blog.3ds.com/brands/netvibes/dassault-systemes-collaborates-with-nvidia-to-showcase-the-future-of-storytelling-with-generative-ai" target="_blank" rel="noopener"><b>Dassault Systèmes</b></a> is using OpenUSD, Omniverse Cloud APIs and Shutterstock 3D AI Services for generative storytelling in 3DEXCITE applications.</li>
+<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=Continental&amp;tab.allsessions=1700692987788001F1cG#/session/1701169295496001kxqH" target="_blank" rel="noopener"><b>Continental</b></a> is developing an OpenUSD-based digital twin platform to optimize factory operations and speed time to market.</li>
+<li><a href="https://hxgn.biz/3VcFK1s" target="_blank" rel="noopener"><b>Hexagon</b></a> is integrating reality-capture sensors and digital-reality platforms with OpenUSD and Omniverse Cloud APIs for hyperrealistic simulation and visualization.</li>
+<li><a href="https://media.monks.com/articles/GTC-2024"><b>Media.Monks</b></a> is adopting Omniverse for a generative AI- and OpenUSD-enabled content-creation pipeline for scalable hyper-personalization.</li>
+<li><a href="https://news.microsoft.com/2024/03/18/microsoft-and-nvidia-announce-major-integrations-to-accelerate-generative-ai-for-enterprises-everywhere/"><b>Microsoft</b></a><span> is integrating Omniverse Cloud APIs with Microsoft Power BI, so factory operators can see real-time factory data overlaid on a 3D digital twin to speed up production.</span></li>
+<li><a href="https://rok.auto/4cg6fcg" target="_blank" rel="noopener"><b>Rockwell Automation</b></a> is using OpenUSD and Omniverse Cloud APIs for RTX-enabled visualization in industrial automation and digital transformation.</li>
+<li><a href="https://www.trimble.com/en/thought-leadership/3d-interoperability-and-standardization-improve-usd-workflows" target="_blank" rel="noopener"><b>Trimble</b></a> is enabling interactive NVIDIA Omniverse RTX viewers with Trimble model data using OpenUSD and Omniverse Cloud APIs.</li>
+<li><a href="https://www.youtube.com/watch?v=OAdqXZGUb70&amp;t=3s" target="_blank" rel="noopener"><b>Wistron</b></a> is building OpenUSD-based digital twins of <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/">NVIDIA DGX</a> and <a href="https://www.nvidia.com/en-us/data-center/hgx/">HGX</a> factories using custom software developed with Omniverse SDKs and APIs.</li>
+<li><a href="https://www.wpp.com/wpp-iq/2024/03/wpp-puts-itself-at-the-heart-of-collaborative-3d-worlds" target="_blank" rel="noopener"><b>WPP</b></a> is expanding its Omniverse Cloud-based OpenUSD and generative AI content-generation engine to the retail and consumer packaged goods sector.</li>
+</ul>
+<h2><b>Get Plugged In to the World of OpenUSD</b></h2>
+<p>Several GTC sessions expanded on the latest OpenUSD advancements. Register free to watch them on demand:</p>
+<ul>
+<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=big%20bang&amp;search=big+bang%2C+big%2Bbang&amp;tab.allsessions=1700692987788001F1cG#/session/1698243138347001uvVR"><b>The Big Bang of OpenUSD</b></a>: Hear from technical luminaries at Pixar, Adobe, Apple, Autodesk and NVIDIA on the potential of OpenUSD.</li>
+<li><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=62642#/session/1696633560488001qMg1"><b>An Introduction to OpenUSD</b></a>: Learn why OpenUSD is more than just a file format and how it can revolutionize 3D workflows.</li>
+<li><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=62169#/session/1695224451463001HXMF"><b>Mastering USD and Adobe Substance 3D</b></a>: Learn how to master real-world material capture, seamlessly integrate workflows with OpenUSD and enhance realism with Adobe Substance 3D.</li>
+<li><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=62483#/session/1696276623678001MzjX"><b>Enabling 3D Geospatial Workflows for Industrial Digital Twins</b></a>: Learn how Cesium is using OpenUSD to enable high-fidelity streaming and rendering for global-scale digital twins.</li>
+<li><a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=62783#/session/1698243453095001ZyfC"><b>Digitalizing the World’s Largest Industries With OpenUSD and Generative AI</b></a>: Explore how global industries are becoming software-defined.</li>
+</ul>
+<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, access </i><a href="https://developer.nvidia.com/usd"><i>OpenUSD</i></a><i> resources, and learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise</i><i> can connect your team</i></a><i>. Stay up to date on </i><a href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse"><i>X</i></a><i>. For more, join the </i><a href="https://www.nvidia.com/en-us/omniverse/community/"><i>Omniverse community</i></a><i> on the </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels. </i></p>
+<p><i>Featured image courtesy of Siemens, HD Hyundai.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/march-ito.png"
+			type="image/png"
+			width="1165"
+			height="651"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/march-ito-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Into the Omniverse: Groundbreaking OpenUSD Advancements Put NVIDIA GTC Spotlight on Developers]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA Blackwell and Automotive Industry Innovators Dazzle at NVIDIA GTC</title>
 		<link>https://blogs.nvidia.com/blog/blackwell-auto-ecosystem-gtc/</link>
 		
@@ -42,7 +188,7 @@
 <p>The NVIDIA Blackwell GPU architecture will be integrated into the <a href="https://nvidianews.nvidia.com/news/nvidia-drive-powers-next-generation-transportation">NVIDIA DRIVE Thor</a> centralized car computer to enable generative AI applications and immersive in-vehicle experiences. <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">Large language models</a> will be able to run in the car, enabling an intelligent copilot that understands and speaks in natural language.</p>
 <p><a href="https://nvidianews.nvidia.com/news/nvidia-drive-powers-next-generation-transportation">BYD</a>, the world’s largest electric-vehicle maker, announced it will adopt DRIVE Thor as the AI brain of its future fleets. In addition, the company will use NVIDIA’s AI infrastructure for cloud-based AI development and training, and the <a href="https://developer.nvidia.com/isaac">NVIDIA Isaac</a> and <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platforms to develop tools and applications for virtual factory planning and retail configurators. Hyper, Nuro, Plus, Waabi, WeRide and XPENG are also adopting DRIVE Thor.</p>
 <p>Learn more about the automotive ecosystem’s announcements at GTC:</p>
-<p><iframe title="Automotive Update from GTC 2024" width="500" height="281" src="https://www.youtube.com/embed/_wKNVMoMbrw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Automotive Update from GTC 2024" width="500" height="281" src="https://www.youtube.com/embed/_wKNVMoMbrw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>Some of the latest NVIDIA-powered vehicles displayed on the exhibition floor included:</p>
 <ul>
 <li>Aurora self-driving truck, already on the highways of Texas</li>
@@ -53,9 +199,9 @@
 <li>Volvo Cars EX90, its new fully electric, flagship SUV</li>
 <li>And WeRide’s Robobus, a new form of urban mobility.</li>
 </ul>
-<figure id="attachment_70774" aria-describedby="caption-attachment-70774" style="width: 672px" class="wp-caption alignnone"><img fetchpriority="high" decoding="async" class="wp-image-70774 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-672x491.png" alt="" width="672" height="491" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-672x491.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-400x292.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-768x562.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-1536x1123.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-615x450.png 615w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-294x215.png 294w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-137x100.png 137w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-1280x936.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass.png 1994w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70774" class="wp-caption-text">Mercedes-Benz Concept CLA Class.</figcaption></figure>
+<figure id="attachment_70774" aria-describedby="caption-attachment-70774" style="width: 672px" class="wp-caption alignnone"><img loading="lazy" decoding="async" class="wp-image-70774 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-672x491.png" alt="" width="672" height="491" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-672x491.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-400x292.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-768x562.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-1536x1123.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-615x450.png 615w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-294x215.png 294w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-137x100.png 137w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass-1280x936.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/mercedesbenzconceptclaclass.png 1994w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70774" class="wp-caption-text">Mercedes-Benz Concept CLA Class.</figcaption></figure>
 <p>The NVIDIA auto booth highlighted the wide adoption of the <a href="https://developer.nvidia.com/drive">NVIDIA DRIVE</a> platform, with displays featuring electronic control units from a variety of partners, including Bosch, Lenovo and ZEEKR.</p>
-<p><img decoding="async" class="alignnone wp-image-70783 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-672x352.png" alt="" width="672" height="352" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-672x352.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-400x209.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-768x402.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-1536x804.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-842x441.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-406x212.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-188x98.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-1280x670.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-70783 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-672x352.png" alt="" width="672" height="352" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-672x352.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-400x209.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-768x402.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-1536x804.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-842x441.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-406x212.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-188x98.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc-1280x670.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/autodisplaygtc.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></p>
 <p>A wide range of NVIDIA automotive partners, including <a href="https://www.ansys.com/news-center/press-releases/3-18-24-ansys-and-nvidia-pioneer-next-era-of-cae">Ansys</a>, <a href="https://www.foretellix.com/end-to-end-av-development-nvidia-omniverse/">Foretellix</a>, <a href="https://www.prnewswire.com/news-releases/lenovo-vehicle-computing-and-weride-forge-a-strategic-partnership-using-nvidia-drive-thor-platform-to-accelerate-autonomous-driving-302092408.html#:~:text=Lenovo%20Vehicle%20Computing%20and%20WeRide,Platform%20to%20Accelerate%20Autonomous%20Driving">Lenovo</a>, <a href="https://corp.mediatek.com/news-events/press-releases/mediatek-brings-advanced-ai-capabilities-to-vehicles-with-new-dimensity-auto-cockpit-chipsets-enabled-by-nvidia-technology">MediaTek</a>, <a href="https://www.prweb.com/releases/nodars-advanced-stereo-vision-technology-for-long-range-object-detection-and-enhanced-autonomous-driving-safety-now-supported-on-nvidia-drive-302091117.html">NODAR</a>, <a href="https://www.ovt.com/press-releases/omnivision-announces-automotive-image-sensor-with-theiacel-technology-now-compatible-with-nvidia-omniverse-for-autonomous-driving-development/">OMNIVISION</a>, <a href="https://www.businesswire.com/news/home/20240318765820/en/Plus-Advances-the-Development-of-Next-Generation-Vision-Models-Built-on-NVIDIA-DRIVE-for-AI-Processing-in-its-Self-Driving-Software">Plus</a>, <a href="https://www.accesswire.com/843254/seyond-to-expand-lidar-solutions-for-autonomous-vehicles-with-nvidia-driveworks-and-omniverse-integration">Seyond</a>, <a href="https://www.businesswire.com/news/home/20240318067099/en/SoundHound-to-Offer-On-Chip-Voice-AI-with-NVIDIA-That-Delivers-In-Vehicle-Generative-AI-Responses-With-No-Connectivity-Required">SoundHound</a>, <a href="https://www.prnewswire.com/news-releases/voxel51-accelerates-autonomous-vehicle-development-with-nvidia-omniverse-integration-302091979.html">Voxel51</a> and <a href="https://waabi.ai/nvidia-drivethor/">Waabi</a>, all made next-generation product announcements at GTC.</p>
 <p>In addition, the automotive pavilion buzzed with interest in the latest lidar advancements from Luminar and Robosense, as well as Helm.ai’s software offerings for the <a href="https://blogs.nvidia.com/blog/whats-difference-level-2-level-5-autonomy/">level 2 to level 4</a> autonomous driving stack.</p>
 <p>And other partners, such as Ford, Geely, General Motors, Jaguar Land Rover and Zoox, participated in dozens of sessions and panels covering topics such as building data center applications and developing safe autonomous vehicles. Watch the sessions <a href="https://www.nvidia.com/gtc/">on demand</a>.</p>
@@ -1083,124 +1229,6 @@ The discussion highlighted not only Imbue’s approach toward building practical
 			/>
 			<media:title type="html"><![CDATA[NVIDIA Unveils Digital Blueprint for Building Next-Gen Data Centers]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>New NVIDIA Storage Partner Validation Program Streamlines Enterprise AI Deployments</title>
-		<link>https://blogs.nvidia.com/blog/ovx-storage-partner-validation-program/</link>
-		
-		<dc:creator><![CDATA[Jason Schroedl]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 22:00:48 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70358</guid>
-
-					<description><![CDATA[A sharp increase in generative AI deployments is driving business innovation for enterprises across industries. But it’s also posing significant challenges for their IT teams, as slowdowns from long and complex infrastructure deployment cycles prevent them from quickly spinning up AI workloads using their own data. To help overcome these barriers, NVIDIA has introduced a		<a class="read-more" href="https://blogs.nvidia.com/blog/ovx-storage-partner-validation-program/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>A sharp increase in generative AI deployments is driving business innovation for enterprises across industries. But it’s also posing significant challenges for their IT teams, as slowdowns from long and complex infrastructure deployment cycles prevent them from quickly spinning up AI workloads using their own data.</p>
-<p>To help overcome these barriers, NVIDIA has introduced a storage partner validation program for <a href="https://www.nvidia.com/en-us/omniverse/platform/ovx/">NVIDIA OVX computing systems</a>. The high-performance storage systems leading the way in completing the NVIDIA OVX storage validation are <a href="https://www.ddn.com/blog/ddn-expands-support-for-nvidia-technology-to-enable-ai-application-acceleration-for-data-center-infrastructure/">DDN</a>, Dell PowerScale, <a href="https://www.netapp.com/blog/the-ai-revolution-netapp-aipod-with-nvidia-ovx/">NetApp</a>, <a href="https://www.purestorage.com/company/newsroom/press-releases/pure-and-nvidia-accelerate-enterprise-ai-adoption-to-meet-growing-demands.html">Pure Storage</a> and <a href="https://www.weka.io/blog/ai-ml/accelerating-ai-workloads-wekas-role-in-storage-partner-validation-for-nvidia-ovx-solutions/">WEKA</a>.</p>
-<p>NVIDIA OVX servers combine high-performance, GPU-accelerated compute with high-speed storage access and low-latency networking to address a range of complex AI and graphics-intensive workloads. Chatbots, summarization and search tools, for example, require large amounts of data, and high-performance storage is critical to maximize system throughput.</p>
-<p>To help enterprises pair the right storage with NVIDIA-Certified OVX servers, the new program provides a standardized process for partners to validate their storage appliances. They can use the same framework and testing that’s needed to validate storage for the <a href="https://www.nvidia.com/en-sg/data-center/dgx-basepod/">NVIDIA DGX BasePOD</a> reference architecture.</p>
-<p>To achieve validation, partners must complete a suite of NVIDIA tests measuring storage performance and input/out scaling across multiple parameters that represent the demanding requirements of various enterprise AI workloads. This includes combinations of different I/O sizes, varying numbers of threads, buffered I/O vs. direct I/O, random reads, re-reads and more.</p>
-<p>Each test is run multiple times to verify the results and gather the required data, which is then audited by NVIDIA engineering teams to determine whether the storage system has passed.</p>
-<p>The program offers prescriptive guidance to ensure optimal storage performance and scalability for enterprise AI workloads with NVIDIA OVX systems. But the overall design remains flexible, so customers can tailor their system and storage choices to fit their existing data center environments and bring accelerated computing to wherever their data resides.</p>
-<p>Generative AI use cases have fundamentally different requirements than traditional enterprise applications, so IT teams must carefully consider their compute, networking, storage and software choices to ensure high performance and scalability.</p>
-<p><a href="https://www.nvidia.com/en-us/data-center/products/certified-systems/">NVIDIA-Certified Systems</a> are tested and validated to provide enterprise-grade performance, manageability, security and scalability for AI workloads. Their flexible reference architectures help deliver faster, more efficient and more cost-effective deployments than independently building from the ground up.</p>
-<p>Powered by<a href="https://www.nvidia.com/en-us/data-center/l40s/"> NVIDIA L40S GPUs</a>, OVX servers include<a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/"> NVIDIA AI Enterprise</a> software with <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> or<a href="https://www.nvidia.com/en-us/networking/spectrumx/"> NVIDIA Spectrum-X</a> Ethernet networking, as well as<a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/"> NVIDIA BlueField-3 DPUs</a>. They’re optimized for generative AI workloads, including training for smaller LLMs (for example, Llama 2 7B or 70B), fine-tuning existing models and inference with high throughput and low latency.</p>
-<p><a href="https://docs.nvidia.com/certification-programs/nvidia-certified-systems/index.html#nvidia-certified-systems-ovx-list">NVIDIA-Certified OVX servers</a> are now available and shipping from global system vendors, including GIGABYTE, Hewlett Packard Enterprise and <a href="https://news.lenovo.com/pressroom/press-releases/lenovo-unveils-hybrid-ai-solutions-delivering-power-of-generative-ai-to-enterprises-with-nvidia">Lenovo</a>. Comprehensive, enterprise-grade support for these servers is provided by each system builder, in collaboration with NVIDIA.</p>
-<h2><b>Availability </b></h2>
-<p>Validated storage solutions for NVIDIA-Certified OVX servers are now available, and reference architectures will be published over the coming weeks by each of the storage and system vendors. Learn more about <a href="https://www.nvidia.com/en-us/data-center/products/ovx/">NVIDIA OVX Systems</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ovx-keynote-blog-header.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ovx-keynote-blog-header-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[New NVIDIA Storage Partner Validation Program Streamlines Enterprise AI Deployments]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>From Atoms to Supercomputers: NVIDIA, Partners Scale Quantum Computing</title>
-		<link>https://blogs.nvidia.com/blog/cuda-q-ecosystem/</link>
-		
-		<dc:creator><![CDATA[Elica Kyoseva]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 22:00:47 +0000</pubDate>
-				<category><![CDATA[Supercomputing]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Customer Stories]]></category>
-		<category><![CDATA[Financial Services]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[New GPU Uses]]></category>
-		<category><![CDATA[Science]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70242</guid>
-
-					<description><![CDATA[The latest advances in quantum computing include investigating molecules, deploying giant supercomputers and building the quantum workforce with a new academic program. Researchers in Canada and the U.S. used a large language model to simplify quantum simulations that help scientists explore molecules. “This new quantum algorithm opens the avenue to a new way of combining		<a class="read-more" href="https://blogs.nvidia.com/blog/cuda-q-ecosystem/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The latest advances in quantum computing include investigating molecules, deploying giant supercomputers and building the quantum workforce with a new academic program.</p>
-<p>Researchers in Canada and the U.S. used a large language model to simplify quantum simulations that help scientists explore molecules.</p>
-<p>“This new quantum algorithm opens the avenue to a new way of combining quantum algorithms with machine learning,” said Alan Aspuru-Guzik, a professor of chemistry and computer science at the University of Toronto, who led the team.</p>
-<p>The effort used <a href="https://developer.nvidia.com/cuda-q">CUDA-Q</a>, a hybrid programming model for GPUs, CPUs and the <a href="https://blogs.nvidia.com/blog/what-is-a-qpu/">QPUs</a> quantum systems use. The team ran its research on <a href="https://blogs.nvidia.com/blog/eos/">Eos</a>, NVIDIA’s H100 GPU supercomputer.</p>
-<p>Software from the effort will be made available for researchers in fields like healthcare and chemistry. Aspuru-Guzik will detail the work in <a href="https://www.nvidia.com/gtc/session-catalog/?search=quantum&amp;tab.allsessions=1700692987788001F1cG&amp;search=quantum#/session/1696280074506001Ts8y">a talk</a> at GTC.</p>
-<h2><b>Quantum Scales for Fraud Detection</b></h2>
-<p>At HSBC, one of the world’s largest banks, researchers designed a quantum machine learning application that can detect fraud in digital payments.</p>
-<p>The bank’s quantum machine learning algorithm simulated a whopping 165 qubits on NVIDIA GPUs. Research papers typically don’t extend beyond 40 of these fundamental calculating units quantum systems use.</p>
-<p>HSBC used machine learning techniques implemented with CUDA-Q and<a href="https://docs.nvidia.com/cuda/cuquantum/latest/cutensornet/index.html"> cuTensorNet</a> software on NVIDIA GPUs to overcome challenges simulating quantum circuits at scale. Mekena Metcalf, a quantum computing research scientist at HSBC (pictured above), will present her work in a<a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=quantum#/session/1693079968998001x10J"> session at GTC</a>.</p>
-<h2><b>Raising a Quantum Generation</b></h2>
-<p>In education, NVIDIA is working with nearly two dozen universities to prepare the next generation of computer scientists for the quantum era. The collaboration will design curricula and teaching materials around CUDA-Q.</p>
-<p>&#8220;Bridging the divide between traditional computers and quantum systems is essential to the future of computing,&#8221; said Theresa Mayer, vice president for research at Carnegie Mellon University. &#8220;NVIDIA is partnering with institutions of higher education, Carnegie Mellon included, to help students and researchers navigate and excel in this emerging hybrid environment.&#8221;</p>
-<p>To help working developers get hands-on with the latest tools, NVIDIA co-sponsored QHack, a quantum hackathon in February. The winning project, developed by Gopal Dahale of Qkrishi — a quantum company in Gurgaon, India — used CUDA-Q to develop an algorithm to simulate a material critical in designing better batteries.</p>
-<h2><b>A Trio of New Systems</b></h2>
-<p>Two new systems being deployed further expand the ecosystem for hybrid quantum-classical computing.</p>
-<p>The largest of the two, <a href="https://nvidianews.nvidia.com/news/nvidia-powers-japans-abci-q-supercomputer-for-quantum-research">ABCI-Q</a> at Japan’s National Institute of Advanced Industrial Science and Technology, will be one of the largest supercomputers dedicated to research in quantum computing. It will use CUDA-Q on <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">NVIDIA H100 GPUs</a> to advance the nation’s efforts in the field.</p>
-<p>In Denmark, the Novo Nordisk Foundation will lead on the deployment of an <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fdata-center%2Fdgx-superpod%2F&amp;data=05%7C02%7Cgrainville%40nvidia.com%7C5a3284deff074ef3643c08dc479a76a0%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638463976012098204%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=CFCvpXPiz8u7ATwwhmqr6AUjmlyyd2iJgC7iZH3A6cU%3D&amp;reserved=0">NVIDIA DGX SuperPOD</a>, a significant part of which will be dedicated to research in quantum computing in alignment with the country’s national plan to advance the technology.</p>
-<p>The new systems join Australia’s Pawsey Supercomputing Research Centre, which <a href="https://nvidianews.nvidia.com/news/nvidia-accelerates-quantum-computing-exploration-at-australias-pawsey-supercomputing-centre">announced</a> in February it will run CUDA-Q on <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA Grace Hopper Superchips</a> at its National Supercomputing and Quantum Computing Innovation Hub.</p>
-<h2><b>Partners Drive CUDA-Q Forward</b></h2>
-<p>In other news, Israeli startup Classiq released at GTC a new integration with CUDA-Q. Classiq’s quantum circuit synthesis lets high-level functional models automatically generate optimized quantum programs, so researchers can get the most out of today’s quantum hardware and expand the scale of their work on future algorithms.</p>
-<p>Software and service provider QC Ware is <a href="https://www.prnewswire.com/news-releases/accelerating-the-development-of-new-molecules---promethium-to-empower-ml-models-for-drug-discovery-using-nvidia-quantum-cloud-302090961.html">integrating its Promethium quantum chemistry package</a> with the just-announced <a href="https://nvidianews.nvidia.com/news/nvidia-launches-cloud-quantum-computer-simulation-microservices">NVIDIA Quantum Cloud</a>.</p>
-<p>ORCA Computing, a quantum systems developer headquartered in London, released <a href="https://orcacomputing.com/orca-computing-unveils-first-demonstration-of-a-hybrid-algorithm-utilizing-the-orca-pt-1-photonic-quantum-processor-and-nvidia-cuda-quantum/">results</a> running quantum machine learning on its photonics processor with CUDA-Q. In addition, ORCA was selected to build and supply a quantum computing testbed for the UK’s National Quantum Computing Centre which will include an NVIDIA GPU cluster using CUDA-Q.</p>
-<p>Nvidia and Infleqtion, a quantum technology leader, partnered to bring cutting-edge quantum-enabled solutions to <a href="https://www.infleqtion.com/quantum-software-updates/quantum-cybersecurity-gets-a-boost-infleqtion-at-dcm3">Europe’s largest cyber-defense exercise</a> with NVIDIA-enabled Superstaq software.</p>
-<p>A cloud-based platform for quantum computing, <a href="https://qbraid.com/blog/unleashing-the-power-of-nvidia-cuda-quantum-with-qbraid">qBraid</a>, is integrating CUDA-Q into its developer environment. And California-based BlueQubit described in a <a href="https://www.bluequbit.io/bluequbit-nvidia-managed-platform">blog</a> how NVIDIA’s quantum technology, used in its research and GPU service, provides the fastest and largest quantum emulations possible on GPUs.</p>
-<h2><b>Get the Big Picture at GTC</b></h2>
-<p>To learn more, watch a session about <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=quantum#/session/1694875146306001JiaF">how NVIDIA is advancing quantum computing</a> and attend an <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=quantum#/session/1695925756553001O1NU">expert panel</a> on the topic, both at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, a global AI conference, running March 18-21 at the San Jose Convention Center.</p>
-<p>And get the full view from NVIDIA founder and CEO Jensen Huang in his <a href="https://www.nvidia.com/gtc/keynote/">GTC keynote</a>.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/HSBC-quantum-researcher.jpg"
-			type="image/jpeg"
-			width="1647"
-			height="878"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/HSBC-quantum-researcher-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[From Atoms to Supercomputers: NVIDIA, Partners Scale Quantum Computing]]></media:title>
-			<media:description type="html">Picture of HSBC quantum resear4ch scientist, Mekena Metcalf</media:description>
 			</media:content>
 			</item>
 	</channel>
