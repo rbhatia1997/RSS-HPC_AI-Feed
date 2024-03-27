@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 27 Mar 2024 02:10:28 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 27 Mar 2024 15:41:10 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,193 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>NVIDIA Hopper Leaps Ahead in Generative AI at MLPerf</title>
+		<link>https://blogs.nvidia.com/blog/tensorrt-llm-inference-mlperf/</link>
+		
+		<dc:creator><![CDATA[Dave Salvator]]></dc:creator>
+		<pubDate>Wed, 27 Mar 2024 15:40:47 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[NGC]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70672</guid>
+
+					<description><![CDATA[It’s official: NVIDIA delivered the world’s fastest platform in industry-standard tests for inference on generative AI. In the latest MLPerf benchmarks, NVIDIA TensorRT-LLM — software that speeds and simplifies the complex job of inference on large language models — boosted the performance of NVIDIA Hopper architecture GPUs on the GPT-J LLM nearly 3x over their		<a class="read-more" href="https://blogs.nvidia.com/blog/tensorrt-llm-inference-mlperf/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>It’s official: NVIDIA delivered the world’s fastest platform in industry-standard tests for inference on <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/">generative AI</a>.</p>
+<p>In the latest MLPerf benchmarks, <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a> — software that speeds and simplifies the complex job of inference on <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language models</a> — boosted the performance of <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">NVIDIA Hopper architecture GPUs</a> on the GPT-J LLM nearly 3x over their results just six months ago.</p>
+<p>The dramatic speedup demonstrates the power of NVIDIA’s full-stack platform of chips, systems and software to handle the demanding requirements of running generative AI.</p>
+<p>Leading companies <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">are using</a> TensorRT-LLM to optimize their models. And <a href="https://www.nvidia.com/en-us/launchpad/ai/generative-ai-inference-with-nim/">NVIDIA NIM</a>  — a set of inference microservices that includes inferencing engines like TensorRT-LLM — makes it easier than ever for businesses to deploy NVIDIA’s inference platform.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x.jpg"><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-70885" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-672x366.jpg" alt="MLPerf inference results on GPT-J LLM with TensorRT-LLM " width="672" height="366" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-672x366.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-400x218.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-768x419.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-1536x837.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-825x450.jpg 825w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-394x215.jpg 394w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-183x100.jpg 183w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x-1280x698.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-1-GPTJ-LLM-3x.jpg 2016w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<h2><b>Raising the Bar in Generative AI</b></h2>
+<p>TensorRT-LLM running on <a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA H200 Tensor Core GPUs</a> — the latest, memory-enhanced Hopper GPUs — delivered the fastest performance running inference in MLPerf’s biggest test of generative AI to date.</p>
+<p>The new benchmark uses the largest version of Llama 2, a state-of-the-art large language model packing 70 billion parameters. The model is more than 10x larger than the GPT-J LLM first used in the <a href="https://blogs.nvidia.com/blog/grace-hopper-inference-mlperf/">September benchmarks</a>.</p>
+<p>The memory-enhanced H200 GPUs, in their MLPerf debut, used TensorRT-LLM to produce up to 31,000 tokens/second, a record on MLPerf’s Llama 2 benchmark.</p>
+<p>The H200 GPU results include up to 14% gains from a custom thermal solution. It’s one example of innovations beyond standard air cooling that systems builders are applying to their <a href="https://www.nvidia.com/en-us/data-center/products/mgx/">NVIDIA MGX</a> designs to take the performance of Hopper GPUs to new heights.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win.jpg"><img decoding="async" class="aligncenter size-large wp-image-70888" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-672x389.jpg" alt="MLPerf inference results on Llama 2 70B with H200 GPUs running TensorRT-LLM" width="672" height="389" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-672x389.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-400x231.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-768x444.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-1536x888.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-778x450.jpg 778w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-372x215.jpg 372w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-173x100.jpg 173w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win-1280x740.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/MLPerf-2-Llama-2-win.jpg 2011w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<h2><b>Memory Boost for NVIDIA Hopper GPUs</b></h2>
+<p>NVIDIA is shipping H200 GPUs today. They’ll be available soon from nearly 20 leading system builders and cloud service providers.</p>
+<p>H200 GPUs pack 141GB of HBM3e running at 4.8TB/s. That’s 76% more memory flying 43% faster compared to H100 GPUs. These accelerators plug into the same boards and systems and use the same software as H100 GPUs.</p>
+<p>With HBM3e memory, a single H200 GPU can run an entire Llama 2 70B model with the highest throughput, simplifying and speeding inference.</p>
+<h2><b>GH200 Packs Even More Memory</b></h2>
+<p>Even more memory — up to 624GB of fast memory, including 144GB of HBM3e — is packed in <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA GH200 Superchips</a>, which combine on one module a Hopper architecture GPU and a power-efficient <a href="https://www.nvidia.com/en-us/data-center/grace-cpu/">NVIDIA Grace CPU</a>. NVIDIA accelerators are the first to use HBM3e memory technology.</p>
+<p>With nearly 5 TB/second memory bandwidth, GH200 Superchips delivered standout performance, including on memory-intensive MLPerf tests such as <a href="https://blogs.nvidia.com/blog/grace-hopper-recommender-systems/">recommender systems</a>.</p>
+<h2><b>Sweeping Every MLPerf Test</b></h2>
+<p>On a per-accelerator basis, Hopper GPUs swept every test of AI inference in the latest round of the MLPerf industry benchmarks.</p>
+<p>The benchmarks cover today’s most popular AI workloads and scenarios, including generative AI, recommendation systems, natural language processing, speech and computer vision. NVIDIA was the only company to submit results on every workload in the latest round and every round since MLPerf’s data center inference benchmarks began in October 2020.</p>
+<p>Continued performance gains translate into lower costs for inference, a large and growing part of the daily work for the millions of NVIDIA GPUs deployed worldwide.</p>
+<h2><b>Advancing What’s Possible</b></h2>
+<p>Pushing the boundaries of what’s possible, NVIDIA demonstrated three innovative techniques in a special section of the benchmarks called the open division, created for testing advanced AI methods.</p>
+<p>NVIDIA engineers used a technique called <a href="https://developer.nvidia.com/blog/accelerating-inference-with-sparsity-using-ampere-and-tensorrt/">structured sparsity</a> — a way of reducing calculations, first introduced with <a href="https://www.nvidia.com/en-us/data-center/a100/">NVIDIA A100 Tensor Core GPUs</a> — to deliver up to 33% speedups on inference with Llama 2.</p>
+<p>A second open division test found inference speedups of up to 40% using pruning, a way of simplifying an AI model — in this case, an LLM — to increase inference throughput.</p>
+<p>Finally, an optimization called DeepCache reduced the math required for inference with the Stable Diffusion XL model, accelerating performance by a whopping 74%.</p>
+<p>All these results were run on <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>.</p>
+<h2><b>A Trusted Source for Users</b></h2>
+<p>MLPerf’s tests are transparent and objective, so users can rely on the results to make informed buying decisions.</p>
+<p>NVIDIA’s partners participate in MLPerf because they know it’s a valuable tool for customers evaluating AI systems and services. Partners submitting results on the NVIDIA AI platform in this round included ASUS, Cisco, Dell Technologies, Fujitsu, GIGABYTE, Google, Hewlett Packard Enterprise, Lenovo, Microsoft Azure, Oracle, QCT, Supermicro, VMware (recently acquired by Broadcom) and Wiwynn.</p>
+<p>All the software NVIDIA used in the tests is available in the MLPerf repository. These optimizations are continuously folded into containers available on <a href="https://ngc.nvidia.com/catalog">NGC</a>, NVIDIA’s software hub for GPU applications, as well as <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> — a secure, supported platform that includes NIM inference microservices.</p>
+<h2><b>The Next Big Thing  </b></h2>
+<p>The use cases, model sizes and datasets for generative AI continue to expand. That’s why MLPerf continues to evolve, adding real-world tests with popular models like Llama 2 70B and Stable Diffusion XL.</p>
+<p>Keeping pace with the explosion in LLM model sizes, NVIDIA founder and CEO Jensen Huang announced last week at GTC that the <a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">NVIDIA Blackwell architecture GPUs</a> will deliver new levels of performance required for the multitrillion-parameter AI models.</p>
+<p>Inference for large language models is difficult, requiring both expertise and the full-stack architecture NVIDIA demonstrated on MLPerf with Hopper architecture GPUs and TensorRT-LLM. There’s much more to come.</p>
+<p>Learn more about <a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">MLPerf benchmarks</a> and the <a href="https://developer.nvidia.com/blog/nvidia-h200-tensor-core-gpus-and-nvidia-tensorrt-llm-set-mlperf-llm-inference-records/">technical details</a> of this inference round.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/NVIDIA-H200-HGX-image.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/NVIDIA-H200-HGX-image-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Hopper Leaps Ahead in Generative AI at MLPerf]]></media:title>
+			<media:description type="html">NVIDIA HGX H200 GPU system running TensorRT-LLM</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Unlocking Peak Generations: TensorRT Accelerates AI on RTX PCs and Workstations</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-tensorrt-stable-diffusion-automatic1111/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 27 Mar 2024 13:00:13 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70900</guid>
+
+					<description><![CDATA[As generative AI advances and becomes widespread across industries, the importance of running generative AI applications on local PCs and workstations grows.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+<p>As <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> advances and becomes widespread across industries, the importance of running generative AI applications on local PCs and workstations grows. Local <a href="https://blogs.nvidia.com/blog/difference-deep-learning-training-inference-ai/">inference</a> gives consumers reduced latency, eliminates their dependency on the network and enables more control over their data.</p>
+<p>NVIDIA GeForce and NVIDIA RTX GPUs feature Tensor Cores, dedicated AI hardware accelerators that provide the horsepower to run generative AI locally.</p>
+<p>Stable Video Diffusion is now optimized for the <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> software development kit, which unlocks the highest-performance generative AI on the more than 100 million Windows PCs and workstations powered by RTX GPUs.</p>
+<p>Now, the TensorRT extension for the popular Stable Diffusion WebUI by Automatic1111 is adding support for ControlNets, tools that give users more control to refine generative outputs by adding other images as guidance.</p>
+<p><iframe title="Accelerate Stable Diffusion with NVIDIA RTX GPUs" width="500" height="281" src="https://www.youtube.com/embed/fUAEBoJCJW8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>TensorRT acceleration can be put to the test in the new UL Procyon AI Image Generation benchmark, which internal tests have shown accurately replicates real-world performance. It delivered speedups of 50% on a GeForce RTX 4080 SUPER GPU compared with the fastest non-TensorRT implementation.</p>
+<h2><b>More Efficient and Precise AI</b></h2>
+<p>TensorRT enables developers to access the hardware that provides fully optimized AI experiences. AI performance typically doubles compared with running the application on other frameworks.</p>
+<p>It also <a href="https://developer.nvidia.com/blog/new-stable-diffusion-models-accelerated-with-nvidia-tensorrt/">accelerates</a> the most popular generative AI models, like Stable Diffusion and SDXL. <a href="https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1-tensorrt">Stable Video Diffusion</a>, Stability AI’s image-to-video generative AI model, experiences a 40% speedup with TensorRT.</p>
+<p>The optimized <a href="https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1-tensorrt">Stable Video Diffusion 1.1 Image-to-Video</a> model can be downloaded on Hugging Face.</p>
+<p>Plus, the TensorRT extension for Stable Diffusion WebUI boosts performance by up to 2x — significantly streamlining Stable Diffusion workflows.</p>
+<p>With the extension’s latest update, TensorRT optimizations extend to ControlNets — a set of AI models that help guide a diffusion model’s output by adding extra conditions. With TensorRT, ControlNets are 40% faster.</p>
+<figure id="attachment_70907" aria-describedby="caption-attachment-70907" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1.jpg"><img loading="lazy" decoding="async" class="size-full wp-image-70907" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1.jpg" alt="" width="1280" height="720" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-178x100.jpg 178w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-70907" class="wp-caption-text">TensorRT optimizations extend to ControlNets for improved customization.</figcaption></figure>
+<p>Users can guide aspects of the output to match an input image, which gives them more control over the final image. They can also use multiple ControlNets together for even greater control. A ControlNet can be a depth map, edge map, normal map or keypoint detection model, among others.</p>
+<p>Download the TensorRT extension for Stable Diffusion Web UI on <a href="https://github.com/NVIDIA/Stable-Diffusion-WebUI-TensorRT">GitHub</a> today.</p>
+<h2><b>Other Popular Apps Accelerated by TensorRT</b></h2>
+<p>Blackmagic Design <a href="https://blogs.nvidia.com/blog/surface-studio-chaos-dlss-resolve-tensor-rt/">adopted NVIDIA TensorRT acceleration</a> in update 18.6 of DaVinci Resolve. Its AI tools, like Magic Mask, Speed Warp and Super Scale, run more than 50% faster and up to 2.3x faster on RTX GPUs compared with Macs.</p>
+<p>In addition, with TensorRT integration, <a href="https://www.topazlabs.com/">Topaz Labs</a> saw an up to 60% performance increase in its Photo AI and Video AI apps — such as photo denoising, sharpening, photo super resolution, video slow motion, video super resolution, video stabilization and more — all running on RTX.</p>
+<p>Combining Tensor Cores with TensorRT software brings unmatched generative AI performance to local PCs and workstations. And by running locally, several advantages are unlocked:</p>
+<ul>
+<li><strong>Performance</strong>: Users experience lower latency, since latency becomes independent of network quality when the entire model runs locally. This can be important for real-time use cases such as gaming or video conferencing. NVIDIA RTX offers the fastest AI accelerators, scaling to more than 1,300 AI trillion operations per second, or TOPS.</li>
+<li><strong>Cost</strong>: Users don’t have to pay for cloud services, cloud-hosted application programming interfaces or infrastructure costs for large language model inference.</li>
+<li><strong>Always on</strong>: Users can access LLM capabilities anywhere they go, without relying on high-bandwidth network connectivity.</li>
+<li><strong>Data privacy</strong>: Private and proprietary data can always stay on the user’s device.</li>
+</ul>
+<h2><b>Optimized for LLMs</b></h2>
+<p>What TensorRT brings to deep learning, <a href="https://developer.nvidia.com/tensorrt#inference">NVIDIA TensorRT-LLM</a> brings to the latest <a href="https://blogs.nvidia.com/blog/ai-decoded-rtx-pc-llms-chatbots/">LLMs</a>.</p>
+<p>TensorRT-LLM, an open-source library that accelerates and optimizes LLM inference, includes out-of-the-box support for popular community models, including Phi-2, Llama2, Gemma, Mistral and Code Llama. Anyone — from developers and creators to enterprise employees and casual users — can experiment with TensorRT-LLM-optimized models in the <a href="https://build.nvidia.com/explore/discover">NVIDIA AI Foundation models</a>. Plus, with the <a href="https://blogs.nvidia.com/blog/chat-with-rtx-available-now/">NVIDIA ChatRTX</a> tech demo, users can see the performance of various models running locally on a Windows PC. ChatRTX is built on TensorRT-LLM for optimized performance on RTX GPUs.</p>
+<p>NVIDIA is collaborating with the open-source community to develop native TensorRT-LLM connectors to popular application frameworks, including LlamaIndex and LangChain.</p>
+<p>These innovations make it easy for developers to use TensorRT-LLM with their applications and experience the best LLM performance with RTX.</p>
+<p><i>Get weekly updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ai-decoded-tensor-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ai-decoded-tensor-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Unlocking Peak Generations: TensorRT Accelerates AI on RTX PCs and Workstations]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Viome’s Guru Banavar Discusses AI for Personalized Health</title>
+		<link>https://blogs.nvidia.com/blog/viome-guru-banavar/</link>
+		
+		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
+		<pubDate>Wed, 27 Mar 2024 13:00:02 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[The AI Podcast]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70901</guid>
+
+					<description><![CDATA[In the latest episode of NVIDIA’s AI Podcast, Viome Chief Technology Officer Guru Banavar spoke with host Noah Kravitz about how AI and RNA sequencing are revolutionizing personalized healthcare. The startup aims to tackle the root causes of chronic diseases by delving deep into microbiomes and gene expression. With a comprehensive testing kit, Viome translates		<a class="read-more" href="https://blogs.nvidia.com/blog/viome-guru-banavar/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>In the latest episode of NVIDIA’s <a href="https://soundcloud.com/theaipodcast">AI Podcast</a>, Viome Chief Technology Officer Guru Banavar spoke with host Noah Kravitz about how AI and RNA sequencing are revolutionizing personalized healthcare. The startup aims to tackle the root causes of chronic diseases by delving deep into microbiomes and gene expression.</p>
+<p>With a comprehensive testing kit, Viome translates biological data into practical dietary recommendations. Viome is forging ahead with professional healthcare solutions, such as early detection tests for diseases, and integrating state-of-the-art technology with traditional medical practices for a holistic approach to wellness.</p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1785368577%3Fsecret_token%3Ds-NmWVdaGTqp7&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Personalized Health: Viome's Guru Banavar Discusses Startup’s AI-Driven Approach – Ep. 352" href="https://soundcloud.com/theaipodcast/personalized-health-viomes-guru-banavar-discusses-startups-ai-driven-approach-ep-352/s-NmWVdaGTqp7" target="_blank" rel="noopener">Personalized Health: Viome&#8217;s Guru Banavar Discusses Startup’s AI-Driven Approach – Ep. 352</a></div>
+<h2>Time Stamps:</h2>
+<p>2:00: Introduction to Viome and the science of nutrigenomics<br />
+4:25: The significance of RNA over DNA in health analysis<br />
+7:40: The crucial role of the microbiome in understanding chronic diseases<br />
+12:50: From sample collection to personalized nutrition recommendations<br />
+17:35: Viome&#8217;s expansion into professional healthcare solutions and early disease detection</p>
+<p>&nbsp;</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1159"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Viome’s Guru Banavar Discusses AI for Personalized Health]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Boom in AI-Enabled Medical Devices Transforms Healthcare</title>
 		<link>https://blogs.nvidia.com/blog/ai-medical-devices-gtc-2024/</link>
 		
@@ -114,7 +301,7 @@
 <p>Using <a href="https://developer.nvidia.com/modulus">NVIDIA Modulus</a>, a framework for building AI models that understand the laws of physics, Wistron created digital twins that let them accurately predict the airflow and temperature in test facilities that must remain between 27 and 32 degrees C.</p>
 <p>A simulation that would’ve taken nearly 15 hours with traditional methods on a CPU took just 3.3 seconds on an NVIDIA GPU running inference with an AI model developed using Modulus, a whopping 15,000x speedup.</p>
 <p>The results were fed into tools and applications built by Wistron developers with <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform for creating 3D workflows and applications based on OpenUSD.</p>
-<figure id="attachment_70881" aria-describedby="caption-attachment-70881" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-scaled.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-70881" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-672x306.jpg" alt="A bird's eye view of Wistron's digital twin" width="672" height="306" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-672x306.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-400x182.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-768x349.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-1536x699.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-842x383.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-406x185.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-188x86.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-1280x580.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70881" class="wp-caption-text">A bird&#8217;s eye view of Wistron&#8217;s digital twin</figcaption></figure>
+<figure id="attachment_70881" aria-describedby="caption-attachment-70881" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-scaled.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-70881" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-672x306.jpg" alt="A bird's eye view of Wistron's digital twin" width="672" height="306" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-672x306.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-400x182.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-768x349.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-1536x699.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-842x383.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-406x185.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-188x86.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/NU-birdseye-image-of-Wixstron-digital-twin-1280x580.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-70881" class="wp-caption-text">A bird&#8217;s eye view of Wistron&#8217;s digital twin</figcaption></figure>
 <p>With their Omniverse-powered software, Wistron created realistic and immersive simulations that operators interact with via VR headsets. And thanks to the AI models they developed using Modulus, the airflows in the simulation obey the laws of physics.</p>
 <p>“Physics-informed models let us control the test process and the room’s temperature remotely in near real time, saving time and energy,” said John Lu, a manufacturing operations director at Wistron.</p>
 <p>Specifically, Wistron combined separate models for predicting air temperature and airflow to eliminate risks of overheating in the test room. It also created a recommendation system to identify the best locations to test computer baseboards.</p>
@@ -128,7 +315,7 @@
 <p>The Munich-based company, whose technology generates one-sixth of the world’s electricity, achieved a 10,000x speedup simulating a heat-recovery steam generator using a physics-informed AI model (see video below).</p>
 <p>Using a digital twin to detect corrosion early on, these massive systems can reduce downtime by 70%, potentially saving the industry $1.7 billion annually compared to a standard simulation that took half a month.</p>
 <p>“The reduced computational time enables us to develop <a href="https://nvdam.widen.net/s/6qxcqjqhmj/energy-efficiency-solution-brief-physics-ml-simulations-cta-2746611">energy-efficient digital twins</a> for a sustainable, reliable and affordable energy ecosystem,” said Georg Rollmann, head of advanced analytics and AI at Siemens Energy.</p>
-<p><iframe title="Siemens Energy HRSG Digital Twin Simulation Using NVIDIA Modulus and Omniverse" width="500" height="281" src="https://www.youtube.com/embed/JLboPXn6sKI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Siemens Energy HRSG Digital Twin Simulation Using NVIDIA Modulus and Omniverse" width="500" height="281" src="https://www.youtube.com/embed/JLboPXn6sKI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <h2><b>Digital Twins Drive Science and Industry</b></h2>
 <p>Automotive companies are applying the technology to the design of new cars and manufacturing plants. Scientists are using it in fields as diverse as astrophysics, genomics and weather forecasting. It’s even being used to create a <a href="https://blogs.nvidia.com/blog/digital-twins-climate-collaboration/">digital twin of Earth</a> to understand and mitigate the impacts of climate change.</p>
 <p>Every year, physics simulations, typically run on supercomputer-class systems, consume an estimated 200 billion CPU core hours and 4 terawatt hours of energy. Physics-informed AI is accelerating these complex workflows 200x on average, saving time, cost and energy.</p>
@@ -178,7 +365,7 @@
 </b><br />
 Newly announced <a href="https://nvidianews.nvidia.com/news/omniverse-cloud-apis-industrial-digital-twin">NVIDIA Omniverse Cloud APIs</a>, coming first to <a href="https://www.youtube.com/watch?v=3hLEj0i7fug" target="_blank" rel="noopener">Microsoft Azure</a>, allow developers to send their OpenUSD industrial scenes from content-creation applications to the <a href="https://www.nvidia.com/en-us/omniverse/solutions/stream-3d-apps/">NVIDIA Graphics Delivery Network</a>.</p>
 <p>Such a workflow was showcased in a demo featuring an interactive car configurator application, developed by computer-generated-imagery studio Katana using Omniverse, streamed in full fidelity to an <a href="https://blogs.nvidia.com/blog/omniverse-apple-vision-pro/">Apple Vision Pro</a>’s high-resolution display. A designer wearing the Vision Pro toggled through paint and trim options, and even entered the vehicle.</p>
-<p><iframe title="Develop 3D Product Configurators With Generative AI and OpenUSD" width="500" height="281" src="https://www.youtube.com/embed/LAVXuDK83iA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Develop 3D Product Configurators With Generative AI and OpenUSD" width="500" height="281" src="https://www.youtube.com/embed/LAVXuDK83iA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <p>In a <a href="https://youtu.be/h30brb7-taU" target="_blank" rel="noopener">separate demo</a>, Dassault Systèmes showcased, using its 3DEXCITE portfolio, a powerful web-based application for 3D data preparation supercharged with NVIDIA AI and Omniverse Cloud APIs to deliver new generative storytelling capabilities.</p>
 <p>OpenUSD also played a part in the announcement of NVIDIA’s latest <a href="https://blogs.nvidia.com/blog/omniverse-next-gen-data-center/">AI supercomputer</a>, a powerful cluster based on the NVIDIA GB200 NVL72 liquid-cooled system, which was showcased as a <a href="https://www.nvidia.com/en-us/omniverse/solutions/digital-twins/">digital twin</a> in Omniverse.</p>
 <p>Engineers unified and visualized multiple computer-aided design datasets with full physical accuracy and photorealism using OpenUSD through the Cadence Reality digital twin platform, powered by Omniverse APIs. The technologies together provided a powerful computing platform for developing OpenUSD-based 3D tools, workflows and applications.</p>
@@ -1054,195 +1241,6 @@ The discussion highlighted not only Imbue’s approach toward building practical
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[GTC Wrap-Up: ‘We Created a Processor for the Generative AI Era,’ NVIDIA CEO Says]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>All Aboard: NVIDIA Scores 23 World Records for Route Optimization</title>
-		<link>https://blogs.nvidia.com/blog/cuopt-route-optimization-metropolis-omniverse/</link>
-		
-		<dc:creator><![CDATA[Moon Chung]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 22:10:56 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[NVIDIA Jetson]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70263</guid>
-
-					<description><![CDATA[With nearly two dozen world records to its name, NVIDIA cuOpt now holds the top spot for 100% of the largest routing benchmarks in the last three years. And this means the route optimization engine allows industries to hop on board for all kinds of cost-saving efficiencies. Kawasaki Heavy Industries and SyncTwin are among the		<a class="read-more" href="https://blogs.nvidia.com/blog/cuopt-route-optimization-metropolis-omniverse/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>With nearly two dozen world records to its name, <a href="https://www.nvidia.com/en-us/ai-data-science/products/cuopt/">NVIDIA cuOpt</a> now holds the top spot for 100% of the largest routing benchmarks in the last three years. And this means the route optimization engine allows industries to hop on board for all kinds of cost-saving efficiencies.</p>
-<p><a href="https://global.kawasaki.com/">Kawasaki Heavy Industries</a> and SyncTwin are among the companies that are riding cuOpt for logistics improvements.</p>
-<p>Today at GTC 2024, NVIDIA founder and CEO Jensen Huang announced that cuOpt is moving into general availability.</p>
-<p>“With cuOpt, NVIDIA is reinventing logistics management and operations research. It is NVIDIA’s pre-quantum computer, driving transformational operational efficiencies for deliveries, service calls, warehouses and factories, and supply chains,” he said.</p>
-<p>The NVIDIA cuOpt microservice, part of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform, makes accelerated optimization for real-time dynamic rerouting, factory optimization and robotic simulations available to any organization.</p>
-<p>Companies can embed cuOpt into the advanced 3D tools, applications and USD-based workflows they develop with <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a software platform for developing and deploying advanced 3D applications and pipelines based on OpenUSD.</p>
-<p>Implemented together, cuOpt, Omniverse and <a href="https://developer.nvidia.com/metropolis-for-factories">NVIDIA Metropolis for Factories</a> can help optimize and create safe environments in logistics-heavy facilities that rely on complex automation, precise material flow and human-robot interaction, such as automotive factories, semiconductor fabs and warehouses.</p>
-<p>cuOpt has been continuously tested against the best-known solutions on the most studied benchmarks for route optimization, with results up to 100x faster than CPU-based implementations. With 15 records from the Gehring &amp; Homberger vehicle routing benchmark and eight from the Li &amp; Lim pickup and delivery benchmark, cuOpt has demonstrated the world’s best accuracy with the fastest times.</p>
-<p>AI promises to deliver logistics efficiencies spanning from transportation networks to manufacturing and much more.</p>
-<h2><b>Delivering Cost-Savings for Inspections With cuOpt</b></h2>
-<p><a href="https://global.kawasaki.com/">Kawasaki Heavy Industries</a> is a manufacturing company that&#8217;s been building large machinery for more than a hundred years. The Japanese company partnered with Slalom and <a href="https://www.nvidia.com/en-us/case-studies/reinventing-maintenance-operations-with-ai/">used cuOpt to create routing efficiencies</a> for the development of its AI-driven <a href="https://global.kawasaki.com/">Kawasaki Track Maintenance Platform</a>.</p>
-<p>Railroad track maintenance is getting an <a href="https://blogs.nvidia.com/blog/autonomous-trains-deep-learning-dgx-drive/">AI makeover worldwide</a>. Traditionally, track inspections and maintenance are time-consuming and difficult to manage to keep trains running on time. But track maintenance is critical for safety and transportation service. Railway companies are automating track inspections with AI and machine learning paired with digital cameras, lasers and gyrometric sensors.</p>
-<p><a href="https://global.kawasaki.com/">Kawasaki</a> is harnessing the edge computing of <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson AGX Orin</a> to develop track inspections on its Track Maintenance Platform for running onboard trains. The platform enables customers to improve vision models with the data collected on tracks for advances in the inspection capability of the edge-based AI system.</p>
-<p>The platform provides maintenance teams data on track conditions that allows them to prioritize repairs, creating increased safety and reliability of operations.</p>
-<p>According to <a href="https://global.kawasaki.com/">Kawasaki</a>, it’s estimated that such an AI-driven system can save $218 million a year for seven companies from automating their track inspections.</p>
-<h2><b>Creating Manufacturing Efficiencies With cuOpt and Omniverse</b></h2>
-<p>A worldwide leader in automotive seating manufacturing has adopted SyncTwin’s digital twin capability, which is driven by Omniverse and cuOpt, to improve its operations with AI.</p>
-<p>The global automotive seating manufacturer has a vast network of loading docks for the delivery of raw materials, and forklifts for unloading and transporting them to storage and handling areas to ensure a steady supply to production lines. SyncTwin’s connection to cuOpt delivers routing efficiencies that optimize all of these moving parts — from vehicles to robotic pallet jacks.</p>
-<p>As the SyncTwin solution was developed on top of Omniverse and USD, manufacturers can ensure that their various factory planning tools can contribute to the creation of a rich <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/">digital twin</a> environment. Plus, they eliminate tedious manual data collection and gain new insights from their previously disconnected data.</p>
-<p><a href="https://www.nvidia.com/gtc/session-catalog/?search=%22cuopt%22&amp;tab.allsessions=1700692987788001F1cG#/"><em>Attend GTC</em></a><em> to explore how cuOpt is achieving world-record accuracy and performance to solve complex problems. Learn more about cuOpt world records in our tech blog. <a href="https://www.nvidia.com/en-us/omniverse/">Learn more</a></em><em> about</em> Omniverse.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-cuopt-corp-blog-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gtc24-cuopt-corp-blog-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[All Aboard: NVIDIA Scores 23 World Records for Route Optimization]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>All Eyes on AI: Automotive Tech on Full Display at GTC 2024</title>
-		<link>https://blogs.nvidia.com/blog/automotive-tech-gtc-2024/</link>
-		
-		<dc:creator><![CDATA[Danny Shapiro]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 22:06:31 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70515</guid>
-
-					<description><![CDATA[All eyes across the auto industry are on GTC — the global AI conference running in San Jose, Calif., and online through Thursday, March 21 — as the world&#8217;s top automakers and tech leaders converge to showcase the latest models, demo new technologies and dive into the remarkable innovations reshaping the sector. Attendees will experience		<a class="read-more" href="https://blogs.nvidia.com/blog/automotive-tech-gtc-2024/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>All eyes across the auto industry are on <a href="https://www.nvidia.com/gtc/">GTC</a> — the global AI conference running in San Jose, Calif., and online through Thursday, March 21 — as the world&#8217;s top automakers and tech leaders converge to showcase the latest models, demo new technologies and dive into the remarkable innovations reshaping the sector.</p>
-<p>Attendees will experience how generative AI and software-defined computing are advancing the automotive landscape and transforming the behind-the-wheel experience to become safer, smarter and more enjoyable.</p>
-<h2><b>Automakers Adopting NVIDIA DRIVE Thor</b></h2>
-<p>NVIDIA founder and CEO Jensen Huang kicked off GTC with a keynote address in which he revealed that NVIDIA DRIVE Thor, which combines advanced driver assistance technology and in-vehicle infotainment, now features the newly announced NVIDIA Blackwell GPU architecture for transformer and generative AI workloads.</p>
-<p>Following the keynote, top EV makers shared how they will integrate <a href="https://nvidianews.nvidia.com/news/nvidia-drive-powers-next-generation-transportation">DRIVE Thor</a> into their vehicles. <b>BYD</b>, the world’s largest electric vehicle maker, is expanding its ongoing collaboration with NVIDIA and building its next-generation EV fleets on DRIVE Thor. <b>Hyper</b>, a premium luxury brand owned by GAC AION, is announcing it has selected DRIVE Thor for its new models, which will begin production in 2025. <b>XPENG </b>will use DRIVE Thor as the AI brain of its next-generation EV fleets. These EV makers join <b>Li Auto</b> and<b> ZEEKR</b>, which previously announced they’re building their future vehicle roadmaps on DRIVE Thor.</p>
-<p>Additionally, trucking, robotaxis and goods delivery vehicle makers are announcing support for DRIVE Thor. <b>Nuro</b>, a member of the<span class="apple-converted-space"> </span><a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33">NVIDIA Inception</a><span class="apple-converted-space"> </span>program for cutting-edge startups, is choosing DRIVE Thor to power the Nuro Driver. <b>Plus</b> is announcing that future generations of its level 4 solution, SuperDrive, will run on DRIVE Thor. <b>Waabi</b> is leveraging DRIVE Thor to deliver the first generative AI-powered autonomous trucking solution to market. <b>WeRide</b>, in cooperation with tier 1 partner Lenovo Vehicle Computing, is creating level 4 autonomous driving solutions for commercial applications built on DRIVE Thor.</p>
-<p>And <b>DeepRoute.ai</b> is unveiling its new smart driving architecture powered by NVIDIA DRIVE Thor, scheduled to launch next year.</p>
-<h2><b>Next-Generation Tech on the Show Floor</b></h2>
-<p>The GTC exhibit hall is buzzing with excitement as companies showcase the newest vehicle models and offer technology demonstrations.</p>
-<p>Attendees have the opportunity to see firsthand the latest NVIDIA-powered vehicles on display,  including <b>Lucid Air</b>, <b>Mercedes-Benz Concept CLA Class</b>, <b>Nuro R3</b>, <b>Polestar 3</b>,<b> Volvo EX90</b>, <b>WeRide Robobus</b>, and an <b>Aurora</b> truck. The Lucid Air is available for test drives during the week.</p>
-<p>A wide array of companies are showcasing innovative automotive technology at GTC, including <b>Foretellix</b>, <b>Luminar</b> and <b>MediaTek</b>, which is launching its <a href="https://blogs.nvidia.com/blog/mediatek-intelligent-cabin-solutions/">Dimensity Auto Cockpit</a> chipsets at the show. The new solutions harness NVIDIA’s graphics and AI technologies to help deliver state-of-the-art in-vehicle user experiences, added safety and security capabilities.</p>
-<h2><b>Also Announced at GTC: Omniverse Cloud APIs, Generative AI</b><b><br />
-</b></h2>
-<ul>
-<li><a href="https://nvidianews.nvidia.com/news/omniverse-cloud-apis-industrial-digital-twin">Omniverse Cloud APIs</a>, announced today at NVIDIA GTC, are poised to accelerate the path to autonomy by enabling high-fidelity sensor simulation for AV development and validation. Developers and software vendors such as <b>CARLA</b>, <b>MathWorks</b>, <b>MITRE</b>, <b>Foretellix</b> and <b>Voxel51</b> underscore the broad appeal of these APIs in autonomous vehicles.</li>
-<li><a href="https://blogs.nvidia.com/blog/generative-ai-in-vehicle-experiences/">Generative AI developers</a> including <b>Cerence</b>, <b>Geely</b>, <b>Li Auto,</b> <b>NIO,</b> <b>SoundHound</b>, <b>Tata Consulting Services</b> and <b>Wayve</b> announced plans to transform the in-vehicle experience by using NVIDIA’s cloud-to-edge technology to help develop intelligent AI assistants, driver and passenger monitoring, scene understanding and more.</li>
-</ul>
-<h2><b>AI and Automotive Sessions Available Live and on Demand</b><b><br />
-</b></h2>
-<p>Throughout the week<b>, </b>the world’s foremost experts on automotive technology will lead a broad array of sessions and panels at GTC, including:</p>
-<ul>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62464&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/">How LLMs and Generative AI Will Enhance the Way We Experience Self-Driving Cars<br />
-</a><i>Tuesday, March 19, 9 a.m. PT</i></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=s62621&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/">Accelerating the New Era of Autonomous Vehicles With Generative AI<br />
-</a><i>Tuesday, March 19, 10 a.m. PT</i></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62380&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/">Generative AI and Industrial Digitalization in the Automotive Industry<br />
-</a><i>Tuesday, March 19, 2 p.m. PT</i></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=S62804&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/">Accelerating Automotive Workflows With Large Language Models<br />
-</a><i>Tuesday, March 19, 3 p.m. PT</i></li>
-<li><a href="https://www.nvidia.com/gtc/session-catalog/?search=SE63001&amp;ncid=em-prom-975499&amp;tab.allsessions=1700692987788001F1cG#/">Accelerating the Shift to AI-Defined Vehicles<b><br />
-</b></a><i>Thursday, March 21, 8 a.m. PT</i></li>
-</ul>
-<p>On <a href="https://www.nvidia.com/gtc/sessions/drive-developer-day/">DRIVE Developer Day</a>, taking place Thursday, March 21, NVIDIA’s engineering experts will highlight the latest DRIVE features and developments through a series of deep-dive sessions on how to build safe and robust self-driving systems.</p>
-<p>See the full schedule of <a href="https://images.nvidia.com/nvimages/gtc/pdf/GTC24_March_Automotive_Brochure.pdf">automotive programming at GTC</a> and be sure to tune in.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/auto-gtc.jpeg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/auto-gtc-842x450.jpeg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[All Eyes on AI: Automotive Tech on Full Display at GTC 2024]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Generative AI Developers Harness NVIDIA Technologies to Transform In-Vehicle Experiences</title>
-		<link>https://blogs.nvidia.com/blog/generative-ai-in-vehicle-experiences/</link>
-		
-		<dc:creator><![CDATA[Norm Marks]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 22:05:45 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70475</guid>
-
-					<description><![CDATA[Cars of the future will be more than just modes of transportation; they’ll be intelligent companions, seamlessly blending technology and comfort to enhance driving experiences, and built for safety, inside and out. NVIDIA GTC, running this week at the San Jose Convention Center, will spotlight the groundbreaking work NVIDIA and its partners are doing to		<a class="read-more" href="https://blogs.nvidia.com/blog/generative-ai-in-vehicle-experiences/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Cars of the future will be more than just modes of transportation; they’ll be intelligent companions, seamlessly blending technology and comfort to enhance driving experiences, and built for safety, inside and out.</p>
-<p><a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a>, running this week at the San Jose Convention Center, will spotlight the groundbreaking work NVIDIA and its partners are doing to bring the transformative power of <a href="https://www.nvidia.com/en-us/glossary/generative-ai/#:~:text=Generative%20AI%20enables%20users%20to,or%20other%20types%20of%20data.">generative AI</a>, <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language models</a> and visual language models to the mobility sector.</p>
-<p>At its booth, NVIDIA will showcase how it’s building automotive assistants to enhance driver safety, security and comfort through enhanced perception, understanding and generative capabilities powered by deep learning and transformer models.</p>
-<h2><b>Talking the Talk</b></h2>
-<p><a href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/large-language-models/">LLMs</a>, a form of generative AI, largely represent a class of deep-learning architectures known as <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">transformer models</a>, which are neural networks adept at learning context and meaning.</p>
-<p>Vision language models are another derivative of generative AI, that offer image processing and language understanding capabilities. Unlike traditional or multimodal LLMs that primarily process and generate text-based data, VLMs can analyze and generate text via images or videos.</p>
-<p>And <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generations</a> allows manufacturers to access knowledge from a specific database or the web to assist drivers.</p>
-<p>These technologies together enable <a href="https://developer.nvidia.com/ace">NVIDIA Avatar Cloud Engine</a>, or ACE, and multimodal language models to work together with the <a href="https://developer.nvidia.com/drive">NVIDIA DRIVE</a> platform to let automotive manufacturers develop their own intelligent in-car assistants.</p>
-<p>For example, an Avatar configurator can allow designers to build unique, brand-inspired personas for their cars, complete with customized voices and emotional attributes. These AI-animated avatars can engage in natural dialogue, providing real-time assistance, recommendations and personalized interactions.</p>
-<p>Furthermore, AI-enhanced surround visualization enhances vehicle safety using 360-degree camera reconstruction, while the intelligent assistant sources external information, such as local driving laws, to inform decision-making.</p>
-<p>Personalization is paramount, with AI assistants learning driver and passenger habits and adapting its behavior to suit occupants’ needs.</p>
-<h2><b>Generative AI for Automotive in Full Force at GTC </b></h2>
-<p>Several NVIDIA partners at GTC are also showcasing their latest generative AI developments using NVIDIA’s edge-to-cloud technology:</p>
-<ul>
-<li><b>Cerence’s</b> CaLLM is an automotive-specific LLM that serves as the foundation for the company’s next-gen in-car computing platform, running on NVIDIA DRIVE. The platform, unveiled late last year, is the future of in-car interaction, with an automotive- and mobility-specific assistant that provides an integrated in-cabin experience. Cerence is collaborating with NVIDIA engineering teams for deeper integration of CaLLM with the <a href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/">NVIDIA AI Foundation Models</a>. Through joint efforts, Cerence is harnessing <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> as the development platform, applying guardrails for enhanced performance, and leveraging <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> to optimize inference. NVIDIA and Cerence will continue to partner and pioneer this solution together with several automotive OEMs this year.</li>
-<li><b>Wavye</b> is helping usher in the new era of Embodied AI for autonomy, their next-generation AV2.0 approach is characterized by a large Embodied AI foundation model that learns to drive self-supervised using AI end-to-end —from sensing, as an input, to outputting driving actions. The British startup has already unveiled its GAIA-1, a generative world model for AV development running on NVIDIA; alongside LINGO-1, a closed-loop driving commentator that uses natural language to enhance the learning and explainability of AI driving models.</li>
-<li><b>Li Auto</b> unveiled its multimodal cognitive model, Mind GPT, in June. Built on <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT-LLM</a>, an open-source library, it serves as the basis for the electric vehicle maker’s AI assistant, Lixiang Tongxue, for scene understanding, generation, knowledge retention and reasoning capabilities. Li Auto is currently developing DriveVLM to enhance autonomous driving capabilities, enabling the system to understand complex scenarios, particularly those that are challenging for traditional AV pipelines, such as unstructured roads, rare and unusual objects, and unexpected traffic events. This advanced model is trained on the NVIDIA GPUs and utilizes TensorRT-LLM and <a href="https://developer.nvidia.com/triton-inference-server">NVIDIA Triton Inference Server</a> for data generation in the data center. With inference optimized by NVIDIA DRIVE and TensorRT-LLM, DriveVLMs perform efficiently on embedded systems.</li>
-<li><b>NIO</b> launched its NOMI GPT, which offers a number of functional experiences, including NOMI Encyclopedia Q&amp;A, Cabin Atmosphere Master and Vehicle Assistant. With the capabilities enabled by LLMs and an efficient computing platform powered by NVIDIA AI stacks, NOMI GPT is capable of basic speech recognition and command execution functions and can use deep learning to understand and process more complex sentences and instructions inside the car.</li>
-<li><b>Geely</b> is working with NVIDIA to provide intelligent cabin experiences, along with accelerated edge-to-cloud deployment. Specifically, Geely is applying generative AI and LLM technology to provide smarter, personalized and safer driving experiences, using natural language processing, dialogue systems and predictive analytics for intelligent navigation and voice assistants. When deploying LLMs into production, Geely uses NVIDIA TensorRT-LLM to achieve highly efficient inference. For more complex tasks or scenarios requiring massive data support, Geely plans to deploy large-scale models in the cloud.</li>
-<li><b>Waabi</b> is building AI for self-driving and will use the generative AI capabilities afforded by NVIDIA DRIVE Thor for its breakthrough autonomous trucking solutions, bringing safe and reliable autonomy to the trucking industry.</li>
-<li><b>Lenovo</b> is unveiling a new AI acceleration engine, dubbed UltraBoost, which will run on NVIDIA DRIVE, and features an AI model engine and AI compiler tool chains to facilitate the deployment of LLMs within vehicles.</li>
-<li><b>SoundHound AI</b> is using NVIDIA to run its in-vehicle voice interface — which combines both real-time and generative AI capabilities — even when a vehicle has no cloud connectivity. This solution also offers drivers access to SoundHound’s Vehicle Intelligence product, which instantly delivers settings, troubleshooting and other information directly from the car manual and other data sources via natural speech, as opposed to through a physical document.</li>
-<li><b>Tata Consultancy Services</b> (part of the TATA Group), through its AI-based technology and engineering innovation, has built its automotive GenAI suite powered by NVIDIA GPUs and software frameworks. It accelerates the design, development, and validation of software-defined vehicles, leveraging the various LLMs and VLMs for in-vehicle and cloud-based systems.</li>
-<li><b>MediaTek</b> is announcing four automotive systems-on-a-chip within its Dimensity Auto Cockpit portfolio, offering powerful AI-based in-cabin experiences for the next generation of intelligent vehicles that span from premium to entry level. To support deep learning capabilities, the Dimensity Auto Cockpit chipsets integrate NVIDIA’s next-gen GPU-accelerated AI computing and <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a>-powered graphics to run LLMs in the car, allowing vehicles to support chatbots, rich content delivery to multiple displays, driver alertness detection and other AI-based safety and entertainment applications.</li>
-</ul>
-<p>Check out the many <a href="https://images.nvidia.com/nvimages/gtc/pdf/GTC24_March_Automotive_Brochure.pdf">automotive talks</a> on generative AI and LLMs throughout the week of GTC.</p>
-<p><a href="https://www.nvidia.com/gtc/?ncid=GTC-NVHWQQGN">Register today</a> to attend GTC in person, or tune in virtually, to explore how generative AI is making transportation safer, smarter and more enjoyable.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gen-ai-vehicle.png"
-			type="image/png"
-			width="1600"
-			height="851"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gen-ai-vehicle-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Generative AI Developers Harness NVIDIA Technologies to Transform In-Vehicle Experiences]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
