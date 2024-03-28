@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 27 Mar 2024 23:26:27 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 27 Mar 2024 23:57:33 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,132 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>Greater Scope: Doctors Get Inside Look at Gut Health With AI-Powered Endoscopy</title>
+		<link>https://blogs.nvidia.com/blog/ai-powered-endoscopy-odin-vision-olympus/</link>
+		
+		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
+		<pubDate>Thu, 28 Mar 2024 15:00:11 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70912</guid>
+
+					<description><![CDATA[From humble beginnings as a university spinoff to an acquisition by the leading global medtech company in its field, Odin Vision has been on an accelerated journey since its founding less than five years ago. An alum of the NVIDIA Inception program for cutting-edge startups, Odin Vision builds cloud-connected AI software that helps clinicians detect		<a class="read-more" href="https://blogs.nvidia.com/blog/ai-powered-endoscopy-odin-vision-olympus/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>From humble beginnings as a university spinoff to an acquisition by the leading global medtech company in its field, Odin Vision has been on an accelerated journey since its founding less than five years ago.</p>
+<p>An alum of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33">NVIDIA Inception</a> program for cutting-edge startups, Odin Vision builds cloud-connected AI software that helps clinicians detect and characterize areas of concern during endoscopy, a procedure where a tiny camera mounted on a tube is inserted into the gastrointestinal tract.</p>
+<p>Network-connected devices in the endoscopy room capture and stream real-time video data to the cloud, where powerful NVIDIA GPUs run AI inference. The models’ results are then streamed back to the endoscopy room so that clinicians can see the AI insights overlaid on the live video feed with minimal latency.</p>
+<p>The startup was in 2022 acquired by Japanese medtech leader Olympus, which has a 70% global market share in gastrointestinal endoscopic equipment.</p>
+<p>“We believe the acquisition brings us much closer to achieving our vision to revolutionize endoscopy through AI and cloud technology,” said Daniel Toth, cofounder and chief technology officer of Odin Vision. “Our software can reach Olympus’ global customer base, enabling us to bring our solutions to as many patients as possible.”</p>
+<p>Olympus is also collaborating with NVIDIA on Olympus Office Hours, an advisory program that connects Inception startups with the medical device company’s experts, who will offer deep industry expertise and guidance to help the startups build AI solutions in key areas including gastroenterology, urology and surgery.</p>
+<p>Eight leading AI startups have joined the inaugural cohort of the program — which is part of the NVIDIA Inception Alliance for Healthcare, an initiative that brings together medical AI startups with NVIDIA and its healthcare industry partners — to help accelerate their product development and go-to-market goals.</p>
+<h2><b>An Extra Set of AIs for Clinicians</b></h2>
+<p>Around <a href="https://newsnetwork.mayoclinic.org/discussion/ai-reduces-miss-rate-of-precancerous-polyps-in-colorectal-cancer-screening/#:~:text=The%20rate%20at%20which%20precancerous%20colorectal%20polyps%20is%20missed%20has,that%20had%20standard%20colonoscopy%20first." target="_blank" rel="noopener">a quarter of precancerous polyps are missed</a> during colonoscopies, a kind of endoscopy procedure that examines the lower digestive tract.</p>
+<p>While some are missed because the endoscope doesn’t capture video footage of every angle, others remain undetected by clinicians. That’s where AI can help provide a second set of eyes to support clinical decision-making.</p>
+<p>Seamless AI integration into the video feeds that medical professionals view during an endoscopy provides an extra data source that can help doctors detect and remove polyps sooner, helping prevent cancer development.</p>
+<p>“Polyps develop slowly, and can take five or 10 years to appear as cancer,” Toth said. “If a clinician can detect and remove them in time, it can help save lives.”</p>
+<p>CADDIE, the company’s AI software for detecting and classifying polyps, has received the CE Mark of regulatory approval in Europe and is deployed across hospitals in the U.K., Spain, Germany, Poland and Italy — with plans for use in the U.S as well.</p>
+<p>Odin Vision also has AI software that has received the CE Mark to assist gastroscopy, where doctors inspect the esophagus for signs of throat cancer.</p>
+<h2><b>Accelerated Inference for Real-Time Insights</b></h2>
+<p>Odin Vision began as a research project by two professors and a Ph.D. student at University College London who were developing AI techniques for polyp detection. In 2019, they teamed with Toth and Odin’s CEO, Peter Mountney, both from Siemens Healthineers, to commercialize their work.</p>
+<p>“NVIDIA GPUs were part of our work from the start — they’ve been essential to train our AI models and were part of our first product prototypes for inference, too,” Toth said. “Since moving to a cloud-based deployment, we’ve begun using the NVIDIA Triton Inference Server for dynamic processing in the cloud.”</p>
+<p>The team uses <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a> for accelerated inference — most recently transitioning to <a href="https://www.nvidia.com/en-us/data-center/l4/">NVIDIA L4 GPUs</a>. Adopting <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a> software and the <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> software development kit enabled them to meet the low-latency threshold needed for real-time video-processing AI applications.</p>
+<p>In addition to supporting doctors during specific procedures, Odin Vision plans to develop generative AI models that can automate a first draft of the clinical notes doctors prepare afterward — as well as models that can aggregate data across procedures. These would allow endoscopy teams to review analytics and assess how well a procedure is performed compared to clinical guidelines.</p>
+<p>“Once you get to a point where there are dozens of AI models tracking different elements of these procedures, we can see if a healthcare professional is inspecting a particular area of the digestive tract for only three minutes, when it’s supposed to take six minutes,” Toth said. “The system can provide a nudge to remind the clinician to follow the guidelines.”</p>
+<h2><b>Cloud-Connected Cancer Screening</b></h2>
+<p>Membership in NVIDIA Inception provided the Odin Vision team access to technical expertise from NVIDIA and cloud credits through leading cloud service providers.</p>
+<p>“Cloud credits helped us massively speed up our technology development and deployment, enabling us to release our products to market months earlier than initially planned,” Toth said. “NVIDIA experts also validated our product concept from a technology perspective and provided consultation about GPU and accelerated software optimizations.”</p>
+<p>The team found that a cloud-based solution made it easier to push software updates over the air to deployments across hospital customers.</p>
+<p>“Some AI companies are sending boxes that need to sit in clinical sites and require regular maintenance, which can prevent normal clinical workflows from running smoothly,” Toth said. “With network-connected devices, we can instead update a single server and the changes reach all end users at the same time.”</p>
+<p><i>Learn more about </i><a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33"><i>NVIDIA Inception</i></a><i> and </i><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>subscribe to NVIDIA healthcare news</i></a><i>. </i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/AdobeStock_309555032_crop.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/AdobeStock_309555032_crop-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Greater Scope: Doctors Get Inside Look at Gut Health With AI-Powered Endoscopy]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Get Cozy With ‘Palia’ on GeForce NOW</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-palia/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 28 Mar 2024 13:00:18 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70939</guid>
+
+					<description><![CDATA[Ease into spring with the warm, cozy vibes of Palia, coming to the cloud this GFN Thursday. It’s part of six new titles joining the GeForce NOW library of over 1,800 games. Welcome Home Escape to a cozy world with Palia, a free-to-play massively multiplayer online game from Singularity 6 Corporation. The game, which has		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-palia/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Ease into spring with the warm, cozy vibes of <i>Palia</i>, coming to the cloud this GFN Thursday.</p>
+<p>It’s part of six new titles joining the <a href="http://play.geforcenow.com">GeForce NOW library</a> of over 1,800 games.</p>
+<h2><b>Welcome Home</b></h2>
+<figure id="attachment_70943" aria-describedby="caption-attachment-70943" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-70943" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-672x378.jpg" alt="Palia on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70943" class="wp-caption-text"><em>Better together.</em></figcaption></figure>
+<p>Escape to a cozy world with <i>Palia</i>, a free-to-play massively multiplayer online game from Singularity 6 Corporation. The game, which has made its way onto more than 200,000 wishlists on Steam, has launched in the cloud this week.</p>
+<p>Farm, fish, craft and explore with friendly villagers across a stunning variety of different biomes — from sprawling flower fields to hilly forests and rocky beaches — in the world of Palia. Inhabit the land, furnish a dream home, unravel ancient mysteries and interact with a vibrant online community.</p>
+<p>Get ready for a captivating adventure across devices by streaming <i>Palia</i> from the cloud. GeForce NOW Ultimate and Priority members get faster access to servers and longer gaming sessions over Free members.</p>
+<h2><b>Time to Play</b></h2>
+<figure id="attachment_70946" aria-describedby="caption-attachment-70946" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-70946" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-672x336.jpg" alt="Millennia on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70946" class="wp-caption-text"><em>10,000 years of history, all in the cloud.</em></figcaption></figure>
+<p>Shape the course of history across 10,000 years in <i>Millennia</i> from Singularity Six and Paradox Interactive. GeForce NOW members can customize their own nations, explore unique combinations of traits and adapt to alternative histories in this captivating journey.</p>
+<p>In addition, members can look for the following:</p>
+<ul>
+<li><i>Palia </i>(New release on <a href="https://store.steampowered.com/app/2707930?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 25)</li>
+<li><i>Bulwark: Falconeer Chronicles </i>(New release on <a href="https://store.steampowered.com/app/290100?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 26)</li>
+<li><i>Millennia </i>(New release on <a href="https://store.steampowered.com/app/1268590?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 26)</li>
+<li><i>Outpost: Infinity Siege </i>(New release on <a href="https://store.steampowered.com/app/1566690?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 26)</li>
+<li><i>SOUTH PARK: SNOW DAY! </i>(New release on <a href="https://store.steampowered.com/app/1214650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 26)</li>
+<li><i>Tchia</i> (<a href="https://store.steampowered.com/app/1496590?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+</ul>
+<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">if you could live in a video game, which one would it be and why? <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1773017134517346499?ref_src=twsrc%5Etfw">March 27, 2024</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gfn-thursday-3-28-nv-blog-1280x680-no-copy.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gfn-thursday-3-28-nv-blog-1280x680-no-copy-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Get Cozy With ‘Palia’ on GeForce NOW]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Software Developers Launch OpenUSD and Generative AI-Powered Product Configurators Built on NVIDIA Omniverse</title>
 		<link>https://blogs.nvidia.com/blog/3d-product-configurators-omniverse-openusd/</link>
 		
@@ -45,10 +171,10 @@
 <p><iframe title="The Future of Storytelling with Generative AI and NVIDIA" width="500" height="281" src="https://www.youtube.com/embed/h30brb7-taU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>Many other developers are also building 3D product configurator software and solutions with NVIDIA Omniverse SDKs and APIs.</p>
 <p>CGI studio <a href="https://www.katanaus.com/">Katana</a> has developed a content creation application, COATCreate, used by manufacturers such as <a href="https://www.nissanusa.com/">Nissan</a>, that allows marketing assets to be staged and created faster with product digital twins. COATCreate also enables users to <a href="https://blogs.nvidia.com/blog/omniverse-apple-vision-pro/">view and customize the digital twin while wearing an Apple Vision Pro headset</a>, unlocking real-time ray-traced extended reality experiences.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1.jpg"><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-70931" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-672x357.jpg" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1.jpg"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-70931" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-672x357.jpg" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-1.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p><a href="https://www.brickland.se/">Brickland</a>, another CGI studio, is developing real-time virtual experiences that allow users to customize clothing by choosing from predefined parameters such as color and material. Through their <a href="https://www.brickland.se/digitex/winter">Digitex initiative</a>, Brickland is expanding into digital textures and allowing consumers to visualize and interact with extreme levels of detail in their 3D assets thanks to RTX real-time rendering</p>
 <p><a href="https://configit.com/">Configit</a> connected its powerful configurator logic tool Configit Ace to Omniverse and OpenUSD by streamlining the management of the complex rules system behind the creation of configurators and combining it with the rendering capabilities of Omniverse and RTX. This allows for rapid creation of articulated product configurators and enables the configurator developers to power real-time ray-traced rendering in their solutions.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2.jpg"><img decoding="async" class="aligncenter size-large wp-image-70934" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-672x357.jpg" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2.jpg"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-70934" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-672x357.jpg" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/OV-Dev-Blog-Copy-2.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p><a href="https://www.wpp.com/wpp-iq/2024/03/wpp-puts-itself-at-the-heart-of-collaborative-3d-worlds">WPP</a> has developed a <a href="https://www.wpp.com/en/news/2023/05/wpp-partners-with-nvidia-to-build-generative-ai-enabled-content-engine-for-digital-advertising">content engine that harnesses OpenUSD and AI</a> to enable creative teams to produce high-quality commercial content faster, more efficiently and at scale while remaining aligned with a client’s brand.</p>
 <p><a href="https://media.monks.com/">Media.Monks</a> has developed an AI-centric professional managed service that leverages Omniverse called Monks.Flow, which helps brands virtually explore different customizable product designs and unlock scale and hyper-personalization across any customer journey.</p>
 <p><a href="https://newsroom.accenture.com/news/2024/accenture-teams-with-nvidia-to-showcase-ai-powered-immersive-client-experiences-for-defender">Accenture Song</a>, the world’s largest tech-powered creative group, is using Omniverse SDKs to generate marketing content for Defender vehicles. Using it with the Edify-powered generative AI microservice, Accenture Song is enabling the creation of cinematic 3D environments via conversational prompts.</p>
@@ -1063,131 +1189,6 @@ The discussion highlighted not only Imbue’s approach toward building practical
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[NVIDIA Celebrates Americas Partners Driving AI-Powered Transformation]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA, Huang Win Top Honors in Innovation, Engineering</title>
-		<link>https://blogs.nvidia.com/blog/fast-company-nae-honors/</link>
-		
-		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
-		<pubDate>Tue, 19 Mar 2024 13:45:55 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[CUDA]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[New GPU Uses]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70494</guid>
-
-					<description><![CDATA[NVIDIA today was named the world’s most innovative company by Fast Company magazine. The accolade comes on the heels of company founder and CEO Jensen Huang being inducted into the U.S. National Academy of Engineering. A team of several dozen journalists at Fast Company — a business media brand launched in 1995 by two Harvard		<a class="read-more" href="https://blogs.nvidia.com/blog/fast-company-nae-honors/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA today was named the world’s most innovative company by <i>Fast Company</i> magazine.</p>
-<p>The accolade comes on the heels of company founder and CEO Jensen Huang being inducted into the U.S. National Academy of Engineering.</p>
-<p>A team of several dozen journalists at <i>Fast Company</i> — a business media brand launched in 1995 by two <i>Harvard Business Review</i> editors — ranked NVIDIA the leader in its <a href="https://www.fastcompany.com/most-innovative-companies/list">2024 list</a> of the world’s 50 most innovative companies.</p>
-<h2><b>“Putting AI to Work”</b></h2>
-<p>“Nvidia isn’t just in the business of providing ever-more-powerful computing hardware and letting everybody else figure out what to do with it,” <i>Fast Company</i> wrote in <a href="https://www.fastcompany.com/91033514/nvidia-most-innovative-companies-2024">an article</a> detailing its selection.</p>
-<p>“Across an array of industries, the company’s technologies, platforms, and partnerships are doing much of the heavy lifting of putting AI to work,” citing advances in automotive, drug discovery, gaming and retail announced in one recent week.</p>
-<p>The article noted the central role of the <a href="https://developer.nvidia.com/about-cuda">CUDA</a> compute platform. It also shared an eye-popping experience using <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> to interact with a digital twin of a Nissan Z sport coupe.</p>
-<h2><b>In a League With Giants</b></h2>
-<p>“Even for AI’s titans, building on what Nvidia has created — the more ambitiously, the better — is often how progress happens,” the article concluded.</p>
-<p>Last year, OpenAI led the list for ChatGPT, the <a href="https://www.nvidia.com/en-us/glossary/large-language-models">large language model</a> that started a groundswell in <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>. In 2021, Moderna and Pfizer-BioNTech topped the ranking for rapidly developing a Covid vaccine.</p>
-<p><i>Fast Company</i> bases its ranking on four criteria: innovation, impact, timeliness and relevance. Launched in 2008, the annual list recognizes organizations that have introduced groundbreaking products, fostered positive social impact and reshaped industries.</p>
-<p>NVIDIA invented the GPU in 1999, redefining computer graphics and igniting the era of modern AI. NVIDIA is now driving the platform shift to <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> and generative AI, transforming the world’s largest industries.</p>
-<h2><b>Fueling an AI Revolution</b></h2>
-<p>Last month, Huang was elected to the National Academy of Engineering (<a href="https://www.nae.edu/">NAE</a>) for contributions in “high-powered graphics processing units, fueling the artificial intelligence revolution.”</p>
-<p>Academy membership honors those who have made outstanding contributions such as pioneering new fields of technology. Founded in 1964, the NAE provides a trusted source of engineering advice for creating a healthier, more secure and sustainable world.</p>
-<p>“Jensen Huang’s induction into the National Academy of Engineering is a testament to his enduring contributions to our industry and world,” said Satya Nadella, chairman and CEO of Microsoft.</p>
-<p>“His visionary leadership has forever transformed computing, from the broad adoption of advanced 3D graphics to today’s GPUs — and, more importantly, has driven foundational innovations across every sector, from gaming and productivity, to digital biology and healthcare. All of us at Microsoft congratulate Jensen on this distinction, and we are honored to partner with him and the entire NVIDIA team on defining this new era of AI,” he added.</p>
-<p>“Jensen’s election is incredibly well deserved,” said John Hennessy, president emeritus of Stanford University and an NAE member since 1992.</p>
-<p>“His election recognizes both his transformative technical contributions, as well as his incredible leadership of NVIDIA for almost 30 years. I have seen many NAE nominations over the past 30 years, Jensen’s was one of the best!”</p>
-<p>Morris Chang, founder of Taiwan Semiconductor Manufacturing Co. and an NAE member since 2002, added his congratulations.</p>
-<p>“Jensen is one of the most visionary engineers and charismatic business leaders I have had the pleasure to work with in the last three decades,” he said.</p>
-<p>Huang is also a recipient of the Semiconductor Industry Association’s highest honor, the Robert N. Noyce Award, as well as honorary doctorate degrees from Taiwan’s National Chiao Tung University, National Taiwan University and Oregon State University.</p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/FC-NAE-logos.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/FC-NAE-logos-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA, Huang Win Top Honors in Innovation, Engineering]]></media:title>
-			<media:description type="html">Fast Company, NAE logos</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Generation Sensation: New Generative AI and RTX Tools Boost Content Creation</title>
-		<link>https://blogs.nvidia.com/blog/studio-gtc-ai-studio-driver/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Tue, 19 Mar 2024 13:00:20 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[In the NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[NVIDIA Studio]]></category>
-		<category><![CDATA[NVIDIA Studio Driver]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70408</guid>
-
-					<description><![CDATA[Creators are getting a generative AI boost with tools announced at NVIDIA GTC, a global AI conference bringing together the brightest minds in AI content creation and accelerated computing. ]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/" target="_blank" rel="noopener"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/" target="_blank" rel="noopener"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/" target="_blank" rel="noopener"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
-<p>Creators are getting a generative AI boost with tools announced at <a href="https://www.nvidia.com/gtc/" target="_blank" rel="noopener">NVIDIA GTC</a>, a global AI conference bringing together the brightest minds in AI content creation and accelerated computing.</p>
-<p>Adobe Substance 3D Stager and Sampler via Adobe Firefly, the OBS 30.1 YouTube HDR Beta and <a href="https://www.nvidia.com/en-us/omniverse/apps/audio2face/" target="_blank" rel="noopener">NVIDIA Omniverse Audio2Face</a> for iClone 8 will also receive sizable upgrades.</p>
-<p>DLSS 3.5 with Ray Reconstruction is coming soon to the <a href="https://www.nvidia.com/en-us/geforce/rtx-remix/" target="_blank" rel="noopener">NVIDIA RTX Remix Open Beta</a>, enabling modders to upgrade their projects with the power of AI. Sample this leap in high graphical fidelity with the new <a href="https://www.nvidia.com/en-us/geforce/campaigns/play-portal-with-rtx/" target="_blank" rel="noopener"><i>Portal With RTX</i></a> update available on <a href="https://store.steampowered.com/app/2012840/Portal_with_RTX/" target="_blank" rel="noopener">Steam</a> with DLSS Ray Reconstruction, which provides enhanced ray-traced imagery. <a href="https://www.nvidia.com/en-us/geforce/news/portal-with-rtx-dlss-3-5-ray-reconstruction-update" target="_blank" rel="noopener">Learn more</a> about the DLSS 3.5 update to <i>Portal With RTX</i>.</p>
-<p>The March NVIDIA Studio Driver, optimizing the latest creative app updates, is available for download today.</p>
-<h2><b>A March of Creative App Upgrades</b></h2>
-<p>The Adobe Substance 3D Stager beta announced a new Generative Background feature — powered by Adobe Firefly — to create backdrops for rendered images. Stager’s Match Image tool uses machine learning to accurately place 3D models within the generated background, optimizing lighting and perspective for greater flexibility and realism.</p>
-<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-70408-1" width="1280" height="1920" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-gen-ai-bg.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-gen-ai-bg.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-gen-ai-bg.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>Meanwhile, Substance 3D Sampler’s announced Text to Texture beta — also powered by Adobe Firefly — gives artists a new way to source texture imagery using only a description. All Text to Texture images are square and tileable with proper perspective, ready for material-creation workflows.</p>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-70408-2" width="1280" height="1080" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-wood-sampler.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-wood-sampler.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-wood-sampler.mp4</a></video></div>
-<p>&nbsp;</p>
-<p>Learn more about both apps in the GTC session “<a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG&amp;search=maheut#/session/1695393531751001EoQy" target="_blank" rel="noopener">Elevating 3D Concepts: GenAI-Infused Design</a>.” Search the <a href="https://www.nvidia.com/gtc/session-catalog/?tab.allsessions=1700692987788001F1cG#/" target="_blank" rel="noopener">GTC session catalog</a> and check out the “Content Creation / Rendering / Ray Tracing” and “Generative AI” topics for additional creator-focused sessions.</p>
-<p>The recently launched OBS 30.1 beta will enable content creators to use Real-Time Messaging Protocol — an Adobe open-source protocol designed to stream audio and video by maintaining low-latency connections — to stream high-dynamic range, high-efficiency video coding content to YouTube. Download OBS Beta 30.1 on the <a href="https://obsproject.com/forum/threads/obs-studio-30-1-beta.172987/" target="_blank" rel="noopener">OBS website</a> to get started.</p>
-<p><iframe loading="lazy" title="Audio2Face - AI-Powered Facial &amp; Lip Sync Animation | iClone" width="500" height="281" src="https://www.youtube.com/embed/ScMb1f1M9yU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<p>NVIDIA Omniverse Audio2Face for iClone 8 uses AI to produce expressive facial animations solely from audio input. In addition to generating natural lip-sync animations for multilingual dialogue, the latest standalone release supports multilingual lip-sync and singing animations, as well as full-spectrum editing with slider controls and a keyframe editor.</p>
-<p>For more information on how RTX is powering premium AI capabilities and performance, check out the new <a href="https://blogs.nvidia.com/blog/ai-decoded-rtx-pc" target="_blank" rel="noopener">AI Decoded</a> blog series and <a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai" target="_blank" rel="noopener">sign up</a> to receive updates weekly.</p>
-<p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/" target="_blank" rel="noopener"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio" target="_blank" rel="noopener"><i>X</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/" target="_blank" rel="noopener"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw" target="_blank" rel="noopener"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon" target="_blank" rel="noopener"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-gen-ai-bg.mp4" length="1899762" type="video/mp4" />
-<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nvidia-studio-itns-wk101-1280w-wood-sampler.mp4" length="1837458" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nv-blog-header-preview-1280x680-1-gen-ai-gtc-2024.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/nv-blog-header-preview-1280x680-1-gen-ai-gtc-2024-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Generation Sensation: New Generative AI and RTX Tools Boost Content Creation]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
