@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 27 Mar 2024 23:57:33 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 01 Apr 2024 21:44:53 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -110,7 +110,7 @@
 <p>Get ready for a captivating adventure across devices by streaming <i>Palia</i> from the cloud. GeForce NOW Ultimate and Priority members get faster access to servers and longer gaming sessions over Free members.</p>
 <h2><b>Time to Play</b></h2>
 <figure id="attachment_70946" aria-describedby="caption-attachment-70946" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-70946" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-672x336.jpg" alt="Millennia on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70946" class="wp-caption-text"><em>10,000 years of history, all in the cloud.</em></figcaption></figure>
-<p>Shape the course of history across 10,000 years in <i>Millennia</i> from Singularity Six and Paradox Interactive. GeForce NOW members can customize their own nations, explore unique combinations of traits and adapt to alternative histories in this captivating journey.</p>
+<p>Shape the course of history across 10,000 years in <i>Millennia</i> from C Prompt Games and Paradox Interactive. GeForce NOW members can customize their own nations, explore unique combinations of traits and adapt to alternative histories in this captivating journey.</p>
 <p>In addition, members can look for the following:</p>
 <ul>
 <li><i>Palia </i>(New release on <a href="https://store.steampowered.com/app/2707930?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 25)</li>
@@ -248,7 +248,8 @@
 <p>With nearly 5 TB/second memory bandwidth, GH200 Superchips delivered standout performance, including on memory-intensive MLPerf tests such as <a href="https://blogs.nvidia.com/blog/grace-hopper-recommender-systems/">recommender systems</a>.</p>
 <h2><b>Sweeping Every MLPerf Test</b></h2>
 <p>On a per-accelerator basis, Hopper GPUs swept every test of AI inference in the latest round of the MLPerf industry benchmarks.</p>
-<p>The benchmarks cover today’s most popular AI workloads and scenarios, including generative AI, recommendation systems, natural language processing, speech and computer vision. NVIDIA was the only company to submit results on every workload in the latest round and every round since MLPerf’s data center inference benchmarks began in October 2020.</p>
+<p>In addition, <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson Orin</a> remains at the forefront in MLPerf’s edge category. In the last two inference rounds, Orin ran the most diverse set of models in the category, including GPT-J and Stable Diffusion XL.</p>
+<p>The MLPerf benchmarks cover today’s most popular AI workloads and scenarios, including generative AI, recommendation systems, natural language processing, speech and computer vision. NVIDIA was the only company to submit results on every workload in the latest round and every round since MLPerf’s data center inference benchmarks began in October 2020.</p>
 <p>Continued performance gains translate into lower costs for inference, a large and growing part of the daily work for the millions of NVIDIA GPUs deployed worldwide.</p>
 <h2><b>Advancing What’s Possible</b></h2>
 <p>Pushing the boundaries of what’s possible, NVIDIA demonstrated three innovative techniques in a special section of the benchmarks called the open division, created for testing advanced AI methods.</p>
