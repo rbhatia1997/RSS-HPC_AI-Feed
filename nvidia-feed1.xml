@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 04 Apr 2024 21:27:59 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 09 Apr 2024 04:54:40 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,129 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.4.3</generator>
 	<item>
+		<title>Broadcasting Breakthroughs: NVIDIA Holoscan for Media, Available Now, Transforms Live Media With Easy AI Integration</title>
+		<link>https://blogs.nvidia.com/blog/holoscan-live-media-ai-solutions/</link>
+		
+		<dc:creator><![CDATA[Sepi Motamedi]]></dc:creator>
+		<pubDate>Tue, 09 Apr 2024 15:00:11 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Graphics]]></category>
+		<category><![CDATA[Video Streaming]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70983</guid>
+
+					<description><![CDATA[Whether delivering live sports programming, streaming services, network broadcasts or content on social platforms, media companies face a daunting landscape. Viewers are increasingly opting for interactive and personalized content. Virtual reality and augmented reality continue their drive into the mainstream. New video compression standards are challenging traditional computing infrastructure. And AI is having an impact		<a class="read-more" href="https://blogs.nvidia.com/blog/holoscan-live-media-ai-solutions/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Whether delivering live sports programming, streaming services, network broadcasts or content on social platforms, media companies face a daunting landscape.</p>
+<p>Viewers are increasingly opting for interactive and personalized content. Virtual reality and augmented reality continue their drive into the mainstream. New video compression standards are challenging traditional computing infrastructure. And AI is having an impact across the board.</p>
+<p>In a situation this dynamic, media companies will benefit most from AI-enabled media solutions that flexibly align with their changing development and delivery needs.</p>
+<p>NVIDIA Holoscan for Media, available now, is a software-defined platform that enables developers to easily build live media applications, supercharge them with AI and then deploy them across media platforms.</p>
+<h2><b>A New Approach to Media Application Development </b></h2>
+<p>Holoscan for Media offers a new approach to development in live media. It simplifies application development by providing an internet protocol (IP)-based, cloud-native architecture that isn’t constrained by dedicated hardware, environments or locations. Instead, it integrates open-source and ubiquitous technologies and streamlines application delivery to customers, all while optimizing costs.</p>
+<p>Traditional application development for the live media market relies on dedicated hardware. Because software is tied to that hardware, developers are constrained when it comes to innovating or upgrading applications.</p>
+<p>Each deployment type, whether on premises or in the cloud, requires its own build, making development costly and inefficient. Beyond designing an application’s user interface and core functionalities, developers have to build out additional infrastructure services, further eating into research and development budgets.</p>
+<p>The most significant challenge is incorporating AI, due to the complexity of building an AI software stack. This prevents many applications in pilot programs from moving to production.</p>
+<p>Holoscan for Media eases the integration of AI into application development due to its underlying architecture, which enables software-defined video to be deployed on the same software stack as AI applications, including generative AI-based tools. This benefits vendors and research and development departments looking to incorporate AI apps into live video.</p>
+<p>Since the platform is cloud-native, the same architecture can run independent of location, whether in the cloud, on premises or at the edge. Additionally, it’s not tied to a specific device, field-programmable gate array or appliance.</p>
+<p>The Holoscan for Media architecture includes services like authentication, logging and security, as well as features that help broadcasters migrate to IP-based technologies, including the SMPTE ST 2110 transport protocol, the precision time protocol for timing and synchronization, and the NMOS controller and registry for dynamic device management.</p>
+<h2><b>A Growing Ecosystem of Partners</b></h2>
+<p>Beamr, Comprimato, Lawo, Media.Monks, Pebble, RED Digital Cinema, Sony Corporation and Telestream are among the early adopters already transforming live media with Holoscan for Media.</p>
+<p>“We use Holoscan for Media as the core infrastructure for our broadcast and media workflow, granting us powerful scale to deliver interest-based content across a wide range of channels and platforms,” said Lewis Smithingham, senior vice president of innovation special operations at Media.Monks, a provider of software-defined production workflows.</p>
+<p>“By compartmentalizing applications and making them interoperable, Holoscan for Media allows for easy adoption of new innovations from many different companies in one platform,” said Jeff Goodman, vice president of product management at RED Digital Cinema, a manufacturer of professional digital cinema cameras. “It takes much of the integration complexity out of the equation and will significantly increase the pace of innovation. We are very excited to be a part of it.”</p>
+<p>“We believe NVIDIA Holoscan for Media is one of the paths forward to enabling the development of next-generation products and services for the industry, allowing the scaling of GPU power as needed,” said Masakazu Murata, senior general manager of media solutions business at Sony Corporation. “Our M2L-X software switcher prototype running on Holoscan for Media demonstrates how customers can run Sony’s solutions on GPU clusters.”</p>
+<p>“Telestream is committed to transforming the media landscape, enhancing efficiency and content experiences without sacrificing quality or user-friendliness,” said Charlie Dunn, senior vice president and general manager at Telestream, a provider of digital media software and solutions. “We’ve seamlessly integrated the Holoscan for Media platform into our INSPECT IP video monitoring solution to achieve a clear and efficient avenue for ST 2110 compliance.”</p>
+<h2><b>Experience Holoscan for Media at NAB Show</b></h2>
+<p>These partners will showcase how they’re using NVIDIA Holoscan for Media at NAB Show, an event for the broadcast, media and entertainment industry, taking place April 13-17 in Las Vegas.</p>
+<p>Explore development on Holoscan for Media and discover applications running on the platform at the <a href="https://nab24.mapyourshow.com/8_0/floorplan/?hallID=SL&amp;selectedBooth=SL8065">Dell Technologies booth</a>. Learn more about <a href="https://www.nvidia.com/en-us/events/nab/">NVIDIA’s presence at NAB Show</a>, including details on sessions and demos on generative AI, software-defined broadcast and immersive graphics.</p>
+<p><i>Apply for access to </i><a href="https://developer.nvidia.com/holoscan-for-media"><i>NVIDIA Holoscan for Media</i></a><i> today.</i></p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/Holoscan-Corp-Blog.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/Holoscan-Corp-Blog-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Broadcasting Breakthroughs: NVIDIA Holoscan for Media, Available Now, Transforms Live Media With Easy AI Integration]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Start Up Your Engines: NVIDIA and Google Cloud Collaborate to Accelerate AI Development</title>
+		<link>https://blogs.nvidia.com/blog/nvidia-google-cloud-ai-development/</link>
+		
+		<dc:creator><![CDATA[Greg Estes]]></dc:creator>
+		<pubDate>Tue, 09 Apr 2024 12:00:48 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[NVIDIA DGX]]></category>
+		<category><![CDATA[NVIDIA Triton]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71004</guid>
+
+					<description><![CDATA[NVIDIA and Google Cloud have announced a new collaboration to help startups around the world accelerate the creation of generative AI applications and services. The announcement, made today at Google Cloud Next ‘24 in Las Vegas, brings together the NVIDIA Inception program for startups and the Google for Startups Cloud Program to widen access to		<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-google-cloud-ai-development/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA and Google Cloud have announced a new collaboration to help startups around the world accelerate the creation of generative AI applications and services.</p>
+<p>The announcement, made today at Google Cloud Next ‘24 in Las Vegas, brings together the <a href="https://www.nvidia.com/en-us/startups/?ncid=ref-kc-319196-vt18&amp;sfdcid=Google" target="_blank" rel="noopener">NVIDIA Inception</a> program for startups and the <a href="https://startup.google.com/cloud/">Google for Startups Cloud Program</a> to widen access to cloud credits, go-to-market support and technical expertise to help startups deliver value to customers faster.</p>
+<p>Qualified members of NVIDIA Inception, a global program supporting more than 18,000 startups, will have an accelerated path to using Google Cloud infrastructure with access to Google Cloud credits, offering up to $350,000 for those focused on AI.</p>
+<p>Google for Startups Cloud Program members can join NVIDIA Inception and gain access to technological expertise, <a href="https://www.nvidia.com/en-us/training/" target="_blank" rel="noopener">NVIDIA Deep Learning Institute</a> course credits, NVIDIA hardware and software, and more. Eligible members of the Google for Startups Cloud Program also can participate in NVIDIA Inception Capital Connect, a platform that gives startups exposure to venture capital firms interested in the space.</p>
+<p>High-growth emerging software makers of both programs can also gain fast-tracked onboarding to Google Cloud Marketplace, co-marketing and product acceleration support.</p>
+<p>This collaboration is the latest in a series of announcements the two companies have made to help ease the costs and barriers associated with developing generative AI applications for enterprises of all sizes. Startups in particular are constrained by the high costs associated with AI investments.</p>
+<h2><b>It Takes a Full-Stack AI Platform</b></h2>
+<p>In February, Google DeepMind unveiled <a href="https://blog.google/technology/developers/gemma-open-models/" target="_blank" rel="noopener">Gemma</a>, a family of state-of-the-art open models. NVIDIA, in collaboration with Google, recently launched optimizations across all <a href="https://blogs.nvidia.com/blog/google-gemma-llm-rtx-ai-pc/" target="_blank" rel="noopener">NVIDIA AI platforms for Gemma</a>, helping to reduce customer costs and speed up innovative work for domain-specific use cases.</p>
+<p>Teams from the companies worked closely together to accelerate the performance of Gemma — built from the same research and technology used to create Google DeepMind’s most capable model yet, <a href="https://blog.google/technology/ai/google-gemini-ai/" target="_blank" rel="noopener">Gemini</a> — with <a href="https://developer.nvidia.com/tensorrt#inference">NVIDIA TensorRT-LLM</a>, an open-source library for optimizing large language model inference, when running on NVIDIA GPUs.</p>
+<p><a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/" target="_blank" rel="noopener">NVIDIA NIM</a> microservices, part of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform, together with <a href="https://cloud.google.com/kubernetes-engine" target="_blank" rel="noopener">Google Kubernetes Engine</a> (GKE) provide a streamlined path for developing AI-powered apps and deploying optimized AI models into production. Built on inference engines including <a href="https://developer.nvidia.com/triton-inference-server" target="_blank" rel="noopener">NVIDIA Triton Inference Server</a> and TensorRT-LLM, NIM supports a wide range of leading AI models and delivers seamless, scalable AI inferencing to accelerate generative AI deployment in enterprises.</p>
+<p>The Gemma family of models, including <a href="https://build.nvidia.com/google/gemma-7b" target="_blank" rel="noopener">Gemma 7B</a>, <a href="https://build.nvidia.com/google/recurrentgemma-2b" target="_blank" rel="noopener">RecurrentGemma</a> and <a href="https://build.nvidia.com/google/codegemma-7b" target="_blank" rel="noopener">CodeGemma,</a> are available from the <a href="http://build.nvidia.com" target="_blank" rel="noopener">NVIDIA API catalog</a> for users to try from a browser, prototype with the API endpoints and self-host with NIM.</p>
+<p>Google Cloud has made it easier to deploy the <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/" target="_blank" rel="noopener">NVIDIA NeMo</a> framework across its platform via GKE and <a href="https://cloud.google.com/hpc-toolkit/docs/overview" target="_blank" rel="noopener">Google Cloud HPC Toolkit</a>. This enables developers to automate and scale the training and serving of generative AI models, allowing them to rapidly deploy turnkey environments through customizable blueprints that jump-start the development process.</p>
+<p>NVIDIA NeMo, part of NVIDIA AI Enterprise, is also available in Google Cloud Marketplace, providing customers another way to easily access NeMo and other frameworks to accelerate AI development.</p>
+<p>Further widening the availability of NVIDIA-accelerated generative AI computing, Google Cloud also announced the general availability of A3 Mega will be coming next month. The instances are an expansion to its A3 virtual machine family, powered by <a href="https://www.nvidia.com/en-us/data-center/h100/" target="_blank" rel="noopener">NVIDIA H100 Tensor Core GPUs</a>. The new instances will double the GPU-to-GPU network bandwidth from A3 VMs.</p>
+<p>Google Cloud’s new Confidential VMs on A3 will also include support for <a href="https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/" target="_blank" rel="noopener">confidential computing</a> to help customers protect the confidentiality and integrity of their sensitive data and secure applications and AI workloads during training and inference — with no code changes while accessing H100 GPU acceleration. These GPU-powered Confidential VMs will be available in Preview this year.</p>
+<h2><b>Next Up: NVIDIA Blackwell-Based GPUs</b></h2>
+<p>NVIDIA’s newest GPUs based on the <a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/" target="_blank" rel="noopener">NVIDIA Blackwell</a> platform will be coming to Google Cloud early next year in two variations: the <a href="https://www.nvidia.com/en-us/data-center/hgx/">NVIDIA </a><a href="https://www.nvidia.com/en-us/data-center/hgx/">HGX B200</a> and the <a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/">NVIDIA GB200 NVL72</a>.</p>
+<p>The HGX B200 is designed for the most demanding AI, data analytics and high performance computing workloads, while the GB200 NVL72 is designed for next-frontier, massive-scale, trillion-parameter model training and real-time inferencing.</p>
+<p>The NVIDIA GB200 NVL72 connects 36 Grace Blackwell Superchips, each with two NVIDIA Blackwell GPUs combined with an <a href="https://www.nvidia.com/en-us/data-center/grace-cpu/" target="_blank" rel="noopener">NVIDIA Grace CPU</a> over a 900GB/s chip-to-chip interconnect, supporting up to 72 Blackwell GPUs in one <a href="https://www.nvidia.com/en-us/data-center/nvlink/" target="_blank" rel="noopener">NVIDIA NVLink</a> domain and 130TB/s of bandwidth. It overcomes communication bottlenecks and acts as a single GPU, delivering 30x faster real-time LLM inference and 4x faster training compared to the prior generation.</p>
+<p>NVIDIA GB200 NVL72 is a multi-node rack-scale system that will be combined with Google Cloud’s fourth generation of advanced liquid-cooling systems.</p>
+<p>NVIDIA announced last month that <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud" target="_blank" rel="noopener">NVIDIA DGX Cloud</a>, an AI platform for enterprise developers that’s optimized for the demands of generative AI, is generally available on A3 VMs powered by H100 GPUs. DGX Cloud with GB200 NVL72 will also be available on Google Cloud in 2025.</p>
+</div>]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/08/NEWgooglecloud.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2023/08/NEWgooglecloud-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Start Up Your Engines: NVIDIA and Google Cloud Collaborate to Accelerate AI Development]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA Ranked by Fortune at No. 3 on ‘100 Best Companies to Work For’ List</title>
 		<link>https://blogs.nvidia.com/blog/nvidia-life-fortune-100-best-companies/</link>
 		
@@ -1061,131 +1184,6 @@ The discussion highlighted not only Imbue’s approach toward building practical
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Here Be Dragons: ‘Dragon’s Dogma 2’ Comes to GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Instant Latte: NVIDIA Gen AI Research Brews 3D Shapes in Under a Second</title>
-		<link>https://blogs.nvidia.com/blog/latte-3d-generative-ai-research/</link>
-		
-		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
-		<pubDate>Thu, 21 Mar 2024 13:00:51 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Research]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[NVIDIA Research]]></category>
-		<category><![CDATA[Synthetic Data Generation]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70638</guid>
-
-					<description><![CDATA[NVIDIA researchers have pumped a double shot of acceleration into their latest text-to-3D generative AI model, dubbed LATTE3D. Like a virtual 3D printer, LATTE3D turns text prompts into 3D representations of objects and animals within a second. Crafted in a popular format used for standard rendering applications, the generated shapes can be easily served up		<a class="read-more" href="https://blogs.nvidia.com/blog/latte-3d-generative-ai-research/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA researchers have pumped a double shot of acceleration into their latest text-to-3D <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> model, dubbed LATTE3D.</p>
-<p>Like a virtual 3D printer, <a href="https://research.nvidia.com/labs/toronto-ai/LATTE3D/">LATTE3D</a> turns text prompts into 3D representations of objects and animals within a second.</p>
-<p>Crafted in a popular format used for standard rendering applications, the generated shapes can be easily served up in virtual environments for developing video games, ad campaigns, design projects or virtual training grounds for robotics.</p>
-<p>“A year ago, it took an hour for AI models to generate 3D visuals of this quality — and the current state of the art is now around 10 to 12 seconds,” said Sanja Fidler, vice president of AI research at NVIDIA, whose Toronto-based AI lab team developed LATTE3D. “We can now produce results an order of magnitude faster, putting near-real-time text-to-3D generation within reach for creators across industries.”</p>
-<p>This advancement means that LATTE3D can produce 3D shapes near instantly when running inference on a single GPU, such as the <a href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">NVIDIA RTX A6000</a>, which was used for the NVIDIA Research demo.</p>
-<p><iframe loading="lazy" title="LATTE3D Text to 3D Generative AI Model from NVIDIA Research" width="500" height="281" src="https://www.youtube.com/embed/yZtSS3980z4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-<h2><b>Ideate, Generate, Iterate: Shortening the Cycle</b></h2>
-<p>Instead of starting a design from scratch or combing through a 3D asset library, a creator could use LATTE3D to generate detailed objects as quickly as ideas pop into their head.</p>
-<p>The model generates a few different 3D shape options based on each text prompt, giving a creator options. Selected objects can be optimized for higher quality within a few minutes. Then, users can export the shape into graphics software applications or platforms such as <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, which enables <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a>-based 3D workflows and applications.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-70649" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-scaled.jpg" alt="" width="2048" height="2048" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-400x400.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-500x500.jpg 500w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-150x150.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-768x768.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-1536x1536.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-450x450.jpg 450w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-215x215.jpg 215w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-100x100.jpg 100w, https://blogs.nvidia.com/wp-content/uploads/2024/03/latte3d-collage-1280x1280.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /></p>
-<p>While the researchers trained LATTE3D on two specific datasets — animals and everyday objects — developers could use the same model architecture to train the AI on other data types.</p>
-<p>If trained on a dataset of 3D plants, for example, a version of LATTE3D could help a landscape designer quickly fill out a garden rendering with trees, flowering bushes and succulents while brainstorming with a client. If trained on household objects, the model could generate items to fill in 3D simulations of homes, which developers could use to train personal assistant robots before they’re tested and deployed in the real world.</p>
-<p>LATTE3D was trained using <a href="https://www.nvidia.com/en-us/data-center/a100/">NVIDIA A100 Tensor Core GPUs</a>. In addition to 3D shapes, the model was trained on diverse text prompts generated using ChatGPT to improve the model’s ability to handle the various phrases a user might come up with to describe a particular 3D object — for example, understanding that prompts featuring various canine species should all generate doglike shapes.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-70646" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs.jpg" alt="" width="1999" height="426" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs.jpg 1999w, https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs-400x85.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs-672x143.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs-768x164.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs-1536x327.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs-842x179.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs-406x87.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs-188x40.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/dogs-1280x273.jpg 1280w" sizes="(max-width: 1999px) 100vw, 1999px" /></p>
-<p><a href="https://www.nvidia.com/en-us/research/">NVIDIA Research</a> comprises hundreds of scientists and engineers worldwide, with teams focused on topics including AI, computer graphics, computer vision, self-driving cars and robotics.</p>
-<p>Researchers shared work at <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> this week that advances the state of the art for training diffusion models. Read more <a href="https://developer.nvidia.com/blog/rethinking-how-to-train-diffusion-models/">on the NVIDIA Technical Blog</a>, and see the full list of <a href="https://www.nvidia.com/gtc/sessions/ai-research--thought-leadership/">NVIDIA Research sessions at GTC</a>, running in San Jose, Calif., and online through March 21.</p>
-<p><i>For the latest NVIDIA AI news, watch the replay of NVIDIA founder and CEO Jensen Huang’s keynote address at GTC: </i></p>
-<p><iframe loading="lazy" title="GTC March 2024 Keynote with NVIDIA CEO Jensen Huang" width="500" height="281" src="https://www.youtube.com/embed/Y2F8yisiS6E?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Latte3D_turtle_side_by_side.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/Latte3D_turtle_side_by_side-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Instant Latte: NVIDIA Gen AI Research Brews 3D Shapes in Under a Second]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>‘You Transformed the World,’ NVIDIA CEO Tells Researchers Behind Landmark AI Paper</title>
-		<link>https://blogs.nvidia.com/blog/gtc-2024-transformer-ai-research-panel-jensen/</link>
-		
-		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
-		<pubDate>Thu, 21 Mar 2024 13:00:45 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Research]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[GTC 2024]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70685</guid>
-
-					<description><![CDATA[Of GTC’s 900+ sessions, the most wildly popular was a conversation hosted by NVIDIA founder and CEO Jensen Huang with seven of the authors of the legendary research paper that introduced the aptly named transformer — a neural network architecture that went on to change the deep learning landscape and enable today’s era of generative		<a class="read-more" href="https://blogs.nvidia.com/blog/gtc-2024-transformer-ai-research-panel-jensen/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Of <a href="https://www.nvidia.com/gtc/">GTC</a>’s 900+ sessions, the most wildly popular was a conversation hosted by NVIDIA founder and CEO Jensen Huang with seven of the authors of the legendary research paper that introduced the aptly named <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">transformer</a> — a neural network architecture that went on to change the deep learning landscape and enable today’s era of generative AI.</p>
-<p>“Everything that we’re enjoying today can be traced back to that moment,” Huang said to a packed room with hundreds of attendees, who heard him speak with the authors of “<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a>.”</p>
-<p>Sharing the stage for the first time, the research luminaries reflected on the factors that led to their original paper, which has been cited more than 100,000 times since it was first published and presented at the NeurIPS AI conference. They also discussed their latest projects and offered insights into future directions for the field of generative AI.</p>
-<p>While they started as Google researchers, the collaborators are now spread across the industry, most as founders of their own AI companies.</p>
-<p>“We have a whole industry that is grateful for the work that you guys did,” Huang said.</p>
-<figure id="attachment_70689" aria-describedby="caption-attachment-70689" style="width: 2048px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-70689" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-scaled.jpg" alt="" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5071-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /><figcaption id="caption-attachment-70689" class="wp-caption-text">From L to R: Lukasz Kaiser, Noam Shazeer, Aidan Gomez, Jensen Huang, Llion Jones, Jakob Uszkoreit, Ashish Vaswani and Illia Polosukhin.</figcaption></figure>
-<h2><b>Origins of the Transformer Model</b></h2>
-<p>The research team initially sought to overcome the limitations of <a href="https://blogs.nvidia.com/blog/whats-the-difference-between-a-cnn-and-an-rnn/">recurrent neural networks</a>, or RNNs, which were then the state of the art for processing language data.</p>
-<p>Noam Shazeer, cofounder and CEO of Character.AI, compared RNNs to the steam engine and transformers to the improved efficiency of internal combustion.</p>
-<p>“We could have done the industrial revolution on the steam engine, but it would just have been a pain,” he said. “Things went way, way better with internal combustion.”</p>
-<p>“Now we’re just waiting for the fusion,” quipped Illia Polosukhin, cofounder of blockchain company NEAR Protocol.</p>
-<p>The paper’s title came from a realization that attention mechanisms — an element of neural networks that enable them to determine the relationship between different parts of input data — were the most critical component of their model’s performance.</p>
-<p>“We had very recently started throwing bits of the model away, just to see how much worse it would get. And to our surprise it started getting better,” said Llion Jones, cofounder and chief technology officer at Sakana AI.</p>
-<p>Having a name as general as “transformers” spoke to the team’s ambitions to build AI models that could process and transform every data type — including text, images, audio, tensors and biological data.</p>
-<p>“That North Star, it was there on day zero, and so it’s been really exciting and gratifying to watch that come to fruition,” said Aidan Gomez, cofounder and CEO of Cohere. “We’re actually seeing it happen now.”</p>
-<figure id="attachment_70692" aria-describedby="caption-attachment-70692" style="width: 2048px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-70692" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-scaled.jpg" alt="" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-5282-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /><figcaption id="caption-attachment-70692" class="wp-caption-text">Packed house at the San Jose Convention Center.</figcaption></figure>
-<h2><b>Envisioning the Road Ahead </b></h2>
-<p>Adaptive computation, where a model adjusts how much computing power is used based on the complexity of a given problem, is a key factor the researchers see improving in future AI models.</p>
-<p>“It’s really about spending the right amount of effort and ultimately energy on a given problem,” said Jakob Uszkoreit, cofounder and CEO of biological software company Inceptive. “You don’t want to spend too much on a problem that’s easy or too little on a problem that’s hard.”</p>
-<p>A math problem like two plus two, for example, shouldn’t be run through a trillion-parameter transformer model — it should run on a basic calculator, the group agreed.</p>
-<p>They’re also looking forward to the next generation of AI models.</p>
-<p>“I think the world needs something better than the transformer,” said Gomez. “I think all of us here hope it gets succeeded by something that will carry us to a new plateau of performance.”</p>
-<p>“You don’t want to miss these next 10 years,” Huang said. “Unbelievable new capabilities will be invented.”</p>
-<p>The conversation concluded with Huang presenting each researcher with a framed cover plate of the <a href="https://www.nvidia.com/en-gb/data-center/dgx-systems/dgx-1/">NVIDIA DGX-1</a> AI supercomputer, signed with the message, “You transformed the world.”</p>
-<figure id="attachment_70695" aria-describedby="caption-attachment-70695" style="width: 2048px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-70695 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-scaled.jpg" alt="" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6840-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /><figcaption id="caption-attachment-70695" class="wp-caption-text">Jensen presents lead author Ashish Vaswani with a signed DGX-1 cover.</figcaption></figure>
-<p>There’s still time to catch the <a href="https://www.nvidia.com/gtc/session-catalog/?search=S63046&amp;tab.allsessions=1700692987788001F1cG">session replay</a> by registering for a <a href="https://www.nvidia.com/gtc/pricing/">virtual GTC pass</a> — it’s free.</p>
-<p>To discover the latest in generative AI, watch Huang’s GTC keynote address:</p>
-<p><iframe loading="lazy" title="GTC March 2024 Keynote with NVIDIA CEO Jensen Huang" width="500" height="281" src="https://www.youtube.com/embed/Y2F8yisiS6E?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6747_blogcrop.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/JHH-Ai-Panel-6747_blogcrop-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[‘You Transformed the World,’ NVIDIA CEO Tells Researchers Behind Landmark AI Paper]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
