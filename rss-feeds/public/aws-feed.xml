@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Mon, 08 Apr 2024 11:44:18 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 09 Apr 2024 13:50:53 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,150 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Intel Open Omics Acceleration Framework on AWS: fast, cost-efficient, and seamless</title>
+		<link>https://aws.amazon.com/blogs/hpc/intel-open-omics-acceleration-framework-on-aws-fast-cost-efficient-and-seamless/</link>
+		
+		<dc:creator><![CDATA[Olivia Choudhury]]></dc:creator>
+		<pubDate>Tue, 09 Apr 2024 13:50:53 +0000</pubDate>
+				<category><![CDATA[Healthcare]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Genomics]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<guid isPermaLink="false">1b05a2f936ae2290795be4f7bdad69e08725240e</guid>
+
+					<description>With genomics and multi-omics research generating more data than ever, the Open Omics Acceleration Framework from Intel Labs aims to provide a highly productive platform for researchers. Check out recent results in this new blog post.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Olivia Choudhury, PhD and Aniket Deshpande from AWS; Sanchit Misra, PhD, Vasimuddin Md., PhD,&amp;nbsp;Narendra Chaudhary, PhD, Saurabh Kalikar, PhD, and Manasi Tiwari, PhD, Research Scientists at Intel Labs India; Ashish Kumar Patel, contingent worker with Intel Technology India Pvt. Ltd.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;We are living in the exciting times of the rapidly growing field of omics, including genomics, proteomics, transcriptomics, and metabolomics data. Our ability to measure omics data is increasing at a dramatic pace and new data science (AI and data management) pipelines are being developed and quickly standardized. Cloud plays a key role in this initiative by providing massive compute and storage to enable public data repositories, large collaborative projects, and consortia.&lt;/p&gt; 
+&lt;p&gt;To drive and realize the promise of omics, Intel Labs is building the Open Omics Acceleration Framework as a highly productive platform for biologists and data scientists, enabling them to harness computing and data at unprecedented scale and speed at lower costs.&lt;/p&gt; 
+&lt;p&gt;In this post, we benchmark three standard omics pipelines – AlphaFold2-based protein folding, DeepVariant-based variant calling, and Scanpy-based single-cell RNA-Seq analysis – available in the latest version of Open Omics Acceleration Framework (v. 2.1) against prior CPU baseline on Xeon-based Amazon Elastic Compute Cloud (Amazon EC2) instances to showcase its performance and cost benefits.&lt;/p&gt; 
+&lt;h2&gt;Open Omics Acceleration Framework&lt;/h2&gt; 
+&lt;p&gt;The Open Omics Acceleration Framework is a one-click, containerized, customizable, open-sourced framework for accelerating analysis of omics datasets. The framework is being built with a modular design that keeps in mind the different ways the users would want to interact with it. As shown in Figure 1, it consists of three layers:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Pipeline layer&lt;/strong&gt;: for users who are looking for a one-click solution to run standard pipelines. The latest version (v. 2.1) supports the following pipelines: 
+  &lt;ul&gt; 
+   &lt;li&gt;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/fq2sortedbam"&gt;&lt;strong&gt;fq2sortedbam&lt;/strong&gt;&lt;/a&gt;: Given gzipped fastq files from a sample, this workflow performs bwa-mem2-based sequence mapping and sorting to output the sorted BAM file.&lt;/li&gt; 
+   &lt;li&gt;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/deepvariant-based-germline-variant-calling-fq2vcf"&gt;&lt;strong&gt;DeepVariant-based germline pipeline for variant calling (fq2vcf)&lt;/strong&gt;&lt;/a&gt;: Given paired end gzipped fastq files from a sample, this workflow performs sequence mapping, sorting and variant calling (using DeepVariant) to output a vcf file.&lt;/li&gt; 
+   &lt;li&gt;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/alphafold2-based-protein-folding"&gt;&lt;strong&gt;AlphaFold2-based protein folding&lt;/strong&gt;&lt;/a&gt;: Given one or more protein sequences, this workflow performs preprocessing (database search and multiple sequence alignment) and structure prediction (using AlphaFold2) to output the structure(s) of the protein sequences.&lt;/li&gt; 
+   &lt;li&gt;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/single-cell-RNA-seq-analysis"&gt;&lt;strong&gt;Single-cell RNA-Seq analysis&lt;/strong&gt;&lt;/a&gt;: Given a cell by gene matrix, this&amp;nbsp;Scanpy workflow performs data load and preprocessing (filter, linear regression and normalization), dimensionality reduction (PCA), clustering (Louvain / Leiden / kmeans) to cluster the cells into different cell types and visualize those clusters (UMAP / t-SNE).&lt;/li&gt; 
+  &lt;/ul&gt; &lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Toolkit (applications) layer&lt;/strong&gt;: for users who want to use individual tools or to create their own custom pipelines by combining various tools.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Building blocks layer&lt;/strong&gt;: for tool developers, this layer consists of key building blocks – biology-specific and generic-AI algorithms and data structures – that can replace ones used in existing tools to accelerate them or can be used as ingredients to build new efficient tools.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;div id="attachment_3467" style="width: 1966px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3467" class="size-full wp-image-3467" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.14.22@2x.png" alt="Figure 1: Open Omics Acceleration Framework v. 2.1. This modular architecture consists of 3 layers: pipeline, toolkit (application), and building blocks layers. " width="1956" height="874"&gt;
+ &lt;p id="caption-attachment-3467" class="wp-caption-text"&gt;Figure 1: Open Omics Acceleration Framework v. 2.1. This modular architecture consists of 3 layers: pipeline, toolkit (application), and building blocks layers.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Benchmarking the Open Omics Acceleration Framework on Amazon EC2 instances&lt;/h2&gt; 
+&lt;h3&gt;Amazon EC2 instances used for benchmarking&lt;/h3&gt; 
+&lt;p&gt;The five types of Amazon EC2 instances used in this benchmarking study are detailed in Table 1. All of them are powered by 4th Generation Intel® Xeon® Scalable processors. We executed all the experiments using Ubuntu version 22.04. Across the three pipelines, the execution time includes all the steps performed including reading/writing input/output files from/to local disk and therefore, includes both compute and file IO. The cloud costs are computed by multiplying the total execution time in hours by the per hour instance cost.&lt;/p&gt; 
+&lt;div id="attachment_3468" style="width: 1542px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3468" loading="lazy" class="size-full wp-image-3468" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.16.20@2x.png" alt="Table 1: Details of the Amazon EC2 instance types used for benchmarking. On-Demand pricing is from the published date for the us-east-2 (Ohio) region and is subject to change over time. Please consult the Amazon EC2 pricing page for current pricing in your region." width="1532" height="696"&gt;
+ &lt;p id="caption-attachment-3468" class="wp-caption-text"&gt;Table 1: Details of the Amazon EC2 instance types used for benchmarking. On-Demand pricing is from the published date for the us-east-2 (Ohio) region and is subject to change over time. Please consult the Amazon EC2 pricing page for current pricing in your region.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Prerequisites&lt;/h2&gt; 
+&lt;p&gt;To run these pipelines, you need an AWS account with permissions to provision Amazon Simple Storage Service (S3) buckets for input and output data storage, and sufficient permissions/limits to provision Amazon EC2 c7i, m7i and r7i instances.&lt;/p&gt; 
+&lt;h2&gt;Steps for benchmarking&lt;/h2&gt; 
+&lt;p&gt;The configuration details and steps used for benchmarking baseline and Open Omics versions of all three pipelines on Amazon EC2 instances are detailed on this &lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/blob/main/benchmarking/AWS-Intel-blog-v2.1-2024/README.md"&gt;GitHub page&lt;/a&gt; of the Open Omics Acceleration Framework. The typical process involves launching the corresponding EC2 Instances, connecting to the instances, installing the software, downloading the datasets, and executing the baseline and Open Omics versions. In the following subsections, we will share an overview of the pipelines and report the benchmarking results.&lt;/p&gt; 
+&lt;h2&gt;AlphaFold2-based protein folding pipeline&lt;/h2&gt; 
+&lt;p&gt;The protein folding problem has significant implications for drug discovery, biotechnology, and understanding the mechanisms of diseases. The task entails predicting the 3D structure of a protein from its amino acid sequence. A protein’s structure governs its function. Therefore, accurate protein structure prediction is vital in biology and drug discovery, and has long been considered a holy grail problem.&lt;/p&gt; 
+&lt;div id="attachment_3469" style="width: 1924px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3469" loading="lazy" class="size-full wp-image-3469" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.18.31@2x.png" alt="Figure 2: The AlphaFold2-based protein structure prediction pipeline that requires an input amino acid sequence. The pipeline has two stages, namely database search for multiple sequence alignment and Evoformer model for structure prediction." width="1914" height="256"&gt;
+ &lt;p id="caption-attachment-3469" class="wp-caption-text"&gt;Figure 2: The AlphaFold2-based protein structure prediction pipeline that requires an input amino acid sequence. The pipeline has two stages, namely database search for multiple sequence alignment and Evoformer model for structure prediction.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Our AlphaFold2-based protein folding pipeline takes as input a set of amino acid sequences and outputs the set of corresponding predicted structures in PDB file format. The pipeline has two stages: 1) preprocessing that includes database search and multiple sequence alignment (MSA) over protein sequences, 2) model inference&amp;nbsp;that predict the structure of the protein using Evoformer, a Transformer architecture based Deep Learning (DL) model.&lt;/p&gt; 
+&lt;p&gt;For baseline, we use OpenFold v. 1.0.1 – a faithful reproduction of &lt;a href="https://github.com/google-deepmind/alphafold"&gt;DeepMind AlphaFold2’s model&lt;/a&gt; for model inference and &lt;a href="https://github.com/soedinglab/hh-suite"&gt;hh-suite&lt;/a&gt; v. 3.3.0 and &lt;a href="https://github.com/EddyRivasLab/hmmer"&gt;hmmer&lt;/a&gt; v. 3.3.2 for preprocessing. Open Omics Acceleration Framework contains faster versions of all the steps of this pipeline accelerated using a 4th gen Intel Xeon scalable processor using Intel AMX with bfloat16 precision for DL compute, Intel AVX2 and AVX-512 for non-DL compute and cache optimizations. It also provides a parallel execution framework that folds multiple proteins in parallel in a load balanced fashion.&lt;/p&gt; 
+&lt;p&gt;&lt;img loading="lazy" class="aligncenter size-full wp-image-3470" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.20.06@2x.png" alt="" width="1760" height="1210"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="aligncenter size-full wp-image-3471" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.20.14@2x.png" alt="" width="1760" height="1216"&gt;&lt;img loading="lazy" class="aligncenter size-full wp-image-3472" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.20.19@2x.png" alt="" width="1764" height="1208"&gt;&lt;/em&gt;&lt;/p&gt; 
+&lt;div id="attachment_3473" style="width: 1764px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3473" loading="lazy" class="size-full wp-image-3473" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.20.30@2x.png" alt="Figure 3: Performance and cost benefits of Open Omics Acceleration Framework on m7i.24xlarge and m7i.48xlarge over the baseline on m7i.24xlarge for AlphaFold2-based protein folding pipeline for varying protein lengths. " width="1754" height="1208"&gt;
+ &lt;p id="caption-attachment-3473" class="wp-caption-text"&gt;Figure 3: Performance and cost benefits of Open Omics Acceleration Framework on m7i.24xlarge and m7i.48xlarge over the baseline on m7i.24xlarge for AlphaFold2-based protein folding pipeline for varying protein lengths.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;OpenFold is a faithful PyTorch based reproduction of AlphaFold2 which can run on CPU. We compare the OpenFold CPU baseline with Open Omics on two sets of proteins sampled from the &lt;a href="https://www.uniprot.org/proteomes/UP000001940"&gt;C. elegans proteome&lt;/a&gt;. Since a large majority of the proteins found in nature have lengths less than 1000, we create the first set with proteins of length under 1000 amino acid residues. The second set consists of proteins up to lengths that OpenFold can handle. On the same m7i.24xlarge instance as baseline, Open Omics achieves significant cost and execution time improvements. Moreover, due to its ability to fold multiple proteins in parallel, it also scales well to the larger m7i.48xlarge instance. For the first set, Open Omics achieves 10.1x speedup on preprocessing and 37.1x speedup on model inference resulting in speedup for end-to-end execution of 17x and cost reduction of 8.5x. For the second set, the speedup values for individual stages are 5.2x and 33.2x, respectively, and overall speedup is 20.8x and cost reduction is 10.4x. For longer sequences, OpenFold did not finish even after 3 days. On the other hand, Open Omics can comfortably handle sequences up to length 7500 on m7i.48xlarge instances.&lt;/p&gt; 
+&lt;h2&gt;DeepVariant-based variant calling pipeline (fq2vcf)&lt;/h2&gt; 
+&lt;p&gt;Variant calling is a fundamental task in DNA sequence analysis. Given the sequencing reads from an individual’s genome, variant calling identifies the variations in the reads against a reference genome. &lt;a href="https://www.nature.com/articles/nbt.4235.epdf?author_access_token=q4ZmzqvvcGBqTuKyKgYrQ9RgN0jAjWel9jnR3ZoTv0NuM3saQzpZk8yexjfPUhdFj4zyaA4Yvq0LWBoCYQ4B9vqPuv8e2HHy4vShDgEs8YxI_hLs9ov6Y1f_4fyS7kGZ"&gt;DeepVariant&lt;/a&gt;, a deep learning-based germline variant caller, is a highly accurate and widely used tool across many genomic studies.&lt;/p&gt; 
+&lt;div id="attachment_3474" style="width: 1918px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3474" loading="lazy" class="size-full wp-image-3474" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.21.48@2x.png" alt="Figure 4: The DeepVariant based fq2vcf pipeline." width="1908" height="256"&gt;
+ &lt;p id="caption-attachment-3474" class="wp-caption-text"&gt;Figure 4: The DeepVariant based fq2vcf pipeline.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The variant calling pipeline using DeepVariant, as shown in Figure 4, consists of the following steps: 1) mapping of the input reads to the reference genome, 2) sorting the mapped reads based on the reference coordinate, and 3) calling variants by first creating pileups of the regions that are expected to have variants followed by classifying among variants types using Inception V3 deep learning model. For baseline, we use – &lt;a href="https://github.com/lh3/bwa"&gt;BWA-MEM&lt;/a&gt; v. 0.7.17 for mapping, samtools v. 1.16.1 sort for sorting and &lt;a href="https://github.com/google/deepvariant"&gt;DeepVariant&lt;/a&gt; v. 1.5 for variant calling. &lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/deepvariant-based-germline-variant-calling-fq2vcf"&gt;Open Omics version of the pipeline&lt;/a&gt; is accelerated through use of:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Intel Advanced Matrix Extensions (AMX) with bfloat16 precision for DL compute, Intel AVX-512 for non-DL compute,&lt;/li&gt; 
+ &lt;li&gt;Cache optimizations, and&lt;/li&gt; 
+ &lt;li&gt;Scaling it to the multiple CPU instances.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;div id="attachment_3475" style="width: 994px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3475" loading="lazy" class="size-full wp-image-3475" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.23.08.png" alt="Figure 5: Performance and cost benefits of Open Omics Acceleration Framework over the baseline for DeepVariant-based fq2vcf pipeline on standard 30x WGS HG001 short read dataset with GRCh38 as the reference genome. Instances used: c7i.24xlarge and c7i.48xlarge." width="984" height="945"&gt;
+ &lt;p id="caption-attachment-3475" class="wp-caption-text"&gt;Figure 5: Performance and cost benefits of Open Omics Acceleration Framework over the baseline for DeepVariant-based fq2vcf pipeline on standard 30x WGS HG001 short read dataset with GRCh38 as the reference genome. Instances used: c7i.24xlarge and c7i.48xlarge.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We compare baseline with Open Omics on the standard 30x WGS paired-end short read dataset: HG001 (&lt;a href="//genomics-benchmark-datasets/google-brain/fastq/novaseq/wgs_pcr_free/30x/HG001.novaseq.pcr-free.30x.R1.fastq.gz"&gt;R1&lt;/a&gt; and &lt;a href="//genomics-benchmark-datasets/google-brain/fastq/novaseq/wgs_pcr_free/30x/HG001.novaseq.pcr-free.30x.R2.fastq.gz"&gt;R2&lt;/a&gt;). On the same instance type (c7i.24xlarge), Open Omics achieves 2.21x speedup compared to baseline resulting in a cost of just $8.8 per sample. For use-cases that require a quick turn-around time, Open Omics scales well to 4x c7i.48xlarge instances reducing execution time to nearly 21 mins at just $12.1 per sample – 1.62 times lower cost than baseline. It also scales further to 8x c7i.48xlarge instances, reducing execution time to just 16.8 mins while still keeping the cost lower than the baseline.&lt;/p&gt; 
+&lt;h2&gt;Single-cell RNA-Seq analysis pipeline&lt;/h2&gt; 
+&lt;p&gt;Single-cell analysis involves studying various omics (genomics, transcriptomics, proteomics, metabolomics) data and cell-cell interactions at the individual cell level. Single-cell RNA-seq (scRNA-seq) is an advanced technique that measures gene expression of individual cells, which is analyzed to study the differences in gene expression profiles across cells.&lt;/p&gt; 
+&lt;p&gt;A typical workflow to analyze scRNA-seq data begins with a matrix that consists of the expression levels of the genes in each cell. The data preprocessing steps filter out the noise and uses linear regression and data normalization to correct artifacts from data collection. Subsequently, dimensionality reduction is performed followed by clustering of cells to group them by similarity in genetic activity and visualization of the clusters. With over 2 million downloads,&amp;nbsp;&lt;a href="https://github.com/scverse/scanpy"&gt;Scanpy&lt;/a&gt;&amp;nbsp;is one of the most widely used toolkits for this analysis.&lt;/p&gt; 
+&lt;div id="attachment_3476" style="width: 962px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3476" loading="lazy" class="size-full wp-image-3476" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.24.18.png" alt="Figure 6: Pipeline showing the steps in analysis of single-cell RNA sequencing data starting from gene activity matrix to visualization of different cell clusters." width="952" height="249"&gt;
+ &lt;p id="caption-attachment-3476" class="wp-caption-text"&gt;Figure 6: Pipeline showing the steps in analysis of single-cell RNA sequencing data starting from gene activity matrix to visualization of different cell clusters.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 6 illustrates the pipeline we used for this benchmarking. For clustering and visualization, we run all of the options displayed above to demonstrate the benefit of the Open Omics Acceleration Framework on all of them. For the baseline, we use &lt;a href="https://github.com/scverse/scanpy"&gt;scanpy&lt;/a&gt; v. 1.9.1. The &lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/single-cell-RNA-seq-analysis"&gt;Open Omics version&lt;/a&gt; is accelerated through: 1) parallelization and fusing of operations in data pre-processing, 2) use of efficient implementations from &lt;a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/scikit-learn.html"&gt;Intel&lt;sup&gt;®&lt;/sup&gt; Extension for Scikit-learn&lt;/a&gt;, &lt;a href="https://katanagraph.ai/"&gt;Katana Graph&lt;/a&gt; and Intel Lab’s &lt;a href="https://github.com/IntelLabs/Trans-Omics-Acceleration-Library"&gt;Trans-Omics Acceleration Library&lt;/a&gt; – some of which were accelerated as a part of this effort.&lt;/p&gt; 
+&lt;div id="attachment_3477" style="width: 964px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3477" loading="lazy" class="size-full wp-image-3477" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.25.02.png" alt="Figure 7: Performance and cost benefits of Open Omics Acceleration Framework over the baseline for Single-cell RNA-Seq pipeline for standard dataset of 1.3 million mouse brain cells." width="954" height="961"&gt;
+ &lt;p id="caption-attachment-3477" class="wp-caption-text"&gt;Figure 7: Performance and cost benefits of Open Omics Acceleration Framework over the baseline for Single-cell RNA-Seq pipeline for standard dataset of 1.3 million mouse brain cells.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We compare baseline with Open Omics on the standard dataset of &lt;a href="https://rapids-single-cell-examples.s3.us-east-2.amazonaws.com/1M_brain_cells_10X.sparse.h5ad"&gt;1.3 million mouse brain cells&lt;/a&gt;. The baseline requires the larger memory r7i.24xlarge instance. On the same instance type, Open Omics achieves a 29.3x speedup compared to baseline resulting in a cost of nearly $0.6 per sample. This cost is further improved with the optimizations applied to reduce memory requirements that enables us to use the less expensive compute optimized c7i.24xlarge instance, reducing the cost to just $0.4 per sample.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;To accelerate the ongoing revolution of omics, Intel has built the Open Omics acceleration framework. The current version of Open Omics running on AWS instances based on 4&lt;sup&gt;th&lt;/sup&gt; generation Intel Xeon processors provides significant performance and cost benefits for key pipelines for protein folding, variant calling, and single-cell RNA-Seq analysis.&lt;/p&gt; 
+&lt;p&gt;To learn more about performance of Open Omics and comparison with other solutions, please refer to the following research blogs –&amp;nbsp;&lt;a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Xeon-is-all-you-need-for-AI-inference-Performance/post/1506083"&gt;July’23&lt;/a&gt;, &lt;a href="https://aws.amazon.com/blogs/hpc/accelerating-genomics-pipelines-using-intel-open-omics-on-aws/"&gt;Aug’22&lt;/a&gt;, &lt;a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Accelerates-Single-cell-RNA-Seq-Analysis/post/1390715"&gt;June’22&lt;/a&gt;, and the GitHub repository –&amp;nbsp;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework"&gt;Open Omics Acceleration Framework&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.s&lt;/em&gt;&lt;/p&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.09.png" alt="Sanchit Misra" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Sanchit Misra&lt;/h3&gt; 
+  &lt;p&gt;Sanchit Misra, PhD is a senior research scientist and leads the research efforts in building SW/HW computing solutions for AI driven life science at Intel Labs. Sanchit has over 15 years of experience in computational biology, AI, scaling applications on large clusters/supercomputers and driving architecture improvements. Over the years, he has led Intel’s various collaborations with experts in computational biology, AI, HPC and architecture. Before joining Intel Labs, he earned his PhD in high performance computational biology from Northwestern University.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.15.png" alt="Vasimuddin Md" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Vasimuddin Md&lt;/h3&gt; 
+  &lt;p&gt;Vasimuddin Md., PhD is a research scientist at Parallel Computing Lab, Intel Labs. He obtained his Ph.D. from IIT Bombay and has a decade of research experience in the field of Computational Biology, HPC, and AI. At Intel Labs, he works on building computational solutions (both hardware and software) for various challenging problems in Biology.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.22.png" alt="Narendra Chaudhary" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Narendra Chaudhary&lt;/h3&gt; 
+  &lt;p&gt;Narendra Chaudhary, PhD is a research scientist and conducts computational biology/HPC research at Intel Labs. Dr. Chaudhary has experience in improving efficiency and scaling of deep learning applications. Before joining Intel Labs, he earned his PhD in Electrical and Electronics Engineering from Texas A&amp;amp;M University.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.27.png" alt="Saurabh Kalikar" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Saurabh Kalikar&lt;/h3&gt; 
+  &lt;p&gt;Saurabh Kalikar, PhD is a research scientist at Intel – Parallel Computing Lab, where he is involved in designing and implementing performant solutions for the applications running on modern CPUs. His research interests lie in Parallel/Distributed Computing, Compilers, and Architecture-Aware Optimization. Prior to joining Intel Labs, he earned his PhD from Indian Institute of Technology Madras.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.32.png" alt="Manasi Tiwari" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Manasi Tiwari&lt;/h3&gt; 
+  &lt;p&gt;Manasi Tiwari, PhD is a research scientist at Intel – Parallel Computing Lab. She works on ideating and developing parallel solutions for Computational Biology algorithms which are at the intersection of HPC and AI. These solutions range from architecture dependent SIMD solutions to large scale multi-node solutions. Prior to joining Intel, she earned her PhD from Indian Institute of Science, Bangalore.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.37.png" alt="Ashishkumar Patel" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Ashishkumar Patel&lt;/h3&gt; 
+  &lt;p&gt;Ashishkumar Patel is a contingent worker at Intel Technology India Pvt. Ltd. He earned his master’s degree in computer engineering from the Sardar Vallabhbhai National Institute of Technology (NIT), Surat. Ashishkumar has a background in academia and research. Throughout his career, he has made significant contributions to various projects, particularly in the fields of deep learning and computational biology.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Using a digital twin for sensitivity analysis to determine sensor placement in a roll-to-roll manufacturing web-line</title>
 		<link>https://aws.amazon.com/blogs/hpc/using-a-digital-twin-for-sensitivity-analysis-to-determine-sensor-placement-in-a-roll-to-roll-manufacturing-web-line/</link>
 		
@@ -36,7 +180,7 @@
 &lt;p&gt;Figure 1 is a schematic diagram of the same roll-to-roll manufacturing line discussed in those earlier posts. The manufacturing line consists of 9 rollers (labeled with “R”) and 12 material spans (labeled with “S”). The operator’s goal is to maximize throughput/yield of the manufacturing line without damaging the product or creating safety hazards. It is critical to monitor various stages in the process for quality control.&lt;/p&gt; 
 &lt;p&gt;It’s tempting to instrument each span or roller with pressure gauges, load cells (to measure tension), feed line sensors (for linear velocity), and roller tachometers (RPM) sensors to track the progress of the roll-to-roll material in the line. This is rarely practical however, due to the high cost of installing and maintaining the sensors. Furthermore, in some cases, there may not be physical space in the facility for all of them.&lt;/p&gt; 
 &lt;div id="attachment_3437" style="width: 590px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3437" class="size-full wp-image-3437" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/22/CleanShot-2024-03-22-at-17.18.37.png" alt="Figure 1 Schematic diagram of the web-handling equipment in which each span is labeled as S1 through S12 and rollers are label R1 through R10." width="580" height="165"&gt;
+ &lt;img aria-describedby="caption-attachment-3437" loading="lazy" class="size-full wp-image-3437" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/22/CleanShot-2024-03-22-at-17.18.37.png" alt="Figure 1 Schematic diagram of the web-handling equipment in which each span is labeled as S1 through S12 and rollers are label R1 through R10." width="580" height="165"&gt;
  &lt;p id="caption-attachment-3437" class="wp-caption-text"&gt;Figure 1 Schematic diagram of the web-handling equipment in which each span is labeled as S1 through S12 and rollers are label R1 through R10.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;For our use case, it is known that the minimum information needed to prevent product quality issues include the tension in the material of each span and whether the material is dragging over the rollers (slip) instead of rotating with the rollers.&lt;/p&gt; 
@@ -2244,93 +2388,6 @@ print(r.text)
   &lt;p&gt;Ryan Kilpadi is a returning SDE intern on the HPC team working on AWS ParallelCluster. He worked on implementing the Slurm REST API on ParallelCluster as a summer internship project in 2022.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>New: Research and Engineering Studio on AWS</title>
-		<link>https://aws.amazon.com/blogs/hpc/new-research-and-engineering-studio-on-aws/</link>
-		
-		<dc:creator><![CDATA[Brendan Bouffler]]></dc:creator>
-		<pubDate>Mon, 13 Nov 2023 22:14:01 +0000</pubDate>
-				<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[End User Computing]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[CFD]]></category>
-		<category><![CDATA[Computational Fluid Dynamics]]></category>
-		<category><![CDATA[DCV]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[FEA]]></category>
-		<category><![CDATA[Finite Element Analysis]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[VDI]]></category>
-		<category><![CDATA[visualization]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">e085244ba2853fcab2e7687e1f7ed8d1e80e089c</guid>
-
-					<description>Today we’re announcing Research and Engineering Studio on AWS, a self-service portal to help scientists and engineers access and manage virtual desktops to see their data and run their interactive applications in the cloud.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-3095 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/08/Ingenio-icon_2pt-line-version-illustration.png" alt="" width="380" height="235"&gt;Your brain is extravagantly equipped for visualization. More than 50% of your cerebral cortex is dedicated to processing sensory input from your eyes, making it the information super highway that helps complex ideas form in your head incredibly quickly. Our output devices – our limbs and our voices – had to develop unique articulation skills, just to match the speed at which we can &lt;em&gt;learn from seeing&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;So, it’s fitting that today we’re announcing Research and Engineering Studio on AWS (RES), a self-service portal to help scientists and engineers access and manage their research and design workspaces, including virtual desktops to &lt;em&gt;see&lt;/em&gt; their data and run their interactive applications in the cloud.&lt;/p&gt; 
-&lt;p&gt;Setting up – and then managing – virtual desktops manually takes a lot of work, taking time away from the core mission of research and development groups: solving hard scientific problems. We’ve also noticed that when processes to access resources become complicated, users often take shortcuts (like sharing passwords or setting file permissions to be globally read/write).&lt;/p&gt; 
-&lt;p&gt;With RES, we’re putting all the launch and monitoring tools behind a single pane of glass, so administrators can deploy new desktop environments quickly, from their own pre-prepared library of software images and trusted applications. This gives their users the freedom to come and go when needed – incredibly important when chasing new lines of inquiry – without impacting their budgets or the security posture of their organization.&lt;/p&gt; 
-&lt;p&gt;In today’s post, we’ll explain what RES is and how it works, and we’ll explain how to deploy it in your own AWS account, and get it ready for your users.&lt;/p&gt; 
-&lt;h2&gt;Visualization without the headaches&lt;/h2&gt; 
-&lt;p&gt;Research and Engineering Studio on AWS has been designed to make it easier for site admins to provide a suite of applications, data, and large-scale compute resources through familiar interfaces – starting today with interactive desktops.&lt;/p&gt; 
-&lt;p&gt;When you login to RES through your browser, you’ll have the ability to see the virtual desktops that are available to you, based on permissions that draw from your membership of user &lt;strong&gt;Groups&lt;/strong&gt; that are associated with &lt;strong&gt;Projects&lt;/strong&gt;. We’ll explain this a little further on.&lt;/p&gt; 
-&lt;p&gt;On the main Virtual Desktops screen, you’ll have the ability to see thumbnails of sessions that are live and running, and other sessions that are suspended. All have sets of controls to spin them up, or shut them down. You can even schedule sessions start and stop during specific time windows (like 9-5 Mon-Fri, if that’s your thing). This is also where you can create new sessions, based on software stacks your admin has provided for you – this only take a couple of minutes, typically.&lt;/p&gt; 
-&lt;p&gt;By clicking &lt;strong&gt;Connect&lt;/strong&gt; in the RES interface for a running session, you can open a new browser tab containing an encrypted shared desktop session with the remote system using NICE DCV – our own &lt;a href="https://aws.amazon.com/blogs/hpc/pushing-pixels-with-nice-dcv/"&gt;high performance streaming protocol&lt;/a&gt;. DCV uses a lot of tricks with network protocols designed to make remote desktops feel like they’re local. The techniques it uses to do this are remarkable enough that Netflix uses it to provide their editors and FX teams access to powerful Amazon EC2 systems so they can produce the great content you’re probably watching this week on TV. This is great for scientists and engineers, since our interactive applications often need precision screen controls and only work well with access to truly large memory models.&lt;/p&gt; 
-&lt;div id="attachment_3096" style="width: 853px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3096" loading="lazy" class="size-full wp-image-3096" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/08/CleanShot-2023-11-08-at-10.57.51.png" alt="Figure 1 - the RES Virtual Desktops screen lists all the sessions a user has previously created, with controls to spin up, shutdown, or schedule uptime." width="843" height="481"&gt;
- &lt;p id="caption-attachment-3096" class="wp-caption-text"&gt;Figure 1 – the RES Virtual Desktops screen lists all the sessions a user has previously created, with controls to spin up, shutdown, or schedule uptime.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;RES allows users to share their desktops, too. While the sessions they start in RES will always belong to them, they can share a session too, like the way you can do that in a conferencing system like Zoom. This can be incredibly useful for working sessions where a group of engineers in a team need draw design insights by poring over visualizations of massive datasets – without needing to move the datasets themselves. A desktop share can have an expiration date attached to it, too.&lt;/p&gt; 
-&lt;div id="attachment_3104" style="width: 1767px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3104" loading="lazy" class="wp-image-3104 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/09/share-session.png" alt="Figure 2 - RES permits users to share their virtual desktop sessions with others in a controlled fashion." width="1757" height="988"&gt;
- &lt;p id="caption-attachment-3104" class="wp-caption-text"&gt;Figure 2 – RES permits users to share their virtual desktop sessions with others in a controlled fashion.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Projects, users, and groups&lt;/h2&gt; 
-&lt;p&gt;To manage all of this, RES works from a few important concepts, all of which are likely familiar to you already.&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;First is the &lt;strong&gt;Project&lt;/strong&gt;. In most organizations – public and private – everything revolves around &lt;em&gt;project teams&lt;/em&gt;. Resources are typically created for – and consumed by – project teams, with access, billing, and even software stacks being driven by project needs.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Users and Groups: &lt;/strong&gt;Users can be members of multiple Groups, and in RES a Group can be associated with one or more Projects.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;Like most institutions, you probably have an investment in a user identity and authentication system, complete with existing project groups that you’ve defined to define access for shared files and other resources. We wanted to align with that, so RES – out of the box – is built to connect with your existing directory service, starting with Active Directory (AD), helping you avoid doing this work twice.&lt;/p&gt; 
-&lt;p&gt;At launch, RES can connect to your existing AD server &lt;em&gt;on-premises&lt;/em&gt; or &lt;em&gt;in the cloud&lt;/em&gt;. If you want to separate your RES environment from your regular user space – to create an engineering sandbox, for instance – you can spin up a managed AD using AWS Directory Service to privately manage a set of users.&lt;/p&gt; 
-&lt;div id="attachment_3133" style="width: 3526px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3133" loading="lazy" class="wp-image-3133 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/01/users-shot.png" alt="Figure 3 - Identity functions, like defining users and groups, are done centrally in an Active Directory environment, which you specify when installing RES in your AWS environment. The AD can be on-premises or in the cloud and can - if you wish - be separate from your corporate directory service." width="3516" height="1976"&gt;
- &lt;p id="caption-attachment-3133" class="wp-caption-text"&gt;Figure 3 – Identity functions, like defining users and groups, are done centrally in an Active Directory environment, which you specify when installing RES in your AWS environment. The AD can be on-premises or in the cloud and can – if you wish – be separate from your corporate directory service.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;RES enables access to &lt;strong&gt;Project&lt;/strong&gt; resources, by specifying which &lt;strong&gt;Groups&lt;/strong&gt; are assigned to the &lt;strong&gt;Project&lt;/strong&gt;. You define this at Project creation, but of course you can change it afterwards, too (see Figure 4).&lt;/p&gt; 
-&lt;div id="attachment_3107" style="width: 1768px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3107" loading="lazy" class="wp-image-3107 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/09/create-project.png" alt="Figure 4 - when you create a Project in RES, you can specify which user groups are permitted to access its resources. The Groups and Users are inherited from your Active Directory service." width="1758" height="988"&gt;
- &lt;p id="caption-attachment-3107" class="wp-caption-text"&gt;Figure 4 – when you create a Project in RES, you can specify which user groups are permitted to access its resources. The Groups and Users are inherited from your Active Directory service.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;RES is designed to bind to your AD and draw its knowledge of your teams from there, which allows RES to reflect changes you make to Group memberships right away.&lt;/p&gt; 
-&lt;h2&gt;Storage&lt;/h2&gt; 
-&lt;p&gt;At launch, RES supports two file systems which customers have told us are most useful for managing users’ files. Amazon Elastic File System (EFS) and Amazon FSx for NetApp ONTAP. While EFS is great for customers with large Linux deployments using NFSv4, FSx for NetApp ONTAP can offer the same file system using either NFS or SMB – which is helpful if you’re running a hybrid Windows and Linux environment and your users regularly flip back and forth, depending on the applications they’re using.&lt;/p&gt; 
-&lt;div id="attachment_3100" style="width: 851px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3100" loading="lazy" class="size-full wp-image-3100" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/08/CleanShot-2023-11-08-at-10.59.48.png" alt="Figure 5 - You can manage file systems in RES, and associate them with Projects. At launch, RES supports Amazon EFS, and Amazon FSx for NetApp ONTAP." width="841" height="229"&gt;
- &lt;p id="caption-attachment-3100" class="wp-caption-text"&gt;Figure 5 – You can manage file systems in RES, and associate them with Projects. At launch, RES supports Amazon EFS, and Amazon FSx for NetApp ONTAP.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;RES allows an administrator to spin up new filesystems or to &lt;em&gt;onboard existing filesystems&lt;/em&gt; which you might have previously created for your project. You need to associate a file system resource with a &lt;strong&gt;Project&lt;/strong&gt; to make it visible to the users who are member of the Groups associated with that project. Individual file and folder access is still controlled in the usual way at an operating system level with permissions, which again will usually map back to your Users and Groups definitions in the AD you’re using for your directory service.&lt;/p&gt; 
-&lt;h2&gt;Software stacks and machine images&lt;/h2&gt; 
-&lt;p&gt;RES uses Amazon Machine Images (AMIs) as the basis for customizing the environments you deploy for your users. If this is new to you, an AMI is an image that provides the information required to launch an instance. You need to specify an AMI whenever you launch an instance. You can launch multiple instances from a single AMI when you need lots of machines with the same configuration. And you can use different AMIs to launch instances when you need add some local flavor to your users’ environment.&lt;/p&gt; 
-&lt;p&gt;RES extends this concept a little further by narrowing the set of instances and GPUs it will offer based on an AMI. And – as you’d expect – the resulting stack needs to be associated with a Project before a user will know about it. This is helpful not just for customizing what your users can &lt;em&gt;do&lt;/em&gt;, but it’s great when you have commercially licensed software, too. For example – all members of Project &lt;em&gt;Beeblebrox&lt;/em&gt; can access an AMI with the &lt;em&gt;Marvin&lt;/em&gt; license embedded in it.&lt;/p&gt; 
-&lt;p&gt;Creating an AMI is almost as easy as launching an existing one, making your changes, and then &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html#creating-an-ami"&gt;asking the Amazon EC2 console&lt;/a&gt; to create a new AMI from it. After that, you just need to take the ID of your AMI to RES admin screen and register it.&lt;/p&gt; 
-&lt;p&gt;Starting today, RES is designed to support Windows and Linux operating systems, specifically: Windows Server 2019 (Datacenter Version 1809), Amazon Linux 2, CentOS 7, Red Hat Enterprise Linux 7, Red Hat Enterprise Linux 8, and Red Hat Enterprise Linux 9. We’ll keep the list of supported operating systems up to date in the online documentation for RES.&lt;/p&gt; 
-&lt;h2&gt;One click deployment – or two&lt;/h2&gt; 
-&lt;p&gt;Research and Engineering Studio is a self-managed, open-source product which you install in your own AWS account.&lt;/p&gt; 
-&lt;p&gt;There are several ways of getting up and running with RES. Which one you choose depends on your experience with AWS, and how heavily you want to customize it to suit your local needs. This includes a “&lt;strong&gt;batteries included”&lt;/strong&gt; method which is a full, one-click launchable AWS CloudFormation stack, that can be used to build an entire environment, including a managed AD server.&lt;/p&gt; 
-&lt;p&gt;RES is a supported open-source project, available via its public &lt;a href="https://github.com/aws/res"&gt;GitHub repository&lt;/a&gt;, which is where you can find the RES installation recipes (including several components, supplied by the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipe Library&lt;/a&gt;).&lt;/p&gt; 
-&lt;p&gt;RES can be used in the following Regions: US East (Ohio), US East (N. Virginia), US West (N. California), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Europe (Ireland), Europe (Frankfurt), Europe (London), Europe (Paris), Asia Pacific (Mumbai) and AWS GovCloud (US-West).&lt;/p&gt; 
-&lt;p&gt;Links to documentation, and more are available on the &lt;a href="https://aws.amazon.com/hpc/res"&gt;Research and Engineering Studio homepage&lt;/a&gt;. Try it out and let us know what you think at&amp;nbsp;&lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 					
 		
 		
