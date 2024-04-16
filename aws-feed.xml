@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 09 Apr 2024 13:50:53 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 16 Apr 2024 14:58:36 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,198 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Linter rules for Nextflow to improve the detection of errors before runtime</title>
+		<link>https://aws.amazon.com/blogs/hpc/linter-rules-for-nextflow-to-improve-the-detection-of-errors-before-runtime/</link>
+		
+		<dc:creator><![CDATA[Mark Schreiber]]></dc:creator>
+		<pubDate>Tue, 16 Apr 2024 14:58:36 +0000</pubDate>
+				<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Life Sciences]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[Genomics]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<guid isPermaLink="false">918a6c3069ff95919afafe3727710e60191c475d</guid>
+
+					<description>Check out this post to learn how linter rules for Nextflow's DSL can help you catch errors in your workflows before runtime, which means greater developer productivity, which leads directly to a faster time to science.</description>
+										<content:encoded>&lt;p&gt;&lt;a href="https://www.nextflow.io/"&gt;&lt;img class="alignright size-full wp-image-3518" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/Linter-rules-for-Nextflow-to-improve-the-detection-of-errors-before-runtime-1.png" alt="Linter rules for Nextflow to improve the detection of errors before runtime" width="380" height="212"&gt;Nextflow&lt;/a&gt; is a popular domain-specific language (DSL) and runtime used to define workflows that string together multiple processing steps into a pipeline. This allows it to perform quite complex genomics or scientific analyses including for machine-learning.&lt;/p&gt; 
+&lt;p&gt;Workflows defined in Nextflow code can leverage container orchestration technologies to deploy containerized workloads across clusters, clouds, or HPC environments. As an interpreted language, errors in a Nextflow script are only revealed at runtime. This increases the time and cost of developing and debugging a workflow which could be reduced if errors could be spotted earlier.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll discuss how we created &lt;strong&gt;linter rules&lt;/strong&gt; for Nextflow DSL 2, how these rules can be extended and how you can use them to check your scripts before runtime.&lt;/p&gt; 
+&lt;h2&gt;Background&lt;/h2&gt; 
+&lt;p&gt;Nextflow is commonly used by customers on AWS. Some use the &lt;a href="https://aws.amazon.com/healthomics/"&gt;AWS HealthOmics&lt;/a&gt; managed workflow service and others choose to deploy their own Nextflow engine, integrated with AWS Batch. The HealthOmics service provides a fully-managed experience while &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch &lt;/a&gt;provides a more generalized mechanism for running batch computing tasks.&lt;/p&gt; 
+&lt;p&gt;A key difference between the Nextflow DSL and a traditional programming language is that Nextflow code is interpreted at runtime rather than compiled. This provides flexibility, because workflows can be developed quickly without a build step. But it also means that you might not detect errors in the Nextflow script until the interpreter lands on that specific part of the code during an actual workflow run.&lt;/p&gt; 
+&lt;p&gt;Because genomics workflows often involve processing large volumes of data, a workflow run could run for hours (and hours) before failing on a simple coding mistake. Having to restart these long-running analyses is frustrating and could be costly. This runtime-evaluation model argues for a static analysis tool that can scan Nextflow code &lt;em&gt;before&lt;/em&gt; workflows are run to detect issues early – known as a linter.&lt;/p&gt; 
+&lt;h2&gt;Introducing a linter for Nextflow&lt;/h2&gt; 
+&lt;p&gt;To address the need for static analysis, we’ve developed a static linter that can analyze Nextflow workflow code by taking advantage of the fact that the Nextflow DSL uses &lt;a href="https://groovy-lang.org/"&gt;Groovy&lt;/a&gt;, a dynamic language for the Java Virtual Machine, as its underlying implementation language. By building on Groovy, we can parse Nextflow code and analyze it, syntactically and semantically, without needing to execute the workflow itself.&lt;/p&gt; 
+&lt;p&gt;We built our linter using &lt;a href="https://codenarc.org/"&gt;CodeNarc&lt;/a&gt;, an open-source static analysis tool used to enforce Groovy coding standards and best practices. Under the covers, CodeNarc uses Groovy’s own parser to generate an abstract syntax tree (AST) representing the structure of the code. It then provides a framework for coding semantic rules that can traverse this AST using the &lt;a href="https://en.wikipedia.org/wiki/Visitor_pattern"&gt;visitor pattern&lt;/a&gt; and check for rule violations. We can take advantage of this capability to analyze Nextflow scripts for potential issues.&lt;/p&gt; 
+&lt;h2&gt;Understanding the Nextflow AST&lt;/h2&gt; 
+&lt;p&gt;An abstract syntax tree is a hierarchical data structure that models code at increasing levels of granularity. The root node represents the entire script or program. Child nodes represent top-level statements and expressions with their children representing sub-expressions. By traversing this tree, and examining nodes with semantic meaning, rules can gather the information we need to detect problems.&lt;/p&gt; 
+&lt;p&gt;We built a simple application called AST Echo to determine which AST node types need to be visited to evaluate different Nextflow language elements. Our app parses Nextflow code and prints out the AST hierarchy along with the Groovy node-type associated with each Nextflow construct.&lt;/p&gt; 
+&lt;p&gt;Using this approach, we were able to discover that a Nextflow process declaration is a Groovy &lt;code&gt;MethodCallExpression&lt;/code&gt; and that a Nextflow process block maps to a Groovy &lt;code&gt;ClosureExpression&lt;/code&gt; containing a &lt;code&gt;BlockExpression&lt;/code&gt;. Here’s a partial example of a Nextflow DSL script. We’ve made the &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/examples/example.nf"&gt;full source available on GitHub&lt;/a&gt;.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-clike"&gt;nextflow.enable.dsl=2
+
+process foo {
+    container 'ubuntu:latest'
+    cpus 1
+
+    output:
+    path 'foo.txt'
+
+    script:
+    """
+    your_command &amp;gt; foo.txt
+    """
+}
+
+// other processess …
+
+workflow {
+    data = channel.fromPath('/some/path/*.txt')
+    foo()
+    // further process calls …
+}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Providing this as input to our AST Echo app will produce something like this.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;(∅:∅)-(∅:∅) &amp;lt;BlockStatement&amp;gt;:  { (nextflow.enable.dsl = 2); this.process(this.foo({ -&amp;gt; ... })); this.process(this.bar({ -&amp;gt; ... })); this.workflow({ -&amp;gt; ... }) }
+  -&amp;gt; (1:1)-(1:22) &amp;lt;ExpressionStatement&amp;gt;:  (nextflow.enable.dsl = 2)
+    -&amp;gt; (1:1)-(1:22) &amp;lt;BinaryExpression&amp;gt;: (nextflow.enable.dsl = 2)
+      -&amp;gt; (1:1)-(1:20) &amp;lt;PropertyExpression&amp;gt;: nextflow.enable.dsl
+        -&amp;gt; (1:9)-(1:16) &amp;lt;PropertyExpression&amp;gt;: nextflow.enable
+          -&amp;gt; (1:1)-(1:9) &amp;lt;VariableExpression&amp;gt;: nextflow
+          -&amp;gt; (1:10)-(1:16) &amp;lt;ConstantExpression&amp;gt;: enable
+        -&amp;gt; (1:17)-(1:20) &amp;lt;ConstantExpression&amp;gt;: dsl
+      -&amp;gt; (1:21)-(1:22) &amp;lt;ConstantExpression&amp;gt;: 2
+  -&amp;gt; (3:1)-(14:2) &amp;lt;ExpressionStatement&amp;gt;:  this.process(this.foo({ -&amp;gt; ... }))
+    -&amp;gt; (3:1)-(14:2) &amp;lt;MethodCallExpression&amp;gt;: this.process(this.foo({ -&amp;gt; ... }))
+      -&amp;gt; (3:1)-(3:1) &amp;lt;VariableExpression&amp;gt;: this
+      -&amp;gt; (3:1)-(3:8) &amp;lt;ConstantExpression&amp;gt;: process
+      -&amp;gt; (3:9)-(14:2) &amp;lt;ArgumentListExpression&amp;gt;: (this.foo({ -&amp;gt; ... }))
+        -&amp;gt; (3:9)-(14:2) &amp;lt;MethodCallExpression&amp;gt;: this.foo({ -&amp;gt; ... })
+          -&amp;gt; (3:9)-(3:9) &amp;lt;VariableExpression&amp;gt;: this
+          -&amp;gt; (3:9)-(3:12) &amp;lt;ConstantExpression&amp;gt;: foo
+          -&amp;gt; (3:13)-(14:2) &amp;lt;ArgumentListExpression&amp;gt;: ({ -&amp;gt; ... })
+            -&amp;gt; (3:13)-(14:2) &amp;lt;ClosureExpression&amp;gt;: { -&amp;gt; ... }
+              -&amp;gt; (4:5)-(14:1) &amp;lt;BlockStatement&amp;gt;:  { this.container(ubuntu:latest); this.cpus(1); this.path(foo.txt); 
+    your_command &amp;gt; foo.txt
+     }
+                -&amp;gt; (4:5)-(4:30) &amp;lt;ExpressionStatement&amp;gt;:  this.container(ubuntu:latest)
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The root of the AST is on the first line. Each subsequent line is a node of the tree indented by the depth of the node.&lt;/p&gt; 
+&lt;p&gt;The start and stop locations of the code contained in the node are displayed first with their line number and character offset separated by ‘:’. The start and stop are separated by ‘-’. The type of Groovy expression or statement is displayed surrounded by angle brackets. Following this is the code fragment, possibly truncated, contained by the node as interpreted by the Groovy parser.&lt;/p&gt; 
+&lt;h2&gt;Writing linter rules&lt;/h2&gt; 
+&lt;p&gt;Armed with these mappings we can write CodeNarc rules targeting the relevant AST node types.&lt;/p&gt; 
+&lt;p&gt;CodeNarc rules define a set of methods matching AST node types which will be called by CodeNarc when the corresponding nodes are visited during AST traversal. In the body of these visit methods, we can write logic to gather information and detect rule violations. Any issues can be reported by adding them to CodeNarc’s violation list.&lt;/p&gt; 
+&lt;p&gt;For example, we can write a rule that checks if CPU or memory resource requests for processes fall within valid ranges. The rule would override CodeNarcs’s &lt;code&gt;AbstractAstVisitor&lt;/code&gt; &lt;code&gt;visitMethodCallExpression&lt;/code&gt; method which represents a method call in Groovy. It would check if the method call is requesting CPU resources and then evaluate if the arguments are valid.&lt;/p&gt; 
+&lt;p&gt;Let’s look at part of a Groovy implementation of a rule to check the &lt;code&gt;cpu&lt;/code&gt; directive by overriding the &lt;code&gt;visitMethodCallExpression&lt;/code&gt; :&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-clike"&gt;class CpuAstVisitor extends AbstractAstVisitor {
+    def MIN_CPU = 2
+    def MAX_CPU = 96
+
+    @Override
+    void visitMethodCallExpression(MethodCallExpression expression) {
+        if(expression.getMethodAsString() == 'cpus'){
+            checkOneArgument(expression)
+        }
+
+        super.visitMethodCallExpression(expression)
+    }
+
+
+    private checkOneArgument(final MethodCallExpression expression){
+        def methodArguments = AstUtil.getMethodArguments(expression)
+        if (methodArguments.size() == 0) {
+            addViolation(expression, 'the cpus directive must have one argument')
+            return new EmptyExpression()
+        } else if (methodArguments.size() &amp;gt; 1) {
+            addViolation(expression, 'the cpus directive must have only one argument')
+        }
+
+        if( methodArguments.first() instanceof ConstantExpression){
+           checkNumeric((ConstantExpression)methodArguments.first())
+        }
+    }
+
+    private checkNumeric(ConstantExpression expression){
+        try {
+            def val = Integer.parseInt(expression.value.toString())
+            checkMinMax(expression, val)
+        } catch (NumberFormatException ignored){
+            addViolation(expression,
+                    "'${expression.value}' is not a valid number.")
+        }
+
+    }
+    private void checkMinMax(Expression exp, final int val) {
+        if (val &amp;lt; MIN_CPU) {
+            addViolation(exp,
+                    "The minimum CPU count is '$MIN_CPU'.")
+        } else if (val &amp;gt; MAX_CPU) {
+            addViolation(exp,
+                    "The maximum CPU count is '$MAX_CPU'.")
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;During the check, we validate several conditions. Violations are recorded by calling the &lt;code&gt;addViolation&lt;/code&gt; method. At the end of the checks the &lt;code&gt;visitMethodCallExpression&lt;/code&gt; of the super-class is invoked to continue the traversal of the AST. We’ve put the &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/linter-rules/src/main/groovy/software/amazon/nextflow/rules/healthomics/CpuRule.groovy"&gt;full source on GitHub&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;It’s critical to rigorously test rules to ensure they work as expected. CodeNarc provides a convenient rule-testing harness. It allows us to define test Nextflow code snippets along with expected rule violations. CodeNarc then runs analysis on these code fragments and compares the actual violations it finds to the expected results, ensuring that all &lt;em&gt;expected&lt;/em&gt; violations and no &lt;em&gt;unexpected&lt;/em&gt; violations are detected.&lt;/p&gt; 
+&lt;p&gt;For example, we can test that the rule in from our previous code list is violated when the &lt;code&gt;cpus&lt;/code&gt; value is 97 but not violated when the value is 2.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-clike"&gt;@Test
+void cpuRule_MaxViolation(){
+    final SOURCE =
+'''
+process MY_PROCESS {
+ cpus 97
+}
+'''
+    assertSingleViolation(SOURCE, 3, 'cpus 97', “The maximum CPU count is ‘96’”)
+    }
+@Test
+void cpuRule_NoViolationsMin(){
+    final SOURCE =
+'''
+process MY_PROCESS {
+ cpus 2
+}
+'''
+    assertNoViolations(SOURCE)
+}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This checks that the code defined by &lt;code&gt;SOURCE&lt;/code&gt; and asserts that a single violation occurs when &lt;code&gt;cpus&lt;/code&gt; is set to 97 and that no violations occur when cpus are set to 2. We’ve put the &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/linter-rules/src/test/groovy/software/amazon/nextflow/rules/healthomics/CpuRuleTest.groovy"&gt;full source of this test on GitHub&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Running the Linter Rules&lt;/h2&gt; 
+&lt;p&gt;To run the linter rules you build the package and then run from the command line with&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;java  -Dorg.slf4j.simpleLogger.defaultLogLevel=error \
+  -classpath ./linter-rules/build/libs/linter-rules-0.1.jar:CodeNarc-3.3.0-all.jar:slf4j-api-1.7.36.jar:slf4j-simple-1.7.36.jar \
+  org.codenarc.CodeNarc \
+  -report=text:stdout \
+  -rulesetfiles=rulesets/healthomics.xml \
+  -includes=**/**.nf
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The &lt;code&gt;-includes&lt;/code&gt; argument will inspect all filenames matching the &lt;code&gt;*.nf&lt;/code&gt; pattern in the current working directory, &lt;em&gt;and&lt;/em&gt; any sub-directory. To adjust the rules to be run, you adjust &lt;code&gt;-rulesetfiles&lt;/code&gt; to specify either a custom ruleset in CodeNarc format, or a prebuilt set like &lt;code&gt;rulesets/general.xml&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;To simplify this, we’ve provided a &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/Dockerfile"&gt;Dockerfile&lt;/a&gt; that includes all required dependencies with a convenient entry point along with &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/tree/main?tab=readme-ov-file#docker"&gt;build and usage instructions&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Using this mechanism, the command to run with Docker becomes:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;docker run -v $PWD:/data -e ruleset=healthomics linter-rules-for-nextflow&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You can find a prebuilt image in the &lt;a href="https://gallery.ecr.aws/aws-genomics/linter-rules-for-nextflow"&gt;Amazon ECR Public Gallery&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Detecting runtime compatibility issues&lt;/h2&gt; 
+&lt;p&gt;Nextflow provides portability across environments, but workflows can still be written in ways that tie them to certain runtime capabilities.&lt;/p&gt; 
+&lt;p&gt;We’ve developed rules that can detect the use of Nextflow features that may not be supported in AWS HealthOmics. For example, AWS HealthOmics ignores certain process directives that are only relevant to other runtime environments. Our rules warn when these directives are used so workflows designed for HealthOmics avoid incompatibility issues.&lt;/p&gt; 
+&lt;p&gt;The AWS HealthOmics workflow service provides a managed environment optimized for security, scalability, and cost efficiency. Workflows must adhere to certain constraints around storage, containers, and infrastructure. We’ve built rules that check Nextflow code for patterns that violate HealthOmics environment policies.&lt;/p&gt; 
+&lt;p&gt;For example, one rule checks that pipeline inputs are loaded from Amazon Simple Storage Service (Amazon S3) buckets, or HealthOmics Sequence Stores, and that pipeline container images are being pulled from Amazon ECR Private repositories.&lt;/p&gt; 
+&lt;p&gt;Other rules check that resource requests don’t exceed HealthOmics instance type capabilities. Configuring these as linter rules allows workflows to be pre-validated rather than discovering issues mid-execution.&lt;/p&gt; 
+&lt;p&gt;In addition to AWS HealthOmics specific checks, we’ve also &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/tree/main/linter-rules/src/main/groovy/software/amazon/nextflow/rules"&gt;created some general rules&lt;/a&gt; that detect invalid syntax, potential portability issues, and other common anti-patterns. For example, &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/linter-rules/src/main/groovy/software/amazon/nextflow/rules/AllowedDirectivesRule.groovy"&gt;a rule that detects&lt;/a&gt; the use of undefined process directives – this often indicates a typo or misunderstanding of the DSL.&lt;/p&gt; 
+&lt;h2&gt;Flexible, extensible, and open-source&lt;/h2&gt; 
+&lt;p&gt;The linter lets you &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow?tab=readme-ov-file#general-nf-rules-only"&gt;include only rule sets you’re interested in&lt;/a&gt;. You can focus strictly on general Nextflow rules or both general rules and HealthOmics best practices. Over time, we expect the rules library will grow to cover more scenarios.&lt;/p&gt; 
+&lt;p&gt;We architected our linter so that rules can easily be contributed by the Nextflow community.&lt;/p&gt; 
+&lt;p&gt;We’ve released the linter rules and the AST Echo utility as &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow"&gt;open-source projects on GitHub&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;The code we’ve provided there uses the Apache 2.0 license. We welcome issues, pull requests, and additional rules from the Nextflow community.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;By providing early feedback on Nextflow code, this linter can improve developer productivity, reduce errors, and make workflows more portable. We encourage all Nextflow pipeline authors to integrate it into their continuous integration pipelines and contribute to its evolution.&lt;/p&gt; 
+&lt;p&gt;Static analysis of domain-specific languages like Nextflow opens up new possibilities for accelerating scientific advancements through code quality and collaboration.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Intel Open Omics Acceleration Framework on AWS: fast, cost-efficient, and seamless</title>
 		<link>https://aws.amazon.com/blogs/hpc/intel-open-omics-acceleration-framework-on-aws-fast-cost-efficient-and-seamless/</link>
 		
@@ -45,7 +237,7 @@
  &lt;li&gt;&lt;strong&gt;Building blocks layer&lt;/strong&gt;: for tool developers, this layer consists of key building blocks – biology-specific and generic-AI algorithms and data structures – that can replace ones used in existing tools to accelerate them or can be used as ingredients to build new efficient tools.&lt;/li&gt; 
 &lt;/ul&gt; 
 &lt;div id="attachment_3467" style="width: 1966px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3467" class="size-full wp-image-3467" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.14.22@2x.png" alt="Figure 1: Open Omics Acceleration Framework v. 2.1. This modular architecture consists of 3 layers: pipeline, toolkit (application), and building blocks layers. " width="1956" height="874"&gt;
+ &lt;img aria-describedby="caption-attachment-3467" loading="lazy" class="size-full wp-image-3467" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.14.22@2x.png" alt="Figure 1: Open Omics Acceleration Framework v. 2.1. This modular architecture consists of 3 layers: pipeline, toolkit (application), and building blocks layers. " width="1956" height="874"&gt;
  &lt;p id="caption-attachment-3467" class="wp-caption-text"&gt;Figure 1: Open Omics Acceleration Framework v. 2.1. This modular architecture consists of 3 layers: pipeline, toolkit (application), and building blocks layers.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h2&gt;Benchmarking the Open Omics Acceleration Framework on Amazon EC2 instances&lt;/h2&gt; 
@@ -2124,268 +2316,6 @@ $ srun -p interactive --mem 1G -c 1 --time 1:00:00 --pty /bin/bash&lt;/code&gt;&
   &lt;/div&gt; 
   &lt;h3 class="lb-h4"&gt;Orang Vahid&lt;/h3&gt; 
   &lt;p&gt;Orang has over 20 years of experience in system-level modeling, advanced dynamic systems, frictional vibration and control, automotive noise and vibration, and mechanical engineering design. He is a frequent invited speaker and has published numerous papers on various topics in engineering design. At Maplesoft he is Director of Engineering Services, with a focus on the use and development of MapleSim solutions.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Slurm REST API in AWS ParallelCluster</title>
-		<link>https://aws.amazon.com/blogs/hpc/slurm-rest-api-in-aws-parallelcluster/</link>
-		
-		<dc:creator><![CDATA[Sean Smith]]></dc:creator>
-		<pubDate>Wed, 06 Dec 2023 15:30:55 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Slurm]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">c6ddf535719513e79c43687d50d07ddd004a82a6</guid>
-
-					<description>Looking to integrate AWS ParallelCluster into an automated workflow? This post shows how to submit and monitor jobs programmatically with Slurm REST API (code examples included).</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Sean Smith, Sr HPC Solution Architect, and Ryan Kilpadi, SDE Intern, HPC&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;AWS ParallelCluster offers powerful compute capabilities for problems ranging from discovering new drugs, to designing F1 race cars, to predicting the weather. In all these cases there’s a need for a human to sit in the loop – maybe an engineer running a simulation or perhaps a scientist submitting their lab results for analysis.&lt;/p&gt; 
-&lt;p&gt;In this post we’ll show you how to programmatically submit and monitor jobs using the open-source Slurm REST API. This allows ParallelCluster to be integrated into an automated system via API calls. For example, this could mean that whenever a genome sample is read from a sequencer, it’s automatically fed through a secondary analysis pipeline to align the individual reads, or when new satellite data lands in an Amazon S3 bucket, it triggers a job to create the latest weather forecast.&lt;/p&gt; 
-&lt;p&gt;Today, we’ll show how to set this up with AWS ParallelCluster. We’ll also link to a GitHub repository with code you can use and show examples of how to call the API using both curl and Python.&lt;/p&gt; 
-&lt;h2&gt;Architecture&lt;/h2&gt; 
-&lt;p&gt;This diagram shows an example cluster architecture with the Slurm REST API. The REST API runs on the HeadNode and submits jobs to the compute queues. The credentials used to authenticate with the API are stored in AWS Secrets Manager. The compute queues shown are examples only: the cluster can be configured with any instance configuration you desire.&lt;/p&gt; 
-&lt;div id="attachment_3120" style="width: 849px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3120" loading="lazy" class="size-full wp-image-3120" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-13.37.39.png" alt="Figure 1 – The REST API runs on the HeadNode and submits jobs to the compute queues. The credentials used to authenticate with the API are stored in AWS Secrets Manager. The compute queues shown are examples only, the cluster can be configured with any instance configuration you desire." width="839" height="385"&gt;
- &lt;p id="caption-attachment-3120" class="wp-caption-text"&gt;Figure 1 – The REST API runs on the HeadNode and submits jobs to the compute queues. The credentials used to authenticate with the API are stored in AWS Secrets Manager. The compute queues shown are examples only, the cluster can be configured with any instance configuration you desire.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;For this tutorial, we’ll be using ParallelCluster UI to set up our cluster with the Slurm REST API enabled. To set up ParallelCluster UI, &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-pcui-v3.html"&gt;refer to our online documentation&lt;/a&gt;. If you’d rather use the ParallelCluster CLI, see the example YAML configuration step 5.&lt;/p&gt; 
-&lt;h2&gt;Step 1 – Create a Security Group to allow inbound API requests&lt;/h2&gt; 
-&lt;p&gt;By default, your cluster will not be able to accept incoming HTTPS requests to the REST API. You will need to create a security group to allow traffic from outside the cluster to call the API.&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Navigate to the &lt;a href="http://console.aws.amazon.com/ec2/#SecurityGroups"&gt;EC2 Security Group console&lt;/a&gt; and choose &lt;strong&gt;Create security group&lt;/strong&gt;.&lt;/li&gt; 
- &lt;li&gt;Under Security group name, enter &lt;code&gt;Slurm REST API&lt;/code&gt;&amp;nbsp;(or another name of your choosing)&lt;/li&gt; 
- &lt;li&gt;Ensure the VPC matches your cluster’s VPC&lt;/li&gt; 
- &lt;li&gt;Add an Inbound rule and select &lt;code&gt;HTTPS&lt;/code&gt; under Type, then change the Source to only the CIDR range that you want to have access. For example, you can use the CIDR associated with your VPC to restrict access to within your VPC.&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Create security group&lt;/strong&gt;&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;div id="attachment_3121" style="width: 931px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3121" loading="lazy" class="size-full wp-image-3121" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-13.39.07.png" alt="Figure 2 – Create your security group, adding a VPC and an inbound rule to allow only HTTPS connections from a specific CID" width="921" height="453"&gt;
- &lt;p id="caption-attachment-3121" class="wp-caption-text"&gt;Figure 2 – Create your security group, adding a VPC and an inbound rule to allow only HTTPS connections from a specific CID&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Step 2 – Add Additional IAM Permissions&lt;/h2&gt; 
-&lt;p&gt;If you’re using the AWS ParallelCluster UI, please follow the instructions under the ParallelCluster UI Tutorial &lt;strong&gt;section ‘G’&lt;/strong&gt; – &lt;a href="https://pcluster.cloud/02-tutorials/07-setup-iam.html"&gt;Setup IAM Permissions&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Step 3 – Configure your Cluster&lt;/h2&gt; 
-&lt;ol&gt; 
- &lt;li&gt;In your cluster configuration, return to the &lt;strong&gt;HeadNode section &amp;gt; Advanced options &amp;gt; Additional Security Groups &amp;gt;&lt;/strong&gt; add the &lt;em&gt;Slurm REST API&lt;/em&gt; Security Group you created in Step 1. Under &lt;strong&gt;Scripts &amp;gt; on node configured &amp;gt;&lt;/strong&gt; add the following script:&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh&lt;/code&gt;&lt;/pre&gt; 
-&lt;div id="attachment_3122" style="width: 639px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3122" loading="lazy" class="size-full wp-image-3122" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-13.41.18.png" alt="Figure 4 – Add the script to be run after node configuration" width="629" height="288"&gt;
- &lt;p id="caption-attachment-3122" class="wp-caption-text"&gt;Figure 4 – Add the script to be run after node configuration&lt;/p&gt;
-&lt;/div&gt; 
-&lt;ol start="2"&gt; 
- &lt;li&gt;Under &lt;strong&gt;Additional IAM permissions&lt;/strong&gt;, add the policy:&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;arn:aws:iam::aws:policy/SecretsManagerReadWrite&lt;/code&gt;&lt;/pre&gt; 
-&lt;div id="attachment_3123" style="width: 838px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3123" loading="lazy" class="size-full wp-image-3123" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-13.42.08.png" alt="Figure 5 – Add IAM policy to allow updates to AWS SecretsManager. This is needed to automatically refresh the JSON Web Token (JWT)." width="828" height="231"&gt;
- &lt;p id="caption-attachment-3123" class="wp-caption-text"&gt;Figure 5 – Add IAM policy to allow updates to AWS SecretsManager. This is needed to automatically refresh the JSON Web Token (JWT).&lt;/p&gt;
-&lt;/div&gt; 
-&lt;ol start="3"&gt; 
- &lt;li&gt;Create your cluster.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h2&gt;Step 4 – Validate the configuration&lt;/h2&gt; 
-&lt;p&gt;Your configuration file should look something like the text that follows. If you opted to use the CLI instead of the UI, you will need to replace:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;code&gt;AdditionalSecurityGroups&lt;/code&gt; – this should contain an additional security group that allows connections to the Slurm REST API (Step 1).&lt;/li&gt; 
- &lt;li&gt;&lt;code&gt;OnNodeConfigured&lt;/code&gt;: thish should reference the post-install script: &lt;code&gt;&lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh&lt;/a&gt;&lt;/code&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;Imds:
-  ImdsSupport: v1.0
-HeadNode:
-  InstanceType: c5.xlarge
-  Imds:
-    Secured: true
-  Ssh:
-    KeyName: amzn2
-  LocalStorage:
-    RootVolume:
-      VolumeType: gp3
-  Networking:
-    SubnetId: subnet-xxxxxxxxxxxxxx
-    AdditionalSecurityGroups:
-      - sg-slurmrestapixxxxxxxxxx
-  Iam:
-    AdditionalIamPolicies:
-      - Policy: arn:aws:iam::aws:policy/SecretsManagerReadWrite
-  CustomActions:
-    OnNodeConfigured:
-      Script: &amp;gt;-
-        &lt;a href="https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh" rel="noopener noreferrer"&gt;https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/rest-api/postinstall.sh&lt;/a&gt;
-Scheduling:
-  Scheduler: slurm
-  SlurmQueues:
-    - Name: queue-1
-      ComputeResources:
-        - Name: queue-1-cr-1
-          Instances:
-            - InstanceType: c5.xlarge
-          MinCount: 0
-          MaxCount: 4
-      ComputeSettings:
-        LocalStorage:
-          RootVolume:
-            VolumeType: gp3
-      Networking:
-        SubnetIds:
-          - subnet-xxxxxxxxxxxxxxxxxx
-Region: us-east-2
-Image:
-	Os: alinux2
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;h2&gt;Step 5 – Call the API&lt;/h2&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Log in to a machine on the same network that you allowed via the Security Group in Step 1. Make sure this machine is able to talk to the HeadNode.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;ssh username@ip&lt;/code&gt;&lt;/pre&gt; 
-&lt;ol start="2"&gt; 
- &lt;li&gt;Set the following environment variable:&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;export CLUSTER_NAME=[name of cluster]&lt;/code&gt;&lt;/pre&gt; 
-&lt;ol start="3"&gt; 
- &lt;li&gt;Find the information needed to call the API and construct an API request. To do this, we’ll need a few pieces of information. 
-  &lt;ul&gt; 
-   &lt;li&gt;&lt;strong&gt;JWT token&lt;/strong&gt;: The post install script will have created a secret in &lt;a href="http://console.aws.amazon.com/secretsmanager"&gt;AWS SecretsManager&lt;/a&gt; under the name &lt;code&gt;slurm_token_$CLUSTER_NAME&lt;/code&gt; . Either use the AWS console or the AWS CLI to find your secret based on the cluster name:&lt;/li&gt; 
-  &lt;/ul&gt; &lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;export JWT=$(aws secretsmanager get-secret-value --secret-id slurm_token_$CLUSTER_NAME | jq -r '.SecretString')&lt;/code&gt;NOTE: Since the Slurm REST API script is not integrated into ParallelCluster, this secret will not be automatically deleted along with the cluster. You may want to remove it manually on cluster deletion.&lt;/pre&gt; 
-&lt;ol&gt; 
- &lt;li style="list-style-type: none"&gt; 
-  &lt;ul&gt; 
-   &lt;li&gt;&lt;strong&gt;Head node public IP:&lt;/strong&gt; This can be found in your Amazon EC2 dashboard or by using the ParallelCluster CLI:&lt;/li&gt; 
-  &lt;/ul&gt; &lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;export HEADNODE_IP=$(pcluster describe-cluster-instances -n $CLUSTER_NAME | jq -r '.instances[0].publicIpAddress')&lt;/code&gt;&lt;/pre&gt; 
-&lt;ol&gt; 
- &lt;li style="list-style-type: none"&gt; 
-  &lt;ul&gt; 
-   &lt;li&gt;&lt;strong&gt;Cluster user&lt;/strong&gt;: This depends on your AMI, but it will usually be either ec2-user , ubuntu , or centos.&lt;/li&gt; 
-  &lt;/ul&gt; &lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;export CLUSTER_USER=ec2-user&lt;/code&gt;&lt;/pre&gt; 
-&lt;ol start="4"&gt; 
- &lt;li&gt;Call the API using curl:&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;curl -H "X-SLURM-USER-NAME: $CLUSTER_USER" -H "X-SLURM-USER-TOKEN: $JWT" https://$HEADNODE_IP/slurm/v0.0.39/ping -k&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;You’ll get a response back like:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-json"&gt;{
-    "meta": {
-        "plugin": {
-            "type": "openapi\/v0.0.39",
-            "name": "REST v0.0.39"
-        },
-        "Slurm": {
-            "version": {
-            "major": 23,
-            "micro": 2,
-            "minor": 2
-        },
-         "release": "23.02.2"
-    }...
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Submit a job using the API. Specify the job parameters using JSON. You may need to modify the standard directories depending on the cluster user.&lt;/li&gt; 
- &lt;li&gt;Post a job to the API:&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;curl -H "X-SLURM-USER-TOKEN: $CLUSTER_USER" -H "X-SLURM-USER-TOKEN: $JWT" -X POST https://$IP/slurm/v0.0.39/job/submit -H "Content-Type: application/json" -d @testjob.json -k&lt;/code&gt;&lt;/pre&gt; 
-&lt;ul&gt; 
- &lt;li&gt;c. Verify that the job is running:&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;curl -H "X-SLURM-USER-NAME: $CLUSTER_USER" -H "X-SLURM-USER-TOKEN: $JWT" https://$IP/slurm/v0.0.39/jobs -k&lt;/code&gt;&lt;/pre&gt; 
-&lt;h2&gt;Calling the API using the Python requests library&lt;/h2&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Create a script called &lt;code&gt;slurmapi.py&lt;/code&gt; with the following contents:&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;#!/usr/bin/env python3
-import argparse
-import boto3
-import requests
-import json
-
-# Create argument parser
-parser = argparse.ArgumentParser()
-parser.add_argument('-n', '--cluster-name', type=str, required=True)
-parser.add_argument('-u', '--cluster-user', type=str, required=False)
-subparsers = parser.add_subparsers(dest='command', required=True)
-
-diag_parser = subparsers.add_parser('diag', help="Get diagnostics")
-ping_parser = subparsers.add_parser('ping', help="Ping test")
-
-submit_job_parser = subparsers.add_parser('submit-job', help="Submit a job")
-submit_job_parser.add_argument('-j', '--job', type=str, required=True)
-
-list_jobs_parser = subparsers.add_parser('list-jobs', help="List active jobs")
-
-describe_job_parser = subparsers.add_parser('describe-job', help="Describe a job by id")
-describe_job_parser.add_argument('-j', '--job-id', type=int, required=True)
-
-cancel_parser = subparsers.add_parser('cancel-job', help="Cancel a job")
-cancel_parser.add_argument('-j', '--job-id', type=int, required=True)
-
-args = parser.parse_args()
-
-# Get JWT token
-client = boto3.client('secretsmanager')
-boto_response = client.get_secret_value(SecretId=f'slurm_token_{args.cluster_name}')
-jwt_token = boto_response['SecretString']
-
-# Get cluster headnode IP
-client = boto3.client('ec2')
-filters = [{'Name': 'tag:parallelcluster:cluster-name', 'Values': [args.cluster_name]}]
-boto_response = client.describe_instances(Filters=filters)
-headnode_ip = boto_response['Reservations'][0]['Instances'][0]['PublicIpAddress']
-
-url = f'https://{headnode_ip}/slurm/v0.0.39'
-headers = {'X-SLURM-USER-TOKEN': jwt_token}
-if args.cluster_user:
-    headers['X-SLURM-USER-NAME'] = args.cluster_user
-
-# Make request
-if args.command == 'ping':
-    r = requests.get(f'{url}/ping', headers=headers, verify=False)
-elif args.command == 'diag':
-    r = requests.get(f'{url}/diag', headers=headers, verify=False)
-elif args.command == 'submit-job':
-    with open(args.job) as job_file:
-        job_json = json.load(job_file)
-    r = requests.post(f'{url}/job/submit', headers=headers, json=job_json, verify=False)
-elif args.command == 'list-jobs':
-    r = requests.get(f'{url}/jobs', headers=headers, verify=False)
-elif args.command == 'describe-job':
-    r = requests.get(f'{url}/job/{args.job_id}', headers=headers, verify=False)
-elif args.command == 'cancel-job':
-    r = requests.delete(f'{url}/job/{args.job_id}', headers=headers, verify=False)
-
-print(r.text)
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;ol start="2"&gt; 
- &lt;li&gt;Submitt a job&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;./slurmapi.py -n [cluster_name] submit-job -u [cluster_user] -j testjob.json&lt;/code&gt;&lt;/pre&gt; 
-&lt;ol start="3"&gt; 
- &lt;li&gt;Getting more information&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;./slurmapi.py -h&lt;/code&gt;&lt;/pre&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Setting up the Slurm REST API allows you to programmatically control the cluster, this makes it possible to build the cluster into an automated workflow. This enables new use cases such as automated secondary analysis of genomics data, risk analysis in financial markets, weather prediction, among a myriad of other use cases. We’re excited to see what you build, drop us a line on twitter to showcase what you come up with.&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/11/27/CleanShot-2023-11-27-at-14.07.01.png" alt="Ryan Kilpadi " width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Ryan Kilpadi&lt;/h3&gt; 
-  &lt;p&gt;Ryan Kilpadi is a returning SDE intern on the HPC team working on AWS ParallelCluster. He worked on implementing the Slurm REST API on ParallelCluster as a summer internship project in 2022.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
 					
