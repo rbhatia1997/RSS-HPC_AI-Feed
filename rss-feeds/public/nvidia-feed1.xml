@@ -12,14 +12,96 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 16 Apr 2024 23:04:16 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 17 Apr 2024 17:39:53 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.4.3</generator>
+	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>Moving Pictures: Transform Images Into 3D Scenes With NVIDIA Instant NeRF</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-instant-nerf/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 17 Apr 2024 13:00:42 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71152</guid>
+
+					<description><![CDATA[NVIDIA RTX technology-powered AI helps turn such an imagination into reality. Using Instant NeRF, creatives are transforming collections of still images into digital 3D scenes in just seconds.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><em>Editor’s note: This post is part of the </em><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><em>AI Decoded series</em></a><em>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</em></p>
+<p>Imagine a gorgeous vista, like a cliff along the water’s edge. Even as a 2D image, the scene would be beautiful and inviting. Now imagine exploring that same view in 3D – without needing to be there.</p>
+<p><a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> technology-powered AI helps turn such an imagination into reality. Using <a href="https://blogs.nvidia.com/blog/instant-nerf-research-3d-ai/">Instant NeRF</a>, creatives are <a href="https://developer.nvidia.com/blog/how-nerfs-helped-me-re-imagine-the-world/">transforming collections of still images into digital 3D scene</a>s in just seconds.</p>
+<h2><strong>Simply Radiant</strong></h2>
+<p>A NeRF, or neural radiance field, is an AI model that takes 2D images representing a scene as input and interpolates between them to render a complete 3D scene. The model operates as a neural network — a model that replicates how the brain is organized and is often used for tasks that require pattern recognition.</p>
+<p>Using spatial location and volumetric rendering, a NeRF uses the camera pose from the images to render a 3D iteration of the scene. Traditionally, these models are computationally intensive, requiring large amounts of rendering power and time.</p>
+<p>A recent NVIDIA AI research project changed that.</p>
+<p><a href="https://developer.nvidia.com/blog/getting-started-with-nvidia-instant-nerfs/">Instant NeRF</a> takes NeRFs to the next level, using AI-accelerated inverse rendering to approximate how light behaves in the real world. It enables researchers to construct a 3D scene from 2D images taken at different angles. Scenes can now be generated in seconds, and the longer the NeRF model is trained, the more detailed the resulting 3D renders.</p>
+<p>NVIDIA researchers released four neural graphics primitives, or <a href="https://blogs.nvidia.com/blog/what-is-a-pretrained-ai-model/">pretrained</a> datasets, as part of the <a href="https://nvlabs.github.io/instant-ngp/">Instant-NGP</a> training toolset at the SIGGRAPH computer graphics conference in 2022. The tools let anyone create NeRFs with their own data. The researchers won a <a href="https://blogs.nvidia.com/blog/instant-nerf-creators-siggraph/">best paper award</a> for the work, and <em>TIME Magazine</em> named Instant NeRF a <a href="https://developer.nvidia.com/blog/time-magazine-names-nvidia-instant-nerf-a-best-invention-of-2022/">best invention of 2022</a>.</p>
+<p>In addition to speeding rendering for NeRFs, Instant NeRF makes the entire image reconstruction process accessible using NVIDIA RTX and GeForce RTX desktop and laptop GPUs. While the time it takes to render a scene depends on factors like dataset size and the mix of image and video source content, the AI training doesn’t require server-grade or cloud-based hardware.</p>
+<p>NVIDIA RTX workstations and GeForce RTX PCs are ideally suited to meet the computational demands of rendering NeRFs. NVIDIA RTX and GeForce RTX GPUs feature Tensor Cores, dedicated AI hardware accelerators that provide the horsepower to run generative AI locally.</p>
+<h2><strong>Ready, Set, Go</strong></h2>
+<p>Get started with Instant NeRF to learn about radiance fields and experience imagery in a new way.</p>
+<p>Developers and tech enthusiasts can download the source-code base to compile. Nontechnical users can download the Windows installers for <a href="https://github.com/NVlabs/instant-ngp">Instant-NGP</a><a href="https://github.com/NVlabs/instant-ngp"> software, available on GitHub</a>.</p>
+<p>While the installer is available for a wide range of RTX GPUs, the program performs best on the latest-architecture <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX 40 Series</a> and <a href="https://www.nvidia.com/en-us/technologies/ada-architecture/">NVIDIA RTX Ada Generation</a> GPUs.</p>
+<p><iframe title="Updated: Making a NeRF movie with NVIDIA&#039;s Instant NGP" width="500" height="281" src="https://www.youtube.com/embed/3TWxO1PftMc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>The <a href="https://developer.nvidia.com/blog/getting-started-with-nvidia-instant-nerfs/">“Getting Started With Instant NeRF”</a> guide walks users through the process, including loading one of the primitives, such as “NeRF Fox,” to get a sense of what’s possible. Detailed instructions and video walkthroughs — like the one above — demonstrate how to create NeRFs with custom data, including tips for capturing good input imagery and compiling codebases (if built from source). The guide also covers using the Instant NeRF graphical user interface, optimizing scene parameters and creating an animation from the scene.</p>
+<p>The NeRF community also offers many tips and tricks to help users get started. For example, check out the livestream below and this technical <a href="https://developer.nvidia.com/blog/getting-started-with-nvidia-instant-nerfs/">blog post</a>.</p>
+<p><iframe title="Hands on With Nvidia Instant NeRFs" width="500" height="281" src="https://www.youtube.com/embed/z3-fjYzd0BA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><strong>Show and Tell</strong></h2>
+<p>Digital artists are composing beautiful scenes and telling fresh stories with NVIDIA Instant NeRF. The <a href="https://www.nvidia.com/en-us/research/ai-art-gallery/instant-nerf/">Instant NeRF gallery</a> showcases some of the most innovative and thought-provoking examples, viewable as video clips in any web browser.</p>
+<p>Here are a few:</p>
+<ul>
+<li><strong>“Through the Looking Glass” by Karen X. Cheng and James Perlman </strong>A pianist practices her song, part of her daily routine, though there’s nothing mundane about what happens next. The viewer peers into the mirror, a virtual world that can be observed but not traversed; it’s unreachable by normal means. Then, crossing the threshold, it’s revealed that this mirror is in fact a window into an inverted reality that can be explored from within. Which one is real?</li>
+</ul>
+<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-71152-1" width="1280" height="680" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-karenx-v9-1280x680-1.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-karenx-v9-1280x680-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-karenx-v9-1280x680-1.mp4</a></video></div>
+<p>&nbsp;</p>
+<ul>
+<li><strong>“Meditation” by Franc Lucent </strong>As soon as they walked into one of many rooms in Nico Santucci’s estate, Lucent knew they needed to turn it into a NeRF. Playing with the dynamic range and reflections in the pond, it presented the artist with an unknown exploration. They were pleased with the softness of the light and the way the NeRF elevates the room into what looks like something out of a dream — the perfect place to meditate. A NeRF can freeze a moment in a way that’s more immersive than a photo or video.</li>
+</ul>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-71152-2" width="1280" height="680" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-franc-lucent-meditation-1280x680-1.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-franc-lucent-meditation-1280x680-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-franc-lucent-meditation-1280x680-1.mp4</a></video></div>
+<p>&nbsp;</p>
+<ul>
+<li><strong>“Zeus” by Hugues Bruyère </strong>These rendered 3D scenes with Instant NeRF use the data Bruyère previously captured for traditional photogrammetry using mirrorless digital cameras, smartphones, 360-degree cameras and drones. Instant NeRF gives him a powerful tool to help preserve and share cultural artifacts through online libraries, museums, virtual-reality experiences and heritage-conservation projects. This NeRF was trained using a dataset of photos taken with an iPhone at the Royal Ontario Museum.</li>
+</ul>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-71152-3" width="1280" height="680" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-hugues-zeus-1280x680-1.mp4?_=3" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-hugues-zeus-1280x680-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-hugues-zeus-1280x680-1.mp4</a></video></div>
+<p>&nbsp;</p>
+<h2><strong>From Image to Video to Reality</strong></h2>
+<p>Transforming images into a 3D scene with AI is cool. Stepping into that 3D creation is next level.</p>
+<p>Thanks to a recent Instant NeRF update, users can render their scenes from static images and virtually step inside the environments, moving freely within the 3D space. In virtual-reality (VR) environments, users can feel complete immersion into new worlds, all within their headsets.</p>
+<p>The potential benefits are nearly endless.</p>
+<p>For example, a realtor can create and share a 3D model of a property, offering virtual tours at new levels. Retailers can showcase products in an online shop, powered by a collection of images and AI running on RTX GPUs. These AI models power creativity and are helping drive the accessibility of 3D immersive experiences across other industries.</p>
+<p>Instant NeRF comes with the capability to clean up scenes easily in VR, making the creation of high-quality NeRFs more intuitive than ever. Learn more about <a href="https://developer.nvidia.com/blog/turn-2d-images-into-immersive-3d-scenes-with-nvidia-instant-nerf-in-vr/">navigating Instant NeRF spaces in VR</a>.</p>
+<p>Download Instant-NGP to get started, and share your creations on social media with the hashtag #InstantNeRF.</p>
+<p><em>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </em><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><em>AI Decoded newsletter</em></a><em>.</em></p>
+]]></content:encoded>
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-karenx-v9-1280x680-1.mp4" length="1719192" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-franc-lucent-meditation-1280x680-1.mp4" length="1717035" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-hugues-zeus-1280x680-1.mp4" length="1738082" type="video/mp4" />
+
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/NeRF-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/NeRF-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Moving Pictures: Transform Images Into 3D Scenes With NVIDIA Instant NeRF]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>New NVIDIA RTX A400 and A1000 GPUs Enhance AI-Powered Design and Productivity Workflows</title>
 		<link>https://blogs.nvidia.com/blog/ampere-rtx-a400-a1000-ai/</link>
 		
@@ -36,7 +118,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>AI integration across design and productivity applications is becoming the new standard, fueling demand for advanced computing performance. This means professionals and creatives will need to tap into increased compute power, regardless of the scale, complexity or scope of their projects.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>AI integration across design and productivity applications is becoming the new standard, fueling demand for advanced computing performance. This means professionals and creatives will need to tap into increased compute power, regardless of the scale, complexity or scope of their projects.</p>
 <p>To meet this growing need, NVIDIA is expanding its <a href="https://www.nvidia.com/en-us/design-visualization/desktop-graphics/">RTX professional graphics</a> offerings with two new <a href="https://www.nvidia.com/en-us/design-visualization/ampere-architecture/">NVIDIA Ampere architecture</a>-based GPUs for desktops: the NVIDIA RTX A400 and NVIDIA RTX A1000.</p>
 <p>They expand access to AI and ray-tracing technology, equipping professionals with the tools they need to transform their daily workflows.</p>
 <h2><b>A New Era of Creativity, Performance and Efficiency</b></h2>
@@ -48,7 +130,7 @@
 <p>With 72 Tensor Cores, the A1000 offers a tremendous upgrade over the previous generation, delivering over 3x faster generative AI processing for tools like Stable Diffusion. In addition, its 18 RT Cores speed graphics and rendering tasks by up to 3x, accelerating professional workflows such as 2D and 3D computer-aided design (CAD), product and architectural design, and 4K video editing.</p>
 <p>The A1000 also excels in video processing, handling up to 38% more encode streams and offering 2x faster decode performance over the previous generation.</p>
 <p>With a sleek, single-slot design and consuming just 50W, the A400 and A1000 GPUs bring impressive features to compact, energy-efficient workstations.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-scaled.jpg"><img decoding="async" class="aligncenter wp-image-71145 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-672x500.jpg" alt="" width="672" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-672x500.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-400x298.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-768x571.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-1536x1143.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-605x450.jpg 605w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-289x215.jpg 289w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-134x100.jpg 134w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-1280x952.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-scaled.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-71145 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-672x500.jpg" alt="" width="672" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-672x500.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-400x298.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-768x571.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-1536x1143.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-605x450.jpg 605w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-289x215.jpg 289w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-134x100.jpg 134w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-1280x952.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <h2><b>Expanding the Reach of RTX</b></h2>
 <p>These new GPUs empower users with cutting-edge AI, graphics and compute capabilities to boost productivity and unlock creative possibilities. Advanced workflows involving ray-traced renders and AI are now within reach, allowing professionals to push the boundaries of their work and achieve stunning levels of realism.</p>
 <p>Industrial planners can use ‌these new powerful and energy-efficient computing solutions for <a href="https://blogs.nvidia.com/blog/what-is-edge-computing/">edge</a> deployments. Creators can boost editing and rendering speeds to produce richer visual content. Architects and engineers can seamlessly transition ideas from 3D CAD concepts into tangible designs. Teams working in smart spaces can use the GPUs for real-time data processing, AI-enhanced security and digital signage management in space-constrained settings. And healthcare professionals can achieve quicker, more precise medical imaging analyses.</p>
@@ -64,7 +146,7 @@
 </ul>
 <h2><b>Availability</b><b> </b></h2>
 <p>The NVIDIA RTX A1000 GPU is now available through global distribution partners such as PNY and Ryoyo Electric. The RTX A400 GPU is expected to be available from channel partners starting in May, with anticipated availability from manufacturers in the summer.</p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -103,13 +185,13 @@
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71090</guid>
 
 					<description><![CDATA[Blackmagic Design’s DaVinci Resolve released version 19 adding the IntelliTrack AI point tracker and UltraNR AI-powered features to further streamline video editing workflows.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of our </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of our </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/"><i>GeForce RTX 40 Series GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
 <p>Video editors have more to look forward to than just April showers.</p>
 <p>Blackmagic Design’s DaVinci Resolve released version 19, adding the IntelliTrack AI point tracker and UltraNR AI-powered features to further streamline video editing workflows.</p>
 <p>The NAB 2024 trade show is bringing together thousands of content professionals from all corners of the broadcast, media and entertainment industries, with video editors and livestreamers seeking ways to improve their creative workflows with <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a> technology.</p>
 <p>The recently launched Design app SketchUp 2024 introduced a new graphics engine that uses DirectX 12, which renders scenes 2.5x faster than the previous engine.</p>
 <p>April also brings the latest NVIDIA Studio Driver, which optimizes the latest creative app updates, available for download today.</p>
-<p>And this week’s featured <i>In the NVIDIA Studio </i>artist Rakesh Kumar created his captivating 3D scene <i>The Rooted Vault</i> using RTX acceleration.</p>
+<p>And this week’s featured <i>In the NVIDIA Studio </i>artist Rakesh created his captivating 3D scene <i>The Rooted Vault</i> using RTX acceleration.</p>
 <h2><b>Video Editor’s DaVinci Code</b></h2>
 <p>DaVinci Resolve is a powerful video editing package with color correction, visual effects, motion graphics and audio post-production all in one software tool. Its elegant, modern interface is easy to learn for new users, while offering powerful capabilities for professionals.</p>
 <p>Two new AI features make video editing even more efficient: the IntelliTrack AI point tracker for object tracking, stabilization and audio panning, and UltraNR, which uses AI for spatial noise reduction — doing so 3x faster on the GeForce RTX 4090 vs. the Mac M2 Ultra.</p>
@@ -119,36 +201,35 @@
 <p>SketchUp 2024 is a professional-grade 3D design software toolkit for designing buildings and landscapes, commonly used by designers and architects.</p>
 <p>The new app, already receiving positive reviews, introduced a robust graphics engine that uses DirectX 12, which increases frames per second (FPS) by a factor of 2.5x over the previous engine. Navigating and orbiting complex models feels considerably lighter and faster with quicker, more predictable performance.</p>
 <p>In testing, the scene below runs 4.5x faster FPS using the NVIDIA RTX 4090 vs. the Mac M2 Ultra and other competitors.</p>
-<figure id="attachment_71119" aria-describedby="caption-attachment-71119" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1.png"><img decoding="async" class="size-large wp-image-71119" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71119" class="wp-caption-text">2.5x faster FPS with the GeForce RTX 4090 GPU. Image courtesy of Trimble SketchUp.</figcaption></figure>
+<figure id="attachment_71119" aria-describedby="caption-attachment-71119" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1.png"><img loading="lazy" decoding="async" class="size-large wp-image-71119" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/sketchup-studio-rakesh-kumar-wk105-audio-tagging-1280w-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71119" class="wp-caption-text">2.5x faster FPS with the GeForce RTX 4090 GPU. Image courtesy of Trimble SketchUp.</figcaption></figure>
 <p>SketchUp 2024 also unlocks import and export functionality for <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a> files to efficiently manage the interoperability of complex 3D scenes and animations across numerous 3D apps.</p>
 <p>Get the <a href="https://blog.sketchup.com/article/unlock-enhanced-visuals-inside-sketchup-2024-2">full release details</a>.</p>
 <h2><b>Art Rooted in Nature</b></h2>
-<p>Rakesh Kumar’s passion for 3D modeling and animation stemmed from his love for gaming and storytelling.</p>
-<p>“My goal is to inspire audiences and take them to new realms by showcasing the power of immersive storytelling, captivating visuals and the idea of creating worlds and characters that evoke emotions,” said Kumar.</p>
+<p>Rakesh’s passion for 3D modeling and animation stemmed from his love for gaming and storytelling.</p>
+<p>“My goal is to inspire audiences and take them to new realms by showcasing the power of immersive storytelling, captivating visuals and the idea of creating worlds and characters that evoke emotions,” said Rakesh.</p>
 <p>His scene <i>The Rooted Vault</i> aims to convey the beauty of the natural world, transporting viewers to a serene setting filled with the soothing melodies of nature.</p>
-<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-71090-1" width="1280" height="734" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-breakdown-video-1280w.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-breakdown-video-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-breakdown-video-1280w.mp4</a></video></div>
+<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-71090-4" width="1280" height="734" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-breakdown-video-1280w.mp4?_=4" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-breakdown-video-1280w.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-breakdown-video-1280w.mp4</a></video></div>
 <p>&nbsp;</p>
-<p>Kumar began by gathering reference material.</p>
+<p>Rakesh began by gathering reference material.</p>
 <figure id="attachment_71103" aria-describedby="caption-attachment-71103" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-71103" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-pure-ref-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71103" class="wp-caption-text">There’s reference sheets … and then there’s reference sheets.</figcaption></figure>
 <p>He then used Autodesk Maya to block out the basic structure and piece together the house as a series of modules. GPU-accelerated viewport graphics ensured fast, interactive 3D modeling and animations.</p>
-<p>Next, Kumar used ZBrush to sculpt high-resolution details into the modular assets.</p>
+<p>Next, Rakesh used ZBrush to sculpt high-resolution details into the modular assets.</p>
 <figure id="attachment_71115" aria-describedby="caption-attachment-71115" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-71115" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-tree-trunks-sculpted-in-zbrush-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71115" class="wp-caption-text">Fine details applied in ZBrush.</figcaption></figure>
-<div class="simplePullQuote right"><p>“I chose an NVIDIA RTX GPU-powered system for real-time ray tracing to achieve lifelike visuals, reliable performance for smoother workflows, faster render times and industry-standard software compatibility.” — Rakesh Kumar</p>
+<div class="simplePullQuote right"><p>“I chose an NVIDIA RTX GPU-powered system for real-time ray tracing to achieve lifelike visuals, reliable performance for smoother workflows, faster render times and industry-standard software compatibility.” — Rakesh</p>
 </div>
 <p>He used the ZBrush decimation tool alongside Unreal Engine’s Nanite workflow to efficiently create most of the modular building props.</p>
 <p>Traditional poly-modeling workflows for the walls enabled vertex blending shaders for seamless texture transitions.</p>
-<p>Textures were created with Adobe Substance 3D Painter. Kumar’s RTX GPU used RTX-accelerated light and ambient occlusion to bake and optimize assets in mere seconds.</p>
-<p>Kumar moved the project to Unreal Engine 5, where near-final finishing touches such as lighting, shadows and visual effects were applied.</p>
+<p>Textures were created with Adobe Substance 3D Painter. Rakesh’s RTX GPU used RTX-accelerated light and ambient occlusion to bake and optimize assets in mere seconds.</p>
+<p>Rakesh moved the project to Unreal Engine 5, where near-final finishing touches such as lighting, shadows and visual effects were applied.</p>
 <figure id="attachment_71112" aria-describedby="caption-attachment-71112" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w.png"><img loading="lazy" decoding="async" class="size-large wp-image-71112" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-rgba-mask-in-substance-painter-1280w.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71112" class="wp-caption-text">Textures applied in Adobe Substance 3D Painter.</figcaption></figure>
 <p>GPU acceleration played a crucial role in real-time rendering, allowing him to instantly see and adjust the scene.</p>
 <figure id="attachment_71125" aria-describedby="caption-attachment-71125" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1.png"><img loading="lazy" decoding="async" class="size-large wp-image-71125" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-premiere-pro-1280w-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71125" class="wp-caption-text">Adobe Premiere Pro has a vast selection of GPU-accelerated features.</figcaption></figure>
-<p>Kumar then moved to Blackmagic Design’s DaVinci Resolve to color grade the scene for the desired mood and aesthetic, before he began final editing in Premiere Pro, adding transitions and audio.</p>
-<p>“While the initial concept required significant revisions, the final result demonstrates the iterative nature of artistic creation — all inspired by my mentors, friends and family, who were always there to support me,” Kumar said.</p>
+<p>Rakesh then moved to Blackmagic Design’s DaVinci Resolve to color grade the scene for the desired mood and aesthetic, before he began final editing in Premiere Pro, adding transitions and audio.</p>
+<p>“While the initial concept required significant revisions, the final result demonstrates the iterative nature of artistic creation — all inspired by my mentors, friends and family, who were always there to support me,” Rakesh said.</p>
 <figure id="attachment_71122" aria-describedby="caption-attachment-71122" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1.png"><img loading="lazy" decoding="async" class="size-large wp-image-71122" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1-672x218.png" alt="" width="672" height="218" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1-672x218.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1-400x130.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1-768x249.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1-842x273.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1-406x132.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1-188x61.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-artist-feature-1280w-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71122" class="wp-caption-text">3D artist Rakesh Kumar.</figcaption></figure>
-<p>Check out Kumar’s latest work on <a href="https://www.instagram.com/rakesh__art/">Instagram</a>.</p>
+<p>Check out Rakesh’s latest work on <a href="https://www.instagram.com/rakesh__art/">Instagram</a>.</p>
 <p><i>Follow NVIDIA Studio on </i><a href="https://www.instagram.com/nvidiastudio/"><i>Instagram</i></a><i>, </i><a href="https://twitter.com/NVIDIAStudio"><i>X</i></a><i> and </i><a href="https://www.facebook.com/NVIDIAStudio/"><i>Facebook</i></a><i>. Access tutorials on the </i><a href="https://www.youtube.com/channel/UCDeQdW6Lt6nhq3mLM4oLGWw"><i>Studio YouTube channel</i></a><i> and get updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/studio/?nvmid=subscribe-creators-mail-icon"><i>Studio newsletter</i></a><i>.</i><b> </b></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-rakesh-kumar-wk105-breakdown-video-1280w.mp4" length="1833156" type="video/mp4" />
@@ -181,7 +262,7 @@
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71074</guid>
 
 					<description><![CDATA[Amid a flurry of investments in higher education, NVIDIA founder Jensen Huang highlights potential for AI to serve as a “collaborator” as alma mater breaks ground on $213 million research complex. ]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>AI promises to bring the full benefits of the digital revolution to billions across the globe, NVIDIA CEO Jensen Huang said Friday during a conversation with Oregon State University President Jayathi Murthy.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>AI promises to bring the full benefits of the digital revolution to billions across the globe, NVIDIA CEO Jensen Huang said Friday during a conversation with Oregon State University President Jayathi Murthy.</p>
 <p>“I believe that artificial intelligence is the technology industry’s single greatest contribution to social elevation, to lift all of the people that have historically been left behind,” Huang told more than 2,000 faculty, students and staff gathered for his conversation with Murthy.</p>
 <p>The talk was the highlight of a forum marking the groundbreaking for a new research building that will be named for Huang and his wife, Lori, both Oregon State alumni.</p>
 <p>The facility positions Oregon State as a leader not just in the semiconductor industry but also at the intersection of high performance computing and a growing number of fields.</p>
@@ -224,7 +305,7 @@
 <p>However, Huang said now is a fantastic time to get an education and prepare for a career.</p>
 <p>“This is the beginning of a new world and this is the best of times to go to school — the whole world is changing, right? New technology and new capabilities, new instruments and new ways to learn,” Huang said.</p>
 <p><em>Images courtesy of Oregon State University.</em></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -259,7 +340,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Welcome to the wasteland, Vault Dwellers. Bethesda’s <i>Fallout 4</i> and <i>Fallout 76</i> are bringing post-nuclear adventures to the cloud.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Welcome to the wasteland, Vault Dwellers. Bethesda’s <i>Fallout 4</i> and <i>Fallout 76</i> are bringing post-nuclear adventures to the cloud.</p>
 <p>These highly acclaimed action role-playing games lead 10 new titles joining <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> this week.</p>
 <p>Announced as <a href="https://blogs.nvidia.com/blog/ces-2024-geforce-now-activision-blizzard-day-passes-g-sync/">coming to GeForce NOW at CES</a>, <i>Honkai: Star Rail</i> is targeting a release this quarter. Stay tuned for future updates.</p>
 <h2><b>Vault Into the Cloud</b></h2>
@@ -288,9 +369,9 @@
 <p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
 <blockquote class="twitter-tweet" data-width="500" data-dnt="true">
 <p lang="en" dir="ltr">can&#39;t help 𝙛𝙖𝙡𝙡ing into the cloud</p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1778090566644801863?ref_src=twsrc%5Etfw">April 10, 2024</a></p></blockquote>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1778090566644801863?ref_src=twsrc%5Etfw">April 10, 2024</a></p></blockquote>
 <p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -323,7 +404,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Talk about scrubbing data. Curtis Northcutt, cofounder and CEO of Cleanlab, and Steven Gawthorpe, senior data scientist at Berkeley Research Group, speak about Cleanlab’s groundbreaking approach to data curation with Noah Kravitz, host of NVIDIA’s <a href="https://soundcloud.com/theaipodcast">AI Podcast</a>, in an episode recorded live at the <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> global AI conference. The startup’s tools enhance data reliability and trustworthiness through sophisticated error identification and correction algorithms. Northcutt and Gawthorpe provide insights into how AI-powered data analytics can help combat economic crimes and corruption and discuss the intersection of AI, data science and ethical governance in fostering a more just society.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Talk about scrubbing data. Curtis Northcutt, cofounder and CEO of Cleanlab, and Steven Gawthorpe, senior data scientist at Berkeley Research Group, speak about Cleanlab’s groundbreaking approach to data curation with Noah Kravitz, host of NVIDIA’s <a href="https://soundcloud.com/theaipodcast">AI Podcast</a>, in an episode recorded live at the <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> global AI conference. The startup’s tools enhance data reliability and trustworthiness through sophisticated error identification and correction algorithms. Northcutt and Gawthorpe provide insights into how AI-powered data analytics can help combat economic crimes and corruption and discuss the intersection of AI, data science and ethical governance in fostering a more just society.</p>
 <p>Cleanlab is a member of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33">NVIDIA Inception</a> program for cutting-edge startups.</p>
 <p>Stay tuned for more episodes recorded live from GTC.</p>
 <p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1797413893%3Fsecret_token%3Ds-bfbkVACWPn4&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
@@ -350,7 +431,7 @@
 <h2><b>Subscribe to the AI Podcast</b></h2>
 <p>Get the<a href="https://blogs.nvidia.com/ai-podcast/"> AI Podcast</a> through<a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439"> iTunes</a>,<a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz"> Google Podcasts</a>,<a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm"> Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music, </a><a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher,<a href="https://overcast.fm/itunes1186480811/the-ai-podcast"> Overcast</a>,<a href="https://player.fm/series/the-ai-podcast"> PlayerFM</a>, Pocket Casts,<a href="http://www.podbay.fm/show/1186480811"> Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast"> PodBean</a>, PodCruncher, PodKicker,<a href="https://soundcloud.com/theaipodcast"> Soundcloud</a>,<a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L"> Spotify</a>,<a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr"> Stitcher</a> and<a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/"> TuneIn</a>.</p>
 <p>Make the AI Podcast better: Have a few minutes to spare? Fill out<a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short"> this listener survey</a>.</p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -384,7 +465,7 @@
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71030</guid>
 
 					<description><![CDATA[Skyscrapers start with strong foundations. The same goes for apps powered by AI.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
 <p>Skyscrapers start with strong foundations. The same goes for apps powered by AI.</p>
 <p>A <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation model</a> is an AI neural network trained on immense amounts of raw data, generally with <a href="https://blogs.nvidia.com/blog/supervised-unsupervised-learning/">unsupervised learning</a>.</p>
 <p>It’s a type of artificial intelligence model trained to understand and generate human-like language. Imagine giving a computer a huge library of books to read and learn from, so it can understand the context and meaning behind words and sentences, just like a human does.</p>
@@ -421,7 +502,7 @@
 <p>GeForce RTX and NVIDIA RTX GPUs can run foundation models locally.</p>
 <p>The results are fast and secure. Rather than relying on cloud-based services, users can harness apps like ChatRTX to process sensitive data on their local PC without sharing the data with a third party or needing an internet connection.</p>
 <p>Users can choose from a rapidly growing catalog of open foundation models to download and run on their own hardware. This lowers costs compared with using cloud-based apps and APIs, and it eliminates latency and network connectivity issues. <i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -456,7 +537,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>The Biden Administration has announced a new $110 million AI partnership between Japan and the United States that includes an initiative to fund research through a collaboration between the University of Washington and the University of Tsukuba.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>The Biden Administration has announced a new $110 million AI partnership between Japan and the United States that includes an initiative to fund research through a collaboration between the University of Washington and the University of Tsukuba.</p>
 <p>NVIDIA is committing $25 million in a collaboration with Amazon that aims to bring the latest technologies to the University of Washington, in Seattle, and the University of Tsukuba, which is northeast of Tokyo.</p>
 <p>Universities around the world are preparing students for crucial AI skills by providing access to the high performance computing capabilities of supercomputing.</p>
 <p>“This collaboration between the University of Washington, University of Tsukuba, Amazon, and NVIDIA will help provide the research and workforce training for our regions’ tech sectors to keep up with the profound impacts AI is having across every sector of our economy,” said Jay Inslee, governor of Washington State.</p>
@@ -472,7 +553,7 @@
 <p>Demand for key AI skills is creating a talent shortage worldwide. Some <a href="https://www.ox.ac.uk/news/2023-10-09-expert-comment-ai-demand-booming-right-skills-and-technology-glue-guys">experts calculate </a>there has been a fivefold increase in demand for these skills as a percentage of total U.S. jobs. Universities around the world are looking for ways to prepare students with new skills for the workforce, and corporate-university partnerships are a key tool to help bridge the gap.</p>
 <p>NVIDIA <a href="https://blogs.nvidia.com/blog/generative-ai-professional-certification/">unveiled at GTC 2024</a> new professional certifications in generative AI to help enable the next generation of developers to obtain technical credibility in this important domain.</p>
 <p><i>Learn more about NVIDIA generative AI courses </i><a href="https://www.nvidia.com/en-us/training/instructor-led-workshops/generative-ai-with-diffusion-models/"><i>here</i></a><i> and </i><a href="https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/"><i>here</i></a><i>.</i></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -509,7 +590,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Whether delivering live sports programming, streaming services, network broadcasts or content on social platforms, media companies face a daunting landscape.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Whether delivering live sports programming, streaming services, network broadcasts or content on social platforms, media companies face a daunting landscape.</p>
 <p>Viewers are increasingly opting for interactive and personalized content. Virtual reality and augmented reality continue their drive into the mainstream. New video compression standards are challenging traditional computing infrastructure. And AI is having an impact across the board.</p>
 <p>In a situation this dynamic, media companies will benefit most from AI-enabled media solutions that flexibly align with their changing development and delivery needs.</p>
 <p>NVIDIA Holoscan for Media, available now, is a software-defined platform that enables developers to easily build live media applications, supercharge them with AI and then deploy them across media platforms.</p>
@@ -531,7 +612,7 @@
 <p>These partners will showcase how they’re using NVIDIA Holoscan for Media at NAB Show, an event for the broadcast, media and entertainment industry, taking place April 13-17 in Las Vegas.</p>
 <p>Explore development on Holoscan for Media and discover applications running on the platform at the <a href="https://nab24.mapyourshow.com/8_0/floorplan/?hallID=SL&amp;selectedBooth=SL8065">Dell Technologies booth</a>. Learn more about <a href="https://www.nvidia.com/en-us/events/nab/">NVIDIA’s presence at NAB Show</a>, including details on sessions and demos on generative AI, software-defined broadcast and immersive graphics.</p>
 <p><i>Apply for access to </i><a href="https://developer.nvidia.com/holoscan-for-media"><i>NVIDIA Holoscan for Media</i></a><i> today.</i></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -574,7 +655,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA and Google Cloud have announced a new collaboration to help startups around the world accelerate the creation of generative AI applications and services.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA and Google Cloud have announced a new collaboration to help startups around the world accelerate the creation of generative AI applications and services.</p>
 <p>The announcement, made today at Google Cloud Next ‘24 in Las Vegas, brings together the <a href="https://www.nvidia.com/en-us/startups/?ncid=ref-kc-319196-vt18&amp;sfdcid=Google" target="_blank" rel="noopener">NVIDIA Inception</a> program for startups and the <a href="https://startup.google.com/cloud/">Google for Startups Cloud Program</a> to widen access to cloud credits, go-to-market support and technical expertise to help startups deliver value to customers faster.</p>
 <p>Qualified members of NVIDIA Inception, a global program supporting more than 18,000 startups, will have an accelerated path to using Google Cloud infrastructure with access to Google Cloud credits — up to $350,000 for those focused on AI.</p>
 <p>Google for Startups Cloud Program members can join NVIDIA Inception and gain access to technological expertise, <a href="https://www.nvidia.com/en-us/training/" target="_blank" rel="noopener">NVIDIA Deep Learning Institute</a> course credits, NVIDIA hardware and software, and more. Eligible members of the Google for Startups Cloud Program also can participate in NVIDIA Inception Capital Connect, a platform that gives startups exposure to venture capital firms interested in the space.</p>
@@ -595,7 +676,7 @@
 <p>The NVIDIA GB200 NVL72 connects 36 Grace Blackwell Superchips, each with two NVIDIA Blackwell GPUs combined with an <a href="https://www.nvidia.com/en-us/data-center/grace-cpu/" target="_blank" rel="noopener">NVIDIA Grace CPU</a> over a 900GB/s chip-to-chip interconnect, supporting up to 72 Blackwell GPUs in one <a href="https://www.nvidia.com/en-us/data-center/nvlink/" target="_blank" rel="noopener">NVIDIA NVLink</a> domain and 130TB/s of bandwidth. It overcomes communication bottlenecks and acts as a single GPU, delivering 30x faster real-time LLM inference and 4x faster training compared to the prior generation.</p>
 <p>NVIDIA GB200 NVL72 is a multi-node rack-scale system that will be combined with Google Cloud’s fourth generation of advanced liquid-cooling systems.</p>
 <p>NVIDIA announced last month that NVIDIA DGX Cloud, an AI platform for enterprise developers that’s optimized for the demands of generative AI, is generally available on A3 VMs powered by H100 GPUs. DGX Cloud with GB200 NVL72 will also be available on Google Cloud in 2025.</p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -628,7 +709,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>NVIDIA jumped to No. 3 on the latest list of America’s <a href="https://fortune.com/ranking/best-companies/">100 Best Companies to Work For</a> by <i>Fortune</i> magazine and Great Place to Work.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA jumped to No. 3 on the latest list of America’s <a href="https://fortune.com/ranking/best-companies/">100 Best Companies to Work For</a> by <i>Fortune</i> magazine and Great Place to Work.</p>
 <p>It’s the company’s eighth consecutive year and highest ranking yet on the widely followed list, published today, which more than a thousand businesses vie to land on. NVIDIA ranked sixth last year.</p>
 <p>“Since the COVID pandemic, employees are increasingly prioritizing work-life balance, mission alignment and empathetic workplaces,” <i>Fortune</i> wrote, with hotelier Hilton taking the top spot, followed by Cisco.</p>
 <p>“Even as the broader tech sector has shed tens of thousands of jobs, NVIDIA continued its remarkable streak of nearly 15 years without any layoffs,” <i>Fortune</i> noted in its writeup. NVIDIA also was cited for the company’s “flat structure,” which encourages employees to solve problems quickly and collaboratively through projects.</p>
@@ -636,7 +717,7 @@
 <p>To identify the top 100, <i>Fortune</i> conducted a detailed employee survey with Great Place to Work that received more than 1.3 million responses from people in the U.S. The <a href="https://www.greatplacetowork.com/certified-company/1000184">survey</a> showed that 97% of NVIDIANs are proud to tell others where they work.</p>
 <p>While many tech companies faced a challenging 2023, with an uncertain economy and several of the biggest employers laying off thousands of workers, NVIDIA focused on managing costs, encouraging innovation and offering unique benefits and compensation that supported employees.</p>
 <p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/about-nvidia/careers/life-at-nvidia/"><i>NVIDIA life, culture and careers</i></a><i>.</i></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -671,7 +752,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Rain or shine, a new month means new games. <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> kicks off April with nearly 20 new games, seven of which are available to play this week.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Rain or shine, a new month means new games. <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> kicks off April with nearly 20 new games, seven of which are available to play this week.</p>
 <p>GFN Thursday celebrates the 10-year anniversary of ZeniMax Online Studios’ <i>Elder Scrolls</i> <i>Online</i> by bringing the award-winning online role-playing game (RPG) to the cloud this week.</p>
 <p>Plus, the <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">GeForce NOW Ultimate membership</a> comes to gamers in Japan for the first time, with new GeForce RTX 4080 SuperPODs online today.</p>
 <h2><b>The Rising Sun Goes Ultimate</b></h2>
@@ -726,10 +807,10 @@
 <p>Some titles didn’t make it in March. <i>Crown Wars: The Black Prince </i>and <i>Breachway</i> have delayed their launch dates to later this year, and <i>Portal: Revolution </i>will join GeForce NOW in the future. Stay tuned to GFN Thursday for updates.</p>
 <p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
 <blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">respect your gaming elders <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f579.png" alt="🕹" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1775553850105069738?ref_src=twsrc%5Etfw">April 3, 2024</a></p></blockquote>
+<p lang="en" dir="ltr">respect your gaming elders <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f579.png" alt="🕹" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1775553850105069738?ref_src=twsrc%5Etfw">April 3, 2024</a></p></blockquote>
 <p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -765,7 +846,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Dotlumen is illuminating a new technology to help people with visual impairments navigate the world.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Dotlumen is illuminating a new technology to help people with visual impairments navigate the world.</p>
 <p>In this episode of NVIDIA’s <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">AI Podcast</a>, recorded live at the <a href="https://www.nvidia.com/gtc/" target="_blank" rel="noopener">NVIDIA GTC</a> global AI conference, host Noah Kravitz spoke with the Romanian startup’s founder and CEO, Cornel Amariei, about developing its flagship Dotlumen Glasses.</p>
 <p>Equipped with sensors and powered by AI, the glasses compute a safely walkable path for visually impaired individuals and offer haptic — or tactile — feedback on how to proceed via corresponding vibrations. Amariei further discusses the process and challenges of developing assistive technology and its potential for enhancing accessibility.</p>
 <p>Dotlumen is a member of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33" target="_blank" rel="noopener">NVIDIA Inception</a> program for cutting-edge startups.</p>
@@ -793,7 +874,7 @@
 <h2><b>Subscribe to the AI Podcast</b></h2>
 <p>Get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker,<a href="https://soundcloud.com/theaipodcast"> Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
 <p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -826,7 +907,7 @@
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70963</guid>
 
 					<description><![CDATA[Non-playable characters often play a crucial role in video game storytelling, but since they’re usually designed with a fixed purpose, they can get repetitive and boring — especially in vast worlds where there are thousands.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
 <p>Digital characters are leveling up.</p>
 <p>Non-playable characters often play a crucial role in video game storytelling, but since they’re usually designed with a fixed purpose, they can get repetitive and boring — especially in vast worlds where there are thousands.</p>
 <p>Thanks in part to incredible advances in visual computing like ray tracing and DLSS, video games are more immersive and realistic than ever, making dry encounters with NPCs especially jarring.</p>
@@ -869,7 +950,7 @@
 </ul>
 <p>Experience the latest and greatest in AI-powered experiences with NVIDIA RTX PCs and workstations, and make sense of what’s new, and what’s next, with AI Decoded.</p>
 <p><i>Get weekly updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -910,7 +991,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>From humble beginnings as a university spinoff to an acquisition by the leading global medtech company in its field, Odin Vision has been on an accelerated journey since its founding less than five years ago.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>From humble beginnings as a university spinoff to an acquisition by the leading global medtech company in its field, Odin Vision has been on an accelerated journey since its founding less than five years ago.</p>
 <p>An alum of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33">NVIDIA Inception</a> program for cutting-edge startups, Odin Vision builds cloud-connected AI software that helps clinicians detect and characterize areas of concern during endoscopy, a procedure where a tiny camera mounted on a tube is inserted into the gastrointestinal tract.</p>
 <p>Network-connected devices in the endoscopy room capture and stream real-time video data to the cloud, where powerful NVIDIA GPUs run AI inference. The models’ results are then streamed back to the endoscopy room so that clinicians can see the AI insights overlaid on the live video feed with minimal latency.</p>
 <p>The startup was in 2022 acquired by Japanese medtech leader Olympus, which has a 70% global market share in gastrointestinal endoscopic equipment.</p>
@@ -936,7 +1017,7 @@
 <p>The team found that a cloud-based solution made it easier to push software updates over the air to deployments across hospital customers.</p>
 <p>“Some AI companies are sending boxes that need to sit in clinical sites and require regular maintenance, which can prevent normal clinical workflows from running smoothly,” Toth said. “With network-connected devices, we can instead update a single server and the changes reach all end users at the same time.”</p>
 <p><i>Learn more about </i><a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33"><i>NVIDIA Inception</i></a><i> and </i><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>subscribe to NVIDIA healthcare news</i></a><i>. </i></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -971,7 +1052,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>Ease into spring with the warm, cozy vibes of <i>Palia</i>, coming to the cloud this GFN Thursday.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Ease into spring with the warm, cozy vibes of <i>Palia</i>, coming to the cloud this GFN Thursday.</p>
 <p>It’s part of six new titles joining the <a href="http://play.geforcenow.com">GeForce NOW library</a> of over 1,800 games.</p>
 <h2><b>Welcome Home</b></h2>
 <figure id="attachment_70943" aria-describedby="caption-attachment-70943" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70943" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-672x378.jpg" alt="Palia on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70943" class="wp-caption-text"><em>Better together.</em></figcaption></figure>
@@ -992,10 +1073,10 @@
 </ul>
 <p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
 <blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">if you could live in a video game, which one would it be and why? <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/14.0.0/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1773017134517346499?ref_src=twsrc%5Etfw">March 27, 2024</a></p></blockquote>
+<p lang="en" dir="ltr">if you could live in a video game, which one would it be and why? <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1773017134517346499?ref_src=twsrc%5Etfw">March 27, 2024</a></p></blockquote>
 <p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -1033,7 +1114,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>From designing dream cars to customizing clothing, 3D product configurators are ringing in a new era of hyper-personalization that will benefit retailers and consumers.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>From designing dream cars to customizing clothing, 3D product configurators are ringing in a new era of hyper-personalization that will benefit retailers and consumers.</p>
 <p>Developers are delivering innovative virtual product experiences and automated personalization using <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (aka OpenUSD)</a>, <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a> technologies from <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> software development kits (SDKs) and application programming interfaces (APIs), and generative AI from <a href="https://blogs.nvidia.com/blog/edify-3d-generative-ai-custom-fine-tuning/">NVIDIA Edify</a> models.</p>
 <p>Together, these technologies enable developers to create configurator applications that deliver physically accurate, photoreal <a href="https://www.nvidia.com/en-us/omniverse/solutions/digital-twins/">digital twins</a> of products, revolutionizing the way brands personalize buyer journeys at unprecedented scale.</p>
 <p>For example, <a href="https://blog.3ds.com/brands/3dexcite/dassault-systemes-collaborates-with-nvidia-to-showcase-the-future-of-storytelling-with-generative-ai/">Dassault Systèmes’ 3DEXCITE</a> brand is adopting <a href="https://nvidianews.nvidia.com/news/omniverse-cloud-apis-industrial-digital-twin">Omniverse Cloud APIs</a> to enable interoperability with generative AI services, such as Shutterstock’s Edify3D or Edify 360, directly inside its web-based application.</p>
@@ -1057,7 +1138,7 @@
 <p>Teams can also integrate generative AI technologies into OpenUSD-based product configurators using NVIDIA Omniverse APIs to enhance the realism and customization options available to users. By leveraging AI, configurators can intelligently adapt to user inputs, offering personalized recommendations and dynamically adjusting product configurations in real time. And with <a href="https://www.nvidia.com/en-us/omniverse/solutions/stream-3d-apps/">NVIDIA Graphics Delivery Network</a> , high-quality, real-time viewports can be embedded into web applications so consumers can browse products in full fidelity, on nearly any device.</p>
 <p>The possibilities for 3D product configurators are virtually limitless, applicable across a wide range of industries and use cases.</p>
 <p>To start, get <a href="https://www.nvidia.com/en-us/omniverse/#get-started">NVIDIA Omniverse</a> and follow along with a <a href="https://www.youtube.com/watch?v=xoY2Cyxy9pQ&amp;list=PL3jK4xNnlCVdruh1y5cIwJx3FPBwoZtXR&amp;index=1">tutorial series</a>.</p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -1098,7 +1179,7 @@
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p>It’s official: NVIDIA delivered the world’s fastest platform in industry-standard tests for inference on <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/">generative AI</a>.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>It’s official: NVIDIA delivered the world’s fastest platform in industry-standard tests for inference on <a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/">generative AI</a>.</p>
 <p>In the latest MLPerf benchmarks, <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a> — software that speeds and simplifies the complex job of inference on <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language models</a> — boosted the performance of <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">NVIDIA Hopper architecture GPUs</a> on the GPT-J LLM nearly 3x over their results just six months ago.</p>
 <p>The dramatic speedup demonstrates the power of NVIDIA’s full-stack platform of chips, systems and software to handle the demanding requirements of running generative AI.</p>
 <p>Leading companies <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">are using</a> TensorRT-LLM to optimize their models. And <a href="https://www.nvidia.com/en-us/launchpad/ai/generative-ai-inference-with-nim/">NVIDIA NIM</a>  — a set of inference microservices that includes inferencing engines like TensorRT-LLM — makes it easier than ever for businesses to deploy NVIDIA’s inference platform.</p>
@@ -1136,7 +1217,7 @@
 <p>Keeping pace with the explosion in LLM model sizes, NVIDIA founder and CEO Jensen Huang announced last week at GTC that the <a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">NVIDIA Blackwell architecture GPUs</a> will deliver new levels of performance required for the multitrillion-parameter AI models.</p>
 <p>Inference for large language models is difficult, requiring both expertise and the full-stack architecture NVIDIA demonstrated on MLPerf with Hopper architecture GPUs and TensorRT-LLM. There’s much more to come.</p>
 <p>Learn more about <a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">MLPerf benchmarks</a> and the <a href="https://developer.nvidia.com/blog/nvidia-h200-tensor-core-gpus-and-nvidia-tensorrt-llm-set-mlperf-llm-inference-records/">technical details</a> of this inference round.</p>
-</div>]]></content:encoded>
+]]></content:encoded>
 					
 		
 		
@@ -1154,70 +1235,6 @@
 			/>
 			<media:title type="html"><![CDATA[NVIDIA Hopper Leaps Ahead in Generative AI at MLPerf]]></media:title>
 			<media:description type="html">NVIDIA HGX H200 GPU system running TensorRT-LLM</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Unlocking Peak Generations: TensorRT Accelerates AI on RTX PCs and Workstations</title>
-		<link>https://blogs.nvidia.com/blog/ai-decoded-tensorrt-stable-diffusion-automatic1111/</link>
-		
-		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
-		<pubDate>Wed, 27 Mar 2024 13:00:13 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[AI Decoded]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70900</guid>
-
-					<description><![CDATA[As generative AI advances and becomes widespread across industries, the importance of running generative AI applications on local PCs and workstations grows.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
-<p>As <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> advances and becomes widespread across industries, the importance of running generative AI applications on local PCs and workstations grows. Local <a href="https://blogs.nvidia.com/blog/difference-deep-learning-training-inference-ai/">inference</a> gives consumers reduced latency, eliminates their dependency on the network and enables more control over their data.</p>
-<p>NVIDIA GeForce and NVIDIA RTX GPUs feature Tensor Cores, dedicated AI hardware accelerators that provide the horsepower to run generative AI locally.</p>
-<p>Stable Video Diffusion is now optimized for the <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> software development kit, which unlocks the highest-performance generative AI on the more than 100 million Windows PCs and workstations powered by RTX GPUs.</p>
-<p>Now, the TensorRT extension for the popular Stable Diffusion WebUI by Automatic1111 is adding support for ControlNets, tools that give users more control to refine generative outputs by adding other images as guidance.</p>
-<p><iframe loading="lazy" title="Accelerate Stable Diffusion with NVIDIA RTX GPUs" width="500" height="281" src="https://www.youtube.com/embed/fUAEBoJCJW8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>TensorRT acceleration can be put to the test in the new UL Procyon AI Image Generation benchmark, which internal tests have shown accurately replicates real-world performance. It delivered speedups of 50% on a GeForce RTX 4080 SUPER GPU compared with the fastest non-TensorRT implementation.</p>
-<h2><b>More Efficient and Precise AI</b></h2>
-<p>TensorRT enables developers to access the hardware that provides fully optimized AI experiences. AI performance typically doubles compared with running the application on other frameworks.</p>
-<p>It also <a href="https://developer.nvidia.com/blog/new-stable-diffusion-models-accelerated-with-nvidia-tensorrt/">accelerates</a> the most popular generative AI models, like Stable Diffusion and SDXL. <a href="https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1-tensorrt">Stable Video Diffusion</a>, Stability AI’s image-to-video generative AI model, experiences a 40% speedup with TensorRT.</p>
-<p>The optimized <a href="https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1-tensorrt">Stable Video Diffusion 1.1 Image-to-Video</a> model can be downloaded on Hugging Face.</p>
-<p>Plus, the TensorRT extension for Stable Diffusion WebUI boosts performance by up to 2x — significantly streamlining Stable Diffusion workflows.</p>
-<p>With the extension’s latest update, TensorRT optimizations extend to ControlNets — a set of AI models that help guide a diffusion model’s output by adding extra conditions. With TensorRT, ControlNets are 40% faster.</p>
-<figure id="attachment_70907" aria-describedby="caption-attachment-70907" style="width: 1280px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1.jpg"><img loading="lazy" decoding="async" class="size-full wp-image-70907" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1.jpg" alt="" width="1280" height="720" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/Auto1111-ControlNet-Visual_1-178x100.jpg 178w" sizes="(max-width: 1280px) 100vw, 1280px" /></a><figcaption id="caption-attachment-70907" class="wp-caption-text">TensorRT optimizations extend to ControlNets for improved customization.</figcaption></figure>
-<p>Users can guide aspects of the output to match an input image, which gives them more control over the final image. They can also use multiple ControlNets together for even greater control. A ControlNet can be a depth map, edge map, normal map or keypoint detection model, among others.</p>
-<p>Download the TensorRT extension for Stable Diffusion Web UI on <a href="https://github.com/NVIDIA/Stable-Diffusion-WebUI-TensorRT">GitHub</a> today.</p>
-<h2><b>Other Popular Apps Accelerated by TensorRT</b></h2>
-<p>Blackmagic Design <a href="https://blogs.nvidia.com/blog/surface-studio-chaos-dlss-resolve-tensor-rt/">adopted NVIDIA TensorRT acceleration</a> in update 18.6 of DaVinci Resolve. Its AI tools, like Magic Mask, Speed Warp and Super Scale, run more than 50% faster and up to 2.3x faster on RTX GPUs compared with Macs.</p>
-<p>In addition, with TensorRT integration, <a href="https://www.topazlabs.com/">Topaz Labs</a> saw an up to 60% performance increase in its Photo AI and Video AI apps — such as photo denoising, sharpening, photo super resolution, video slow motion, video super resolution, video stabilization and more — all running on RTX.</p>
-<p>Combining Tensor Cores with TensorRT software brings unmatched generative AI performance to local PCs and workstations. And by running locally, several advantages are unlocked:</p>
-<ul>
-<li><strong>Performance</strong>: Users experience lower latency, since latency becomes independent of network quality when the entire model runs locally. This can be important for real-time use cases such as gaming or video conferencing. NVIDIA RTX offers the fastest AI accelerators, scaling to more than 1,300 AI trillion operations per second, or TOPS.</li>
-<li><strong>Cost</strong>: Users don’t have to pay for cloud services, cloud-hosted application programming interfaces or infrastructure costs for large language model inference.</li>
-<li><strong>Always on</strong>: Users can access LLM capabilities anywhere they go, without relying on high-bandwidth network connectivity.</li>
-<li><strong>Data privacy</strong>: Private and proprietary data can always stay on the user’s device.</li>
-</ul>
-<h2><b>Optimized for LLMs</b></h2>
-<p>What TensorRT brings to deep learning, <a href="https://developer.nvidia.com/tensorrt#inference">NVIDIA TensorRT-LLM</a> brings to the latest <a href="https://blogs.nvidia.com/blog/ai-decoded-rtx-pc-llms-chatbots/">LLMs</a>.</p>
-<p>TensorRT-LLM, an open-source library that accelerates and optimizes LLM inference, includes out-of-the-box support for popular community models, including Phi-2, Llama2, Gemma, Mistral and Code Llama. Anyone — from developers and creators to enterprise employees and casual users — can experiment with TensorRT-LLM-optimized models in the <a href="https://build.nvidia.com/explore/discover">NVIDIA AI Foundation models</a>. Plus, with the <a href="https://blogs.nvidia.com/blog/chat-with-rtx-available-now/">NVIDIA ChatRTX</a> tech demo, users can see the performance of various models running locally on a Windows PC. ChatRTX is built on TensorRT-LLM for optimized performance on RTX GPUs.</p>
-<p>NVIDIA is collaborating with the open-source community to develop native TensorRT-LLM connectors to popular application frameworks, including LlamaIndex and LangChain.</p>
-<p>These innovations make it easy for developers to use TensorRT-LLM with their applications and experience the best LLM performance with RTX.</p>
-<p><i>Get weekly updates directly in your inbox by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
-</div>]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ai-decoded-tensor-nv-blog-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/ai-decoded-tensor-nv-blog-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Unlocking Peak Generations: TensorRT Accelerates AI on RTX PCs and Workstations]]></media:title>
-			<media:description type="html"></media:description>
 			</media:content>
 			</item>
 	</channel>
