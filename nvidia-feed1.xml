@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 17 Apr 2024 23:47:14 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 18 Apr 2024 16:39:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,125 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>Wide Open: NVIDIA Accelerates Inference on Meta Llama 3   </title>
+		<link>https://blogs.nvidia.com/blog/meta-llama3-inference-acceleration/</link>
+		
+		<dc:creator><![CDATA[Ankit Patel]]></dc:creator>
+		<pubDate>Thu, 18 Apr 2024 16:30:23 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cloud Services]]></category>
+		<category><![CDATA[Consumer Internet]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[NVIDIA Jetson]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[RTX Mobile Workstations]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71177</guid>
+
+					<description><![CDATA[NVIDIA today announced optimizations across all its platforms to accelerate Meta Llama 3, the latest generation of the large language model (LLM). The open model combined with NVIDIA accelerated computing equips developers, researchers and businesses to innovate responsibly across a wide variety of applications. Trained on NVIDIA AI Meta engineers trained Llama 3 on a		<a class="read-more" href="https://blogs.nvidia.com/blog/meta-llama3-inference-acceleration/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA today announced optimizations across all its platforms to accelerate <a href="https://ai.meta.com/blog/meta-llama-3/">Meta Llama 3</a>, the latest generation of the large language model (<a href="https://www.nvidia.com/en-us/glossary/large-language-models/">LLM</a>).</p>
+<p>The open model combined with NVIDIA <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> equips developers, researchers and businesses to innovate responsibly across a wide variety of applications.</p>
+<h2><b>Trained on NVIDIA AI</b></h2>
+<p>Meta engineers trained Llama 3 on a computer cluster packing 24,576 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, linked with an <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> network. With support from NVIDIA, Meta tuned its network, software and model architectures for its flagship LLM.</p>
+<p>To further advance the state of the art in <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, Meta <a href="https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/">recently described</a> plans to scale its infrastructure to 350,000 H100 GPUs.</p>
+<h2><b>Putting Llama 3 to Work</b></h2>
+<p>Versions of Llama 3, accelerated on NVIDIA GPUs, are available today for use in the cloud, data center, edge and PC.</p>
+<p>From a browser, developers can try Llama 3 at <a href="http://ai.nvidia.com">ai.nvidia.com</a>. It’s packaged as an <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/">NVIDIA NIM</a> microservice with a standard application programming interface that can be deployed anywhere.</p>
+<p>Businesses can fine-tune Llama 3 with their data using <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a>, an open-source framework for LLMs that’s part of the secure, supported <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> platform. Custom models can be optimized for inference with <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a> and deployed with <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a>.</p>
+<h2><b>Taking Llama 3 to Devices and PCs</b></h2>
+<p>Llama 3 also runs on <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson Orin</a> for robotics and edge computing devices, creating interactive agents like those in the <a href="https://www.jetson-ai-lab.com/">Jetson AI Lab</a>.</p>
+<p>What’s more, <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> and <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX</a> GPUs for workstations and PCs speed inference on Llama 3. These systems give developers a target of more than 100 million NVIDIA-accelerated systems worldwide.</p>
+<h2><b>Get Optimal Performance with Llama 3</b></h2>
+<p>Best practices in deploying an LLM for a chatbot involves a balance of low latency, good reading speed and optimal GPU use to reduce costs.</p>
+<p>Such a service needs to deliver tokens — the rough equivalent of words to an LLM — at about twice a user’s reading speed which is about 10 tokens/second.</p>
+<p>Applying these metrics, a single <a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA H200 Tensor Core GPU</a> generated about 3,000 tokens/second — enough to serve about 300 simultaneous users — in an initial test using the version of Llama 3 with 70 billion parameters.</p>
+<p>That means a single <a href="https://www.nvidia.com/en-us/data-center/hgx/">NVIDIA HGX</a> server with eight H200 GPUs could deliver 24,000 tokens/second, further optimizing costs by supporting more than 2,400 users at the same time.</p>
+<p>For edge devices, the version of Llama 3 with eight billion parameters generated up to 40 tokens/second on Jetson AGX Orin and 15 tokens/second on Jetson Orin Nano.</p>
+<h2><b>Advancing Community Models</b></h2>
+<p>An active open-source contributor, NVIDIA is committed to optimizing community software that helps users address their toughest challenges. Open-source models also promote AI transparency and let users broadly share work on AI safety and resilience.</p>
+<p>Learn more about how NVIDIA’s AI inference platform, including how NIM, TensorRT-LLM and Triton use state-of-the-art techniques such as <a href="https://developer.nvidia.com/blog/tune-and-deploy-lora-llms-with-nvidia-tensorrt-llm/">low-rank adaptation</a> to accelerate the latest LLMs.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/Nv-idia-Meta-logos-final.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/Nv-idia-Meta-logos-final-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Wide Open: NVIDIA Accelerates Inference on Meta Llama 3   ]]></media:title>
+			<media:description type="html">Image of Meta and NVIDIA logos</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Up to No Good: ‘No Rest for the Wicked’ Early Access Launches on GeForce NOW</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-no-rest-for-the-wicked/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 18 Apr 2024 13:00:07 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71183</guid>
+
+					<description><![CDATA[It’s time to get a little wicked. Members can now stream No Rest for the Wicked from the cloud. It leads six new games joining the GeForce NOW library of more than 1,500 games. Holy Moly No Rest for the Wicked is the highly anticipated action role-playing game from Moon Studios, developer of the Ori		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-no-rest-for-the-wicked/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>It’s time to get a little wicked. Members can now stream <i>No Rest for the Wicked</i> from the cloud.</p>
+<p>It leads six new games joining the <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> library of more than 1,500 games.</p>
+<h2><b>Holy Moly</b></h2>
+<figure id="attachment_71187" aria-describedby="caption-attachment-71187" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-scaled.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-71187" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-672x378.jpg" alt="No Rest For The Wicked on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71187" class="wp-caption-text">There’s always another fight to be won.</figcaption></figure>
+<p><i>No Rest for the Wicked</i> is the highly anticipated action role-playing game from Moon Studios, developer of the <a href="https://blogs.nvidia.com/blog/the-day-before-avatar-ori/"><i>Ori</i> series</a>, and publisher Private Division. Amid a plague-ridden world, step into the boots of a Cerim, a holy warrior on a desperate mission. The Great Pestilence has ravaged the land of Sacra, and a new king reigns. As a colonialist inquisition unfolds, engage in visceral combat, battle plague-infested creatures and uncover the secrets of the continent. Make the character you want with the game’s flexible soft-class system, explore a rich storyline, and prepare for intense boss battles as you build up the town of Sacrament.</p>
+<p>Embark on a dark and perilous journey, where no rest awaits the wicked. Rise to the challenge and stream from GeForce RTX 4080 servers with a <a href="http://geforcenow.com">GeForce NOW Ultimate membership</a> for the smoothest gameplay from the cloud. Be among the first to experience early access of the game, without having to wait for downloads.</p>
+<h2><b>Shiny New Games</b></h2>
+<figure id="attachment_71184" aria-describedby="caption-attachment-71184" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1.jpg"><img decoding="async" class="size-large wp-image-71184" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-672x336.jpg" alt="Evil West on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71184" class="wp-caption-text">&#8220;Yippie ki-yay, evil doers!&#8221;</figcaption></figure>
+<p>Become a Wild West superhero in <i>Evil West</i>, streaming on GeForce NOW this week and part of PC Game Pass. It’s part of six newly supported games this week:</p>
+<ul>
+<li><i>Kill It With Fire 2 </i>(New release on <a href="https://store.steampowered.com/app/2357000?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 16)</li>
+<li><i>The Crew Motorfest </i>(New release on <a href="https://store.steampowered.com/app/2698940?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 18)</li>
+<li><i>No Rest for the Wicked </i>(New release on <a href="https://store.steampowered.com/app/1371980?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 18)</li>
+<li><i>Evil West </i>(<a href="https://www.xbox.com/games/store/evil-west/9MW581HCJPM6?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Lightyear Frontier </i>(<a href="https://store.steampowered.com/app/1677110?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Tomb Raider I-III Remastered </i>(<a href="https://store.steampowered.com/app/2478970?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+</ul>
+<p>Riot Games shared in its 14.8 patch notes that it will soon add its Vanguard security software to <i>League of Legends</i> as part of the publisher’s commitment to remove scripters, bots and bot-leveled accounts from the game and make it more challenging for them to continue. Since Vanguard won’t support virtual machines when it’s added to <i>League of Legends</i>, the game will be put under maintenance and will no longer be playable on GeForce NOW once the 14.9 update goes live globally — currently planned for May 1, 2024. Members can continue to enjoy the game on GeForce NOW until then.</p>
+<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-thursday-4-18-nv-blog-1280x680-no-copy.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-thursday-4-18-nv-blog-1280x680-no-copy-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Up to No Good: ‘No Rest for the Wicked’ Early Access Launches on GeForce NOW]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA Honors Partners of the Year in Europe, Middle East, Africa</title>
 		<link>https://blogs.nvidia.com/blog/nvidia-partner-network-awards-emea-2024/</link>
 		
@@ -190,10 +309,10 @@
 <p>Get started with Instant NeRF to learn about radiance fields and experience imagery in a new way.</p>
 <p>Developers and tech enthusiasts can download the source-code base to compile. Nontechnical users can download the Windows installers for <a href="https://github.com/NVlabs/instant-ngp">Instant-NGP</a><a href="https://github.com/NVlabs/instant-ngp"> software, available on GitHub</a>.</p>
 <p>While the installer is available for a wide range of RTX GPUs, the program performs best on the latest-architecture <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX 40 Series</a> and <a href="https://www.nvidia.com/en-us/technologies/ada-architecture/">NVIDIA RTX Ada Generation</a> GPUs.</p>
-<p><iframe title="Updated: Making a NeRF movie with NVIDIA&#039;s Instant NGP" width="500" height="281" src="https://www.youtube.com/embed/3TWxO1PftMc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Updated: Making a NeRF movie with NVIDIA&#039;s Instant NGP" width="500" height="281" src="https://www.youtube.com/embed/3TWxO1PftMc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>The <a href="https://developer.nvidia.com/blog/getting-started-with-nvidia-instant-nerfs/">“Getting Started With Instant NeRF”</a> guide walks users through the process, including loading one of the primitives, such as “NeRF Fox,” to get a sense of what’s possible. Detailed instructions and video walkthroughs — like the one above — demonstrate how to create NeRFs with custom data, including tips for capturing good input imagery and compiling codebases (if built from source). The guide also covers using the Instant NeRF graphical user interface, optimizing scene parameters and creating an animation from the scene.</p>
 <p>The NeRF community also offers many tips and tricks to help users get started. For example, check out the livestream below and this technical <a href="https://developer.nvidia.com/blog/getting-started-with-nvidia-instant-nerfs/">blog post</a>.</p>
-<p><iframe title="Hands on With Nvidia Instant NeRFs" width="500" height="281" src="https://www.youtube.com/embed/z3-fjYzd0BA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Hands on With Nvidia Instant NeRFs" width="500" height="281" src="https://www.youtube.com/embed/z3-fjYzd0BA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <h2><strong>Show and Tell</strong></h2>
 <p>Digital artists are composing beautiful scenes and telling fresh stories with NVIDIA Instant NeRF. The <a href="https://www.nvidia.com/en-us/research/ai-art-gallery/instant-nerf/">Instant NeRF gallery</a> showcases some of the most innovative and thought-provoking examples, viewable as video clips in any web browser.</p>
 <p>Here are a few:</p>
@@ -273,7 +392,8 @@
 <p>With 72 Tensor Cores, the A1000 offers a tremendous upgrade over the previous generation, delivering over 3x faster generative AI processing for tools like Stable Diffusion. In addition, its 18 RT Cores speed graphics and rendering tasks by up to 3x, accelerating professional workflows such as 2D and 3D computer-aided design (CAD), product and architectural design, and 4K video editing.</p>
 <p>The A1000 also excels in video processing, handling up to 38% more encode streams and offering 2x faster decode performance over the previous generation.</p>
 <p>With a sleek, single-slot design and consuming just 50W, the A400 and A1000 GPUs bring impressive features to compact, energy-efficient workstations.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-scaled.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-71145 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-672x500.jpg" alt="" width="672" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-672x500.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-400x298.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-768x571.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-1536x1143.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-605x450.jpg 605w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-289x215.jpg 289w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-134x100.jpg 134w, https://blogs.nvidia.com/wp-content/uploads/2024/04/A1000-3QTR-TopLeft-1280x952.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2.jpg"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-71171" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2-672x357.jpg" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2-400x213.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2-768x408.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2-842x447.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2-188x100.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-Copy-2.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>&nbsp;</p>
 <h2><b>Expanding the Reach of RTX</b></h2>
 <p>These new GPUs empower users with cutting-edge AI, graphics and compute capabilities to boost productivity and unlock creative possibilities. Advanced workflows involving ray-traced renders and AI are now within reach, allowing professionals to push the boundaries of their work and achieve stunning levels of realism.</p>
 <p>Industrial planners can use ‌these new powerful and energy-efficient computing solutions for <a href="https://blogs.nvidia.com/blog/what-is-edge-computing/">edge</a> deployments. Creators can boost editing and rendering speeds to produce richer visual content. Architects and engineers can seamlessly transition ideas from 3D CAD concepts into tangible designs. Teams working in smart spaces can use the GPUs for real-time data processing, AI-enhanced security and digital signage management in space-constrained settings. And healthcare professionals can achieve quicker, more precise medical imaging analyses.</p>
@@ -1110,132 +1230,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Coming Up ACEs: Decoding the AI Technology That’s Enhancing Games With Realistic Digital Humans]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Greater Scope: Doctors Get Inside Look at Gut Health With AI-Powered Endoscopy</title>
-		<link>https://blogs.nvidia.com/blog/ai-powered-endoscopy-odin-vision-olympus/</link>
-		
-		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
-		<pubDate>Thu, 28 Mar 2024 15:00:11 +0000</pubDate>
-				<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Software]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70912</guid>
-
-					<description><![CDATA[From humble beginnings as a university spinoff to an acquisition by the leading global medtech company in its field, Odin Vision has been on an accelerated journey since its founding less than five years ago. An alum of the NVIDIA Inception program for cutting-edge startups, Odin Vision builds cloud-connected AI software that helps clinicians detect		<a class="read-more" href="https://blogs.nvidia.com/blog/ai-powered-endoscopy-odin-vision-olympus/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>From humble beginnings as a university spinoff to an acquisition by the leading global medtech company in its field, Odin Vision has been on an accelerated journey since its founding less than five years ago.</p>
-<p>An alum of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33">NVIDIA Inception</a> program for cutting-edge startups, Odin Vision builds cloud-connected AI software that helps clinicians detect and characterize areas of concern during endoscopy, a procedure where a tiny camera mounted on a tube is inserted into the gastrointestinal tract.</p>
-<p>Network-connected devices in the endoscopy room capture and stream real-time video data to the cloud, where powerful NVIDIA GPUs run AI inference. The models’ results are then streamed back to the endoscopy room so that clinicians can see the AI insights overlaid on the live video feed with minimal latency.</p>
-<p>The startup was in 2022 acquired by Japanese medtech leader Olympus, which has a 70% global market share in gastrointestinal endoscopic equipment.</p>
-<p>“We believe the acquisition brings us much closer to achieving our vision to revolutionize endoscopy through AI and cloud technology,” said Daniel Toth, cofounder and chief technology officer of Odin Vision. “Our software can reach Olympus’ global customer base, enabling us to bring our solutions to as many patients as possible.”</p>
-<p>Olympus is also collaborating with NVIDIA on Olympus Office Hours, an advisory program that connects Inception startups with the medical device company’s experts, who will offer deep industry expertise and guidance to help the startups build AI solutions in key areas including gastroenterology, urology and surgery.</p>
-<p>Eight leading AI startups have joined the inaugural cohort of the program — which is part of the NVIDIA Inception Alliance for Healthcare, an initiative that brings together medical AI startups with NVIDIA and its healthcare industry partners — to help accelerate their product development and go-to-market goals.</p>
-<h2><b>An Extra Set of AIs for Clinicians</b></h2>
-<p>Around <a href="https://newsnetwork.mayoclinic.org/discussion/ai-reduces-miss-rate-of-precancerous-polyps-in-colorectal-cancer-screening/#:~:text=The%20rate%20at%20which%20precancerous%20colorectal%20polyps%20is%20missed%20has,that%20had%20standard%20colonoscopy%20first." target="_blank" rel="noopener">a quarter of precancerous polyps are missed</a> during colonoscopies, a kind of endoscopy procedure that examines the lower digestive tract.</p>
-<p>While some are missed because the endoscope doesn’t capture video footage of every angle, others remain undetected by clinicians. That’s where AI can help provide a second set of eyes to support clinical decision-making.</p>
-<p>Seamless AI integration into the video feeds that medical professionals view during an endoscopy provides an extra data source that can help doctors detect and remove polyps sooner, helping prevent cancer development.</p>
-<p>“Polyps develop slowly, and can take five or 10 years to appear as cancer,” Toth said. “If a clinician can detect and remove them in time, it can help save lives.”</p>
-<p>CADDIE, the company’s AI software for detecting and classifying polyps, has received the CE Mark of regulatory approval in Europe and is deployed across hospitals in the U.K., Spain, Germany, Poland and Italy — with plans for use in the U.S as well.</p>
-<p>Odin Vision also has AI software that has received the CE Mark to assist gastroscopy, where doctors inspect the esophagus for signs of throat cancer.</p>
-<h2><b>Accelerated Inference for Real-Time Insights</b></h2>
-<p>Odin Vision began as a research project by two professors and a Ph.D. student at University College London who were developing AI techniques for polyp detection. In 2019, they teamed with Toth and Odin’s CEO, Peter Mountney, both from Siemens Healthineers, to commercialize their work.</p>
-<p>“NVIDIA GPUs were part of our work from the start — they’ve been essential to train our AI models and were part of our first product prototypes for inference, too,” Toth said. “Since moving to a cloud-based deployment, we’ve begun using the NVIDIA Triton Inference Server for dynamic processing in the cloud.”</p>
-<p>The team uses <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a> for accelerated inference — most recently transitioning to <a href="https://www.nvidia.com/en-us/data-center/l4/">NVIDIA L4 GPUs</a>. Adopting <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a> software and the <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> software development kit enabled them to meet the low-latency threshold needed for real-time video-processing AI applications.</p>
-<p>In addition to supporting doctors during specific procedures, Odin Vision plans to develop generative AI models that can automate a first draft of the clinical notes doctors prepare afterward — as well as models that can aggregate data across procedures. These would allow endoscopy teams to review analytics and assess how well a procedure is performed compared to clinical guidelines.</p>
-<p>“Once you get to a point where there are dozens of AI models tracking different elements of these procedures, we can see if a healthcare professional is inspecting a particular area of the digestive tract for only three minutes, when it’s supposed to take six minutes,” Toth said. “The system can provide a nudge to remind the clinician to follow the guidelines.”</p>
-<h2><b>Cloud-Connected Cancer Screening</b></h2>
-<p>Membership in NVIDIA Inception provided the Odin Vision team access to technical expertise from NVIDIA and cloud credits through leading cloud service providers.</p>
-<p>“Cloud credits helped us massively speed up our technology development and deployment, enabling us to release our products to market months earlier than initially planned,” Toth said. “NVIDIA experts also validated our product concept from a technology perspective and provided consultation about GPU and accelerated software optimizations.”</p>
-<p>The team found that a cloud-based solution made it easier to push software updates over the air to deployments across hospital customers.</p>
-<p>“Some AI companies are sending boxes that need to sit in clinical sites and require regular maintenance, which can prevent normal clinical workflows from running smoothly,” Toth said. “With network-connected devices, we can instead update a single server and the changes reach all end users at the same time.”</p>
-<p><i>Learn more about </i><a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33"><i>NVIDIA Inception</i></a><i> and </i><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>subscribe to NVIDIA healthcare news</i></a><i>. </i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/AdobeStock_309555032_crop.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/AdobeStock_309555032_crop-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Greater Scope: Doctors Get Inside Look at Gut Health With AI-Powered Endoscopy]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Get Cozy With ‘Palia’ on GeForce NOW</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-palia/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 28 Mar 2024 13:00:18 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70939</guid>
-
-					<description><![CDATA[Ease into spring with the warm, cozy vibes of Palia, coming to the cloud this GFN Thursday. It’s part of six new titles joining the GeForce NOW library of over 1,800 games. Welcome Home Escape to a cozy world with Palia, a free-to-play massively multiplayer online game from Singularity 6 Corporation. The game, which has		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-palia/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Ease into spring with the warm, cozy vibes of <i>Palia</i>, coming to the cloud this GFN Thursday.</p>
-<p>It’s part of six new titles joining the <a href="http://play.geforcenow.com">GeForce NOW library</a> of over 1,800 games.</p>
-<h2><b>Welcome Home</b></h2>
-<figure id="attachment_70943" aria-describedby="caption-attachment-70943" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70943" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-672x378.jpg" alt="Palia on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Palia.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70943" class="wp-caption-text"><em>Better together.</em></figcaption></figure>
-<p>Escape to a cozy world with <i>Palia</i>, a free-to-play massively multiplayer online game from Singularity 6 Corporation. The game, which has made its way onto more than 200,000 wishlists on Steam, has launched in the cloud this week.</p>
-<p>Farm, fish, craft and explore with friendly villagers across a stunning variety of different biomes — from sprawling flower fields to hilly forests and rocky beaches — in the world of Palia. Inhabit the land, furnish a dream home, unravel ancient mysteries and interact with a vibrant online community.</p>
-<p>Get ready for a captivating adventure across devices by streaming <i>Palia</i> from the cloud. GeForce NOW Ultimate and Priority members get faster access to servers and longer gaming sessions over Free members.</p>
-<h2><b>Time to Play</b></h2>
-<figure id="attachment_70946" aria-describedby="caption-attachment-70946" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70946" src="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-672x336.jpg" alt="Millennia on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/03/GFN_Thursday-Milennia.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70946" class="wp-caption-text"><em>10,000 years of history, all in the cloud.</em></figcaption></figure>
-<p>Shape the course of history across 10,000 years in <i>Millennia</i> from C Prompt Games and Paradox Interactive. GeForce NOW members can customize their own nations, explore unique combinations of traits and adapt to alternative histories in this captivating journey.</p>
-<p>In addition, members can look for the following:</p>
-<ul>
-<li><i>Palia </i>(New release on <a href="https://store.steampowered.com/app/2707930?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 25)</li>
-<li><i>Bulwark: Falconeer Chronicles </i>(New release on <a href="https://store.steampowered.com/app/290100?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 26)</li>
-<li><i>Millennia </i>(New release on <a href="https://store.steampowered.com/app/1268590?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 26)</li>
-<li><i>Outpost: Infinity Siege </i>(New release on <a href="https://store.steampowered.com/app/1566690?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 26)</li>
-<li><i>SOUTH PARK: SNOW DAY! </i>(New release on <a href="https://store.steampowered.com/app/1214650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 26)</li>
-<li><i>Tchia</i> (<a href="https://store.steampowered.com/app/1496590?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-</ul>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">if you could live in a video game, which one would it be and why? <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1773017134517346499?ref_src=twsrc%5Etfw">March 27, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gfn-thursday-3-28-nv-blog-1280x680-no-copy.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/03/gfn-thursday-3-28-nv-blog-1280x680-no-copy-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Get Cozy With ‘Palia’ on GeForce NOW]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
