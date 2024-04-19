@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 19 Apr 2024 01:48:14 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 19 Apr 2024 15:14:06 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -39,14 +39,14 @@
 		<category><![CDATA[TensorRT]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71177</guid>
 
-					<description><![CDATA[NVIDIA today announced optimizations across all its platforms to accelerate Meta Llama 3, the latest generation of the large language model (LLM). The open model combined with NVIDIA accelerated computing equips developers, researchers and businesses to innovate responsibly across a wide variety of applications. Trained on NVIDIA AI Meta engineers trained Llama 3 on a		<a class="read-more" href="https://blogs.nvidia.com/blog/meta-llama3-inference-acceleration/">
+					<description><![CDATA[NVIDIA today announced optimizations across all its platforms to accelerate Meta Llama 3, the latest generation of the large language model (LLM). The open model combined with NVIDIA accelerated computing equips developers, researchers and businesses to innovate responsibly across a wide variety of applications. Trained on NVIDIA AI Meta engineers trained Llama 3 on computer		<a class="read-more" href="https://blogs.nvidia.com/blog/meta-llama3-inference-acceleration/">
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA today announced optimizations across all its platforms to accelerate <a href="https://ai.meta.com/blog/meta-llama-3/">Meta Llama 3</a>, the latest generation of the large language model (<a href="https://www.nvidia.com/en-us/glossary/large-language-models/">LLM</a>).</p>
 <p>The open model combined with NVIDIA <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> equips developers, researchers and businesses to innovate responsibly across a wide variety of applications.</p>
 <h2><b>Trained on NVIDIA AI</b></h2>
-<p>Meta engineers trained Llama 3 on a computer cluster packing 24,576 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, linked with an <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> network. With support from NVIDIA, Meta tuned its network, software and model architectures for its flagship LLM.</p>
+<p>Meta engineers trained Llama 3 on computer clusters packing 24,576 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, linked with RoCE and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> networks. With support from NVIDIA, Meta tuned its network, software and model architectures for its flagship LLM.</p>
 <p>To further advance the state of the art in <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, Meta <a href="https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/">recently described</a> plans to scale its infrastructure to 350,000 H100 GPUs.</p>
 <h2><b>Putting Llama 3 to Work</b></h2>
 <p>Versions of Llama 3, accelerated on NVIDIA GPUs, are available today for use in the cloud, data center, edge and PC.</p>
