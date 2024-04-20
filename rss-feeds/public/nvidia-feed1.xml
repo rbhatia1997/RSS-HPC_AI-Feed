@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 19 Apr 2024 15:14:06 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 19 Apr 2024 21:41:59 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -46,7 +46,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA today announced optimizations across all its platforms to accelerate <a href="https://ai.meta.com/blog/meta-llama-3/">Meta Llama 3</a>, the latest generation of the large language model (<a href="https://www.nvidia.com/en-us/glossary/large-language-models/">LLM</a>).</p>
 <p>The open model combined with NVIDIA <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> equips developers, researchers and businesses to innovate responsibly across a wide variety of applications.</p>
 <h2><b>Trained on NVIDIA AI</b></h2>
-<p>Meta engineers trained Llama 3 on computer clusters packing 24,576 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, linked with RoCE and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> networks. With support from NVIDIA, Meta tuned its network, software and model architectures for its flagship LLM.</p>
+<p>Meta engineers trained Llama 3 on computer clusters packing 24,576 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, linked with RoCE and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> networks.</p>
 <p>To further advance the state of the art in <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, Meta <a href="https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/">recently described</a> plans to scale its infrastructure to 350,000 H100 GPUs.</p>
 <h2><b>Putting Llama 3 to Work</b></h2>
 <p>Versions of Llama 3, accelerated on NVIDIA GPUs, are available today for use in the cloud, data center, edge and PC.</p>
@@ -387,7 +387,7 @@
 <p>The RTX A400 GPU introduces accelerated ray tracing and AI to the RTX 400 series GPUs. With 24 Tensor Cores for AI processing, it surpasses traditional CPU-based solutions, enabling professionals to run cutting-edge AI applications, such as intelligent chatbots and copilots, directly on their desktops.</p>
 <p>The GPU delivers real-time ray tracing so creators can build vivid, physically accurate 3D renders that push the boundaries of creativity and realism.</p>
 <p>The A400 also includes four display outputs, a first for its series. This makes it ideal for high-density display environments, which are critical for industries like financial services, command and control, retail, and transportation.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW.png"><img loading="lazy" decoding="async" class="aligncenter wp-image-71142 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A400_Dark_KV_01_v004_AW-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400.jpg"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-71213" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A400.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>The NVIDIA RTX A1000 GPU brings Tensor Cores and RT Cores to the RTX 1000 series GPUs for the first time, unlocking accelerated AI and ray-tracing performance for creatives and professionals.</p>
 <p>With 72 Tensor Cores, the A1000 offers a tremendous upgrade over the previous generation, delivering over 3x faster generative AI processing for tools like Stable Diffusion. In addition, its 18 RT Cores speed graphics and rendering tasks by up to 3x, accelerating professional workflows such as 2D and 3D computer-aided design (CAD), product and architectural design, and 4K video editing.</p>
 <p>The A1000 also excels in video processing, handling up to 38% more encode streams and offering 2x faster decode performance over the previous generation.</p>
@@ -415,13 +415,13 @@
 		
 		
 			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A1000_Dark_KV_01_v008_AW.png"
-			type="image/png"
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000.jpg"
+			type="image/jpeg"
 			width="2048"
 			height="1152"
 			>
 			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX_A1000_Dark_KV_01_v008_AW-842x450.png"
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/RTX-A1000-842x450.jpg"
 			width="842"
 			height="450"
 			/>
