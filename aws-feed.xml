@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 16 Apr 2024 14:58:36 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 22 Apr 2024 15:39:25 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,261 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Run simulations using multiple containers in a single AWS Batch job</title>
+		<link>https://aws.amazon.com/blogs/hpc/run-simulations-using-multiple-containers-in-a-single-aws-batch-job/</link>
+		
+		<dc:creator><![CDATA[Matt Hansen]]></dc:creator>
+		<pubDate>Mon, 22 Apr 2024 15:39:25 +0000</pubDate>
+				<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">fe5f2de80116bdc4f1c348b4fd64c544ff490f56</guid>
+
+					<description>Run simulations using multiple containers in a single AWS Batch job Matthew Hansen, Principal Solutions Architect, AWS Advanced Computing &amp;amp; Simulation Recently, AWS Batch launched a new feature that makes it possible to run multiple containers within a single job. This enables new scenarios customers have asked about like simulations for autonomous vehicles, multi-robot collaboration, […]</description>
+										<content:encoded>&lt;p&gt;Run simulations using multiple containers in a single AWS Batch job&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Matthew Hansen, Principal Solutions Architect, AWS Advanced Computing &amp;amp; Simulation&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Recently, AWS Batch launched a new feature that makes it possible to run multiple containers within a single job. This enables new scenarios customers have asked about like simulations for autonomous vehicles, multi-robot collaboration, and other advanced simulations.&lt;/p&gt; 
+&lt;p&gt;For autonomous system (AS) developers, this means you can keep your simulation and test scenario code in separate containers from the autonomy and sensor pipelines you want to test. This helps you test your modular system design (like in a software-defined vehicle) which has many components communicating over a local network.&lt;/p&gt; 
+&lt;p&gt;Prior to this launch, you could run these types of simulations in Batch, but: you were limited to a single container per job. For some users that meant creating a very large container (tens of gigabytes) containing all the code for the system, plus a high-fidelity simulator, &lt;em&gt;and&lt;/em&gt; all the test code to run the scenarios. This blows out container build-times and generates long download times. It’ also an unnecessary coupling of components of the autonomous system. We heard you, so today we can talk about multi-container support in AWS Batch to address these issues.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll look at some multi-container simulation use-cases, learn how AWS Partners have used this to run their simulators using Batch, and then show you how to quickly get started running all kinds of multi-container jobs in Batch.&lt;/p&gt; 
+&lt;h2&gt;Complex simulations&lt;/h2&gt; 
+&lt;h4&gt;Autonomous Vehicles&lt;/h4&gt; 
+&lt;p&gt;Today’s autonomous vehicles are simulated for millions of miles before they’re tested in the real world. These vehicles often have multiple sensors, including lidar and cameras, feeding into perception pipelines which are detecting other vehicles, pedestrians, traffic signals, and everything else needed for safe driving. They also have one or more control algorithms that are navigating via GPS, operating the steering and brakes, monitoring heading, speed, fuel, distance travelled, and other systems to operate the vehicle.&lt;/p&gt; 
+&lt;p&gt;Because of this, the number of required software components can be quite large. These components are usually developed by different engineering teams, then integrated for system testing. By enabling each team to build their entire stack or pipeline into a separate container, engineers can test against the other components more easily, without having to rebuild everything into one, massive, monolithic container. Figure 1 is an example of an autonomous vehicle simulation. There are five total containers, &amp;nbsp;one for the test scenario runner, one for the simulator, and three containers for the autonomous vehicle, representing the lidar processing, camera pipeline, and the autonomous control.&lt;/p&gt; 
+&lt;div id="attachment_3577" style="width: 769px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3577" loading="lazy" class="size-full wp-image-3577" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.29.13.png" alt="Figure 1 - An example of an autonomous vehicle simulation. There’s a container for the test scenario runner and the simulator, and three containers for the autonomous vehicle, representing the lidar processing, camera pipeline and the autonomous control." width="759" height="441"&gt;
+ &lt;p id="caption-attachment-3577" class="wp-caption-text"&gt;Figure 1 – An example of an autonomous vehicle simulation. There’s a container for the test scenario runner and the simulator, and three containers for the autonomous vehicle, representing the lidar processing, camera pipeline and the autonomous control.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h4&gt;Robotics&lt;/h4&gt; 
+&lt;p&gt;Another use case needing multiple containers is robotics simulation. We’re using robots in growing numbers for logistics, healthcare, and other industries. Robots – like autonomous cars – can also have multiple sensors (lidars, cameras, odometry, inertial measurement units), and a control stack for moving, all of which can be containerized.&lt;/p&gt; 
+&lt;p&gt;Often we want to simulate multiple robots in a single environment, like a warehouse. That means you can go from running a few containers, to running hundreds at once in a single simulation. In the multi-robot example diagram (Figure 2), you can see there are separate containers for the test scenario runner, the simulation app, and four robots, each with containers for lidar, vision processing and control.&lt;/p&gt; 
+&lt;div id="attachment_3578" style="width: 817px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3578" loading="lazy" class="size-full wp-image-3578" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.29.40.png" alt="Figure 2 - A four robot simulation in an AWS Batch multi-node parallel job. On the main node (Node 1) there’s a container each for the test scenario runner and the simulator, and four nodes of three containers for each robot, representing the lidar processing, camera pipeline and the autonomous control." width="807" height="425"&gt;
+ &lt;p id="caption-attachment-3578" class="wp-caption-text"&gt;Figure 2 – A four robot simulation in an AWS Batch multi-node parallel job. On the main node (Node 1) there’s a container each for the test scenario runner and the simulator, and four nodes of three containers for each robot, representing the lidar processing, camera pipeline and the autonomous control.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;These are just two examples of simulations that can be run in Batch with multi-container support.&lt;/p&gt; 
+&lt;h2&gt;Partners love this&lt;/h2&gt; 
+&lt;p&gt;A number of AWS partners have used Batch for some time to provide simulation software and services for the AV/ADAS and robotics communities. Over the next few months, we’ll have more posts in this channel which dive deeper into the work they’re all doing.&lt;/p&gt; 
+&lt;h3&gt;IPG Automotive&lt;/h3&gt; 
+&lt;div id="attachment_3579" style="width: 369px" class="wp-caption alignright"&gt;
+ &lt;img aria-describedby="caption-attachment-3579" loading="lazy" class="size-full wp-image-3579" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.30.32.png" alt="Figure 3 - IPG CarMaker is an autonomous car simulator" width="359" height="396"&gt;
+ &lt;p id="caption-attachment-3579" class="wp-caption-text"&gt;Figure 3 – IPG CarMaker is an autonomous car simulator&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;a href="https://ipg-automotive.com/en/"&gt;IPG Automotive&lt;/a&gt; is an AWS partner that’s been developing software for decades. They’re best known for their AV/ADAS simulators: CarMaker, TruckMaker and MotorcycleMaker. IPG has been partnering with the AWS Batch team to develop the multi-container feature for Batch to enable their customers to scale out these simulations on AWS.&lt;/p&gt; 
+&lt;p&gt;“&lt;em&gt;Developing cutting-edge autonomous vehicles and ADAS technologies requires hundreds of thousands of hours of testing within simulated environments mirroring real-world driving scenarios&lt;/em&gt;,” according to David Howarth, who is the Executive Director at IPG Automotive North America. “&lt;em&gt;By using AWS Batch multi-container jobs for our simulations, IPG’s customers can now seamlessly separate their CarMaker simulator, the 3D virtual environment, and their sensor pipelines into different containers on AWS. This capability accelerates both DevOps and debugging processes, significantly enhancing overall efficiency.&lt;/em&gt;”&lt;/p&gt; 
+&lt;h3&gt;Robotec.ai&lt;/h3&gt; 
+&lt;div id="attachment_3580" style="width: 394px" class="wp-caption alignleft"&gt;
+ &lt;img aria-describedby="caption-attachment-3580" loading="lazy" class="size-full wp-image-3580" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.31.08.png" alt="Figure 4 - Simulated autonomous mining operation in RoSi" width="384" height="355"&gt;
+ &lt;p id="caption-attachment-3580" class="wp-caption-text"&gt;Figure 4 – Simulated autonomous mining operation in RoSi&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;a href="https://robotec.ai/"&gt;Robotec.ai&lt;/a&gt; is a growing simulation software company that has developed their own simulator called RoSi. They are working with customers on AV/ADAS, robotics, and autonomous mining operations.&lt;/p&gt; 
+&lt;p&gt;“&lt;em&gt;Our customers demand thorough and safe testing of autonomous vehicles within a simulated environment. For one of our mining customers, Boliden, this translates to nearly a thousand hours of simulation every time they modify their operations,&lt;/em&gt;” said Michal Niezgoda, CEO of Robotec.ai. “The AWS Batch multi-container jobs feature streamlines our simulations at scale and powers our RoSi simulator to meet customer needs.” “&lt;em&gt;By using AWS Batch multi-container jobs, we can easily execute a large number of operational scenarios for a mining site with just a few clicks&lt;/em&gt;,” said Mikael Staffas, CEO of Boliden. “&lt;em&gt;This new feature, as part of AWS Batch, integrates seamlessly with other AWS services, allowing us to use the scaling and scheduling capabilities of the cloud and optimize compute costs&lt;/em&gt;.”&lt;/p&gt; 
+&lt;h3&gt;MORAI.ai&lt;/h3&gt; 
+&lt;p&gt;MORAI, a technology company from Korea, offers a digital twin simulation system that accelerates the development and testing of autonomous vehicles, urban air mobility (UAM), autonomous mobile robots (AMR), and maritime autonomous surface ships (MASS).&lt;/p&gt; 
+&lt;div id="attachment_3581" style="width: 322px" class="wp-caption alignright"&gt;
+ &lt;img aria-describedby="caption-attachment-3581" loading="lazy" class="size-full wp-image-3581" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.31.38.png" alt="Figure 5 - MORAI Simulation" width="312" height="499"&gt;
+ &lt;p id="caption-attachment-3581" class="wp-caption-text"&gt;Figure 5 – MORAI Simulation&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;“&lt;em&gt;Before AWS Batch multi-container jobs, building custom simulation infrastructures for each client took several months. With the multi-container jobs feature, we can get our customers up and running with their simulations in just a few days&lt;/em&gt;,” said Jun Hong, co-founder and head of the R&amp;amp;D center at MORAI. “&lt;em&gt;This is crucial as they conduct extensive testing and validation to ensure their autonomous systems, including AV/ADAS, robotics, and maritime applications, are prepared to safely manage any scenarios they might face in the real world. The new feature significantly streamlines job preparation and reduces our reliance on in-house tool development&lt;/em&gt;.”&lt;/p&gt; 
+&lt;h2&gt;How it works&lt;/h2&gt; 
+&lt;p&gt;Let’s talk about the basic workflow for running multi-container simulations in Batch. The diagram in Figure 3 shows a high-level overview of the workflow we’ll discuss.&lt;/p&gt; 
+&lt;div id="attachment_3582" style="width: 776px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3582" loading="lazy" class="wp-image-3582 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.32.00.png" alt="Figure 6 - The AWS Batch simulation flow. A user creates a multi-container job definition, then submits a job to the job queue for a compute environment." width="766" height="357"&gt;
+ &lt;p id="caption-attachment-3582" class="wp-caption-text"&gt;Figure 6 – The AWS Batch simulation flow. A user creates a multi-container job definition, then submits a job to the job queue for a compute environment.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 6 – The AWS Batch simulation flow. A user creates a multi-container job definition, then submits a job to the job queue for a compute environment.&lt;/p&gt; 
+&lt;p&gt;To run a simulation job in AWS Batch you need to:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Build and push your containers into a repository, like Amazon ECR.&lt;/li&gt; 
+ &lt;li&gt;Create the Batch resources including: 
+  &lt;ol&gt; 
+   &lt;li&gt;A compute environment (CE)&lt;/li&gt; 
+   &lt;li&gt;A job queue (JQ)&lt;/li&gt; 
+   &lt;li&gt;A multi-container job definition&lt;/li&gt; 
+  &lt;/ol&gt; &lt;/li&gt; 
+ &lt;li&gt;Submit the job to the job queue&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2&gt;Running an example simulation job using multiple containers&lt;/h2&gt; 
+&lt;p&gt;Let’s use this framework to walk through a simple example that demonstrates how to start two containers in a Batch job so they can communicate with each other. One container is a &lt;em&gt;talker&lt;/em&gt; that publishes a message and the other is a &lt;em&gt;listener&lt;/em&gt; that will receive and echo the message. We’ll use &lt;a href="https://docs.ros.org/en/humble/index.html"&gt;ROS 2&lt;/a&gt;, a software library for autonomous vehicles and robotics, to communicate between the two containers. Figure 4 illustrates the simple communication. The &lt;em&gt;talker&lt;/em&gt; container will publish ‘hello’ on the ROS 2 topic named &lt;em&gt;/chatter&lt;/em&gt; and the &lt;em&gt;listener&lt;/em&gt; will echo the message.&lt;/p&gt; 
+&lt;div id="attachment_3583" style="width: 580px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3583" loading="lazy" class="size-full wp-image-3583" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.32.28.png" alt="Figure 7 - An example Batch multi-container job with two containers—a talker and a listener." width="570" height="371"&gt;
+ &lt;p id="caption-attachment-3583" class="wp-caption-text"&gt;Figure 7 – An example Batch multi-container job with two containers—a talker and a listener.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;To run this example, we’ll follow the steps we outlined already to create the Batch job, using the console and the AWS Command-Line Interface (CLI). We’ll use a container image that already exists in Amazon ECR, so there’s no need to build or push the image.&lt;/p&gt; 
+&lt;h3&gt;Step 1 – create a compute environment&lt;/h3&gt; 
+&lt;p&gt;First, create an EC2 based compute environment from the AWS Batch console:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Log into your AWS Account, and navigate to the AWS Batch console&lt;/li&gt; 
+ &lt;li&gt;In the navigation pane, choose &lt;strong&gt;Environments&lt;/strong&gt;, then &lt;strong&gt;Create &lt;/strong&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div id="attachment_3584" style="width: 863px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3584" loading="lazy" class="size-full wp-image-3584" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.33.01.png" alt="Figure 8 - Compute Environments console view" width="853" height="387"&gt;
+ &lt;p id="caption-attachment-3584" class="wp-caption-text"&gt;Figure 8 – Compute Environments console view&lt;/p&gt;
+&lt;/div&gt; 
+&lt;ol start="3"&gt; 
+ &lt;li&gt;Select &lt;strong&gt;Amazon&lt;/strong&gt; &lt;strong&gt;EC2&lt;/strong&gt; Orchestration Type, then&lt;strong&gt; Confirm&lt;/strong&gt;&lt;/li&gt; 
+ &lt;li&gt;Input a &lt;strong&gt;Name, &lt;/strong&gt;&lt;code&gt;CE_EC2&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;Select an &lt;strong&gt;Instance Role &lt;/strong&gt;(if you don’t have an instance role follow &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html"&gt;the user guide&lt;/a&gt;, or choose &lt;strong&gt;Create new role&lt;/strong&gt;)&lt;/li&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Next,&lt;/strong&gt; then &lt;strong&gt;Next&lt;/strong&gt; again, your default VPC and subnet information should be automatically added&lt;/li&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Next&lt;/strong&gt;, then &lt;strong&gt;Create Compute Environment&lt;/strong&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;You’ve now created a compute environment. You can view it any time from the navigation pane under &lt;strong&gt;Compute Environments&lt;/strong&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt; 
+&lt;div id="attachment_3585" style="width: 864px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3585" loading="lazy" class="size-full wp-image-3585" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.33.27.png" alt="Figure 9 - Compute Environment console with newly created environment" width="854" height="394"&gt;
+ &lt;p id="caption-attachment-3585" class="wp-caption-text"&gt;Figure 9 – Compute Environment console with newly created environment&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Step 2 – create a job queue&lt;/h3&gt; 
+&lt;p&gt;Next create a Job Queue for your Compute Environment from the AWS Batch console:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;On the navigation pane, choose &lt;strong&gt;Job Queues&lt;/strong&gt;, then &lt;strong&gt;Create &lt;/strong&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div id="attachment_3586" style="width: 862px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3586" loading="lazy" class="size-full wp-image-3586" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.33.45.png" alt="Figure 10 - Job queue console view" width="852" height="391"&gt;
+ &lt;p id="caption-attachment-3586" class="wp-caption-text"&gt;Figure 10 – Job queue console view&lt;/p&gt;
+&lt;/div&gt; 
+&lt;ol start="2"&gt; 
+ &lt;li&gt;Select &lt;strong&gt;Amazon EC2&lt;/strong&gt; Orchestration Type&lt;/li&gt; 
+ &lt;li&gt;Input a &lt;strong&gt;Name&lt;/strong&gt;, &lt;code&gt;JQ_EC2&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;From the &lt;strong&gt;Connected compute environments&lt;/strong&gt; drop down list, select the environment you created in step 1 (&lt;code&gt;CE_EC2&lt;/code&gt;).&lt;/li&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Create Job Queue&lt;/strong&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;You’ve now created a Job Queue to submit your job into. You can view it any time from the navigation pane under &lt;strong&gt;Job Queues.&lt;/strong&gt;&lt;/p&gt; 
+&lt;div id="attachment_3587" style="width: 869px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3587" loading="lazy" class="size-full wp-image-3587" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.34.09.png" alt="Figure 11 - Job queue console with newly created queue" width="859" height="394"&gt;
+ &lt;p id="caption-attachment-3587" class="wp-caption-text"&gt;Figure 11 – Job queue console with newly created queue&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Step 3 – create a job definition&lt;/h3&gt; 
+&lt;p&gt;For this step, we’ll use the AWS CLI to create the Job Definition for our job using &lt;em&gt;JSON input&lt;/em&gt;. For instructions on setting up the AWS CLI, see the &lt;a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html"&gt;Getting Started&lt;/a&gt; guide. You’ll need to update to the latest CLI version to get the new Batch multi-container functionality.&lt;/p&gt; 
+&lt;p&gt;Create a new file called &lt;code&gt;ros2-talker-listener.json&lt;/code&gt; and copy the following JSON into that file.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-json"&gt;{
+  "jobDefinitionName": "ros2-talker-listener",
+  "type": "container",
+  "platformCapabilities": [
+    "EC2"
+  ],
+  "timeout": { 
+      "attemptDurationSeconds": 60
+  },
+  "ecsProperties": {
+    "taskProperties": [
+      {
+        "ipcMode": "task",
+        "containers": [
+          {
+            "essential": true,
+            "command": ["/bin/bash", "-c", "ros2 topic pub -t 10 /chatter std_msgs/msg/String '{data: hello}'"],
+            "image": "public.ecr.aws/docker/library/ros:humble",
+            "name": "talker",
+            "resourceRequirements": [
+              {
+                "type": "VCPU",
+                "value": "1"
+              },
+              {
+                "type": "MEMORY",
+                "value": "2048"
+              }
+            ]
+          },
+          {
+            "essential": true,
+            "command": ["/bin/bash", "-c", "ros2 topic echo /chatter"],
+            "image": "public.ecr.aws/docker/library/ros:humble",
+            "name": "listener",
+            "dependsOn": [
+            {
+              "condition": "START",
+              "containerName": "talker"
+            }
+            ],
+            "resourceRequirements": [
+              {
+                "type": "VCPU",
+                "value": "1"
+              },
+              {
+                "type": "MEMORY",
+                "value": "2048"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The JSON job definition above includes a new ecsProperties object that defines the two containers we’re running, the &lt;em&gt;talker&lt;/em&gt; and &lt;em&gt;listener&lt;/em&gt; containers. For each container, we’ll pull the image ros:humble from public ECR, and run the command inside each container. This example also requires us to set ipcMode to task so that the containers can communicate, and creates a dependency that the &lt;em&gt;listener&lt;/em&gt; container dependsOn the &lt;em&gt;talker&lt;/em&gt; getting to the START condition. For more details see the &lt;a href="https://docs.aws.amazon.com/batch/latest/APIReference/API_SubmitJob.html"&gt;AWS Batch SubmitJob API documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;To create the job definition, we’ll use the AWS CLI again:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;aws batch register-job-definition --cli-input-json file://ros2-talker-listener.json&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;It’s possible you may see an error that says:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;Unknown parameter in input: "ecsProperties", must be one of: jobDefinitionName, type, parameters, schedulingPriority, containerProperties, nodeProperties, retryStrategy, propagateTags, timeout, tags, platformCapabilities, eksProperties&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This means your AWS CLI version &lt;em&gt;doesn’t recognize the new parameters to the API&lt;/em&gt;. You’re probably using a version you installed before Batch had this feature, so you need to update it. For instructions on updating the AWS CLI, see the &lt;a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html"&gt;Getting Started&lt;/a&gt; guide.&lt;/p&gt; 
+&lt;p&gt;You can now view your job-definition from the Batch console under &lt;strong&gt;Job definitions:&lt;/strong&gt;&lt;/p&gt; 
+&lt;div id="attachment_3588" style="width: 864px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3588" loading="lazy" class="size-full wp-image-3588" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.34.57.png" alt="Figure 12 - Job definitions console view" width="854" height="389"&gt;
+ &lt;p id="caption-attachment-3588" class="wp-caption-text"&gt;Figure 12 – Job definitions console view&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Step 4 – submit your job&lt;/h3&gt; 
+&lt;p&gt;Now that you’ve created the job definition, you can submit the job using the AWS CLI.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;aws batch submit-job --job-queue JQ_EC2 --job-name ros2-talker-listener --job-definition ros2-talker-listener&lt;/code&gt;&lt;/pre&gt; 
+&lt;h3&gt;Step 5 – view results&lt;/h3&gt; 
+&lt;p&gt;Now, return to the AWS Batch console and select &lt;strong&gt;Jobs&lt;/strong&gt; from the left menu. Then choose your job queue (JQ_EC2) from the drop-down menu. You should see your job listed. Click on the job name to view the job details.&lt;/p&gt; 
+&lt;div id="attachment_3589" style="width: 867px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3589" loading="lazy" class="size-full wp-image-3589" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.35.21.png" alt="Figure 13 - Job details console view" width="857" height="389"&gt;
+ &lt;p id="caption-attachment-3589" class="wp-caption-text"&gt;Figure 13 – Job details console view&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;After a few minutes, you should see that the job succeeded. You can now view the logs to see what happened.&lt;/p&gt; 
+&lt;p&gt;On the &lt;strong&gt;Job attempts&lt;/strong&gt; tab, select the Log stream name to view the log events in AWS CloudWatch.&lt;/p&gt; 
+&lt;div id="attachment_3590" style="width: 865px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3590" loading="lazy" class="size-full wp-image-3590" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.35.36.png" alt="Figure 14 - CloudWatch logs console view of talker output" width="855" height="389"&gt;
+ &lt;p id="caption-attachment-3590" class="wp-caption-text"&gt;Figure 14 – CloudWatch logs console view of talker output&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;You should see the logs for the &lt;em&gt;talker&lt;/em&gt; looping 10 times publishing ‘hello’.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;Waiting for at least 1 matching subscription(s)...
+publisher: beginning loop                         
+publishing #1: std_msgs.msg.String(data='hello')
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Similarly, from the Batch Job details view, select the log name for the listener node, and you should see the log of the &lt;em&gt;listener&lt;/em&gt; echoing the message 10 times.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;data: hello
+---
+data: hello
+---
+data: hello
+---
+data: hello
+---
+data: hello
+---
+data: hello
+---
+data: hello
+---
+data: hello
+---
+data: hello
+---
+data: hello
+---
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;div id="attachment_3591" style="width: 877px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3591" loading="lazy" class="size-full wp-image-3591" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.36.00.png" alt="Figure 15 - CloudWatch logs console view of listener output" width="867" height="391"&gt;
+ &lt;p id="caption-attachment-3591" class="wp-caption-text"&gt;Figure 15 – CloudWatch logs console view of listener output&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;And that’s it for running and viewing the &lt;em&gt;talker – listener&lt;/em&gt; example. This example demonstrated how you can start two containers in an AWS Batch job and they can communicate with each other.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we discussed some multi-container simulation use cases, learned how some AWS Partners &amp;nbsp;are using it to run their simulators on AWS Batch, and learned how to quickly get started running multi-container jobs in Batch using a simple example.&lt;/p&gt; 
+&lt;p&gt;For more help using AWS Batch for simulations, follow the User Guide &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html"&gt;Getting Started with AWS Batch&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Linter rules for Nextflow to improve the detection of errors before runtime</title>
 		<link>https://aws.amazon.com/blogs/hpc/linter-rules-for-nextflow-to-improve-the-detection-of-errors-before-runtime/</link>
 		
@@ -28,7 +283,7 @@
 		<guid isPermaLink="false">918a6c3069ff95919afafe3727710e60191c475d</guid>
 
 					<description>Check out this post to learn how linter rules for Nextflow's DSL can help you catch errors in your workflows before runtime, which means greater developer productivity, which leads directly to a faster time to science.</description>
-										<content:encoded>&lt;p&gt;&lt;a href="https://www.nextflow.io/"&gt;&lt;img class="alignright size-full wp-image-3518" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/Linter-rules-for-Nextflow-to-improve-the-detection-of-errors-before-runtime-1.png" alt="Linter rules for Nextflow to improve the detection of errors before runtime" width="380" height="212"&gt;Nextflow&lt;/a&gt; is a popular domain-specific language (DSL) and runtime used to define workflows that string together multiple processing steps into a pipeline. This allows it to perform quite complex genomics or scientific analyses including for machine-learning.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;a href="https://www.nextflow.io/"&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3518" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/Linter-rules-for-Nextflow-to-improve-the-detection-of-errors-before-runtime-1.png" alt="Linter rules for Nextflow to improve the detection of errors before runtime" width="380" height="212"&gt;Nextflow&lt;/a&gt; is a popular domain-specific language (DSL) and runtime used to define workflows that string together multiple processing steps into a pipeline. This allows it to perform quite complex genomics or scientific analyses including for machine-learning.&lt;/p&gt; 
 &lt;p&gt;Workflows defined in Nextflow code can leverage container orchestration technologies to deploy containerized workloads across clusters, clouds, or HPC environments. As an interpreted language, errors in a Nextflow script are only revealed at runtime. This increases the time and cost of developing and debugging a workflow which could be reduced if errors could be spotted earlier.&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll discuss how we created &lt;strong&gt;linter rules&lt;/strong&gt; for Nextflow DSL 2, how these rules can be extended and how you can use them to check your scripts before runtime.&lt;/p&gt; 
 &lt;h2&gt;Background&lt;/h2&gt; 
@@ -2213,111 +2468,6 @@ $ srun -p interactive --mem 1G -c 1 --time 1:00:00 --pty /bin/bash&lt;/code&gt;&
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;You can easily configure and deploy a Slurm cluster on AWS using AWS ParallelCluster and &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster"&gt;aws-eda-slurm-cluster&lt;/a&gt; that can run your most demanding EDA workloads and take advantage of the performance and scalability of AWS to meet your project needs.&lt;/p&gt; 
 &lt;p&gt;Contact your AWS account team and schedule a meeting with our semiconductor industry specialists for more information and help getting your EDA workloads running on AWS.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Using a Level 4 Digital Twin for scenario analysis and risk assessment of manufacturing production on AWS</title>
-		<link>https://aws.amazon.com/blogs/hpc/using-a-level-4-digital-twin-for-scenario-analysis-and-risk-assessment-of-manufacturing-production-on-aws/</link>
-		
-		<dc:creator><![CDATA[Ross Pivovar]]></dc:creator>
-		<pubDate>Tue, 12 Dec 2023 15:09:36 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">f0833eb293524843a9cbd91da39f3e12e62cf6bb</guid>
-
-					<description>This post was contributed by Orang Vahid (Dir of Engineering Services) and Kayla Rossi (Application Engineer) at Maplesoft, and Ross Pivovar (Solution Architect) and Adam Rasheed (Snr Manager) from Autonomous Computing at AWS One of the most common objectives for our Digital Twin (DT) customers is to use DTs for scenario analysis to assess risk […]</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by &lt;/em&gt;&lt;em&gt;Orang Vahid (Dir of Engineering Services) &lt;/em&gt;&lt;em&gt;and Kayla Rossi (Application Engineer) &lt;/em&gt;&lt;em&gt;at Maplesoft, and &lt;/em&gt;&lt;em&gt;Ross Pivovar (Solution Architect) and &lt;/em&gt;&lt;em&gt;Adam Rasheed (Snr Manager) from Autonomous Computing at AWS&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;One of the most common objectives for our Digital Twin (DT) customers is to use DTs for scenario analysis to assess risk and drive operational decisions. Customers want Digital Twins of their industrial facilities, production processes, and equipment to simulate different scenarios to optimize their operations and predictive maintenance strategies.&lt;/p&gt; 
-&lt;p&gt;In a prior post, we described &lt;a href="https://aws.amazon.com/blogs/iot/digital-twins-on-aws-unlocking-business-value-and-outcomes/"&gt;a four-level digital twin framework&lt;/a&gt; to help you understand these use cases and the technologies required to build them.&lt;/p&gt; 
-&lt;p&gt;In this post today, we’re going to show you how to use an L4 &lt;em&gt;Living Digital Twin&lt;/em&gt; for scenario analysis and operational decision support for a manufacturing line. We’ll use &lt;a href="https://aws.amazon.com/blogs/hpc/predictive-models-and-simulations-with-twinflow-on-aws/"&gt;TwinFlow&lt;/a&gt; to combine a physics-based model created using &lt;a href="https://www.maplesoft.com/products/maplesim/"&gt;MapleSim&lt;/a&gt; with probabilistic Bayesian methods to calibrate the L4 DT so it can adapt to the changing real-world conditions as the equipment degrades over time.&lt;/p&gt; 
-&lt;p&gt;Then we’ll show you how to use the calibrated L4 DT to perform scenario analysis and risk assessment to simulate possible outcomes and make informed decisions. MapleSim provides the tools to create engineering simulation models of machine equipment and TwinFlow is an AWS open-source framework for building and deploying predictive models at scale.&lt;/p&gt; 
-&lt;h2&gt;L4 Living Digital Twin of roll-to-roll manufacturing&lt;/h2&gt; 
-&lt;p&gt;For our use case, we considered the web-handling process in roll-to-roll manufacturing for continuous materials like paper, film, and textiles. The web-handling process involves unwinding the material from a spool, guiding it through various treatments like printing or coating, and then winding it onto individual rolls. It’s essential that we precisely control the tension, alignment, and speed to ensure smooth processing and maintain product quality.&lt;/p&gt; 
-&lt;p&gt;Figure 1 shows a schematic diagram of the web-handling equipment consisting of 9 rollers (labeled with “R”) and 12 material spans (labeled with “S”).&lt;/p&gt; 
-&lt;div id="attachment_3136" style="width: 635px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3136" loading="lazy" class="size-full wp-image-3136" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-13.03.46.png" alt="Figure 1 Schematic diagram of the web-handling equipment in which each span is labeled as S1 through S12 and rollers are label R1 through R10." width="625" height="199"&gt;
- &lt;p id="caption-attachment-3136" class="wp-caption-text"&gt;Figure 1 Schematic diagram of the web-handling equipment in which each span is labeled as S1 through S12 and rollers are label R1 through R10.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;In our &lt;a href="https://aws.amazon.com/blogs/hpc/deploying-level-4-digital-twin-self-calibrating-virtual-sensors-on-aws/"&gt;previous post&lt;/a&gt;, we showed you how to build and deploy L4 Digital Twin &lt;em&gt;self-calibrating&lt;/em&gt; virtual sensors for predicting the tension in each of the spans and the slip velocity at each of the rollers throughout the web-handling process.&lt;/p&gt; 
-&lt;p&gt;An L4 Living Digital Twin focuses on modeling the behavior of the physical system by updating the model parameters using real world observations. The capability to update the model is what makes it a “living” digital twin that’s synchronized with the physical system and continuously adapting as the physical system evolves. These situations are common in industrial facilities or manufacturing plants as equipment degrades over time. Examples of real-world observations include continuous data (time-series data from physical sensors), discrete measurements (discrete sensor measurements), or discrete observations (visual inspection data).&lt;/p&gt; 
-&lt;p&gt;In this post, we’re extending our earlier example of L4 Digital Twin self-calibrating virtual sensors to conduct &lt;em&gt;what-if&lt;/em&gt; scenario analysis predictions. Conceptually, an L4 Digital Twin forecast looks like Figure 2 which plots the predicted value over time. For our example, we focused on predicting the span tension within the material being manufactured. This is operationally important because tension failures occur when the tension within the material exceeds a threshold (175 Newtons in this example) resulting in product quality issues (e.g., scratches, breakage, wrinkling, or troughing).&lt;/p&gt; 
-&lt;div id="attachment_3137" style="width: 645px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3137" loading="lazy" class="size-full wp-image-3137" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-13.04.28.png" alt="Figure 2 Conceptual plot showing historical measured data (observations) and L4 Digital Twin future forecast with uncertainty bounds showing when the predicted value will cross the failure threshold." width="635" height="380"&gt;
- &lt;p id="caption-attachment-3137" class="wp-caption-text"&gt;Figure 2 Conceptual plot showing historical measured data (observations) and L4 Digital Twin future forecast with uncertainty bounds showing when the predicted value will cross the failure threshold.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The vertical line (marked “&lt;em&gt;Today&lt;/em&gt;”) shows the delineation between historical data collected in the past (the blue dots) and the future prediction with uncertainty bounds. In our case, the historical observations are values determined from the past inferred viscous damping coefficients because physical sensor measurements weren’t available. The L4 Digital Twin makes a prediction of the tension value today, and at all points in the future, including when the tension value will cross the damage threshold. The delta between &lt;em&gt;Today&lt;/em&gt; and the time at which the prediction crosses the threshold represents the amount of time the operator has available to take some corrective action.&lt;/p&gt; 
-&lt;p&gt;Of course, we can’t predict the future with perfect certainty so it’s important that all predictions be quantified with uncertainty bounds. This allows the operator to plan their corrective actions based on their risk tolerance. If the operator is risk averse, then they’d take corrective actions before the earliest uncertainty band crosses the threshold. In this way, they have a high probability of applying corrective action before failure happens. If they’re risk neutral, they would use the mean value. If they are willing to accept high risk, they could delay scheduling corrective actions to the later uncertainty band, recognizing that there’s a high probability of failure before they apply corrective actions. This last option may be logical when part replacement is more costly than lost production downtime.&lt;/p&gt; 
-&lt;p&gt;In our example, we’re focusing on tension failure that results in a product quality issue, but the exact same approach can be used to predict equipment failure and remaining useful life (RUL) to proactively develop preventive maintenance plans.&lt;/p&gt; 
-&lt;h2&gt;Example scenario analysis&lt;/h2&gt; 
-&lt;p&gt;A potential scenario requiring risk assessment involves the detection of gradual dirt build-up on the roller bearings. Using the time series of the component degradation, we can predict when a failure could occur in the future. This knowledge lets us estimate when maintenance should be done.&lt;/p&gt; 
-&lt;p&gt;The end result is that we can 1) maximize throughput of the manufacturing line to increase revenue and; 2) reduce costs by reducing defects and unnecessary downtime. A &lt;em&gt;third&lt;/em&gt; benefit that’s rather application specific is a more targeted maintenance scheme. If we regularly schedule maintenance on all components, we run the risk of performing maintenance on components that don’t need servicing, increasing waste. Using a calibrated digital twin, we can specifically target the components that are degrading instead of everything at once.&lt;/p&gt; 
-&lt;p&gt;To solidify these ideas, let’s think about the web-handling roll-to-roll manufacturing line again. Using the L4 Digital Twin we described in our last post lets us simulate a synthetic degradation scenario. In that scenario, we simulated bearing degradation by manually increasing the viscous damping coefficient for roller 9 from 0 on Day 15 to 0.2 on Day 19.&lt;/p&gt; 
-&lt;p&gt;In Figure 3, we see the L4 Digital Twin is capturing that roller 9’s viscous damping coefficient is increasing from Day 15 to Day 19. We can tell that viscous damping is increasing, causing a change in tension in multiple spans, and we need to decide our course of action. The immediate risk to assess is whether we need to shut down the line to perform maintenance – or not.&lt;/p&gt; 
-&lt;p&gt;Imagine that the dirt build up is detected on a Friday morning and the maintenance crew will be out on Monday because it’s a 3-day holiday weekend. Can we continue to generate product over the weekend and run the risk of increasing defects, or is it more cost effective to shut down the line for repairs on Friday before the maintenance crew heads home? Making this decision requires a &lt;em&gt;forecast&lt;/em&gt; of the viscous damping coefficient and the span tension, &lt;em&gt;and&lt;/em&gt; the uncertainty around these predictions. For example, predicting the damage threshold will be exceeded in 4 days ± 1 day means the maintenance can be deferred to Tuesday. If the prediction is 4 days ± 3 days, then it could very well be an issue tomorrow when the maintenance crew is out for the weekend.&lt;/p&gt; 
-&lt;div id="attachment_3138" style="width: 878px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3138" loading="lazy" class="size-full wp-image-3138" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-13.05.06.png" alt="Figure 3 The inferred viscous damping coefficients calculated via TwinFlow UKF with MapleSim digital twin. Viscous damping coefficient of roller 9 is predicted to be increasing over the last several days" width="868" height="784"&gt;
- &lt;p id="caption-attachment-3138" class="wp-caption-text"&gt;Figure 3 The inferred viscous damping coefficients calculated via TwinFlow UKF with MapleSim digital twin. Viscous damping coefficient of roller 9 is predicted to be increasing over the last several days&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Using TwinFlow to perform scenario analysis&lt;/h2&gt; 
-&lt;p&gt;Like in our previous post, we first used MapleSim to create the physics-based model of the web-handling process and exported the model as a Modelica Functional Mockup Unit (FMU) which is an industry standard file format for simulation models.&lt;/p&gt; 
-&lt;p&gt;We then used &lt;a href="https://aws.amazon.com/blogs/hpc/predictive-models-and-simulations-with-twinflow-on-aws/"&gt;TwinFlow&lt;/a&gt; to combine the MapleSim model with an &lt;a href="https://en.wikipedia.org/wiki/Kalman_filter"&gt;Unscented Kalman Filter (UKF)&lt;/a&gt; to infer the viscous damping coefficients of the rollers in the manufacturing line. This calibration process tunes the model based on the available physical sensor data (rotation speeds of the rollers). In that previous post, we showed how the self-calibrated virtual sensors then used the incoming sensor measurements (roller angular velocity and rotation speeds) to predict tension and slip velocity at any moment in time. Here, we’ll show how to use the same L4 Digital Twin to probabilistically forecast when the span tension will exceed the threshold. Readers can find this example described in an &lt;a href="https://aws.amazon.com/solutions/guidance/self-calibrating-level-4-digital-twins-on-aws/"&gt;AWS Solution&lt;/a&gt;, and a full CDK deployment of the code used for this example up on &lt;a href="https://github.com/aws-solutions-library-samples/guidance-for-self-calibrating-level-4-digital-twins-on-aws"&gt;Github&lt;/a&gt; with instructions about how to customize for your application and deploy it.&lt;/p&gt; 
-&lt;p&gt;Using TwinFlow we combine the calibrated L4 Digital Twin with forecasting models to both predict when we’ll exceed the failure threshold – and the uncertainty associated with that prediction. There are a large variety of forecasting models that range from parametric models that work well on small data sets, to non-parametric deep-learning models that often require larger data sets and hyperparameter tuning.&lt;/p&gt; 
-&lt;p&gt;For our application, we specifically want an estimate of the uncertainty in the forecast and a non-parametric method so that we don’t need to manually develop the model. A &lt;a href="https://en.wikipedia.org/wiki/Gaussian_process"&gt;Gaussian Process&lt;/a&gt; (GP) is a natural fit for these requirements and a scalable low-code representation is available in TwinFlow. Using the historical time series data of the viscous damping coefficient, we can fit a GP to the data and forecast 4 days into the future along with the 95% uncertainty – as we’ve done in Figure 4.&lt;/p&gt; 
-&lt;div id="attachment_3139" style="width: 838px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3139" loading="lazy" class="size-full wp-image-3139" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-13.05.35.png" alt="Figure 4 Forecast of viscous damping coefficient over next 4 days." width="828" height="372"&gt;
- &lt;p id="caption-attachment-3139" class="wp-caption-text"&gt;Figure 4 Forecast of viscous damping coefficient over next 4 days.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The uncertainty represents the prediction of possible future states for the viscous damping coefficients which we can then use with our L4 Digital Twin to forecast the span tension like in Figure 5. This figure corresponds to the conceptual diagram we drew in Figure 2 and you can tell that the tension crosses the threshold at 21.7 days with a lower uncertainty bound of 20.9 days. Given that today is Day 19, we can restate this as &lt;em&gt;failure is expected in 2.7 days with an uncertainty lower bound of 1.9 days from today&lt;/em&gt;. We now have enough information to decide whether to shut down the manufacturing line for maintenance or not.&lt;/p&gt; 
-&lt;p&gt;In our example, the operator notices a potential issue on Friday morning before the Monday long weekend. Our prediction is that failure will most likely occur after 2.7 days (Mon), but it could be as soon as 1.9 days (Sun) and the operator should preemptively perform the repair to avoid risking losing the weekend production. This type of analysis is very challenging for an operator to perform and the decision is often based on best judgement and operator experience. An additional benefit is that the L4 Digital Twin is modeling each component within the web-handling line – enabling the operator to identify &lt;em&gt;which specific rollers&lt;/em&gt; are likely to require maintenance instead of spending time and money on all the rollers in the line.&lt;/p&gt; 
-&lt;p&gt;&lt;/p&gt;
-&lt;div id="attachment_3140" style="width: 874px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3140" loading="lazy" class="size-full wp-image-3140" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-13.06.07.png" alt="Figure 5 Plot showing historical measured data (observations) and L4 Digital Twin future forecast with uncertainty bounds showing when the tension will cross the failure threshold [175 N]." width="864" height="387"&gt;
- &lt;p id="caption-attachment-3140" class="wp-caption-text"&gt;Figure 5 Plot showing historical measured data (observations) and L4 Digital Twin future forecast with uncertainty bounds showing when the tension will cross the failure threshold [175 N].&lt;/p&gt;
-&lt;/div&gt;The value of using an L4 Digital Twin is further understood by examining the probability distributions of the forecasts. While the GP uncertainty of the viscous damping coefficient is (by definition) a Gaussian distribution, the resulting uncertainty of the tension (the shaded region) in Figure 5 isn’t symmetric around the mean value – indicating that the probability distribution at each time slice is 
-&lt;em&gt;not&lt;/em&gt; Gaussian (without this information, it would likely be assumed to be Gaussian).
-&lt;p&gt;&lt;/p&gt; 
-&lt;p&gt;Figure 6 shows the forecast result at different time slices after being inserted into the digital twin. We can see that behavior is very non-linear with bimodal probability distributions, unlike the presumed normal (Gaussian) distributions shown in the conceptual diagram in Figure 2. We see the value of the L4 Digital Twin here because it’s impossible to know before-hand what the probability distributions would have been – and using the common assumption of Gaussian distributions would have resulted in inaccurate predictions.&lt;/p&gt; 
-&lt;p&gt;The physical cause of this non-Gaussian distribution is the nature of the physics. The changing viscous damping coefficients can exhibit discontinuous changes in material slip, resulting in abrupt tension changes. This wouldn’t have been detected if we just used a data-only approach.&lt;/p&gt; 
-&lt;div id="attachment_3141" style="width: 631px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3141" loading="lazy" class="size-full wp-image-3141" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-13.06.40.png" alt="Figure 6 Probability density distributions for max span tension at different forecasted time slices. " width="621" height="440"&gt;
- &lt;p id="caption-attachment-3141" class="wp-caption-text"&gt;Figure 6 Probability density distributions for max span tension at different forecasted time slices.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;AWS Architecture&lt;/h2&gt; 
-&lt;p&gt;The AWS architecture used for the L4 Digital Twin risk assessment is depicted in Figure 7. This architecture assumes the user has already enabled an &lt;a href="https://aws.amazon.com/blogs/hpc/deploying-level-4-digital-twin-self-calibrating-virtual-sensors-on-aws/"&gt;L4 self-calibrating digital twin&lt;/a&gt; where the output of the previous architecture is being pushed into an &lt;a href="https://aws.amazon.com/iot-sitewise/"&gt;AWS IoT SiteWise&lt;/a&gt; database. You can find a full CDK deployment of the code used for the example in this post on &lt;a href="https://github.com/aws-solutions-library-samples/guidance-for-self-calibrating-level-4-digital-twins-on-aws"&gt;Github&lt;/a&gt; with instructions on how to customize for your application and deployment. In Figure 7, steps 1 – 3 are the same as the Level 4 digital twin.&lt;/p&gt; 
-&lt;p&gt;With a small amount of code, we can use TwinFlow to pull down the IoT SiteWise data to an &lt;a href="https://aws.amazon.com/ec2/"&gt;Amazon EC2&lt;/a&gt; instance. We then fit a Gaussian Process (from the TwinStat module in TwinFlow) to the AWS IoT SiteWise data, forecast potential future outcomes, and then sampled the potential outcomes to obtain a data set to simulate with our digital twin.&lt;/p&gt; 
-&lt;p&gt;Once we have a dataset, we can submit the different inputs to the cloud (step 4) like an on-premises HPC cluster. The main point of divergence from a standard on-premises HPC cluster is the requirement to containerize the application-specific code. &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; is our cloud-native HPC scheduler that includes backend options for &lt;a href="https://aws.amazon.com/ecs/"&gt;Amazon ECS&lt;/a&gt;, which is an AWS-specific container orchestrations service, &lt;a href="https://aws.amazon.com/fargate/"&gt;AWS Fargate&lt;/a&gt;, which is a serverless execution option, and &lt;a href="https://aws.amazon.com/eks/"&gt;Amazon EKS&lt;/a&gt; which is our Kubernetes option. We used Amazon ECS because we wanted EC2 instances with large numbers of CPUs than those available for Fargate. Also, ECS enables fully-automated deployment unlike EKS.&lt;/p&gt; 
-&lt;p&gt;TwinFlow reads a task list, or loads from memory, the various scenarios to be simulated. A container that includes the MapleSim digital twin and any application-specific automation is stored in a container within ECR for cloud access. The specific EC2 instance type is automatically selected by AWS Batch auto-scaling based on the user-defined CPU/GPU and memory requirements.&lt;/p&gt; 
-&lt;p&gt;At step 5, the output predictions of the L4 DT simulations are generated with textual explanations and stored in an &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Service&lt;/a&gt; (Amazon S3) bucket which can then be made available to users via an interface. We can also store the prediction results in a database such as &lt;a href="https://aws.amazon.com/rds/"&gt;Amazon RDS&lt;/a&gt; (step 6), which can be pulled back into &lt;a href="https://aws.amazon.com/iot-twinmaker/"&gt;AWS IoT TwinMaker&lt;/a&gt; to compare with other data streams or review past forecasts for accuracy assessment.&lt;/p&gt; 
-&lt;div id="attachment_3142" style="width: 865px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3142" loading="lazy" class="size-full wp-image-3142" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-13.07.13.png" alt="Figure 7 AWS cloud architecture needed to achieve digital twin periodic-calibration" width="855" height="412"&gt;
- &lt;p id="caption-attachment-3142" class="wp-caption-text"&gt;Figure 7 AWS cloud architecture needed to achieve digital twin periodic-calibration&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Summary&lt;/h2&gt; 
-&lt;p&gt;In this post, we showed how to use a L4 Digital Twin to perform risk assessment and scenario analysis using an FMU model created by MapleSim. MapleSim provides the physics-based model in the form of an FMU and TwinFlow allows us to run scalable number of scenarios on AWS, providing efficient and elastic computing resources. In this L4 Digital Twin example the versatility of the hybrid modeling-based approach is demonstrated as the means of predicting fault scenarios that may have been missed if solely relying on physics-only or data-only based methods. Using the information gained from the scenario analysis enables you to do risk assessment and informed decision making.&lt;/p&gt; 
-&lt;p&gt;If you want to request a proof of concept or if you have feedback on the AWS tools, please reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-21.24.55.png" alt="Kayla Rossi" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Kayla Rossi&lt;/h3&gt; 
-  &lt;p&gt;Kayla is an Application Engineer at Maplesoft providing customers with advanced engineering support for the digital modeling of their complex production machines. Her project experience includes the simulation and analysis of web handling and converting systems across various industrial applications, including printing and battery production.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/06/CleanShot-2023-12-06-at-21.25.00.png" alt="Orang Vahid" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Orang Vahid&lt;/h3&gt; 
-  &lt;p&gt;Orang has over 20 years of experience in system-level modeling, advanced dynamic systems, frictional vibration and control, automotive noise and vibration, and mechanical engineering design. He is a frequent invited speaker and has published numerous papers on various topics in engineering design. At Maplesoft he is Director of Engineering Services, with a focus on the use and development of MapleSim solutions.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
 					
 		
 		
