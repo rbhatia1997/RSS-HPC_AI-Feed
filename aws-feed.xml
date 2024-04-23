@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Mon, 22 Apr 2024 15:39:25 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 23 Apr 2024 14:58:15 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,70 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Build and deploy a 1 TB/s file system in under an hour</title>
+		<link>https://aws.amazon.com/blogs/hpc/build-and-deploy-a-1-tb-s-file-system-in-under-an-hour/</link>
+		
+		<dc:creator><![CDATA[Randy Seamans]]></dc:creator>
+		<pubDate>Tue, 23 Apr 2024 14:26:36 +0000</pubDate>
+				<category><![CDATA[Amazon FSx]]></category>
+		<category><![CDATA[Amazon FSx for Lustre]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Storage]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Slurm]]></category>
+		<guid isPermaLink="false">2f2bf7a37ba03c570aa2e58624876ea742c109fd</guid>
+
+					<description>Want to set up a high-speed shared file system for your #HPC or #AI workloads in under an hour? Learn how with this new blog post.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3546" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/16/Red-speedometer.png" alt="" width="380" height="212"&gt;High throughput shared files systems are an essential part of any HPC or AI environment. Whether you want to train large language models (LLMs), find effective new drugs, or lead the search for new sources of energy, shared file systems are responsible for feeding compute and storing the hard-won results.&lt;/p&gt; 
+&lt;p&gt;If you manage or use an on-premise environment, you know the complexity, value, and cost of providing a high throughput persistent data repository. You probably also know it typically takes weeks or months to plan and provision a large Lustre environment from scratch.&lt;/p&gt; 
+&lt;p&gt;In this post, I’ll show how to build persistent shared file systems capable of &lt;em&gt;terabytes per second&lt;/em&gt; in AWS in under an hour.&lt;/p&gt; 
+&lt;h2&gt;Background&lt;/h2&gt; 
+&lt;p&gt;The dynamic nature of &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; enables your organization to leverage the massive scale of AWS compute, network, and storage for your HPC and AI applications while only paying for actual usage. If your organization is trying to reduce both time and cost to reach a solution, FSx for Lustre combined with &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/accelerated-computing-instances.html"&gt;AWS Accelerated Instances&lt;/a&gt; gets you off to a great start without waiting for on-premise resources.&lt;/p&gt; 
+&lt;p&gt;While live at the &lt;a href="https://sc23.supercomputing.org/"&gt;SuperComputing 2023&lt;/a&gt; AWS booth, I demonstrated a 1.1 PiB FSx for Lustre file system capable of over &lt;strong&gt;a terabyte per second&lt;/strong&gt; from a standard AWS account in the Northern Virginia region.&lt;/p&gt; 
+&lt;p&gt;Prior to building the file system, your account quotas for FSx for Lustre must be increased. There is no charge for maintaining an increased quota. But most importantly, I did not have to architect or pre-provision storage, storage servers, interconnect, nor select the proper Lustre configuration to meet my performance goals.&lt;/p&gt; 
+&lt;p&gt;As shown in figure 1, after completing a few questions, the FSx service started creating a high-throughput, persistent, SSD backed POSIX-compliant file system.&lt;/p&gt; 
+&lt;div id="attachment_3540" style="width: 1006px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3540" loading="lazy" class="size-full wp-image-3540" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/16/CleanShot-2024-04-16-at-16.56.22.png" alt="Figure 1 – Screenshot of the ease of creating a Persistent FSx for Lustre 1 TB/s file system in progress" width="996" height="454"&gt;
+ &lt;p id="caption-attachment-3540" class="wp-caption-text"&gt;Figure 1 – Screenshot of the ease of creating a Persistent FSx for Lustre 1 TB/s file system in progress&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;By relieving the heavy lift of deployment, not only is there a huge savings in time, but the human effort previously used to plan, evaluate, procure, rack, build, configure, and manage can be redirected to tasks that more directly impact the time to solution.&lt;/p&gt; 
+&lt;h2&gt;How long does it take for the file system to become ready?&lt;/h2&gt; 
+&lt;p&gt;When a FSx for Lustre file system is created, you can create an empty file system, or you can import existing metadata from data repositories. &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/overview-dra-data-repo.html"&gt;Data Repositories&lt;/a&gt; are simply &lt;a href="https://aws.amazon.com/s3/"&gt;S3 buckets&lt;/a&gt; or &lt;a href="https://repost.aws/knowledge-center/s3-prefix-nested-folders-difference"&gt;S3 Prefixes&lt;/a&gt; that exist in AWS.&lt;/p&gt; 
+&lt;p&gt;When creating my 1 PiB file system at SC23, the build completed in far less than one hour – &lt;em&gt;including importing the metadata&lt;/em&gt;. You can specify one data repository association (DRA) on build, and you can add up to seven more (as needed) after initial build. Of course, the length of time to load a DRA is directly dependent upon the throughput level, and the volume of metadata.&lt;/p&gt; 
+&lt;p&gt;What sort of environments does FSx for Lustre enable? At SC23, I used a cluster of over 120 i3en.24xlarge Amazon EC2 compute-optimized instances, each with a 100 Gbit/s &lt;a href="https://aws.amazon.com/hpc/efa/"&gt;Elastic Fabric Adapter&lt;/a&gt; for network connectivity.&lt;/p&gt; 
+&lt;p&gt;Recently we introduced new &lt;a href="https://aws.amazon.com/ec2/instance-types/#HPC_Optimized"&gt;HPC optimized instances&lt;/a&gt; that support EFA bandwidth up to 300 Gb/s (Hpc7a instance). You can &lt;a href="https://www.youtube.com/watch?v=i2T7Hi2Yjoc"&gt;find out more about them&lt;/a&gt; from our HPC Tech Shorts channel on YouTube. If you need to scale your compute for heavy duty GPU workloads, FSx for Lustre also can connect to the &lt;a href="https://aws.amazon.com/ec2/ultraclusters/"&gt;EC2 UltraCluster&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;The particular instances you choose for any given workload should be tailored to your application’s requirements to keep your costs low, and speed of execution high.&lt;/p&gt; 
+&lt;p&gt;Now, once our build and/or load is complete, let’s move on to unit testing of our new file system.&lt;/p&gt; 
+&lt;h2&gt;How fast can this go?&lt;/h2&gt; 
+&lt;div id="attachment_3549" style="width: 813px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3549" loading="lazy" class="size-full wp-image-3549" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/16/CleanShot-2024-04-16-at-16.57.20-1.png" alt="Figure 2 – Screenshot of a single cluster node achieving 9.25 GByte/s of file system Read/Write throughput via fio" width="803" height="418"&gt;
+ &lt;p id="caption-attachment-3549" class="wp-caption-text"&gt;Figure 2 – Screenshot of a single cluster node achieving 9.25 GByte/s of file system Read/Write throughput via fio&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;In figure 2 above, you can see the standard file benchmark &lt;a href="https://fio.readthedocs.io/en/latest/fio_doc.html"&gt;fio&lt;/a&gt; was used with a 1 megabyte IO size to drive both read and write throughput from &lt;strong&gt;a single node&lt;/strong&gt;, using most of the 100 Gbps &lt;a href="https://aws.amazon.com/hpc/efa/"&gt;Elastic Fabric Adapter (EFA)&lt;/a&gt; throughput. Note that 9.25 Gigabyte/s was achieved with absolutely no tuning for optimal block size or network settings, to get close to line speed. The SC23 demonstration was not designed to show best-case benchmarked performance, but to demonstrate non-cached, sustained performance available without any tuning, using default settings. Stay tuned to this channel for more posts explaining how to optimize FSx for Lustre performance using popular Lustre benchmarking tools.&lt;/p&gt; 
+&lt;p&gt;In the background of figure 2, you can see the &lt;a href="https://aws.amazon.com/cloudwatch/"&gt;AWS CloudWatch&lt;/a&gt; dashboard I created using a few clicks to monitor file system performance metrics. This chart shows only one node performing IO.&lt;/p&gt; 
+&lt;p&gt;Now let’s move on to look at aggregate file system throughput as shown in figure 3.&lt;/p&gt; 
+&lt;div id="attachment_3542" style="width: 814px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3542" loading="lazy" class="size-full wp-image-3542" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/16/CleanShot-2024-04-16-at-16.57.56.png" alt="Figure 3 – Screenshot of the aggregate 1TB/s of file system Read/Write throughput via fio" width="804" height="468"&gt;
+ &lt;p id="caption-attachment-3542" class="wp-caption-text"&gt;Figure 3 – Screenshot of the aggregate 1TB/s of file system Read/Write throughput via fio&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 3 shows that our 120-node cluster achieved over 1 TByte/s of FSx for Lustre throughput, which is the maximum throughput we configured our file system for when we launched it. These are impressive results for a file system you can stand up or stand down &lt;em&gt;on-demand&lt;/em&gt;, and pay only as you go.&lt;/p&gt; 
+&lt;p&gt;You don’t need to amortize your storage costs for years to justify running a project anymore – you can have 1 TB/s for just the hours or days you need high-speed file level access. During off-peak times, you can stand down your FSx for Lustre file system, and it remains possible to access the data at lower speed in the underlying repositories via the S3 object protocol. This allows you to stage, de-stage or browse your content, and run FSx for Lustre only when needed for application performance.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Developing and deploying HPC and AI workloads is complex and difficult enough without fighting the headwinds of equipment availability, power and cooling issues, datacenter build out, and vendor interoperability. By leveraging FSx for Lustre, you can enable your organization to cloud burst HPC or AI workloads to AWS, or easily migrate workloads to AWS.&lt;/p&gt; 
+&lt;p&gt;But if your organization is just setting out on an HPC or AI development journey – you can instead start today and shave months or years off your project. If you want to stand on the shoulders of others you can use cluster and filesystem stacks created by experts who’ve all done this before. You can launch customizable templates from our &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipes Library&lt;/a&gt;, which have all been built to be interoperable, and simple to use. Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; if you have ideas for how we can make it easier for you.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Run simulations using multiple containers in a single AWS Batch job</title>
 		<link>https://aws.amazon.com/blogs/hpc/run-simulations-using-multiple-containers-in-a-single-aws-batch-job/</link>
 		
@@ -59,14 +123,15 @@
  &lt;p id="caption-attachment-3579" class="wp-caption-text"&gt;Figure 3 – IPG CarMaker is an autonomous car simulator&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;&lt;a href="https://ipg-automotive.com/en/"&gt;IPG Automotive&lt;/a&gt; is an AWS partner that’s been developing software for decades. They’re best known for their AV/ADAS simulators: CarMaker, TruckMaker and MotorcycleMaker. IPG has been partnering with the AWS Batch team to develop the multi-container feature for Batch to enable their customers to scale out these simulations on AWS.&lt;/p&gt; 
-&lt;p&gt;“&lt;em&gt;Developing cutting-edge autonomous vehicles and ADAS technologies requires hundreds of thousands of hours of testing within simulated environments mirroring real-world driving scenarios&lt;/em&gt;,” according to David Howarth, who is the Executive Director at IPG Automotive North America. “&lt;em&gt;By using AWS Batch multi-container jobs for our simulations, IPG’s customers can now seamlessly separate their CarMaker simulator, the 3D virtual environment, and their sensor pipelines into different containers on AWS. This capability accelerates both DevOps and debugging processes, significantly enhancing overall efficiency.&lt;/em&gt;”&lt;/p&gt; 
+&lt;p&gt;“&lt;em&gt;Developing cutting-edge autonomous vehicles and ADAS technologies requires hundreds of thousands of hours of testing within simulated environments mirroring real-world driving scenarios&lt;/em&gt;,” according to David Howarth, who is the Director of Business Development at IPG Automotive North America. “&lt;em&gt;By using AWS Batch multi-container jobs for our simulations, IPG’s customers can now seamlessly separate their CarMaker simulator, the 3D virtual environment, and their sensor pipelines into different containers on AWS. This capability accelerates both DevOps and debugging processes, significantly enhancing overall efficiency.&lt;/em&gt;”&lt;/p&gt; 
 &lt;h3&gt;Robotec.ai&lt;/h3&gt; 
 &lt;div id="attachment_3580" style="width: 394px" class="wp-caption alignleft"&gt;
  &lt;img aria-describedby="caption-attachment-3580" loading="lazy" class="size-full wp-image-3580" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.31.08.png" alt="Figure 4 - Simulated autonomous mining operation in RoSi" width="384" height="355"&gt;
  &lt;p id="caption-attachment-3580" class="wp-caption-text"&gt;Figure 4 – Simulated autonomous mining operation in RoSi&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;&lt;a href="https://robotec.ai/"&gt;Robotec.ai&lt;/a&gt; is a growing simulation software company that has developed their own simulator called RoSi. They are working with customers on AV/ADAS, robotics, and autonomous mining operations.&lt;/p&gt; 
-&lt;p&gt;“&lt;em&gt;Our customers demand thorough and safe testing of autonomous vehicles within a simulated environment. For one of our mining customers, Boliden, this translates to nearly a thousand hours of simulation every time they modify their operations,&lt;/em&gt;” said Michal Niezgoda, CEO of Robotec.ai. “The AWS Batch multi-container jobs feature streamlines our simulations at scale and powers our RoSi simulator to meet customer needs.” “&lt;em&gt;By using AWS Batch multi-container jobs, we can easily execute a large number of operational scenarios for a mining site with just a few clicks&lt;/em&gt;,” said Mikael Staffas, CEO of Boliden. “&lt;em&gt;This new feature, as part of AWS Batch, integrates seamlessly with other AWS services, allowing us to use the scaling and scheduling capabilities of the cloud and optimize compute costs&lt;/em&gt;.”&lt;/p&gt; 
+&lt;p&gt;“&lt;em&gt;Our customers demand thorough and safe testing of autonomous vehicles within a simulated environment, for example one of our mining customers, Boliden&lt;/em&gt;,” said Michal Niezgoda, CEO of Robotec.ai. “&lt;em&gt;The AWS Batch multi-container jobs feature streamlines our simulations at scale and powers our RoSi simulator to meet customer needs.”&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;“By using AWS Batch multi-container jobs, we can easily execute a large number of operational scenarios for a mining site with just a few clicks,” &lt;/em&gt;said Peter Burman, Program Manager of Boliden.&lt;em&gt; “This new feature, as part of AWS Batch, integrates seamlessly with other AWS services, allowing us to use the scaling and scheduling capabilities of the cloud and optimize compute costs.”&lt;/em&gt;&lt;/p&gt; 
 &lt;h3&gt;MORAI.ai&lt;/h3&gt; 
 &lt;p&gt;MORAI, a technology company from Korea, offers a digital twin simulation system that accelerates the development and testing of autonomous vehicles, urban air mobility (UAM), autonomous mobile robots (AMR), and maritime autonomous surface ships (MASS).&lt;/p&gt; 
 &lt;div id="attachment_3581" style="width: 322px" class="wp-caption alignright"&gt;
@@ -2379,95 +2444,6 @@ The best model for ‘wdbc’ was ‘mlp’, with accuracy = 0.991
 &lt;p&gt;In this post, we briefly introduced EC2 Capacity Blocks and how they integrate with AWS ParallelCluster. We also illustrated a step-by-step walkthrough of how you can configure a cluster to use a Capacity Block. We talked about some smart ways to get the most out of these Capacity Blocks, like how to handle GPU issues and how to set up your projects in a smart way.&lt;/p&gt; 
 &lt;p&gt;These tips aren’t just helpful – they’re crucial for anyone who wants to use Capacity Blocks with ParallelCluster to their full potential.&lt;/p&gt; 
 &lt;p&gt;Lastly, the integration EC2 Capacity Blocks and AWS Parallelcluster is a glimpse into the future of how AWS services integrate to produce solutions to specific problems like the GPU capacity crunch we all face today. As more compute power is needed to solve tomorrow’s problems, these kinds of smart solutions are important. If you’d like to learn more about creating and updating clusters to use Capacity Blocks, you can refer to the ParallelCluster &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/what-is-aws-parallelcluster.html"&gt;official documentation&lt;/a&gt;. If you have ideas or feedback that can help us make these features better , reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Create a Slurm cluster for semiconductor design with AWS ParallelCluster</title>
-		<link>https://aws.amazon.com/blogs/hpc/create-a-slurm-cluster-for-semiconductor-design-with-aws-parallelcluster/</link>
-		
-		<dc:creator><![CDATA[Allan Carter]]></dc:creator>
-		<pubDate>Wed, 10 Jan 2024 15:46:22 +0000</pubDate>
-				<category><![CDATA[Best Practices]]></category>
-		<category><![CDATA[Hi-Tech and Electronics]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Industries]]></category>
-		<category><![CDATA[Semiconductor]]></category>
-		<category><![CDATA[Technical How-to]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">cdc660c35037e33dd83c140e30c100fc2cd1cd3a</guid>
-
-					<description>If you work in the semiconductor industry with electronic design automation tools and workflows, this guide will help you build an HPC cluster on AWS specifically configured for your needs. It covers AWS ParallelCluster and customizations specifically to cater to EDA.</description>
-										<content:encoded>&lt;p&gt;Chips are fingernail-sized pieces of glass that power all your electronic devices like cell phones, computers, and TVs. Chip designers use electronic design automation (EDA) tools to draw billions of microscopic switches and connect them with wires that are smaller than the finest hair.&lt;/p&gt; 
-&lt;p&gt;EDA engineers measure device sizes in nanometers (1×10&lt;sup&gt;-9 &lt;/sup&gt;m or 1 billionth of a meter) and time in picoseconds (1×10&lt;sup&gt;-12&lt;/sup&gt; s, or &lt;em&gt;one-trillionth&lt;/em&gt; of a second). They analyze their designs to ensure that they meet power, performance, and area (PPA) goals and that they meet rigorous design rules so that silicon foundries can manufacture them. The designers send the completed drawings to a foundry that manufactures them in automated factories that reliably create structures at atomic scale. The entire design and manufacturing process requires vast amounts of high-performance storage and high-performance computing (HPC) to run millions of EDA jobs for large teams of engineers.&lt;/p&gt; 
-&lt;p&gt;Today, we’re going to show you how to create a cluster on AWS, using AWS ParallelCluster, that’s purpose-built for this environment, and ready for the kinds of workloads that EDA users work with every day.&lt;/p&gt; 
-&lt;h2&gt;A world of complex constraints&lt;/h2&gt; 
-&lt;p&gt;EDA workflows impose complex requirements on the compute cluster. A workflow may consist of hundreds of different licensed EDA tools with very different requirements. The tool licenses are typically much more expensive than the infrastructure they run on so the scheduler must ensure that jobs only run when a license and the required compute resources are available.&lt;/p&gt; 
-&lt;p&gt;Large teams must share these critical resources so it’s also essential that the scheduler can enforce a fair-share allocation policy to prevent some users from monopolizing resources at the expense of others. The EDA jobs themselves have widely differing requirements, so the compute cluster must support a very diverse set of Amazon EC2 instance sizes and families from compute-optimized to high-memory variations.&lt;/p&gt; 
-&lt;h2&gt;A day in the life&lt;/h2&gt; 
-&lt;p&gt;Figure 1 shows the basic workflow for designing a chip. The front-end and back-end tasks have quite distinct requirements for compute and storage. An advantage of AWS is the diversity of compute and storage solutions available so design teams can tailor their infrastructure for the needs of each step in the workflow.&lt;/p&gt; 
-&lt;p&gt;The process is also extremely iterative. If engineers find a problem in the late stages of the project, the fix may require architectural changes that require the team to rerun all the steps of the workflow. This is where design teams can get into capacity crunches – and risk catastrophic schedule delays if they can’t access enough compute and storage capacity.&lt;/p&gt; 
-&lt;div id="attachment_3159" style="width: 567px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3159" loading="lazy" class="size-full wp-image-3159" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/14/CleanShot-2023-12-14-at-12.33.30.png" alt="Figure 1 - Chip design workflow diagram. Architects create and edit the architecture. Designers create and edit the design and create RTL and circuit diagrams. Design verification engineers run simulations to verify that the design works and gather coverage information to verify completeness of tests. Back end design engineers synthesize RTL to create netlists. Then they do physical layout that converts the netlists to layout and GDSII. Then they run physical verification and power and signal analysis to make sure the layout meets power, performance, and area requirements and that the GDSII meets all design rules. After verification is complete, the developers tape out the GDSII to a silicon foundry for manufacturing." width="557" height="1055"&gt;
- &lt;p id="caption-attachment-3159" class="wp-caption-text"&gt;Figure 1 – Chip design workflow diagram. Architects create and edit the architecture. Designers create and edit the design and create RTL and circuit diagrams. Design verification engineers run simulations to verify that the design works and gather coverage information to verify completeness of tests. Back end design engineers synthesize RTL to create netlists. Then they do physical layout that converts the netlists to layout and GDSII. Then they run physical verification and power and signal analysis to make sure the layout meets power, performance, and area requirements and that the GDSII meets all design rules. After verification is complete, the developers tape out the GDSII to a silicon foundry for manufacturing.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;At the beginning of a project, compute usage is typically low and sporadic. Usage peaks around project milestones and at the end of a project when it runs hot for several months – and is usually in the critical path for project completion. Figure 2 shows the number of jobs running on different instance types in an EDA cluster over a typical 24-hour window. Utilization would likely be higher and more sustained near the end of a project.&lt;/p&gt; 
-&lt;p&gt;Notice the variability and the diverse mix of instance types that the cluster uses ranging from high-frequency general purpose m5zn to memory-optimized and high-memory r6i and x2iezn instances. The scalability of AWS can ensure that jobs are able to run on instance types that are ideal for the jobs without infrastructure capacity constraints.&lt;/p&gt; 
-&lt;div id="attachment_3160" style="width: 887px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3160" loading="lazy" class="size-full wp-image-3160" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2023/12/14/CleanShot-2023-12-14-at-12.34.21.png" alt="Figure 2 - The EDA job profile is highly variable. This graph shows peaks and troughs of usage throughout a 24-hour window. Engineers run jobs that use different instance types as required by the job requirements." width="877" height="790"&gt;
- &lt;p id="caption-attachment-3160" class="wp-caption-text"&gt;Figure 2 – The EDA job profile is highly variable. This graph shows peaks and troughs of usage throughout a 24-hour window. Engineers run jobs that use different instance types as required by the job requirements.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Enter Slurm and AWS ParallelCluster&lt;/h2&gt; 
-&lt;p&gt;Design teams have traditionally used commercial schedulers, but are increasingly showing interest in Slurm. Slurm is open-source, free to use, and meets all the requirements for running EDA workloads. &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; is an AWS service that allows Slurm to automatically scale up and down fleets of compute instances on AWS. It supports high job throughput and job capacity for even the most demanding workloads. It also supports the high security demands of the semiconductor industry by not requiring any internet access for its functionality.&lt;/p&gt; 
-&lt;p&gt;Starting with version 3.7.0, AWS ParallelCluster has all the features required to easily configure and deploy an EDA Slurm cluster that takes full advantage of the scalability of AWS to design the most advanced chips. It offers Slurm accounting, which allows administrators to configure license-sharing and enables fair-share allocation for cluster users. It can schedule jobs based on the number of cores and the amount of memory that the job requires, too. ParallelCluster also increased the number of instance types that it can support in a cluster. It added support for Redhat Enterprise version 8 which all EDA tools will require, starting in 2024. It added support for custom &lt;em&gt;instance type weighting&lt;/em&gt; so Slurm can schedule the lowest cost instance type that meets a job’s specific requirements. And finally, ParallelCluster added a Python management API that you can use in a Lambda Layer to &lt;a href="https://aws.amazon.com/blogs/hpc/automate-your-clusters-by-creating-self-documenting-hpc-with-aws-parallelcluster/"&gt;completely automate the deployment and updating of your cluster&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3&gt;Putting this all together&lt;/h3&gt; 
-&lt;p&gt;The &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster"&gt;aws-eda-slurm-cluster&lt;/a&gt; repository on GitHub uses all these new ParallelCluster features to quickly and easily create an EDA-specific ParallelCluster in the VPC of your choosing. The cluster supports CentOS 7, RHEL 7 and 8, x86_64 and arm64 architectures, On Demand and Spot Instances, heterogeneous queues, and up to 50 instance types. You can easily configure EDA license counts and fair share allocations using simple configuration files. By default, it selects the instance types that are best for EDA workloads. The cluster sets compute node weights based on the cost of instance types so that Slurm chooses the lowest cost node that meets job requirements.&lt;/p&gt; 
-&lt;p&gt;In addition to the normal ParallelCluster partitions, it defines a batch and an interactive partition that each contain all the compute nodes. The batch partition is the default and the interactive partition is identical except that it has a much higher weight. If you need a job to run quickly, for example to debug a simulation failure, and the batch partition is full, &lt;strong&gt;you can jump to the head of the line&lt;/strong&gt; by submitting your job to the interactive queue and Slurm will schedule it using the next available license and compute node.&lt;/p&gt; 
-&lt;p&gt;ParallelCluster and Slurm typically expect you to &lt;code&gt;ssh&lt;/code&gt; to a login node or the head node to use the cluster, but semiconductor engineers expect to be able to use the cluster from a shell on their virtual desktops. With &lt;em&gt;aws-eda-slurm-cluster&lt;/em&gt;, you can configure submitter hosts so that they can directly access one or more clusters. The cluster configures submitter hosts as Slurm login nodes and creates modulefiles you load to set up the shell environment to use the cluster. It also supports submitters that have a different OS or CPU architecture than the cluster.&lt;/p&gt; 
-&lt;h2&gt;Deployment&lt;/h2&gt; 
-&lt;p&gt;The &lt;a href="https://aws-samples.github.io/aws-eda-slurm-cluster/"&gt;aws-eda-slurm-cluster GitHub page&lt;/a&gt; documents the simple deployment process. The cluster uses the &lt;a href="https://aws.amazon.com/cdk/"&gt;AWS Cloud Development Kit&lt;/a&gt; (CDK) to create a &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster/blob/main/source/cdk/cdk_slurm_stack.py"&gt;custom application&lt;/a&gt; that reads a configuration file and creates an AWS CloudFormation stack that creates and configures the cluster in less than 30 minutes.&lt;/p&gt; 
-&lt;p&gt;The CloudFormation stack creates and configures your customized ParallelCluster. When you no longer need the cluster, you simply delete the CloudFormation &lt;em&gt;stack&lt;/em&gt; and CloudFormation deletes the cluster for you. If you need to update the cluster, then update the configuration file and rerun the CDK application.&lt;/p&gt; 
-&lt;p&gt;The cluster uses a YAML configuration file with a different &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster/blob/main/source/cdk/config_schema.py#L241-L454"&gt;schema&lt;/a&gt; than ParallelCluster’s configuration file. The following basic configuration will use ParallelCluster to create a RHEL 8 Slurm cluster configured for EDA workloads. Note the prerequisite items highlighted in red. It requires an AWS VPC, subnet, and EC2 key pair. If you don’t already have these, &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials_07_slurm-accounting-v3.html#slurm-accounting-vpc-v3"&gt;this tutorial&lt;/a&gt; shows how to create them. &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials_07_slurm-accounting-v3.html#slurm-accounting-db-stack-v3"&gt;This tutorial&lt;/a&gt; shows how to create a Slurm accounting database stack. Include the stack name in the configuration. The licenses section allows the configuration of 1 or more software licenses that Slurm will track to make sure that jobs don’t use more than the number of configured licenses.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;StackName: eda-pc-3-7-2-rhel8-x86-config
-Region: &amp;lt;region&amp;gt;
-SshKeyPair: &amp;lt;ec2-key-pair&amp;gt;
-VpcId: vpc-xxxx
-SubnetId: subnet-xxxx
-slurm:
-  ClusterName: eda-pc-3-7-2-rhel8-x86
-  MungeKeySecret: /slurm/munge_key
-  ParallelClusterConfig:
-    Version: '3.7.2'
-    Image:
-      Os: 'rhel8'
-    Architecture: 'x86_64'
-    Database:
-      DatabaseStackName: &amp;lt;parallel-cluster-database-stack&amp;gt;
-  SlurmCtl: {}
-  InstanceConfig:
-    NodeCounts:
-      DefaultMaxCount: 10
-Licenses:
-  &amp;lt;license-name&amp;gt;:
-    Count: 10
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Deployment is as simple as executing the following commands from the root of the git repository.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;$ source setup.sh
-$ ./install.sh --config-file &amp;lt;config-filename&amp;gt; --cdk-cmd create&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;This will create a CloudFormation stack named &lt;strong&gt;eda-pc-3-7-2-rhel8-x86-config&lt;/strong&gt; that will create and configure a ParallelCluster called &lt;strong&gt;eda-pc-3-7-2-rhel8-x86&lt;/strong&gt;. If you need to update the configuration, for example to add a custom compute node AMI, then you just edit the configuration file and run the following command:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;$ source setup.sh
-$ ./install.sh --config-file &amp;lt;config-filename&amp;gt; --cdk-cmd update&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;You can use they cluster by connecting to the head node or a login node. If you would like the convenience of accessing the cluster directly from a submitter host, &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-view-stack-data-resources.html"&gt;the output&lt;/a&gt; of the &lt;strong&gt;eda-pc-3-7-2-rhel8-x86-config&lt;/strong&gt; stack has commands for mounting the cluster’s NFS export on submitter hosts and configuring them to use the stack. After you configure the submitter host, you can easily use the cluster. Simply load the provided modulefile and run Slurm commands like in the following example which will open an interactive bash shell on a compute node with 1 GB of memory and 1 CPU core for, at most, an hour.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;$ module load eda-pc-3-7-2-rhel8-x86
-$ srun -p interactive --mem 1G -c 1 --time 1:00:00 --pty /bin/bash&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;The module file sets up the environment for the Slurm cluster and configures Slurm defaults for the path, number of cores, default amount of memory, job timeout, and more. This makes it so that users must override the defaults to get more than minimal cluster resources. By default, their jobs will only get 1 core, 100 MB of memory, and a time limit of 1 hour.&lt;/p&gt; 
-&lt;p&gt;Another nice feature of the cluster is that it creates custom ParallelCluster AMI build configuration files. You can use them to create AMIs with all the packages typically required by EDA tools. You can find the build configuration files in the repo at &lt;em&gt;source/resources/parallel-cluster/config/&amp;lt;parallel-cluster-version&amp;gt;/&amp;lt;ClusterName&amp;gt;&lt;/em&gt; or on the head node or submitter host at &lt;em&gt;/opt/slurm/&amp;lt;ClusterName&amp;gt;/config/build-files&lt;/em&gt;. The GitHub page documents the &lt;a href="https://aws-samples.github.io/aws-eda-slurm-cluster/custom-amis/"&gt;process for building custom EDA AMIs&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;You can easily configure and deploy a Slurm cluster on AWS using AWS ParallelCluster and &lt;a href="https://github.com/aws-samples/aws-eda-slurm-cluster"&gt;aws-eda-slurm-cluster&lt;/a&gt; that can run your most demanding EDA workloads and take advantage of the performance and scalability of AWS to meet your project needs.&lt;/p&gt; 
-&lt;p&gt;Contact your AWS account team and schedule a meeting with our semiconductor industry specialists for more information and help getting your EDA workloads running on AWS.&lt;/p&gt;</content:encoded>
 					
 		
 		
