@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 22 Apr 2024 18:34:18 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 24 Apr 2024 18:01:18 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,250 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>How Virtual Factories Are Making Industrial Digitalization a Reality</title>
+		<link>https://blogs.nvidia.com/blog/virtual-factories-industrial-digitalization/</link>
+		
+		<dc:creator><![CDATA[James McKenna]]></dc:creator>
+		<pubDate>Wed, 24 Apr 2024 15:00:40 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Digital Twin]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71266</guid>
+
+					<description><![CDATA[To address the shift to electric vehicles, increased semiconductor demand, manufacturing onshoring, and ambitions for greater sustainability, manufacturers are investing in new factory developments and re-engineering their existing facilities. These projects often run over budget and schedule, due to complex and manual planning processes, legacy technology infrastructure, and disconnected tools, data and teams. To address		<a class="read-more" href="https://blogs.nvidia.com/blog/virtual-factories-industrial-digitalization/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>To address the shift to electric vehicles, increased semiconductor demand, manufacturing onshoring, and ambitions for greater sustainability, manufacturers are investing in new factory developments and re-engineering their existing facilities.</p>
+<p>These projects often run over budget and schedule, due to complex and manual planning processes, legacy technology infrastructure, and disconnected tools, data and teams.</p>
+<p>To address these challenges, manufacturers are embracing digitalization and virtual factories, powered by technologies like <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/">digital twins,</a> the <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a><a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/"> ecosystem</a> and <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, that enable new possibilities from planning to operations.</p>
+<h2>What Is a Virtual Factory?</h2>
+<p>A virtual factory is a physically accurate representation of a real factory. These digital twins of factories allow manufacturers to model, simulate, analyze and optimize their production processes, resources and operations without the need for a physical prototype or pilot plant.</p>
+<h2>Benefits of Virtual Factories</h2>
+<p>Virtual factories unlock many benefits and possibilities for manufacturers, including:</p>
+<ul>
+<li><b>Streamlined Communication: </b>Instead of teams relying on in-person meetings and static planning documents for project alignment, virtual factories streamline communication and ensure that critical design and operations decisions are informed by the most current data.</li>
+<li><b>Contextualized Planning</b>: During facility design, construction and commissioning, virtual factories allow project stakeholders to visualize designs in the context of the entire facility and production process. Planning and operations teams can compare and verify built structures with the virtual designs in real time and decrease costs by identifying errors and incorporating feedback early in the review process.</li>
+<li><b>Optimized Facility Designs: </b>Connecting virtual factories to simulations of processes and discrete events enables teams to optimize facility designs for production and material flow, ergonomic work design, safety and overall utilization.</li>
+<li><b>Intelligent and Optimized Operations: </b>Operations teams can integrate their virtual factories with valuable production data from Internet of Things technology at the <a href="https://blogs.nvidia.com/blog/what-is-edge-computing/">edge</a>, and tap AI to drive further optimizations.</li>
+</ul>
+<h2>Virtual Factories: A Testing Ground for AI and Robotics</h2>
+<p>Robotics developers are increasingly using virtual factories to train and test AI and autonomous systems that run in physical factories. For example, virtual factories can enable developers and manufacturing teams to simulate digital workers and <a href="https://blogs.nvidia.com/blog/isaac-amr-nova-orin-autonomous-mobile-robots/">autonomous mobile robots</a> (AMRs), vision AI agents and sensors to create a centralized map of worker activity throughout a facility. By fusing data from simulated camera streams with multi-camera tracking, developers can generate occupancy maps that inform optimal AMR routes.</p>
+<p>Developers can also use these physically accurate virtual factories to train and test AI agents capable of managing their robot fleets, to ensure AI-enabled robots can adapt to real-world unpredictability and to identify streamlined configurations for human-robot collaboration.</p>
+<p><iframe title="Fusing Real-Time AI With Digital Twins" width="500" height="281" src="https://www.youtube.com/embed/l5M4sqaRd6w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2>What Are the Foundations of a Virtual Factory</h2>
+<p>Building large-scale, physically accurate virtual factories that unlock these transformational possibilities requires bringing together many tools, data formats and technologies to harmonize the representation of real-world aspects in the digital world.</p>
+<p>Originally invented by Pixar Animation Studios, <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a> encompasses a collection of tools and capabilities that enable the data interoperability developers and manufacturers require to achieve their digitalization goals.</p>
+<p>OpenUSD’s core superpower is flexible data modeling. 3D input can be accepted from source applications and combined with a variety of data, including from computer-aided design software, live sensors, documentation and maintenance records, through a unified data pipeline. OpenUSD enables developers to share these data types across different simulation tools and AI models, providing insights for all stakeholders. Data can be synced from the factory floor to the digital twin, surfacing real-time insights for factory managers and teams.</p>
+<p>By developing virtual factory solutions on OpenUSD, developers can enhance collaboration for factory teams, allowing them to review plans, discuss optimization opportunities and make decisions in real time.</p>
+<p>To support and accelerate the development of the OpenUSD ecosystem, Pixar, Adobe, Apple, Autodesk and NVIDIA formed the <a href="https://aousd.org/">Alliance for OpenUSD</a>, which is building open standards for USD in core specification, materials, geometry and more.</p>
+<h2>Industrial Use Cases for Virtual Factories</h2>
+<p>To unlock the potential of virtual factories, industry leaders including Autodesk, Continental, Pegatron, Rockwell Automation, Siemens and Wistron are developing virtual-factory solutions on OpenUSD and <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform of application programming interfaces (APIs) and software development kits that enable developers to build applications for complex 3D and industrial digitalization workflows based on OpenUSD.</p>
+<p><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62639/">FlexSim</a>, an Autodesk company, uses OpenUSD to enable factory teams to analyze, visualize and optimize real-world processes with its simulation modeling for complex systems and operations. The discrete-event simulation software provides an intuitive drag-and-drop interface to create 3D simulation models, account for real-world variability, run “what-if” scenarios and perform in-depth analyses.</p>
+<p>Developers at <a href="https://www.continental.com/en/" target="_blank" rel="noopener">Continental</a>, a leading German automotive technology company, developed <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62919/">ContiVerse</a>, a factory planning and manufacturing operations application on OpenUSD and NVIDIA Omniverse. The application helps Continental optimize factory layouts and plan production processes collaboratively, leading to an expected 13% reduction in time to market.<a href="https://www.pegatroncorp.com/"> </a></p>
+<p>Partnering with software company SoftServe, Continental also developed <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61799/">Industrial Co-Pilot</a>, which combines AI-driven insights with immersive visualization to deliver real-time guidance and predictive analytics to engineers. This is expected to reduce maintenance effort and downtime by 10%.</p>
+<p><a href="https://www.pegatroncorp.com/" target="_blank" rel="noopener">Pegatron</a>, one of the world’s largest manufacturers of smartphones and consumer electronics, is <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62553/">developing virtual-factory solutions</a> on OpenUSD to accelerate the development of new factories — as well as to minimize change orders, optimize operations and maximize production-line throughput in existing facilities.</p>
+<p><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62623/">Rockwell Automation</a> is integrating NVIDIA Omniverse Cloud APIs and OpenUSD with its <a href="https://www.demo3d.com/">Emulate3D</a> digital twin software to bring manufacturing teams data interoperability, live collaboration and physically based visualization for designing, building and operating industrial-scale digital twins of production systems.</p>
+<p><a href="https://www.siemens.com/global/en.html" target="_blank" rel="noopener">Siemens</a>, a leading technology company for automation, digitalization and sustainability and a member of the Alliance for OpenUSD, is adopting Omniverse Cloud APIs within its Siemens Xcelerator Platform, starting with Teamcenter X, the industry-leading cloud-based product lifecycle management software. This will help teams design, build and test next-generation products, manufacturing processes and factories virtually, before they’re built in the physical world.</p>
+<p><a href="https://www.wistron.com/en" target="_blank" rel="noopener">Wistron</a>, a leading global technology service provider and electronics manufacturer, is <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62600/">digitalizing new and existing factories</a> with OpenUSD. By developing virtual-factory solutions on NVIDIA Omniverse, Wistron enables its factory teams to collaborate remotely to refine layout configurations, optimize surface mount technology and in-circuit testing lines, and transform product-on-dock testing.<a href="https://www.continental.com/en/"> </a></p>
+<p>With these solutions, Wistron has achieved a 51% boost in worker efficiency and 50% reduction in production process times. Layout optimization and real-time monitoring have decreased defect rates by 40%. And construction time on Wistron’s new <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/">NVIDIA DGX</a> factory was cut in half, from about five months to just two and a half months.</p>
+<p><iframe title="Meet a Factory Digital Twin From Wistron" width="500" height="281" src="https://www.youtube.com/embed/OAdqXZGUb70?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Learn more at the <a href="https://www.nvidia.com/en-us/use-cases/ai-for-virtual-factory-solutions/">Virtual Factory Use Case page</a>, where a reference architecture provides an overview of components and capabilities developers should consider when developing virtual-factory solutions.</p>
+<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, access </i><a href="https://developer.nvidia.com/usd"><i>OpenUSD</i></a><i> resources, and learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise</i><i> can connect your team</i></a><i>. Stay up to date on </i><a href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse"><i>X</i></a><i>. For more, join the </i><a href="https://www.nvidia.com/en-us/omniverse/community/"><i>Omniverse community</i></a><i> on the </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels. </i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/vfi-blog.jpg"
+			type="image/jpeg"
+			width="1920"
+			height="1020"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/vfi-blog-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[How Virtual Factories Are Making Industrial Digitalization a Reality]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA to Acquire GPU Orchestration Software Provider Run:ai</title>
+		<link>https://blogs.nvidia.com/blog/runai/</link>
+		
+		<dc:creator><![CDATA[Alexis Bjorlin]]></dc:creator>
+		<pubDate>Wed, 24 Apr 2024 13:15:08 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71285</guid>
+
+					<description><![CDATA[To help customers make more efficient use of their AI computing resources, NVIDIA today announced it has entered into a definitive agreement to acquire Run:ai, a Kubernetes-based workload management and orchestration software provider. Customer AI deployments are becoming increasingly complex, with workloads distributed across cloud, edge and on-premises data center infrastructure. Managing and orchestrating generative		<a class="read-more" href="https://blogs.nvidia.com/blog/runai/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>To help customers make more efficient use of their AI computing resources, NVIDIA today announced it has entered into a definitive agreement to acquire Run:ai, a Kubernetes-based workload management and orchestration software provider.</p>
+<p>Customer AI deployments are becoming increasingly complex, with workloads distributed across cloud, edge and on-premises data center infrastructure.</p>
+<p>Managing and orchestrating generative AI, recommender systems, search engines and other workloads requires sophisticated scheduling to optimize performance at the system level and on the underlying infrastructure.</p>
+<p>Run:ai enables enterprise customers to manage and optimize their compute infrastructure, whether on premises, in the cloud or in hybrid environments.</p>
+<p>The company has built an open platform on <a href="https://www.nvidia.com/en-us/glossary/kubernetes/">Kubernetes</a>, the orchestration layer for modern AI and cloud infrastructure. It supports all popular Kubernetes variants and integrates with third-party AI tools and frameworks.</p>
+<p>Run:ai customers include some of the world’s largest enterprises across multiple industries, which use the Run:ai platform to manage data-center-scale GPU clusters.</p>
+<p>“Run:ai has been a close collaborator with NVIDIA since 2020 and we share a passion for helping our customers make the most of their infrastructure,” said Omri Geller, Run:ai cofounder and CEO. “We’re thrilled to join NVIDIA and look forward to continuing our journey together.”</p>
+<p>The Run:ai platform provides AI developers and their teams:</p>
+<ul>
+<li style="font-weight: 400;" aria-level="1">A centralized interface to manage shared compute infrastructure, enabling easier and faster access for complex AI workloads.</li>
+<li style="font-weight: 400;" aria-level="1">Functionality to add users, curate them under teams, provide access to cluster resources, control over quotas, priorities and pools, and monitor and report on resource use.</li>
+<li style="font-weight: 400;" aria-level="1">The ability to pool GPUs and share computing power — from <a href="https://www.nvidia.com/en-us/technologies/multi-instance-gpu/#:~:text=Multi%2DInstance%20GPU%20(MIG)%20expands%20the%20performance%20and%20value,%2C%20cache%2C%20and%20compute%20cores.">fractions of GPUs</a> to multiple GPUs or multiple nodes of GPUs running on different clusters — for separate tasks.</li>
+<li style="font-weight: 400;" aria-level="1">Efficient GPU cluster resource utilization, enabling customers to gain more from their compute investments.</li>
+</ul>
+<p>NVIDIA will continue to offer Run:ai&#8217;s products under the same business model for the immediate future. And NVIDIA will continue to invest in the Run:ai product roadmap as part of <a href="http://www.nvidia.com/dgx-cloud">NVIDIA DGX Cloud</a>, an AI platform co-engineered with leading clouds for enterprise developers, offering an integrated, full-stack service optimized for generative AI.</p>
+<p>NVIDIA DGX and DGX Cloud customers will gain access to Run:ai&#8217;s capabilities for their AI workloads, particularly for large language model deployments. Run:ai&#8217;s solutions are already integrated with <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/">NVIDIA DGX</a>, <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a>, <a href="https://www.nvidia.com/en-us/data-center/base-command/">NVIDIA Base Command</a>, <a href="https://www.nvidia.com/en-us/gpu-cloud/">NGC</a> containers, and <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software, among other products.</p>
+<p>NVIDIA’s accelerated computing platform and Run:ai&#8217;s platform will continue to support a broad ecosystem of third-party solutions, giving customers choice and flexibility.</p>
+<p>Together with Run:ai, NVIDIA will enable customers to have a single fabric that accesses GPU solutions anywhere. Customers can expect to benefit from better GPU utilization, improved management of GPU infrastructure and greater flexibility from the open architecture.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/nvidia-ravioli.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/nvidia-ravioli-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA to Acquire GPU Orchestration Software Provider Run:ai]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Forecasting the Future: AI2’s Christopher Bretherton Discusses Using Machine Learning for Climate Modeling</title>
+		<link>https://blogs.nvidia.com/blog/ai2s-christopher-bretherton/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 24 Apr 2024 13:00:13 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[The AI Podcast]]></category>
+		<category><![CDATA[Climate]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71293</guid>
+
+					<description><![CDATA[Can machine learning help predict extreme weather events and climate change? Christopher Bretherton, senior director of climate modeling at the Allen Institute for Artificial Intelligence, or AI2, explores the technology’s potential to enhance climate modeling with AI Podcast host Noah Kravitz in an episode recorded live at the NVIDIA GTC global AI conference. Bretherton explains		<a class="read-more" href="https://blogs.nvidia.com/blog/ai2s-christopher-bretherton/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Can machine learning help predict extreme weather events and climate change? Christopher Bretherton, senior director of climate modeling at the Allen Institute for Artificial Intelligence, or AI2, explores the technology’s potential to enhance climate modeling with <a href="https://soundcloud.com/theaipodcast">AI Podcast</a> host Noah Kravitz in an episode recorded live at the <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> global AI conference. Bretherton explains how machine learning helps overcome the limitations of traditional climate models and underscores the role of localized predictions in empowering communities to prepare for climate-related risks. Through ongoing research and collaboration, Bretherton and his team aim to improve climate modeling and enable society to better mitigate and adapt to the impacts of climate change.</p>
+<p>Stay tuned for more episodes recorded live from GTC, and watch the replay of Bretherton’s <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62359/">GTC session</a> on using machine learning for climate modeling.</p>
+<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1806553098%3Fsecret_token%3Ds-EFTMFbquHt4&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="AI2’s Christopher Bretherton Discusses Using Machine Learning for Climate Modeling - Ep. XXX" href="https://soundcloud.com/theaipodcast/christopher-bretherton/s-EFTMFbquHt4" target="_blank" rel="noopener">AI2’s Christopher Bretherton Discusses Using Machine Learning for Climate Modeling &#8211; Ep. XXX</a></div>
+<h2><b>Time Stamps</b></h2>
+<p>2:03: What is climate modeling and how can it prepare us for climate change?</p>
+<p>5:28: How can machine learning help enhance climate modeling?</p>
+<p>7:21: What were the limitations of traditional climate models?</p>
+<p>10:24: How does a climate model work?</p>
+<p>12:11: What information can you get from a climate model?</p>
+<p>13:26: What are the current climate models telling us about the future?</p>
+<p>15:56: How does machine learning help enable localized climate modeling?</p>
+<p>18:39: What, if anything, can individuals or small communities do to prepare for what climate change has in store for us?</p>
+<p>25:59: How do you measure the accuracy or performance of an emulator that’s doing something like climate modeling out into the future?</p>
+<h2><b>You Might Also Like…</b></h2>
+<p><a href="https://soundcloud.com/theaipodcast/ai-daniel-castro-itif"><b>ITIF’s Daniel Castro on Energy-Efficient AI and Climate Change &#8211; Ep. 215</b><b><br />
+</b><br />
+</a>AI-driven change is in the air, as are concerns about the technology’s environmental impact. In this episode of NVIDIA’s AI Podcast, Daniel Castro, vice president of the Information Technology and Innovation Foundation and director of its Center for Data Innovation, speaks with host Noah Kravitz about the motivation behind his AI energy use report, which addresses misconceptions about the technology’s energy consumption.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-wildfire"><b>DigitalPath’s Ethan Higgins on Using AI to Fight Wildfires &#8211; Ep. 211</b></a></p>
+<p>DigitalPath is igniting change in the golden state — using computer vision, generative adversarial networks and a network of thousands of cameras to detect signs of fire in real-time. In the latest episode of NVIDIA’s AI Podcast, host Noah Kravtiz spoke with DigitalPath system architect Ethan Higgins about the company’s role in the ALERTCalifornia initiative, a collaboration between California’s wildfire fighting agency CAL FIRE and the University of California, San Diego.</p>
+<p><a href="https://soundcloud.com/theaipodcast/anima-anandkumar"><b>Anima Anandkumar on Using Generative AI to Tackle Global Challenges &#8211; Ep. 203</b></a></p>
+<p>Generative AI-based models can not only learn and understand natural languages — they can learn the very language of nature itself, presenting new possibilities for scientific research. On the latest episode of NVIDIA’s AI Podcast, host Noah Kravitz spoke with Anandkumar on generative AI’s potential to make splashes in the scientific community.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-alex-fielding"><b>How Alex Fielding and Privateer Space Are Taking on Space Debris &#8211; Ep. 196</b></a></p>
+<p>In this episode of the NVIDIA AI Podcast, host Noah Kravitz dives into an illuminating conversation with Alex Fielding, co-founder and CEO of Privateer Space. Privateer Space, Fielding’s latest venture, aims to address one of the most daunting challenges facing our world today: space debris.</p>
+<h2><b>Subscribe to the AI Podcast</b></h2>
+<p>Get the<a href="https://blogs.nvidia.com/ai-podcast/"> AI Podcast</a> through<a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439"> iTunes</a>,<a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz"> Google Podcasts</a>,<a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm"> Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music, </a><a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher,<a href="https://overcast.fm/itunes1186480811/the-ai-podcast"> Overcast</a>,<a href="https://player.fm/series/the-ai-podcast"> PlayerFM</a>, Pocket Casts,<a href="http://www.podbay.fm/show/1186480811"> Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast"> PodBean</a>, PodCruncher, PodKicker,<a href="https://soundcloud.com/theaipodcast"> Soundcloud</a>,<a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L"> Spotify</a>,<a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr"> Stitcher</a> and<a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/"> TuneIn</a>.</p>
+<p>Make the AI Podcast better: Have a few minutes to spare? Fill out<a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short"> this listener survey</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1159"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Forecasting the Future: AI2’s Christopher Bretherton Discusses Using Machine Learning for Climate Modeling]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Rays Up: Decoding AI-Powered DLSS 3.5 Ray Reconstruction</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-ray-reconstruction/</link>
+		
+		<dc:creator><![CDATA[Henry Lin]]></dc:creator>
+		<pubDate>Wed, 24 Apr 2024 13:00:12 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71272</guid>
+
+					<description><![CDATA[DLSS 3.5 with Ray Reconstruction creates higher quality ray-traced images for intensive ray-traced games and apps.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+<p>AI continues to raise the bar for PC gaming.</p>
+<p><a href="https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-3-5-ray-reconstruction/">DLSS 3.5 with Ray Reconstruction</a> creates higher quality ray-traced images for intensive ray-traced games and apps. This advanced AI-powered neural renderer is a groundbreaking feature that elevates ray-traced image quality for all GeForce RTX GPUs, outclassing traditional hand-tuned denoisers by using an AI network trained by an NVIDIA supercomputer. The result improves lighting effects like reflections, global illumination, and shadows to create a more immersive, realistic gaming experience.</p>
+<h2><b>A Ray of Light</b></h2>
+<p>Ray tracing is a rendering technique that can realistically simulate the lighting of a scene and its objects by rendering physically accurate reflections, refractions, shadows and indirect lighting. Ray tracing generates computer graphics images by tracing the path of light from the view camera — which determines the view into the scene — through the 2D viewing plane, out into the 3D scene, and back to the light sources. For instance, if rays strike a mirror, reflections are generated.</p>
+<figure id="attachment_71276" aria-describedby="caption-attachment-71276" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-71276" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1-672x442.jpg" alt="" width="672" height="442" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1-672x442.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1-400x263.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1-768x505.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1-684x450.jpg 684w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1-327x215.jpg 327w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1-152x100.jpg 152w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ray-tracing-image-1.jpg 1063w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71276" class="wp-caption-text">A visualization of how ray tracing works.</figcaption></figure>
+<p>It’s the digital equivalent to real-world objects illuminated by beams of light and the path of the light being followed from the eye of the viewer to the objects that light interacts with. That’s ray tracing.</p>
+<p>Simulating light in this manner — shooting rays for every pixel on the screen — is computationally intensive, even for offline renderers that calculate scenes over the course of several minutes or hours. Instead, ray samples fire a handful of rays at various points across the scene for a representative sample of the scene’s lighting, reflectivity and shadowing.</p>
+<p>However, there are limitations. The output is a noisy, speckled image with gaps, good enough to ascertain how the scene should look when ray traced. To fill in the missing pixels that weren’t ray traced, hand-tuned denoisers use two different methods, temporally accumulating pixels across multiple frames, and spatially interpolating them to blend neighboring pixels together. Through this process, the noisy raw output is converted into a ray-traced image.</p>
+<p>This adds complexity and cost to the development process, and reduces the frame rate in highly ray-traced games where multiple denoisers operate simultaneously for different lighting effects.</p>
+<p>DLSS 3.5 Ray Reconstruction introduces an NVIDIA supercomputer-trained, AI-powered neural network that generates higher-quality pixels in between the sampled rays. It recognizes different ray-traced effects to make smarter decisions about using temporal and spatial data, and retains high frequency information for superior-quality upscaling. And it recognizes lighting patterns from its training data, such as that of global illumination or ambient occlusion, and recreates it in-game.</p>
+<p><iframe loading="lazy" title="Portal with RTX | DLSS 3.5 with Ray Reconstruction Comparison - Fan Scene" width="500" height="281" src="https://www.youtube.com/embed/Gg_3-X3d3iY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><i>Portal with RTX</i> is a great example of Ray Reconstruction in action. With DLSS OFF, the denoiser struggles to reconstruct the dynamic shadowing alongside the moving fan.</p>
+<p>With DLSS 3.5 and Ray Reconstruction enabled, the denoiser is trained on AI and recognizes certain patterns associated with shadows and keeps the image stable, accumulating accurate pixels while blending neighboring pixels to generate high-quality reflections.</p>
+<h2><b>Deep Learning, Deep Gaming</b></h2>
+<p>Ray Reconstruction is just one of the AI graphics breakthroughs that multiply performance in DLSS. Super Resolution, the cornerstone of DLSS, samples multiple lower resolution images and uses motion data and feedback from prior frames to reconstruct native-quality images. The result is high image quality without sacrificing game performance.</p>
+<p><iframe loading="lazy" title="NVIDIA DLSS 3 | AI-Powered Performance In Your Favorite Games &amp; Apps" width="500" height="281" src="https://www.youtube.com/embed/GKpURmnNMoA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>DLSS 3 introduced Frame Generation, which boosts performance by using AI to analyze data from surrounding frames to predict what the next generated frame should look like. These generated frames are then inserted in between rendered frames. Combining the DLSS-generated frames with DLSS Super Resolution enables DLSS 3 to reconstruct seven-eighths of the displayed pixels with AI, boosting frame rates by up to 4x compared to without DLSS.</p>
+<p>Because DLSS Frame Generation is post-processed (applied after the main render) on the GPU, it can boost frame rates even when the game is bottlenecked by the CPU.</p>
+<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/dlss-ray-reconstruction-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/dlss-ray-reconstruction-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Rays Up: Decoding AI-Powered DLSS 3.5 Ray Reconstruction]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Climate Tech Startups Integrate NVIDIA AI for Sustainability Applications</title>
 		<link>https://blogs.nvidia.com/blog/earth-day-2024-climate-tech-ai-startups/</link>
 		
@@ -48,18 +292,18 @@
 <p>This Earth Day, discover how five of these sustainability-focused startups are advancing their work with accelerated computing and the <a href="https://www.nvidia.com/en-us/high-performance-computing/earth-2/">NVIDIA Earth-2</a> platform for climate tech.</p>
 <p>Earth-2 features a suite of AI models that help simulate, visualize and deliver actionable insights about weather and climate.</p>
 <h2><b>Insect Farming Catches the AI Bug</b></h2>
-<figure id="attachment_71240" aria-describedby="caption-attachment-71240" style="width: 400px" class="wp-caption alignright"><img fetchpriority="high" decoding="async" class="wp-image-71240 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-400x400.png" alt="" width="400" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2.png 1024w" sizes="(max-width: 400px) 100vw, 400px" /><figcaption id="caption-attachment-71240" class="wp-caption-text">Image courtesy of Bug Mars</figcaption></figure>
+<figure id="attachment_71240" aria-describedby="caption-attachment-71240" style="width: 400px" class="wp-caption alignright"><img loading="lazy" decoding="async" class="wp-image-71240 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-400x400.png" alt="" width="400" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2.png 1024w" sizes="(max-width: 400px) 100vw, 400px" /><figcaption id="caption-attachment-71240" class="wp-caption-text">Image courtesy of Bug Mars</figcaption></figure>
 <p>Amid a changing climate, a key component of environmental resilience is food security: the ability to produce and provide enough food to meet the nutrition needs of all people. Edible insects, such as crickets and black soldier flies, are one solution that could reduce humans’ reliance on resource-intensive livestock farming for protein.</p>
 <p><a href="https://bugmars.com/" target="_blank" rel="noopener">Bug Mars</a>, a startup based in Ontario, Canada, supports insect protein production with AI tools that monitor variables including temperature, pests and number of insects — and predict issues and recommend actions based on that data. It can help insect farmers increase yield by 30%.</p>
 <p>The company uses <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson Orin Nano</a> modules to accelerate its work, and <a href="https://www.linkedin.com/feed/update/urn:li:activity:7178512288889368577/" target="_blank" rel="noopener">recently announced</a> it’s using synthetic data and digital twin technology to further advance its AI solutions for insect agriculture.</p>
 <h2><b>Seeing the Forest for the Trees</b></h2>
 <p>Based in Truckee, Calif., <a href="https://www.vibrantplanet.net" target="_blank" rel="noopener">Vibrant Planet</a> is modeling trillions of trees and other flammable vegetation such as shrublands and grasslands to help land managers, counties and fire districts across North America build wildfire and climate resilience.</p>
 <p>NVIDIA hardware and software has helped Vibrant Planet develop <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">transformer models</a> for forest and ecosystem management and AI-enhanced operational planning.</p>
-<figure id="attachment_71231" aria-describedby="caption-attachment-71231" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-71231" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-672x311.jpg" alt="Visualization of forest" width="672" height="311" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-672x311.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-400x185.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-768x356.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-1536x712.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-842x390.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-406x188.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-188x87.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-1280x593.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1.jpg 1849w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71231" class="wp-caption-text">Visualization courtesy of Vibrant Planet</figcaption></figure>
+<figure id="attachment_71231" aria-describedby="caption-attachment-71231" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71231" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-672x311.jpg" alt="Visualization of forest" width="672" height="311" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-672x311.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-400x185.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-768x356.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-1536x712.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-842x390.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-406x188.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-188x87.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-1280x593.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1.jpg 1849w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71231" class="wp-caption-text">Visualization courtesy of Vibrant Planet</figcaption></figure>
 <p>The startup collects and analyzes data from lidar sensors, satellites and aircraft to train AI models that can map vegetation with high precision, estimate canopy height and detect characteristics of forest and vegetation areas such as carbon, water, biodiversity and built infrastructure. Customers can use this data to understand fire and drought hazards, and, with these insights, conduct scenario planning to forecast the effects of potential forest thinning, prescribed fire or other actions.</p>
 <h2><b>Delivering Tomorrow’s Forecast</b></h2>
 <p><a href="http://tomorrow.io/" target="_blank" rel="noopener">Tomorrow.io</a>, based in Boston, is a leading resilience platform that helps organizations adapt to increasing weather and climate volatility. Powered by next-generation space technology, advanced AI models and proprietary modeling capabilities, the startup enables businesses and governments to proactively mitigate risk, ensure operational resilience and drive critical decision-making.</p>
-<figure id="attachment_71234" aria-describedby="caption-attachment-71234" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-71234" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-672x420.jpg" alt="screen capture of tomorrow.io dashboard" width="672" height="420" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-672x420.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-400x250.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-720x450.jpg 720w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-344x215.jpg 344w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-160x100.jpg 160w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard.jpg 768w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71234" class="wp-caption-text">Image courtesy of Tomorrow.io</figcaption></figure>
+<figure id="attachment_71234" aria-describedby="caption-attachment-71234" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71234" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-672x420.jpg" alt="screen capture of tomorrow.io dashboard" width="672" height="420" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-672x420.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-400x250.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-720x450.jpg 720w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-344x215.jpg 344w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-160x100.jpg 160w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard.jpg 768w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71234" class="wp-caption-text">Image courtesy of Tomorrow.io</figcaption></figure>
 <p>The startup is developing weather forecasting AI and is launching its own satellites to collect environmental data to further train its models. It’s also conducting experiments using Earth-2 AI forecast models to determine the optimal configurations of satellites to improve weather-forecasting conditions.</p>
 <p>One of Tomorrow.io’s projects is an initiative in Kenya with the Bill and Melinda Gates Foundation that provides daily alerts to 6 million farmers with insights around when to water their crops, when to spray pesticides, when to harvest or when to change crops altogether due to changes in the local climate. The team hopes to scale up their user base to 100 million farmers in Africa by 2030.</p>
 <h2><b>Winds of Change</b></h2>
@@ -969,268 +1213,6 @@
 			/>
 			<media:title type="html"><![CDATA[Broadcasting Breakthroughs: NVIDIA Holoscan for Media, Available Now, Transforms Live Media With Easy AI Integration]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Start Up Your Engines: NVIDIA and Google Cloud Collaborate to Accelerate AI Development</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-google-cloud-ai-development/</link>
-		
-		<dc:creator><![CDATA[Greg Estes]]></dc:creator>
-		<pubDate>Tue, 09 Apr 2024 12:00:48 +0000</pubDate>
-				<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Software]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[NVIDIA DGX]]></category>
-		<category><![CDATA[NVIDIA Triton]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71004</guid>
-
-					<description><![CDATA[NVIDIA and Google Cloud have announced a new collaboration to help startups around the world accelerate the creation of generative AI applications and services. The announcement, made today at Google Cloud Next ‘24 in Las Vegas, brings together the NVIDIA Inception program for startups and the Google for Startups Cloud Program to widen access to		<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-google-cloud-ai-development/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA and Google Cloud have announced a new collaboration to help startups around the world accelerate the creation of generative AI applications and services.</p>
-<p>The announcement, made today at Google Cloud Next ‘24 in Las Vegas, brings together the <a href="https://www.nvidia.com/en-us/startups/?ncid=ref-kc-319196-vt18&amp;sfdcid=Google" target="_blank" rel="noopener">NVIDIA Inception</a> program for startups and the <a href="https://startup.google.com/cloud/">Google for Startups Cloud Program</a> to widen access to cloud credits, go-to-market support and technical expertise to help startups deliver value to customers faster.</p>
-<p>Qualified members of NVIDIA Inception, a global program supporting more than 18,000 startups, will have an accelerated path to using Google Cloud infrastructure with access to Google Cloud credits — up to $350,000 for those focused on AI.</p>
-<p>Google for Startups Cloud Program members can join NVIDIA Inception and gain access to technological expertise, <a href="https://www.nvidia.com/en-us/training/" target="_blank" rel="noopener">NVIDIA Deep Learning Institute</a> course credits, NVIDIA hardware and software, and more. Eligible members of the Google for Startups Cloud Program also can participate in NVIDIA Inception Capital Connect, a platform that gives startups exposure to venture capital firms interested in the space.</p>
-<p>High-growth emerging software makers of both programs can also gain fast-tracked onboarding to Google Cloud Marketplace, co-marketing and product acceleration support.</p>
-<p>This collaboration is the latest in a series of announcements the two companies have made to help ease the costs and barriers associated with developing generative AI applications for enterprises of all sizes. Startups in particular are constrained by the high costs associated with AI investments.</p>
-<h2><b>It Takes a Full-Stack AI Platform</b></h2>
-<p>In February, Google DeepMind unveiled <a href="https://blog.google/technology/developers/gemma-open-models/" target="_blank" rel="noopener">Gemma</a>, a family of state-of-the-art open models. NVIDIA, in collaboration with Google, recently launched optimizations across all <a href="https://blogs.nvidia.com/blog/google-gemma-llm-rtx-ai-pc/" target="_blank" rel="noopener">NVIDIA AI platforms for Gemma</a>, helping to reduce customer costs and speed up innovative work for domain-specific use cases.</p>
-<p>Teams from the companies worked closely together to accelerate the performance of Gemma — built from the same research and technology used to create Google DeepMind’s most capable model yet, <a href="https://blog.google/technology/ai/google-gemini-ai/" target="_blank" rel="noopener">Gemini</a> — with <a href="https://developer.nvidia.com/tensorrt#inference">NVIDIA TensorRT-LLM</a>, an open-source library for optimizing large language model inference, when running on NVIDIA GPUs.</p>
-<p><a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/" target="_blank" rel="noopener">NVIDIA NIM</a> microservices, part of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform, together with <a href="https://cloud.google.com/kubernetes-engine" target="_blank" rel="noopener">Google Kubernetes Engine</a> (GKE) provide a streamlined path for developing AI-powered apps and deploying optimized AI models into production. Built on inference engines including <a href="https://developer.nvidia.com/triton-inference-server" target="_blank" rel="noopener">NVIDIA Triton Inference Server</a> and TensorRT-LLM, NIM supports a wide range of leading AI models and delivers seamless, scalable AI inferencing to accelerate generative AI deployment in enterprises.</p>
-<p>The Gemma family of models, including <a href="https://build.nvidia.com/google/gemma-7b" target="_blank" rel="noopener">Gemma 7B</a>, <a href="https://build.nvidia.com/google/recurrentgemma-2b" target="_blank" rel="noopener">RecurrentGemma</a> and <a href="https://build.nvidia.com/google/codegemma-7b" target="_blank" rel="noopener">CodeGemma,</a> are available from the <a href="http://build.nvidia.com" target="_blank" rel="noopener">NVIDIA API catalog</a> for users to try from a browser, prototype with the API endpoints and self-host with NIM.</p>
-<p>Google Cloud has made it easier to deploy the <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/" target="_blank" rel="noopener">NVIDIA NeMo</a> framework across its platform via GKE and <a href="https://cloud.google.com/hpc-toolkit/docs/overview" target="_blank" rel="noopener">Google Cloud HPC Toolkit</a>. This enables developers to automate and scale the training and serving of generative AI models, allowing them to rapidly deploy turnkey environments through customizable blueprints that jump-start the development process.</p>
-<p>NVIDIA NeMo, part of NVIDIA AI Enterprise, is also available in Google Cloud Marketplace, providing customers another way to easily access NeMo and other frameworks to accelerate AI development.</p>
-<p>Further widening the availability of NVIDIA-accelerated generative AI computing, Google Cloud also announced the general availability of A3 Mega will be coming next month. The instances are an expansion to its A3 virtual machine family, powered by <a href="https://www.nvidia.com/en-us/data-center/h100/" target="_blank" rel="noopener">NVIDIA H100 Tensor Core GPUs</a>. The new instances will double the GPU-to-GPU network bandwidth from A3 VMs.</p>
-<p>Google Cloud’s new Confidential VMs on A3 will also include support for <a href="https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/" target="_blank" rel="noopener">confidential computing</a> to help customers protect the confidentiality and integrity of their sensitive data and secure applications and AI workloads during training and inference — with no code changes while accessing H100 GPU acceleration. These GPU-powered Confidential VMs will be available in Preview this year.</p>
-<h2><b>Next Up: NVIDIA Blackwell-Based GPUs</b></h2>
-<p>NVIDIA’s newest GPUs based on the <a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/" target="_blank" rel="noopener">NVIDIA Blackwell</a> platform will be coming to Google Cloud early next year in two variations: the <a href="https://www.nvidia.com/en-us/data-center/hgx/">NVIDIA </a><a href="https://www.nvidia.com/en-us/data-center/hgx/">HGX B200</a> and the <a href="https://www.nvidia.com/en-us/data-center/gb200-nvl72/">NVIDIA GB200 NVL72</a>.</p>
-<p>The HGX B200 is designed for the most demanding AI, data analytics and high performance computing workloads, while the GB200 NVL72 is designed for next-frontier, massive-scale, trillion-parameter model training and real-time inferencing.</p>
-<p>The NVIDIA GB200 NVL72 connects 36 Grace Blackwell Superchips, each with two NVIDIA Blackwell GPUs combined with an <a href="https://www.nvidia.com/en-us/data-center/grace-cpu/" target="_blank" rel="noopener">NVIDIA Grace CPU</a> over a 900GB/s chip-to-chip interconnect, supporting up to 72 Blackwell GPUs in one <a href="https://www.nvidia.com/en-us/data-center/nvlink/" target="_blank" rel="noopener">NVIDIA NVLink</a> domain and 130TB/s of bandwidth. It overcomes communication bottlenecks and acts as a single GPU, delivering 30x faster real-time LLM inference and 4x faster training compared to the prior generation.</p>
-<p>NVIDIA GB200 NVL72 is a multi-node rack-scale system that will be combined with Google Cloud’s fourth generation of advanced liquid-cooling systems.</p>
-<p>NVIDIA announced last month that NVIDIA DGX Cloud, an AI platform for enterprise developers that’s optimized for the demands of generative AI, is generally available on A3 VMs powered by H100 GPUs. DGX Cloud with GB200 NVL72 will also be available on Google Cloud in 2025.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/google-cloud-logo.jpg"
-			type="image/jpeg"
-			width="1920"
-			height="1080"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/google-cloud-logo-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Start Up Your Engines: NVIDIA and Google Cloud Collaborate to Accelerate AI Development]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Ranked by Fortune at No. 3 on ‘100 Best Companies to Work For’ List</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-life-fortune-100-best-companies/</link>
-		
-		<dc:creator><![CDATA[Samantha Zee]]></dc:creator>
-		<pubDate>Thu, 04 Apr 2024 18:07:43 +0000</pubDate>
-				<category><![CDATA[NVIDIA Life]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70987</guid>
-
-					<description><![CDATA[NVIDIA jumped to No. 3 on the latest list of America’s 100 Best Companies to Work For by Fortune magazine and Great Place to Work. It’s the company’s eighth consecutive year and highest ranking yet on the widely followed list, published today, which more than a thousand businesses vie to land on. NVIDIA ranked sixth		<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-life-fortune-100-best-companies/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA jumped to No. 3 on the latest list of America’s <a href="https://fortune.com/ranking/best-companies/">100 Best Companies to Work For</a> by <i>Fortune</i> magazine and Great Place to Work.</p>
-<p>It’s the company’s eighth consecutive year and highest ranking yet on the widely followed list, published today, which more than a thousand businesses vie to land on. NVIDIA ranked sixth last year.</p>
-<p>“Since the COVID pandemic, employees are increasingly prioritizing work-life balance, mission alignment and empathetic workplaces,” <i>Fortune</i> wrote, with hotelier Hilton taking the top spot, followed by Cisco.</p>
-<p>“Even as the broader tech sector has shed tens of thousands of jobs, NVIDIA continued its remarkable streak of nearly 15 years without any layoffs,” <i>Fortune</i> noted in its writeup. NVIDIA also was cited for the company’s “flat structure,” which encourages employees to solve problems quickly and collaboratively through projects.</p>
-<h2><b>Survey Says: 97% Are Proud to Share They Work at NVIDIA</b></h2>
-<p>To identify the top 100, <i>Fortune</i> conducted a detailed employee survey with Great Place to Work that received more than 1.3 million responses from people in the U.S. The <a href="https://www.greatplacetowork.com/certified-company/1000184">survey</a> showed that 97% of NVIDIANs are proud to tell others where they work.</p>
-<p>While many tech companies faced a challenging 2023, with an uncertain economy and several of the biggest employers laying off thousands of workers, NVIDIA focused on managing costs, encouraging innovation and offering unique benefits and compensation that supported employees.</p>
-<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/about-nvidia/careers/life-at-nvidia/"><i>NVIDIA life, culture and careers</i></a><i>.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/Fortune-GPTW-Feature-Image.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/Fortune-GPTW-Feature-Image-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Ranked by Fortune at No. 3 on ‘100 Best Companies to Work For’ List]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>‘The Elder Scrolls Online’ Joins GeForce NOW for Game’s 10th Anniversary</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-elder-scrolls-online-japan-expansion-april-games-list/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 04 Apr 2024 13:00:47 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70969</guid>
-
-					<description><![CDATA[Rain or shine, a new month means new games. GeForce NOW kicks off April with nearly 20 new games, seven of which are available to play this week. GFN Thursday celebrates the 10-year anniversary of ZeniMax Online Studios’ Elder Scrolls Online by bringing the award-winning online role-playing game (RPG) to the cloud this week. Plus,		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-elder-scrolls-online-japan-expansion-april-games-list/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Rain or shine, a new month means new games. <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> kicks off April with nearly 20 new games, seven of which are available to play this week.</p>
-<p>GFN Thursday celebrates the 10-year anniversary of ZeniMax Online Studios’ <i>Elder Scrolls</i> <i>Online</i> by bringing the award-winning online role-playing game (RPG) to the cloud this week.</p>
-<p>Plus, the <a href="https://www.nvidia.com/en-us/geforce-now/memberships/">GeForce NOW Ultimate membership</a> comes to gamers in Japan for the first time, with new GeForce RTX 4080 SuperPODs online today.</p>
-<h2><b>The Rising Sun Goes Ultimate</b></h2>
-<figure id="attachment_70973" aria-describedby="caption-attachment-70973" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70973" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-672x374.png" alt="Japan and GeForce NOW" width="672" height="374" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-672x374.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-400x223.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-768x427.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-1536x855.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-808x450.png 808w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-386x215.png 386w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-180x100.png 180w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Japan-1280x712.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70973" class="wp-caption-text"><em>Get ready to drift into the cloud.</em></figcaption></figure>
-<p>GeForce NOW is rolling out the green carpet to gamers in Japan, expanding next-generation cloud gaming worldwide. <a href="https://www.nvidia.com/ja-jp/geforce-now/memberships/">The Ultimate membership tier is now available</a> to gamers in the region, delivering up to 4K gaming at up to 120 frames per second, all at ultra-low latency — even on devices without the latest hardware.</p>
-<p>Gamers in Japan can now access from the cloud triple-A titles by some of the world’s largest publishers. Capcom’s <i>Street Fighter 6</i> and <i>Resident Evil Village</i> will be coming to GeForce NOW at a later date for members to stream at the highest performance.</p>
-<p>GeForce NOW will operate in Japan alongside GeForce NOW Alliance partner and telecommunications company KDDI, which currently offers its customers access to GeForce RTX 3080-powered servers, in addition to its mobile benefits. Plus, new GFNA partners in other regions will be announced this year — stay tuned to GFN Thursdays for details.</p>
-<h2><b>A Decade of Adventure</b></h2>
-<figure id="attachment_70976" aria-describedby="caption-attachment-70976" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70976" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-672x378.jpg" alt="Elder Scrolls Online on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-Elder_Scrolls_Online-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70976" class="wp-caption-text"><em>The cloud is slay-ing.</em></figcaption></figure>
-<p>Discover Tamriel from the comfort of almost anywhere with GeForce NOW. Explore the Elder Scrolls universe solo or alongside thousands of other players in <i>The Elder Scrolls Online</i> as it joins the cloud this week for members.</p>
-<p>For a decade, <i>Elder Scrolls Online </i>has cultivated a vibrant community of millions of players and a legacy of exciting stories, characters and adventures. Players have explored Morrowind<i>, </i>Summerset, Skyrim and more, thanks to regular updates and chapter releases. The title’s anniversary celebrations <a href="https://www.elderscrollsonline.com/en-us/news/post/65537">kick off in Amsterdam</a> this week, and fans worldwide can join in by streaming the game from the cloud.</p>
-<p>Set during Tamriel’s Second Era, a millennium before <i>The Elder Scrolls V: Skyrim</i>, <i>The Elder Scrolls Online</i> has players exploring a massive, ever-growing world. Together they can encounter memorable quests, challenging dungeons, player vs. player battles and more. Gamers can play their way by customizing their characters, looting and crafting new gear, and unlocking and developing their abilities.</p>
-<p>Experience the epic RPG with an Ultimate membership and venture forth in the cloud with friends, tapping eight-hour gaming sessions and exclusive access to servers. Ultimate members can effortlessly explore the awe-inspiring fantasy world with the ability to stream at up to 4K and 120 fps, or experience the game at ultrawide resolutions on <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5462">supported devices</a>.</p>
-<h2><b>April Showers Bring New Games</b></h2>
-<figure id="attachment_70979" aria-describedby="caption-attachment-70979" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-70979" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-672x336.jpg" alt="MEGAMAN X DiVE OFFLINE on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-MEGAMAN_X_DiVE_OFFLINE.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-70979" class="wp-caption-text"><em>X marks the cloud.</em></figcaption></figure>
-<p>Dive into a new adventure with <i>Mega Man X DiVE Offline </i>from Capcom. It’s the offline, reimagined version of <i>Mega Man X DiVE</i>, featuring the franchise’s classic action, over 100 characters from the original series and an all-new story with hundreds of stages to play. Strengthen characters and weapons with a variety of power-ups — then test them out in the side-scrolling action.</p>
-<p>Catch it alongside other new games joining the cloud this week:</p>
-<ul>
-<li><i>ARK: Survival Ascended </i>(New release on <a href="https://www.xbox.com/games/store/ark-survival-ascended/9p33vjgvphvp?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, April 1)</li>
-<li><i>Thief</i> (New release on <a href="https://www.epicgames.com/store/p/thief-5bb95f?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, free from April 4-11)</li>
-<li><i>Sons of Valhalla </i>(New release on <a href="https://store.steampowered.com/app/1409830?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 5)</li>
-<li><i>Elder Scrolls Online </i>(<a href="https://store.steampowered.com/app/306130?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.epicgames.com/store/p/the-elder-scrolls-online?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-<li><i>MEGA MAN X DiVE Offline </i>(<a href="https://store.steampowered.com/app/2183650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>SUPERHOT: MIND CONTROL DELETE</i> (<a href="https://www.xbox.com/games/store/superhot-mind-control-delete/9NRH78B682L8?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Turbo Golf Racing 1.0</i> (<a href="https://www.xbox.com/games/store/turbo-golf-racing-game-preview/9N6781PMXC02?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-</ul>
-<p>And members can look for the following throughout the rest of the month:</p>
-<ul>
-<li><i>Dead Island 2 </i>(New release on <a href="https://store.steampowered.com/app/934700?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 22)</li>
-<li><i>Phantom Fury </i>(New release on <a href="https://store.steampowered.com/app/1733240?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 23)</li>
-<li><i>Oddsparks: An Automation Adventure </i>(New release on <a href="https://store.steampowered.com/app/1817800?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 24)</li>
-<li><i>9-Bit Armies: A Bit Too Far </i>(<a href="https://store.steampowered.com/app/1439750?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Backpack Battles </i>(<a href="https://store.steampowered.com/app/2427700?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Dragon’s Dogma 2 Character Creator &amp; Storage </i>(<a href="https://store.steampowered.com/app/2674810?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Evil West </i>(<a href="https://www.xbox.com/games/store/evil-west/9MW581HCJPM6?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Islands of Insight </i>(<a href="https://store.steampowered.com/app/2071500?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Lightyear Frontier </i>(<a href="https://store.steampowered.com/app/1677110?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/lightyear-frontier-game-preview/9NDX2927SND9?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Manor Lords</i> (New release on <a href="https://store.steampowered.com/app/1363080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and Xbox, available on PC Game Pass)</li>
-<li><i>Metaball </i>(<a href="https://store.steampowered.com/app/2215910?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Tortuga &#8211; A Pirate’s Tale </i>(<a href="https://store.steampowered.com/app/1604250/Tortuga__A_Pirates_Tale/">Steam</a>)</li>
-</ul>
-<h2><b>Making the Most of March</b></h2>
-<p>In addition to the 30 games announced last month, six more joined the <a href="http://play.geforcenow.com">GeForce NOW library</a>:</p>
-<ul>
-<li><i>Zoria: Age of Shattering</i> (New release on <a href="https://store.steampowered.com/app/1159090?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 7)</li>
-<li><i>Deus Ex: Mankind Divided</i> (New release on <a href="https://www.epicgames.com/store/p/deus-ex-mankind-divided-4c6370?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, free, March 14)</li>
-<li><i>Dragon’s Dogma 2 </i>(New release on <a href="https://store.steampowered.com/app/2054970?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, March 21)</li>
-<li><i>Diablo IV</i> (<a href="https://shop.battle.net/family/diablo-iv">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Granblue Fantasy: Relink </i>(<a href="https://store.steampowered.com/app/881020?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Space Engineers</i> (<a href="https://www.xbox.com/en-US/games/store/space-engineers/9NLV3X229LG1?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-</ul>
-<p>Some titles didn’t make it in March. <i>Crown Wars: The Black Prince </i>and <i>Breachway</i> have delayed their launch dates to later this year, and <i>Portal: Revolution </i>will join GeForce NOW in the future. Stay tuned to GFN Thursday for updates.</p>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">respect your gaming elders <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f579.png" alt="🕹" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1775553850105069738?ref_src=twsrc%5Etfw">April 3, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-April_4.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/GFN_Thursday-April_4-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[‘The Elder Scrolls Online’ Joins GeForce NOW for Game’s 10th Anniversary]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>A New Lens: Dotlumen CEO Cornel Amariei on Assistive Technology for the Visually Impaired</title>
-		<link>https://blogs.nvidia.com/blog/dotlumen-ai-podcast/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Wed, 03 Apr 2024 13:00:49 +0000</pubDate>
-				<category><![CDATA[The AI Podcast]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=70961</guid>
-
-					<description><![CDATA[Dotlumen is illuminating a new technology to help people with visual impairments navigate the world. In this episode of NVIDIA’s AI Podcast, recorded live at the NVIDIA GTC global AI conference, host Noah Kravitz spoke with the Romanian startup’s founder and CEO, Cornel Amariei, about developing its flagship Dotlumen Glasses. Equipped with sensors and powered		<a class="read-more" href="https://blogs.nvidia.com/blog/dotlumen-ai-podcast/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Dotlumen is illuminating a new technology to help people with visual impairments navigate the world.</p>
-<p>In this episode of NVIDIA’s <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">AI Podcast</a>, recorded live at the <a href="https://www.nvidia.com/gtc/" target="_blank" rel="noopener">NVIDIA GTC</a> global AI conference, host Noah Kravitz spoke with the Romanian startup’s founder and CEO, Cornel Amariei, about developing its flagship Dotlumen Glasses.</p>
-<p>Equipped with sensors and powered by AI, the glasses compute a safely walkable path for visually impaired individuals and offer haptic — or tactile — feedback on how to proceed via corresponding vibrations. Amariei further discusses the process and challenges of developing assistive technology and its potential for enhancing accessibility.</p>
-<p>Dotlumen is a member of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33" target="_blank" rel="noopener">NVIDIA Inception</a> program for cutting-edge startups.</p>
-<p>Stay tuned for more episodes recorded live from GTC.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1791227923%3Fsecret_token%3Ds-XBqirnHOR0N&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Dotlumen CEO Cornel Amariei on Assistive Technology for the Visually Impaired" href="https://soundcloud.com/theaipodcast/gtc24-cornel-amariei-inception/s-XBqirnHOR0N" target="_blank" rel="noopener">Dotlumen CEO Cornel Amariei on Assistive Technology for the Visually Impaired</a></div>
-<h2><b>Time Stamps</b></h2>
-<p>0:52: Background on the glasses</p>
-<p>4:28: User experience of the glasses</p>
-<p>7:29: How the glasses sense the physical world and compute a walkable path</p>
-<p>18:07: The hardest part of the development process</p>
-<p>22:20: Expected release and availability of the glasses</p>
-<p>25:57: Dotlumen’s technical breakthrough moments</p>
-<p>30:19: Other assistive technologies to look out for</p>
-<h2><b>You Might Also Like…</b></h2>
-<p><a href="https://soundcloud.com/theaipodcast/viome-guru-banavar" target="_blank" rel="noopener"><b>Personalized Health: Viome’s Guru Banavar Discusses Startup’s AI-Driven Approach &#8211; Ep. 216</b><b><br />
-</b><br />
-</a>Viome Chief Technology Officer Guru Banavar discusses how the startup’s innovations in AI and genomics advance personalized health and wellness.</p>
-<p><a href="https://soundcloud.com/theaipodcast/cardiac-caristo-dr-keith-channon" target="_blank" rel="noopener"><b>Cardiac Clarity: Dr. Keith Channon Talks Revolutionizing Heart Health With AI &#8211; Ep. 212</b></a></p>
-<p>Here’s some news to still beating hearts: AI is helping bring some clarity to cardiology. Caristo Diagnostics has developed an AI-powered solution for detecting coronary inflammation in cardiac CT scans.</p>
-<p><a href="https://soundcloud.com/theaipodcast/matice" target="_blank" rel="noopener"><b>Matice Founder Jessica Whited on Harnessing Regenerative Species for Medical Breakthroughs &#8211; Ep. 198</b></a></p>
-<p>Scientists at Matice Biosciences are using AI to study the regeneration of tissues in animals known as super-regenerators, such as salamanders and planarians. The goal of the research is to develop new treatments that will help humans heal from injuries without scarring.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-stroller" target="_blank" rel="noopener"><b>How GluxKind Created Ella, the AI-Powered Smart Stroller &#8211; Ep. 193</b></a></p>
-<p>Imagine a stroller that can drive itself, help users up hills, brake on slopes and provide alerts of potential hazards. That’s what GlüxKind has done with Ella, an award-winning smart stroller that uses the NVIDIA Jetson edge AI and robotics platform to power its AI features.</p>
-<h2><b>Subscribe to the AI Podcast</b></h2>
-<p>Get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker,<a href="https://soundcloud.com/theaipodcast"> Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
-<p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast.jpg"
-			type="image/jpeg"
-			width="1400"
-			height="931"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[A New Lens: Dotlumen CEO Cornel Amariei on Assistive Technology for the Visually Impaired]]></media:title>
-			<media:description type="html">NVIDIA AI Podcast</media:description>
 			</media:content>
 			</item>
 	</channel>
