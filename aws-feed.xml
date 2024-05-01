@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 30 Apr 2024 12:27:29 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 01 May 2024 15:01:56 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,104 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Accelerate drug discovery with NVIDIA BioNeMo Framework on Amazon EKS</title>
+		<link>https://aws.amazon.com/blogs/hpc/accelerate-drug-discovery-with-nvidia-bionemo-framework-on-amazon-eks/</link>
+		
+		<dc:creator><![CDATA[Doruk Ozturk]]></dc:creator>
+		<pubDate>Wed, 01 May 2024 15:01:56 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Drug Discovery]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">6ce72440eac8d6fda6dcdd01cb3b62a20165c5d0</guid>
+
+					<description>This post was contributed by Doruk Ozturk and Ankur Srivastava at AWS, and Neel Patel at NVIDIA. Introduction Drug discovery is a long and expensive process. Pharmaceutical companies must sift through thousands of compound possibilities to find potential new drugs to treat diseases. This process takes multiple years and costs billions of dollars, with the […]</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Doruk Ozturk and Ankur Srivastava at AWS, and Neel Patel at NVIDIA.&lt;/em&gt;&lt;/p&gt; 
+&lt;h2&gt;Introduction&lt;/h2&gt; 
+&lt;p&gt;Drug discovery is a long and expensive process. Pharmaceutical companies must sift through thousands of compound possibilities to find potential new drugs to treat diseases. This process takes multiple years and costs billions of dollars, with the majority of the candidates failing during clinical trials.&lt;/p&gt; 
+&lt;p&gt;As generative artificial intelligence (generative AI) continues to transform industries, the life sciences sector is leveraging these advanced technologies to accelerate drug discovery. Generative AI tools powered by deep learning models make it possible to analyze massive datasets, identify patterns, and generate insights to aid the search for new drug compounds. However, running these generative AI workloads requires a full-stack approach that combines robust computing infrastructure with optimized domain-specific software that can accelerate time to solution.&lt;/p&gt; 
+&lt;p&gt;In this blog post, we’ll show you how to leverage the NVIDIA BioNeMo platform on Amazon Elastic Kubernetes Service (Amazon EKS) to accelerate drug discovery by using generative AI and other machine learning technologies.&lt;/p&gt; 
+&lt;h2&gt;NVIDIA BioNeMo&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://www.nvidia.com/en-us/clara/bionemo/"&gt;NVIDIA BioNeMo&lt;/a&gt; is a generative AI platform for drug discovery that simplifies and accelerates the training of models using your own data. BioNeMo provides researchers and developers a fast and easy way to build and integrate state-of-the-art generative AI applications across the entire drug discovery pipeline—from target identification to lead optimization—with AI workflows for 3D protein structure prediction, de novo design, virtual screening, docking, and property prediction.&lt;/p&gt; 
+&lt;p&gt;The BioNeMo framework facilitates centralized model training, optimization, fine-tuning, and inferencing for protein and molecular design. Researchers can build and train foundation models from scratch at scale, or use pre-trained model checkpoints provided with the BioNeMo Framework for fine-tuning for downstream tasks. Currently, BioNeMo supports models such as ESM1nv, ESM2nv, ProtT5nv, DNABERT, OpenFold, EquiDock, DiffDock, and MegaMolBART. To read more about BioNeMo, visit &lt;a href="https://docs.nvidia.com/bionemo-framework/latest/"&gt;the documentation page&lt;/a&gt;.&lt;/p&gt; 
+&lt;div id="attachment_3527" style="width: 1689px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3527" loading="lazy" class="wp-image-3527 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/15/HPCBlog-281-fig1-1.png" alt="Figure 1: This image shows the workflow for developing models on NVIDIA BioNeMo. The process is divided into phases for model development and customization and then fine-tuning and deployment." width="1679" height="691"&gt;
+ &lt;p id="caption-attachment-3527" class="wp-caption-text"&gt;Figure 1: This image shows the workflow for developing models on NVIDIA BioNeMo. The process is divided into phases for model development and customization and then fine-tuning and deployment.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;In this post, we’ll walk through how to deploy the NVIDIA BioNeMo Framework on Amazon Elastic Kubernetes Service (Amazon EKS). Amazon EKS provides a fully managed Kubernetes service, making it simpler to run distributed, containerized generative AI workloads at scale. The process will cover:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Setting up an EKS cluster with NVIDIA GPU nodes&lt;/li&gt; 
+ &lt;li&gt;Leveraging Amazon FSx for Lustre for high-performance data storage and sharing&lt;/li&gt; 
+ &lt;li&gt;Downloading and ingesting Uniref-50 data in a machine learning friendly format&lt;/li&gt; 
+ &lt;li&gt;Running a distributed pre-training job to train the ESM-1nv model&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2&gt;Architecture&lt;/h2&gt; 
+&lt;div id="attachment_3528" style="width: 1145px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3528" loading="lazy" class="size-full wp-image-3528" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/15/HPCBlog-281-fig2-1.png" alt="Figure 2:&amp;nbsp; This architecture diagram shows Amazon EKS cluster with GPU nodes, Amazon FSx for Lustre filesystem, and BioNeMo containers. GPU nodes are optimized for machine learning workloads. The FSx filesystem enables fast access to data needed for distributed training. Amazon CloudWatch is used for logging and monitoring." width="1135" height="1003"&gt;
+ &lt;p id="caption-attachment-3528" class="wp-caption-text"&gt;Figure 2: This architecture diagram shows Amazon EKS cluster with GPU nodes, Amazon FSx for Lustre filesystem, and BioNeMo containers. GPU nodes are optimized for machine learning workloads. The FSx filesystem enables fast access to data needed for distributed training. Amazon CloudWatch is used for logging and monitoring.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We leveraged the &lt;a href="https://github.com/aws-ia/terraform-aws-eks-blueprints"&gt;Amazon EKS Blueprints for Terraform &lt;/a&gt;and &lt;a href="https://github.com/awslabs/data-on-eks"&gt;Data on EKS&lt;/a&gt; open source projects to build a robust Kubernetes infrastructure on EKS using Infrastructure as Code best practices. These projects enabled us to quickly stand up an EKS cluster while meeting security and operational excellence requirements.&lt;/p&gt; 
+&lt;p&gt;In particular, the Terraform blueprints let us create a production-grade EKS cluster with networking, security groups, node groups, and other critical components out-of-the-box. The Data on EKS repository provided examples for running data-intensive workloads such as Apache Spark and TensorFlow on EKS. Together, these tools allowed us to launch an EKS cluster purpose-built for large-scale data processing in a reproducible and automated fashion. We can easily scale the cluster up to hundreds of nodes to handle compute-intensive jobs. Adopting these community-built modules accelerated our delivery timelines while ensuring the infrastructure remained secure, observable, and operationally robust as it scaled. The flexibility to customize the modules as needed also enabled us to tailor the infrastructure to the specific needs of our data workloads.&lt;/p&gt; 
+&lt;h1&gt;The NVIDIA BioNeMo on EKS Blueprint&lt;/h1&gt; 
+&lt;p&gt;We published all of the templates we used to deploy BioNeMo on EKS as a new Data on EKS &lt;a href="https://github.com/awslabs/data-on-eks/tree/main/ai-ml/bionemo"&gt;blueprint&lt;/a&gt; on GitHub. We’ll continue to iterate and improve on this blueprint over time, so you should bookmark and refer to the &lt;a href="https://awslabs.github.io/data-on-eks/docs/gen-ai/training/bionemo"&gt;official documentation&lt;/a&gt; on the Data on EKS website moving forward. However, we will discuss key configuration details and technical details here for reference.&lt;/p&gt; 
+&lt;p&gt;Step one, as always, is to prepare the input data as a machine learning friendly structure. Uniref50 contains over 50 million unique protein sequences clustered from UniProt at 50% identity. This comprehensive set provides a foundation for vital tasks such as gene annotation and protein family prediction.&lt;/p&gt; 
+&lt;p&gt;To leverage Uniref50’s scale, we downloaded and organized the data into training, validation, and test partitions. This layout enhances downstream machine learning by enabling effective model building, evaluation, and monitoring of overfitting. An Amazon FSx for Lustre shared filesystem provided the high-throughput storage needed for data sharing across the compute cluster nodes.&lt;/p&gt; 
+&lt;p&gt;After data preparation, we are ready to run the pretraining job. It is important to leverage all available NVIDIA GPU resources for maximum performance. P5 instances powered by NVIDIA H100 Tensor Core GPUs offer the best performance, however, in this example, we used two p3.16xlarge instances with eight GPUs each for demonstration purposes. To utilize all 16 GPUs, we configured the &lt;code&gt;PytorchJob&lt;/code&gt; &lt;a href="https://github.com/awslabs/data-on-eks/blob/main/ai-ml/bionemo/examples/training/esm1nv_pretrain-job.yaml"&gt;custom resource&lt;/a&gt; with one GPU per replica:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="lang-yaml"&gt;resources:
+  requests:
+    nvidia.com/gpu: 1
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;We set replicas to match the total number of available GPUs across the worker nodes:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="lang-yaml"&gt;pytorchReplicaSpecs:
+&amp;nbsp; Worker:
+&amp;nbsp;&amp;nbsp;&amp;nbsp; replicas: 16&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;To allocate 8 processes per 16-GPU node, we set:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="lang-yaml"&gt;nprocPerNode: "8"&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;By default, workloads that don’t require GPUs won’t be scheduled on our GPU nodes. To make sure our BioNeMo pods were scheduled on the GPU nodes, we added tolerations:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="lang-yaml"&gt;tolerations:
+-  Key: nvidia.com/gpu
+    operator: Exists
+    effect: NoSchedule
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;To utilize a larger cluster for BioNeMo analysis, change the above values to match the cluster size. For example, to fully leverage a cluster of 8 p3.8xlarge instances, each with 4 GPUs, you would need to change the following parameters:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Set “&lt;code&gt;nprocPerNode&lt;/code&gt;” to 4 to indicate the number of GPUs available per node.&lt;/li&gt; 
+ &lt;li&gt;Set “&lt;code&gt;replicas&lt;/code&gt;” to 32 to total the number of GPUs across the 8 nodes.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;As each p3.8xlarge instance contains 4 GPUs, 8 instances x 4 GPUs per instance = 32 GPUs in the cluster.&lt;/p&gt; 
+&lt;p&gt;By properly configuring these parameters according to the resources provisioned, you can efficiently parallelize the training across the all-available GPUs in the cluster. For more information on configuring Pytorch and Kubeflow for your specific needs, read the &lt;a href="https://pytorch.org/docs/stable/distributed.html"&gt;Pytorch distributed module documentation&lt;/a&gt; and the &lt;a href="https://www.kubeflow.org/docs/components/training/"&gt;Kubeflow Training Operator’s documentation&lt;/a&gt;&lt;u&gt;,&lt;/u&gt; respectively.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In summary, leveraging technologies such as NVIDIA BioNeMo on Amazon EKS can accelerate AI-powered drug discovery by orders of magnitude. By combining the power of generative models with robust infrastructure for distributed training, researchers can rapidly analyze massive protein datasets to uncover new drug compound candidates. Automating infrastructure deployment using Terraform modules and best practices for maximum GPU utilization, storage, and monitoring enables workloads to benefit from security, scalability, and observability. Subject matter experts are a key resource for drug discover, and purpose-built generative AI platforms on cloud-native infrastructure can augment their creativity and intuition. As this technology continues maturing, we may see further breakthroughs in delivering life-saving treatments to patients faster.&lt;/p&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/15/nilkanthp-nvidia-profile.png" alt="Neel Patel" width="125"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Neel Patel&lt;/h3&gt; 
+  &lt;p&gt;Neel Patel is a drug discovery scientist at NVIDIA, who focuses on cheminformatics and computational structural biology. Before joining NVIDIA, Patel was a computational chemist at Takeda Pharmaceuticals. He holds a Ph.D. from the University of Southern California. He lives in San Diego with his family and enjoys hiking and travelling.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Data, emerging technologies, and the circular economy: how Accenture and AWS are unlocking environmental and business impact</title>
 		<link>https://aws.amazon.com/blogs/hpc/data-emerging-technologies-and-the-circular-economy-how-accenture-and-aws-are-unlocking-environmental-and-business-impact/</link>
 		
@@ -27,7 +125,7 @@
 		<guid isPermaLink="false">cfe27b15e171b02db52875e9424a371ce2457466</guid>
 
 					<description>Realizing the $4.5 trillion circular economy opportunity requires accurate data, scalable HPC and agile tools. Read this post to discover how AWS and Accenture partner for real progress.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright wp-image-3572 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/Data-technology-and-the-circular-economy-how-Accenture-and-AWS-are-unlocking-environmental-and-business-impact.png" alt="Data, technology, and the circular economy: how Accenture and AWS are unlocking environmental and business impact" width="380" height="212"&gt;This post was contributed by Ilan Gleiser, Principal Specialist, Emerging Technologies at AWS, Joshua Curtis, Circular Intelligence Global Lead and Patrick Ford, Circular Intelligence North America Lead, Accenture Sustainability Services&lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright wp-image-3572 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/Data-technology-and-the-circular-economy-how-Accenture-and-AWS-are-unlocking-environmental-and-business-impact.png" alt="Data, technology, and the circular economy: how Accenture and AWS are unlocking environmental and business impact" width="380" height="212"&gt;This post was contributed by Ilan Gleiser, Principal Specialist, Emerging Technologies at AWS, Joshua Curtis, Circular Intelligence Global Lead and Patrick Ford, Circular Intelligence North America Lead, Accenture Sustainability Services&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;It is well documented that the circular economy is an opportunity for positive impact on business and society. Accenture’s analysis presents an economic opportunity of $4.5tn value is at stake for the global economy to 2030 by departing from our current ‘&lt;em&gt;take-make-waste&lt;/em&gt;’ economic system [1]. Ellen MacArthur Foundation outlines the importance of circularity as a solution to climate change, with 45% of the required carbon emission reductions to achieve a 1.5-degree world coming from how we make and consume products [2].&lt;/p&gt; 
 &lt;p&gt;It’s clear that resource use and circularity are critical to the creation of a sustainable, healthy economy. But how do we realize this value? How does a business identify where and how circular strategies can create financial and environmental impact?&lt;/p&gt; 
 &lt;p&gt;In this post, we will explore the challenges to achieving accurate and actionable data on circular economy performance and impact, and the solutions that lie in emerging technologies. Join us as we explore opportunities for kicking off and accelerating the data transformation needed to drive authentic, impact-driven progress on circularity.&lt;/p&gt; 
@@ -2329,100 +2427,6 @@ Done!
 &lt;p&gt;For organizations collaborating on large-scale data analysis and ML workloads, Seqera Platform running on AWS can be an excellent solution. You can more easily deploy powerful AWS compute and storage resources at scale, while also reducing your costs through optimized resource usage, and managing spend across projects and teams. You can also leverage best-in-class curated bioinformatics pipelines and modules from &lt;a href="https://nf-co.re"&gt;&lt;em&gt;nf-core&lt;/em&gt;&lt;/a&gt; and other sources.&lt;/p&gt; 
 &lt;p&gt;This can help improve research productivity with a unified view of data, pipelines, and results, while collaborating more effectively with local and remote teams.&lt;/p&gt; 
 &lt;p&gt;We’re excited to know how this works out for you, or if you have other challenges that AWS or Seqera can help you meet. Contact us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; if you want to discuss these with us.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Leveraging Seqera Platform on AWS Batch for machine learning workflows – Part 1 of 2</title>
-		<link>https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-1-of-2/</link>
-		
-		<dc:creator><![CDATA[Ben Sherman]]></dc:creator>
-		<pubDate>Tue, 23 Jan 2024 15:59:51 +0000</pubDate>
-				<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Genomics]]></category>
-		<guid isPermaLink="false">4153d168ace17c15a8bf48f252882386c3f15251</guid>
-
-					<description>Nextflow is popular workflow framework for genomics pipelines, but did you know you can also use it for machine-learning? ML is already being used for medical imaging, protein folding, drug discovery, and gene editing. In this post, we explain how to build an example Nextflow pipeline that performs ML model-training and inference for image analysis.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3236" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/18/Batch-and-Seqera.png" alt="Batch and Seqera" width="380" height="190"&gt;This post was contributed by Dr Ben Sherman (Seqera) and Dr Olivia Choudhury (AWS), Paolo Di Tomasso, and Gord Sissons from Seqera, and Aniket Deshpande and Abhijit Roy from AWS.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Machine learning (ML) is used for multiple healthcare and life sciences (HCLS) applications, including medical imaging, protein folding, drug discovery, and gene editing. While &lt;a href="https://nextflow.io/"&gt;Nextflow&lt;/a&gt; pipelines (like those in &lt;a href="https://nf-co.re"&gt;nf-core&lt;/a&gt;) are commonly used for genomics, they are also being adopted for machine learning workloads.&lt;/p&gt; 
-&lt;p&gt;Nextflow is an excellent solution for many ML-based scenarios. Sometimes you need to continuously (and automatically) retrain your models based on rapidly-changing datasets from external sources such as sequencers. Sometimes you need training and inference resources sporadically but you face constraints getting GPUs or FPGAs – even for short periods. And often pipelines like &lt;a href="https://nf-co.re/proteinfold/1.0.0"&gt;nf-core/proteinfold&lt;/a&gt; have compute and data-intensive inference steps where many samples need to be processed in parallel.&lt;/p&gt; 
-&lt;p&gt;In the next two posts, we’ll show you how these kinds of challenges can be addressed using Nextflow and the &lt;a href="https://seqera.io/platform/"&gt;Seqera Platform&lt;/a&gt; integrated with AWS.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;In part one&lt;/strong&gt; of this two-part blog series, we explain how to build an example Nextflow pipeline that performs ML model-training and inference for image analysis, illustrating how Nextflow supports custom ML-based workflows. We also discuss how health care and life science customers are using this today.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;In &lt;a href="https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-2-of-2/"&gt;part two&lt;/a&gt;&lt;/strong&gt;, we’ll provide a step-by-step guide explaining how users new to the Seqera Platform can rapidly get started with AWS, maximizing the use of &lt;a href="https://aws.amazon.com/batch"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Service (Amazon S3&lt;/a&gt;), and other AWS services.&lt;/p&gt; 
-&lt;h2&gt;Seqera on AWS&lt;/h2&gt; 
-&lt;p&gt;&lt;a href="https://seqera.io/platform/"&gt;Seqera Platform&lt;/a&gt; (previously &lt;em&gt;Nextflow Tower&lt;/em&gt;) is a comprehensive bioinformatics data analysis platform deeply integrated with AWS. Seqera is used by leading biotechnology and pharmaceutical companies globally, including 10 of the top 20 global BioPharmas and roughly 10,000 bioinformaticians across hundreds of organizations.&lt;/p&gt; 
-&lt;p&gt;Seqera Platform has several key features:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;It is explicitly designed for Nextflow pipelines.&lt;/li&gt; 
- &lt;li&gt;It is cross platform – Seqera works with AWS and other cloud and HPC providers, including on-premises systems. It supports customer’s preferred container runtimes, registries, source code managers, and it uses multiple AWS services, including AWS Batch, Amazon S3, Amazon FSx for Lustre, Amazon Elastic File System (EFS), Amazon Elastic Kubernetes Service (EKS), AWS Secrets Manager and others.&lt;/li&gt; 
- &lt;li&gt;It has a large, active, user and developer community which provide high-quality curated &lt;a href="https://nf-co.re"&gt;nf-core&lt;/a&gt; pipelines and modules.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;&lt;a href="https://seqera.io/platform/"&gt;Seqera Platform&lt;/a&gt; can be deployed in two different ways.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Seqera Cloud&lt;/strong&gt; is a fully managed service hosted exclusively on AWS infrastructure. Presently, there are 8,000+ corporate and research Seqera Cloud users. Researchers can use Seqera Cloud for free and progress to paid plans as their needs evolve.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Seqera Enterprise&lt;/strong&gt; is a customer-managed version of the Seqera platform that is deployable on-premises or on a customer’s preferred cloud. Some customers install Seqera on-premises, while others deploy Seqera on AWS using Docker Compose or the &lt;a href="https://aws.amazon.com/eks/"&gt;Amazon Elastic Kubernetes Service&lt;/a&gt; (EKS).&lt;/p&gt; 
-&lt;p&gt;Seqera employs a “&lt;em&gt;bring your own credentials&lt;/em&gt;” model. As illustrated in the architecture diagram in Figure 1, users log into Seqera and add &lt;a href="https://help.tower.nf/23.2/compute-envs/overview/"&gt;compute environments&lt;/a&gt; by supplying credentials for their preferred cloud or HPC workload manager.&lt;/p&gt; 
-&lt;div id="attachment_3210" style="width: 1102px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3210" loading="lazy" class="size-full wp-image-3210" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.10.09.png" alt="Figure 1: High-level architecture of Seqera on the AWS Cloud." width="1092" height="591"&gt;
- &lt;p id="caption-attachment-3210" class="wp-caption-text"&gt;Figure 1: High-level architecture of Seqera on the AWS Cloud.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Seqera Platform users have a private workspace and can be assigned to various shared workspaces, each with its own pipelines, datasets, and compute environments. Seqera sidesteps the complexity of running in different cloud or HPC environments by providing a consistent user experience regardless of the underlying infrastructure.&lt;/p&gt; 
-&lt;p&gt;While most workloads run on-premises or on AWS infrastructure, this ability to deploy to different compute environments is useful for several reasons:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Customers can leverage on-premises HPC clusters and tap cloud capacity when their own resources are fully utilized.&lt;/li&gt; 
- &lt;li&gt;Research frequently involves datasets hosted on third-party clouds, making it more cost-effective to &lt;em&gt;bring the compute to the data&lt;/em&gt; rather than transferring large datasets to a local execution environment.&lt;/li&gt; 
- &lt;li&gt;Academic and research efforts frequently involve collaboration among institutions using different infrastructure. Seqera allows these users to seamlessly share pipelines, datasets, computing infrastructure, and research results without exposing private cloud credentials.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Seqera Forge&lt;/h2&gt; 
-&lt;p&gt;While users can choose to run pipelines on pre-existing AWS Batch environments, Seqera Forge fully automates creating and configuring AWS Batch compute environments and queues for Nextflow pipelines, following best practices. Seqera can also dispose of cloud resources when they’re not in use, helping reduce costs.&lt;/p&gt; 
-&lt;p&gt;By leveraging AWS APIs, Forge dramatically simplifies the deployment, configuration, and teardown of AWS infrastructure, making it possible for researchers with minimal knowledge of “CloudOps” to deploy cloud infrastructure themselves.&lt;/p&gt; 
-&lt;h2&gt;A sample training dataset&lt;/h2&gt; 
-&lt;p&gt;To illustrate how machine learning and inference workloads can be run on AWS using Seqera Platform, we used the &lt;a href="https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic"&gt;Wisconsin Diagnostic Breast Cancer&lt;/a&gt; (WDBC) dataset. This is a well-known dataset, often used as an example for learning or comparing different ML techniques, specifically for image classification. It consists of 589 samples, each with a set of 30 features taken from an image of a breast tissue. The diagnosis column in the data indicates whether the sample was benign (B) or malignant (M), as illustrated in Figure 2.&lt;/p&gt; 
-&lt;div id="attachment_3211" style="width: 1131px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3211" loading="lazy" class="size-full wp-image-3211" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.10.50.png" alt="Figure 2: Images from Breast Cancer Wisconsin (Diagnostic) Dataset aligning with tabular data showing that samples are either malignant or benign." width="1121" height="328"&gt;
- &lt;p id="caption-attachment-3211" class="wp-caption-text"&gt;Figure 2: Images from Breast Cancer Wisconsin (Diagnostic) Dataset aligning with tabular data showing that samples are either malignant or benign.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;In the sample pipeline, we will train and evaluate multiple models to classify these breast samples as benign or malignant. In a real-world scenario, we can also use k-fold cross-validation to evaluate each model on several randomized partitions of the dataset and use multiple performance metrics with minimum requirements to determine whether a model is “good enough” to be used in production.&lt;/p&gt; 
-&lt;p&gt;For our purposes here, we will simply evaluate each model on a single 80/20 train/test split and select the model with the highest test accuracy.&lt;/p&gt; 
-&lt;h2&gt;A sample pipeline&lt;/h2&gt; 
-&lt;p&gt;For illustration purposes, we use a simple proof-of-concept pipeline called &lt;a href="https://github.com/nextflow-io/hyperopt"&gt;Hyperopt&lt;/a&gt; developed by Seqera Labs. The pipeline takes any tabular dataset as input (or the name of a dataset on &lt;a href="https://www.openml.org/"&gt;OpenML&lt;/a&gt;). It then trains and evaluates a set of ML models on the dataset, reporting the model that achieved the highest test accuracy. You can learn more about this pipeline in the article &lt;a href="https://seqera.io/blog/nextflow-and-tower-for-machine-learning/"&gt;Nextflow and Tower for Machine Learning&lt;/a&gt;. The pipeline code is available on &lt;a href="https://github.com/nextflow-io/hyperopt"&gt;GitHub&lt;/a&gt;. Figure 3 shows a &lt;a href="https://mermaid.js.org/"&gt;Mermaid diagram&lt;/a&gt;&lt;u&gt;, automatically generated by Nextflow,&lt;/u&gt; of the overall pipeline.&lt;/p&gt; 
-&lt;div id="attachment_3212" style="width: 643px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3212" loading="lazy" class="size-full wp-image-3212" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.11.37.png" alt="Figure 3: The pipeline steps are implemented as Python scripts that use several common packages for ML, including numpy, pandas, scikit-learn, and matplotlib. These dependencies are defined in a Conda environment file called conda.yml." width="633" height="784"&gt;
- &lt;p id="caption-attachment-3212" class="wp-caption-text"&gt;Figure 3: The pipeline steps are implemented as Python scripts that use several common packages for ML, including numpy, pandas, scikit-learn, and matplotlib. These dependencies are defined in a Conda environment file called conda.yml.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;By default, the pipeline uses the &lt;a href="https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic"&gt;WDBC&lt;/a&gt; dataset described above and evaluates five different classification models:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;A &lt;a href="https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html"&gt;baseline model&lt;/a&gt; (i.e. “dummy” model) that simply predicts the most common label&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html#sklearn.ensemble.GradientBoostingClassifier"&gt;Gradient Boosting&lt;/a&gt; (gb)&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"&gt;Logistic Regression&lt;/a&gt; (lr)&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier"&gt;Multi-layer Perceptron&lt;/a&gt; (mlp) (i.e. neural network)&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn-ensemble-randomforestclassifier"&gt;Random Forest&lt;/a&gt; (rf)&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;When you run the pipeline, you should see something like this:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;$ nextflow run hyperopt -profile wave
-[...]
-The best model for ‘wdbc’ was ‘mlp’, with accuracy = 0.991
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;This shows that Nextflow ran a pipeline that trained different ML models on the WDBC dataset and evaluated their performance during model inference. Multi-layer perceptron was most accurate in classifying breast tumor images as benign or malignant. For further details of the pipeline and its deployment, refer to part two of this blog series.&lt;/p&gt; 
-&lt;p&gt;While the hyperopt pipeline implements a simple classification model, it provides all the building blocks you need to create your own ML pipelines with Nextflow.&lt;/p&gt; 
-&lt;p&gt;Seqera is also an excellent solution for deploying GPU-based workloads in the AWS cloud. For a hands-on tutorial, see the article &lt;a href="https://seqera.io/blog/running-ai-workloads-in-the-cloud-with-nextflow-tower-a-step-by-step-guide/"&gt;Running AI workloads in the cloud with Nextflow Tower — a step-by-step guide&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;It’s the customers that matter most&lt;/h2&gt; 
-&lt;p&gt;Seqera is used by hundreds of pharmaceutical, healthcare, and biotech companies to run data analysis pipelines in the AWS Cloud. According to the latest &lt;a href="https://seqera.io/blog/the-state-of-the-workflow-2023-community-survey-results/"&gt;2023 State of the Workflow Survey&lt;/a&gt;, AWS is the most popular cloud environment among Nextflow users, with 49% of all Nextflow users surveyed already using or planning to use AWS within the next two years and 35.1% of survey respondents using AWS Batch [1,2]. The survey results showed strong cloud adoption, with the percentage of Nextflow users running in the cloud up 20% over 2022 [2].&lt;/p&gt; 
-&lt;p&gt;Among the customers running Seqera and Nextflow on AWS are:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;a href="https://arcusbio.com/"&gt;Arcus Biosciences&lt;/a&gt;—Arcus Biosciences is at the forefront of designing combination therapies, with best-in-class potential, in the pursuit of cures for cancer. By using Seqera Platform on AWS, Arcus was able to improve productivity, ensure pipeline traceability, and use cloud resources more efficiently. They were also able to prepare for future growth by scaling capacity for research and clinical trials while providing an intuitive, collaborative user experience to researchers and clinicians. &lt;a href="https://seqera.io/case-studies/arcus-biosciences/"&gt;Read the case study here&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://gritstonebio.com/"&gt;Gritstone Bio&lt;/a&gt;—Gritstone Bio is developing targeted immunotherapies for cancer and infectious disease. Gritstone’s approach seeks to generate a therapeutic immune response by leveraging insights into the immune system’s ability to recognize and destroy diseased cells by targeting select antigens. Their workloads involve massive compute requirements for analysis of individual biopsies and makes extensive use of machine learning for tumor classification models. Gritstone use Seqera and multiple AWS cloud services to manage their bioinformatics pipelines. &lt;a href="https://seqera.io/case-studies/gritstone/"&gt;Read the case study here&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://www.tesseratherapeutics.com/"&gt;Tessera Therapeutics&lt;/a&gt;—Tessera Therapeutics are pioneers in a new category of genetic medicine and rely heavily on genomic analysis pipelines to identify promising new treatments. By using Seqera Platform to manage analysis pipelines on AWS, Tessera increased its analysis throughput and research productivity while simultaneously containing cloud spending by using resources more efficiently. You can &lt;a href="https://seqera.io/case-studies/tessera-therapeutics/"&gt;read the case study here&lt;/a&gt;.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;For organizations collaborating on large-scale data analysis and ML workloads, Seqera on AWS is an excellent solution. You can easily deploy powerful AWS compute and storage resources at scale, reduce costs through optimized resource usage, and manage spending across projects and teams.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;In &lt;a href="https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-2-of-2/"&gt;part two&lt;/a&gt;&lt;/strong&gt; of this blog series, we will provide a step-by-step guide, explaining how you can easily deploy a Seqera environment on AWS to run ML pipelines like the one above, and other Nextflow pipelines.&lt;/p&gt; 
-&lt;h3&gt;References&lt;/h3&gt; 
-&lt;p&gt;[1] &lt;a href="https://seqera.io/blog/the-state-of-the-workflow-2023-community-survey-results/"&gt;The State of the Workflow 2023: Community Survey Results&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;[2] &lt;a href="https://seqera.io/blog/state-of-the-workflow-2022-results/"&gt;The State of the Workflow 2022: Community Survey Results&lt;/a&gt;.&lt;/p&gt; 
 &lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt;</content:encoded>
 					
 		
