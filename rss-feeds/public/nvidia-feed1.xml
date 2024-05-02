@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 01 May 2024 22:05:14 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 02 May 2024 13:29:09 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,184 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>NVIDIA AI Microservices for Drug Discovery, Digital Health Now Integrated With AWS</title>
+		<link>https://blogs.nvidia.com/blog/nim-ai-microservices-for-healthcare-integrate-with-aws/</link>
+		
+		<dc:creator><![CDATA[Lyndi Wu]]></dc:creator>
+		<pubDate>Thu, 02 May 2024 13:30:03 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Genomics]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[NVIDIA Clara]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Social Impact]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71408</guid>
+
+					<description><![CDATA[Harnessing optimized AI models for healthcare is easier than ever as NVIDIA NIM, a collection of cloud-native microservices, integrates with Amazon Web Services. NIM, part of the NVIDIA AI Enterprise software platform available on AWS Marketplace, enables developers to access a growing library of AI models through industry-standard application programming interfaces, or APIs. The library		<a class="read-more" href="https://blogs.nvidia.com/blog/nim-ai-microservices-for-healthcare-integrate-with-aws/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Harnessing optimized AI models for healthcare is easier than ever as <a href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a>, a collection of cloud-native microservices, integrates with Amazon Web Services.</p>
+<p><a href="http://ai.nvidia.com/">NIM</a>, part of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform available on <a href="https://aws.amazon.com/marketplace/pp/prodview-ozgjkov6vq3l6" target="_blank" rel="noopener">AWS Marketplace</a>, enables developers to access a growing library of AI models through industry-standard application programming interfaces, or APIs. The library includes <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation models</a> for drug discovery, medical imaging and genomics, backed by enterprise-grade security and support.</p>
+<p>NIM is now available via Amazon SageMaker — a fully managed service to prepare data and build, train and deploy machine learning models — and AWS ParallelCluster, an open-source tool to deploy and manage high performance computing clusters on AWS. NIMs can also be orchestrated using AWS HealthOmics, a purpose-built service for biological data analysis.</p>
+<p>Easy access to NIM will enable the thousands of healthcare and life sciences companies already using AWS to deploy <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> more quickly, without the complexities of model development and packaging for production. It’ll also help developers build workflows that combine AI models across different modalities, such as amino acid sequences, MRI images and plain-text patient health records.</p>
+<p>Presented today at the <a href="https://pages.awscloud.com/NAMER-event-T3-AWS-Life-Science-Symposium-2024-reg-event.html" target="_blank" rel="noopener">AWS Life Sciences Leader Symposium</a> in Boston, this initiative extends the availability of <a href="https://www.nvidia.com/en-us/clara/">NVIDIA Clara</a> accelerated healthcare software and services on AWS — which include fast and easy-to-deploy NIMs from <a href="https://www.nvidia.com/en-us/clara/bionemo/">NVIDIA BioNeMo</a> for drug discovery, <a href="https://www.nvidia.com/en-us/clara/monai/">NVIDIA MONAI</a> for medical imaging workflows and <a href="https://www.nvidia.com/en-us/clara/genomics/">NVIDIA Parabricks</a> for accelerated genomics.</p>
+<h2><b>Pharma and Biotech Companies Adopt NVIDIA AI on AWS</b></h2>
+<p><a href="https://www.nvidia.com/en-us/clara/bionemo/">BioNeMo</a> is a generative AI platform of foundation models, training frameworks, domain-specific data loaders and optimized training recipes​ that support the training and fine-tuning of biology and chemistry models on proprietary data.​ It’s used by more than 100 organizations globally.</p>
+<p><a href="https://blogs.nvidia.com/blog/genomics-ai-amgen-superpod/">Amgen</a>, one of the world’s leading biotechnology companies, has used the BioNeMo framework to train generative models for protein design, and is exploring the potential use of BioNeMo with AWS.</p>
+<p><i>​</i>BioNeMo models for protein structure prediction, generative chemistry and molecular docking prediction are available as NIM microservices, <a href="https://blogs.nvidia.com/blog/what-is-a-pretrained-ai-model/">pretrained</a> and optimized to run on any NVIDIA GPU or cluster of GPUs. These models can be combined to support a holistic, AI-accelerated drug discovery workflow.</p>
+<p>Biotechnology company A-Alpha Bio harnesses synthetic biology and AI to measure, predict and engineer protein-to-protein interactions. When its researchers moved from a generic version of the ESM-2 protein language model to <a href="https://docs.nvidia.com/bionemo-framework/latest/models/esm2-nv.html">a version optimized by NVIDIA</a> running on <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> on AWS, they immediately saw a speedup of more than 10x. This lets the team sample a much more extensive field of protein candidates than they would have otherwise.</p>
+<p>For organizations that want to augment these models with their own experimental data, NIM enables developers to <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">enhance a model with retrieval-augmented generation, or RAG</a> — known as a lab-in-the-loop design.</p>
+<h2><b>Parabricks Enables Accelerated Genomics Pipelines</b></h2>
+<p>NVIDIA NIM includes genomics models from NVIDIA Parabricks, which are also <a href="https://aws.amazon.com/blogs/industries/easily-run-nvidia-parabricks-ready2run-workflows-on-amazon-omics/" target="_blank" rel="noopener">available on AWS HealthOmics</a> as Ready2Run workflows that enable customers to deploy pre-built pipelines.</p>
+<p>Life sciences company Agilent used Parabricks genomics analysis tools running on NVIDIA GPU-powered <a href="https://aws.amazon.com/ec2/pricing/" target="_blank" rel="noopener">Amazon Elastic Compute Cloud (EC2) instances</a> to significantly improve processing speeds for variant calling workflows on the company’s cloud-native <a href="https://www.agilent.com/en/product/next-generation-sequencing/clinical-informatics-platform/alissa-reporter-1947792" target="_blank" rel="noopener">Alissa Reporter</a> software. Integrating Parabricks with Alissa secondary analysis pipelines enables researchers to access rapid data analysis in a secure cloud environment.​</p>
+<h2><b>Conversational AI Technology Supports Digital Health</b></h2>
+<p>In addition to models that can decode proteins and genomic sequences, NIM microservices offer optimized <a href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language models</a> for conversational AI and visual generative AI models for avatars and digital humans.</p>
+<p>AI-powered digital assistants can enhance healthcare by answering patient questions and supporting clinicians with logistics. Trained on healthcare organization-specific data using RAG, they could connect to relevant internal data sources to synthesize research, surface insights and improve productivity.</p>
+<p>Generative AI startup <a href="https://www.globenewswire.com/news-release/2024/03/18/2848236/0/en/Hippocratic-AI-Announces-Collaboration-with-NVIDIA-to-Develop-Super-Low-Latency-Empathy-Inference-for-One-of-the-World-s-First-Generative-AI-Powered-Healthcare-Agents.html" target="_blank" rel="noopener">Hippocratic AI</a> is in the final stages of testing AI-powered healthcare agents that focus on a wide range of tasks including wellness coaching, preoperative outreach and post-discharge follow-up.</p>
+<p>The company, which uses NVIDIA GPUs through AWS, is adopting NVIDIA NIM and <a href="https://developer.nvidia.com/ace">NVIDIA ACE</a> microservices to power a generative AI agent for digital health.</p>
+<p><iframe title="Always Available, Real-Time Generative AI Healthcare Agents" width="500" height="281" src="https://www.youtube.com/embed/yg0m8eR7k24?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>The team used <a href="https://www.nvidia.com/en-us/ai-data-science/audio2face/">NVIDIA Audio2Face</a> facial animation technology, <a href="https://www.nvidia.com/en-us/ai-data-science/products/riva/">NVIDIA Riva</a> automatic speech recognition and text-to-speech capabilities, and more to power a healthcare assistant avatar’s conversation.</p>
+<p>Experiment with <a href="https://build.nvidia.com/explore/healthcare">NVIDIA NIMs for healthcare</a> and get started with <a href="https://aws.amazon.com/nvidia/hcls/" target="_blank" rel="noopener">NVIDIA Clara on AWS</a>.</p>
+<p><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>Subscribe to NVIDIA healthcare news</i></a><i>. </i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/image-17.png"
+			type="image/png"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/image-17-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA AI Microservices for Drug Discovery, Digital Health Now Integrated With AWS]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>GeForce NOW Delivers 24 A-May-zing Games This Month</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-may-games-list/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 02 May 2024 13:00:24 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71370</guid>
+
+					<description><![CDATA[GeForce NOW brings 24 new games for members this month. Ninja Theory’s highly anticipated Senua’s Saga: Hellblade II will be coming to the cloud soon — get ready by streaming the first in the series, Hellblade: Senua’s Sacrifice, part of the seven new games joining the GeForce NOW library this week. Plus, game across more		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-may-games-list/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> brings 24 new games for members this month.</p>
+<p>Ninja Theory’s highly anticipated <i>Senua’s Saga: Hellblade II</i> will be coming to the cloud soon — get ready by streaming the first in the series, <i>Hellblade: Senua’s Sacrifice, </i>part of the seven new games joining the <a href="http://play.geforcenow.com">GeForce NOW library</a> this week.</p>
+<p>Plus, game across more devices than ever as GeForce NOW adds improved support on Steam Deck this GFN Thursday.</p>
+<h2><b>Journey into Viking Hell</b></h2>
+<figure id="attachment_71374" aria-describedby="caption-attachment-71374" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="wp-image-71374 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-672x378.png" alt="Hellblade 1 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1.png 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71374" class="wp-caption-text"><em>No sacrificing frame rates, streaming from the cloud.</em></figcaption></figure>
+<p>Experience exceptional storytelling in Ninja Theory’s award-winning game <i>Hellblade: Senua’s Sacrifice</i>, available to stream from the cloud this week.</p>
+<p>Set in a dark fantasy world inspired by Norse mythology and Celtic culture, the game follows the journey of Senua, a Pict warrior. Her quest is to reach Helheim, the realm of the dead,to rescue her deceased lover’s soul from the goddess Hela.</p>
+<p>Solve intricate puzzles with observation, engage in melee combat and get pulled deep into Senua’s mind as she grapples with inner demons. Journey through the hauntingly beautiful landscapes of Helheim with ray tracing and high-dynamic range using an <a href="http://geforcenow.com">Ultimate or Priority membership</a> for the most immersive and stunning visual fidelity.</p>
+<h2><b>Decked Out</b></h2>
+<p>Thanks to GeForce NOW, nearly any device can perform like a GeForce-powered PC gaming rig. Members who want to stream their favorite PC games to Valve’s <a href="https://store.steampowered.com/steamdeck">Steam Deck</a> now have an easier way to get started.</p>
+<p>Members can use a new beta <a href="https://www.nvidia.com/en-us/geforce-now/download/">installation method</a> to automatically configure GeForce NOW’s browser in Steam Deck’s Gaming Mode. The installation script automatically installs Google Chrome to the device, then adds all the settings needed to help members log into GeForce NOW and stream their favorite games.</p>
+<p>The <a href="https://www.nvidia.com/en-us/geforce-now/release-highlights/">latest GeForce NOW update</a>, released last week, also allows members to navigate GeForce NOW on a browser using a gamepad, including on the Steam Deck. That means it’s even easier to find and play supported titles with <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a> technology or real-time ray tracing, regardless of the handheld’s system specs.</p>
+<p>Plus, members can easily play non-Steam games on the Steam Deck thanks to the cloud. This includes games from Battle.net, Epic Games Store, Ubisoft Connect, GOG.com and Xbox, as well as supported PC Game Pass titles. No more worrying about downloads or backend configurations. And with more than 1,900 games supported, there’s always something new to stream.</p>
+<p>Steam Deck is just one of many popular handheld PC devices with support for GeForce NOW. Others include <a href="https://www.asus.com/us/site/gaming/rog/gaming-handheld/rog-ally.html">ASUS ROG Ally</a>, <a href="https://www.logitechg.com/en-us/products/cloud-gaming.html">Logitech G Cloud</a>, <a href="https://www.lenovo.com/us/en/p/handheld/legion-go/len106g0001">Lenovo Legion Go</a>, <a href="https://www.msi.com/Handheld/Claw-A1MX">MSI Claw</a> and <a href="https://www.razer.com/mobile-handhelds/razer-edge">Razer Edge</a>. <a href="https://www.nvidia.com/en-us/geforce-now/download">Get started</a> now. Learn more about how to <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5337">configure GeForce NOW on Steam Deck</a>.</p>
+<h2><b>May New Games Be With You</b></h2>
+<figure id="attachment_71377" aria-describedby="caption-attachment-71377" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-71377" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-672x336.jpg" alt="Foundry on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71377" class="wp-caption-text"><em>If you build it, they will come.</em></figcaption></figure>
+<p>Get complete creative freedom in Paradox Interactive’s <i>FOUNDRY</i>, an exciting first-person factory-building sandbox game set in an infinite voxel world for expansive, ever-changing landscapes. Build a factory optimized to perfection or an artistic masterpiece, harvest resources, automate ever-growing production lines and manage complex systems to achieve mechanical mastery in <i>FOUNDRY</i>.</p>
+<p>Check out the list of new games this week:</p>
+<ul>
+<li><i>Hellblade: Senua&#8217;s Sacrifice </i>(<a href="https://store.steampowered.com/app/414340?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/hellblade-senuas-sacrifice/9NCLP4LV5K7Z?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Stormgate Closed Beta </i>(New release on <a href="https://store.steampowered.com/app/2012510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 30,<a href="https://playstormgate.com/beta"> sign up</a> for access)</li>
+<li><i>Gray Zone Warfare </i>(New release on <a href="https://store.steampowered.com/app/2479810?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 30)</li>
+<li><i>MotoGP24 </i>(New release on <a href="https://store.steampowered.com/app/2581700?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 2)</li>
+<li><i>FOUNDRY </i>(New release on <a href="https://store.steampowered.com/app/983870?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 2)</li>
+<li><i>INDIKA </i>(New release on <a href="https://store.steampowered.com/app/1373960?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 2)</li>
+<li><i>Orcs Must Die! 3 </i>(New release on <a href="https://www.epicgames.com/store/p/combo-a7e03a?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, May 2)</li>
+</ul>
+<p>And members can look for the following throughout the rest of the month:</p>
+<ul>
+<li><i>Little Kitty, Big City </i>(New release on <a href="https://store.steampowered.com/app/1177980?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/little-kitty-big-city/9nf5s7mlm8xt?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, May 9)</li>
+<li><i>Ships at Sea </i>(New release on <a href="https://store.steampowered.com/app/1266540?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 9)</li>
+<li><i>The Rogue Prince of Persia  </i>(New release on <a href="https://store.steampowered.com/app/2717880?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 14)</li>
+<li><i>Men of War II </i>(New release on <a href="https://store.steampowered.com/app/1128860?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 15)</li>
+<li><i>Die by the Blade </i>(New release on <a href="https://store.steampowered.com/app/1154670?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 16)</li>
+<li><i>Norland </i>(New release on <a href="https://store.steampowered.com/app/1857090?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 16)</li>
+<li><i>Gestalt: Steam &amp; Cinder </i>(New release on <a href="https://store.steampowered.com/app/1231990?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 21)</li>
+<li><i>Synergy </i>(New release on <a href="https://store.steampowered.com/app/1989070?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 21)</li>
+<li><i>SunnySide </i>(New release on <a href="https://store.steampowered.com/app/1746930?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 21)</li>
+<li><i>Crown Wars: The Black Prince </i>(New release on <a href="https://store.steampowered.com/app/1658920?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 23)</li>
+<li><i>Capes </i>(New release on <a href="https://store.steampowered.com/app/2081080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 29)</li>
+<li><i>Colony Survival </i>(<a href="https://store.steampowered.com/app/366090?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Exo One </i>(<a href="https://store.steampowered.com/app/773370?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Farmer’s Life </i>(<a href="https://store.steampowered.com/app/1137750?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Honkai: Star Rail </i>(<a href="https://www.epicgames.com/store/p/honkai-star-rail?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
+<li><i>Phantom Brigade </i>(<a href="https://store.steampowered.com/app/553540?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Supermarket Simulator </i>(<a href="https://store.steampowered.com/app/2670630?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+</ul>
+<h2><b>April Showers Brought More Titles</b></h2>
+<p>In addition to the 19 games announced last month, 20 more joined the <a href="http://play.geforcenow.com">GeForce NOW library</a>:</p>
+<ul>
+<li><i>Gigantic: Rampage Edition </i>(New release on <a href="https://store.steampowered.com/app/1924490?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 9)</li>
+<li><i>Inkbound 1.0</i> (New release, on <a href="https://store.steampowered.com/app/1062810/Inkbound/">Steam</a>, April 9)</li>
+<li><i>Broken Roads </i>(New release on <a href="https://store.steampowered.com/app/1403440?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 10)</li>
+<li><i>Infection Free Zone </i>(New release on <a href="https://store.steampowered.com/app/1465460?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 11)</li>
+<li><i>Shadow of the Tomb Raider: Definitive Edition </i>(New release on <a href="https://www.xbox.com/games/store/shadow-of-the-tomb-raider-definitive-edition/BNQQ3WVBNZCQ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a> and available on PC Game Pass, April 11)</li>
+<li><i>Ghostrunner </i>(<a href="https://www.epicgames.com/store/p/ghostrunner?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>, free April 11-18)</li>
+<li><i>Kill It With Fire 2 </i>(New release on <a href="https://store.steampowered.com/app/2357000?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 16)</li>
+<li><i>The Crew Motorfest </i>(New release on <a href="https://store.steampowered.com/app/2698940?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 18)</li>
+<li><i>No Rest for the Wicked </i>(New release on <a href="https://store.steampowered.com/app/1371980?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 18)</li>
+<li><i>Bellwright </i>(New release on <a href="https://store.steampowered.com/app/1812450?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 23)</li>
+<li><i>Age of Water </i>(New release on <a href="https://store.steampowered.com/app/2695490?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 25)</li>
+<li><i>Diablo II: Resurrected </i>(<a href="https://shop.battle.net/product/diablo-ii?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
+<li><i>Diablo III </i>(<a href="https://shop.battle.net/product/diablo-iii?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
+<li><i>Fallout 4 </i>(<a href="https://store.steampowered.com/app/377160?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Fallout 76 </i>(<a href="https://store.steampowered.com/app/1151340?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/fallout-76-pc/9nkgnmnk3k3z?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>StarCraft Remastered </i>(<a href="https://shop.battle.net/product/starcraft-remastered?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
+<li><i>StarCraft II </i>(<a href="https://shop.battle.net/product/starcraft-ii?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
+<li><i>Stargate: Timekeepers </i>(<a href="https://store.steampowered.com/app/1523650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Terra Invicta</i> (<a href="https://www.xbox.com/games/store/terra-invicta-game-preview/9pb0glgxqz83?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
+<li><i>Tomb Raider I-III Remastered </i>(<a href="https://store.steampowered.com/app/2478970?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+</ul>
+<p>Riot Games has rolled out the <i>League of Legends</i> 14.9 update globally, which adds the Vanguard security software to the game. Since Vanguard doesn’t support virtual machines like GeForce NOW, the game is under maintenance and no longer playable on the cloud gaming platform for the foreseeable future. Work is underway to find a solution for GeForce NOW members.</p>
+<p><i>Lightyear Frontier </i>(Xbox) didn’t make it in April due to technical issues. Stay tuned to GFN Thursday for updates.</p>
+<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">what are you gaming goals for next month? <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f914.png" alt="🤔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1785700708882251889?ref_src=twsrc%5Etfw">May 1, 2024</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-thursday-5-2-nv-blog-1280x680-no-cta.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-thursday-5-2-nv-blog-1280x680-no-cta-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[GeForce NOW Delivers 24 A-May-zing Games This Month]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Explainable AI: Insights from Arthur’s Adam Wenchel</title>
 		<link>https://blogs.nvidia.com/blog/arthur-podcast/</link>
 		
@@ -33,7 +211,7 @@
 		</a>
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Arthur.ai enhances the performance of AI systems across various metrics like accuracy, explainability and fairness. In this episode of the <a href="https://blogs.nvidia.com/ai-podcast/">NVIDIA AI Podcast</a>, recorded live at GTC 2024, host Noah Kravitz sits down with Adam Wenchel, cofounder and CEO of Arthur, to discuss the challenges and opportunities of deploying generative AI. Their conversation spans a range of topics, including AI bias, the observability of AI systems and the practical implications of AI in business. For more on Arthur, visit<a href="http://arthur.ai/"> arthur.ai</a>.</p>
-<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1811598663%3Fsecret_token%3Ds-cC3zby3JQS4&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1811598663%3Fsecret_token%3Ds-cC3zby3JQS4&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
 <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Explainable AI: Insights from Arthur AI's Adam Wenchel – Ep. 221" href="https://soundcloud.com/theaipodcast/arthur-ai-adam-wenchel/s-cC3zby3JQS4" target="_blank" rel="noopener">Explainable AI: Insights from Arthur AI&#8217;s Adam Wenchel – Ep. 221</a></div>
 <h2>Time Stamps:</h2>
 <ul>
@@ -106,7 +284,7 @@
 <p>He built his interactive GLaDOS robot to create a personal assistant for himself in the lab. It handles queries using Transformer-based speech recognition, text-to-speech, and large language models (LLMs) running onboard an <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson AGX Orin</a>, which interfaces with a robot arm and camera for interactions.</p>
 <p>GLaDOS can track his whereabouts in the lab, move in different directions to face him and respond quickly to queries.</p>
 <p>“I like doing things with robots that people will look at and say it’s not what they had immediately expected,” he said.</p>
-<p><iframe title="Bringing GLaDOS to life with Robotics and AI" width="500" height="281" src="https://www.youtube.com/embed/yNcKTZsHyfA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Bringing GLaDOS to life with Robotics and AI" width="500" height="281" src="https://www.youtube.com/embed/yNcKTZsHyfA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>He wanted the assistant to sound like the original GLaDOS from <i>Portal</i> and respond quickly. Fortunately, the gaming company Valve has put all of the voice lines from <i>Portal </i>and <i>Portal 2</i> on its website, allowing Niewinski to download the audio to help train a model.</p>
 <p>“Using Jetson, your average question-and-answer stuff runs pretty quick for speech,” he said.</p>
 <p>Niewinski used NVIDIA’s open-source <a href="https://github.com/NVIDIA/NeMo">NeMo</a> toolkit to fine-tune a voice for GLaDOS, training a spectrogram generator network called <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/tts_en_fastpitch">FastPitch</a> and <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/tts_hifigan">HiFiGAN</a> vocoder network to refine the audio quality.</p>
@@ -118,7 +296,7 @@
 <p>He used AI models such as YOLOv5, SAM and OpenPose to extract and refine data from images and videos. Then he used Stable Diffusion to generate the images, which he said was key to achieving accurate virtual try-ons.</p>
 <p>This system taught the model how clothes fit different poses on people, which he said enhanced the realism of the try-ons.</p>
 <p>“It’s quite handy as it allows users to see how clothes would look on them without actually trying them on,” said Ciobanu.</p>
-<p><iframe title="EdgeStyle Demo" width="500" height="281" src="https://www.youtube.com/embed/kR_o9eEUHK4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="EdgeStyle Demo" width="500" height="281" src="https://www.youtube.com/embed/kR_o9eEUHK4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>The NVIDIA JetPack SDK provided all the tools needed to run AI models smoothly on the Jetson Orin, he said.</p>
 <p>“It’s super-helpful to have a stable set of tools, especially when you’re dealing with AI tech that keeps changing,” said Ciobanu. “It really cut down on the time and hassle for us developers, letting us focus more on the cool stuff we’re building instead of getting stuck on tech issues.”</p>
 <h2> <b>Finding Lost Items With Robot Assistance</b></h2>
@@ -1050,149 +1228,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[NVIDIA Honors Partners of the Year in Europe, Middle East, Africa]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Seeing Beyond: Living Optics CEO Robin Wang on Democratizing Hyperspectral Imaging</title>
-		<link>https://blogs.nvidia.com/blog/ai-podcast-living-optics/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Wed, 17 Apr 2024 19:06:52 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[The AI Podcast]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71178</guid>
-
-					<description><![CDATA[Step into the realm of the unseen with Robin Wang, CEO of Living Optics. The startup cofounder discusses the power of hyperspectral imaging with AI Podcast host Noah Kravitz in an episode recorded live at the NVIDIA GTC global AI conference. Living Optics’ hyperspectral imaging camera, which can capture visual data across 96 colors, reveals		<a class="read-more" href="https://blogs.nvidia.com/blog/ai-podcast-living-optics/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Step into the realm of the unseen with Robin Wang, CEO of Living Optics. The startup cofounder discusses the power of hyperspectral imaging with <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">AI Podcast</a> host Noah Kravitz in an episode recorded live at the <a href="https://www.nvidia.com/gtc/" target="_blank" rel="noopener">NVIDIA GTC</a> global AI conference. Living Optics’ <a href="http://demo.livingoptics.com">hyperspectral imaging camera</a>, which can capture visual data across 96 colors, reveals details invisible to the human eye. Potential applications are as diverse as monitoring plant health to detecting cracks in bridges. The startup aims to empower users across industries to gain new insights from richer, more informative datasets fueled by hyperspectral imaging technology.</p>
-<p>Living Optics is a member of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33" target="_blank" rel="noopener">NVIDIA Inception</a> program for cutting-edge startups.</p>
-<p>Stay tuned for more episodes recorded live from GTC.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1802251500%3Fsecret_token%3Ds-oBFbqeFsrkO&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Living Optics CEO Robin Wang on Democratizing Hyperspectral Imaging" href="https://soundcloud.com/theaipodcast/robin-wang/s-oBFbqeFsrkO" target="_blank" rel="noopener">Living Optics CEO Robin Wang on Democratizing Hyperspectral Imaging</a></div>
-<h2><b>Time Stamps</b></h2>
-<p>1:05: What is hyperspectral imaging?</p>
-<p>1:45: The Living Optics camera’s ability to capture 96 colors</p>
-<p>3:36: Where is hyperspectral imaging being used, and why is it so important?</p>
-<p>7:19: How are hyperspectral images represented and accessed by the user?</p>
-<p>9:34: Other use cases of hyperspectral imaging</p>
-<p>13:07: What’s unique about Living Optics’ hyperspectral imaging camera?</p>
-<p>18:36: Breakthroughs, challenges during the technology’s development</p>
-<p>23:27: What’s next for Living Optics and hyperspectral imaging?</p>
-<h2><b>You Might Also Like…</b></h2>
-<p><a href="https://soundcloud.com/theaipodcast/gtc24-cornel-amariei-inception" target="_blank" rel="noopener"><b>Dotlumen CEO Cornel Amariei on Assisstive Technology for the Visually Impaired &#8211; Ep. 217</b><b><br />
-</b><br />
-</a>Dotlumen is illuminating a new technology to help people with visual impairments navigate the world. In this episode of NVIDIA’s AI Podcast, recorded live at the NVIDIA GTC global AI conference, host Noah Kravitz spoke with the Romanian startup’s founder and CEO, Cornel Amariei, about developing its flagship Dotlumen Glasses.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-wildfire" target="_blank" rel="noopener"><b>DigitalPath’s Ethan Higgins on Using AI to Fight Wildfires &#8211; Ep. 211</b></a></p>
-<p>DigitalPath is igniting change in the golden state — using computer vision, generative adversarial networks and a network of thousands of cameras to detect signs of fire in real time. In the latest episode of NVIDIA’s AI Podcast, host Noah Kravtiz spoke with DigitalPath system architect Ethan Higgins about the company’s role in the ALERTCalifornia initiative, a collaboration between California’s wildfire fighting agency CAL FIRE and the University of California, San Diego.</p>
-<p><a href="https://soundcloud.com/theaipodcast/mosaicml-naveen-rao" target="_blank" rel="noopener"><b>MosaicML’s Naveen Rao on Making Custom LLMs More Accessible &#8211; Ep. 199</b></a></p>
-<p>Startup MosaicML is on a mission to help the AI community enhance prediction accuracy, decrease costs, and save time by providing tools for easy training and deployment of large AI models. In this episode of NVIDIA&#8217;s AI Podcast, host Noah Kravitz speaks with MosaicML CEO and co-founder Naveen Rao about how the company aims to democratize access to large language models.</p>
-<p><a href="https://soundcloud.com/theaipodcast/peter-ma-ai-technosignatures" target="_blank" rel="noopener"><b>Peter Ma on Using AI to Find Promising Signals for Alien Life &#8211; Ep. 191</b></a></p>
-<p>In this episode of the NVIDIA AI Podcast, host Noah Kravitz interviews Ma, an undergraduate student at the University of Toronto, about how he developed an AI algorithm that outperformed traditional methods in the search for extraterrestrial intelligence.</p>
-<h2><b>Subscribe to the AI Podcast</b></h2>
-<p>Get the <a href="https://blogs.nvidia.com/ai-podcast/" target="_blank" rel="noopener">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439" target="_blank" rel="noopener">iTunes</a>, <a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz" target="_blank" rel="noopener">Google Podcasts</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm" target="_blank" rel="noopener">Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast" target="_blank" rel="noopener">Amazon Music</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us" target="_blank" rel="noopener">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast" target="_blank" rel="noopener">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast" target="_blank" rel="noopener">PlayerFM</a>, Pocket Casts,<a href="http://www.podbay.fm/show/1186480811" target="_blank" rel="noopener"> Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast" target="_blank" rel="noopener">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L" target="_blank" rel="noopener">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr" target="_blank" rel="noopener">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/" target="_blank" rel="noopener">TuneIn</a>.</p>
-<p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short" target="_blank" rel="noopener">this listener survey</a>.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast.jpg"
-			type="image/jpeg"
-			width="1400"
-			height="931"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2018/05/ai-podcast-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Seeing Beyond: Living Optics CEO Robin Wang on Democratizing Hyperspectral Imaging]]></media:title>
-			<media:description type="html">NVIDIA AI Podcast</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Moving Pictures: Transform Images Into 3D Scenes With NVIDIA Instant NeRF</title>
-		<link>https://blogs.nvidia.com/blog/ai-decoded-instant-nerf/</link>
-		
-		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
-		<pubDate>Wed, 17 Apr 2024 13:00:42 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[AI Decoded]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71152</guid>
-
-					<description><![CDATA[NVIDIA RTX technology-powered AI helps turn such an imagination into reality. Using Instant NeRF, creatives are transforming collections of still images into digital 3D scenes in just seconds.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><em>Editor’s note: This post is part of the </em><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><em>AI Decoded series</em></a><em>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</em></p>
-<p>Imagine a gorgeous vista, like a cliff along the water’s edge. Even as a 2D image, the scene would be beautiful and inviting. Now imagine exploring that same view in 3D – without needing to be there.</p>
-<p><a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> technology-powered AI helps turn such an imagination into reality. Using <a href="https://blogs.nvidia.com/blog/instant-nerf-research-3d-ai/">Instant NeRF</a>, creatives are <a href="https://developer.nvidia.com/blog/how-nerfs-helped-me-re-imagine-the-world/">transforming collections of still images into digital 3D scene</a>s in just seconds.</p>
-<h2><strong>Simply Radiant</strong></h2>
-<p>A NeRF, or neural radiance field, is an AI model that takes 2D images representing a scene as input and interpolates between them to render a complete 3D scene. The model operates as a neural network — a model that replicates how the brain is organized and is often used for tasks that require pattern recognition.</p>
-<p>Using spatial location and volumetric rendering, a NeRF uses the camera pose from the images to render a 3D iteration of the scene. Traditionally, these models are computationally intensive, requiring large amounts of rendering power and time.</p>
-<p>A recent NVIDIA AI research project changed that.</p>
-<p><a href="https://developer.nvidia.com/blog/getting-started-with-nvidia-instant-nerfs/">Instant NeRF</a> takes NeRFs to the next level, using AI-accelerated inverse rendering to approximate how light behaves in the real world. It enables researchers to construct a 3D scene from 2D images taken at different angles. Scenes can now be generated in seconds, and the longer the NeRF model is trained, the more detailed the resulting 3D renders.</p>
-<p>NVIDIA researchers released four neural graphics primitives, or <a href="https://blogs.nvidia.com/blog/what-is-a-pretrained-ai-model/">pretrained</a> datasets, as part of the <a href="https://nvlabs.github.io/instant-ngp/">Instant-NGP</a> training toolset at the SIGGRAPH computer graphics conference in 2022. The tools let anyone create NeRFs with their own data. The researchers won a <a href="https://blogs.nvidia.com/blog/instant-nerf-creators-siggraph/">best paper award</a> for the work, and <em>TIME Magazine</em> named Instant NeRF a <a href="https://developer.nvidia.com/blog/time-magazine-names-nvidia-instant-nerf-a-best-invention-of-2022/">best invention of 2022</a>.</p>
-<p>In addition to speeding rendering for NeRFs, Instant NeRF makes the entire image reconstruction process accessible using NVIDIA RTX and GeForce RTX desktop and laptop GPUs. While the time it takes to render a scene depends on factors like dataset size and the mix of image and video source content, the AI training doesn’t require server-grade or cloud-based hardware.</p>
-<p>NVIDIA RTX workstations and GeForce RTX PCs are ideally suited to meet the computational demands of rendering NeRFs. NVIDIA RTX and GeForce RTX GPUs feature Tensor Cores, dedicated AI hardware accelerators that provide the horsepower to run generative AI locally.</p>
-<h2><strong>Ready, Set, Go</strong></h2>
-<p>Get started with Instant NeRF to learn about radiance fields and experience imagery in a new way.</p>
-<p>Developers and tech enthusiasts can download the source-code base to compile. Nontechnical users can download the Windows installers for <a href="https://github.com/NVlabs/instant-ngp">Instant-NGP</a><a href="https://github.com/NVlabs/instant-ngp"> software, available on GitHub</a>.</p>
-<p>While the installer is available for a wide range of RTX GPUs, the program performs best on the latest-architecture <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX 40 Series</a> and <a href="https://www.nvidia.com/en-us/technologies/ada-architecture/">NVIDIA RTX Ada Generation</a> GPUs.</p>
-<p><iframe loading="lazy" title="Updated: Making a NeRF movie with NVIDIA&#039;s Instant NGP" width="500" height="281" src="https://www.youtube.com/embed/3TWxO1PftMc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>The <a href="https://developer.nvidia.com/blog/getting-started-with-nvidia-instant-nerfs/">“Getting Started With Instant NeRF”</a> guide walks users through the process, including loading one of the primitives, such as “NeRF Fox,” to get a sense of what’s possible. Detailed instructions and video walkthroughs — like the one above — demonstrate how to create NeRFs with custom data, including tips for capturing good input imagery and compiling codebases (if built from source). The guide also covers using the Instant NeRF graphical user interface, optimizing scene parameters and creating an animation from the scene.</p>
-<p>The NeRF community also offers many tips and tricks to help users get started. For example, check out the livestream below and this technical <a href="https://developer.nvidia.com/blog/getting-started-with-nvidia-instant-nerfs/">blog post</a>.</p>
-<p><iframe loading="lazy" title="Hands on With Nvidia Instant NeRFs" width="500" height="281" src="https://www.youtube.com/embed/z3-fjYzd0BA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<h2><strong>Show and Tell</strong></h2>
-<p>Digital artists are composing beautiful scenes and telling fresh stories with NVIDIA Instant NeRF. The <a href="https://www.nvidia.com/en-us/research/ai-art-gallery/instant-nerf/">Instant NeRF gallery</a> showcases some of the most innovative and thought-provoking examples, viewable as video clips in any web browser.</p>
-<p>Here are a few:</p>
-<ul>
-<li><strong>“Through the Looking Glass” by Karen X. Cheng and James Perlman </strong>A pianist practices her song, part of her daily routine, though there’s nothing mundane about what happens next. The viewer peers into the mirror, a virtual world that can be observed but not traversed; it’s unreachable by normal means. Then, crossing the threshold, it’s revealed that this mirror is in fact a window into an inverted reality that can be explored from within. Which one is real?</li>
-</ul>
-<div style="width: 1280px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-71152-1" width="1280" height="680" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-karenx-v9-1280x680-1.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-karenx-v9-1280x680-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-karenx-v9-1280x680-1.mp4</a></video></div>
-<p>&nbsp;</p>
-<ul>
-<li><strong>“Meditation” by Franc Lucent </strong>As soon as they walked into one of many rooms in Nico Santucci’s estate, Lucent knew they needed to turn it into a NeRF. Playing with the dynamic range and reflections in the pond, it presented the artist with an unknown exploration. They were pleased with the softness of the light and the way the NeRF elevates the room into what looks like something out of a dream — the perfect place to meditate. A NeRF can freeze a moment in a way that’s more immersive than a photo or video.</li>
-</ul>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-71152-2" width="1280" height="680" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-franc-lucent-meditation-1280x680-1.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-franc-lucent-meditation-1280x680-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-franc-lucent-meditation-1280x680-1.mp4</a></video></div>
-<p>&nbsp;</p>
-<ul>
-<li><strong>“Zeus” by Hugues Bruyère </strong>These rendered 3D scenes with Instant NeRF use the data Bruyère previously captured for traditional photogrammetry using mirrorless digital cameras, smartphones, 360-degree cameras and drones. Instant NeRF gives him a powerful tool to help preserve and share cultural artifacts through online libraries, museums, virtual-reality experiences and heritage-conservation projects. This NeRF was trained using a dataset of photos taken with an iPhone at the Royal Ontario Museum.</li>
-</ul>
-<div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-71152-3" width="1280" height="680" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-hugues-zeus-1280x680-1.mp4?_=3" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-hugues-zeus-1280x680-1.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-hugues-zeus-1280x680-1.mp4</a></video></div>
-<p>&nbsp;</p>
-<h2><strong>From Image to Video to Reality</strong></h2>
-<p>Transforming images into a 3D scene with AI is cool. Stepping into that 3D creation is next level.</p>
-<p>Thanks to a recent Instant NeRF update, users can render their scenes from static images and virtually step inside the environments, moving freely within the 3D space. In virtual-reality (VR) environments, users can feel complete immersion into new worlds, all within their headsets.</p>
-<p>The potential benefits are nearly endless.</p>
-<p>For example, a realtor can create and share a 3D model of a property, offering virtual tours at new levels. Retailers can showcase products in an online shop, powered by a collection of images and AI running on RTX GPUs. These AI models power creativity and are helping drive the accessibility of 3D immersive experiences across other industries.</p>
-<p>Instant NeRF comes with the capability to clean up scenes easily in VR, making the creation of high-quality NeRFs more intuitive than ever. Learn more about <a href="https://developer.nvidia.com/blog/turn-2d-images-into-immersive-3d-scenes-with-nvidia-instant-nerf-in-vr/">navigating Instant NeRF spaces in VR</a>.</p>
-<p>Download Instant-NGP to get started, and share your creations on social media with the hashtag #InstantNeRF.</p>
-<p><em>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </em><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><em>AI Decoded newsletter</em></a><em>.</em></p>
-]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-karenx-v9-1280x680-1.mp4" length="1719192" type="video/mp4" />
-<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-franc-lucent-meditation-1280x680-1.mp4" length="1717035" type="video/mp4" />
-<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/04/studio-ai-decoded-hugues-zeus-1280x680-1.mp4" length="1738082" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/NeRF-nv-blog-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/NeRF-nv-blog-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Moving Pictures: Transform Images Into 3D Scenes With NVIDIA Instant NeRF]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
