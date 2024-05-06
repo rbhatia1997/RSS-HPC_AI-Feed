@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Sun, 05 May 2024 21:28:16 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 06 May 2024 15:04:49 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,136 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>A Mighty Meeting: Generative AI, Cybersecurity Connect at RSA</title>
+		<link>https://blogs.nvidia.com/blog/rsa-2024-ai-cybersecurity/</link>
+		
+		<dc:creator><![CDATA[Summer Liu]]></dc:creator>
+		<pubDate>Mon, 06 May 2024 15:00:48 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cybersecurity]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[NVIDIA BlueField]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71415</guid>
+
+					<description><![CDATA[Cybersecurity experts at the RSA Conference this week will be on the hunt for ways to secure their operations in the era of generative AI. They’ll find many of the latest tools use AI and accelerated computing. This intersection of security and AI is coming into focus with collaborations that companies like NVIDIA and its		<a class="read-more" href="https://blogs.nvidia.com/blog/rsa-2024-ai-cybersecurity/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Cybersecurity experts at the <a href="https://www.nvidia.com/en-us/events/rsa-conference/">RSA Conference</a> this week will be on the hunt for ways to secure their operations in the era of <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>.</p>
+<p>They’ll find many of the latest tools use AI and <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a>. This intersection of security and AI is coming into focus with collaborations that companies like NVIDIA and its partners will describe at the event.</p>
+<h2><b>Data Science for a Data Problem</b></h2>
+<p>Machine learning is a great tool for cybersecurity because data is exploding.</p>
+<p>“With more devices and users expanding the landscape to defend, cybersecurity has become a data problem; and AI is a data solution,” said David Reber, NVIDIA’s chief security officer.</p>
+<p>Today, security analysts can be overwhelmed by a data tsunami. Generative AI can provide security copilots that act like filters, extracting from the firehose flow of information the context and anomalies that need a human expert’s attention.</p>
+<p>Generative AI also lets security managers interrogate their data directly instead of setting rules, chasing alerts and tracking dashboards. In the age of AI, security experts will move from a command line to a conversational interface.</p>
+<h2><b>AI Puts Security Context on Steroids</b></h2>
+<p>This shift takes context-based security to a new level, according to <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62433/">a talk</a> Reber delivered at GTC.</p>
+<p>The potential is huge, but it requires work to unearth it. At GTC, Reber encouraged cybersecurity experts to begin working with AI, starting with low-risk use cases to identify and secure gaps.</p>
+<p>He also provided suggestions for how to go about securing machine learning processes, saying security experts need to:</p>
+<ul>
+<li>secure data supply chains,</li>
+<li>develop tests for securing AI models and datasets across the development lifecycle,</li>
+<li>use model cards, data cards and software bills of materials to provide AI transparency and reliability,</li>
+<li>participate in community testing events such as security hackathons, and</li>
+<li>update policies on how to respond to AI security events.</li>
+</ul>
+<h2><b>Foundations for AI Cybersecurity</b></h2>
+<p>To give users a leg up, NVIDIA provides <a href="https://developer.nvidia.com/morpheus-cybersecurity">NVIDIA Morpheus</a>, a cybersecurity AI framework that filters and classifies large volumes of real-time data. Morpheus, part of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software suite, lets developers build applications that can detect spear phishing, insider threats and more.</p>
+<p>Users can employ Morpheus with <a href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> and <a href="https://developer.nvidia.com/blog/translate-your-enterprise-data-into-actionable-insights-with-nvidia-nemo-retriever/">NeMo Retriever</a>, microservices from the <a href="https://build.nvidia.com/explore/discover">NVIDIA API Catalog</a> for rapidly deploying AI. The combination can unlock new use cases, such as reducing from days to seconds the time to find and resolve <a href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/security-vulnerability-analysis">common software vulnerabilities and exposures</a>, one of many <a href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/">NVIDIA AI workflows</a>.</p>
+<p>A new release of <a href="https://developer.nvidia.com/networking/doca">NVIDIA DOCA</a> — the software framework for programming <a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/">NVIDIA BlueField DPUs</a> and <a href="https://www.nvidia.com/en-us/networking/ethernet-adapters/">NVIDIA ConnectX NICs</a> — provides another foundation for AI security. It now sports updated encryption features for network and storage data.</p>
+<h2><b>An Expanding AI Security Ecosystem</b></h2>
+<p>At RSA, many companies will show products built on NVIDIA technologies that extend security for the generative AI era, including:</p>
+<ul>
+<li>AIC will demonstrate Qrypt’s key generation for quantum secure encryption running on a BlueField DPU in an AIC-designed server.</li>
+<li>Anjuna will discuss how the U.S. Navy is evaluating <a href="https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/">confidential computing</a> on the Anjuna Seaglass platform with proprietary LLMs running on <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>.</li>
+<li>Bloombase will show an updated version of its StoreSafe Storage Firewall powered by Morpheus and BlueField DPUs and new use cases for threat detection and fast, quantum-safe encryption of AI models and data.</li>
+<li>Check Point Software will show its AI Cloud Protect security solution on BlueField DPUs, Quantum Force security gateways on ConnectX NICs, and Quantum Maestro software on <a href="https://www.nvidia.com/en-us/networking/products/ethernet/">NVIDIA Spectrum</a> switches.</li>
+<li>Cisco will feature Cisco Hypershield, an AI-native security architecture, to protect against both known and unknown attacks. It will also discuss its expanding partnership with NVIDIA to help customers harness the power of AI.</li>
+<li>CrowdStrike will show its CrowdStrike Falcon Foundry and CrowdStrike Falcon platform that employs NVIDIA’s GPU-optimized AI software, including NIM microservices.</li>
+<li>Deloitte will showcase CyberSphere, a cyber operations platform that uses Morpheus to speed detection of cyber threats.</li>
+<li>Palo Alto Networks will describe its collaboration with NVIDIA on two use cases, a next-generation reference architecture for securing generative AI deployments with NIM and its VM-Series Virtual Next-Generation Firewall, with <a href="https://developer.nvidia.com/blog/intelligent-traffic-offload-with-enhanced-ai-powered-5g-security-for-enterprises/">expanded intelligent traffic offload (ITO)</a>, supporting BlueField-3 DPUs.</li>
+<li>Qrypt will demonstrate its quantum-secure key generation for securing AI workloads running on BlueField-3 DPUs using DOCA.</li>
+<li>Sygnia will announce the use of BlueField DPUs and Morpheus in Velocity Edge, its new hardware-accelerated MXDR service for the energy and industrial sectors.</li>
+</ul>
+<p>They are part of the NVIDIA ecosystem building a new layer of security for generative AI. That community includes more than 20 companies at RSA this week from <a href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a>, a program for cutting-edge startups.</p>
+<p>At RSA, Daniel Rohrer, vice president of software product security at NVIDIA, will be part of the keynote panel on <a href="https://www.rsaconference.com/usa/agenda/session/AI-Safety-Wheres-the-Puck-Headed">AI safety</a>.</p>
+<p>In addition, Kevin Deierling, senior vice president of networking at NVIDIA, will share insights on security at the <a href="https://cloudflaresupperclubrsac.splashthat.com/">Cloudflare Executive Supper Club</a>. And NVIDIA will participate in <a href="https://thefemalequotient.equalitylounge.com/rsa-conference-2024">an event</a> about women in cybersecurity.</p>
+<p>To get started with AI-powered cybersecurity, try a workflow in <a href="https://www.nvidia.com/en-us/launchpad/cybersecurity/">NVIDIA LaunchPad</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/NVD4-1-cybersecurity-paid-morpheus-li-1080x1080-2525154.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="678"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/NVD4-1-cybersecurity-paid-morpheus-li-1080x1080-2525154-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[A Mighty Meeting: Generative AI, Cybersecurity Connect at RSA]]></media:title>
+			<media:description type="html">Image representing AI cybersecurity with NVIDIA Morpheus</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA and Alphabet’s Intrinsic Put Next-Gen Robotics Within Grasp</title>
+		<link>https://blogs.nvidia.com/blog/alphabet-intrinsic-robotics-isaac-manipulator/</link>
+		
+		<dc:creator><![CDATA[Gerard Andrews]]></dc:creator>
+		<pubDate>Mon, 06 May 2024 15:00:15 +0000</pubDate>
+				<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Embedded Computing]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Isaac]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71426</guid>
+
+					<description><![CDATA[Intrinsic, a software and AI robotics company at Alphabet, has integrated NVIDIA AI and Isaac platform technologies to advance the complex field of autonomous robotic manipulation. This week at the Automate trade show, in Chicago, Intrinsic is spotlighting leaps in robotic grasping and industrial scalability assisted by foundation models enabled by NVIDIA Isaac Manipulator, unlocking		<a class="read-more" href="https://blogs.nvidia.com/blog/alphabet-intrinsic-robotics-isaac-manipulator/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Intrinsic, a software and AI robotics company at Alphabet, has integrated NVIDIA AI and Isaac platform technologies to advance the complex field of autonomous robotic manipulation.</p>
+<p>This week at the Automate trade show, in Chicago, Intrinsic is spotlighting leaps in robotic grasping and industrial scalability assisted by foundation models enabled by NVIDIA Isaac Manipulator, unlocking new value in industrial automation with AI.</p>
+<p>NVIDIA <a href="https://blogs.nvidia.com/blog/isaac-generative-ai-manufacturing-logistics/">unveiled Isaac Manipulator</a> at GTC in March. <a href="https://developer.nvidia.com/isaac/manipulator">Isaac Manipulator</a> is a collection of foundation models and modular GPU-accelerated libraries that help industrial automation companies build scalable and repeatable workflows for dynamic manipulation tasks by accelerating AI model training and task reprogramming.</p>
+<p><a href="https://blogs.nvidia.com/blog/what-are-foundation-models/#:~:text=Foundation%20models%20are%20AI%20neural,text%20to%20analyzing%20medical%20images.">Foundation models</a> are based on a <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">transformer</a> deep learning architecture that allows a neural network to learn by tracking relationships in data. They’re generally trained on huge datasets and can be used to process and understand sensor and robot information as magically as ChatGPT for text. This enables robot perception and decision-making like never before and provides zero-shot learning — the ability to perform tasks without prior examples.</p>
+<p>NVIDIA’s collaboration with Intrinsic, a leading robotics software and AI company,  demonstrates the potential for a universally applicable robotic-grasping skill to work across grippers, environments and objects.</p>
+<p>“For the broader industry, our work with NVIDIA shows how foundation models can have a profound impact, including making today&#8217;s processing challenges easier to manage at scale, creating previously infeasible applications, reducing development costs, and increasing flexibility for end users,” said Wendy Tan White, CEO at Intrinsic, <a href="http://www.intrinsic.ai/blog/unlocking-new-value-in-industrial-automation-with-ai">in a blog post</a> announcing the collaboration with NVIDIA.  (White will deliver a keynote address at Automate about what the rise of AI means for innovation and growth, on Thursday, May 9, at 7 a.m. PT.)</p>
+<h2><b>Developing Better Robot Grip With Isaac Manipulator</b></h2>
+<p>Grasping has been a long sought after robotics skill. So far it’s been time-consuming, expensive to program and difficult to scale. As a result, many repetitive pick-and-place conditions haven’t been seamlessly handled to date by robots.</p>
+<p>Simulation is changing that. Enlisting <a href="https://developer.nvidia.com/isaac/sim">NVIDIA Isaac Sim</a> on the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform, Intrinsic generated <a href="https://www.nvidia.com/en-us/use-cases/synthetic-data/">synthetic data</a> for vacuum grasping using computer-aided design models of sheet metal and suction grippers. This allowed Intrinsic to create a prototype for its customer <a href="https://www.trumpf.com/en_US/products/machines-systems/">Trumpf Machine Tools</a>, a leading maker of industrial machine tools.</p>
+<p><iframe title="Smart Pick-and-Place in NVIDIA Isaac Sim" width="500" height="281" src="https://www.youtube.com/embed/paLR6-hjlT8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>The prototype uses Intrinsic <a href="https://intrinsic.ai/flowstate/">Flowstate</a>, a developer environment for AI-based robotics solutions, for visualizing processes, associated perception and motion planning. With a workflow that includes Isaac Manipulator, one can generate grasp poses and CUDA-accelerated robot motions, which can first be evaluated in simulation with Isaac Sim — a cost-saving step — before deployment in the real world with the Intrinsic platform.</p>
+<p>Under the collaboration, NVIDIA and Intrinsic plan to bring state-of-the-art dexterity and modular AI capabilities for robotic arms, with a robust collection of foundation models and GPU-accelerated libraries to accelerate a greater number of new robotics and automation tasks.</p>
+<p><iframe title="Grasping skill, based on an Nvidia foundation model, used in Intrinsic Flowstate" width="500" height="281" src="https://www.youtube.com/embed/9j9G8yEXI_g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><i>On Tuesday, May 7, at 11 a.m. CT, NVIDIA Senior Research Scientist Adithya Murali and Intrinsic Chief Science Officer Torsten Kroeger will demonstrate the companies’ work in the session “Automating Smart Pick-and-Place With Intrinsic Flowstate and NVIDIA Isaac Manipulator ” in the Intrinsic booth 2808 at Automate. </i><i>Join  our </i><a href="https://www.nvidia.com/en-us/events/automate-conference/"><i>speaking sessions</i></a><i> at Automate. </i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Intrinsic.png"
+			type="image/png"
+			width="512"
+			height="288"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Intrinsic.png"
+			width="512"
+			height="288"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA and Alphabet’s Intrinsic Put Next-Gen Robotics Within Grasp]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA AI Microservices for Drug Discovery, Digital Health Now Integrated With AWS</title>
 		<link>https://blogs.nvidia.com/blog/nim-ai-microservices-for-healthcare-integrate-with-aws/</link>
 		
@@ -103,7 +233,7 @@
 <p>Ninja Theory’s highly anticipated <i>Senua’s Saga: Hellblade II</i> will be coming to the cloud soon — get ready by streaming the first in the series, <i>Hellblade: Senua’s Sacrifice, </i>part of the seven new games joining the <a href="http://play.geforcenow.com">GeForce NOW library</a> this week.</p>
 <p>Plus, game across more devices than ever as GeForce NOW adds improved support on Steam Deck this GFN Thursday.</p>
 <h2><b>Journey into Viking Hell</b></h2>
-<figure id="attachment_71374" aria-describedby="caption-attachment-71374" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="wp-image-71374 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-672x378.png" alt="Hellblade 1 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1.png 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71374" class="wp-caption-text"><em>No sacrificing frame rates, streaming from the cloud.</em></figcaption></figure>
+<figure id="attachment_71374" aria-describedby="caption-attachment-71374" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-71374 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-672x378.png" alt="Hellblade 1 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/HB1-Screenshot-1.png 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71374" class="wp-caption-text"><em>No sacrificing frame rates, streaming from the cloud.</em></figcaption></figure>
 <p>Experience exceptional storytelling in Ninja Theory’s award-winning game <i>Hellblade: Senua’s Sacrifice</i>, available to stream from the cloud this week.</p>
 <p>Set in a dark fantasy world inspired by Norse mythology and Celtic culture, the game follows the journey of Senua, a Pict warrior. Her quest is to reach Helheim, the realm of the dead,to rescue her deceased lover’s soul from the goddess Hela.</p>
 <p>Solve intricate puzzles with observation, engage in melee combat and get pulled deep into Senua’s mind as she grapples with inner demons. Journey through the hauntingly beautiful landscapes of Helheim with ray tracing and high-dynamic range using an <a href="http://geforcenow.com">Ultimate or Priority membership</a> for the most immersive and stunning visual fidelity.</p>
@@ -114,7 +244,7 @@
 <p>Plus, members can easily play non-Steam games on the Steam Deck thanks to the cloud. This includes games from Battle.net, Epic Games Store, Ubisoft Connect, GOG.com and Xbox, as well as supported PC Game Pass titles. No more worrying about downloads or backend configurations. And with more than 1,900 games supported, there’s always something new to stream.</p>
 <p>Steam Deck is just one of many popular handheld PC devices with support for GeForce NOW. Others include <a href="https://www.asus.com/us/site/gaming/rog/gaming-handheld/rog-ally.html">ASUS ROG Ally</a>, <a href="https://www.logitechg.com/en-us/products/cloud-gaming.html">Logitech G Cloud</a>, <a href="https://www.lenovo.com/us/en/p/handheld/legion-go/len106g0001">Lenovo Legion Go</a>, <a href="https://www.msi.com/Handheld/Claw-A1MX">MSI Claw</a> and <a href="https://www.razer.com/mobile-handhelds/razer-edge">Razer Edge</a>. <a href="https://www.nvidia.com/en-us/geforce-now/download">Get started</a> now. Learn more about how to <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5337">configure GeForce NOW on Steam Deck</a>.</p>
 <h2><b>May New Games Be With You</b></h2>
-<figure id="attachment_71377" aria-describedby="caption-attachment-71377" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-71377" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-672x336.jpg" alt="Foundry on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71377" class="wp-caption-text"><em>If you build it, they will come.</em></figcaption></figure>
+<figure id="attachment_71377" aria-describedby="caption-attachment-71377" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71377" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-672x336.jpg" alt="Foundry on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-foundry-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71377" class="wp-caption-text"><em>If you build it, they will come.</em></figcaption></figure>
 <p>Get complete creative freedom in Paradox Interactive’s <i>FOUNDRY</i>, an exciting first-person factory-building sandbox game set in an infinite voxel world for expansive, ever-changing landscapes. Build a factory optimized to perfection or an artistic masterpiece, harvest resources, automate ever-growing production lines and manage complex systems to achieve mechanical mastery in <i>FOUNDRY</i>.</p>
 <p>Check out the list of new games this week:</p>
 <ul>
@@ -1097,142 +1227,6 @@
 			/>
 			<media:title type="html"><![CDATA[Wide Open: NVIDIA Accelerates Inference on Meta Llama 3   ]]></media:title>
 			<media:description type="html">Image of NVIDIA and Meta logos</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Up to No Good: ‘No Rest for the Wicked’ Early Access Launches on GeForce NOW</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-no-rest-for-the-wicked/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 18 Apr 2024 13:00:07 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71183</guid>
-
-					<description><![CDATA[It’s time to get a little wicked. Members can now stream No Rest for the Wicked from the cloud. It leads six new games joining the GeForce NOW library of more than 1,500 games. Holy Moly No Rest for the Wicked is the highly anticipated action role-playing game from Moon Studios, developer of the Ori		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-no-rest-for-the-wicked/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>It’s time to get a little wicked. Members can now stream <i>No Rest for the Wicked</i> from the cloud.</p>
-<p>It leads six new games joining the <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> library of more than 1,500 games.</p>
-<h2><b>Holy Moly</b></h2>
-<figure id="attachment_71187" aria-describedby="caption-attachment-71187" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-scaled.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-71187" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-672x378.jpg" alt="No Rest For The Wicked on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/04/No_Rest_for_the_Wicked-Screenshot-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71187" class="wp-caption-text">There’s always another fight to be won.</figcaption></figure>
-<p><i>No Rest for the Wicked</i> is the highly anticipated action role-playing game from Moon Studios, developer of the <a href="https://blogs.nvidia.com/blog/the-day-before-avatar-ori/"><i>Ori</i> series</a>, and publisher Private Division. Amid a plague-ridden world, step into the boots of a Cerim, a holy warrior on a desperate mission. The Great Pestilence has ravaged the land of Sacra, and a new king reigns. As a colonialist inquisition unfolds, engage in visceral combat, battle plague-infested creatures and uncover the secrets of the continent. Make the character you want with the game’s flexible soft-class system, explore a rich storyline, and prepare for intense boss battles as you build up the town of Sacrament.</p>
-<p>Embark on a dark and perilous journey, where no rest awaits the wicked. Rise to the challenge and stream from GeForce RTX 4080 servers with a <a href="http://geforcenow.com">GeForce NOW Ultimate membership</a> for the smoothest gameplay from the cloud. Be among the first to experience early access of the game, without having to wait for downloads.</p>
-<h2><b>Shiny New Games</b></h2>
-<figure id="attachment_71184" aria-describedby="caption-attachment-71184" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-71184" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-672x336.jpg" alt="Evil West on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-evil-west-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71184" class="wp-caption-text">&#8220;Yippie ki-yay, evil doers!&#8221;</figcaption></figure>
-<p>Become a Wild West superhero in <i>Evil West</i>, streaming on GeForce NOW this week and part of PC Game Pass. It’s part of six newly supported games this week:</p>
-<ul>
-<li><i>Kill It With Fire 2 </i>(New release on <a href="https://store.steampowered.com/app/2357000?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 16)</li>
-<li><i>The Crew Motorfest </i>(New release on <a href="https://store.steampowered.com/app/2698940?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 18)</li>
-<li><i>No Rest for the Wicked </i>(New release on <a href="https://store.steampowered.com/app/1371980?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 18)</li>
-<li><i>Evil West </i>(<a href="https://www.xbox.com/games/store/evil-west/9MW581HCJPM6?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Lightyear Frontier </i>(<a href="https://store.steampowered.com/app/1677110?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Tomb Raider I-III Remastered </i>(<a href="https://store.steampowered.com/app/2478970?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-</ul>
-<p>Riot Games shared in its 14.8 patch notes that it will soon add its Vanguard security software to <i>League of Legends</i> as part of the publisher’s commitment to remove scripters, bots and bot-leveled accounts from the game and make it more challenging for them to continue. Since Vanguard won’t support virtual machines when it’s added to <i>League of Legends</i>, the game will be put under maintenance and will no longer be playable on GeForce NOW once the 14.9 update goes live globally — currently planned for May 1, 2024. Members can continue to enjoy the game on GeForce NOW until then.</p>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-thursday-4-18-nv-blog-1280x680-no-copy.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-thursday-4-18-nv-blog-1280x680-no-copy-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Up to No Good: ‘No Rest for the Wicked’ Early Access Launches on GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Honors Partners of the Year in Europe, Middle East, Africa</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-partner-network-awards-emea-2024/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Thu, 18 Apr 2024 10:00:52 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Education]]></category>
-		<category><![CDATA[NVIDIA DGX]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71149</guid>
-
-					<description><![CDATA[NVIDIA today recognized 18 partners in Europe, the Middle East and Africa for their achievements and commitment to driving AI adoption. The recipients were honored at the annual EMEA Partner Day hosted by the NVIDIA Partner Network (NPN). The awards span seven categories that highlight the various ways partners work with NVIDIA to transform the		<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-partner-network-awards-emea-2024/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA today recognized 18 partners in Europe, the Middle East and Africa for their achievements and commitment to driving AI adoption.</p>
-<p>The recipients were honored at the annual EMEA Partner Day hosted by the <a href="https://www.nvidia.com/en-us/about-nvidia/partners/" target="_blank" rel="noopener">NVIDIA Partner Network</a> (NPN). The awards span seven categories that highlight the various ways partners work with NVIDIA to transform the region’s industries with AI.</p>
-<p>“This year marks another milestone for NVIDIA and our partners across EMEA as we pioneer technological breakthroughs and unlock new business opportunities using NVIDIA’s full-stack platform,” said Dirk Barfuss, director of EMEA channel at NVIDIA. “These awards celebrate our partners’ dedication and expertise in delivering groundbreaking solutions that drive cost efficiencies, enhance productivity and inspire innovation.”</p>
-<p>The 2024 NPN award winners for EMEA are:</p>
-<h2><b>Rising Star Awards</b></h2>
-<ul>
-<li><b>Vesper Technologies</b> received the Rising Star Northern Europe award for its exceptional revenue growth and broad customer base deploying NVIDIA AI solutions in data centers. The company has demonstrated outstanding growth in recent years, augmenting the success of its existing business.</li>
-<li><b>AMBER AI &amp; Data Science Solutions GmbH </b>received the Rising Star Central Europe award for its revenue growth of more than 100% across the complete portfolio of NVIDIA technologies. Through extensive collaboration with NVIDIA, the company has become a cornerstone of the NVIDIA partner landscape in Germany.</li>
-<li><b>HIPER Global Enterprise Ltd.</b> received the Rising Star Southern Europe &amp; Middle East award for its excellence in serving its broad customer base with NVIDIA compute technologies. Last year, it supported one of the largest customer projects in the region, further accelerating its growth rate.</li>
-</ul>
-<h2><strong>Star Performer Awards</strong></h2>
-<ul>
-<li><b>Boston Limited</b> received the Star Performer Northern Europe award for its consistent success in delivering full-stack implementations of NVIDIA technologies for customers across industries. The company over the last year achieved record revenue growth across its business areas.</li>
-<li><b>DELTA Computer Products GmbH</b> received the Star Performer Central Europe award for its outstanding sales achievements and strong customer relationships. With a massive technical knowledge base, the company has served as a trusted advisor for customers deploying NVIDIA technologies across industry, higher education and research.</li>
-<li><b>COMMit DMCC</b> received the Star Performer Southern Europe &amp; Middle East award for its exceptional execution of strategic and complex solutions built on NVIDIA technologies, which led to record revenues for the United Arab Emirates-based company.</li>
-</ul>
-<h2><b>Distributor of the Year</b></h2>
-<ul>
-<li><b>PNY</b> received the Distributor of the Year award for the third consecutive year, underscoring its consistent investment in technology training and commitment to providing NVIDIA accelerated computing platforms and software across markets.</li>
-<li><b>TD Synnex</b> received the Networking Distributor of the Year award for the second year in a row, highlighting its massive investments in NVIDIA’s portfolio of technologies —  especially networking — and dedication to delivering technical expertise to customers.</li>
-</ul>
-<h2><b>Go-to-Market Excellence </b></h2>
-<ul>
-<li><b>Bynet Data Communications</b> <strong>Ltd.</strong> received the Go-to-Market Excellence award for its collaboration with NVIDIA regional leads to devise and execute effective go-to-market strategies for the Israeli market. This included identifying key opportunities and creating localized marketing campaigns. Its efforts led to great success with the installation of <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/" target="_blank" rel="noopener">NVIDIA DGX SuperPODs</a> into several new industries in the region.</li>
-<li><b>Vesper Technologies</b> was Highly Commended in the Go-to-Market Excellence category for its fully integrated go-to-market strategy around the launch of the <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/" target="_blank" rel="noopener">NVIDIA GH200 Grace Hopper Superchip</a>. The company successfully deployed a results-driven marketing campaign, demonstrated a commitment to technical training and developed a pre-sales trial and evaluation platform.</li>
-<li><b>M Computers s.r.o.</b> was Highly Commended in the Go-to-Market Excellence category for its success and leadership in engaging AI customers in eastern Europe with NVIDIA technologies. The company’s marketing efforts, including speeches at AI events and social media campaigns, helped lead to the first <a href="https://www.nvidia.com/en-us/data-center/dgx-h100/" target="_blank" rel="noopener">NVIDIA DGX H100</a> and <a href="https://www.nvidia.com/en-us/data-center/grace-cpu-superchip/" target="_blank" rel="noopener">NVIDIA Grace CPU Superchip</a> projects in the region.</li>
-</ul>
-<h2><b>Industry Innovation </b></h2>
-<ul>
-<li><b>WPP</b> received the Industry Innovation award for its innovative applications of AI and NVIDIA technology in the marketing and advertising sector. The company worked with NVIDIA to build a groundbreaking generative AI-powered content engine, built on the <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse</a> platform, that enables the creation of brand-consistent content at scale.</li>
-<li><b>Ascon Systems</b> was Highly Commended in the Industry Innovation category for its cutting-edge Industrial Metaverse Portal, powered by NVIDIA Omniverse, that helped transform BMW Group’s manufacturing processes with real-time product control and enhanced visualization and interaction.</li>
-<li><b>Gcore</b> was Highly Commended in the Industry Innovation category for its creation of the first speech-to-text technology for Luxembourgish, using its fine-tuned LuxemBERT AI model. The technology integrates seamlessly into corporate systems and Luxembourgish messaging platforms, fostering the preservation of the traditionally spoken language, which lacked adequate tools for written communication.</li>
-</ul>
-<h2><b>Pioneer</b></h2>
-<ul>
-<li><b>Arrow Electronics &#8211;</b> <b>Intelligent Business Solutions</b> received the Pioneer Award for its work promoting the <a href="https://www.nvidia.com/en-us/edge-computing/products/igx/" target="_blank" rel="noopener">NVIDIA IGX Orin</a> platform for healthcare applications and building strategies to drive adoption of the technology. The company’s innovative approach and support led to the first integration of the NVIDIA IGX Orin Developer Kit with an <a href="https://www.nvidia.com/en-us/design-visualization/rtx-6000/" target="_blank" rel="noopener">NVIDIA RTX 6000 Ada Generation GPU</a> for a robotic surgery platform.</li>
-</ul>
-<h2><b>Consulting Partner of the Year</b></h2>
-<ul>
-<li><b>SoftServe</b> received the Consulting Partner of the Year award for its excellence in working with partners to drive the adoption of NVIDIA’s full-stack technologies, helping transform customers’ business with generative AI and NVIDIA Omniverse. Through its SoftServe University corporate learning hub, SoftServe trained its employees, customers and partners to expertly use NVIDIA technology.</li>
-<li><b>Deloitte</b> was Highly Commended in the Consulting Partner of the Year category for its focus on building sales and technical skills, efforts to deliver meaningful impact through projects and go-to-market strategy that helped drive enterprise-level AI transformation in the region.</li>
-<li><b>Data Monsters</b> was highly commended in the Consulting Partner of the Year category for its development of a virtual assistant with lifelike hearing, speech and animation capabilities using <a href="https://developer.nvidia.com/ace" target="_blank" rel="noopener">NVIDIA Avatar Cloud Engine</a> and <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language models</a>.</li>
-</ul>
-<p>​​Learn how to <a href="https://www.nvidia.com/en-us/about-nvidia/partners/become-a-partner/" target="_blank" rel="noopener">join NPN, or find a local NPN partner</a>.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/nvidiaheadquarters.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/nvidiaheadquarters-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Honors Partners of the Year in Europe, Middle East, Africa]]></media:title>
-			<media:description type="html"></media:description>
 			</media:content>
 			</item>
 	</channel>
