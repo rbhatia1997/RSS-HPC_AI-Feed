@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 06 May 2024 15:04:49 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 07 May 2024 17:08:42 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,47 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>NVIDIA DGX SuperPOD to Power U.S. Government Generative AI</title>
+		<link>https://blogs.nvidia.com/blog/dgx-superpod-us-government-generative-ai/</link>
+		
+		<dc:creator><![CDATA[Meg King]]></dc:creator>
+		<pubDate>Tue, 07 May 2024 17:00:03 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[NVIDIA DGX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71458</guid>
+
+					<description><![CDATA[In support of President Biden’s executive order on AI, the U.S. government will use an NVIDIA DGX SuperPOD to produce generative AI advances in climate science, healthcare and cybersecurity. The executive order, issued in October, is aimed at ensuring U.S. leadership in AI and managing its risks. MITRE, a nonprofit organization that operates federally funded		<a class="read-more" href="https://blogs.nvidia.com/blog/dgx-superpod-us-government-generative-ai/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>In support of President Biden’s executive order on AI, the U.S. government will use an NVIDIA DGX SuperPOD to produce generative AI advances in climate science, healthcare and cybersecurity.</p>
+<p>The executive order, issued in October, is aimed at ensuring U.S. leadership in AI and managing its risks. MITRE, a nonprofit organization that operates federally funded research and development centers, is implementing a new <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a> system that will provide researchers and developers access to massive computing leaps.</p>
+<p>The DGX SuperPOD will support MITRE’s Federal AI Sandbox, a platform to improve experimentation with next-generation, AI-enabled applications across federal government agencies.</p>
+<p>“The recent executive order on AI encourages federal agencies to reduce barriers for AI adoptions, but agencies often lack the computing environment necessary for experimentation and prototyping,” said Charles Clancy, senior vice president and chief technology officer at MITRE. “Our new Federal AI Sandbox will help level the playing field, making the high-quality compute power needed to train and test custom AI solutions available to any agency.”</p>
+<p>The Federal AI Sandbox will deliver federal agencies the computing gains needed to train large language models and other generative AI tools to develop cutting-edge applications.</p>
+<p>The NVIDIA DGX SuperPOD system powering the sandbox is capable of <a href="https://blogs.nvidia.com/blog/what-is-an-exaflop/">an exaflop</a> of 8-bit AI compute, meaning it performs a quintillion math operation each second to train and deploy custom LLMs and other AI solutions at scale.</p>
+<p>The supercomputing initiative comes as the White House <a href="https://blogs.nvidia.com/blog/partnership-universities-teach-ai-skills/">recently unveiled plans</a>, which include NVIDIA, for a $110 million partnership to help universities teach AI skills.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/david-everett-strickler-igCBFrMd11I-unsplash.jpg"
+			type="image/jpeg"
+			width="1920"
+			height="1250"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/david-everett-strickler-igCBFrMd11I-unsplash-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA DGX SuperPOD to Power U.S. Government Generative AI]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>A Mighty Meeting: Generative AI, Cybersecurity Connect at RSA</title>
 		<link>https://blogs.nvidia.com/blog/rsa-2024-ai-cybersecurity/</link>
 		
@@ -1162,71 +1203,6 @@
 			/>
 			<media:title type="html"><![CDATA[Climate Tech Startups Integrate NVIDIA AI for Sustainability Applications]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Wide Open: NVIDIA Accelerates Inference on Meta Llama 3   </title>
-		<link>https://blogs.nvidia.com/blog/meta-llama3-inference-acceleration/</link>
-		
-		<dc:creator><![CDATA[Ankit Patel]]></dc:creator>
-		<pubDate>Thu, 18 Apr 2024 16:30:23 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[Consumer Internet]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
-		<category><![CDATA[NVIDIA Jetson]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[RTX Mobile Workstations]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71177</guid>
-
-					<description><![CDATA[NVIDIA today announced optimizations across all its platforms to accelerate Meta Llama 3, the latest generation of the large language model (LLM). The open model combined with NVIDIA accelerated computing equips developers, researchers and businesses to innovate responsibly across a wide variety of applications. Trained on NVIDIA AI Meta engineers trained Llama 3 on computer		<a class="read-more" href="https://blogs.nvidia.com/blog/meta-llama3-inference-acceleration/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA today announced optimizations across all its platforms to accelerate <a href="https://ai.meta.com/blog/meta-llama-3/">Meta Llama 3</a>, the latest generation of the large language model (<a href="https://www.nvidia.com/en-us/glossary/large-language-models/">LLM</a>).</p>
-<p>The open model combined with NVIDIA <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> equips developers, researchers and businesses to innovate responsibly across a wide variety of applications.</p>
-<h2><b>Trained on NVIDIA AI</b></h2>
-<p>Meta engineers trained Llama 3 on computer clusters packing 24,576 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a>, linked with RoCE and <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> networks.</p>
-<p>To further advance the state of the art in <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, Meta <a href="https://engineering.fb.com/2024/03/12/data-center-engineering/building-metas-genai-infrastructure/">recently described</a> plans to scale its infrastructure to 350,000 H100 GPUs.</p>
-<h2><b>Putting Llama 3 to Work</b></h2>
-<p>Versions of Llama 3, accelerated on NVIDIA GPUs, are available today for use in the cloud, data center, edge and PC.</p>
-<p>From a browser, developers can try Llama 3 at <a href="http://ai.nvidia.com">ai.nvidia.com</a>. It’s packaged as an <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/">NVIDIA NIM</a> microservice with a standard application programming interface that can be deployed anywhere.</p>
-<p>Businesses can fine-tune Llama 3 with their data using <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a>, an open-source framework for LLMs that’s part of the secure, supported <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> platform. Custom models can be optimized for inference with <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a> and deployed with <a href="https://www.nvidia.com/en-us/ai-data-science/products/triton-inference-server/">NVIDIA Triton Inference Server</a>.</p>
-<h2><b>Taking Llama 3 to Devices and PCs</b></h2>
-<p>Llama 3 also runs on <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson Orin</a> for robotics and edge computing devices, creating interactive agents like those in the <a href="https://www.jetson-ai-lab.com/">Jetson AI Lab</a>.</p>
-<p>What’s more, <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA RTX</a> and <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX</a> GPUs for workstations and PCs speed inference on Llama 3. These systems give developers a target of more than 100 million NVIDIA-accelerated systems worldwide.</p>
-<h2><b>Get Optimal Performance with Llama 3</b></h2>
-<p>Best practices in deploying an LLM for a chatbot involves a balance of low latency, good reading speed and optimal GPU use to reduce costs.</p>
-<p>Such a service needs to deliver tokens — the rough equivalent of words to an LLM — at about twice a user’s reading speed which is about 10 tokens/second.</p>
-<p>Applying these metrics, a single <a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA H200 Tensor Core GPU</a> generated about 3,000 tokens/second — enough to serve about 300 simultaneous users — in an initial test using the version of Llama 3 with 70 billion parameters.</p>
-<p>That means a single <a href="https://www.nvidia.com/en-us/data-center/hgx/">NVIDIA HGX</a> server with eight H200 GPUs could deliver 24,000 tokens/second, further optimizing costs by supporting more than 2,400 users at the same time.</p>
-<p>For edge devices, the version of Llama 3 with eight billion parameters generated up to 40 tokens/second on Jetson AGX Orin and 15 tokens/second on Jetson Orin Nano.</p>
-<h2><b>Advancing Community Models</b></h2>
-<p>An active open-source contributor, NVIDIA is committed to optimizing community software that helps users address their toughest challenges. Open-source models also promote AI transparency and let users broadly share work on AI safety and resilience.</p>
-<p>Learn more about how NVIDIA’s AI inference platform, including how NIM, TensorRT-LLM and Triton use state-of-the-art techniques such as <a href="https://developer.nvidia.com/blog/tune-and-deploy-lora-llms-with-nvidia-tensorrt-llm/">low-rank adaptation</a> to accelerate the latest LLMs.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/final-llm-corp-blog-meta-nv-logo-lockup-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/final-llm-corp-blog-meta-nv-logo-lockup-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Wide Open: NVIDIA Accelerates Inference on Meta Llama 3   ]]></media:title>
-			<media:description type="html">Image of NVIDIA and Meta logos</media:description>
 			</media:content>
 			</item>
 	</channel>
