@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 01 May 2024 15:01:56 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 07 May 2024 13:57:48 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,139 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Best practices for running molecular dynamics simulations on AWS Graviton3E</title>
+		<link>https://aws.amazon.com/blogs/hpc/best-practices-for-running-molecular-dynamics-simulations-on-aws-graviton3e/</link>
+		
+		<dc:creator><![CDATA[Nathaniel Ng]]></dc:creator>
+		<pubDate>Tue, 07 May 2024 13:55:18 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Drug Discovery]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[GROMACS]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Molecular Modeling]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">1e63bf1a121b398b36fb135821ca6835db681e7f</guid>
+
+					<description>If you run molecular dynamics simulations, you need to read this. We walk through running benchmarks of popular apps like GROMACS and LAMMPS on new Hpc7g instances and Graviton3E processors. The results - up to 35% better vector performance versus Graviton3! Learn how to optimize your own workflows.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Nathaniel Ng, Shun Utsui, and James Chen from AWS Solution Architecture&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Last year, &lt;a href="https://aws.amazon.com/blogs/aws/new-amazon-ec2-hpc7g-instances-powered-by-aws-graviton3e-processors-optimized-for-high-performance-computing-workloads/"&gt;we announced&lt;/a&gt; the general availability of Hpc7g instances, the instance type focused on HPC workloads powered by AWS Graviton3E. Graviton3E processors deliver up to 35% higher vector-instruction performance &lt;a href="https://aws.amazon.com/blogs/aws/new-amazon-ec2-hpc7g-instances-powered-by-aws-graviton3e-processors-optimized-for-high-performance-computing-workloads/"&gt;compared to Graviton3&lt;/a&gt;, providing higher performance benefits for HPC applications.&lt;/p&gt; 
+&lt;p&gt;Molecular dynamics (MD) is a domain that frequently leverages HPC resources. Previously, customers ran their MD workloads using predominantly x86 architectures, but we’ve heard that many are interested in understanding the performance they can get on Graviton3E.&lt;/p&gt; 
+&lt;p&gt;So, in this post, we’ll show how you can run MD workloads on Hpc7g instances using AWS ParallelCluster, a supported open-source cluster management tool that allows you to deploy a scalable HPC environment on AWS in a matter of minutes. We’ll use &lt;a href="https://www.gromacs.org/"&gt;GROMACS&lt;/a&gt; and &lt;a href="https://www.lammps.org/"&gt;LAMMPS&lt;/a&gt; as examples – two very popular MD applications. And we’ll highlight the best practices for the tools – and the compiler flags – we used to achieve optimal performance.&lt;/p&gt; 
+&lt;h2&gt;Architecture&lt;/h2&gt; 
+&lt;p&gt;Key to the architecture is AWS ParallelCluster. Customers can install the ParallelCluster CLI on their laptops using Python’s pip package manager, and use it to deploy a cluster in the cloud from their laptops by supplying a short configuration file.&lt;/p&gt; 
+&lt;p&gt;Through the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/pcui-using-v3.html"&gt;ParallelCluster UI&lt;/a&gt;, you can use a wizard to configure a cluster without editing a configuration file or installing anything on your laptop. Details on how to set up a ParallelCluster environment can be found in &lt;a href="https://www.hpcworkshops.com/01-hpc-overview.html"&gt;this workshop&lt;/a&gt;. You can also find a &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/try_hpc7g"&gt;one-click launchable stack&lt;/a&gt; in the HPC Recipe Library (on GitHub), which will build an Hpc7g cluster for you after asking a minimum of questions.&lt;/p&gt; 
+&lt;div id="attachment_3496" style="width: 831px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3496" class="size-full wp-image-3496" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.40.13.png" alt=" Figure 1: Architecture using AWS ParallelCluster to run MD workloads with AWS Graviton 3E instances. " width="821" height="378"&gt;
+ &lt;p id="caption-attachment-3496" class="wp-caption-text"&gt;&lt;br&gt;Figure 1: Architecture using AWS ParallelCluster to run MD workloads with AWS Graviton 3E instances.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;ParallelCluster uses Slurm for its job scheduler, to dynamically scale the number of Hpc7g.16xlarge compute instances, responding to the queue.&lt;/p&gt; 
+&lt;p&gt;These instances are powered by custom-built AWS Graviton3E processors. They feature the latest DDR5 memory offering 50% more bandwidth compared to DDR4, and they carry 200Gbps network interfaces with the Elastic Fabric Adapter (EFA). Graviton3E processors implement Scalable Vector Extension (SVE) of the Neoverse V1 architecture and hence can deliver up to 2x better performance for floating point codes than Graviton2.&lt;/p&gt; 
+&lt;p&gt;To achieve sufficient performance on storage I/O, we deployed 4.8 TB of Amazon FSx for Lustre – a fully-managed, high-performance Lustre file system. We selected the &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html"&gt;PERSISTENT_2&lt;/a&gt; deployment type with a disk throughput of &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/performance.html"&gt;1000 MBps/TiB of storage provisioned&lt;/a&gt;, and backed it with an Amazon Simple Storage Service (Amazon S3) bucket.&lt;/p&gt; 
+&lt;p&gt;We’ve documented all the details of our ParallelCluster configuration in our &lt;a href="https://github.com/aws-samples/aws-graviton-md-example"&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Development tooling&lt;/h2&gt; 
+&lt;p&gt;We tested several configurations and concluded that we recommend using the following compilers and libraries for most use cases. You can check our &lt;a href="https://github.com/aws-samples/aws-graviton-md-example"&gt;GitHub repository&lt;/a&gt; to find out best practices for compiler flags when building MD applications.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Compiler&lt;/strong&gt;: Arm compiler for Linux (ACfL) version 23.04 or later&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Library&lt;/strong&gt;: Arm performance libraries (ArmPL) version 23.04 or later, included in ACfL&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;MPI&lt;/strong&gt;: Open MPI version 4.1.5 or later&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;It’s worth noting that Arm Compilers and Performance Libraries for HPC developers are &lt;a href="https://community.arm.com/arm-community-blogs/b/high-performance-computing-blog/posts/arm-compilers-and-libraries-for-hpc-now-free"&gt;now available for no cost&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;In the rest of this post, we’ll explain why we preferred these tools, by diving deeper into the performance of GROMACS and LAMMPS with different compilers, compiler options, and input files.&lt;/p&gt; 
+&lt;h2&gt;GROMACS&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://www.gromacs.org/about.html"&gt;GROMACS&lt;/a&gt; is an open-source software suite for high-performance molecular dynamics and output analysis. It’s widely adopted in the computer simulation fields not only for biochemical molecules but also for non-biological systems like polymers and fluid dynamics. The GROMACS community have optimized it to make great use of the SIMD capabilities of many modern HPC architectures.&lt;/p&gt; 
+&lt;p&gt;For Arm architectures, the &lt;a href="https://manual.gromacs.org/current/install-guide/index.html#simd-support"&gt;code supports both NEON (ASIMD) and SVE instructions&lt;/a&gt;. In this post, we used GNU 12.2 and the Arm compiler for Linux (ACfL) 23.04 as the testing compiler suite, with Arm Performance Library (ArmPL) 23.04 for the math library, and Open MPI 4.1.5 linked with Libfabric to build different binary executables of GROMACS 2022.5.&lt;/p&gt; 
+&lt;h3&gt;Build scripts&lt;/h3&gt; 
+&lt;p&gt;Our main objective was to find out the best compiler suite – and SIMD support fit – for Graviton3E-based Hpc7g instances. We’ll discuss the build scripts, job submission scripts, and performance data here – and you can find all the scripts in our &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/tree/main/codes/GROMACS"&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;For GROMACS’s build script, there’s no difference in the CMake options for GNU and Arm compiler for Linux.&lt;/p&gt; 
+&lt;p&gt;For GNU compilers, the Open MPI 4.1.5 environment is already installed in ParallelCluster’s machine images. We recommend anyone new to the cloud to use the system default Open MPI library. However, the system default Open MPI does &lt;em&gt;not&lt;/em&gt; support ACfL, so we’ve &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/setup/2-install-openmpi-with-acfl.sh"&gt;supplied a script&lt;/a&gt; which demonstrates how to compile and install Open MPI 4.1.5 with ACfL. Once this is installed, we can use the bash module environments to switch between the GNU and Arm compiler.&lt;/p&gt; 
+&lt;p&gt;With this done, it’s now possible to build executables for GROMACS 2022.5 for both SVE or NEON/ASIMD instruction sets.&lt;/p&gt; 
+&lt;p&gt;We’ve stored the procedures for this in yet another &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/tree/main/codes/GROMACS"&gt;reference script&lt;/a&gt;. We only need to change the parameter &lt;code&gt;GMX_SIMD&lt;/code&gt; in the configuration setup. For the SVE-enable binary, the parameter is –&lt;code&gt;DGMX_SIMD=ARM_SVE&lt;/code&gt;. For building the NEON/ASIMD-enabled binary, you’ll need to switch the parameter to &lt;code&gt;-DGMX_SIMD= ARM_NEON_ASIMD&lt;/code&gt;.&lt;/p&gt; 
+&lt;h3&gt;Test cases&lt;/h3&gt; 
+&lt;p&gt;We applied three standard test cases for GROMACS from the &lt;a href="https://repository.prace-ri.eu/git/UEABS/ueabs"&gt;Unified European Application Benchmark Suite (UEABS)&lt;/a&gt;.&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;&lt;a href="https://repository.prace-ri.eu/ueabs/GROMACS/2.2/GROMACS_TestCaseA.tar.xz"&gt;Test Case A &lt;/a&gt;is the ion channel system of the membrane protein GluCl embedded in a DOPC membrane and solvated in TIP3P water. This system contains 142k atoms.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://repository.prace-ri.eu/ueabs/GROMACS/2.2/GROMACS_TestCaseB.tar.xz"&gt;Test Case B&lt;/a&gt; is a model of cellulose and lignocellulosic biomass in an aqueous solution. The system has 3.3 million atoms.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://repository.prace-ri.eu/ueabs/GROMACS/2.2/GROMACS_TestCaseC.tar.xz"&gt;Test Case C&lt;/a&gt; is the standard test case for NAMD benchmarks. The system is a 3 x 3 x 3 replica of the STMV (&lt;em&gt;Satellite Tobacco Mosaic Virus&lt;/em&gt;). The size of model is about 28 million atoms.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;For all these cases, we set the total simulation steps to 10k.&lt;/p&gt; 
+&lt;p&gt;To find out the best combination of compiler and SIMD setup, we started to test the application performance on a single Hpc7g.16xlarge instance. Figure 2 charts the performance we saw for test case A (142K atoms). ACfL with SVE-enabled generated the best performance. The binary this generated was about 9-10% faster than the one using NEON/ASIMD. The binary produced by the ACfL with SVE ran 6% faster than when we used the GNU compiler with SVE.&lt;/p&gt; 
+&lt;div id="attachment_3497" style="width: 714px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3497" loading="lazy" class="size-full wp-image-3497" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.41.42.png" alt="Figure 2: Performance of GROMACS 2022.5 for GluCl Ion Channel system (142K atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enable binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs. " width="704" height="466"&gt;
+ &lt;p id="caption-attachment-3497" class="wp-caption-text"&gt;Figure 2: Performance of GROMACS 2022.5 for GluCl Ion Channel system (142K atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enable binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Figure 3 charts the performance we saw for test case B (3.3M atoms). The best setup we found – again – was to use the ACfL with SVE enabled. We measured a 28% improvement for the SVE-enabled binary, compared with the NEON/ASIMD-enable binary when we used this compiler.&lt;/p&gt; 
+&lt;div id="attachment_3498" style="width: 717px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3498" loading="lazy" class="size-full wp-image-3498" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.42.04.png" alt="Figure 3: Performance of GROMACS 2022.5 for cellulose and lignocellulosic biomass (3.3M atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enabled binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs. " width="707" height="465"&gt;
+ &lt;p id="caption-attachment-3498" class="wp-caption-text"&gt;Figure 3: Performance of GROMACS 2022.5 for cellulose and lignocellulosic biomass (3.3M atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enabled binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The performance results for test case C (28M atoms) are shown in Figure 4. Again, we saw a similar pattern to before: the ACfL with SVE enabled was the best option for GROMACS running on Hpc7g instance. In this case, the performance delta was 19% compared to NEON-ASIMD. And again, the binary generated by ACfL was 6% faster than the one built by the GNU compiler.&lt;/p&gt; 
+&lt;div id="attachment_3499" style="width: 716px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3499" loading="lazy" class="size-full wp-image-3499" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.42.44.png" alt="Figure 4: Performance of GROMACS 2022.5 for Satellite Tobacco Mosaic Virus, STMV (28M atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enable binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs. " width="706" height="462"&gt;
+ &lt;p id="caption-attachment-3499" class="wp-caption-text"&gt;Figure 4: Performance of GROMACS 2022.5 for Satellite Tobacco Mosaic Virus, STMV (28M atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enable binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Based on the results running on single Hpc7g instance, we concluded that ACfL with SVE-enabled SIMD, generated the best performance results.&lt;/p&gt; 
+&lt;p&gt;By default, the configuration tool in GROMACS detected the CPU automatically, and selected the SIMD support correctly, too. GROMACS also detected the configuration of SIMD correctly for AWS Graviton3.&lt;/p&gt; 
+&lt;p&gt;We chose test case C to highlight the scalability for performance on Hpc7g when we ran across multiple nodes. The result charted in Figure 5 confirms this – scalability of performance is near-linear with EFA enabled.&lt;/p&gt; 
+&lt;div id="attachment_3500" style="width: 895px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3500" loading="lazy" class="size-full wp-image-3500" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.43.17.png" alt="Figure 5: Scalability of Test Case C running on the Hpc7g-based cluster with, and without, EFA. 200Gpbs EFA contributes the scalability in the cases running beyond 2 compute instances. The binary was compiled with ACfL with SVE-enabled. All the data points are based on the average of three individual runs. " width="885" height="579"&gt;
+ &lt;p id="caption-attachment-3500" class="wp-caption-text"&gt;Figure 5: Scalability of Test Case C running on the Hpc7g-based cluster with, and without, EFA. 200Gpbs EFA contributes the scalability in the cases running beyond 2 compute instances. The binary was compiled with ACfL with SVE-enabled. All the data points are based on the average of three individual runs.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Conclusion for GROMACS&lt;/h3&gt; 
+&lt;p&gt;Based on these performance results for three quite different, but well-known test cases, we found that SVE-enabled binary was faster than using ASIMD/Neon instructions. ACfL produced faster code than the GNU compiler. Specifically for Hpc7g, ACfL with SVE-enabled SIMD setting was the best configuration when paired with the latest ArmPL and Open MPI with EFA enabled.&lt;/p&gt; 
+&lt;h2&gt;LAMMPS&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://www.lammps.org/"&gt;LAMMPS&lt;/a&gt; (Large-scale Atomic/Molecular Massively-Parallel Simulator) is a classical molecular dynamics simulator, used for particle-based modelling of materials. It was developed at Sandia National Laboratories, and is available as an open-source tool, distributed under GPLv2. You can download the source code from the &lt;a href="https://github.com/lammps/lammps/releases"&gt;LAMMPS GitHub repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;In terms of algorithms, LAMMPS uses parallel spatial decomposition, as well as parallel FFTs for long-range Coloumbic interactions. The computational cost of scaling with the number of atoms is O(N) for short-range interactions, and O(N log N) when computations involve Coloumbic interactions with FFT-based methods.&lt;/p&gt; 
+&lt;p&gt;To prepare for LAMMPS running on AWS, we can follow the same steps as before for GROMACS for the AWS ParallelCluster, GCC, ACfL, and Open MPI setup. The LAMMPS &lt;a href="https://docs.lammps.org/Install.html"&gt;install guide&lt;/a&gt; has several options for installation, but to use the latest version of LAMMPS, and more recent versions of GCC, ACfL, and Open MPI, LAMMPS must be compiled from source.&lt;/p&gt; 
+&lt;p&gt;LAMMPS has specific Makefiles that are optimized for Arm architecture available: &lt;a href="https://github.com/lammps/lammps/blob/develop/src/MAKE/MACHINES/Makefile.aarch64_arm_openmpi_armpl"&gt;Makefile.aarch64_arm_openmpi_armpl&lt;/a&gt; and &lt;a href="https://github.com/lammps/lammps/blob/develop/src/MAKE/MACHINES/Makefile.aarch64_g++_openmpi_armpl"&gt;Makefile.aarch64_g++_openmpi_armpl&lt;/a&gt;, for use with ACfL and GCC compilers respectively. In the case of ACfL, we used &lt;code&gt;-march=armv8-a+sve&lt;/code&gt; &lt;a href="https://developer.arm.com/documentation/102476/0100/Programming-with-SVE/Auto-vectorization"&gt;to add the SVE instructions&lt;/a&gt;, and checked that switching between &lt;code&gt;-march=armv8-a+sve&lt;/code&gt; and &lt;code&gt;-march=armv8-a+simd&lt;/code&gt; did not impact performance. For &lt;em&gt;both&lt;/em&gt; ACfL and GCC Makefiles, we added &lt;code&gt;-fopenmp&lt;/code&gt; to &lt;code&gt;CCFLAGS&lt;/code&gt; and &lt;code&gt;LINKFLAGS&lt;/code&gt; to enable OpenMP. We’ve summarized the final settings in Table 1.&lt;/p&gt; 
+&lt;div id="attachment_3501" style="width: 927px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3501" loading="lazy" class="wp-image-3501 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.44.36.png" alt="Table 1: Compiler settings for GCC and ACfL" width="917" height="247"&gt;
+ &lt;p id="caption-attachment-3501" class="wp-caption-text"&gt;Table 1: Compiler settings for GCC and ACfL&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;To compile LAMMPS, the final Makefiles available in our GitHub repo, were &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/LAMMPS/2a-compile-lammps-acfl-sve.sh"&gt;2a-compile-lammps-acfl-sve.sh&lt;/a&gt; for ACfL and &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/LAMMPS/2b-compile-lammps-gcc.sh"&gt;2b-compile-lammps-gcc.sh&lt;/a&gt; for GCC.&lt;/p&gt; 
+&lt;p&gt;The key points to note in our LAMMPS compile script involve loading the correct environment modules – &lt;code&gt;libfabric-aws/1.17.1&lt;/code&gt; and &lt;code&gt;armpl/23.04.1&lt;/code&gt; for both compilers, &lt;code&gt;acfl/23.04.1&lt;/code&gt; for ACfL, and &lt;code&gt;gnu/12.2.0&lt;/code&gt; for GCC – and replacing the &lt;code&gt;CCFLAGS&lt;/code&gt; and &lt;code&gt;LINKFLAGS&lt;/code&gt; variables with those from Table 1. For ACfL, we set both &lt;code&gt;PATH&lt;/code&gt; and &lt;code&gt;LD_LIBRARY_PATH&lt;/code&gt; to the Open MPI installation folders.&lt;/p&gt; 
+&lt;p&gt;We pulled the LAMMPS source code from the git repository into the install folder (&lt;code&gt;~/software&lt;/code&gt; in our case), and checked out the 23 June 2022 branch for compilation (&lt;code&gt;git checkout stable_23Jun2022_update4&lt;/code&gt;). You can check out other releases, too. If you want the default stable branch, use &lt;code&gt;git checkout stable&lt;/code&gt;. Use &lt;code&gt;make clean-all&lt;/code&gt; to remove all the intermediate object files and executable files, and &lt;code&gt;make no-all&lt;/code&gt; to turn off all options. Next, we ran &lt;code&gt;make yes-most&lt;/code&gt; to install most of the packages, which was enough for us to test all five LAMMPS benchmarks.&lt;/p&gt; 
+&lt;p&gt;Once we compiled LAMMPS, we were able to submit jobs using Slurm. We’ve included sample job scripts &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/LAMMPS/3a-lammps-acfl-sve.sh"&gt;3a-lammps-acfl-sve.sh&lt;/a&gt; (for ACfL-compiled LAMMPS) and &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/LAMMPS/3b-lammps-gcc.sh"&gt;3b-lammps-gcc.sh&lt;/a&gt; (for GCC-compiled LAMMPS) in our repo. In the final command, you should execute LAMMPS using &lt;code&gt;mpirun&lt;/code&gt;. The &lt;code&gt;-var x&lt;/code&gt;, &lt;code&gt;-var y&lt;/code&gt;, and &lt;code&gt;-var z&lt;/code&gt; flags specify the &lt;code&gt;NX&lt;/code&gt;, &lt;code&gt;NY&lt;/code&gt;, and &lt;code&gt;NZ&lt;/code&gt; parameters passed to the LAMMPS input file, and the &lt;code&gt;-in&lt;/code&gt; parameter indicates the LAMMPS input file (&lt;code&gt;in.lj&lt;/code&gt; in our example).&lt;/p&gt; 
+&lt;p&gt;For the LAMMPS test runs, we chose the five benchmark cases listed at the &lt;a href="https://www.lammps.org/bench.html"&gt;LAMMPS Benchmarks site&lt;/a&gt; as described in Table 2:&lt;/p&gt; 
+&lt;div id="attachment_3502" style="width: 638px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3502" loading="lazy" class="size-full wp-image-3502" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.48.36.png" alt="Table 2: Description of the 5 LAMMPS benchmarks" width="628" height="353"&gt;
+ &lt;p id="caption-attachment-3502" class="wp-caption-text"&gt;Table 2: Description of the 5 LAMMPS benchmarks&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We ran a comparison between LAMMPS compiled with the GCC, and LAMMPS compiled with ACfL for all of the 5 input files (&lt;code&gt;in.lj&lt;/code&gt;, &lt;code&gt;in.chain&lt;/code&gt;, &lt;code&gt;in.eam&lt;/code&gt;,&lt;code&gt; in.chute&lt;/code&gt;, and &lt;code&gt;in.rhodo&lt;/code&gt;), running on a single Hpc7g.16xlarge instance.&lt;/p&gt; 
+&lt;p&gt;For each of the input files, we submitted three jobs with GCC and three jobs with ACfL, and we used the average of the runs to report the results. We took the speed from the &lt;code&gt;log.lammps&lt;/code&gt; output file, reported in tau/day for the &lt;code&gt;chain&lt;/code&gt;, &lt;code&gt;chute&lt;/code&gt;, and &lt;code&gt;lj&lt;/code&gt; test cases, and ns/day for the &lt;code&gt;eam&lt;/code&gt; and &lt;code&gt;rhodo&lt;/code&gt; test cases.&lt;/p&gt; 
+&lt;p&gt;The LAMMPS benchmarks each contain 32,000 atoms (for &lt;code&gt;NX=NY=NZ=1&lt;/code&gt;). We chose &lt;code&gt;NX=NY=NZ=8&lt;/code&gt; as a balance between &lt;code&gt;NX=NY=NZ=1&lt;/code&gt; (with high variability in performance due to the short run time) and &lt;code&gt;NX=NY=NZ=32&lt;/code&gt; (resulting in out of memory errors).&lt;/p&gt; 
+&lt;div id="attachment_3504" style="width: 896px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3504" loading="lazy" class="size-full wp-image-3504" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.51.47.png" alt="Figure 6. Performance of LAMMPS a single Hpc7g.16xlarge instance with NX=NY=NZ=8, when compiled using the GCC and ACfL compilers. Speed is in tau/day for the chain, chute, and lj test cases, and ns/day for the eam and rhodo test cases." width="886" height="562"&gt;
+ &lt;p id="caption-attachment-3504" class="wp-caption-text"&gt;Figure 6. Performance of LAMMPS a single Hpc7g.16xlarge instance with NX=NY=NZ=8, when compiled using the GCC and ACfL compilers. Speed is in tau/day for the chain, chute, and lj test cases, and ns/day for the eam and rhodo test cases.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;ACfL consistently outperformed GCC for all the single-node runs, with improvements ranging from 2.3% to 46%.&lt;/p&gt; 
+&lt;div id="attachment_3503" style="width: 885px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3503" loading="lazy" class="size-full wp-image-3503" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.50.35.png" alt="Table 3: Speedups with ACfL over GCC for the 5 benchmark cases on a single Hpc7g.16xlarge instance with NX=NY=NZ=8." width="875" height="124"&gt;
+ &lt;p id="caption-attachment-3503" class="wp-caption-text"&gt;Table 3: Speedups with ACfL over GCC for the 5 benchmark cases on a single Hpc7g.16xlarge instance with NX=NY=NZ=8.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;For the multi-node runs, we further increased &lt;code&gt;NX=NY=NZ&lt;/code&gt; to &lt;code&gt;32&lt;/code&gt;, to increase the runtime – and therefore reduce the variability – in the results. This brought the total number of atoms to 32,000 x 32 x 32 x 32 = ~ 1 billion atoms.&lt;/p&gt; 
+&lt;p&gt;We chose to focus only on the Lennard Jones benchmark and tested both GCC- and ACfL- compiled LAMMPS with &lt;code&gt;OMP_NUM_THREADS=1,2,4&lt;/code&gt;. For 8 nodes (512 cores) and above, we observed better results with &lt;code&gt;OMP_NUM_THREADS=2&lt;/code&gt; for both compilers. &lt;em&gt;Unlike the single node runs&lt;/em&gt;, we observed that GCC-compiled LAMMPS outperformed its ACfL-compiled counterpart. We tested the GCC-compiled version up to 128 nodes.&lt;/p&gt; 
+&lt;p&gt;We’ve plotted the results in Figure 7.&lt;/p&gt; 
+&lt;div id="attachment_3505" style="width: 906px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3505" loading="lazy" class="size-full wp-image-3505" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.53.46.png" alt="Figure 7: Scalability of GCC-compiled LAMMPS for Lennard Jones benchmark case (1 billion atoms) using multiple Hpc7g.16xlarge instances. The line for linear scaling is plotted in grey." width="896" height="617"&gt;
+ &lt;p id="caption-attachment-3505" class="wp-caption-text"&gt;Figure 7: Scalability of GCC-compiled LAMMPS for Lennard Jones benchmark case (1 billion atoms) using multiple Hpc7g.16xlarge instances. The line for linear scaling is plotted in grey.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we showed how you can run GROMACS and LAMMPS on Hpc7g-based instance. We discussed the ideal toolchain and SIMD setup based on the results we saw.&lt;/p&gt; 
+&lt;p&gt;We didn’t modify the source code of GROMACS and LAMMPS, choosing instead to leverage “auto-vectorization” implemented in the compilers.&lt;/p&gt; 
+&lt;p&gt;Arm’s compiler for Linux (ACfL) with SVE enabled SIMD boosted GROMACS performance up to 22% compared with the GNU compiler and NEON/ASIMD on Hpc7g instances. Arm compiler for Linux sped up LAMMPS simulation between 2.3% to 46%, depending on the case, compared to the GNU compiler on a single node basis. For LAMMPS, we also saw performance improvements at larger core counts with hybrid MPI + OpenMP parallelization.&lt;/p&gt; 
+&lt;p&gt;We’ve made all our build scripts – and job submission scripts – available in our GitHub samples repo, and we’d encourage you to use this if you want to build on this work for your own research workloads. If you need to discuss any of this, feel free to reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Accelerate drug discovery with NVIDIA BioNeMo Framework on Amazon EKS</title>
 		<link>https://aws.amazon.com/blogs/hpc/accelerate-drug-discovery-with-nvidia-bionemo-framework-on-amazon-eks/</link>
 		
@@ -2208,226 +2341,6 @@ if Cost &amp;lt;= Budget:
 &lt;p&gt;[4]: Werner Vogel at AWS re:Invent 2022 &lt;a href="https://youtu.be/RfvL_423a-I?t=6553"&gt;https://youtu.be/RfvL_423a-I?t=6553&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;[5]: &lt;a href="https://www.bcg.com/publications/2023/enterprise-grade-quantum-computing-almost-ready"&gt;https://www.bcg.com/publications/2023/enterprise-grade-quantum-computing-almost-ready&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;[6]: &lt;a href="https://onlinelibrary.wiley.com/doi/10.1002/qua.26381"&gt;https://onlinelibrary.wiley.com/doi/10.1002/qua.26381&lt;/a&gt;&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Leveraging Seqera Platform on AWS Batch for machine learning workflows – Part 2 of 2</title>
-		<link>https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-2-of-2/</link>
-		
-		<dc:creator><![CDATA[Ben Sherman]]></dc:creator>
-		<pubDate>Tue, 23 Jan 2024 16:01:54 +0000</pubDate>
-				<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Genomics]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[ML]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<guid isPermaLink="false">0082e40ba30d67f985dcb877d3cb64053a9b9f0a</guid>
-
-					<description>In this second part of using Nextflow for machine learning for life science workloads, we provide a step-by-step guide, explaining how you can easily deploy a Seqera environment on AWS to run ML and other pipelines.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3236" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/18/Batch-and-Seqera.png" alt="Batch and Seqera" width="380" height="190"&gt;This post was contributed by Dr Ben Sherman (Seqera) and Dr Olivia Choudhury (AWS), Paolo Di Tomasso, and Gord Sissons from Seqera, and Aniket Deshpande and Abhijit Roy from AWS.&lt;br&gt; &lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;In &lt;a href="https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-1-of-2/"&gt;part one of this two-part series&lt;/a&gt;, we explained how Nextflow and &lt;a href="https://seqera.io/platform/"&gt;Seqera Platform&lt;/a&gt; work with AWS, and we provided a sample Nextflow pipeline that performs ML model training and inference for image analysis to illustrate how Nextflow can support custom ML-based workflows. We also discussed how AWS customers are using this today.&lt;/p&gt; 
-&lt;p&gt;In this second post, we will provide a step-by-step guide explaining how users new to Seqera Platform can rapidly get started on AWS, maximizing the use of &lt;a href="https://aws.amazon.com/batch"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Service (Amazon S3&lt;/a&gt;), and other AWS services.&lt;/p&gt; 
-&lt;p&gt;Depending on your familiarity with AWS, these steps should take around an hour to complete.&lt;/p&gt; 
-&lt;h2&gt;Prerequisites&lt;/h2&gt; 
-&lt;p&gt;Before following the step-by-step guide here, readers should:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Have an AWS account and be familiar with using the &lt;a href="https://aws.amazon.com/console/"&gt;AWS Management Console&lt;/a&gt; or &lt;a href="https://aws.amazon.com/cli/"&gt;A&lt;/a&gt;&lt;a href="https://aws.amazon.com/cli/"&gt;WS&lt;/a&gt;&lt;a href="https://aws.amazon.com/cli/"&gt; Command Line Interface&lt;/a&gt; (CLI).&lt;/li&gt; 
- &lt;li&gt;Have a high-level understanding of &lt;a href="https://aws.amazon.com/iam"&gt;AWS Identity and Access Management&lt;/a&gt; (IAM) users and roles.&lt;/li&gt; 
- &lt;li&gt;Obtain a free &lt;a href="https://tower.nf"&gt;Seqera Cloud&lt;/a&gt; account for testing.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Step-by-step guide&lt;/h2&gt; 
-&lt;p&gt;This section explains how to set up an AWS environment to support pipeline execution, obtain a free Seqera Cloud account, and configure Seqera to launch and manage the ML pipeline introduced in part 1 of this series.&lt;/p&gt; 
-&lt;h3&gt;Create an Amazon S3 bucket&lt;/h3&gt; 
-&lt;p&gt;The first step is to create an S3 bucket in your preferred AWS region (we used &lt;em&gt;us-east&lt;/em&gt;).&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Once logged into the AWS console, navigate to the &lt;strong&gt;Amazon S3&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Click on the &lt;strong&gt;Create bucket&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Give the bucket a globally unique name (for example, we used &lt;code&gt;seqera-work-bucket&lt;/code&gt;, but you will need to choose something else) and select the AWS region where the bucket will reside.&lt;/li&gt; 
- &lt;li&gt;You can leave ACLs disabled and block all public access to the bucket since Seqera Platform will use this bucket internally. Others do not need to see the contents.&lt;/li&gt; 
- &lt;li&gt;Accept the default for the remaining settings and select &lt;strong&gt;Create bucket&lt;/strong&gt;.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Once the bucket is created, select it and record its &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html"&gt;Amazon Resource Name&lt;/a&gt; (ARN) by clicking &lt;strong&gt;Copy ARN&lt;/strong&gt;. In our example, the ARN is &lt;code&gt;arn:aws:s3:::seqera-work-bucket&lt;/code&gt;.&lt;/p&gt; 
-&lt;p&gt;You will need the name of the ARN to set up an AWS policy in the following steps.&lt;/p&gt; 
-&lt;h3&gt;Setup your IAM credentials&lt;/h3&gt; 
-&lt;p&gt;To create an AWS Batch environment and marshal other AWS cloud resources, Seqera will need AWS credentials. We’ll use the &lt;a href="https://docs.aws.amazon.com/iam/"&gt;AWS Identity and Access Management&lt;/a&gt; (IAM) service to create appropriate IAM policies and attach these policies to an AWS IAM user or role.&lt;/p&gt; 
-&lt;p&gt;First, create a policy with sufficient privileges to manage the AWS Batch environment and support pipeline execution. Follow the steps below to create a custom “&lt;em&gt;seqera_forge_policy&lt;/em&gt;.”&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Navigate to the IAM console by searching for the &lt;strong&gt;IAM&lt;/strong&gt;&lt;strong&gt; service&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Under &lt;strong&gt;Access Management&lt;/strong&gt;, select &lt;strong&gt;Policies&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Click on &lt;strong&gt;Create policy&lt;/strong&gt; to create a new IAM policy&lt;/li&gt; 
- &lt;li&gt;Under &lt;strong&gt;Specify permissions&lt;/strong&gt;, select the &lt;strong&gt;JSON&lt;/strong&gt;&lt;strong&gt; policy editor&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Copy the contents of the default &lt;code&gt;forge-policy.json&lt;/code&gt; file &lt;a href="https://github.com/seqeralabs/nf-tower-aws/blob/master/forge/forge-policy.json"&gt;located on GitHub&lt;/a&gt; into the policy editor&lt;/li&gt; 
- &lt;li&gt;Click &lt;strong&gt;Next&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Give the policy a name (like &lt;code&gt;Seqera_Forge_Policy&lt;/code&gt;)&lt;/li&gt; 
- &lt;li&gt;Select &lt;strong&gt;Create policy&lt;/strong&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Note that this is a sample policy and you should review the policy based on your security requirements, particularly if you want to use it for production.&lt;/p&gt; 
-&lt;p&gt;With these steps, you have created a policy to give Seqera sufficient permissions to deploy an AWS Batch environment on your behalf.&lt;/p&gt; 
-&lt;p&gt;Next, you’ll need to create a similar policy that gives your IAM user or role permission to access the Amazon S3 bucket you created earlier.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Repeat the steps in IAM as before to create a new policy for accessing the S3 bucket by clicking &lt;strong&gt;Create policy&lt;/strong&gt; from the &lt;strong&gt;Policies&lt;/strong&gt; screen&lt;/li&gt; 
- &lt;li&gt;Under &lt;strong&gt;Specify permissions&lt;/strong&gt;, select the &lt;strong&gt;JSON&lt;/strong&gt;&lt;strong&gt; policy editor&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Copy the contents of the default &lt;code&gt;s3-bucket-write.json&lt;/code&gt; file &lt;a href="https://github.com/seqeralabs/nf-tower-aws/blob/master/launch/s3-bucket-write.json"&gt;located on GitHub&lt;/a&gt; into the policy editor&lt;/li&gt; 
- &lt;li&gt;Update the ARN in the &lt;code&gt;S3-bucket-write&lt;/code&gt; policy to reflect the ARN for the S3 bucket you created&lt;/li&gt; 
- &lt;li&gt;Click &lt;strong&gt;Next&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Give the policy a name (like &lt;code&gt;Seqera_S3_Bucket_Write&lt;/code&gt;)&lt;/li&gt; 
- &lt;li&gt;Select &lt;strong&gt;Create policy&lt;/strong&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;You should now have two new customer-managed policies, as shown in Figure 1.&lt;/p&gt; 
-&lt;div id="attachment_3221" style="width: 1089px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3221" loading="lazy" class="size-full wp-image-3221" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.31.29.png" alt="Figure 1: Create IAM policies to manage AWS Batch environment and execute pipelines." width="1079" height="367"&gt;
- &lt;p id="caption-attachment-3221" class="wp-caption-text"&gt;Figure 1: Create IAM policies to manage AWS Batch environment and execute pipelines.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Next, attach these policies to an IAM user or IAM role. You may already have your own IAM users or roles defined, in which case you can bind the policies to existing users or roles.&lt;/p&gt; 
-&lt;p&gt;If you are doing this for the first time, follow these steps to create a new IAM user called &lt;code&gt;seqera-user,&lt;/code&gt; and bind the policies created above to that user like this:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;From the AWS console, navigate to the &lt;strong&gt;IAM&lt;/strong&gt;&lt;strong&gt; console&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Under &lt;strong&gt;Users&lt;/strong&gt;, select &lt;strong&gt;Create user&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Give the user a name like &lt;code&gt;seqera-user&lt;/code&gt;&lt;/li&gt; 
- &lt;li&gt;There is no need to provide this IAM user with access to the AWS Management Console&lt;/li&gt; 
- &lt;li&gt;Select &lt;strong&gt;Attach policies directly&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Search for the two customer-managed policies you created earlier by searching on the string Seqera and then select these two policies to apply them to the new IAM user&lt;/li&gt; 
- &lt;li&gt;After attaching the policies, select &lt;strong&gt;Create user&lt;/strong&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;The final step is to create an access key based on the new IAM user that will be used by Seqera:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Under &lt;strong&gt;Access management&lt;/strong&gt;&lt;strong&gt; / &lt;/strong&gt;&lt;strong&gt;Users&lt;/strong&gt;, select &lt;strong&gt;seqera-user&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Record the user’s ARN for future reference&lt;/li&gt; 
- &lt;li&gt;Click on &lt;strong&gt;Create Access key&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Record the &lt;strong&gt;Access key&lt;/strong&gt; and &lt;strong&gt;Secret access key&lt;/strong&gt; and &lt;em&gt;store them in a safe place&lt;/em&gt;. You’ll need these credentials to create a compute environment in the Seqera Platform.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h3&gt;Create a free Seqera Cloud account&lt;/h3&gt; 
-&lt;p&gt;The next step is to create a free Seqera Cloud account. Navigate to &lt;a href="https://seqera.io"&gt;https://seqera.io&lt;/a&gt; and click on &lt;strong&gt;Login / Sign up&lt;/strong&gt;. You can create a free account and sign into the Seqera cloud environment hosted on AWS infrastructure using GitHub or Google credentials – or by providing an email address.&lt;/p&gt; 
-&lt;p&gt;After logging in, you’ll be directed to the Seqera Platform console.&lt;/p&gt; 
-&lt;h3&gt;Setup an AWS Batch Compute Environment in Seqera&lt;/h3&gt; 
-&lt;p&gt;On initial login to the Seqera Platform, you’ll be taken to a community showcase workspace with ready-to-run pipelines and preconfigured AWS compute environments. New users can experiment with community showcase pipelines and Datasets and enjoy up to 100 hours of free AWS cloud credits.&lt;/p&gt; 
-&lt;div id="attachment_3222" style="width: 1095px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3222" loading="lazy" class="size-full wp-image-3222" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.32.39.png" alt="Figure 2: Log in to Seqera Platform to use community showcase pipelines or add your own pipelines." width="1085" height="680"&gt;
- &lt;p id="caption-attachment-3222" class="wp-caption-text"&gt;Figure 2: Log in to Seqera Platform to use community showcase pipelines or add your own pipelines.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;You can also watch a &lt;a href="https://www.youtube.com/watch?v=bZUHuCSKFpA"&gt;short introductory video&lt;/a&gt; that explains how to get started with the Seqera interface.&lt;/p&gt; 
-&lt;p&gt;To add your own compute environments and pipelines, you’ll need to navigate to your personal workspace, as shown in Figure 2. Click on the selector next to &lt;strong&gt;community | showcase&lt;/strong&gt; and select your personal workspace by selecting your name where it appears under &lt;strong&gt;user&lt;/strong&gt;. You can optionally create a new workspace and store your compute environments and pipelines there.&lt;/p&gt; 
-&lt;p&gt;The first time you login, your personal workspace will have no compute environments, datasets, or pipelines. You can create a new AWS Batch Compute Environment (CE) by following these steps:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Select the &lt;strong&gt;Compute Environments&lt;/strong&gt; tab from within your personal workspace&lt;/li&gt; 
- &lt;li&gt;Click on &lt;strong&gt;Add Compute Environment&lt;/strong&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Define a new AWS Batch compute environment, by completing the form, as shown in Figure 3:&lt;/p&gt; 
-&lt;div id="attachment_3223" style="width: 1102px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3223" loading="lazy" class="size-full wp-image-3223" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.33.12.png" alt="Figure 3: Create a new compute environment." width="1092" height="309"&gt;
- &lt;p id="caption-attachment-3223" class="wp-caption-text"&gt;Figure 3: Create a new compute environment.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The first time you add user credentials, you’ll be asked to supply the IAM Access key and Secret access key you generated earlier.&lt;/p&gt; 
-&lt;p&gt;Seqera Platform will store these credentials securely and ask you to assign a name to the credentials for future reference. Your AWS credentials will &lt;u&gt;not&lt;/u&gt; be visible to you, or other users.&lt;/p&gt; 
-&lt;p&gt;Continue filling in the form, as illustrated in Figure 4:&lt;/p&gt; 
-&lt;div id="attachment_3224" style="width: 1036px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3224" loading="lazy" class="size-full wp-image-3224" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.33.49.png" alt="Figure 4: Add credentials to store access keys and tokens for your compute environment." width="1026" height="541"&gt;
- &lt;p id="caption-attachment-3224" class="wp-caption-text"&gt;Figure 4: Add credentials to store access keys and tokens for your compute environment.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Nextflow pipelines running on AWS Batch typically use Amazon S3 storage. Nextflow supports S3 natively, automatically copying data in and out of S3 and making it accessible to containerized bioinformatics tools.&lt;/p&gt; 
-&lt;p&gt;To provide more efficient data handling, we use Seqera’s &lt;a href="https://seqera.io/fusion/"&gt;Fusion file system&lt;/a&gt; (Fusion v2) when setting up the pipeline. Fusion is a virtual, lightweight, distributed filesystem that allows any existing application to access object storage using the standard POSIX interface. Using the Fusion file system is optional but it’s recommended because it reduces the pipeline execution time and your cost by avoiding overhead related to data movement. If you use the Fusion file system, you must also enable &lt;a href="https://seqera.io/wave/"&gt;Wave containers&lt;/a&gt; in the compute environment since the Fusion client is deployed in a Wave container.&lt;/p&gt; 
-&lt;p&gt;You can learn more about Fusion file system in the whitepaper &lt;a href="https://seqera.io/whitepapers/breakthrough-performance-and-cost-efficiency-with-the-new-fusion-file-system/"&gt;Breakthrough performance and cost-efficiency with the new Fusion file system&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Under &lt;strong&gt;Config mode&lt;/strong&gt;, select &lt;strong&gt;Batch Forge&lt;/strong&gt; to have Seqera automatically configure the AWS Batch account on your behalf.&lt;/p&gt; 
-&lt;p&gt;For the provisioning model, select &lt;strong&gt;Spot&lt;/strong&gt;, as shown in Figure 5. Since Nextflow pipeline tasks can tolerate Amazon Elastic Compute Cloud (Amazon EC2) Spot Instances being interrupted, we recommend you use Spot Instances in most cases.&lt;/p&gt; 
-&lt;div id="attachment_3225" style="width: 1082px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3225" loading="lazy" class="size-full wp-image-3225" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.34.17.png" alt="Figure 5: Select Batch Forge for Config mode and Spot for Provisioning model." width="1072" height="256"&gt;
- &lt;p id="caption-attachment-3225" class="wp-caption-text"&gt;Figure 5: Select Batch Forge for Config mode and Spot for Provisioning model.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_3226" style="width: 1068px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3226" loading="lazy" class="size-full wp-image-3226" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.34.49.png" alt="Figure 6: Select default values for the rest of the configuration options." width="1058" height="566"&gt;
- &lt;p id="caption-attachment-3226" class="wp-caption-text"&gt;Figure 6: Select default values for the rest of the configuration options.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Accept the defaults for the remainder of the configuration options, as shown in Figure 6.&lt;/p&gt; 
-&lt;p&gt;Once you’ve provided details of your Batch Compute Environment, click &lt;strong&gt;Add&lt;/strong&gt; to add the CE.&lt;/p&gt; 
-&lt;p&gt;Assuming you have valid AWS credentials and have filled in the form correctly, you should see a new Compute Environment appear in your Seqera workspace.&lt;/p&gt; 
-&lt;p&gt;After creating the Compute Environment in Seqera, you can login into the AWS Console and navigate to AWS Batch. Assuming you selected Spot provisioning, two new AWS Batch CEs – and queues – will have been created on your behalf.&lt;/p&gt; 
-&lt;p&gt;Seqera Forge configures a &lt;em&gt;Head queue&lt;/em&gt; that dispatches Nextflow head jobs to a compute environment configured to use EC2 On-Demand instances. This prevents the Nextflow head job from being interrupted during execution.&lt;/p&gt; 
-&lt;p&gt;A separate &lt;em&gt;Work queue&lt;/em&gt; and Spot-based CE are also automatically configured to support Nextflow compute tasks during pipeline execution.&lt;/p&gt; 
-&lt;p&gt;The names of the queues and compute environments are assigned by Seqera Forge, like in Figure 7:&lt;/p&gt; 
-&lt;div id="attachment_3227" style="width: 1098px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3227" loading="lazy" class="size-full wp-image-3227" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.35.34.png" alt="Figure 7: Assign queues and compute environments with Seqera Forge." width="1088" height="373"&gt;
- &lt;p id="caption-attachment-3227" class="wp-caption-text"&gt;Figure 7: Assign queues and compute environments with Seqera Forge.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Add the ML pipeline to the Launchpad&lt;/h3&gt; 
-&lt;p&gt;Now that we have an AWS Batch CE set up in our Seqera workspace, we can add the ML pipeline to the Seqera Launchpad.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;From your workspace in the Seqera UI, select the &lt;strong&gt;Launchpad&lt;/strong&gt; tab&lt;/li&gt; 
- &lt;li&gt;Click &lt;strong&gt;Add pipeline&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Give the pipeline a name like &lt;code&gt;ML-hyperopt-pipeline&lt;/code&gt;&lt;/li&gt; 
- &lt;li&gt;Select the Compute environment created above&lt;/li&gt; 
- &lt;li&gt;Supply the pipeline’s repository URI – for our machine learning example, use &lt;code&gt;https://github.com/nextflow-io/hyperopt&lt;/code&gt;&lt;/li&gt; 
- &lt;li&gt;Click on the &lt;strong&gt;Revision number&lt;/strong&gt; field, and select the tag or branch name retrieved from the source code manager to select a particular pipeline branch or version. Use &lt;strong&gt;master&lt;/strong&gt; in this example.&lt;/li&gt; 
- &lt;li&gt;Specify the S3 bucket you created earlier as the work directory (e.g. &lt;code&gt;s3://seqera-work-bucket&lt;/code&gt;)&lt;/li&gt; 
- &lt;li&gt;Under &lt;strong&gt;Config profiles&lt;/strong&gt;, select &lt;strong&gt;wave&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Under &lt;strong&gt;Advanced Options&lt;/strong&gt; in the Nextflow config file field, optionally set &lt;code&gt;dag.enabled=true&lt;/code&gt; if you would like Nextflow to generate a DAG (directed acyclic graph) file&lt;/li&gt; 
- &lt;li&gt;Accept the defaults for the rest of the pipeline configuration options&lt;/li&gt; 
- &lt;li&gt;Click &lt;strong&gt;Add&lt;/strong&gt; to add the pipeline to the Launchpad&lt;/li&gt; 
- &lt;li&gt;You should see the new &lt;code&gt;ML-hyperopt-pipeline&lt;/code&gt; appear in the Seqera Launchpad in your workspace&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;div id="attachment_3228" style="width: 1112px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3228" loading="lazy" class="size-full wp-image-3228" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/17/CleanShot-2024-01-17-at-18.37.06.png" alt="Figure 8: Add ML pipeline to Seqera Launchpad." width="1102" height="441"&gt;
- &lt;p id="caption-attachment-3228" class="wp-caption-text"&gt;Figure 8: Add ML pipeline to Seqera Launchpad.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Run the pipeline&lt;/h2&gt; 
-&lt;p&gt;To run the &lt;code&gt;ML-hyperopt-pipeline&lt;/code&gt;, click on &lt;strong&gt;Launch&lt;/strong&gt; beside the &lt;strong&gt;ML-hyperopt-pipeline&lt;/strong&gt; on the Launchpad.&lt;/p&gt; 
-&lt;p&gt;After launching the pipeline, you can monitor execution under the &lt;strong&gt;Runs&lt;/strong&gt; tab. The pipeline will take a few minutes to start the Amazon EC2 instances supporting the AWS Batch CEs and begin dispatching tasks to Batch.&lt;/p&gt; 
-&lt;p&gt;Assuming the pipeline runs successfully, you should see the following output in the &lt;strong&gt;Execution log&lt;/strong&gt; accessible through the Seqera interface.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;N E X T F L O W  ~  version 23.10.0
-Pulling nextflow-io/hyperopt ...
- downloaded from https://github.com/nextflow-io/hyperopt.git
-Launching `https://github.com/nextflow-io/hyperopt` [mighty_koch] DSL2 - revision: eb2b84a91a [master]
-
-    M L - H Y P E R O P T   P I P E L I N E
-    =======================================
-    fetch_dataset   : true
-    dataset_name    : wdbc
-
-    visualize       : true
-
-    train           : true
-    train_data      : data/*.train.txt
-    train_meta      : data/*.meta.json
-    train_models    : [dummy, gb, lr, mlp, rf]
-
-    predict         : true
-    predict_models  : data/*.pkl
-    predict_data    : data/*.predict.txt
-    predict_meta    : data/*.meta.json
-
-    outdir          : results
-    
-Monitor the execution with Nextflow Tower using this URL: https://tower.nf/user/gordon-sissons/watch/5MUVbQjbhEFjRu
-[da/4b6a7f] Submitted process &amp;gt; fetch_dataset (wdbc)
-[c5/78cd5e] Submitted process &amp;gt; split_train_test (wdbc)
-[68/29cb37] Submitted process &amp;gt; train (wdbc/dummy)
-[01/0b89d1] Submitted process &amp;gt; train (wdbc/mlp)
-[37/7e1cc8] Submitted process &amp;gt; train (wdbc/lr)
-[22/8452c6] Submitted process &amp;gt; train (wdbc/rf)
-[6e/763ce3] Submitted process &amp;gt; visualize (1)
-[2a/3f3d84] Submitted process &amp;gt; train (wdbc/gb)
-[5a/1c71a0] Submitted process &amp;gt; visualize (2)
-[cc/7dd9ad] Submitted process &amp;gt; predict (wdbc/dummy)
-[b5/f30153] Submitted process &amp;gt; predict (wdbc/mlp)
-[de/340f09] Submitted process &amp;gt; predict (wdbc/lr)
-[e5/d205ef] Submitted process &amp;gt; predict (wdbc/rf)
-[38/6a6eaf] Submitted process &amp;gt; predict (wdbc/gb)
-The best model for ‘wdbc’ was ‘mlp’, with accuracy = 0.991
-
-Done!
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Note that the pipeline trains each model, runs each model against the dataset, and determines the model with the best predictive accuracy.&lt;/p&gt; 
-&lt;p&gt;If you’ve gotten this far: Congratulations! You’ve successfully set up your first compute environment in Seqera and used AWS Batch to execute a machine learning pipeline.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;For organizations collaborating on large-scale data analysis and ML workloads, Seqera Platform running on AWS can be an excellent solution. You can more easily deploy powerful AWS compute and storage resources at scale, while also reducing your costs through optimized resource usage, and managing spend across projects and teams. You can also leverage best-in-class curated bioinformatics pipelines and modules from &lt;a href="https://nf-co.re"&gt;&lt;em&gt;nf-core&lt;/em&gt;&lt;/a&gt; and other sources.&lt;/p&gt; 
-&lt;p&gt;This can help improve research productivity with a unified view of data, pipelines, and results, while collaborating more effectively with local and remote teams.&lt;/p&gt; 
-&lt;p&gt;We’re excited to know how this works out for you, or if you have other challenges that AWS or Seqera can help you meet. Contact us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; if you want to discuss these with us.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt;</content:encoded>
 					
 		
 		
