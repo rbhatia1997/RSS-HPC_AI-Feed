@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 07 May 2024 20:30:22 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 08 May 2024 17:07:59 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,108 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>AI Decoded: New DaVinci Resolve Tools Bring RTX-Accelerated Renaissance to Editors</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-davinci-resolve/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 08 May 2024 13:00:56 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71464</guid>
+
+					<description><![CDATA[AI tools accelerated by NVIDIA RTX have made it easier than ever to edit and work with video. ]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>AI tools accelerated by <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a> have made it easier than ever to edit and work with video.</p>
+<p>Case in point: Blackmagic Design’s <a href="https://www.blackmagicdesign.com/products/davinciresolve">DaVinci Resolve 19</a> recently added AI features that make video editing workflows more streamlined. These new features — along with all its other AI-powered effects — get a big boost from optimization for NVIDIA RTX PCs and workstations.</p>
+<p>Editors use Blackmagic Design’s DaVinci Resolve — one of the leading nonlinear video editing platforms — to bring their creative vision to life, incorporating visual effects (VFX), color correction, motion graphics and more to their high-resolution footage and audio clips.</p>
+<figure id="attachment_71468" aria-describedby="caption-attachment-71468" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md.jpg"><img fetchpriority="high" decoding="async" class="size-large wp-image-71468" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md-672x313.jpg" alt="" width="672" height="313" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md-672x313.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md-400x186.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md-768x357.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md-842x392.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md-406x189.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md-188x87.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md-1280x596.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/hollywood-md.jpg 1440w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71468" class="wp-caption-text">DaVinci Resolve’s new AI tools accelerated by RTX unlock endless possibilities.</figcaption></figure>
+<p>Resolve includes a large variety of built-in tools. Some are corrective in nature, letting editors match colors from two sets of footage, reframe footage after the fact or remove objects that weren’t meant to be in a shot. Others give editors the power to manipulate footage and audio in new ways, including smooth slow-motion effects and footage upscaling.</p>
+<p>In the past, many of these tools required significant time and effort from users to implement. Resolve now uses AI acceleration to speed up many of these workflows, leaving more time for users to focus on creativity rather than batch processing.</p>
+<p>Even better, the entire app is optimized for <a href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> deep learning inference software to get the best performance from GPU-reliant effects and other features, boosting performance by 2x.</p>
+<h2><b>New in Resolve 19</b></h2>
+<p>The newest release, <a href="https://www.blackmagicdesign.com/products/davinciresolve/whatsnew">DaVinci Resolve 19</a>, adds two new AI features that make video editing more efficient: the IntelliTrack AI point tracker for object tracking, stabilization and audio panning, and UltraNR, which uses AI for spatial noise reduction.</p>
+<p>IntelliTrack AI makes it easy to stabilize footage during the editing process. It can also be used in Resolve’s Fairlight tool to track on-screen subjects, and automatically generate audio panning within a scene by tracking people or objects as they move across 2D and 3D spaces. With AI audio panning to video, editors can quickly pan, or move audio across the stereo field, multiple actors in a scene, controlling their voice positions in the mix environment. All of this can be done by hand, but IntelliTrack’s AI acceleration speeds up the entire process.</p>
+<p><iframe title="How to use IntelliTrack Tracking in DaVinci Resolve 19" width="500" height="281" src="https://www.youtube.com/embed/rXsKkY_Mkb4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>UltraNR is an AI-accelerated denoise mode in Resolve’s spatial noise reduction palette. Editors can use it to dramatically reduce digital noise — undesired fluctuations of color or luminance that obscure detail — from a frame while maintaining image clarity. They can also combine the tool with temporal noise reduction for even more effective denoising in images with motion, where fluctuations can be more noticeable.</p>
+<p><iframe title="DAVINCI RESOLVE 19!! What&#039;s NEW?! You won&#039;t want to miss this!" width="500" height="281" src="https://www.youtube.com/embed/T8ENuSsScDA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Both IntelliTrack and UltraNR get a big boost when running on NVIDIA RTX PCs and workstations. TensorRT lets them run up to 3x faster on a GeForce GTX 4090 laptop vs. the Macbook Pro M3 Max.</p>
+<p>In fact, all DaVinci Resolve AI effects are accelerated on RTX GPUs by NVIDIA TensorRT. The new Resolve update also includes GPU acceleration for Beauty, Edge Detect and Watercolor effects, doubling their performance on NVIDIA GPUs.</p>
+<p>Find out more about DaVinci Resolve 19, and try it yourself for free, at <a href="https://www.blackmagicdesign.com/products/davinciresolve">Blackmagic Design</a>.</p>
+<p>Learn how AI is supercharging creativity, and how to get the most from your own creative process, with <a href="https://www.nvidia.com/en-us/studio/">NVIDIA Studio</a>.</p>
+<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/davinci-resolve-19-ai-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/davinci-resolve-19-ai-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[AI Decoded: New DaVinci Resolve Tools Bring RTX-Accelerated Renaissance to Editors]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA CEO Jensen Huang to Deliver Keynote Ahead of COMPUTEX 2024</title>
+		<link>https://blogs.nvidia.com/blog/huang-computex-keynote-taipei-2024/</link>
+		
+		<dc:creator><![CDATA[Claudia Cook]]></dc:creator>
+		<pubDate>Wed, 08 May 2024 13:00:32 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71477</guid>
+
+					<description><![CDATA[Amid an AI revolution sweeping through trillion-dollar industries worldwide, NVIDIA founder and CEO Jensen Huang will deliver a keynote address ahead of COMPUTEX 2024, in Taipei, outlining what’s next for the AI ecosystem. Slated for June 2 at the National Taiwan University Sports Center, the address kicks off before the COMPUTEX trade show scheduled to		<a class="read-more" href="https://blogs.nvidia.com/blog/huang-computex-keynote-taipei-2024/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Amid an AI revolution sweeping through trillion-dollar industries worldwide, NVIDIA founder and CEO Jensen Huang will deliver a <a href="https://www.nvidia.com/en-us/events/computex/">keynote address</a> ahead of COMPUTEX 2024, in Taipei, outlining what’s next for the AI ecosystem.</p>
+<p>Slated for June 2 at the National Taiwan University Sports Center, the address kicks off before the COMPUTEX trade show scheduled to run from June 3-6 at the Taipei Nangang Exhibition Center.</p>
+<p>The keynote will be livestreamed at 7 p.m. Taiwan time (4 a.m. PT) on Sunday, June 2, with a replay available at NVIDIA.com.</p>
+<p>With over 1,500 exhibitors from 26 countries and an expected crowd of 50,000 attendees, COMPUTEX is one of the world’s premier technology events.</p>
+<p>It has long showcased the vibrant technology ecosystem anchored by Taiwan and has become a launching pad for the cutting-edge systems required to scale AI globally.</p>
+<p>As a leader in AI, NVIDIA continues to nurture and expand the AI ecosystem. Last year, Huang’s keynote and appearances in partner press conferences exemplified NVIDIA’s role in helping advance partners across the technology industry.</p>
+<p>These partners will be out in force this year.</p>
+<p>NVIDIA’s partners, including Acer, ASUS, Asrock Rack, Colorful, GIGABYTE, Ingrasys, Inno3D, Inventec, MSI, Palit, Pegatron, PNY, QCT, Supermicro, Wistron, Wiwynn and Zotac will spotlight new products featuring NVIDIA technology.</p>
+<p>In addition to the exhibition and demonstrations, Marc Hamilton, vice president of solutions architecture and engineering at NVIDIA, will take the stage at the TAITRA forum, a key segment of COMPUTEX dedicated to cutting-edge discussions in technology.</p>
+<p>As part of the “Let’s Talk Generative AI” forum, Hamilton will present his talk, titled “Infra Build Train Go,” on June 5, from 10-10:30 a.m. at the 701 Conference Room, 7F, Taipei Nangang Exhibition Center Hall 2.</p>
+<h2>NVIDIA AI Summit</h2>
+<p>Following the keynote, the <a href="https://www.nvidia.com/en-us/events/ai-summit/">NVIDIA AI Summit</a> on June 5 at the Grand Hilai Taipei will delve into the practical applications of AI in manufacturing, healthcare, research and more.</p>
+<p>The summit will feature over 20 sessions from industry experts and innovators as well as training sessions for developers. Kimberly Powell, vice president of healthcare and life sciences at NVIDIA, will host a special address on how generative AI is advancing the healthcare technology industry.</p>
+<p>Register for the <a href="https://www.nvidia.com/en-us/events/computex/">AI Summit</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/AdobeStock_15780017-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1366"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/AdobeStock_15780017-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA CEO Jensen Huang to Deliver Keynote Ahead of COMPUTEX 2024]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA DGX SuperPOD to Power US Government Generative AI</title>
 		<link>https://blogs.nvidia.com/blog/dgx-superpod-us-government-generative-ai/</link>
 		
@@ -40,6 +142,7 @@
 <p>“The recent executive order on AI encourages federal agencies to reduce barriers for AI adoptions, but agencies often lack the computing environment necessary for experimentation and prototyping,” said Charles Clancy, senior vice president and chief technology officer at MITRE. “Our new Federal AI Sandbox will help level the playing field, making the high-quality compute power needed to train and test custom AI solutions available to any agency.”</p>
 <p>The Federal AI Sandbox will deliver federal agencies the computing gains needed to train large language models and other generative AI tools to develop cutting-edge applications.</p>
 <p>The NVIDIA DGX SuperPOD system powering the sandbox is capable of <a href="https://blogs.nvidia.com/blog/what-is-an-exaflop/">an exaflop</a> of 8-bit AI compute, meaning it performs a quintillion math operation each second to train and deploy custom LLMs and other AI solutions at scale.</p>
+<p>“MITRE’s purchase of a DGX SuperPOD will help turbocharge the U.S. federal government’s development of its AI initiatives,” said Anthony Robbins, vice president of public sector at NVIDIA. “AI has enormous potential to improve government services for citizens and solve big challenges, like transportation and cybersecurity.”</p>
 <p>The supercomputing initiative comes as the White House <a href="https://blogs.nvidia.com/blog/partnership-universities-teach-ai-skills/">recently unveiled plans</a>, which include NVIDIA, for a $110 million partnership to help universities teach AI skills.</p>
 ]]></content:encoded>
 					
@@ -166,10 +269,10 @@
 <h2><b>Developing Better Robot Grip With Isaac Manipulator</b></h2>
 <p>Grasping has been a long sought after robotics skill. So far it’s been time-consuming, expensive to program and difficult to scale. As a result, many repetitive pick-and-place conditions haven’t been seamlessly handled to date by robots.</p>
 <p>Simulation is changing that. Enlisting <a href="https://developer.nvidia.com/isaac/sim">NVIDIA Isaac Sim</a> on the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform, Intrinsic generated <a href="https://www.nvidia.com/en-us/use-cases/synthetic-data/">synthetic data</a> for vacuum grasping using computer-aided design models of sheet metal and suction grippers. This allowed Intrinsic to create a prototype for its customer <a href="https://www.trumpf.com/en_US/products/machines-systems/">Trumpf Machine Tools</a>, a leading maker of industrial machine tools.</p>
-<p><iframe title="Smart Pick-and-Place in NVIDIA Isaac Sim" width="500" height="281" src="https://www.youtube.com/embed/paLR6-hjlT8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Smart Pick-and-Place in NVIDIA Isaac Sim" width="500" height="281" src="https://www.youtube.com/embed/paLR6-hjlT8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>The prototype uses Intrinsic <a href="https://intrinsic.ai/flowstate/">Flowstate</a>, a developer environment for AI-based robotics solutions, for visualizing processes, associated perception and motion planning. With a workflow that includes Isaac Manipulator, one can generate grasp poses and CUDA-accelerated robot motions, which can first be evaluated in simulation with Isaac Sim — a cost-saving step — before deployment in the real world with the Intrinsic platform.</p>
 <p>Under the collaboration, NVIDIA and Intrinsic plan to bring state-of-the-art dexterity and modular AI capabilities for robotic arms, with a robust collection of foundation models and GPU-accelerated libraries to accelerate a greater number of new robotics and automation tasks.</p>
-<p><iframe title="Grasping skill, based on an Nvidia foundation model, used in Intrinsic Flowstate" width="500" height="281" src="https://www.youtube.com/embed/9j9G8yEXI_g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Grasping skill, based on an Nvidia foundation model, used in Intrinsic Flowstate" width="500" height="281" src="https://www.youtube.com/embed/9j9G8yEXI_g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p><i>On Tuesday, May 7, at 11 a.m. CT, NVIDIA Senior Research Scientist Adithya Murali and Intrinsic Chief Science Officer Torsten Kroeger will demonstrate the companies’ work in the session “Automating Smart Pick-and-Place With Intrinsic Flowstate and NVIDIA Isaac Manipulator ” in the Intrinsic booth 2808 at Automate. </i><i>Join  our </i><a href="https://www.nvidia.com/en-us/events/automate-conference/"><i>speaking sessions</i></a><i> at Automate. </i></p>
 ]]></content:encoded>
 					
@@ -232,7 +335,7 @@
 <p>AI-powered digital assistants can enhance healthcare by answering patient questions and supporting clinicians with logistics. Trained on healthcare organization-specific data using RAG, they could connect to relevant internal data sources to synthesize research, surface insights and improve productivity.</p>
 <p>Generative AI startup <a href="https://www.globenewswire.com/news-release/2024/03/18/2848236/0/en/Hippocratic-AI-Announces-Collaboration-with-NVIDIA-to-Develop-Super-Low-Latency-Empathy-Inference-for-One-of-the-World-s-First-Generative-AI-Powered-Healthcare-Agents.html" target="_blank" rel="noopener">Hippocratic AI</a> is in the final stages of testing AI-powered healthcare agents that focus on a wide range of tasks including wellness coaching, preoperative outreach and post-discharge follow-up.</p>
 <p>The company, which uses NVIDIA GPUs through AWS, is adopting NVIDIA NIM and <a href="https://developer.nvidia.com/ace">NVIDIA ACE</a> microservices to power a generative AI agent for digital health.</p>
-<p><iframe title="Always Available, Real-Time Generative AI Healthcare Agents" width="500" height="281" src="https://www.youtube.com/embed/yg0m8eR7k24?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Always Available, Real-Time Generative AI Healthcare Agents" width="500" height="281" src="https://www.youtube.com/embed/yg0m8eR7k24?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>The team used <a href="https://www.nvidia.com/en-us/ai-data-science/audio2face/">NVIDIA Audio2Face</a> facial animation technology, <a href="https://www.nvidia.com/en-us/ai-data-science/products/riva/">NVIDIA Riva</a> automatic speech recognition and text-to-speech capabilities, and more to power a healthcare assistant avatar’s conversation.</p>
 <p>Experiment with <a href="https://build.nvidia.com/explore/healthcare">NVIDIA NIMs for healthcare</a> and get started with <a href="https://aws.amazon.com/nvidia/hcls/" target="_blank" rel="noopener">NVIDIA Clara on AWS</a>.</p>
 <p><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>Subscribe to NVIDIA healthcare news</i></a><i>. </i></p>
@@ -835,7 +938,7 @@
 			</media:content>
 			</item>
 		<item>
-		<title>How Virtual Factories Are Making Industrial Digitalization a Reality</title>
+		<title>What Is a Virtual Factory, and How They’re Making Industrial Digitalization a Reality</title>
 		<link>https://blogs.nvidia.com/blog/virtual-factories-industrial-digitalization/</link>
 		
 		<dc:creator><![CDATA[James McKenna]]></dc:creator>
@@ -849,13 +952,13 @@
 		<category><![CDATA[Simulation and Design]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71266</guid>
 
-					<description><![CDATA[To address the shift to electric vehicles, increased semiconductor demand, manufacturing onshoring, and ambitions for greater sustainability, manufacturers are investing in new factory developments and re-engineering their existing facilities. These projects often run over budget and schedule, due to complex and manual planning processes, legacy technology infrastructure, and disconnected tools, data and teams. To address		<a class="read-more" href="https://blogs.nvidia.com/blog/virtual-factories-industrial-digitalization/">
+					<description><![CDATA[To address the shift to electric vehicles, increased semiconductor demand, manufacturing onshoring, and ambitions for greater sustainability, manufacturers are investing in new factory developments and re-engineering their existing facilities. These projects often run over budget and schedule, due to complex and manual planning processes, legacy technology infrastructure, and disconnected tools, data and teams. Virtual factories		<a class="read-more" href="https://blogs.nvidia.com/blog/virtual-factories-industrial-digitalization/">
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>To address the shift to electric vehicles, increased semiconductor demand, manufacturing onshoring, and ambitions for greater sustainability, manufacturers are investing in new factory developments and re-engineering their existing facilities.</p>
 <p>These projects often run over budget and schedule, due to complex and manual planning processes, legacy technology infrastructure, and disconnected tools, data and teams.</p>
-<p>To address these challenges, manufacturers are embracing digitalization and virtual factories, powered by technologies like <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/">digital twins,</a> the <a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a><a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/"> ecosystem</a> and <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, that enable new possibilities from planning to operations.</p>
+<p>Virtual factories and digitalization address these challenges, and manufacturers are embracing them. A virtual factory, powered by technologies like <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/">digital twins, the </a><a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a><a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/"> ecosystem</a> and <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, can enable new possibilities, from planning to operations.</p>
 <h2>What Is a Virtual Factory?</h2>
 <p>A virtual factory is a physically accurate representation of a real factory. These digital twins of factories allow manufacturers to model, simulate, analyze and optimize their production processes, resources and operations without the need for a physical prototype or pilot plant.</p>
 <h2>Benefits of Virtual Factories</h2>
@@ -906,7 +1009,7 @@
 			width="842"
 			height="450"
 			/>
-			<media:title type="html"><![CDATA[How Virtual Factories Are Making Industrial Digitalization a Reality]]></media:title>
+			<media:title type="html"><![CDATA[What Is a Virtual Factory, and How They’re Making Industrial Digitalization a Reality]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
@@ -1077,132 +1180,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Rays Up: Decoding AI-Powered DLSS 3.5 Ray Reconstruction]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Small and Mighty: NVIDIA Accelerates Microsoft’s Open Phi-3 Mini Language Models</title>
-		<link>https://blogs.nvidia.com/blog/microsoft-open-phi-3-mini-language-models/</link>
-		
-		<dc:creator><![CDATA[Ankit Patel]]></dc:creator>
-		<pubDate>Tue, 23 Apr 2024 17:08:23 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71258</guid>
-
-					<description><![CDATA[NVIDIA announced today its acceleration of Microsoft’s new Phi-3 Mini open language model with NVIDIA TensorRT-LLM, an open-source library for optimizing large language model inference when running on NVIDIA GPUs from PC to Cloud. Phi-3 Mini packs the capability of 10x larger models and is licensed for both research and broad commercial usage, advancing Phi-2		<a class="read-more" href="https://blogs.nvidia.com/blog/microsoft-open-phi-3-mini-language-models/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA announced today its acceleration of Microsoft’s new Phi-3 Mini open language model with <a href="https://github.com/NVIDIA/TensorRT-LLM/tree/main">NVIDIA TensorRT-LLM</a>, an open-source library for optimizing large language model inference when running on NVIDIA GPUs from PC to Cloud.</p>
-<p>Phi-3 Mini packs the capability of 10x larger models and is licensed for both research and broad commercial usage, advancing Phi-2 from its research-only roots. Workstations with NVIDIA RTX GPUs or PCs with <a href="https://www.nvidia.com/en-us/geforce/buy/">GeForce RTX GPUs</a> have the performance to run the model locally using Windows DirectML with <a href="http://aka.ms/phi3-optimizations">ONNX Runtime</a> or TensorRT-LLM.</p>
-<p>The model has 3.8 billion parameters and was trained on 3.3 trillion tokens in only seven days on 512 NVIDIA H100 Tensor Core GPUs.</p>
-<p>Phi-3 Mini has two variants, with one supporting 4k tokens and the other supporting 128K tokens and that is the first model in its class for very long contexts. This allows developers to use 128,000 tokens — the atomic parts of language that the model processes — when asking the model a question, which results in more relevant responses from the model.</p>
-<p>Developers can try Phi-3 Mini with the 128K context window at <a href="http://ai.nvidia.com">ai.nvidia.com</a>, where it is packaged as an NVIDIA NIM, a microservice with a standard application programming interface that can be deployed anywhere.</p>
-<h2><b>Creating Efficiency for the Edge </b></h2>
-<p>Developers working on autonomous robotics and embedded devices can learn to create and deploy generative AI through community-driven tutorials, like on <a href="https://www.jetson-ai-lab.com/">Jetson AI Lab</a>, and deploy Phi-3 on <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/">NVIDIA Jetson</a>.</p>
-<p>With only 3.8 billion parameters, the Phi-3 Mini model is compact enough to run efficiently on edge devices. Parameters are like knobs, in memory, that have been precisely tuned during the model training process so that the model can respond with high accuracy to input prompts.</p>
-<p>Phi-3 can assist in cost- and resource-constrained use cases, especially for simpler tasks. The model can outperform some larger models on key language benchmarks while delivering results within latency requirements.</p>
-<p>TensorRT-LLM will support Phi-3 Mini’s long context window and uses many optimizations and kernels such as <a href="https://arxiv.org/html/2402.13753v1#S1">LongRoPE</a>, FP8 and inflight batching, which improve inference throughput and latency. The TensorRT-LLM implementations will soon be available in the examples folder on <a href="https://github.com/NVIDIA/TensorRT-LLM/tree/main/examples">GitHub</a>. There, developers can convert to the TensorRT-LLM checkpoint format, which is optimized for inference and can be easily deployed with <a href="https://github.com/triton-inference-server/server">NVIDIA Triton Inference Server</a>.</p>
-<h2><b>Developing Open Systems</b></h2>
-<p>NVIDIA is an active contributor to the open-source ecosystem and has released over 500 projects under open-source licenses.</p>
-<p>Contributing to many external projects such as JAX, Kubernetes, OpenUSD, PyTorch and the Linux kernel, NVIDIA supports a wide variety of open-source foundations and standards bodies as well.</p>
-<p>Today’s news expands on long-standing NVIDIA collaborations with Microsoft, which have paved the way for innovations including accelerating <a href="https://onnxruntime.ai/blogs">DirectML</a>, Azure cloud, generative AI research, and healthcare and life sciences.</p>
-<p><a href="https://nvidianews.nvidia.com/news/microsoft-nvidia-generative-ai-enterprises"><i>Learn more</i></a><i> about our recent collaboration. </i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/partner-blog-microsoft-promo-1260x680-1.png"
-			type="image/png"
-			width="1260"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/partner-blog-microsoft-promo-1260x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Small and Mighty: NVIDIA Accelerates Microsoft’s Open Phi-3 Mini Language Models]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Climate Tech Startups Integrate NVIDIA AI for Sustainability Applications</title>
-		<link>https://blogs.nvidia.com/blog/earth-day-2024-climate-tech-ai-startups/</link>
-		
-		<dc:creator><![CDATA[Tenika Versey Walker]]></dc:creator>
-		<pubDate>Mon, 22 Apr 2024 15:00:12 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Agriculture and Food]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Climate]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[Science]]></category>
-		<category><![CDATA[Scientific Visualization]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71220</guid>
-
-					<description><![CDATA[Whether they’re monitoring miniscule insects or delivering insights from satellites in space, NVIDIA-accelerated startups are making every day Earth Day. Sustainable Futures, an initiative within the NVIDIA Inception program for cutting-edge startups, is supporting 750+ companies globally focused on agriculture, carbon capture, clean energy, climate and weather, environmental analysis, green computing, sustainable infrastructure and waste		<a class="read-more" href="https://blogs.nvidia.com/blog/earth-day-2024-climate-tech-ai-startups/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Whether they’re monitoring miniscule insects or delivering insights from satellites in space, NVIDIA-accelerated startups are making every day Earth Day.</p>
-<p>Sustainable Futures, an initiative within the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33">NVIDIA Inception</a> program for cutting-edge startups, is supporting 750+ companies globally focused on agriculture, carbon capture, clean energy, climate and weather, environmental analysis, green computing, sustainable infrastructure and waste management.</p>
-<p>This Earth Day, discover how five of these sustainability-focused startups are advancing their work with accelerated computing and the <a href="https://www.nvidia.com/en-us/high-performance-computing/earth-2/">NVIDIA Earth-2</a> platform for climate tech.</p>
-<p>Earth-2 features a suite of AI models that help simulate, visualize and deliver actionable insights about weather and climate.</p>
-<h2><b>Insect Farming Catches the AI Bug</b></h2>
-<figure id="attachment_71240" aria-describedby="caption-attachment-71240" style="width: 400px" class="wp-caption alignright"><img loading="lazy" decoding="async" class="wp-image-71240 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-400x400.png" alt="" width="400" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-400x400.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-500x500.png 500w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-150x150.png 150w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-768x768.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-450x450.png 450w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-215x215.png 215w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2-100x100.png 100w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Bug-Mars-2.png 1024w" sizes="(max-width: 400px) 100vw, 400px" /><figcaption id="caption-attachment-71240" class="wp-caption-text">Image courtesy of Bug Mars</figcaption></figure>
-<p>Amid a changing climate, a key component of environmental resilience is food security: the ability to produce and provide enough food to meet the nutrition needs of all people. Edible insects, such as crickets and black soldier flies, are one solution that could reduce humans’ reliance on resource-intensive livestock farming for protein.</p>
-<p><a href="https://bugmars.com/" target="_blank" rel="noopener">Bug Mars</a>, a startup based in Ontario, Canada, supports insect protein production with AI tools that monitor variables including temperature, pests and number of insects — and predict issues and recommend actions based on that data. It can help insect farmers increase yield by 30%.</p>
-<p>The company uses <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson Orin Nano</a> modules to accelerate its work, and <a href="https://www.linkedin.com/feed/update/urn:li:activity:7178512288889368577/" target="_blank" rel="noopener">recently announced</a> it’s using synthetic data and digital twin technology to further advance its AI solutions for insect agriculture.</p>
-<h2><b>Seeing the Forest for the Trees</b></h2>
-<p>Based in Truckee, Calif., <a href="https://www.vibrantplanet.net" target="_blank" rel="noopener">Vibrant Planet</a> is modeling trillions of trees and other flammable vegetation such as shrublands and grasslands to help land managers, counties and fire districts across North America build wildfire and climate resilience.</p>
-<p>NVIDIA hardware and software has helped Vibrant Planet develop <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/">transformer models</a> for forest and ecosystem management and AI-enhanced operational planning.</p>
-<figure id="attachment_71231" aria-describedby="caption-attachment-71231" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71231" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-672x311.jpg" alt="Visualization of forest" width="672" height="311" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-672x311.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-400x185.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-768x356.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-1536x712.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-842x390.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-406x188.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-188x87.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1-1280x593.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Vibrant-Planet-1.jpg 1849w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71231" class="wp-caption-text">Visualization courtesy of Vibrant Planet</figcaption></figure>
-<p>The startup collects and analyzes data from lidar sensors, satellites and aircraft to train AI models that can map vegetation with high precision, estimate canopy height and detect characteristics of forest and vegetation areas such as carbon, water, biodiversity and built infrastructure. Customers can use this data to understand fire and drought hazards, and, with these insights, conduct scenario planning to forecast the effects of potential forest thinning, prescribed fire or other actions.</p>
-<h2><b>Delivering Tomorrow’s Forecast</b></h2>
-<p><a href="http://tomorrow.io/" target="_blank" rel="noopener">Tomorrow.io</a>, based in Boston, is a leading resilience platform that helps organizations adapt to increasing weather and climate volatility. Powered by next-generation space technology, advanced AI models and proprietary modeling capabilities, the startup enables businesses and governments to proactively mitigate risk, ensure operational resilience and drive critical decision-making.</p>
-<figure id="attachment_71234" aria-describedby="caption-attachment-71234" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71234" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-672x420.jpg" alt="screen capture of tomorrow.io dashboard" width="672" height="420" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-672x420.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-400x250.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-720x450.jpg 720w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-344x215.jpg 344w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard-160x100.jpg 160w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Resilience-Dashboard.jpg 768w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71234" class="wp-caption-text">Image courtesy of Tomorrow.io</figcaption></figure>
-<p>The startup is developing weather forecasting AI and is launching its own satellites to collect environmental data to further train its models. It’s also conducting experiments using Earth-2 AI forecast models to determine the optimal configurations of satellites to improve weather-forecasting conditions.</p>
-<p>One of Tomorrow.io’s projects is an initiative in Kenya with the Bill and Melinda Gates Foundation that provides daily alerts to 6 million farmers with insights around when to water their crops, when to spray pesticides, when to harvest or when to change crops altogether due to changes in the local climate. The team hopes to scale up their user base to 100 million farmers in Africa by 2030.</p>
-<h2><b>Winds of Change</b></h2>
-<p>Palo Alto, Calif.-based <a href="https://windbornesystems.com" target="_blank" rel="noopener">WindBorne Systems</a> is developing weather-sensing balloons equipped with WeatherMesh, a state-of-the-art AI model for real-time global weather forecasts.</p>
-<figure id="attachment_71237" aria-describedby="caption-attachment-71237" style="width: 550px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-71237" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-653x500.jpg" alt="weather balloon against landscape" width="550" height="421" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-653x500.jpg 653w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-400x306.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-768x588.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-1536x1176.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-588x450.jpg 588w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-281x215.jpg 281w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-131x100.jpg 131w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Windborne-1-1280x980.jpg 1280w" sizes="(max-width: 550px) 100vw, 550px" /><figcaption id="caption-attachment-71237" class="wp-caption-text">Image courtesy of WindBorne Systems</figcaption></figure>
-<p>WeatherMesh predicts factors including surface temperature, pressure, winds, precipitation and radiation. The model has <a href="https://windbornesystems.com/blog/most-accurate-global-weather-forecasts-with-new-ai-forecast-offering" target="_blank" rel="noopener">set world records for accuracy</a> and is lightweight enough to run on a gaming laptop, unlike traditional models that run on supercomputers.</p>
-<p>WindBorne uses NVIDIA GPUs to develop its AI and is an early-access user of Earth-2. The company’s weather balloon development is funded in part by the <a href="https://wpo.noaa.gov/windborne-weather-balloon-reaches-new-heights/" target="_blank" rel="noopener">National Oceanic and Atmospheric Administration’s Weather Program Office</a>.</p>
-<h2><b>Taking the Temperature of Global Cities</b></h2>
-<p><a href="https://www.fortyguard.com/" target="_blank" rel="noopener">FortyGuard</a>, a startup founded in Abu Dhabi with headquarters in Miami, is developing a system to measure urban heat with AI models that present insights for public health officials, city planners, landscape architects and environmental engineers.</p>
-<figure id="attachment_71243" aria-describedby="caption-attachment-71243" style="width: 400px" class="wp-caption alignleft"><img loading="lazy" decoding="async" class="size-medium wp-image-71243" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-400x300.jpg" alt="" width="400" height="300" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-400x300.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-667x500.jpg 667w, https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-768x576.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-1536x1152.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-600x450.jpg 600w, https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-287x215.jpg 287w, https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-133x100.jpg 133w, https://blogs.nvidia.com/wp-content/uploads/2024/04/FortyGuard-NVIDIA-GTC-Picture-1280x960.jpg 1280w" sizes="(max-width: 400px) 100vw, 400px" /><figcaption id="caption-attachment-71243" class="wp-caption-text">FortyGuard presented in the Expo Hall Theater at NVIDIA GTC.</figcaption></figure>
-<p>The company — an early-access user of the Earth-2 platform — aims for its temperature AI models to provide a more granular view into urban heat dynamics, providing data that can help industries and governments shape cooler and more livable cities.</p>
-<p>FortyGuard’s technology, offered via application programming interfaces, could integrate with existing enterprise platforms to enable use cases including temperature-based route navigation, predictive enhanced EV performance and property insights.</p>
-<p><i></i><i>To learn more about the Sustainable Futures program, watch the “</i><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-se62606/"><i>AI Nations and Sustainable Futures Day</i></a><i>” session from </i><a href="https://www.nvidia.com/gtc/"><i>NVIDIA GTC</i></a><i>. </i></p>
-<p><i>NVIDIA is a member of the <a href="https://www.state.gov/coalition-for-climate-entrepreneurship-cce/" target="_blank" rel="noopener">U.S. Department of State’s Coalition for Climate Entrepreneurship</a>, which aims to address the United Nations’ Sustainable Development Goals using emerging technologies. Learn more in the GTC session, “</i><a href="https://www.nvidia.com/gtc/session-catalog/?search=tenika&amp;search=tenika%2C+tenika&amp;tab.allsessions=1700692987788001F1cG#/session/1696445353484001C0A2"><i>Global Strategies: Startups, Venture Capital, and Climate Change Solutions</i></a><i>.”</i></p>
-<p><em>Video at top courtesy of Vibrant Planet.</em></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/forest-still_Vibrant-Planet.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="845"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/forest-still_Vibrant-Planet-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Climate Tech Startups Integrate NVIDIA AI for Sustainability Applications]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
