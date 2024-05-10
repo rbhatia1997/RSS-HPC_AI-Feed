@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 09 May 2024 21:57:31 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 10 May 2024 14:10:52 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -742,7 +742,7 @@
 <h2> <b>Finding Lost Items With Robot Assistance</b></h2>
 <p>Winner Tao, based in Ontario, Canada, created a robot to lessen the burden of searching for things lost around the house. His <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.hackster.io%2Fceyeber%2Fan-eye-for-an-item-9162a7&amp;data=05%7C02%7Cscmartin%40nvidia.com%7C0e398a0434c949e581b508dc65b1f664%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638497062235862516%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=FiIs8uLHjF8szFOvOs5F1vHFD3ax0fKBEnLyL3kS9aQ%3D&amp;reserved=0">An Eye for an Item</a> project took top honors at the Hackster challenge.</p>
 <p>“Finding lost objects is a chore, and recent developments in zero-shot object detection and LLMs make it feasible for a computer to detect arbitrary objects for us based on textual or pictorial descriptions, presenting an opportunity for automation,” said Tao.</p>
-<p><iframe loading="lazy" title="Teleop Drive Test" width="500" height="281" src="https://www.youtube.com/embed/dx87BFX5nA8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="An Eye for an Item  - Demo" width="500" height="281" src="https://www.youtube.com/embed/KAUH67vni74?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>Tao said he needed robot computing capabilities to catalog objects in any unstructured environment — whether a living room or large warehouse. And he needed it to also perform real-time calculations for localization to help with navigation, as well as running inference on larger object detection models.</p>
 <p>“Jetson Orin was a perfect fit, supporting all functionality from text and image queries into <a href="https://www.jetson-ai-lab.com/tutorial_nanodb.html">NanoDB</a>, to real-time odometry feedback, including leveraging <a href="https://developer.nvidia.com/isaac/ros">Isaac ROS</a>’ hardware-accelerated AprilTag detections for drift correction,” he said.</p>
 <p>Other <a href="https://www.hackster.io/contests/SparkFun-NVIDIA-AI-Innovation-Challenge">winners</a> of the AI Innovation Challenge include:</p>
