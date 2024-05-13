@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 07 May 2024 13:57:48 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 13 May 2024 05:55:13 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,58 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Announcing the High Performance Software Foundation (HPSF)</title>
+		<link>https://aws.amazon.com/blogs/hpc/announcing-the-high-performance-software-foundation/</link>
+		
+		<dc:creator><![CDATA[Brendan Bouffler]]></dc:creator>
+		<pubDate>Mon, 13 May 2024 05:55:13 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[Sustainability]]></category>
+		<guid isPermaLink="false">e91b47faf0b755001ca4998fd17206fcbdaf12f6</guid>
+
+					<description>We're excited to share how we’re involved in launching the High Performance Software Foundation to increase access to and adoption of HPC. By bringing together key players to collaborate, we can lower barriers and accelerate development of portable HPC software stacks.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="size-full wp-image-3644 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/09/AdobeStock_144582125-resized.png" alt="Announcing the High Performance Software Foundation" width="380" height="253"&gt;&lt;/em&gt;In high performance computing (HPC), where speed and efficiency are paramount, open-source software provides the load-bearing, structural support. Our community has long recognized the immense potential of collaborative development, sharing of resources, and the power of community-driven innovation.&lt;/p&gt; 
+&lt;p&gt;So we’re excited to announce that we’re a Premier founding member of the new &lt;strong&gt;High Performance Software Foundation&lt;/strong&gt; (HPSF). The HPSF was launched today in Hamburg at &lt;a href="https://www.isc-hpc.com/"&gt;ISC’24&lt;/a&gt;, by the Linux Foundation, the nonprofit organization that enables mass innovation through open-source. The HPSF has strong support across the HPC landscape.&lt;/p&gt; 
+&lt;p&gt;Through a series of technical projects, the HPSF aims to build, promote, and advance a portable core software stack for HPC to increase adoption by lowering barriers to contribution, supporting open-source development efforts, and making HPC more accessible to all of us. We’ve seen from our work with RIKEN to &lt;a href="https://aws.amazon.com/blogs/publicsector/why-fugaku-japans-fastest-supercomputer-went-virtual-on-aws/"&gt;extend Fugaku to the cloud&lt;/a&gt;&amp;nbsp;how impactful this can be.&lt;/p&gt; 
+&lt;p&gt;Recent years have seen extraordinary demand for HPC across domains which are critical to all of us, from climate modeling and genomics to drug-discovery and engineering design. With the emergence of machine learning and AI, there’s never been a more important task than to reinforce the structures which have made all of this possible.&lt;/p&gt; 
+&lt;h2&gt;How can HPSF help?&lt;/h2&gt; 
+&lt;p&gt;The HPSF aims to make life easier for HPC developers through a number of focused initiatives, including:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Continuous Integration (CI) resources tailored for HPC projects&lt;/li&gt; 
+ &lt;li&gt;Continuously built, turnkey software stacks&lt;/li&gt; 
+ &lt;li&gt;Architecture support&lt;/li&gt; 
+ &lt;li&gt;Performance regression testing and benchmarking&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;AWS has been supporting many of these efforts for the &lt;a href="https://spack.io/"&gt;Spack&lt;/a&gt; community since 2021, leading to the launch of the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-the-spack-rolling-binary-cache/"&gt;Spack Rolling Binary Cache&lt;/a&gt; two years ago. We’ve all learned a lot from this relationship, which we hope the wider HPC open-source community will be able to benefit from, through the foundation.&lt;/p&gt; 
+&lt;h2&gt;First steps&lt;/h2&gt; 
+&lt;p&gt;One of HPSF’s first jobs is to set up the technical advisory committee (TAC) which will manage working groups tackling a variety of HPC topics. Drawing from member organizations and community participants, the TAC will follow a governance model based on the &lt;a href="https://www.cncf.io/"&gt;Cloud Native Computing Foundation&lt;/a&gt; (CNCF).&lt;/p&gt; 
+&lt;p&gt;The HPSF launches today with the following technical projects:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Spack&lt;/strong&gt;: the HPC package manager&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Kokkos&lt;/strong&gt;: a performance-portable programming model for writing modern C++ applications in a hardware-agnostic way&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Viskores (formerly VTK-m)&lt;/strong&gt;: a toolkit of scientific visualization algorithms for accelerator architectures&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;HPCToolkit&lt;/strong&gt;: performance measurement and analysis tools for computers ranging from laptops to GPU-accelerated supercomputers.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Apptainer&lt;/strong&gt;: Formerly known as Singularity, Apptainer is a Linux Foundation project providing a high performance, full featured HPC and computing optimized container subsystem&lt;/li&gt; 
+ &lt;li&gt;&lt;b&gt;E4S: &lt;/b&gt;a curated, hardened distribution of scientific software packages.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2&gt;Getting involved&lt;/h2&gt; 
+&lt;p&gt;The HPSF welcomes organizations from across the HPC community to become involved and help drive innovation in open-source HPC solutions.&lt;/p&gt; 
+&lt;p&gt;To learn more about the HPSF, to contribute, or to become a member, you can visit the &lt;a href="https://hpsf.io/"&gt;HPSF website&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;The HPSF’s commitment to supporting and nurturing these vital software packages will enable the HPC community to have access to the tools and resources necessary to push the boundaries of scientific discovery. We’re thrilled to be part of it.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Best practices for running molecular dynamics simulations on AWS Graviton3E</title>
 		<link>https://aws.amazon.com/blogs/hpc/best-practices-for-running-molecular-dynamics-simulations-on-aws-graviton3e/</link>
 		
@@ -42,7 +94,7 @@
 &lt;p&gt;Key to the architecture is AWS ParallelCluster. Customers can install the ParallelCluster CLI on their laptops using Python’s pip package manager, and use it to deploy a cluster in the cloud from their laptops by supplying a short configuration file.&lt;/p&gt; 
 &lt;p&gt;Through the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/pcui-using-v3.html"&gt;ParallelCluster UI&lt;/a&gt;, you can use a wizard to configure a cluster without editing a configuration file or installing anything on your laptop. Details on how to set up a ParallelCluster environment can be found in &lt;a href="https://www.hpcworkshops.com/01-hpc-overview.html"&gt;this workshop&lt;/a&gt;. You can also find a &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/try_hpc7g"&gt;one-click launchable stack&lt;/a&gt; in the HPC Recipe Library (on GitHub), which will build an Hpc7g cluster for you after asking a minimum of questions.&lt;/p&gt; 
 &lt;div id="attachment_3496" style="width: 831px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3496" class="size-full wp-image-3496" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.40.13.png" alt=" Figure 1: Architecture using AWS ParallelCluster to run MD workloads with AWS Graviton 3E instances. " width="821" height="378"&gt;
+ &lt;img aria-describedby="caption-attachment-3496" loading="lazy" class="size-full wp-image-3496" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.40.13.png" alt=" Figure 1: Architecture using AWS ParallelCluster to run MD workloads with AWS Graviton 3E instances. " width="821" height="378"&gt;
  &lt;p id="caption-attachment-3496" class="wp-caption-text"&gt;&lt;br&gt;Figure 1: Architecture using AWS ParallelCluster to run MD workloads with AWS Graviton 3E instances.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;ParallelCluster uses Slurm for its job scheduler, to dynamically scale the number of Hpc7g.16xlarge compute instances, responding to the queue.&lt;/p&gt; 
@@ -2240,107 +2292,6 @@ if Cost &amp;lt;= Budget:
 &lt;p&gt;&lt;strong&gt;It allows administrators to manually update budgets and core limits&lt;/strong&gt; according to the business needs. Admins can modify budgets limits in simple config files. The changes get picked up by automated cron tasks.&lt;/p&gt; 
 &lt;p&gt;&lt;strong&gt;Historical budgets and calculated core-limits are recorded in a CSV file&lt;/strong&gt;, which makes further analysis possible using Amazon QuickSight or a spreadsheet. This is useful for annual budget reviews, justifying more investments, spotting trends, and making forecasts.&lt;/p&gt; 
 &lt;p&gt;&lt;strong&gt;HPC jobs breaching the limits are kept in pending status until more cores are freed up or job condition changes. &lt;/strong&gt;In addition, the scheduler provides the information about job pending reasons when core limits are reached, helping users better understand and manage their own budgets.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Accelerating molecule discovery with computational chemistry and Promethium on AWS</title>
-		<link>https://aws.amazon.com/blogs/hpc/accelerating-molecule-discovery-with-computational-chemistry-and-promethium-on-aws/</link>
-		
-		<dc:creator><![CDATA[Christoph Siegert]]></dc:creator>
-		<pubDate>Tue, 30 Jan 2024 13:06:40 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Life Sciences]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">c43bf42043ce54aab45c523d478b4877bab0956a</guid>
-
-					<description>Interested in performing high-accuracy computational chemistry simulations faster? Check out this new post about Promethium, a solution from QC Ware that leverages AWS to accelerate simulations by up to 100x.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Perminder Singh Quantum Solution Architect, ISV, and Satish Gandhi, partner development manager ISV at AWS; and Christoph Siegert, SVP Product at QC Ware&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Computational chemistry for small molecule discovery remains one of the major opportunities across many high impact industries, such as pharmaceuticals and chemicals, as highlighted by &lt;a href="https://www.nature.com/articles/d41573-022-00025-1"&gt;Nature&lt;/a&gt;, &lt;a href="https://www.bcg.com/publications/2022/ai-in-drug-discovery-impact"&gt;BCG&lt;/a&gt;, and &lt;a href="https://www.mckinsey.com/industries/life-sciences/our-insights/pharmas-digital-rx-quantum-computing-in-drug-research-and-development"&gt;McKinsey&lt;/a&gt;. Many of the world’s largest problems are chemistry problems at their core.&lt;/p&gt; 
-&lt;p&gt;For example, creating new catalysts is a high-impact chemistry problem that will benefit from accelerated molecular simulations. Discoveries in creating new catalysts could lower the gas requirements in the ammonia production process, which uses about 3% of &lt;a href="https://youtu.be/RfvL_423a-I?t=6553"&gt;global gas consumption&lt;/a&gt;. Another example is potentially shortening the drug development timeline, which currently can take 5 or more years. &lt;a href="https://www.bcg.com/publications/2023/enterprise-grade-quantum-computing-almost-ready"&gt;BCG estimates&lt;/a&gt; that molecular simulations could create a $60-130 billion value across pharma and chemistry alone.&lt;/p&gt; 
-&lt;p&gt;However, in computational chemistry, researchers typically &lt;a href="https://onlinelibrary.wiley.com/doi/10.1002/qua.26381"&gt;have to make a tradeoff&lt;/a&gt; between speed and accuracy. QC Ware saw an opportunity to deliver both speed &lt;em&gt;and&lt;/em&gt; accuracy. They developed a new computational chemistry solution called Promethium that leverages &lt;a href="https://aws.amazon.com/ec2/"&gt;Amazon Elastic Compute Cloud (Amazon EC2)&lt;/a&gt; GPU instances. Promethium performs up to 100 times faster than traditional high accuracy solutions. In this post, we’ll dive into Promethium and explain how it achieves this.&lt;/p&gt; 
-&lt;h2&gt;Computational chemistry capabilities&lt;/h2&gt; 
-&lt;p&gt;Promethium is a density-functional theory (DFT) computational chemistry solution. Density-functional theory is a highly accurate computational quantum chemistry method that &lt;em&gt;doesn’t require training data,&lt;/em&gt; making it immediately applicable across industries:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Pharma:&lt;/strong&gt; small molecule drugs, covalent inhibitors, protein-ligand binding, and PROTACs&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Agriculture:&lt;/strong&gt; pesticides, fertilizers, ammonia&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Energy:&lt;/strong&gt; oil &amp;amp; gas catalysts, reforming, battery materials&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Electronics:&lt;/strong&gt; organic light emitting diodes (OLEDs), organic electronics&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Chemicals: &lt;/strong&gt;polymers, polyurethane, catalysts, and beyond&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Automotive / Aerospace: &lt;/strong&gt;catalysts, new materials, polymers&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Environmental: &lt;/strong&gt;water treatment, air purification&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;However, the high accuracy provided by DFT comes at a price. It requires a high computational power, which limits the throughput, size, and complexity of simulated molecules. Promethium improves processing speed by using GPUs, specialized GPU software, and the scalability of AWS cloud. When using Promethium, computational chemists get highly accurate results, quickly.&lt;/p&gt; 
-&lt;p&gt;Promethium delivers significant speedups over current best-in-class DFT software. The following chart shows how many single point energy calculations can be run on Amazon EC2 instances with various DFT solutions.&lt;/p&gt; 
-&lt;div id="attachment_3246" style="width: 1135px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3246" loading="lazy" class="size-full wp-image-3246" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.31.59.png" alt="Figure 1: Chart comparing single instance 24-hour simulation performance across solutions." width="1125" height="515"&gt;
- &lt;p id="caption-attachment-3246" class="wp-caption-text"&gt;Figure 1: Chart comparing single instance 24-hour simulation performance across solutions.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;This chart shows the number of molecules (Λ-FL172 organoruthenium complex) that can be simulated with DFT in 24hrs for each compute node across various commercial and open-source solutions.&lt;/p&gt; 
-&lt;p&gt;The computational requirement also impacts the size and complexity of molecules that can be simulated. The new solutions allow treating a large space of protein-ligand interaction as an active area. For example, a 2,056 atom protein with ωB97/def2-SVP level of theory runs for about 14 hours on a single GPU from an &lt;a href="https://aws.amazon.com/ec2/instance-types/p4/"&gt;Amazon EC2 P4d&lt;/a&gt; instance.&lt;/p&gt; 
-&lt;h2&gt;Scalable and secure architecture&lt;/h2&gt; 
-&lt;p&gt;Promethium is a software as a service (SaaS) solution built on AWS and uses Amazon EC2 GPU instances to provide customers on-demand scalable computational resources. Promethium uses a microservices-based architecture deployed on Kubernetes. The solution dynamically reacts to customer demand and automatically scales Amazon EC2 &lt;a href="https://aws.amazon.com/ec2/instance-types/p3/"&gt;P3&lt;/a&gt; and &lt;a href="https://aws.amazon.com/ec2/instance-types/p4/"&gt;P4&lt;/a&gt; instances with Karpenter, an open-source compute resource manager for Kubernetes.&lt;/p&gt; 
-&lt;p&gt;Molecule intellectual property is the most sensitive and important asset for QC Ware’s customers. Therefore, Promethium’s architecture follows AWS &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html"&gt;best practices for cloud security&lt;/a&gt;. For example, the solution includes least-privilege role-based access control, encryption at rest and in transit, multi-factor authentication (MFA), and single sign-on. The following diagram outlines Promethium’s architecture.&lt;/p&gt; 
-&lt;div id="attachment_3247" style="width: 1096px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3247" loading="lazy" class="size-full wp-image-3247" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.32.43.png" alt="Figure 2: Promethium’s architecture on AWS cloud" width="1086" height="539"&gt;
- &lt;p id="caption-attachment-3247" class="wp-caption-text"&gt;Figure 2: Promethium’s architecture on AWS cloud&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;User Interface&lt;/h2&gt; 
-&lt;p&gt;Promethium can be accessed through graphical and command-line interfaces. For ease of use, the graphical user interface (GUI) includes drag and drop, molecule visualizations, pre-set defaults, and automated error checking. As a SaaS solution hosted on AWS, customers don’t need to worry about managing the underlying AWS infrastructure, the dependency stack, or software updates. And thus, customers can focus on their chemistry work.&lt;/p&gt; 
-&lt;p&gt;Users can customize all common settings within the GUI, and additionally, use a JSON customization form for advanced settings.&lt;/p&gt; 
-&lt;p&gt;A REST API is also available for chaining workflows together and accessing advanced capabilities. Users can access the API through a Python SDK. The API can be integrated with other workflow tools and software products. For example, Electronic Lab Notebooks (ELBs) or data and workflow platforms, such as Schrodinger LiveDesign.&lt;/p&gt; 
-&lt;h2&gt;Example use case: Conformer Search&lt;/h2&gt; 
-&lt;p&gt;Promethium currently features nine different chemistry simulations focused on molecular properties, nonbonded interactions, and chemical reactions. Molecular property simulations include conformer searches (featured here), geometry optimizations, single point energies, and torsion scans. Non-bonded interactions include SAPT / F-SAPT; and reaction simulations include reaction path optimizations, transition states, and reactant-product transition states. Additional calculations, such as Vibrational Frequency and thermodynamics, are available for all workflows. This list is continuously growing as customers request new capabilities, such as spectroscopy, ligand ranking, and more.&lt;/p&gt; 
-&lt;p&gt;One common problem that chemists want to solve when designing new molecules is to understand the different 3D shapes that a molecule can take and how often each shape appears. Chemists can use Promethium’s Conformer Search capability to identify all of the molecule’s stable shapes (lowest relative energy) and their prevalence (Boltzmann probability distribution).&lt;/p&gt; 
-&lt;p&gt;Based on a given molecule input, Promethium goes through several stages of calculations and filtering. Each stage gets more precise until it has the final distribution of conformers with DFT-level accuracy. Promethium completes this process in three primary steps:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Launching Amazon EC2 instances for parallel processing&lt;/li&gt; 
- &lt;li&gt;Identifying and filtering potential conformers&lt;/li&gt; 
- &lt;li&gt;Analyzing conformers and visualizing the results&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;First, Promethium launches Amazon EC2 instances based on the number of molecules submitted. Customers can simultaneously submit as many molecules as they desire. Simultaneous submissions are parallelized across available EC2 instances. Within each molecule’s conformer search, Promethium parallelizes the DFT steps across multiple GPUs to ensure low wall clock time. Promethium uses a queuing system to manage submitted jobs and Amazon EC2 capacity.&lt;/p&gt; 
-&lt;div id="attachment_3248" style="width: 1187px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3248" loading="lazy" class="size-full wp-image-3248" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.33.31.png" alt="Figure 3: Promethium workflow diagram of processing parallel conformer searches in parallel. " width="1177" height="415"&gt;
- &lt;p id="caption-attachment-3248" class="wp-caption-text"&gt;Figure 3: Promethium workflow diagram of processing conformer searches in parallel.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The diagram represents the following workflow:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Customers submit multiple molecules for conformer searches&lt;/li&gt; 
- &lt;li&gt;Promethium scales Amazon EC2 instances to parallelize submitted jobs&lt;/li&gt; 
- &lt;li&gt;Promethium scales additional EC2 instances within each single job&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Second, Promethium identifies and filters potential conformers over four stages. In the first stage, Promethium generates a large set of potential conformers. These are subsequently filtered with a force field (FF), Artificial Narrow Intelligence (ANI) neural network potentials, or Geometry, Frequency, and Noncovalent Interaction (GFN) methods. This removes the conformers that are the least stable and leaves a smaller set to evaluate with DFT. Promethium evaluates the remaining conformers with two high accuracy DFT filters to determine the conformers with the lowest relative energy values. These conformers have the highest stability.&lt;/p&gt; 
-&lt;p&gt;Third, Promethium analyzes the results. The solution visualizes the three-dimensional structures, the stage progression, probability distribution and relative energies of each conformer.&lt;/p&gt; 
-&lt;div id="attachment_3249" style="width: 1111px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3249" loading="lazy" class="size-full wp-image-3249" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.34.01.png" alt="Figure 4: One of Promethium’s output charts from a conformer search." width="1101" height="739"&gt;
- &lt;p id="caption-attachment-3249" class="wp-caption-text"&gt;Figure 4: One of Promethium’s output charts from a conformer search.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The graphic represents the relative energy of possible conformers as they are filtered by a force field (1&lt;sup&gt;st&lt;/sup&gt; row), an ANI filter (2&lt;sup&gt;nd&lt;/sup&gt; row), and two separate DFT filters (3&lt;sup&gt;rd&lt;/sup&gt; and 4&lt;sup&gt;th&lt;/sup&gt; rows).&lt;/p&gt; 
-&lt;p&gt;The following graphic shows the visualization of the Boltzmann weight and probability distribution for the conformers that passed the final filter stage.&lt;/p&gt; 
-&lt;div id="attachment_3250" style="width: 1129px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3250" loading="lazy" class="size-full wp-image-3250" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/01/19/CleanShot-2024-01-19-at-14.34.56.png" alt="Figure 5: Probability distribution of the computed conformers." width="1119" height="879"&gt;
- &lt;p id="caption-attachment-3250" class="wp-caption-text"&gt;Figure 5: Probability distribution of the computed conformers.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Pricing&lt;/h2&gt; 
-&lt;p&gt;Promethium uses a consumption-based pricing model, which means that customers only pay based on the actual GPU-hours used (accrued by the second). There are no upfront costs, no annual costs, and no per user or per seat costs. The total cost of ownership is often &lt;a href="https://www.promethium.qcware.com/pricing-details"&gt;lower&lt;/a&gt; than using legacy open source DFT software.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we started with the crucial opportunities and challenges of computational chemistry and its role in advancing pharmaceuticals and chemicals. We outlined Promethium, a SaaS solution running on Amazon EC2 GPU instances. Promethium takes a step towards resolving the speed-accuracy tradeoff, a longstanding obstacle in computational chemistry.&lt;/p&gt; 
-&lt;p&gt;We used a conformer search example to demonstrate Promethium tackling the challenges associated with larger and complex molecules through GPU-optimized algorithms. Promethium’s scalable architecture and solution approach make it a practical tool in molecule discovery. If you want to learn more, you can visit &lt;a href="https://www.promethium.qcware.com/"&gt;Promethium’s homepage&lt;/a&gt; or find additional details through &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-tyzdk5juffetu"&gt;Promethium on AWS Marketplace&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
-&lt;h3&gt;References&lt;/h3&gt; 
-&lt;p&gt;[1]: &lt;a href="https://www.nature.com/articles/d41573-022-00025-1"&gt;https://www.nature.com/articles/d41573-022-00025-1&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[2]: &lt;a href="https://www.bcg.com/publications/2022/ai-in-drug-discovery-impact"&gt;https://www.bcg.com/publications/2022/ai-in-drug-discovery-impact&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[3]: &lt;a href="https://www.mckinsey.com/industries/life-sciences/our-insights/pharmas-digital-rx-quantum-computing-in-drug-research-and-development"&gt;https://www.mckinsey.com/industries/life-sciences/our-insights/pharmas-digital-rx-quantum-computing-in-drug-research-and-development&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[4]: Werner Vogel at AWS re:Invent 2022 &lt;a href="https://youtu.be/RfvL_423a-I?t=6553"&gt;https://youtu.be/RfvL_423a-I?t=6553&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[5]: &lt;a href="https://www.bcg.com/publications/2023/enterprise-grade-quantum-computing-almost-ready"&gt;https://www.bcg.com/publications/2023/enterprise-grade-quantum-computing-almost-ready&lt;/a&gt;&lt;/p&gt; 
-&lt;p&gt;[6]: &lt;a href="https://onlinelibrary.wiley.com/doi/10.1002/qua.26381"&gt;https://onlinelibrary.wiley.com/doi/10.1002/qua.26381&lt;/a&gt;&lt;/p&gt;</content:encoded>
 					
 		
 		
