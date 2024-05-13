@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 10 May 2024 14:10:52 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 13 May 2024 03:56:35 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,304 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>Drug Discovery, STAT! NVIDIA, Recursion Speed Pharma R&#038;D With AI Supercomputer</title>
+		<link>https://blogs.nvidia.com/blog/drug-discovery-recursion-supercomputer/</link>
+		
+		<dc:creator><![CDATA[Rory Kelleher]]></dc:creator>
+		<pubDate>Mon, 13 May 2024 09:00:20 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artficial Intelligence]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[NVIDIA Quantum-2]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Supercomputing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71542</guid>
+
+					<description><![CDATA[Described as the largest system in the pharmaceutical industry, BioHive-2 at the Salt Lake City headquarters of Recursion debuts today at No. 35, up more than 100 spots from its predecessor on the latest TOP500 list of the world’s fastest supercomputers. The advance represents the company’s most recent effort to accelerate drug discovery with NVIDIA		<a class="read-more" href="https://blogs.nvidia.com/blog/drug-discovery-recursion-supercomputer/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Described as the largest system in the pharmaceutical industry, BioHive-2 at the Salt Lake City headquarters of Recursion debuts today at No. 35, up more than 100 spots from its predecessor on the latest TOP500 list of the world’s fastest supercomputers.</p>
+<p>The advance represents the company’s most recent effort to accelerate drug discovery with NVIDIA technologies.</p>
+<p>“Just as with large language models, we see AI models in the biology domain improve performance substantially as we scale our training with more data and compute horsepower, which ultimately leads to greater impacts on patients’ lives,” said Recursion’s CTO, Ben Mabey, who’s been applying machine learning to healthcare for more than a decade.</p>
+<p>BioHive-2 packs 504 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> linked on an <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2</a> InfiniBand network to deliver 2 exaflops of AI performance. The resulting <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a> is nearly 5x faster than Recursion’s first-generation system, BioHive-1.</p>
+<h2><b>Performance Powers Through Complexity</b></h2>
+<p>That performance is key to rapid progress because “biology is insanely complex,” Mabey said.</p>
+<p>Finding a new drug candidate can take scientists years performing millions of wet-lab experiments.</p>
+<p>That work is vital; Recursion’s scientists run more than 2 million such experiments a week. But going forward, they’ll use AI models on BioHive-2 to direct their platform to the most promising biology areas to run their experiments.</p>
+<p>“With AI in the loop today, we can get 80% of the value with 40% of the wet lab work, and that ratio will improve going forward,” he said.</p>
+<h2><b>Biological Data Propels Healthcare AI</b></h2>
+<p>Recursion is collaborating with biopharma companies such as Bayer AG, Roche and Genentech. Over time, it also amassed a more than 50-petabyte database of biological, chemical and patient data, helping it build powerful AI models that are accelerating drug discovery.</p>
+<p>“We believe it’s one of the largest biological datasets on Earth — it was built with AI training in mind, intentionally spanning biology and chemistry,” said Mabey, who joined the company more than seven years ago in part due to its commitment to building such a dataset.</p>
+<h2><b>Creating an AI Phenomenon</b></h2>
+<p>Processing that data on BioHive-1, Recursion developed a family of <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation models</a> called Phenom. They turn a series of microscopic cellular images into meaningful representations for understanding the underlying biology.</p>
+<p>A member of that family, <a href="https://www.recursion.com/news/nothing-short-of-phenomenal-new-deep-learning-model-available-on-nvidias-bionemo-platform">Phenom-Beta</a>, is now available as a cloud API and the first third-party model on <a href="https://www.nvidia.com/en-us/clara/bionemo/">NVIDIA BioNeMo</a>, a <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> platform for drug discovery.</p>
+<p>Over several months of research and iteration, BioHive-1 trained <a href="http://arxiv.org/abs/2404.10242">Phenom-1</a> using more than 3.5 billion cellular images. Recursion’s expanded system enables training even more powerful models with larger datasets in less time.</p>
+<p>The company also used <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>, hosted by Oracle Cloud Infrastructure, to provide additional supercomputing resources to power their work.</p>
+<figure id="attachment_71588" aria-describedby="caption-attachment-71588" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation.gif"><img fetchpriority="high" decoding="async" class="size-large wp-image-71588" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-672x338.gif" alt="Animation of how Recursion trains AI models for drug discovery on NVIDIA GPUs" width="672" height="338" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-672x338.gif 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-400x201.gif 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-768x386.gif 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-842x423.gif 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-406x204.gif 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-188x94.gif 188w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71588" class="wp-caption-text">Much like how LLMs are trained to generate missing words in a sentence, Phenom models are trained by asking them to generate the masked out pixels in images of cells.</figcaption></figure>
+<p>The Phenom-1 model serves Recursion and its partners in several ways, including finding and optimizing molecules to treat a variety of diseases and cancers. Earlier models helped Recursion predict drug candidates for COVID-19 nine out of 10 times.</p>
+<p>The company announced its <a href="https://ir.recursion.com/news-releases/news-release-details/recursion-announces-collaboration-and-50-million-investment">collaboration with NVIDIA</a> in July. Less than 30 days later, the combination of BioHive-1 and DGX Cloud <a href="https://ir.recursion.com/news-releases/news-release-details/recursion-bridges-protein-and-chemical-space-massive-protein">screened and analyzed</a> a massive chemical library to predict protein targets for approximately 36 billion chemical compounds.</p>
+<p>In January, the company <a href="https://ir.recursion.com/news-releases/news-release-details/recursion-unveils-lowe-drug-discovery-software-jp-morgan">demonstrated</a> LOWE, an AI workflow engine with a natural-language interface to help make its tools more accessible to scientists. And in April it <a href="https://portal.valencelabs.com/blogs/post/introducing-molgps---a-foundational-gnn-for-molecular-property-prediction-Ti4InC3788me9f5">described</a> a billion-parameter AI model it built to provide a new way to predict the properties of key molecules of interest in healthcare.</p>
+<p>Recursion uses NVIDIA software to optimize its systems.</p>
+<p>“We love CUDA and <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, and we’re looking to see if <a href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> can help us distribute our models more easily, both internally and to partners,” he said.</p>
+<h2><b>A Shared Vision for Healthcare</b></h2>
+<p>The efforts are part of a broad vision that Jensen Huang, NVIDIA founder and CEO, described in a <a href="https://blogs.nvidia.com/blog/nvidia-ceo-ai-drug-discovery-jp-morgan-healthcare-2024/">fireside chat</a> with Recursion’s chairman as moving toward simulating biology.</p>
+<p>“You can now recognize and learn the language of almost anything with structure, and you can translate it to anything with structure … This is the generative AI revolution,” Huang said.</p>
+<p>“We share a similar view,” said Mabey.</p>
+<p>“We are in the early stages of a very interesting time where just as computers accelerated chip design, AI can speed up drug design. Biology is much more complex, so it will take years to play out, but looking back, people will see this was a real turning point in healthcare,” he added.</p>
+<p><i>Learn about </i><a href="https://www.nvidia.com/en-us/clara/"><i>NVIDIA’s AI platform for healthcare and life sciences</i></a><i> and subscribe to </i><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>NVIDIA healthcare news</i></a><i>.</i></p>
+<p><i>Pictured at top: BioHive-2 with a few members of the Recursion team (from left) Paige Despain, John Durkin, Joshua Fryer, Jesse Dean, Ganesh Jagannathan, Chris Gibson, Lindsay Ellinger, Michael Secora, Alex Timofeyev, and Ben Mabey. </i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/BioHive2-with-Recursion-crop-team-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1085"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/BioHive2-with-Recursion-crop-team-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Drug Discovery, STAT! NVIDIA, Recursion Speed Pharma R&D With AI Supercomputer]]></media:title>
+			<media:description type="html">Picture of Recursion team with BioHive-2 AI supercomputer for drug discovery</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Blackwell Platform Pushes the Boundaries of Scientific Computing</title>
+		<link>https://blogs.nvidia.com/blog/blackwell-scientific-computing/</link>
+		
+		<dc:creator><![CDATA[Dion Harris]]></dc:creator>
+		<pubDate>Mon, 13 May 2024 06:00:30 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[CUDA]]></category>
+		<category><![CDATA[HPC Stories]]></category>
+		<category><![CDATA[RAPIDS]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71547</guid>
+
+					<description><![CDATA[Quantum computing. Drug discovery. Fusion energy. Scientific computing and physics-based simulations are poised to make giant steps across domains that benefit humanity as advances in accelerated computing and AI drive the world’s next big breakthroughs. NVIDIA unveiled at GTC in March the NVIDIA Blackwell platform, which promises generative AI on trillion-parameter large language models (LLMs)		<a class="read-more" href="https://blogs.nvidia.com/blog/blackwell-scientific-computing/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Quantum computing. Drug discovery. Fusion energy. Scientific computing and physics-based simulations are poised to make giant steps across domains that benefit humanity as advances in accelerated computing and AI drive the world’s next big breakthroughs.</p>
+<p>NVIDIA unveiled at GTC in March <a href="https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing">the NVIDIA Blackwell platform</a>, which promises generative AI on trillion-parameter large language models (LLMs) at up to 25x less cost and energy consumption than the NVIDIA Hopper architecture.</p>
+<p>Blackwell has powerful implications for AI workloads, and its technology capabilities can also help to deliver discoveries across all types of scientific computing applications, including traditional numerical simulation.</p>
+<p>By reducing energy costs, accelerated computing and AI drive <a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/">sustainable computing</a>. Many scientific computing applications already benefit. Weather can be simulated at 200x lower cost and with 300x less energy, while digital twin simulations have 65x lower cost and 58x less energy consumption versus traditional CPU-based systems and others.</p>
+<h2><b>Multiplying Scientific Computing Simulations With Blackwell</b></h2>
+<p>Scientific computing and physics-based simulation often rely on what’s known as double-precision formats, or <a href="https://blogs.nvidia.com/blog/double-precision-tensor-cores/">FP64 (floating point</a>), to solve problems. <a href="https://resources.nvidia.com/en-us-blackwell-architecture">Blackwell GPUs</a> deliver 30% more FP64 and FP32 FMA (fused multiply-add) performance  than Hopper.</p>
+<p>Physics-based simulations are critical to product design and development. From planes and trains to bridges, silicon chips and pharmaceuticals — testing and improving products in simulation saves researchers and developers billions of dollars.</p>
+<p>Today application-specific integrated circuits (ASICs) are designed almost exclusively on CPUs in a long and complex workflow, including analog analysis to identify voltages and currents.</p>
+<p>But that’s changing. The <a href="https://www.nvidia.com/en-us/industries/industrial-sector/cadence/">Cadence</a> SpectreX simulator is one example of an analog circuit design solver. SpectreX circuit simulations are projected to run 13x quicker on a GB200 Grace Blackwell Superchip — which connects Blackwell GPUs and Grace CPUs — than on a traditional CPU.</p>
+<p>Also, GPU-accelerated computational fluid dynamics, or CFD, has become a key tool. Engineers and equipment designers use it to predict the behavior of designs. Cadence Fidelity runs CFD simulations that are projected to run as much as 22x faster on GB200 systems than on traditional CPU-powered systems. With parallel scalability and 30TB of memory per GB200 NVL72 rack, it’s possible to capture flow details like never before.</p>
+<p>In another application, Cadence Reality’s digital twin software can be used to create a virtual replica of a physical data center, including all its components — servers, cooling systems and power supplies. Such a virtual model allows engineers to test different configurations and scenarios before implementing them in the real world, saving time and costs.</p>
+<p>Cadence Reality’s magic happens from physics-based algorithms that can simulate how heat, airflow and power usage affect data centers. This helps engineers and data center operators to more effectively manage capacity, predict potential operational problems and make informed decisions to optimize the layout and operation of the data center for improved efficiency and capacity utilization. With Blackwell GPUs, these simulations are projected to run up to 30x faster than with CPUs, offering accelerated timelines and higher energy efficiency.</p>
+<p><img decoding="async" class="alignnone size-medium wp-image-71581" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-400x226.jpg" alt="" width="400" height="226" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-400x226.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-672x379.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-381x215.jpg 381w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-177x100.jpg 177w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart.jpg 752w" sizes="(max-width: 400px) 100vw, 400px" /></p>
+<h2><b>AI for Scientific Computing</b></h2>
+<p>New Blackwell accelerators and networking will deliver leaps in performance for advanced simulation.</p>
+<p>The NVIDIA GB200 kicks off a new era for high-performance computing (HPC). Its architecture sports a second-generation transformer engine optimized to accelerate inference workloads for LLMs.</p>
+<p>This delivers a 30x speedup on resource-intensive applications like the 1.8-trillion-parameter GPT-MoE (generative pretrained transformer-mixture of experts) model compared to the H100 generation, unlocking new possibilities for HPC. By enabling LLMs to process and decipher vast amounts of scientific data, HPC applications can sooner reach valuable insights that can accelerate scientific discovery.</p>
+<p>Sandia National Laboratories <a href="https://blogs.nvidia.com/blog/generative-ai-science-isc/">is building</a> an LLM copilot for parallel programming. Traditional AI can generate basic serial computing code efficiently, but when it comes to parallel computing code for HPC applications, LLMs can falter. Sandia researchers are tackling this issue head-on with an ambitious project — automatically generating parallel code in Kokkos, a specialized programming language designed by multiple national labs for running tasks across tens of thousands of processors in the world’s most powerful supercomputers.</p>
+<p>Sandia is using an AI technique known as <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a>, or RAG, which combines information-retrieval capabilities with language generation models. The team is creating a Kokkos database and integrating it with AI models using RAG.</p>
+<p>Initial results are promising. Different RAG approaches from Sandia have demonstrated autonomously generated Kokkos code for parallel computing applications. By overcoming hurdles in AI-based parallel code generation, Sandia aims to unlock new possibilities in HPC across leading supercomputing facilities worldwide. Other examples <a href="https://developer.nvidia.com/blog/ai-for-a-scientific-computing-revolution/">include</a> renewables research, climate science and drug discovery.</p>
+<p><img decoding="async" class="alignnone size-medium wp-image-71567" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-400x225.jpg" alt="" width="400" height="225" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-1280x720.jpg 1280w" sizes="(max-width: 400px) 100vw, 400px" /></p>
+<h2><b>Driving Quantum Computing Advances</b></h2>
+<p>Quantum computing unlocks a time machine trip for fusion energy, climate research, drug discovery and many more areas. So researchers are hard at work simulating future quantum computers on NVIDIA GPU-based systems and software to develop and test quantum algorithms faster than ever.</p>
+<p>The <a href="https://developer.nvidia.com/blog/introducing-cuda-quantum-the-platform-for-hybrid-quantum-classical-computing/">NVIDIA CUDA-Q platform</a> enables both simulation of quantum computers and hybrid application development with a unified programming model for CPUs, GPUs and <a href="https://blogs.nvidia.com/blog/what-is-a-qpu/">QPUs</a> (quantum processing units) working together.</p>
+<p>CUDA-Q is speeding simulations in chemistry workflows for BASF, high-energy and nuclear physics for Stony Brook and quantum chemistry for NERSC.</p>
+<p>NVIDIA Blackwell architecture will help drive quantum simulations to new heights. Utilizing the latest NVIDIA NVLink multi-node interconnect technology helps shuttle data faster for speedup benefits to quantum simulations.</p>
+<h2><b>Accelerating Data Analytics for Scientific Breakthroughs </b></h2>
+<p>Data processing with RAPIDS is popular for scientific computing. Blackwell introduces a hardware decompression engine to decompress compressed data and speed up analytics in RAPIDS.</p>
+<p>The decompression engine provides performance improvements up to 800GB/s and enables Grace Blackwell to perform 18x faster than CPUs — on Sapphire Rapids — and 6x faster than NVIDIA H100 Tensor Core GPUs for query benchmarks.</p>
+<p>Rocketing data transfers with 8TB/s of high-memory bandwidth and the Grace CPU high-speed NVLink Chip-to-Chip (C2C) interconnect, the engine speeds up the entire process of database queries. Yielding top-notch performance across data analytics and data science use cases, Blackwell speeds data insights and reduces costs.</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-medium wp-image-71578" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-400x345.jpg" alt="" width="400" height="345" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-400x345.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-580x500.jpg 580w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-768x662.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-1536x1325.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-522x450.jpg 522w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-249x215.jpg 249w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-406x350.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-116x100.jpg 116w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-1280x1104.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333.jpg 2048w" sizes="(max-width: 400px) 100vw, 400px" /></p>
+<h2><b>Driving Extreme Performance for Scientific Computing with NVIDIA Networking</b></h2>
+<p>The NVIDIA Quantum-X800 InfiniBand networking platform offers the highest throughput for scientific computing infrastructure.</p>
+<p>It includes NVIDIA Quantum Q3400 and Q3200 switches and the NVIDIA ConnectX-8 SuperNIC, together hitting twice the bandwidth of the prior generation. The Q3400 platform offers 5x higher bandwidth capacity and 14.4Tflops of in-network computing with NVIDIA’s scalable hierarchical aggregation and reduction protocol (SHARPv4), providing a 9x increase compared with the prior generation.</p>
+<p>The performance leap and power efficiency translates to significant reductions in workload completion time and energy consumption for scientific computing.</p>
+<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/"><i>NVIDIA Blackwell</i></a><i>. </i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gb200-nvl-rack-gtc24-press-1920x1080-1.jpg"
+			type="image/jpeg"
+			width="1920"
+			height="1080"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gb200-nvl-rack-gtc24-press-1920x1080-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Blackwell Platform Pushes the Boundaries of Scientific Computing]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Generating Science: NVIDIA AI Accelerates HPC Research</title>
+		<link>https://blogs.nvidia.com/blog/generative-ai-science-isc/</link>
+		
+		<dc:creator><![CDATA[Geetika Gupta]]></dc:creator>
+		<pubDate>Mon, 13 May 2024 06:00:06 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artficial Intelligence]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[NVIDIA Modulus]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Supercomputing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71538</guid>
+
+					<description><![CDATA[Generative AI is taking root at national and corporate labs, accelerating high-performance computing for business and science. Researchers at Sandia National Laboratories aim to automatically generate code in Kokkos, a parallel programming language designed for use across many of the world’s largest supercomputers. It’s an ambitious effort. The specialized language, developed by researchers from several		<a class="read-more" href="https://blogs.nvidia.com/blog/generative-ai-science-isc/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Generative AI is taking root at national and corporate labs, accelerating high-performance computing for business and science.</p>
+<p>Researchers at Sandia National Laboratories aim to automatically <a href="https://developer.nvidia.com/blog/advanced-ai-and-retrieval-augmented-generation-for-code-development-in-high-performance-computing/">generate code in Kokkos</a>, a parallel programming language designed for use across many of the world’s largest supercomputers.</p>
+<p>It’s an ambitious effort. The specialized language, developed by researchers from several national labs, handles the nuances of running tasks across tens of thousands of processors.</p>
+<p>Sandia is employing retrieval-augmented generation (<a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">RAG</a>) to create and link a Kokkos database with AI models. As researchers experiment with different RAG approaches, initial tests show promising results.</p>
+<p>Cloud-based services like <a href="https://developer.nvidia.com/blog/translate-your-enterprise-data-into-actionable-insights-with-nvidia-nemo-retriever/">NeMo Retriever</a> are among the RAG options the scientists will evaluate.</p>
+<p>“NVIDIA provides a rich set of tools to help us significantly accelerate the work of our HPC software developers,” said Robert Hoekstra, a senior manager of extreme scale computing at Sandia.</p>
+<p>Building copilots via model tuning and RAG is just a start. Researchers eventually aim to employ foundation models trained with scientific data from fields such as climate, biology and material science.</p>
+<h2><b>Getting Ahead of the Storm</b></h2>
+<p>Researchers and companies in weather forecasting are embracing <a href="https://arxiv.org/abs/2309.15214">CorrDiff</a>, a generative AI model that’s part of <a href="https://www.nvidia.com/en-us/high-performance-computing/earth-2/">NVIDIA Earth-2</a>, a set of services and software for weather and climate research.</p>
+<p>CorrDiff can scale the 25km resolution of traditional atmosphere models down to 2 kilometers and expand by more than 100x the number of forecasts that can be combined to improve confidence in predictions.</p>
+<p>“It’s a promising innovation … We plan to leverage such models in our global and regional AI forecasts for richer insights,” said Tom Gowan, machine learning and modeling lead for Spire, a company in Vienna, Va., that collects data from its own network of tiny satellites.</p>
+<p>Generative AI enables faster, more accurate forecasts, he said in a recent <a href="https://spire.com/blog/weather-climate/ai-weather-modeling-spire-and-nvidia-partnership/">interview</a>.</p>
+<p>“It really feels like a big jump in meteorology,” he added. “And by partnering with NVIDIA, we have access to the world’s best GPUs that are the most reliable, fastest and most efficient ones for both training and inference.”</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast.jpg"><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-71561" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast-672x410.jpg" alt="Graphic showing Spire weather forecast" width="672" height="410" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast-672x410.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast-400x244.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast-768x469.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast-737x450.jpg 737w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast-352x215.jpg 352w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast-164x100.jpg 164w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Spire-weather-forecast.jpg 1200w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>Switzerland-based Meteomatics recently <a href="https://www.meteomatics.com/en/news/meteomatics-nvidia-ai-based-weather-forecasts/">announced</a> it also plans to use NVIDIA’s generative AI platform for its weather forecasting business.</p>
+<p>“Our work with NVIDIA will help energy companies maximize their renewable energy operations and increase their profitability with quick and accurate insight into weather fluctuations,” said Martin Fengler, founder and CEO of Meteomatics.</p>
+<h2><b>Generating Genes to Improve Healthcare</b></h2>
+<p>At Argonne National Laboratory, scientists are using the technology to generate gene sequences that help them better understand the virus behind COVID-19. Their award-winning models, called GenSLMs, spawned simulations that closely resemble real-world variants of SARS-CoV-2.</p>
+<p>“Understanding how different parts of the genome are co-evolving gives us clues about how the virus may develop new vulnerabilities or new forms of resistance,” Arvind Ramanathan, a lead researcher, said in <a href="https://blogs.nvidia.com/blog/generative-ai-covid-genome-sequences/">a blog</a>.</p>
+<p>GenSLMs were trained on more than 110 million genome sequences with <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA A100 Tensor Core GPU</a>-powered supercomputers, including Argonne’s <a href="https://nvidianews.nvidia.com/news/nvidia-turbocharges-extreme-scale-ai-for-argonne-national-laboratorys-polaris-supercomputer">Polaris</a> system, the U.S. Department of Energy’s <a href="https://blogs.nvidia.com/blog/nersc-perlmutter-ai-supercomputer/">Perlmutter</a> and NVIDIA’s <a href="https://blogs.nvidia.com/blog/making-selene-pandemic-ai/">Selene</a>.</p>
+<h2><b>Microsoft Proposes Novel Materials</b></h2>
+<p>Microsoft Research showed how generative AI can accelerate work in materials science.</p>
+<p>Their <a href="https://www.microsoft.com/en-us/research/blog/mattergen-property-guided-materials-design/">MatterGen</a> model generates novel, stable materials that exhibit desired properties. The approach enables specifying chemical, magnetic, electronic, mechanical and other desired properties.</p>
+<p>“We believe MatterGen is an important step forward in AI for materials design,” the Microsoft Research team wrote of the model they trained on Azure AI infrastructure with NVIDIA A100 GPUs.</p>
+<p>Companies such as <a href="https://developer.nvidia.com/blog/using-graph-neural-networks-for-additive-manufacturing/">Carbon3D</a> are already finding opportunities, applying generative AI to materials science in commercial 3D printing operations.</p>
+<p>It’s just the beginning of what researchers will be able to do for HPC and science with generative AI. The <a href="https://www.nvidia.com/en-us/data-center/h200/">NVIDIA H200 Tensor Core GPUs</a> available now and the upcoming <a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">NVIDIA Blackwell Architecture GPUs</a> will take their work to new levels.</p>
+<p>Learn more about tools like <a href="https://developer.nvidia.com/modulus">NVIDIA Modulus</a>, a key component in the Earth-2 platform for building AI models that obey the laws of physics, and <a href="https://docs.nvidia.com/megatron-core/index.html">NVIDIA Megatron-Core</a>, a NeMo library to tune and train large language models.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Weather-ensembles-SuperPOD-x1280.jpg"
+			type="image/jpeg"
+			width="1920"
+			height="1021"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Weather-ensembles-SuperPOD-x1280-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Generating Science: NVIDIA AI Accelerates HPC Research]]></media:title>
+			<media:description type="html">Image of generative AI in science</media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Dial It In: Data Centers Need New Metric for Energy Efficiency</title>
+		<link>https://blogs.nvidia.com/blog/datacenter-efficiency-metrics-isc/</link>
+		
+		<dc:creator><![CDATA[Jeremy Rodriguez]]></dc:creator>
+		<pubDate>Mon, 13 May 2024 06:00:04 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Artficial Intelligence]]></category>
+		<category><![CDATA[Cloud Services]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[GPU Computing]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Parallel Computing]]></category>
+		<category><![CDATA[Supercomputing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71524</guid>
+
+					<description><![CDATA[Data centers need an upgraded dashboard to guide their journey to greater energy efficiency, one that shows progress running real-world applications. The formula for energy efficiency is simple: work done divided by energy used. Applying it to data centers calls for unpacking some details. Today’s most widely used gauge — power usage effectiveness (PUE)  —		<a class="read-more" href="https://blogs.nvidia.com/blog/datacenter-efficiency-metrics-isc/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Data centers need an upgraded dashboard to guide their journey to greater <a href="https://www.nvidia.com/en-us/glossary/energy-efficiency/">energy efficiency</a>, one that shows progress running real-world applications.</p>
+<p>The formula for energy efficiency is simple: work done divided by energy used. Applying it to data centers calls for unpacking some details.</p>
+<p>Today’s most widely used gauge — power usage effectiveness (<a href="https://leonardo-energy.pl/wp-content/uploads/2018/03/Green_Grid_Metrics.pdf">PUE</a>)  — compares the total energy a facility consumes to the amount its computing infrastructure uses. Over the last 17 years, PUE has driven the most efficient operators closer to an ideal where almost no energy is wasted on processes like power conversion and cooling.</p>
+<h2><b>Finding the Next Metrics</b></h2>
+<p>PUE served data centers well during the rise of cloud computing, and it will continue to be useful. But it’s insufficient in today’s <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> era, when workloads and the systems running them have changed dramatically.</p>
+<p>That’s because PUE doesn’t measure the useful output of a data center, only the energy that it consumes. That’d be like measuring the amount of gas an engine uses without noticing how far the car has gone.</p>
+<p>Many standards exist for data center efficiency. A<a href="https://drive.google.com/file/d/1k2QE_Jk8p5A9azpw4YrfWlZj5Sc0qWAQ/view"> 2017 paper</a> lists nearly three dozen of them, several focused on specific targets such as cooling, water use, security and cost.</p>
+<h2><b>Understanding What’s Watts</b></h2>
+<p>When it comes to energy efficiency, the computer industry has a long and somewhat unfortunate history of describing systems and the processors they use in terms of power, typically in watts. It’s a worthwhile metric, but many fail to realize that watts only measure input power at a point in time, not the actual energy computers use or how efficiently they use it.</p>
+<p>So, when modern systems and processors report rising input power levels in watts, that doesn’t mean they’re less energy efficient. In fact, they’re often much more efficient in the amount of work they do with the amount of energy they use.</p>
+<p>Modern data center metrics should focus on energy, what the engineering community knows as kilowatt-hours or joules. The key is how much useful work they do with this energy.</p>
+<h2><b>Reworking What We Call Work</b></h2>
+<p>Here again, the industry has a practice of measuring in abstract terms, like processor instructions or math calculations. So, MIPS (millions of instructions per second) and FLOPS (floating point operations per second) are widely quoted.</p>
+<p>Only computer scientists care how many of these low-level jobs their system can handle. Users would prefer to know how much real work their systems put out, but defining useful work is somewhat subjective.</p>
+<p>Data centers focused on AI may rely on the <a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">MLPerf benchmarks</a>. Supercomputing centers tackling scientific research typically use <a href="https://developer.nvidia.com/hpc-application-performance">additional measures</a> of work. Commercial data centers focused on streaming media may want others.</p>
+<p>The resulting suite of applications must be allowed to evolve over time to reflect the state of the art and the most relevant use cases. For example, the <a href="https://blogs.nvidia.com/blog/tensorrt-llm-inference-mlperf/">last MLPerf round</a> added tests using two generative AI models that didn’t even exist five years ago.</p>
+<h2><b>A Gauge for Accelerated Computing</b></h2>
+<p>Ideally, any new benchmarks should measure advances in<a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/"> accelerated computing</a>. This combination of parallel processing hardware, software and methods is running applications dramatically faster and more efficiently than CPUs across many modern workloads.</p>
+<p>For example, on scientific applications, the Perlmutter supercomputer at the National Energy Research Scientific Computing Center <a href="https://blogs.nvidia.com/blog/gpu-energy-efficiency-nersc/">demonstrated</a> an average of 5x gains in energy efficiency using accelerated computing. That’s why it’s among the 39 of the top 50 supercomputers — including the No. 1 system — on<a href="https://www.top500.org/lists/green500/2023/11/"> the Green500 list</a> that use NVIDIA GPUs.</p>
+<figure id="attachment_71555" aria-describedby="caption-attachment-71555" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-71555" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-672x297.jpg" alt="Chart of GPU vs CPU energy efficiency" width="672" height="297" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-672x297.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-400x177.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-768x340.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-842x373.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-406x180.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-188x83.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time.jpg 1146w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71555" class="wp-caption-text">Because they execute lots of tasks in parallel, GPUs execute more work in less time than CPUs, saving energy.</figcaption></figure>
+<p>Companies across many industries share similar results. For example, PayPal improved real-time fraud detection by 10% and <a href="https://developer.nvidia.com/blog/gpu-inference-momentum-continues-to-build/">lowered server energy consumption</a> nearly 8x with accelerated computing.</p>
+<p>The gains are growing with each new generation of GPU hardware and software.</p>
+<p>In a <a href="https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report_2023.pdf">recent report</a>, Stanford University’s Human-Centered AI group estimated GPU performance “has increased roughly 7,000 times” since 2003, and price per performance is “5,600 times greater.”</p>
+<figure id="attachment_71558" aria-describedby="caption-attachment-71558" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-scaled.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-71558" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-672x377.jpg" alt="Chart depicts relationships among various data center energy efficiency graphics" width="672" height="377" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-672x377.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-768x431.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-1536x863.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-801x450.jpg 801w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-383x215.jpg 383w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-1280x719.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71558" class="wp-caption-text">Data centers need a suite of benchmarks to track energy efficiency across their major workloads.</figcaption></figure>
+<h2><b>Two Experts Weigh In</b></h2>
+<p>Experts see the need for a new energy-efficiency metric, too.</p>
+<p>With today’s data centers achieving scores around 1.2 PUE, the metric “has run its course,” said Christian Belady, a data center engineer who had the original idea for PUE. “It improved data center efficiency when things were bad, but two decades later, they’re better, and we need to focus on other metrics more relevant to today’s problems.”</p>
+<p>Looking forward, “the holy grail is a performance metric. You can’t compare different workloads directly, but if you segment by workloads, I think there is a better likelihood for success,” said Belady, who continues to work on initiatives driving data center sustainability.</p>
+<p>Jonathan Koomey, a researcher and author on computer efficiency and sustainability, agreed.</p>
+<p>“To make good decisions about efficiency, data center operators need a suite of benchmarks that measure the energy implications of today’s most widely used AI workloads,” said Koomey.</p>
+<p>“Tokens per joule is a great example of what one element of such a suite might be,” Koomey added. “Companies will need to engage in open discussions, share information on the nuances of their own workloads and experiments, and agree to realistic test procedures to ensure these metrics accurately characterize energy use for hardware running real-world applications.”</p>
+<p>“Finally, we need an open public forum to conduct this important work,” he said.</p>
+<h2><b>It Takes a Village</b></h2>
+<p>Thanks to metrics like PUE and rankings like the Green500, data centers and supercomputing centers have made enormous progress in energy efficiency.</p>
+<p>More can and must be done to extend efficiency advances in the age of generative AI. Metrics of energy consumed doing useful work on today’s top applications can take supercomputing and data centers to a new level of energy efficiency.</p>
+<p><i>To learn more about available energy-efficiency solutions, explore</i><a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/"> <i>NVIDIA sustainable computing</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Concepts-for-a-data-cetner-energy-efficieicny-metric-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1091"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Concepts-for-a-data-cetner-energy-efficieicny-metric-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Dial It In: Data Centers Need New Metric for Energy Efficiency]]></media:title>
+			<media:description type="html">Concept image of data center energy efficiency metrics</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Through the Wormhole: Media.Monks’ Vision for Enhancing Media and Marketing With AI</title>
 		<link>https://blogs.nvidia.com/blog/media-monks-ai-podcast/</link>
 		
@@ -34,7 +332,7 @@
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Meet Media.Monks’ Wormhole, an alien-like, conversational robot with a quirky personality and the ability to offer keen marketing expertise. Lewis Smithingham, senior vice president of innovation and special ops at Media.Monks, a global marketing and advertising company, discusses the creation of Wormhole and AI’s potential to enhance media and entertainment with host Noah Kravitz in this <a href="https://soundcloud.com/theaipodcast">AI Podcast</a> episode recorded live at the <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> global AI conference. Wormhole was designed to showcase Monks.Flow, an AI-powered platform that streamlines marketing and content creation workflows. Smithingham delves into Media.Monks’ platforms for media, entertainment and advertising and speaks to its vision for a future where AI enhances creativity and allows for more personalized, scalable content creation.</p>
 <p>Stay tuned for more episodes recorded live from GTC, and hear more from Smithingham in this <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-ep64041/">GTC interview</a>.</p>
-<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1816942410&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1816942410&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
 <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Media.Monks’ Lewis Smithingham on Enhancing Media and Marketing With AI - Ep. 222" href="https://soundcloud.com/theaipodcast/mediamonks-lewis-smithingham" target="_blank" rel="noopener">Media.Monks’ Lewis Smithingham on Enhancing Media and Marketing With AI &#8211; Ep. 222</a></div>
 <h2>Time Stamps</h2>
 <p>1:45: What is Media.Monks?<br />
@@ -100,7 +398,7 @@
 <p>Meet a cast of unique characters and explore diverse planets, each with its own mysteries to uncover. Assemble formidable teams, strategically deploying skills and resources to overcome mighty adversaries and unravel the mysteries of the Honkai phenomenon. Encounter new civilizations and face off against threats that endanger the Astral Express, overcome the struggles caused by Stellaron together, powerful artifacts that hold the keys to the universe’s fate.</p>
 <p>Begin the trailblazing journey without needing to wait for downloads or game updates with GeForce NOW. Members who’ve opted into <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW’s Rewards program</a> will receive an email with a code for a <i>Honkai: Star Rail</i> starter kit, containing 30,000 credits, three Refined Aethers and three Traveler’s Guides. All aboard the Astral Express for adventures and thrills!</p>
 <h2><b>A Big Cloud for New Games </b></h2>
-<figure id="attachment_71533" aria-describedby="caption-attachment-71533" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-71533" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-672x336.jpg" alt="Little Kitty Big City on GeForce MEOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71533" class="wp-caption-text"><em>Stream it on GeForce MEOW.</em></figcaption></figure>
+<figure id="attachment_71533" aria-describedby="caption-attachment-71533" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71533" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-672x336.jpg" alt="Little Kitty Big City on GeForce MEOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-little-kitty-big-city-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71533" class="wp-caption-text"><em>Stream it on GeForce MEOW.</em></figcaption></figure>
 <p>Do what cats do best in <i>Little Kitty, Big City</i>, the open-world adventure game from Double Dagger Studios. Explore the city as a curious little kitty with a big personality, make new friends with stray animals, and wear delightful little hats. Create a little bit of chaos finding the way back home throughout the big city.</p>
 <p>Here’s the full list of new games this week:</p>
 <ul>
@@ -152,7 +450,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Now’s the time to hop aboard AI, NVIDIA founder and CEO Jensen Huang declared Wednesday as ServiceNow unveiled a demo of futuristic AI avatars together with NVIDIA during a keynote at the Knowledge 24 conference in Las Vegas.</p>
 <p>&#8220;If something is moving a million times faster every 10 years, what should you do?” Huang asked, citing rapid advancements in AI capabilities. &#8220;The first thing you should do is instead of looking at the train, from the side is … get on the train, because on the train, it&#8217;s not moving that fast.”</p>
 <p>The demo — built on NVIDIA NIM inference microservices and NVIDIA <a href="https://developer.nvidia.com/ace">Avatar Cloud Engine</a>, or ACE, speech and animation generative AI technologies, all available with <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software — highlighted how AI advancements support cutting-edge digital avatar communications and have the potential to revolutionize customer service interactions.</p>
-<p><img decoding="async" class="aligncenter size-full wp-image-71521" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3.jpg" alt="" width="1115" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3.jpg 1115w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-400x179.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-672x301.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-768x344.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-842x378.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-406x182.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-188x84.jpg 188w" sizes="(max-width: 1115px) 100vw, 1115px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-71521" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3.jpg" alt="" width="1115" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3.jpg 1115w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-400x179.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-672x301.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-768x344.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-842x378.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-406x182.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/servicenow3-188x84.jpg 188w" sizes="(max-width: 1115px) 100vw, 1115px" /></p>
 <p>The demo showed a customer who was struggling with a slow internet connection interacting with a digital avatar. The AI customer service avatar comes to the rescue &#8211;  swiftly diagnoses the problem, offers an option for a faster internet connection, confirms the customer’s credit card number and upgrades their internet connection immediately.</p>
 <p>The futuristic demonstration took place in front of thousands of conference attendees who were eager to learn about the latest enterprise generative AI technology advancements, which promise to empower workers across the globe.</p>
 <p>&#8220;We&#8217;ve transitioned from instruction-driven computer coding, which very few people can do, to intention-driven computing, which is connecting with somebody through intention,&#8221; Huang said during an on-stage conversation at the conference with ServiceNow Chief Operating Officer Chirantan “CJ” Desai.</p>
@@ -886,295 +1184,6 @@
 			height="351"
 			/>
 			<media:title type="html"><![CDATA[SEA.AI Navigates the Future With AI at the Helm]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>AI Drives Future of Transportation at Asia’s Largest Automotive Show</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-partners-auto-china/</link>
-		
-		<dc:creator><![CDATA[Danny Shapiro]]></dc:creator>
-		<pubDate>Fri, 26 Apr 2024 01:30:38 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Isaac]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71295</guid>
-
-					<description><![CDATA[The latest trends and technologies in the automotive industry are in the spotlight at the Beijing International Automotive Exhibition, aka Auto China, which opens to the public on Saturday, April 27. An array of NVIDIA auto partners is embracing this year’s theme, “New Era, New Cars,” by making announcements and showcasing their latest offerings powered		<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-partners-auto-china/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>The latest trends and technologies in the automotive industry are in the spotlight at the Beijing International Automotive Exhibition, aka Auto China, which opens to the public on Saturday, April 27.</p>
-<p>An array of NVIDIA auto partners is embracing this year’s theme, “New Era, New Cars,” by making announcements and showcasing their latest offerings powered by <a href="https://developer.nvidia.com/drive">NVIDIA DRIVE</a>, the platform for AI-defined vehicles.</p>
-<h2><b>NVIDIA Auto Partners Announce New Vehicles and Technologie</b><b>s</b></h2>
-<figure id="attachment_71339" aria-describedby="caption-attachment-71339" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680.png"><img loading="lazy" decoding="async" class="wp-image-71339 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_car_kv_social_1280_680.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71339" class="wp-caption-text">Image courtesy of JIYUE.</figcaption></figure>
-<p>Electric vehicle (EV) makers <b>Chery</b> (booth E107) and <b>JIYUE </b>(booth W206), a joint venture between Baidu and Geely (booth W204), announced they have adopted the next-generation <a href="https://www.nvidia.com/en-us/self-driving-cars/in-vehicle-computing/" target="_blank" rel="noopener">NVIDIA DRIVE Thor</a> centralized car computer.</p>
-<p>DRIVE Thor <a href="https://nvidianews.nvidia.com/news/nvidia-drive-powers-next-generation-transportation" target="_blank" rel="noopener">will integrate</a> the new <a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/" target="_blank" rel="noopener">NVIDIA Blackwell</a> GPU architecture, designed for <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/" target="_blank" rel="noopener">transformer</a>, <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language model</a> and <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> workloads.</p>
-<p>In addition, a number of automakers are building next-gen vehicles on NVIDIA DRIVE Orin, including:</p>
-<p><b>smart</b>, a joint venture between Mercedes-Benz and Geely, previewed its largest and most spacious model to date, an electric SUV called #5. It will be built on its Pilot Assist 3.0 intelligent driving-assistance platform, powered by <a href="https://www.nvidia.com/en-us/self-driving-cars/in-vehicle-computing/" target="_blank" rel="noopener">NVIDIA DRIVE Orin</a>, which supports point-to-point automatic urban navigation. smart #5 will be available for purchase in the second half of this year. smart will be at booth E408.</p>
-<figure id="attachment_71441" aria-describedby="caption-attachment-71441" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-scaled.jpg"><img loading="lazy" decoding="async" class="wp-image-71441 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/04/NIO-booth-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71441" class="wp-caption-text">NIO&#8217;s booth at Auto China.</figcaption></figure>
-<p><b></b><b>NIO</b>, a pioneer in the premium smart EV market, unveiled its updated ET7 sedan, featuring upgraded cabin intelligence and smart-driving capabilities. NIO also showcased its 2024 ET5 and ES7. All 2024 models are equipped with four NVIDIA DRIVE Orin systems-on-a-chip (SoCs). Intelligent-driving capabilities in urban areas will fully launch soon. NIO will be at booth E207.</p>
-<figure id="attachment_71348" aria-describedby="caption-attachment-71348" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680.png"><img loading="lazy" decoding="async" class="wp-image-71348 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/GWM_kv_social_1280_680.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71348" class="wp-caption-text">Image courtesy of GWM.</figcaption></figure>
-<p><b>GWM </b>revealed the WEY Blue Mountain (Lanshan) Intelligent Driving Edition, its luxury, high-end SUV. This upgraded vehicle is built on GWM’s Coffee Pilot Ultra intelligent-driving system, powered by NVIDIA DRIVE Orin, and can support features such as urban navigate-on-autopilot (NOA) and cross-floor memory parking. GWM will be at booth E303.</p>
-<p><b>XPENG</b>, a designer and manufacturer of intelligent EVs, announced that it is streamlining the design workflow of its flagship XPENG X9 using the <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse</a> platform. In March, XPENG announced it will adopt NVIDIA DRIVE Thor for its next-generation EV fleets. XPENG will be at booth W402.</p>
-<h2><b>Innovation on Display</b></h2>
-<p>On the exhibition floor, NVIDIA partners are showcasing their NVIDIA DRIVE-powered vehicles:</p>
-<figure id="attachment_71351" aria-describedby="caption-attachment-71351" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680.png"><img loading="lazy" decoding="async" class="wp-image-71351 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/BYD_kv_social_1280_680.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71351" class="wp-caption-text">Image courtesy of BYD.</figcaption></figure>
-<p><b>BYD</b>, <b>DENZA</b> and <b>YANGWANG</b> are featuring their latest vehicles built on NVIDIA DRIVE Orin. The largest EV maker in the world, BYD is building both its Ocean and Dynasty series on NVIDIA DRIVE Orin. In addition, BYDE, a subsidiary of BYD, will tap into the <a href="https://developer.nvidia.com/isaac" target="_blank" rel="noopener">NVIDIA Isaac</a> and NVIDIA Omniverse platforms to develop tools and applications for virtual factory planning and retail configurators. BYD will be at booth W106, DENZA at W408 and YANGWANG at W105.</p>
-<p><b>DeepRoute.ai </b>is showcasing its new intelligent driving-platform, DeepRoute IO, and highlighting its end-to-end model. Powered by NVIDIA DRIVE Orin, the first mass-produced car built on DeepRoute IO will focus on assisted driving and parking. DeepRoute.ai will be at booth W4-W07.</p>
-<p><b>Hyper</b>, a luxury brand owned by GAC AION, is displaying its latest Hyper GT and Hyper HT models, powered by NVIDIA DRIVE Orin. These vehicles feature advanced <a href="https://blogs.nvidia.com/blog/whats-difference-level-2-level-5-autonomy/" target="_blank" rel="noopener">level 2+</a> driving capabilities in high-speed environments. Hyper recently announced it selected DRIVE Thor for its next-generation EVs with level 4 driving capabilities. Hyper will be at booth W310.</p>
-<p><b>IM Motors </b>is exhibiting the recently launched L6 Super Intelligent Vehicle. The entire lineup of the IM L6 is equipped with NVIDIA DRIVE Orin to power intelligent driving abilities, including urban NOA features. IM Motors will be at booth W205.</p>
-<p><b>Li Auto </b>is showcasing its recently released L6 model, as well as L7, L8, L9 and MEGA. Models equipped with Li Auto’s AD Max system are powered by dual NVIDIA DRIVE Orin SoCs, which help bring ever-upgrading intelligent functionality to Li Auto’s NOA feature. Li Auto will be at booth E405.</p>
-<figure id="attachment_71345" aria-describedby="caption-attachment-71345" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680.png"><img loading="lazy" decoding="async" class="wp-image-71345 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/lotus_emeya_kv_social_1280_680.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71345" class="wp-caption-text">Image courtesy of Lotus.</figcaption></figure>
-<p><b>Lotus</b> is featuring a full range of vehicles, including the Emeya electric hyper-GT powered by NVIDIA DRIVE Orin. Lotus will be at booth E403.</p>
-<p><b>Mercedes-Benz </b>is exhibiting its Concept CLA Class, the first car to be developed on the all-new Mercedes-Benz Modular Architecture. The Concept CLA Class fully runs on MB.OS, which handles infotainment, automated driving, comfort and charging. Mercedes-Benz will be at booth E404.</p>
-<p><b>Momenta </b>is rolling out a new NVIDIA DRIVE Orin solution to accelerate commercialization of urban NOA capabilities at scale.</p>
-<figure id="attachment_71445" aria-describedby="caption-attachment-71445" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-scaled.jpg"><img loading="lazy" decoding="async" class="wp-image-71445 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Polestar-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71445" class="wp-caption-text">The Polestar 3.</figcaption></figure>
-<p><b>Polestar </b>is featuring the Polestar 3, the Swedish car manufacturer’s battery electric mid-size luxury crossover SUV powered by DRIVE Orin. Polestar will be at booth E205.</p>
-<p><b>SAIC R Motors </b>is showcasing the Rising Auto R7 and F7 powered by NVIDIA DRIVE Orin at booth W406.</p>
-<figure id="attachment_71448" aria-describedby="caption-attachment-71448" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-scaled.jpeg"><img loading="lazy" decoding="async" class="wp-image-71448 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-672x448.jpeg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-672x448.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-400x267.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-768x512.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-1536x1024.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-675x450.jpeg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-323x215.jpeg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-150x100.jpeg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/04/Volvo-EX90-1280x853.jpeg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71448" class="wp-caption-text">The Volvo EX90.</figcaption></figure>
-<p><span><strong>Volvo</strong> is displaying the NVIDIA DRIVE Orin-powered Volvo EX90 during the press exhibition.</span></p>
-<figure id="attachment_71437" aria-describedby="caption-attachment-71437" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-scaled.jpg"><img loading="lazy" decoding="async" class="wp-image-71437 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Chery-ET-and-ES-at-WeRide-booth-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71437" class="wp-caption-text">The Chery ET and ES at the WeRide booth.</figcaption></figure>
-<p><b>WeRide</b> is exhibiting Chery’s Exeed Sterra ET SUV and ES sedan, both powered by NVIDIA DRIVE Orin. The vehicles demonstrate progress made by Bosch and WeRide on level 2 to level 3 autonomous-driving technology. WeRide will be at booth E1-W04.</p>
-<p><b>Xiaomi </b>is displaying its NVIDIA DRIVE Orin-powered SU7 and “Human x Car x Home” smart ecosystem, designed to seamlessly connect people, cars and homes, at booth W203.</p>
-<p><b>ZEEKR</b> unveiled its SEA-M architecture and is showcasing the ZEEKR 007 powered by NVIDIA DRIVE Orin at booth E101.</p>
-<p>Auto China runs through Saturday, May 4, at the China International Exhibition Center in Beijing.</p>
-<p><em>Learn more about the <a href="https://developer.nvidia.com/drive" target="_blank" rel="noopener">industry-leading designs and technologies</a> NVIDIA is developing with its automotive partners.</em></p>
-<p><em>Featured image courtesy of JIYUE.</em></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_announcement_1280_680.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/jiyue_announcement_1280_680-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[AI Drives Future of Transportation at Asia’s Largest Automotive Show]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Blast From the Past: Stream ‘StarCraft’ and ‘Diablo’ on GeForce NOW</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-more-battle-net-games/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 25 Apr 2024 13:00:59 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71301</guid>
-
-					<description><![CDATA[Support for Battle.net on GeForce NOW expands this GFN Thursday, as titles from the iconic StarCraft and Diablo series come to the cloud. StarCraft Remastered, StarCraft II, Diablo II: Resurrected and Diablo III are part of 16 new games joining the GeForce NOW library of more than 1,900 titles. Plus, a new update rolling out		<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-more-battle-net-games/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Support for Battle.net on <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> expands this GFN Thursday, as titles from the iconic <i>StarCraft </i>and <i>Diablo</i> series come to the cloud.</p>
-<p><i>StarCraft Remastered, StarCraft II,</i> <i>Diablo II: Resurrected</i> and<i> Diablo III</i> are part of 16 new games joining the GeForce NOW <a href="https://www.nvidia.com/en-us/geforce-now/games/">library</a> of more than 1,900 titles.</p>
-<p>Plus, a <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5225">new update</a> rolling out for members this week brings AV1 streaming to Mac M3 computers. This feature will improve game-streaming quality for members on M3, M3 Pro and M3 Max devices.</p>
-<h2><b>Plenty of Space in Hell</b></h2>
-<p>Dive into the original Blizzard games that set the stage for real-time strategy and action role-playing games (RPGs). <i>StarCraft Remastered, StarCraft II, Diablo II: Resurrected </i>and<i> Diablo III </i>bring galactic warfare, epic quests and legendary battles to the cloud.</p>
-<figure id="attachment_71305" aria-describedby="caption-attachment-71305" style="width: 640px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-71305" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/ss1-l.jpg" alt="StarCraft Remastered on GeForce NOW" width="640" height="480" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/ss1-l.jpg 640w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ss1-l-400x300.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ss1-l-600x450.jpg 600w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ss1-l-287x215.jpg 287w, https://blogs.nvidia.com/wp-content/uploads/2024/04/ss1-l-133x100.jpg 133w" sizes="(max-width: 640px) 100vw, 640px" /><figcaption id="caption-attachment-71305" class="wp-caption-text"><em>Oh my Zerg.</em></figcaption></figure>
-<p>In <i>StarCraft Remastered</i>, command one of three races — Terran, Zerg or Protoss — as they desperately struggle for survival. Build bases, gather resources and engage in intense battles using unique units and strategies.</p>
-<figure id="attachment_71308" aria-describedby="caption-attachment-71308" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71308" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/SC2-10thAnniversary_CampaignAchiev_LegacyOfTheVoid.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71308" class="wp-caption-text"><i>Time to Plyon to the cloud.</i></figcaption></figure>
-<p>Continue the saga with <i>StarCraft II,</i> with enhanced graphics and extended storytelling. Save the galaxy from emergent threats in full-length Terran, Zerg and Protoss campaigns. Take charge of all multiplayer units solo in Versus Mode, team up with a friend for Co-Op Missions or explore community-created game modes in the Arcade.</p>
-<figure id="attachment_71311" aria-describedby="caption-attachment-71311" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71311" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/reaper-of-souls-08-large-672x378.jpg" alt="Diablo III on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/reaper-of-souls-08-large-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/reaper-of-souls-08-large-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/reaper-of-souls-08-large-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/04/reaper-of-souls-08-large-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/04/reaper-of-souls-08-large.jpg 704w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71311" class="wp-caption-text"><em>The fires of hell heat up the cloud once again.</em></figcaption></figure>
-<p>In <i>Diablo III</i>, become a hero to battle the forces of darkness, uncover ancient secrets and face powerful foes in the action RPG set in the world of Sanctuary. With various character classes, intense combat and a rich loot system, members can experience a gripping single-player experience and cooperative multiplayer adventures.</p>
-<figure id="attachment_71314" aria-describedby="caption-attachment-71314" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71314" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/diablo_ii_resurrected-section1-feature1-672x378.jpg" alt="Diablo II on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/diablo_ii_resurrected-section1-feature1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/diablo_ii_resurrected-section1-feature1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/diablo_ii_resurrected-section1-feature1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/diablo_ii_resurrected-section1-feature1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/04/diablo_ii_resurrected-section1-feature1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/04/diablo_ii_resurrected-section1-feature1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/04/diablo_ii_resurrected-section1-feature1.jpg 960w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71314" class="wp-caption-text"><em>Remastered goodness.</em></figcaption></figure>
-<p>Pursue the mysterious Dark Wanderer and battle the denizens of hell in the remastered action RPG <i>Diablo II: Resurrected</i>. The title’s classic Diablo gameplay — enhanced with stunning 3D visuals for all the environments, characters and monsters — enable a nostalgic, high-quality return to hell.</p>
-<p>Stream all the action at up to 4K resolution or up to 240 frames per second with an <a href="http://geforcenow.com">Ultimate membership</a>. These top games join the Battle.net games <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-battlenet-march-games-list/">first added</a> to GeForce NOW, including <i>Diablo IV, Overwatch 2, Call of Duty HQ </i>and <i>Hearthstone.</i></p>
-<h2><b>Remember the Cloud</b></h2>
-<figure id="attachment_71317" aria-describedby="caption-attachment-71317" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71317" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-672x336.jpg" alt="Remnant II DLC on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-remnant-2-dlc-the-forgotten-kingdomtw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71317" class="wp-caption-text"><em>Unrelenting odds are no problem for the cloud.</em></figcaption></figure>
-<p>The second downloadable content (DLC) for Ark Games’ <i>Remnant II</i> is available for members to stream. Experience a brand-new storyline, area, weapons, bosses and more in <i>The Forgotten Kingdom</i>.</p>
-<p>Piece together the forgotten history of the lost tribe of Yaesha in an attempt to quell the vengeful wrath of Lydusa, an ancient stone spirit. Navigate the lingering traces of torment, treachery and death that haunt the land’s once-proud ziggurats. Traverse new dungeons, acquire powerful gear — including a new Archetype, “The Invoker” — meet unexpected allies and face new threats to return a semblance of peace to the forgotten kingdom.</p>
-<p>GeForce NOW members will be able to stream the DLC without waiting around for downloads. Uncover the secrets of the lost tribe with an Ultimate membership for eight-hour gaming sessions and support for ultrawide resolutions.</p>
-<h2><b>New Adventures</b></h2>
-<figure id="attachment_71320" aria-describedby="caption-attachment-71320" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71320" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-672x336.jpg" alt="Manor Lords on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-spotlight-manor-lords-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71320" class="wp-caption-text"><em>Grow from a humble hamlet to a hub for the kingdom in “Manor Lords.”</em></figcaption></figure>
-<p>Guide a medieval village as it grows into a bustling city in <i>Manor Lords</i>, streaming this week on GeForce NOW. Manage resources and production chains in this historically accurate city builder while expanding the land through large-scale tactical battles.</p>
-<p>Check out the full list of new games this week:</p>
-<ul>
-<li><i>Dead Island 2 </i>(New release on <a href="https://store.steampowered.com/app/934700?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 22)</li>
-<li><i>Bellwright </i>(New release on <a href="https://store.steampowered.com/app/1812450?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 23)</li>
-<li><i>Phantom Fury </i>(New release on <a href="https://store.steampowered.com/app/1733240?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 23)</li>
-<li><i>Oddsparks: An Automation Adventure </i>(New release on <a href="https://store.steampowered.com/app/1817800?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 24)</li>
-<li><i>Age of Water </i>(New release on <a href="https://store.steampowered.com/app/2695490?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, April 25)</li>
-<li><i>Manor Lords </i>(New release on <a href="https://store.steampowered.com/app/1363080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.microsoft.com/p/manor-lords-game-preview/9p5f966564fs?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, April 26, available on PC Game Pass)</li>
-<li><i>9-Bit Armies: A Bit Too Far </i>(<a href="https://store.steampowered.com/app/1439750?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Diablo II: Resurrected </i>(<a href="https://shop.battle.net/product/diablo-ii?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
-<li><i>Diablo III </i>(<a href="https://shop.battle.net/product/diablo-iii?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
-<li><i>Dragon’s Dogma 2 Character Creator &amp; Storage </i>(<a href="https://store.steampowered.com/app/2674810?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Islands of Insight </i>(<a href="https://store.steampowered.com/app/2071500?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Metaball </i>(<a href="https://store.steampowered.com/app/2215910?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>StarCraft Remastered </i>(<a href="https://shop.battle.net/product/starcraft-remastered?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
-<li><i>StarCraft II </i>(<a href="https://shop.battle.net/product/starcraft-ii?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
-<li><i>Stargate: Timekeepers </i>(<a href="https://store.steampowered.com/app/1523650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Tortuga &#8211; A Pirate’s Tale </i>(<a href="https://store.steampowered.com/app/1604250/Tortuga__A_Pirates_Tale/">Steam</a>)<i></i></li>
-</ul>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">The last thing in your hand is your weapon against the final boss, what item is it? <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/2694.png" alt="⚔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1783163993302900757?ref_src=twsrc%5Etfw">April 24, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-thursday-4-25-nv-blog-1280x680-no-copy.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/gfn-thursday-4-25-nv-blog-1280x680-no-copy-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Blast From the Past: Stream ‘StarCraft’ and ‘Diablo’ on GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Into the Omniverse: Unlocking the Future of Manufacturing With OpenUSD on Siemens Teamcenter X</title>
-		<link>https://blogs.nvidia.com/blog/siemens-unlocks-future-of-manufacturing-with-openusd/</link>
-		
-		<dc:creator><![CDATA[Madison Huang]]></dc:creator>
-		<pubDate>Thu, 25 Apr 2024 13:00:28 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Into the Omniverse]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Universal Scene Description]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71325</guid>
-
-					<description><![CDATA[OpenUSD integration into Siemens technologies powers a new wave of industrial digitalization.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of </i><a href="https://www.nvidia.com/en-us/omniverse/news/"><i>Into the Omniverse</i></a><i>, a series focused on how artists, developers and enterprises can transform their workflows using the latest advances in </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>OpenUSD</i></a><i> and </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>NVIDIA Omniverse</i></a><i>.</i></p>
-<p><a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description</a>, aka OpenUSD, is elevating the manufacturing game. Siemens, a leader in industrial technology, <a href="https://www.nvidia.com/en-us/industries/industrial-sector/siemens/">has embraced OpenUSD</a> as a cornerstone of its digital transformation journey, using it to help bridge the gap between physical and virtual worlds.</p>
-<p>Siemens is adding support for <a href="https://blogs.nvidia.com/blog/siemens-immersive-visualization-generative-ai/">OpenUSD in its Siemens Xcelerator</a> platform applications, starting with <a href="https://plm.sw.siemens.com/en-US/teamcenter/teamcenter-x-cloud-plm/"><span>Teamcenter X software</span></a>.</p>
-<p>The integration empowers manufacturers to create photorealistic, robust <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/">digital twins</a> that mirror real-world counterparts with unprecedented fidelity and efficiency. This allows for optimized resource utilization, minimized waste and enhanced product quality through comprehensive simulation and analysis — all of which align with sustainability and quality objectives.</p>
-<p>For a company such as Siemens — one whose software touches all parts of the manufacturing cycle — digitalization can <span>mean helping customers save time and costs</span>, streamline workflows and reduce risk of manufacturing defects.</p>
-<p>Ian Fisher, a member of <a href="https://www.sw.siemens.com/en-US/" target="_blank" rel="noopener">Siemens Digital Industries Software</a> team, is no stranger to the impact of embracing digital transformation — especially one powered by OpenUSD and <a href="https://www.nvidia.com/en-us/glossary/generative-ai/#:~:text=Generative%20AI%20enables%20users%20to,on%20a%20variety%20of%20inputs.">generative AI</a>.</p>
-<p>“We are an industrial company where data is king,” he said. “OpenUSD comes in from the media side of the world, and we are looking to bring its openness and flexibility into the industrial world.”</p>
-<p>Enterprises of all sizes depend on Siemens’ Teamcenter software, part of the Siemens Xcelerator platform, to develop and deliver products at scale. By connecting <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> — a platform of APIs and services based on OpenUSD — with Teamcenter X, Siemens’ cloud-based product lifecycle management software, engineering teams can make their physics-based digital twins more photorealistic and immersive, improving accuracy and minimizing waste and errors within workflows.</p>
-<p><img loading="lazy" decoding="async" class="size-full wp-image-71329 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/04/ss060_comp_v01-ezgif.com-video-to-gif-converter.gif" alt="" width="600" height="360" /></p>
-<p>Siemens’ adoption of OpenUSD means that companies like <a href="https://blogs.nvidia.com/blog/siemens-immersive-visualization-generative-ai/">HD Hyundai</a>, a leader in sustainable ship manufacturing, can consolidate and visualize complex engineering projects directly within Teamcenter X. Find out more in the demo:</p>
-<p><iframe loading="lazy" title="Siemens Teamcenter X Powered by NVIDIA Omniverse APIs" width="500" height="281" src="https://www.youtube.com/embed/rrb2tPHiLRo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>OpenUSD is touching other parts of Siemens as well. Siemens produces inverters, drive controllers and motors for more than 30,000 customers worldwide. Its lead electronics plant, <a href="https://assets.new.siemens.com/siemens/assets/api/uuid:50b2232d-7c93-4684-99af-2d532a52de9b/4681-SIE-BRO-GWE-Fly-A4-One-Pager-3_original.pdf" target="_blank" rel="noopener">GWE</a>, in Erlangen, Germany, has been developing use cases from AI-enabled computer vision for <a href="https://blogs.nvidia.com/blog/siemens-omniverse-replicator-aws-synthetic-data-generation/">defect detection</a> to training pick-and-place robots.</p>
-<p>One of their main challenges has been acquiring data to train the AI models that fuel these use cases. By building custom<a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/"> synthetic data generation</a> pipelines using Omniverse Replicator, powered by OpenUSD, the engineers were able to generate large sets of diverse training data by varying many parameters including color, texture, background, lighting and more — allowing them to not only bootstrap but also quickly iterate on their AI models.</p>
-<p>Committed to a future of widespread OpenUSD integration, Siemens was one of <a href="https://aousd.org/news/alliance-for-openusd-introduces-new-working-groups-and-liaison/" target="_blank" rel="noopener">eight new general members</a> that joined the <a href="https://aousd.org/" target="_blank" rel="noopener">Alliance for OpenUSD (AOUSD)</a> last month, an organization dedicated to interoperability of 3D content through standardization.</p>
-<p>Watch Fisher and other special guests discuss the impact of OpenUSD on industrial digitization workflows in this livestream replay:</p>
-<p><iframe loading="lazy" title="Industrial Design With OpenUSD and Generative AI" width="500" height="281" src="https://www.youtube.com/embed/y0RFntPwzvs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<h2><b>Get Plugged Into the World of OpenUSD</b></h2>
-<p>Siemens and OpenUSD took center stage this week at Hannover Messe, the world’s leading industrial trade fair. Siemens CEO Roland Busch and Rev Lebaredian, vice president of Omniverse and simulation technology at NVIDIA, <a href="https://www.linkedin.com/events/7182007244371165186/about/">shared their vision</a> on the potential of OpenUSD for customers in all industries.</p>
-<p>For more on how Siemens is using OpenUSD to build and test complex AI-based automation systems completely virtually, watch the replay of the GTC session, “<a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62338/?playlistId=playList-23a9dd33-3687-4ac8-8210-e21a79247079">Virtual Commissioning of AI Vision Systems With OpenUSD</a>.” All other sessions from GTC’s <a href="https://www.nvidia.com/en-us/on-demand/playlist/playList-68e1b334-b6b3-4195-b254-f1224f7260ea/">OpenUSD Day</a> are available for viewing on demand.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">Watch <a href="https://twitter.com/BuschRo?ref_src=twsrc%5Etfw">@BuschRo</a> and <a href="https://twitter.com/RevLebaredian?ref_src=twsrc%5Etfw">@RevLebaredian</a> discuss how <a href="https://twitter.com/hashtag/digitaltwins?src=hash&amp;ref_src=twsrc%5Etfw">#digitaltwins</a>, powered by <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> and <a href="https://twitter.com/hashtag/OpenUSD?src=hash&amp;ref_src=twsrc%5Etfw">#OpenUSD</a>, can drive productivity across all industries at <a href="https://twitter.com/hashtag/HM24?src=hash&amp;ref_src=twsrc%5Etfw">#HM24</a>.</p>
-<p>&mdash; NVIDIA Design &amp; Visualization (@NVIDIADesign) <a href="https://twitter.com/NVIDIADesign/status/1782434184474042615?ref_src=twsrc%5Etfw">April 22, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, access </i><a href="https://developer.nvidia.com/usd"><i>OpenUSD</i></a><i> resources and learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise</i><i> can connect team</i></a><i>s. Follow Omniverse on </i><a href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse"><i>X</i></a><i>. For more, join the </i><a href="https://www.nvidia.com/en-us/omniverse/community/"><i>Omniverse community</i></a><i> on the </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels. </i></p>
-<p><i>Featured image courtesy of Siemens, HD Hyundai.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/nv-ov-ito-1280x680_april2024_v2.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/nv-ov-ito-1280x680_april2024_v2-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Into the Omniverse: Unlocking the Future of Manufacturing With OpenUSD on Siemens Teamcenter X]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>What Is a Virtual Factory, and How They’re Making Industrial Digitalization a Reality</title>
-		<link>https://blogs.nvidia.com/blog/virtual-factories-industrial-digitalization/</link>
-		
-		<dc:creator><![CDATA[James McKenna]]></dc:creator>
-		<pubDate>Wed, 24 Apr 2024 15:00:40 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Retail]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71266</guid>
-
-					<description><![CDATA[To address the shift to electric vehicles, increased semiconductor demand, manufacturing onshoring, and ambitions for greater sustainability, manufacturers are investing in new factory developments and re-engineering their existing facilities. These projects often run over budget and schedule, due to complex and manual planning processes, legacy technology infrastructure, and disconnected tools, data and teams. Virtual factories		<a class="read-more" href="https://blogs.nvidia.com/blog/virtual-factories-industrial-digitalization/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>To address the shift to electric vehicles, increased semiconductor demand, manufacturing onshoring, and ambitions for greater sustainability, manufacturers are investing in new factory developments and re-engineering their existing facilities.</p>
-<p>These projects often run over budget and schedule, due to complex and manual planning processes, legacy technology infrastructure, and disconnected tools, data and teams.</p>
-<p>Virtual factories and digitalization address these challenges, and manufacturers are embracing them. A virtual factory, powered by technologies like <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/">digital twins, the </a><a href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a><a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/"> ecosystem</a> and <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, can enable new possibilities, from planning to operations.</p>
-<h2>What Is a Virtual Factory?</h2>
-<p>A virtual factory is a physically accurate representation of a real factory. These digital twins of factories allow manufacturers to model, simulate, analyze and optimize their production processes, resources and operations without the need for a physical prototype or pilot plant.</p>
-<h2>Benefits of Virtual Factories</h2>
-<p>Virtual factories unlock many benefits and possibilities for manufacturers, including:</p>
-<ul>
-<li><b>Streamlined Communication: </b>Instead of teams relying on in-person meetings and static planning documents for project alignment, virtual factories streamline communication and ensure that critical design and operations decisions are informed by the most current data.</li>
-<li><b>Contextualized Planning</b>: During facility design, construction and commissioning, virtual factories allow project stakeholders to visualize designs in the context of the entire facility and production process. Planning and operations teams can compare and verify built structures with the virtual designs in real time and decrease costs by identifying errors and incorporating feedback early in the review process.</li>
-<li><b>Optimized Facility Designs: </b>Connecting virtual factories to simulations of processes and discrete events enables teams to optimize facility designs for production and material flow, ergonomic work design, safety and overall utilization.</li>
-<li><b>Intelligent and Optimized Operations: </b>Operations teams can integrate their virtual factories with valuable production data from Internet of Things technology at the <a href="https://blogs.nvidia.com/blog/what-is-edge-computing/">edge</a>, and tap AI to drive further optimizations.</li>
-</ul>
-<h2>Virtual Factories: A Testing Ground for AI and Robotics</h2>
-<p>Robotics developers are increasingly using virtual factories to train and test AI and autonomous systems that run in physical factories. For example, virtual factories can enable developers and manufacturing teams to simulate digital workers and <a href="https://blogs.nvidia.com/blog/isaac-amr-nova-orin-autonomous-mobile-robots/">autonomous mobile robots</a> (AMRs), vision AI agents and sensors to create a centralized map of worker activity throughout a facility. By fusing data from simulated camera streams with multi-camera tracking, developers can generate occupancy maps that inform optimal AMR routes.</p>
-<p>Developers can also use these physically accurate virtual factories to train and test AI agents capable of managing their robot fleets, to ensure AI-enabled robots can adapt to real-world unpredictability and to identify streamlined configurations for human-robot collaboration.</p>
-<p><iframe loading="lazy" title="Fusing Real-Time AI With Digital Twins" width="500" height="281" src="https://www.youtube.com/embed/l5M4sqaRd6w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<h2>What Are the Foundations of a Virtual Factory</h2>
-<p>Building large-scale, physically accurate virtual factories that unlock these transformational possibilities requires bringing together many tools, data formats and technologies to harmonize the representation of real-world aspects in the digital world.</p>
-<p>Originally invented by Pixar Animation Studios, <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a> encompasses a collection of tools and capabilities that enable the data interoperability developers and manufacturers require to achieve their digitalization goals.</p>
-<p>OpenUSD’s core superpower is flexible data modeling. 3D input can be accepted from source applications and combined with a variety of data, including from computer-aided design software, live sensors, documentation and maintenance records, through a unified data pipeline. OpenUSD enables developers to share these data types across different simulation tools and AI models, providing insights for all stakeholders. Data can be synced from the factory floor to the digital twin, surfacing real-time insights for factory managers and teams.</p>
-<p>By developing virtual factory solutions on OpenUSD, developers can enhance collaboration for factory teams, allowing them to review plans, discuss optimization opportunities and make decisions in real time.</p>
-<p>To support and accelerate the development of the OpenUSD ecosystem, Pixar, Adobe, Apple, Autodesk and NVIDIA formed the <a href="https://aousd.org/">Alliance for OpenUSD</a>, which is building open standards for USD in core specification, materials, geometry and more.</p>
-<h2>Industrial Use Cases for Virtual Factories</h2>
-<p>To unlock the potential of virtual factories, industry leaders including Autodesk, Continental, Pegatron, Rockwell Automation, Siemens and Wistron are developing virtual-factory solutions that interoperate with OpenUSD and <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform of application programming interfaces (APIs) and software development kits that enable developers to build applications for complex 3D and industrial digitalization workflows based on OpenUSD.</p>
-<p><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62639/">FlexSim</a>, an Autodesk company, uses OpenUSD to enable factory teams to analyze, visualize and optimize real-world processes with its simulation modeling for complex systems and operations. The discrete-event simulation software provides an intuitive drag-and-drop interface to create 3D simulation models, account for real-world variability, run “what-if” scenarios and perform in-depth analyses.</p>
-<p>Developers at <a href="https://www.continental.com/en/" target="_blank" rel="noopener">Continental</a>, a leading German automotive technology company, developed <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62919/">ContiVerse</a>, a factory planning and manufacturing operations application on OpenUSD and NVIDIA Omniverse. The application helps Continental optimize factory layouts and plan production processes collaboratively, leading to an expected 13% reduction in time to market.<a href="https://www.pegatroncorp.com/"> </a></p>
-<p>Partnering with IT consulting and digital services provider <a href="https://www.softserveinc.com/en-us">SoftServe</a>, Continental also developed <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61799/">Industrial Co-Pilot</a>, which combines AI-driven insights with immersive visualization to deliver real-time guidance and predictive analytics to engineers. This is expected to reduce maintenance effort and downtime by 10%.</p>
-<p><a href="https://www.pegatroncorp.com/" target="_blank" rel="noopener">Pegatron</a>, one of the world’s largest manufacturers of smartphones and consumer electronics, is <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62553/">developing virtual-factory solutions</a> on OpenUSD to accelerate the development of new factories — as well as to minimize change orders, optimize operations and maximize production-line throughput in existing facilities.</p>
-<p><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62623/">Rockwell Automation</a> is integrating NVIDIA Omniverse Cloud APIs and OpenUSD with its <a href="https://www.demo3d.com/">Emulate3D</a> digital twin software to bring manufacturing teams data interoperability, live collaboration and physically based visualization for designing, building and operating industrial-scale digital twins of production systems.</p>
-<p><a href="https://www.siemens.com/global/en.html" target="_blank" rel="noopener">Siemens</a>, a leading technology company for automation, digitalization and sustainability and a member of the Alliance for OpenUSD, is adopting Omniverse Cloud APIs within its Siemens Xcelerator Platform, starting with Teamcenter X, the industry-leading cloud-based product lifecycle management software. This will help teams design, build and test next-generation products, manufacturing processes and factories virtually, before they’re built in the physical world.</p>
-<p><a href="https://www.wistron.com/en" target="_blank" rel="noopener">Wistron</a>, a leading global technology service provider and electronics manufacturer, is <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62600/">digitalizing new and existing factories</a> with OpenUSD. By developing virtual-factory solutions on NVIDIA Omniverse, Wistron enables its factory teams to collaborate remotely to refine layout configurations, optimize surface mount technology and in-circuit testing lines, and transform product-on-dock testing.</p>
-<p>With these solutions, Wistron has achieved a 51% boost in worker efficiency and 50% reduction in production process times. Layout optimization and real-time monitoring have decreased defect rates by 40%. And construction time on Wistron’s new <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/">NVIDIA DGX</a> factory was cut in half, from about five months to just two and a half months.</p>
-<p><iframe loading="lazy" title="Meet a Factory Digital Twin From Wistron" width="500" height="281" src="https://www.youtube.com/embed/OAdqXZGUb70?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>Learn more about developing advanced, generative AI-enabled virtual factory solutions at the <a href="https://www.nvidia.com/en-us/use-cases/ai-for-virtual-factory-solutions/">Virtual Factory Use Case page</a>. Developers can get started with <a href="https://developer.nvidia.com/blog/developing-virtual-factory-solutions-with-openusd-and-nvidia-omniverse/">a reference architecture</a> that provides an overview of components and capabilities to consider when developing virtual-factory solutions.</p>
-<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, access </i><a href="https://developer.nvidia.com/usd"><i>OpenUSD</i></a><i> resources, and learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise</i><i> can connect your team</i></a><i>. Stay up to date on </i><a href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse"><i>X</i></a><i>. For more, join the </i><a href="https://www.nvidia.com/en-us/omniverse/community/"><i>Omniverse community</i></a><i> on the </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels. </i></p>
-<p><em>Featured visual courtesy of Siemens.</em></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/vfi-blog.jpg"
-			type="image/jpeg"
-			width="1920"
-			height="1020"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/vfi-blog-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[What Is a Virtual Factory, and How They’re Making Industrial Digitalization a Reality]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
