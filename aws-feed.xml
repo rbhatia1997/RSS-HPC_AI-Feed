@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Mon, 13 May 2024 05:55:13 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 13 May 2024 14:40:10 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,114 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Using machine learning to drive faster automotive design cycles</title>
+		<link>https://aws.amazon.com/blogs/hpc/using-machine-learning-to-drive-faster-automotive-design-cycles/</link>
+		
+		<dc:creator><![CDATA[Steven Miller]]></dc:creator>
+		<pubDate>Mon, 13 May 2024 14:40:10 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Amazon FSx for Lustre]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[visualization]]></category>
+		<guid isPermaLink="false">2c1df43a0e4299fe6554a7b7f672836e27c25a46</guid>
+
+					<description>Aerospace and automotive companies are speeding up their product design using AI. In this post we'll discuss how they're using machine learning to shift design cycles from hours to seconds using surrogate models.</description>
+										<content:encoded>&lt;p&gt;The automotive product engineering process involves months or years of iterative design reviews and refinement, with back-and-forth feedback between stakeholders regularly to adjust designs and evaluate the impact of design changes on engineering metrics like the coefficient of drag. Between each design iteration, engineers wait hours or days for simulations to complete, which means they can only execute a handful of design decisions each week.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll show how automakers can reduce cycle times from hours to seconds by leveraging surrogate machine-learning (ML) models in place of HPC, physics-based simulations and create subtle design variations for non-parametric geometries.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;In short&lt;/strong&gt;: automotive engineers can use emerging ML methodologies to speed up the product engineering process.&lt;/p&gt; 
+&lt;h2&gt;Background&lt;/h2&gt; 
+&lt;p&gt;Typically, the automotive product design process involves conceptualization, computer-aided design (CAD) geometry creation, and engineering simulations for validating the designs to ensure aerodynamic efficiency and desired structural stability.&lt;/p&gt; 
+&lt;p&gt;Recent advances in AI/ML and Generative AI technology including algorithms such as MeshGraphNets, U-Nets and Variational Autoencoders, have provided a path towards accelerating the design process through fast ML inferences which allow us to run fewer full-fidelity physics-based HPC simulations, which can take hours, while gathering insight into large design spaces.&lt;/p&gt; 
+&lt;p&gt;In this work, we’ll focus on computational fluid dynamics (CFD) simulations for intelligent aerodynamic surface design, though there are often other design considerations like impact response, noise, vibration and harshness.&lt;/p&gt; 
+&lt;p&gt;The goal of this work is &lt;em&gt;not&lt;/em&gt; to develop a comprehensive toolkit for aerodynamic design – we want to present a simple user experience to show how engineers can use scientific ML methods, together with AWS services to deliver business value. We’ll mainly use &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/hpc/dcv/"&gt;Nice DCV&lt;/a&gt;, &lt;a href="https://aws.amazon.com/pm/serv-s3/"&gt;Amazon S3&lt;/a&gt; and &lt;a href="https://aws.amazon.com/pm/sagemaker/"&gt;Amazon SageMaker&lt;/a&gt;. We’ll also explain how to build a web application that uses ML and generative design to enhance these development processes.&lt;/p&gt; 
+&lt;div id="attachment_3604" style="width: 857px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3604" class="size-full wp-image-3604" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.33.24.png" alt="Figure 1 – Overview of Workflow Structure incorporating Web Application UI overview, AI/ML Methodology and AWS Implementation" width="847" height="433"&gt;
+ &lt;p id="caption-attachment-3604" class="wp-caption-text"&gt;Figure 1 – Overview of Workflow Structure incorporating Web Application UI overview, AI/ML Methodology and AWS Implementation&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Roadmap for this post&lt;/h2&gt; 
+&lt;p&gt;Much like the workflow chart in Figure 1, we’ll divide this post into three parts.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;First&lt;/strong&gt;, we’ll start by explaining how to build a minimally viable web application including the end user experience and core components starting from an AWS architecture blueprint, highlighting some key components.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Next&lt;/strong&gt;, we’ll dive deep into the underlying ML models including the training methodology and inference deployment.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Finally&lt;/strong&gt;, we’ll wrap up with a brief discussion about how we imagine automakers using workflows like this in practice to augment and accelerate the product design lifecycles.&lt;/p&gt; 
+&lt;h2&gt;Cloud implementation and AWS architecture&lt;/h2&gt; 
+&lt;p&gt;Let’s look at how to quickly and securely implement a minimally-viable web application. Using that, we’ll generate ground truth meshes, run OpenFOAM simulations, and train the machine learning models using AWS HPC services.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;AWS architecture.&lt;/strong&gt; We don’t want to completely replace HPC simulations – these are necessary for verification and validation. We want to enable engineers to quickly build a web application inside their environment, access it securely, and store all their related artifacts. For this reason, we’ve chosen a minimalist architecture and we’ll leave it up to the automaker to decide how to integrate this into their existing environment.&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 2: AWS Architecture diagram for deployment on a g5 instance using DCV, with endpoints to retrieve data or optionally submit compute jobs on self-managed ML endpoints (AWS Batch) or Amazon SageMaker&lt;/em&gt;&lt;/p&gt; 
+&lt;div id="attachment_3605" style="width: 665px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3605" loading="lazy" class="size-full wp-image-3605" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.34.05.png" alt="Figure 2: AWS Architecture diagram for deployment on a g5 instance using DCV, with endpoints to retrieve data or optionally submit compute jobs on self-managed ML endpoints (AWS Batch) or Amazon SageMaker" width="655" height="345"&gt;
+ &lt;p id="caption-attachment-3605" class="wp-caption-text"&gt;Figure 2: AWS Architecture diagram for deployment on a g5 instance using DCV, with endpoints to retrieve data or optionally submit compute jobs on self-managed ML endpoints (AWS Batch) or Amazon SageMaker&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We’re hosting the web application on a g5.12xlarge Amazon Elastic Compute Cloud (Amazon EC2) instance. The &lt;a href="https://aws.amazon.com/ec2/instance-types/g5/"&gt;G5&lt;/a&gt; has 4 x A10G NVIDIA GPUs to serve the machine learning models and we’re using the &lt;a href="https://aws.amazon.com/hpc/dcv/"&gt;NICE DCV&lt;/a&gt; streaming protocol to securely stream the desktop to the end.&lt;/p&gt; 
+&lt;p&gt;We’re also keeping the EC2 instance secure inside of a VPC and we only allow TCP traffic to flow from the instance to a single end user.&lt;/p&gt; 
+&lt;p&gt;We train drag prediction models using Amazon SageMaker, and we securely store the inputs and outputs (including model artifacts) in Amazon Simple Storage Service (Amazon S3).&lt;/p&gt; 
+&lt;p&gt;We use AWS Batch to launch the CFD simulations to create the ground truth data.&lt;/p&gt; 
+&lt;p&gt;To keep all communications secure, we use VPC endpoints for all key services.&lt;/p&gt; 
+&lt;h2&gt;Application workflow and user experience&lt;/h2&gt; 
+&lt;p&gt;Now we can build the minimally viable application to show this new workflow. The web application layer consists of five main modules: application, inference configuration, pretrained models, processed meshes, and utilities.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Application.&lt;/strong&gt; The core application, built on the open-source &lt;a href="https://streamlit.io/"&gt;Streamlit&lt;/a&gt; library, serves the user interface and all the orchestration to deliver the user experience. We used a 3D plotting library (&lt;a href="https://docs.pyvista.org/version/stable/"&gt;PyVista&lt;/a&gt;) to display 3D visualizations and enable user interaction with STL meshes (original and design targets) and ML and physics-based computational fluid dynamics results, including pressure cross-sections and 3D streamlines.&lt;/p&gt; 
+&lt;p&gt;In this example, we’ll begin with a choice of a base car model (coupe or estate/station-wagon), and then provide the user with design modification options. In this case, some features of the car (like front bumper shape, windscreen angle, trunk depth, and cabin height) are provided, but we could easily extend this to other design features we’re interested in.&lt;/p&gt; 
+&lt;p&gt;For each of these combinations, the design variations are produced through non-parametric “morphing” of the base meshes using &lt;em&gt;radial basis function (RBF) interpolation&lt;/em&gt;. If we wanted to explore parametric design, and the base CAD geometries were available, we could potentially incorporate them into the workflow. The user interface is shown in Figure 3.&lt;/p&gt; 
+&lt;p&gt;&lt;iframe loading="lazy" title="Figure3 - Using machine learning to drive faster automotive design cycles." width="500" height="375" src="https://www.youtube-nocookie.com/embed/2Z06wjAPVkA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Radial basis function (RBF) – &lt;/strong&gt;RBF interpolation lets us distort meshes at specific parts of the car, while keeping other features constant – including the chassis platform and tire radius. RBF relies on the concept of a deformation map between the original mesh and the deformed mesh and we get to control the extent of deformation using the slider in the user interface.&lt;/p&gt; 
+&lt;p&gt;To enable engineers to show specifically how the mesh has been deformed, we’ve provided a side-by-side comparison of the original mesh and the new mesh in the UI (which you can see in Figure 4) before we pass the deformed mesh along to the ML model for inference.&lt;/p&gt; 
+&lt;div id="attachment_3607" style="width: 831px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3607" loading="lazy" class="size-full wp-image-3607" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.34.57.png" alt="Figure 4 – Deformed geometry (left) with a wireframe overlay of original mesh highlighting change and original mesh (right)" width="821" height="348"&gt;
+ &lt;p id="caption-attachment-3607" class="wp-caption-text"&gt;Figure 4 – Deformed geometry (left) with a wireframe overlay of original mesh highlighting change and original mesh (right)&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;strong&gt;Inference configuration.&lt;/strong&gt; We trained a hierarchical machine learning model for a CFD flow field and drag predictions – we’ll explain that more soon. At runtime, we hosted these on different GPUs which allowed us to parallelize the inference of individual sub-models. To get inferences from the ML model, we specify the key inputs and parameters using inference configurations. These inputs include the decimated surface meshes of the car and a geometry for volume calculations. Additional input parameters include the batch size for inference, number of workers and other neural network associated hyperparameters.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Processed mesh.&lt;/strong&gt; When a user requests an inference, the application generates a processed &lt;a href="https://www.hdfgroup.org/solutions/hdf5/"&gt;HDF5&lt;/a&gt; file which contains the new mesh and the corresponding flow fields. These HDF5 files are then exposed to the end user via an interactive 3D visualization. There are some extra components that support the application: a function to convert meshes to HDF5 files, another function to apply the RBF to morph meshes based on user inputs, and finally a function to run inferences and gather outputs.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Deployment.&lt;/strong&gt; Since this application is meant for demonstration purposes only, we designed it to run on a single compute instance, and chose a g5.12xlarge that includes 4 x GPUs that’s able to run the entire application. To speed the application, we distribute individual ML sub-models across the GPUs. To keep it all secure, we isolate the instances from the public internet in a private VPC. And we used NICE DCV to access the instance for an easier remote desktop experience.&lt;/p&gt; 
+&lt;p&gt;Geometric and ML models&lt;/p&gt; 
+&lt;p&gt;To enable engineers to rapidly iterate, potentially even &lt;em&gt;during&lt;/em&gt; design conversations, our web application predicts the &lt;em&gt;coefficient of drag&lt;/em&gt; (Cd) and the flow fields on unseen geometries. We used a hierarchy of ML models for the flow fields and drag predictions.&lt;/p&gt; 
+&lt;p&gt;In both cases, we trained our models using synthetic data that we generated by morphing the open source &lt;a href="https://www.epc.ed.tum.de/en/aer/research-groups/automotive/drivaer/"&gt;DrivAer&lt;/a&gt; data set, and then ran full-fidelity CFD simulations on all these geometries using AWS Batch with the open-source &lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph framework&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Synthetic data generation&lt;/strong&gt;. To create training data for this project, we used the RBF to strategically morph the underlying mesh of both the coupe and the SUV. This method has broad applicability and can be generically applied to many parametric and non-parametric STL meshes.&lt;/p&gt; 
+&lt;p&gt;For each area of the car, we specified points in an overlayed 1000-point (10x10x10) cubic lattice, bounded by the dimensions of the car. This allowed us to create 400 variations (100 for each of the area of the car) that we used as the basis for ground-truth simulations. Figure 5 shows how we used the RBF to deform the mesh &lt;em&gt;and&lt;/em&gt; create the training data for the ML model. Each time frame in the video corresponds to a different deformed mesh.&lt;/p&gt; 
+&lt;p&gt;&lt;iframe loading="lazy" title="Using machine learning to drive faster automotive design cycles - Figure5" width="500" height="281" src="https://www.youtube-nocookie.com/embed/aBcO03OBTm0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
+&lt;p style="text-align: left"&gt;&lt;em&gt;Figure 5 – Synthetic mesh generation using morphing of individual features of a car shown in sequence&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;After we created 400 variations of the base meshes, we used OpenFOAM to create CFD simulations with steady-state RANS simulations using the k-ω steady-state turbulence model with a fixed inlet velocity of 20m/s.&lt;/p&gt; 
+&lt;p&gt;We ran these simulations in parallel using AWS Batch on c5.24xlarge instances using MPI for parallelism – this took around 7 hours to run. We could have chosen larger mesh sizes, but we settled on a mesh size that allowed resolving fine geometry – in a reasonable compute time.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Coefficient of drag with MeshGraphNets (MGN) –&lt;/strong&gt; MGN is a deep-learning framework for learning mesh-based simulations which represents the mesh as a graph where information is propagated across the graph’s nodes and edges. MGN excels at efficiently capturing unstructured mesh topologies and it’s a great fit for predicting Cd values. To train the MGN model, we used the synthetic data that we generated using the RBF, and OpenFOAM. During training, we provided the underlying mesh and the Coefficient of Drag (Cd) metrics as inputs.&lt;/p&gt; 
+&lt;p&gt;We then trained a model on 320 samples, with each mesh decimated while preserving topological features for computational efficiency, containing approximately 6,000 nodes. We used a p3.2xlarge instance for 500 epochs, with a total training time of 46 minutes.&lt;/p&gt; 
+&lt;p&gt;The model achieved a MAPE (&lt;em&gt;mean absolute percentage error&lt;/em&gt;) of 2.5% in drag coefficient (Cd) when predicting on unseen data, with an average inference time of 0.028 seconds per sample. Figure 6 shows the predicted vs. actual drag coefficient (Cd) plot for train, validation, and unseen test data (car meshes).&lt;/p&gt; 
+&lt;div id="attachment_3609" style="width: 718px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3609" loading="lazy" class="size-full wp-image-3609" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.36.06.png" alt="Figure 6: Predicted vs. actual drag coefficient (Cd) plot for train, validation, and unseen test data (i.e. car meshes)." width="708" height="426"&gt;
+ &lt;p id="caption-attachment-3609" class="wp-caption-text"&gt;Figure 6: Predicted vs. actual drag coefficient (Cd) plot for train, validation, and unseen test data (i.e. car meshes).&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Although the model didn’t match the ground truth CFD simulations exactly, this level of agreement from the MGN surrogate model may prove acceptable during the initial design iterations leading up to a final, high-fidelity simulation. After that comes real-world wind tunnel testing, which has an inherent uncertainty in measurements.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Flow Fields using deep convolutional neural networks (CNNs).&lt;/strong&gt; To predict pressure distributions and velocity fields for full 3D flow, we used a CNN architecture called &lt;a href="https://github.com/wolny/pytorch-3dunet"&gt;U-Net&lt;/a&gt; which has shown promise in high-resolution volume segmentation and regression tasks. This architecture included encoding and decoding convolutional layers with skip connections. We trained individual U-Nets for each of the pressure and velocity primary variables.&lt;/p&gt; 
+&lt;p&gt;We converted the 3D volume outputs from 400 x OpenFOAM simulations into the training (375) and validation (25) ground-truth datasets. We used a p5.48xlarge instance with 8 x H100 GPUs for approximately 28 hours. We saw a volume RSME (&lt;em&gt;root-mean-square-error&lt;/em&gt;) of around 3% for pressure, and 5% for combined velocity magnitudes, for unseen data not in the training or validation sets – although this is dependent on the degree of mesh warping away from the initial baseline mesh. Figure 7 shows the differences in velocity slices an unseen mesh.&lt;/p&gt; 
+&lt;div id="attachment_3610" style="width: 680px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3610" loading="lazy" class="size-full wp-image-3610" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.36.52.png" alt="Figure 7: ML Predicted (Top) vs Ground Truth OpenFOAM (Bottom) X-Component Velocity" width="670" height="516"&gt;
+ &lt;p id="caption-attachment-3610" class="wp-caption-text"&gt;Figure 7: ML Predicted (Top) vs Ground Truth OpenFOAM (Bottom) X-Component Velocity&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Business value creation&lt;/h2&gt; 
+&lt;p&gt;We’ve now shown how to rapidly build a minimally viable web interface that engineers can use to take advantage of these ML models to speed up the product engineering process. But now we need to couple this with a new business process so automakers can realize actual business value.&lt;/p&gt; 
+&lt;div id="attachment_3611" style="width: 855px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3611" loading="lazy" class="size-full wp-image-3611" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.37.12.png" alt="Figure 8: Overall product design iterations using machine learning surrogate models to accelerate the cycles" width="845" height="168"&gt;
+ &lt;p id="caption-attachment-3611" class="wp-caption-text"&gt;Figure 8: Overall product design iterations using machine learning surrogate models to accelerate the cycles&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Using the speed of the ML surrogate models, it’s possible to explore hundreds of designs per week, and we can now make meetings more collaborative.&lt;/p&gt; 
+&lt;p&gt;Instead of reviewing results from prior runs, engineers can solicit feedback from their peers real-time0, and get the results in 20-60 seconds, avoiding costly wait times. This will require engineers to think differently about product design reviews and meetings. Engineers will need to set expectations accordingly and be prepared to guide conversations. But this enables engineers to explore a greater design space than they otherwise could – especially given budget or time constraints. We’re confident this approach will lead to new innovations.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;With the right combination of machine-learning and process change, automakers can use the architecture explained here to build tailored solutions to speed up the product engineering process, reduce the cost of compute, and explore a greater number of design options in a shorter period of time. If you or your team want to discuss the business case, a recommended implementation path with our Professional Services team, or technical solution blueprint in more detail, you can reach out to us at ask-hpc@amazon.com.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Announcing the High Performance Software Foundation (HPSF)</title>
 		<link>https://aws.amazon.com/blogs/hpc/announcing-the-high-performance-software-foundation/</link>
 		
@@ -32,7 +140,7 @@
 		<guid isPermaLink="false">e91b47faf0b755001ca4998fd17206fcbdaf12f6</guid>
 
 					<description>We're excited to share how we’re involved in launching the High Performance Software Foundation to increase access to and adoption of HPC. By bringing together key players to collaborate, we can lower barriers and accelerate development of portable HPC software stacks.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="size-full wp-image-3644 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/09/AdobeStock_144582125-resized.png" alt="Announcing the High Performance Software Foundation" width="380" height="253"&gt;&lt;/em&gt;In high performance computing (HPC), where speed and efficiency are paramount, open-source software provides the load-bearing, structural support. Our community has long recognized the immense potential of collaborative development, sharing of resources, and the power of community-driven innovation.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="size-full wp-image-3644 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/09/AdobeStock_144582125-resized.png" alt="Announcing the High Performance Software Foundation" width="380" height="253"&gt;&lt;/em&gt;In high performance computing (HPC), where speed and efficiency are paramount, open-source software provides the load-bearing, structural support. Our community has long recognized the immense potential of collaborative development, sharing of resources, and the power of community-driven innovation.&lt;/p&gt; 
 &lt;p&gt;So we’re excited to announce that we’re a Premier founding member of the new &lt;strong&gt;High Performance Software Foundation&lt;/strong&gt; (HPSF). The HPSF was launched today in Hamburg at &lt;a href="https://www.isc-hpc.com/"&gt;ISC’24&lt;/a&gt;, by the Linux Foundation, the nonprofit organization that enables mass innovation through open-source. The HPSF has strong support across the HPC landscape.&lt;/p&gt; 
 &lt;p&gt;Through a series of technical projects, the HPSF aims to build, promote, and advance a portable core software stack for HPC to increase adoption by lowering barriers to contribution, supporting open-source development efforts, and making HPC more accessible to all of us. We’ve seen from our work with RIKEN to &lt;a href="https://aws.amazon.com/blogs/publicsector/why-fugaku-japans-fastest-supercomputer-went-virtual-on-aws/"&gt;extend Fugaku to the cloud&lt;/a&gt;&amp;nbsp;how impactful this can be.&lt;/p&gt; 
 &lt;p&gt;Recent years have seen extraordinary demand for HPC across domains which are critical to all of us, from climate modeling and genomics to drug-discovery and engineering design. With the emergence of machine learning and AI, there’s never been a more important task than to reinforce the structures which have made all of this possible.&lt;/p&gt; 
@@ -2193,105 +2301,6 @@ Finished            : Thu Dec 14 00:14:53 2023&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We started this project with the aim of allowing scientists to deploy more frequently without relying on engineers. We achieved that, but we &lt;em&gt;also&lt;/em&gt; improved how both scientists &lt;em&gt;and&lt;/em&gt; engineers interact with the production system. They can debug production notebooks through a web server that displays the output notebooks. This led to the use of these notebooks for reports and metrics presentations – accessible to others via shared links.&lt;/p&gt; 
 &lt;p&gt;The infrastructure choices also increased our velocity. Previously our system was computationally intensive and it took two weeks to evaluate it sequentially on a very large machine. AWS Batch allows us to run more than a thousand &lt;em&gt;much smaller&lt;/em&gt; instances in parallel so our model evaluation went down to 3 hours. Solving these problems allowed our small &lt;a href="https://aws.amazon.com/executive-insights/content/amazon-two-pizza-team/"&gt;2-pizza team&lt;/a&gt; to dramatically increase our iteration speed and at the same time increased the reliability of our system.&lt;/p&gt; 
 &lt;p&gt;At the outset of this work, scientists couldn’t tell their containers from their images – and the only thing engineers knew about Jupyter Notebooks was that they “&lt;em&gt;were not for production!&lt;/em&gt;”. But, by taking the time to understand each other’s tools and the problems that they were solving we built a system that let us to have consistent environments &lt;strong&gt;&lt;em&gt;and&lt;/em&gt;&lt;/strong&gt; continuous delivery of new science models.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Dynamic HPC budget control using a core-limit approach with AWS ParallelCluster</title>
-		<link>https://aws.amazon.com/blogs/hpc/dynamic-hpc-budget-control-using-a-core-limit-approach-with-aws-parallelcluster/</link>
-		
-		<dc:creator><![CDATA[Roberto Meda]]></dc:creator>
-		<pubDate>Thu, 08 Feb 2024 16:10:16 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Slurm]]></category>
-		<guid isPermaLink="false">9bdb3110e846b9e53cd91e0e541ef049df9eb76f</guid>
-
-					<description>Balancing fixed budgets with fluctuating HPC needs is challenging. Discover a customizable solution for automatically setting weekly resource limits based on previous spending.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3283" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/07/boofla88_budgets_as_a_concept_ea608982-89d1-447e-8d4d-71e53e623d15.png" alt="Dynamic HPC budget control using a core-limit approach with AWS ParallelCluster" width="380" height="212"&gt;Cloud computing provides an experience similar to uncapped or unlimited resources for HPC workloads, helping organizations to accelerate research and development. When using cloud, the business owner typically allocates a fixed annual budget for HPC resources. The budget then needs to be split by multiple groups, across departments, business units, or projects.&lt;/p&gt; 
-&lt;p&gt;But while budgets are fixed, HPC workload needs fluctuate throughout the year for nearly everyone. That’s challenging, and can often make the shift to cloud too much of a puzzle for some.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll describe a solution for managing your budget using a&amp;nbsp;&lt;em&gt;dynamic&lt;/em&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;Amazon Elastic Compute Cloud (Amazon EC2) &lt;em&gt;core allocation limit&lt;/em&gt; for each group asking for HPC resources. It automatically sets the resource limit for each group &lt;em&gt;every week&lt;/em&gt; based on the spending of that group in the &lt;em&gt;previous week&lt;/em&gt;. The solution can be easily customized and enhanced to meet the specific workload and environmental needs.&lt;/p&gt; 
-&lt;h2&gt;HPC in the cloud is different, yet familiar&lt;/h2&gt; 
-&lt;p&gt;Budget management for HPC in the cloud can be challenging because it presents a different set of problems than most customers are used to.&lt;/p&gt; 
-&lt;p&gt;Due to project deadlines, HPC workloads must have &lt;a href="https://slurm.schedmd.com/qos.html"&gt;Quality of Service (QoS)&lt;/a&gt; configured in the workload scheduler. When HPC workloads are executed through the workload scheduler as jobs, each job has a run-time and a number of required CPU cores. The QoS is managed by both the cloud resource provider &lt;em&gt;and&lt;/em&gt; the HPC workload scheduler. To make this work requires integration between the workload scheduler and the cloud resource provisioning.&lt;/p&gt; 
-&lt;p&gt;HPC workloads frequently spike, or have unexpected deadlines. Budget decisions might be subject to revisions and adaptations over time, as well as accommodating new projects that pop-up anytime during the budget year.&lt;/p&gt; 
-&lt;p&gt;Generic cloud budget control services&amp;nbsp;like&amp;nbsp;&lt;a href="https://aws.amazon.com/aws-cost-management/aws-budgets/"&gt;AWS Budgets&lt;/a&gt; are often too coarse-grained for HPC workloads. Without some effort, they can’t provide the necessary insights to track usage and cost details for HPC jobs running on shared nodes, and it’s hard for them to adapt quickly to HPC workload changes that the business requires.&lt;/p&gt; 
-&lt;p&gt;Finally, although &lt;a href="https://aws.amazon.com/ec2/pricing/reserved-instances/"&gt;Reserved Instances&lt;/a&gt; and &lt;a href="https://aws.amazon.com/savingsplans/"&gt;Savings Plans&lt;/a&gt; can provide up to 72% discount for stable workloads, &lt;em&gt;fluctuating &lt;/em&gt;HPC workloads may still need to use the &lt;strong&gt;on-demand &lt;/strong&gt;pay&lt;strong&gt;–&lt;/strong&gt;per&lt;strong&gt;–&lt;/strong&gt;use pricing model.&lt;/p&gt; 
-&lt;h2&gt;Our solution&lt;/h2&gt; 
-&lt;p&gt;To manage budgets in this environment, the EC2 core allocation limit can be enforced by the HPC workload scheduler. This has a key advantage: it’s a familiar mechanism you’ve probably used elsewhere, which is easy to measure.&lt;/p&gt; 
-&lt;p&gt;It works like this: HPC&amp;nbsp;jobs from a group that would exceed their weekly quota limit will be kept in the queue in pending status until cores are released by finished jobs. An appropriate job pending reason can be provided, making business or job owners aware of their spending implications. Since the cloud provides a “virtually unlimited” capacity, urgent jobs can still be run by shifting a budget up.&lt;/p&gt; 
-&lt;p&gt;For our purposes, we’ll configure&amp;nbsp;the core allocation limit based on physical CPU cores rather vCPUs, because many HPC applications perform better with the hyperthreading disabled, &lt;em&gt;and&lt;/em&gt; more customers are used to working this way.&lt;/p&gt; 
-&lt;p&gt;We tested our solution with &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; 3.5+ with SLURM and &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/tutorials_07_slurm-accounting-v3.html"&gt;job accounting enabled&lt;/a&gt;. You can get a &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/slurm_accounting"&gt;complete ParallelCluster environment, with Slurm accounting enabled&lt;/a&gt; from the &lt;a href="https://hpc.news/recipes"&gt;HPC Recipes Library&lt;/a&gt;. If this works for you, you can adapt the recipes for your own purposes by customizing them to suit your local needs.&lt;/p&gt; 
-&lt;h2&gt;Overview of the solution&lt;/h2&gt; 
-&lt;p&gt;To calculate past spending, we query data from &lt;a href="https://aws.amazon.com/aws-cost-management/aws-cost-explorer/"&gt;AWS Cost Explorer&lt;/a&gt;, and calculate the spending of each subgroup in the past week. We then compare the result with the allocated budget of the subgroup, and set the EC2 core limit of the subgroup in the coming week. This is implemented by a weekly &lt;a href="https://en.wikipedia.org/wiki/Cron"&gt;&lt;em&gt;cron&lt;/em&gt;&lt;/a&gt; task running on the cluster head node.&lt;/p&gt; 
-&lt;p&gt;The solution consists of a configuration files and a weekly script run from &lt;code&gt;cron&lt;/code&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;The configuration file&lt;/strong&gt;, located on the HPC head node, lists the weekly budget for each subgroup. A subgroup could be a business unit, a project, or just an arbitrary group of users. In this example:&lt;/p&gt; 
-&lt;p&gt;&lt;code&gt;&amp;lt;BU1&amp;gt;,&amp;lt;BU1 weekly budget&amp;gt;&lt;/code&gt;&lt;br&gt; &lt;code&gt;&amp;lt;BU2&amp;gt;,&amp;lt;BU2 weekly budget&amp;gt;&lt;/code&gt;&lt;/p&gt; 
-&lt;p&gt;Where &lt;code&gt;BU1&lt;/code&gt;, &lt;code&gt;BU2&lt;/code&gt; are subgroup identifiers or labels, followed by their respective weekly budgets (in dollars), separated by comma. This file can be modified anytime by administrators or budget owners if the workload or business priorities change.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;The script, executed weekly&lt;/strong&gt;&amp;nbsp;(e.g. Sunday at midnight) on the HPC head node by the Linux &lt;code&gt;cron&lt;/code&gt; daemon, reads the configuration file, queries Cost Explorer and appends a new row to a CSV file (e.g. &lt;code&gt;&lt;em&gt;control.csv&lt;/em&gt;&lt;/code&gt;) with contents like this:&lt;/p&gt; 
-&lt;p&gt;&lt;code&gt;date, BU1, BU1 cost, BU1 budget, BU1 core limit, BU2, BU2 cost, BU2 budget, BU2 core limit,...&lt;/code&gt;&lt;/p&gt; 
-&lt;p&gt;In this file:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;code&gt;date&lt;/code&gt; is the day/timestamp of what the row represents&lt;/li&gt; 
- &lt;li&gt;&lt;code&gt;BU1,BU2,BUn&lt;/code&gt; are subgroup identifiers from the configuration file described in step 1&lt;/li&gt; 
- &lt;li&gt;&lt;code&gt;cost&lt;/code&gt; is the accumulated EC2 cost of this subgroup during the past week, retrieved from the AWS Cost Explorer by this script&lt;/li&gt; 
- &lt;li&gt;&lt;code&gt;budget&lt;/code&gt; is the weekly budget of the subgroup specified in the configuration file described in the step 1&lt;/li&gt; 
- &lt;li&gt;&lt;code&gt;cores limit&lt;/code&gt; is calculated by this script according to cost and budget. The calculation is described in the next step.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;&lt;strong&gt;An example of core limit calculation&lt;/strong&gt; uses the formula like this:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-python"&gt;if Cost &amp;gt; Budget: 
-    core limit = default core limit / (Cost / Budget)
-if Cost &amp;lt;= Budget:
-    core limit = default core limit&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Here, &lt;code&gt;default core limit&lt;/code&gt; is calculated from the single-core weekly cost of a sample EC2 instance type for memory intensive workloads, e.g. 23.6880 USD, which is the weekly cost for a single core of an r5.large in the AWS region &lt;code&gt;eu-west-1&lt;/code&gt;. So:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-python"&gt;default core limit = budget / 1 core weekly cost&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;&lt;strong&gt;Finally, for each subgroup &lt;/strong&gt;defined in the configuration file&lt;strong&gt;, our dynamic resource&lt;/strong&gt; &lt;strong&gt;scheduler &lt;/strong&gt;keeps track of the available number of EC2 cores as:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-python"&gt;current&amp;nbsp;BU core limit - currently allocated cores&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Note that this solution requires jobs to specify the number of required cores. Using the information from the scheduler and Cost Explorer, the solution limits the total number of cores used by a subgroup to the defined allocation in the configuration file. Any job that would exceed the limit will be pending until cores are freed up by finished jobs of the same subgroup.&lt;/p&gt; 
-&lt;h2&gt;An example&lt;/h2&gt; 
-&lt;p&gt;We’ll use a simple configuration for this example based on two business units BU1 and BU2, with different weekly budgets.&lt;/p&gt; 
-&lt;p&gt;&lt;code&gt;BU1 1000&lt;/code&gt;&lt;br&gt; &lt;code&gt;BU2 2000&lt;/code&gt;&lt;/p&gt; 
-&lt;p&gt;Our script will calculate default core limits of 42 and 84 respectively, according to an EC2 r5.large weekly core cost of 23.688 USD (Ireland-Dublin region).&lt;/p&gt; 
-&lt;p&gt;The following table lists budgets, actual spending (costs) and calculated core limits of the following weeks for two subgroups: BU1 and BU2:&lt;/p&gt; 
-&lt;div id="attachment_3271" style="width: 1001px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3271" loading="lazy" class="size-full wp-image-3271" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/07/CleanShot-2024-02-07-at-11.13.56.png" alt="Table 1: sample budgets, with actual spend and calculated core limits over a period of 4 weeks." width="991" height="328"&gt;
- &lt;p id="caption-attachment-3271" class="wp-caption-text"&gt;Table 1: sample budgets, with actual spend and calculated core limits over a period of 4 weeks.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;In this example (under-limit values are marked in green, over-limit ones are in red):&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;In week 3, BU1 exceeds its budget by 1.5 (50%). Its core limit for the next week is calculated and set as: 42 / 1.5 = 28.&lt;/li&gt; 
- &lt;li&gt;In week 3, BU2 exceeds its budget by 1.1 (10%). Its core limit for the next week is calculated and set as: 84 / 1.1 = 76.&lt;/li&gt; 
- &lt;li&gt;In week 4, BU1 exceeds its budget by 1.05 (5%). Its core limit for the next week is calculated and set as: 84 / 1.05 = 80.&lt;/li&gt; 
- &lt;li&gt;All other limits are defaults because of the spending under the corresponding budget.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Figure 1 illustrates the solution high level logic. The script &lt;code&gt;budget.control.updater.sh&lt;/code&gt; is invoked regularly as a cron task, queries budget control configuration together with Cost Explorer, adds a new line into budget control table CSV, and updates scheduler configuration. The scheduler enforces each job to run only if its related subgroup budget is not over spent.&lt;/p&gt; 
-&lt;div id="attachment_3272" style="width: 789px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3272" loading="lazy" class="size-full wp-image-3272" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/07/CleanShot-2024-02-07-at-11.15.44.png" alt="Figure 1: Dynamic budget control high level architecture. " width="779" height="664"&gt;
- &lt;p id="caption-attachment-3272" class="wp-caption-text"&gt;Figure 1: Dynamic budget control high level architecture.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Getting started and making this your own&lt;/h2&gt; 
-&lt;p&gt;We’ve put our code, including sample scripts and some examples in a &lt;a href="https://github.com/aws-samples/dynamic-ec2-budget-control"&gt;specific AWS Samples repository on GitHub&lt;/a&gt;. You can try out this solution in your own AWS account by following the walk-through and code that we provided there.&lt;/p&gt; 
-&lt;p&gt;You can also further customize and improve the solution in a couple of different ways, for example:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Manage more instance types&lt;/strong&gt;. You can augment your scripts to filter the Cost Explorer query output according to the job’s instance-type requirement. Administrators could add multiple 1 core/hour instance-type costs in the budget configuration file.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Send email notifications when a daily cost exceeds the budget. &lt;/strong&gt;You can do that by integrating the &lt;em&gt;sendmail&lt;/em&gt; process on the head node with the &lt;a href="https://aws.amazon.com/ses/"&gt;AWS Simple Email Service&lt;/a&gt; as &lt;a href="https://docs.aws.amazon.com/ses/latest/dg/Welcome.html"&gt;described in our documentation&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Enforce job submission cores resource requirement&lt;/strong&gt; – for example by using SLURM’s&amp;nbsp;&lt;code&gt;PrologSlurmctld&lt;/code&gt; (see &lt;a href="https://slurm.schedmd.com/prolog_epilog.html"&gt;SLURM prolog and epilog guide&lt;/a&gt;). Prologs and epilogs can be extremely useful if you need to implement input-validation checks, perform data movements, or do pre-execution environment setup.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Retrieve 1-core cost automatically&lt;/strong&gt; by querying &lt;a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/using-pelong.html"&gt;AWS Price List Query APIs&lt;/a&gt;. This will ensure calculations always use up-to-date AWS pricing.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Modify the core logic or timings for a specific HPC environment&lt;/strong&gt;, for example, more frequent budget and limit controls, or smoothing limit changes.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Subgroup tags, together with others could be enforced and validated&lt;/strong&gt; as suggested in the &lt;a href="https://aws.amazon.com/blogs/aws-cloud-financial-management/cost-allocation-blog-series-3-enforce-and-validate-aws-resource-tags/"&gt;Enforce and validate AWS resource tags&lt;/a&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we described a straight-forward, but fine-grained and dynamic solution to keep work groups or business unit budgets under control. This has several advantages.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;It allows administrators to manually update budgets and core limits&lt;/strong&gt; according to the business needs. Admins can modify budgets limits in simple config files. The changes get picked up by automated cron tasks.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Historical budgets and calculated core-limits are recorded in a CSV file&lt;/strong&gt;, which makes further analysis possible using Amazon QuickSight or a spreadsheet. This is useful for annual budget reviews, justifying more investments, spotting trends, and making forecasts.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;HPC jobs breaching the limits are kept in pending status until more cores are freed up or job condition changes. &lt;/strong&gt;In addition, the scheduler provides the information about job pending reasons when core limits are reached, helping users better understand and manage their own budgets.&lt;/p&gt;</content:encoded>
 					
 		
 		
