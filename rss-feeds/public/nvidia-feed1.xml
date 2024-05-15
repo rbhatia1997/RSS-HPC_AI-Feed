@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 14 May 2024 16:09:25 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 14 May 2024 21:11:15 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,63 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.2</generator>
 	<item>
+		<title>Gemma, Meet NIM: NVIDIA Teams Up With Google DeepMind to Drive Large Language Model Innovation</title>
+		<link>https://blogs.nvidia.com/blog/gemma-nim-google-deepmind/</link>
+		
+		<dc:creator><![CDATA[Dave Salvator]]></dc:creator>
+		<pubDate>Tue, 14 May 2024 19:40:49 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71636</guid>
+
+					<description><![CDATA[Large language models that power generative AI are seeing intense innovation — models that handle multiple types of data such as text, image and sounds are becoming increasingly common.  However, building and deploying these models remains challenging. Developers need a way to quickly experience and evaluate models to determine the best fit for their use		<a class="read-more" href="https://blogs.nvidia.com/blog/gemma-nim-google-deepmind/">
+			Read Article			<span data-icon="y"></span>
+		</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span>Large language models that power generative AI are seeing intense innovation — models that handle multiple types of data such as text, image and sounds are becoming increasingly common. </span></p>
+<p><span>However, building and deploying these models remains challenging. Developers need a way to quickly experience and evaluate models to determine the best fit for their use case, and then optimize the model for performance in a way that not only is cost-effective but offers the best performance.</span></p>
+<p><span>To make it easier for developers to create AI-powered applications with world-class performance, NVIDIA and Google today announced three new collaborations at Google I/O ‘24. </span></p>
+<h2><b>Gemma + NIM</b></h2>
+<p><span>Using </span><a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/"><span>TensorRT-LLM</span></a><span>, NVIDIA is working with Google to optimize two new models it introduced at the event: Gemma 2 and PaliGemma. These models are built from the same research and technology used to create the Gemini models, and each is focused on a specific area: </span></p>
+<ul>
+<li><b>Gemma 2 </b><span>is the next generation of Gemma models for a broad range of use cases and features a brand new architecture designed for breakthrough performance and efficiency.</span></li>
+<li><b>PaliGemma</b><span> is an open vision language model (VLM) inspired by </span><a href="https://arxiv.org/abs/2310.09199"><span>PaLI-3</span></a><span>. Built on open components including the SigLIP vision model and the Gemma language model, PaliGemma is designed for vision-language tasks such as image and short video captioning, visual question answering, understanding text in images, object detection and object segmentation. PaliGemma is designed for class-leading fine-tuning performance on a wide range of vision-language tasks and is also supported by </span><a href="https://github.com/NVIDIA/JAX-Toolbox"><span>NVIDIA JAX-Toolbox</span></a><span>.</span></li>
+</ul>
+<p><span>Gemma 2 and PaliGemma will be offered with </span><a href="https://www.nvidia.com/en-us/ai/"><span>NVIDIA NIM</span></a><span> inference microservices, part of the </span><a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/"><span>NVIDIA AI Enterprise</span></a><span> software platform, which simplifies the deployment of AI models at scale. NIM support for the two new models are available from the API catalog, starting with </span><a href="https://build.ngc.nvidia.com/google/google-paligemma"><span>PaliGemma</span></a><span> today; they soon will be released as containers on </span><a href="https://catalog.ngc.nvidia.com/"><span>NVIDIA NGC</span></a><span> and GitHub. </span></p>
+<h2><b>Bringing Accelerated Data Analytics to Colab</b></h2>
+<p>Google also announced that <a href="https://developer.nvidia.com/blog/rapids-cudf-accelerates-pandas-nearly-150x-with-zero-code-changes/">RAPIDS cuDF, an open-source GPU dataframe library</a>, is now supported by default on Google Colab, one of the most popular developer platforms for data scientists. It now takes just a few seconds for <a href="https://blog.google/technology/ai/democratizing-access-to-ai-enabled-coding-with-colab/">Google Colab’s 10 million monthly users</a> to accelerate pandas-based Python workflows by up to 50x using <a href="https://www.nvidia.com/en-us/data-center/l4/">NVIDIA L4 Tensor Core GPUs</a>, with zero code changes.</p>
+<p>With RAPIDS cuDF, developers using Google Colab can speed up exploratory analysis and production data pipelines. While pandas is one of the world’s most popular data processing tools due to its intuitive API, applications often struggle as their data sizes grow. With even 5-10GB of data, many simple operations can take minutes to finish on a CPU, slowing down exploratory analysis and production data pipelines.</p>
+<p>RAPIDS cuDF is designed to solve this problem by seamlessly accelerating pandas code on GPUs where applicable, and falling back to CPU-pandas where not. With RAPIDS cuDF available by default on Colab, all developers everywhere can leverage accelerated data analytics.</p>
+<h2><b>Taking AI on the Road </b></h2>
+<p>By employing AI PCs using NVIDIA RTX graphics, Google and NVIDIA also announced a Firebase Genkit collaboration that enables app developers to easily integrate generative AI models, like the new family of Gemma models, into their web and mobile applications to deliver custom content, provide semantic search and answer questions. Developers can start work streams using local RTX GPUs before moving their work seamlessly to Google Cloud infrastructure.</p>
+<p>To make this even easier, developers can build apps with Genkit using JavaScript, a programming language mobile developers commonly use to build their apps.</p>
+<h2><b>The Innovation Beat Goes On</b></h2>
+<p>NVIDIA and Google Cloud are collaborating in multiple domains to propel AI forward. From the upcoming Grace Blackwell-powered DGX Cloud platform and JAX framework support, to bringing the NVIDIA NeMo framework to Google Kubernetes Engine, the companies’ full-stack partnership expands the possibilities of what customers can do with AI using NVIDIA technologies on Google Cloud.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/google-cloud-logo.jpg"
+			type="image/jpeg"
+			width="1920"
+			height="1080"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/google-cloud-logo-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Gemma, Meet NIM: NVIDIA Teams Up With Google DeepMind to Drive Large Language Model Innovation]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>CaLLM, Cool and Connected: Cerence Uses Generative AI to Transform the In-Car Experience</title>
 		<link>https://blogs.nvidia.com/blog/cerence-generative-ai-in-car-experience/</link>
 		
@@ -30,12 +87,12 @@
 		<category><![CDATA[NVIDIA DRIVE]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71593</guid>
 
-					<description><![CDATA[The integration of AI has become pivotal in shaping the future of driving experiences. As vehicles transition into smart, connected entities, the demand for intuitive human-machine interfaces and advanced driver assistance systems has surged In this journey toward automotive intelligence, Cerence, a global leader in AI-powered mobility solutions, is tapping NVIDIA’s core expertise in automotive		<a class="read-more" href="https://blogs.nvidia.com/blog/cerence-generative-ai-in-car-experience/">
+					<description><![CDATA[The integration of AI has become pivotal in shaping the future of driving experiences. As vehicles transition into smart, connected entities, the demand for intuitive human-machine interfaces and advanced driver assistance systems has surged. In this journey toward automotive intelligence, Cerence, a global leader in AI-powered mobility solutions, is tapping NVIDIA’s core expertise in cloud		<a class="read-more" href="https://blogs.nvidia.com/blog/cerence-generative-ai-in-car-experience/">
 			Read Article			<span data-icon="y"></span>
 		</a>
 	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>The integration of AI has become pivotal in shaping the future of driving experiences. As vehicles transition into smart, connected entities, the demand for intuitive human-machine interfaces and advanced driver assistance systems has surged</p>
-<p>In this journey toward automotive intelligence, Cerence, a global leader in AI-powered mobility solutions, is tapping NVIDIA’s core expertise in automotive cloud and edge technologies to redefine the in-car user experience.</p>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>The integration of AI has become pivotal in shaping the future of driving experiences. As vehicles transition into smart, connected entities, the demand for intuitive human-machine interfaces and advanced driver assistance systems has surged.</p>
+<p>In this journey toward automotive intelligence, Cerence, a global leader in AI-powered mobility solutions, is tapping NVIDIA’s core expertise in cloud and edge technologies to redefine the in-car user experience.</p>
 <p>In a recent video, Iqbal Arshad, chief technology officer of Cerence, emphasized the point, stating: “Generative AI is the single biggest change that’s happening in the tech industry overall.”</p>
 <p><iframe title="Cerence and NVIDIA: Generative AI for Next-Generation In-Vehicle Experiences" width="500" height="281" src="https://www.youtube.com/embed/XTknC-3PV00?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>The cornerstone of Cerence’s vision lies in the development of its automotive-specific Cerence Automotive Large Language Model, or <a href="https://www.cerence.com/news-releases/news-release-details/cerence-pioneers-automotive-specific-llm-collaboration-nvidia" target="_blank" rel="noopener">CaLLM</a>. It serves as the foundation for the company’s next-gen in-car computing platform, running on <a href="https://developer.nvidia.com/drive" target="_blank" rel="noopener">NVIDIA DRIVE</a>.</p>
@@ -1088,82 +1145,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Explainable AI: Insights from Arthur’s Adam Wenchel]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>AI Takes a Bow: Interactive GLaDOS Robot Among 9 Winners in Hackster.io Challenge</title>
-		<link>https://blogs.nvidia.com/blog/glados-robot-hackster/</link>
-		
-		<dc:creator><![CDATA[Scott Martin]]></dc:creator>
-		<pubDate>Wed, 01 May 2024 15:33:24 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Conversational AI]]></category>
-		<category><![CDATA[NVIDIA Jetson]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71365</guid>
-
-					<description><![CDATA[YouTube robotics influencer Dave Niewinski has developed robots for everything from driveable La-Z-Boy chairs to an AI-guided cornhole tosser and horse-drawn chariot racing. His recent Interactive Animatronic GLaDOS project was among nine winners in the Hackster AI Innovation Challenge. About 100 contestants vied for prizes from NVIDIA and Sparkfun by creating open-source projects to advance		<a class="read-more" href="https://blogs.nvidia.com/blog/glados-robot-hackster/">
-			Read Article			<span data-icon="y"></span>
-		</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>YouTube robotics influencer Dave Niewinski has developed robots for everything from driveable La-Z-Boy chairs to an AI-guided cornhole tosser and horse-drawn chariot racing.</p>
-<p>His recent <a href="https://www.hackster.io/davesarmoury/interactive-animatronic-glados-8b4238">Interactive Animatronic GLaDOS</a> project was among nine winners in the <a href="https://www.hackster.io/contests/SparkFun-NVIDIA-AI-Innovation-Challenge">Hackster AI Innovation Challenge</a>. About 100 contestants vied for prizes from NVIDIA and Sparkfun by creating open-source projects to advance the use of AI in edge computing, robotics and IoT.</p>
-<p>Niewinski won first place in the generative AI applications category for his innovative robot based on the GLaDOS guide from game series <i>Portal</i>, the first-person puzzle platform from video game developer Valve.</p>
-<p>Other top winners included contestants Andrei Ciobanu and Allen Tao, who took first prize in the generative AI models for the edge and AI at the edge applications categories, respectively. Ciobanu used generative AI to help virtually try on clothes, while Tao developed a ROS-based robot to map the inside of a home to help find things.</p>
-<h2><b>Harnessing LLMs for Robots</b></h2>
-<p>Niewinski builds custom applications for robotics at his <a href="https://www.armourylabs.com/">Armoury Labs</a> business in Waterloo, Ontario, Canada, where he uses the NVIDIA Jetson platform for edge AI and robotics, creating open-source tutorials and <a href="https://www.youtube.com/@DavesArmoury/videos">YouTube videos</a> following his experiences.</p>
-<p>He built his interactive GLaDOS robot to create a personal assistant for himself in the lab. It handles queries using Transformer-based speech recognition, text-to-speech, and large language models (LLMs) running onboard an <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">NVIDIA Jetson AGX Orin</a>, which interfaces with a robot arm and camera for interactions.</p>
-<p>GLaDOS can track his whereabouts in the lab, move in different directions to face him and respond quickly to queries.</p>
-<p>“I like doing things with robots that people will look at and say it’s not what they had immediately expected,” he said.</p>
-<p><iframe loading="lazy" title="Bringing GLaDOS to life with Robotics and AI" width="500" height="281" src="https://www.youtube.com/embed/yNcKTZsHyfA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>He wanted the assistant to sound like the original GLaDOS from <i>Portal</i> and respond quickly. Fortunately, the gaming company Valve has put all of the voice lines from <i>Portal </i>and <i>Portal 2</i> on its website, allowing Niewinski to download the audio to help train a model.</p>
-<p>“Using Jetson, your average question-and-answer stuff runs pretty quick for speech,” he said.</p>
-<p>Niewinski used NVIDIA’s open-source <a href="https://github.com/NVIDIA/NeMo">NeMo</a> toolkit to fine-tune a voice for GLaDOS, training a spectrogram generator network called <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/tts_en_fastpitch">FastPitch</a> and <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/tts_hifigan">HiFiGAN</a> vocoder network to refine the audio quality.</p>
-<p>Both networks are deployed on Orin with <a href="https://www.nvidia.com/en-us/ai-data-science/products/riva/">NVIDIA Riva</a> to enable speech recognition and synthesis that’s been optimized to run at many times the real-time rate of speech, so that it can run alongside the LLM while maintaining a smooth, interactive delivery.</p>
-<p>For generating realistic responses from GLaDOS, Niewinski uses a locally hosted LLM called OpenChat that he runs in Docker from <a href="https://github.com/dusty-nv/jetson-containers">jetson-containers</a>, saying that it was a drop-in replacement for OpenAI’s API. All of this AI is running on the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/">Jetson</a> module, using the latest open-source ML software stack built with CUDA and <a href="https://developer.nvidia.com/embedded/jetpack">JetPack</a>.</p>
-<p>To enable GLaDOS to move, Niewinski developed the interactions for a Unitree Z1 robotic arm. It has a stereo camera and models for seeing and tracking a human speaking and a 3D-printed GLaDOS head and body shell around the arm.</p>
-<h2><b>Trying on Generative AI for Fashion Fit</b></h2>
-<p>Winner Ciobanu, based in Romania, aimed to improve the virtual clothing try-on experience with the help of generative AI, taking a top prize for his <a href="https://www.hackster.io/andrei-ciobanu2/edgestyle-fashion-preview-at-the-edge-b6d845">EdgeStyle: Fashion Preview at the Edge</a>.</p>
-<p>He used AI models such as YOLOv5, SAM and OpenPose to extract and refine data from images and videos. Then he used Stable Diffusion to generate the images, which he said was key to achieving accurate virtual try-ons.</p>
-<p>This system taught the model how clothes fit different poses on people, which he said enhanced the realism of the try-ons.</p>
-<p>“It’s quite handy as it allows users to see how clothes would look on them without actually trying them on,” said Ciobanu.</p>
-<p><iframe loading="lazy" title="EdgeStyle Demo" width="500" height="281" src="https://www.youtube.com/embed/kR_o9eEUHK4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>The NVIDIA JetPack SDK provided all the tools needed to run AI models smoothly on the Jetson Orin, he said.</p>
-<p>“It’s super-helpful to have a stable set of tools, especially when you’re dealing with AI tech that keeps changing,” said Ciobanu. “It really cut down on the time and hassle for us developers, letting us focus more on the cool stuff we’re building instead of getting stuck on tech issues.”</p>
-<h2> <b>Finding Lost Items With Robot Assistance</b></h2>
-<p>Winner Tao, based in Ontario, Canada, created a robot to lessen the burden of searching for things lost around the house. His <a href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.hackster.io%2Fceyeber%2Fan-eye-for-an-item-9162a7&amp;data=05%7C02%7Cscmartin%40nvidia.com%7C0e398a0434c949e581b508dc65b1f664%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638497062235862516%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=FiIs8uLHjF8szFOvOs5F1vHFD3ax0fKBEnLyL3kS9aQ%3D&amp;reserved=0">An Eye for an Item</a> project took top honors at the Hackster challenge.</p>
-<p>“Finding lost objects is a chore, and recent developments in zero-shot object detection and LLMs make it feasible for a computer to detect arbitrary objects for us based on textual or pictorial descriptions, presenting an opportunity for automation,” said Tao.</p>
-<p><iframe loading="lazy" title="An Eye for an Item  - Demo" width="500" height="281" src="https://www.youtube.com/embed/KAUH67vni74?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>Tao said he needed robot computing capabilities to catalog objects in any unstructured environment — whether a living room or large warehouse. And he needed it to also perform real-time calculations for localization to help with navigation, as well as running inference on larger object detection models.</p>
-<p>“Jetson Orin was a perfect fit, supporting all functionality from text and image queries into <a href="https://www.jetson-ai-lab.com/tutorial_nanodb.html">NanoDB</a>, to real-time odometry feedback, including leveraging <a href="https://developer.nvidia.com/isaac/ros">Isaac ROS</a>’ hardware-accelerated AprilTag detections for drift correction,” he said.</p>
-<p>Other <a href="https://www.hackster.io/contests/SparkFun-NVIDIA-AI-Innovation-Challenge">winners</a> of the AI Innovation Challenge include:</p>
-<ul>
-<li style="font-weight: 400;" aria-level="1">George Profenza, Escalator people tracker, 2nd place, Generative AI Applications category</li>
-<li style="font-weight: 400;" aria-level="1">Dimiter Kendri, Cooking meals with a local AI assistant using Jetson AGX Orin, 3rd place, Generative AI Applications category</li>
-<li style="font-weight: 400;" aria-level="1">Vy Phan, ClearWaters Underwater Image Enhancement with Generative AI, 2nd place, Generative AI Models category</li>
-<li style="font-weight: 400;" aria-level="1">Huy Mai, Realtime Language Segment Anything on Jetson Orin, 2nd place, Generative AI Models category</li>
-<li style="font-weight: 400;" aria-level="1">Fakhrur Razi, Autonomous Intelligent Robotic Shopping Cart, 2nd place, AI at the Edge Open category</li>
-<li style="font-weight: 400;" aria-level="1">Team Kinetika, Counting for Inspection and Quality Control with TensorRT, 3rd place, AI at the Edge Open category</li>
-</ul>
-<p><i>Learn more about </i><a href="https://developer.nvidia.com/embedded-computing"><i>NVIDIA Jetson Orin</i></a><i> for robotics and edge AI applications. Get started creating your own projects at the </i><a href="https://www.jetson-ai-lab.com/"><i>Jetson AI Lab</i></a><i>.  </i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/Hackster_Edge_AI_Challenge_Winners-Blog.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/04/Hackster_Edge_AI_Challenge_Winners-Blog-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[AI Takes a Bow: Interactive GLaDOS Robot Among 9 Winners in Hackster.io Challenge]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
