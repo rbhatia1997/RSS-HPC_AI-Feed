@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Mon, 13 May 2024 14:40:10 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 15 May 2024 19:24:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -1582,7 +1582,7 @@ process MY_PROCESS {
    --cluster-name bionemo-cluster \
    --cluster-configuration distributed-training-p4de_postinstall_scripts.yaml \
    --region us-east-1 \
-   --dryrun true
+   --dryrun false
 &lt;/code&gt;&lt;/pre&gt; 
 &lt;p&gt;Cluster creation will take 20-30 minutes. You can monitor the status of cluster creation with:&lt;/p&gt; 
 &lt;pre&gt;&lt;code class="lang-bash"&gt;watch pcluster describe-cluster \
