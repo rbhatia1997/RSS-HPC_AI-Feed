@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 15 May 2024 19:24:34 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 21 May 2024 12:40:52 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -369,7 +369,7 @@
 &amp;nbsp; Worker:
 &amp;nbsp;&amp;nbsp;&amp;nbsp; replicas: 16&lt;/code&gt;&lt;/pre&gt; 
 &lt;/div&gt; 
-&lt;p&gt;To allocate 8 processes per 16-GPU node, we set:&lt;/p&gt; 
+&lt;p&gt;To allocate 8 processes per GPU node, we set:&lt;/p&gt; 
 &lt;div class="hide-language"&gt; 
  &lt;pre&gt;&lt;code class="lang-yaml"&gt;nprocPerNode: "8"&lt;/code&gt;&lt;/pre&gt; 
 &lt;/div&gt; 
