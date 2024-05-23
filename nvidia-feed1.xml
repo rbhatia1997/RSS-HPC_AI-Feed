@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 22 May 2024 16:42:27 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 23 May 2024 16:23:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,126 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>Into the Omniverse: SoftServe and Continental Drive Digitalization With OpenUSD and Generative AI</title>
+		<link>https://blogs.nvidia.com/blog/softserve-and-continental-drive-digitalization-with-openusd-and-generative-ai/</link>
+		
+		<dc:creator><![CDATA[James McKenna]]></dc:creator>
+		<pubDate>Thu, 23 May 2024 13:00:08 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Into the Omniverse]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Universal Scene Description]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71772</guid>
+
+					<description><![CDATA[Leading German automotive technology company enhances manufacturing workflows with OpenUSD-powered virtual factory solutions.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of </i><a href="https://www.nvidia.com/en-us/omniverse/news/"><i>Into the Omniverse</i></a><i>, a series focused on how artists, developers and enterprises can transform their workflows using the latest advances in </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>OpenUSD</i></a><i> and </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>NVIDIA Omniverse</i></a><i>.</i></p>
+<p>Industrial digitalization is driving automotive innovation.</p>
+<p>In response to the industry’s growing demand for seamless, connected driving experiences, <a href="https://www.softserveinc.com/en-us">SoftServe</a>, a leading IT consulting and digital services provider, worked with <a href="https://www.continental.com/en/">Continental</a>, a leading German automotive technology company, to develop <a href="https://developer.nvidia.com/blog/spotlight-continental-and-softserve-deliver-generative-ai-powered-virtual-factory-solutions-with-openusd/">Industrial Co-Pilot</a>, a virtual agent powered by <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> that enables engineers to streamline maintenance workflows.</p>
+<p>SoftServe helps manufacturers like Continental to further optimize their operations by integrating the Universal Scene Description, or <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a>, framework into virtual factory solutions — such as Industrial Co-Pilot — developed on the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform.</p>
+<p>OpenUSD offers the flexibility and extensibility organizations need to harness the full potential of digital transformation, streamlining operations and driving efficiency. Omniverse is a platform of application programming interfaces, software development kits and services that enable developers to easily integrate OpenUSD and <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a> rendering technologies into existing software tools and simulation workflows.</p>
+<h2><b>Realizing the Benefits of OpenUSD</b></h2>
+<p>SoftServe and Continental’s Industrial Co-Pilot brings together generative AI and immersive 3D visualization to help factory teams increase productivity during equipment and production line maintenance. With the copilot, engineers can oversee production lines and monitor the performance of individual stations or the shop floor.</p>
+<p>They can also interact with the copilot to conduct root cause analysis and receive step-by-step work instructions and recommendations, leading to reduced documentation processes and improved maintenance procedures. It’s expected that these advancements will contribute to increased productivity and a10% reduction in maintenance effort and downtime.</p>
+<p><img fetchpriority="high" decoding="async" class="wp-image-71782 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2.png" alt="" width="578" height="324" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-400x224.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-1536x861.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-803x450.png 803w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-384x215.png 384w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-1280x718.png 1280w" sizes="(max-width: 578px) 100vw, 578px" /></p>
+<p>In a <a href="https://www.youtube.com/live/cqggH5skWH8?si=ZMUXPYIH7A0K5el4">recent Omniverse community livestream</a>, Benjamin Huber, who leads advanced automation and digitalization in the user experience business area at Continental, highlighted the significance of the company’s collaboration with SoftServe and its adoption of Omniverse.</p>
+<p>The Omniverse platform equips Continental and SoftServe developers with the tools needed to build a new era of AI-enabled industrial applications and services. And by breaking down data silos and fostering multi-platform cooperation with OpenUSD, SoftServe and Continental developers enable engineers to work seamlessly across disciplines and systems, driving efficiency and innovation throughout their processes.</p>
+<p>“Any engineer, no matter what tool they’re working with, can transform their data into OpenUSD and then interchange data from one discipline to another, and from one tool to another,” said Huber.</p>
+<p>This sentiment was echoed by Vasyl Boliuk, senior lead and test automation engineer at SoftServe, who shared how OpenUSD and Omniverse — along with other NVIDIA technologies like <a href="https://www.nvidia.com/en-us/ai-data-science/products/riva/">NVIDIA Riva</a>, <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> and <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/">NVIDIA NIM</a> microservices — enabled SoftServe and Continental teams to develop custom large language models and connect them to new 3D workflows.</p>
+<p>“OpenUSD allows us to add any attribute or any piece of metadata we want to our applications,” he said.</p>
+<p>Boliuk, Huber and other SoftServe and Continental representatives joined the livestream to share more about the potential unlocked from these OpenUSD-powered solutions. Watch the replay:</p>
+<p><iframe title="Generative AI-Powered Virtual Factory Solutions With OpenUSD" width="500" height="281" src="https://www.youtube.com/embed/cqggH5skWH8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>By embracing cutting-edge technologies and fostering collaboration, SoftServe and Continental are helping reshape automotive manufacturing.</p>
+<h2><b>Get Plugged Into the World of OpenUSD</b></h2>
+<p>Watch SoftServe and Continental’s on-demand NVIDIA GTC talks to learn more about their virtual factory solutions and experience developing on NVIDIA Omniverse with OpenUSD:</p>
+<ul>
+<li style="font-weight: 400"><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62919/">Transforming Factory Planning and Manufacturing Operations Within Digital Mega Plants</a></li>
+<li style="font-weight: 400"><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61799/">Getting Started With Generative AI and OpenUSD for Industrial Metaverse Applications</a></li>
+</ul>
+<p>Learn about the latest technologies driving the next industrial revolution by watching NVIDIA founder and CEO Jensen Huang’s <a href="https://www.nvidia.com/en-us/events/computex/">COMPUTEX keynote</a> on Sunday, June 2, at 7 p.m. Taiwan time.</p>
+<p>Check out a new <a href="https://www.youtube.com/playlist?list=PL3jK4xNnlCVcUP08kj6eOzvCA82U_JKiy">video series</a> about how OpenUSD can improve 3D workflows. For more resources on OpenUSD, explore the Alliance for OpenUSD <a href="https://forum.aousd.org/">forum</a> and visit the <a href="https://aousd.org/">AOUSD website</a>.</p>
+<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, access </i><a href="https://developer.nvidia.com/usd"><i>OpenUSD</i></a><i> resources and learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise</i><i> can connect team</i></a><i>s. Follow Omniverse on </i><a href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse"><i>X</i></a><i>. For more, join the </i><a href="https://www.nvidia.com/en-us/omniverse/community/"><i>Omniverse community</i></a><i> on the </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels. </i></p>
+<p><i>Featured image courtesy of SoftServe.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/nv-ov-ito-1280x680_softserve_052024-1.png"
+			type="image/png"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/nv-ov-ito-1280x680_softserve_052024-1-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Into the Omniverse: SoftServe and Continental Drive Digitalization With OpenUSD and Generative AI]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Senua’s Story Continues: GeForce NOW Brings ‘Senua’s Saga: Hellblade II’ to the Cloud</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-senuas-saga-hellblade-2/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 23 May 2024 13:00:05 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71774</guid>
+
+					<description><![CDATA[Every week, GFN Thursday brings new games to the cloud, featuring some of the latest and greatest titles for members to play. Leading the seven games joining GeForce NOW this week is the newest game in Ninja Theory’s Hellblade franchise, Senua’s Saga: Hellblade II. This day-and-date release expands the cloud gaming platform’s extensive library of	<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-senuas-saga-hellblade-2/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Every week, GFN Thursday brings new games to the cloud, featuring some of the latest and greatest titles for members to play.</p>
+<p>Leading the seven games joining <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> this week is the newest game in Ninja Theory’s <i>Hellblade</i> franchise, <i>Senua’s Saga: Hellblade II</i>. This day-and-date release expands the cloud gaming platform’s extensive library of over 1,900 games.</p>
+<p>Members can also look forward to a new reward — a free in-game mount — for <i>The Elder Scrolls Online </i>starting Thursday, May 30. Get ready by opting into <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW’s Rewards program</a>.</p>
+<h2><b>Senua Returns</b></h2>
+<figure id="attachment_71778" aria-describedby="caption-attachment-71778" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-71778" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-672x368.jpg" alt="Senua's Saga: Hellblade II screen" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-672x368.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-400x219.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-768x420.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-1536x840.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-823x450.jpg 823w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-393x215.jpg 393w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-183x100.jpg 183w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-1280x700.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71778" class="wp-caption-text">Head to the cloud to overcome the darkness.</figcaption></figure>
+<p>In <i>Senua’s Saga: Hellblade II</i>, the sequel to the award-winning <i>Hellblade: Senua’s Sacrifice</i>, Senua returns in a brutal journey of survival through the myth and torment of Viking Iceland.</p>
+<p>Intent on saving those who’ve fallen victim to the horrors of tyranny, Senua battles the forces of darkness within and without. Sink deep into the next chapter of Senua’s story, a crafted experience told through cinematic immersion, beautifully realized visuals and encapsulating sound.</p>
+<p><a href="http://geforcenow.com">Priority and Ultimate members</a> can fully immerse themselves in Senua’s story with epic cinematic gameplay at higher resolutions and frame rates over free members. Ultimate members can stream at up to 4K 120 frames per second with exclusive access to GeForce RTX 4080 SuperPODs in the cloud, even on underpowered devices.</p>
+<h2><b>Level Up With New Games</b></h2>
+<p>Check out the full list of new games this week:</p>
+<ul>
+<li><i>Synergy </i>(New release on <a href="https://store.steampowered.com/app/1989070?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 21)</li>
+<li><i>Senua’s Saga: Hellblade II</i> (New release on <a href="https://store.steampowered.com/app/2461850?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/senuas-saga-hellblade-ii/9pmbb7nghv95?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, May 21)</li>
+<li><i>Crown Wars: The Black Prince </i>(New release on <a href="https://store.steampowered.com/app/1658920?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 23)</li>
+<li><i>Serum</i> (New release on <a href="https://store.steampowered.com/app/1610520?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 23)</li>
+<li><i>Ships at Sea</i> (New release on <a href="https://store.steampowered.com/app/1266540?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 23)</li>
+<li><i>Exo One </i>(<a href="https://store.steampowered.com/app/773370?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Phantom Brigade </i>(<a href="https://store.steampowered.com/app/553540?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+</ul>
+<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">what&#39;s a life lesson you learned from a game?</p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1793310854592491909?ref_src=twsrc%5Etfw">May 22, 2024</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-thursday-5-23-nv-blog-1280x680-no-copy.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-thursday-5-23-nv-blog-1280x680-no-copy-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Senua’s Story Continues: GeForce NOW Brings ‘Senua’s Saga: Hellblade II’ to the Cloud]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Watt a Win: NVIDIA Sweeps New Ranking of World’s Most Energy-Efficient Supercomputers</title>
 		<link>https://blogs.nvidia.com/blog/green500-energy-efficient-supercomputers/</link>
 		
@@ -178,7 +298,7 @@
 <h2><b>Faster LLMs and New Capabilities for Web Developers</b></h2>
 <p>Microsoft recently released the <a href="https://github.com/microsoft/onnxruntime-genai">generative AI extension for ORT</a>, a cross-platform library for AI inference. The extension adds support for optimization techniques like quantization for LLMs like Phi-3, Llama 3, Gemma and Mistral. ORT supports different execution providers for inferencing via various software and hardware stacks, including DirectML.</p>
 <p>ORT with the DirectML backend offers Windows AI developers a quick path to develop AI capabilities, with stability and production-grade support for the broad Windows PC ecosystem. NVIDIA optimizations for the generative AI extension for ORT, available now in R555 Game Ready, Studio and NVIDIA RTX Enterprise Drivers, help developers get up to 3x faster performance on RTX compared to previous drivers.</p>
-<figure id="attachment_71747" aria-describedby="caption-attachment-71747" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-71747" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-672x386.png" alt="" width="672" height="386" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-672x386.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-400x230.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-768x441.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-1536x883.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-783x450.png 783w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-374x215.png 374w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-174x100.png 174w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-1280x736.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71747" class="wp-caption-text"><i>Inference performance for three LLMs using ONNX Runtime and the DirectML execution provider with the latest R555 GeForce driver compared to the previous R550 driver. INSEQ=2000 representative of document summarization workloads. All data captured with GeForce RTX 4090 GPU using batch size 1. The generative AI extension support for int4 quantization, plus the NVIDIA optimizations, result in up to 3x faster performance for LLMs.</i></figcaption></figure>
+<figure id="attachment_71747" aria-describedby="caption-attachment-71747" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf.png"><img loading="lazy" decoding="async" class="size-large wp-image-71747" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-672x386.png" alt="" width="672" height="386" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-672x386.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-400x230.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-768x441.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-1536x883.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-783x450.png 783w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-374x215.png 374w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-174x100.png 174w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf-1280x736.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/llm-inference-perf.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71747" class="wp-caption-text"><i>Inference performance for three LLMs using ONNX Runtime and the DirectML execution provider with the latest R555 GeForce driver compared to the previous R550 driver. INSEQ=2000 representative of document summarization workloads. All data captured with GeForce RTX 4090 GPU using batch size 1. The generative AI extension support for int4 quantization, plus the NVIDIA optimizations, result in up to 3x faster performance for LLMs.</i></figcaption></figure>
 <p>Developers can unlock the full capabilities of RTX hardware with the new <a href="https://www.nvidia.com/download/index.aspx">R555 driver</a>, bringing better AI experiences to consumers, faster. It includes:</p>
 <ul>
 <li>Support for DQ-GEMM metacommand to handle INT4 weight-only quantization for LLMs</li>
@@ -236,10 +356,10 @@
 <p>RTX Video is a collection of AI enhancements that improves the quality of video played on apps like YouTube, Prime Video and Disney+. <a href="https://blogs.nvidia.com/blog/rtx-video-super-resolution/">RTX Video Super Resolution</a> (VSR) upscales video for cleaner, crisper imagery, while <a href="https://blogs.nvidia.com/blog/rtx-video-hdr-remix-studio-driver/">RTX Video HDR</a> transforms standard dynamic range video content to high-dynamic range (HDR10), improving its visibility, details and vibrancy.</p>
 <p>Mozilla Firefox, the third most popular PC browser, has added support for RTX VSR and HDR, including AI-enhanced upscaling, de-artifacting and HDR effects for most streamed videos.</p>
 <p><a href="https://www.nvidia.com/en-us/geforce/rtx-remix/">NVIDIA RTX Remix</a> allows modders to easily capture game assets, automatically enhance materials with <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> tools and create stunning RTX remasters with full ray tracing. RTX Remix recently added DLSS 3.5 support featuring Ray Reconstruction, an AI model that creates higher-quality images for intensive ray-traced games and apps, to the modding toolkit.</p>
-<p><iframe title="RTX Remix - Remaster the Classics with RTX" width="500" height="281" src="https://www.youtube.com/embed/27LkeFtuq48?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="RTX Remix - Remaster the Classics with RTX" width="500" height="281" src="https://www.youtube.com/embed/27LkeFtuq48?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>Game developers interested in creating their own ray-traced mod for a classic game can <a href="https://www.nvidia.com/en-us/geforce/rtx-remix/">download the RTX Remix Beta</a> and watch <a href="https://www.youtube.com/playlist?list=PL4w6jm6S2lzvgJ97T1_VbLGBR_l6zzOUm">tutorial videos</a> to get a head start.</p>
 <p>Maxon’s Cinema 4D modeling software empowers 3D video effects artists and motion designers to create complex scenes with ease. The integration of the software’s Version 2024.4 with C4D’s Unified Simulation systems now enables control of emission fields to modify behaviors more precisely.</p>
-<p><iframe title="Maxon One Spring 2024 Release" width="500" height="281" src="https://www.youtube.com/embed/4ySqAzYSRms?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Maxon One Spring 2024 Release" width="500" height="281" src="https://www.youtube.com/embed/4ySqAzYSRms?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>This integration unlocks the ability to orchestrate object interactions with different simulation types, including Pyro, Cloth, soft bodies and rigid bodies. These simulations run considerably faster depending on the RTX GPU in use.</p>
 <p>The <a href="https://www.nvidia.com/en-us/ai-data-science/audio2face/">NVIDIA Omniverse Audio2Face</a> app for iClone 8 uses AI to produce expressive facial animations solely from audio input. In addition to generating natural lip-sync animations for multilingual dialogue, the latest standalone release supports multilingual lip-sync and singing animations, as well as full-spectrum editing with slider controls and a keyframe editor.</p>
 <p><iframe loading="lazy" title="Audio2Face - AI-Powered Facial &amp; Lip Sync Animation | iClone" width="500" height="281" src="https://www.youtube.com/embed/ScMb1f1M9yU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
@@ -664,6 +784,7 @@
 		<category><![CDATA[Data Center]]></category>
 		<category><![CDATA[Software]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[DGX Cloud]]></category>
 		<category><![CDATA[Inference]]></category>
 		<category><![CDATA[TensorRT]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71636</guid>
@@ -719,6 +840,7 @@
 		<pubDate>Tue, 14 May 2024 16:30:03 +0000</pubDate>
 				<category><![CDATA[Driving]]></category>
 		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[DGX Cloud]]></category>
 		<category><![CDATA[NVIDIA DRIVE]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71593</guid>
 
@@ -814,6 +936,7 @@
 				<category><![CDATA[Generative AI]]></category>
 		<category><![CDATA[Artficial Intelligence]]></category>
 		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[DGX Cloud]]></category>
 		<category><![CDATA[Events]]></category>
 		<category><![CDATA[Hardware]]></category>
 		<category><![CDATA[Healthcare and Life Sciences]]></category>
@@ -1022,144 +1145,6 @@
 			/>
 			<media:title type="html"><![CDATA[Generating Science: NVIDIA AI Accelerates HPC Research]]></media:title>
 			<media:description type="html">Image of generative AI in science</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Dial It In: Data Centers Need New Metric for Energy Efficiency</title>
-		<link>https://blogs.nvidia.com/blog/datacenter-efficiency-metrics-isc/</link>
-		
-		<dc:creator><![CDATA[Jeremy Rodriguez]]></dc:creator>
-		<pubDate>Mon, 13 May 2024 06:00:04 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Artficial Intelligence]]></category>
-		<category><![CDATA[Cloud Services]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[GPU Computing]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[Parallel Computing]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71524</guid>
-
-					<description><![CDATA[Data centers need an upgraded dashboard to guide their journey to greater energy efficiency, one that shows progress running real-world applications. The formula for energy efficiency is simple: work done divided by energy used. Applying it to data centers calls for unpacking some details. Today’s most widely used gauge — power usage effectiveness (PUE)  —	<a class="read-more" href="https://blogs.nvidia.com/blog/datacenter-efficiency-metrics-isc/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Data centers need an upgraded dashboard to guide their journey to greater <a href="https://www.nvidia.com/en-us/glossary/energy-efficiency/">energy efficiency</a>, one that shows progress running real-world applications.</p>
-<p>The formula for energy efficiency is simple: work done divided by energy used. Applying it to data centers calls for unpacking some details.</p>
-<p>Today’s most widely used gauge — power usage effectiveness (<a href="https://leonardo-energy.pl/wp-content/uploads/2018/03/Green_Grid_Metrics.pdf">PUE</a>)  — compares the total energy a facility consumes to the amount its computing infrastructure uses. Over the last 17 years, PUE has driven the most efficient operators closer to an ideal where almost no energy is wasted on processes like power conversion and cooling.</p>
-<h2><b>Finding the Next Metrics</b></h2>
-<p>PUE served data centers well during the rise of cloud computing, and it will continue to be useful. But it’s insufficient in today’s <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> era, when workloads and the systems running them have changed dramatically.</p>
-<p>That’s because PUE doesn’t measure the useful output of a data center, only the energy that it consumes. That’d be like measuring the amount of gas an engine uses without noticing how far the car has gone.</p>
-<p>Many standards exist for data center efficiency. A<a href="https://ieeexplore.ieee.org/document/7921551"> 2017 paper</a> lists nearly three dozen of them, several focused on specific targets such as cooling, water use, security and cost.</p>
-<h2><b>Understanding What’s Watts</b></h2>
-<p>When it comes to energy efficiency, the computer industry has a long and somewhat unfortunate history of describing systems and the processors they use in terms of power, typically in watts. It’s a worthwhile metric, but many fail to realize that watts only measure input power at a point in time, not the actual energy computers use or how efficiently they use it.</p>
-<p>So, when modern systems and processors report rising input power levels in watts, that doesn’t mean they’re less energy efficient. In fact, they’re often much more efficient in the amount of work they do with the amount of energy they use.</p>
-<p>Modern data center metrics should focus on energy, what the engineering community knows as kilowatt-hours or joules. The key is how much useful work they do with this energy.</p>
-<h2><b>Reworking What We Call Work</b></h2>
-<p>Here again, the industry has a practice of measuring in abstract terms, like processor instructions or math calculations. So, MIPS (millions of instructions per second) and FLOPS (floating point operations per second) are widely quoted.</p>
-<p>Only computer scientists care how many of these low-level jobs their system can handle. Users would prefer to know how much real work their systems put out, but defining useful work is somewhat subjective.</p>
-<p>Data centers focused on AI may rely on the <a href="https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/">MLPerf benchmarks</a>. Supercomputing centers tackling scientific research typically use <a href="https://developer.nvidia.com/hpc-application-performance">additional measures</a> of work. Commercial data centers focused on streaming media may want others.</p>
-<p>The resulting suite of applications must be allowed to evolve over time to reflect the state of the art and the most relevant use cases. For example, the <a href="https://blogs.nvidia.com/blog/tensorrt-llm-inference-mlperf/">last MLPerf round</a> added tests using two generative AI models that didn’t even exist five years ago.</p>
-<h2><b>A Gauge for Accelerated Computing</b></h2>
-<p>Ideally, any new benchmarks should measure advances in<a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/"> accelerated computing</a>. This combination of parallel processing hardware, software and methods is running applications dramatically faster and more efficiently than CPUs across many modern workloads.</p>
-<p>For example, on scientific applications, the Perlmutter supercomputer at the National Energy Research Scientific Computing Center <a href="https://blogs.nvidia.com/blog/gpu-energy-efficiency-nersc/">demonstrated</a> an average of 5x gains in energy efficiency using accelerated computing. That’s why it’s among the 39 of the top 50 supercomputers — including the No. 1 system — on<a href="https://www.top500.org/lists/green500/2023/11/"> the Green500 list</a> that use NVIDIA GPUs.</p>
-<figure id="attachment_71555" aria-describedby="caption-attachment-71555" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-71555" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-672x297.jpg" alt="Chart of GPU vs CPU energy efficiency" width="672" height="297" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-672x297.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-400x177.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-768x340.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-842x373.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-406x180.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time-188x83.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Power-over-time.jpg 1146w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71555" class="wp-caption-text">Because they execute lots of tasks in parallel, GPUs execute more work in less time than CPUs, saving energy.</figcaption></figure>
-<p>Companies across many industries share similar results. For example, PayPal improved real-time fraud detection by 10% and <a href="https://developer.nvidia.com/blog/gpu-inference-momentum-continues-to-build/">lowered server energy consumption</a> nearly 8x with accelerated computing.</p>
-<p>The gains are growing with each new generation of GPU hardware and software.</p>
-<p>In a <a href="https://aiindex.stanford.edu/wp-content/uploads/2023/04/HAI_AI-Index-Report_2023.pdf">recent report</a>, Stanford University’s Human-Centered AI group estimated GPU performance “has increased roughly 7,000 times” since 2003, and price per performance is “5,600 times greater.”</p>
-<figure id="attachment_71558" aria-describedby="caption-attachment-71558" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-scaled.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-71558" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-672x377.jpg" alt="Chart depicts relationships among various data center energy efficiency graphics" width="672" height="377" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-672x377.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-768x431.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-1536x863.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-801x450.jpg 801w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-383x215.jpg 383w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Graph-of-data-center-benchmarks-1280x719.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71558" class="wp-caption-text">Data centers need a suite of benchmarks to track energy efficiency across their major workloads.</figcaption></figure>
-<h2><b>Two Experts Weigh In</b></h2>
-<p>Experts see the need for a new energy-efficiency metric, too.</p>
-<p>With today’s data centers achieving scores around 1.2 PUE, the metric “has run its course,” said Christian Belady, a data center engineer who had the original idea for PUE. “It improved data center efficiency when things were bad, but two decades later, they’re better, and we need to focus on other metrics more relevant to today’s problems.”</p>
-<p>Looking forward, “the holy grail is a performance metric. You can’t compare different workloads directly, but if you segment by workloads, I think there is a better likelihood for success,” said Belady, who continues to work on initiatives driving data center sustainability.</p>
-<p>Jonathan Koomey, a researcher and author on computer efficiency and sustainability, agreed.</p>
-<p>“To make good decisions about efficiency, data center operators need a suite of benchmarks that measure the energy implications of today’s most widely used AI workloads,” said Koomey.</p>
-<p>“Tokens per joule is a great example of what one element of such a suite might be,” Koomey added. “Companies will need to engage in open discussions, share information on the nuances of their own workloads and experiments, and agree to realistic test procedures to ensure these metrics accurately characterize energy use for hardware running real-world applications.”</p>
-<p>“Finally, we need an open public forum to conduct this important work,” he said.</p>
-<h2><b>It Takes a Village</b></h2>
-<p>Thanks to metrics like PUE and rankings like the Green500, data centers and supercomputing centers have made enormous progress in energy efficiency.</p>
-<p>More can and must be done to extend efficiency advances in the age of generative AI. Metrics of energy consumed doing useful work on today’s top applications can take supercomputing and data centers to a new level of energy efficiency.</p>
-<p><i>To learn more about available energy-efficiency solutions, explore</i><a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/"> <i>NVIDIA sustainable computing</i></a><i>.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Concepts-for-a-data-cetner-energy-efficieicny-metric-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1091"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Concepts-for-a-data-cetner-energy-efficieicny-metric-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Dial It In: Data Centers Need New Metric for Energy Efficiency]]></media:title>
-			<media:description type="html">Concept image of data center energy efficiency metrics</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Through the Wormhole: Media.Monks’ Vision for Enhancing Media and Marketing With AI</title>
-		<link>https://blogs.nvidia.com/blog/media-monks-ai-podcast/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Thu, 09 May 2024 21:56:53 +0000</pubDate>
-				<category><![CDATA[The AI Podcast]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71546</guid>
-
-					<description><![CDATA[Meet Media.Monks’ Wormhole, an alien-like, conversational robot with a quirky personality and the ability to offer keen marketing expertise. Lewis Smithingham, senior vice president of innovation and special ops at Media.Monks, a global marketing and advertising company, discusses the creation of Wormhole and AI’s potential to enhance media and entertainment with host Noah Kravitz in	<a class="read-more" href="https://blogs.nvidia.com/blog/media-monks-ai-podcast/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Meet Media.Monks’ Wormhole, an alien-like, conversational robot with a quirky personality and the ability to offer keen marketing expertise. Lewis Smithingham, senior vice president of innovation and special ops at Media.Monks, a global marketing and advertising company, discusses the creation of Wormhole and AI’s potential to enhance media and entertainment with host Noah Kravitz in this <a href="https://soundcloud.com/theaipodcast">AI Podcast</a> episode recorded live at the <a href="https://www.nvidia.com/gtc/">NVIDIA GTC</a> global AI conference. Wormhole was designed to showcase Monks.Flow, an AI-powered platform that streamlines marketing and content creation workflows. Smithingham delves into Media.Monks’ platforms for media, entertainment and advertising and speaks to its vision for a future where AI enhances creativity and allows for more personalized, scalable content creation.</p>
-<p>Stay tuned for more episodes recorded live from GTC, and hear more from Smithingham in this <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-ep64041/">GTC interview</a>.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1816942410&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Media.Monks’ Lewis Smithingham on Enhancing Media and Marketing With AI - Ep. 222" href="https://soundcloud.com/theaipodcast/mediamonks-lewis-smithingham" target="_blank" rel="noopener">Media.Monks’ Lewis Smithingham on Enhancing Media and Marketing With AI &#8211; Ep. 222</a></div>
-<h2>Time Stamps</h2>
-<p>1:45: What is Media.Monks?<br />
-6:23: Description of Wormhole<br />
-8:49: Possible use cases for Wormhole<br />
-10:21: Takeaways from developing Wormhole<br />
-12:02: What is Monks.Flow?<br />
-16:54: Response from creatives on using AI in their work<br />
-21:23: Smithingham’s outlook on hyperpersonalized content<br />
-34:24: What’s next for the future of AI-powered media?</p>
-<h2>You Might Also Like…</h2>
-<p><a href="https://soundcloud.com/theaipodcast/pinar-demirdag-cuebric">Exploring Filmmaking With Cuebric’s AI: Insights From Pinar Seyhan Demirdag &#8211; Ep. 214</a></p>
-<p>In today’s episode of NVIDIA’s AI Podcast, host Noah Kravitz talks with Pinar Seyhan Demirdag, co-founder and CEO of Cuebric. Cuebric is on a mission to offer new solutions in filmmaking and content creation through immersive, two-and-a-half-dimensional cinematic environments.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-deepdub">Deepdub’s Ofir Krakowski on Redefining Dubbing From Hollywood to Bollywood &#8211; Ep. 202</a></p>
-<p>On the latest episode of NVIDIA’s AI Podcast, host Noah Kravitz spoke with Deepdub’s cofounder and CEO, Ofir Krakowski. Deepdub uses AI-driven dubbing to help entertainment companies boost efficiency and cut costs while increasing accessibility.</p>
-<p><a href="https://soundcloud.com/theaipodcast/wsc-sports">WSC Sports’ Amos Bercovich on How AI Keeps the Sports Highlights Coming &#8211; Ep. 183</a></p>
-<p>On this episode of the AI Podcast, host Noah Kravitz spoke with Amos Bercovich, algorithm group leader at WSC Sports, makers of an AI cloud platform that enables over 200 sports organizations worldwide to generate personalized and customized sports videos automatically and in real time.</p>
-<p><a href="https://soundcloud.com/theaipodcast/maya-ackerman">Maya Ackerman on LyricStudio, an AI-Based Writing Songwriting Assistant &#8211; Ep. 153</a></p>
-<p>Lennon and McCartney. Ashford and Simpson. Many of our all-time favorite tunes have come from songwriting duos. Now, anyone can find a snazzy compositional partner in AI. In this episode of the AI Podcast, Maya Ackerman, CEO of WaveAI, spoke with host Noah Kravtiz about WaveAI’s LyricStudio software, an AI-based lyric and poetry writing assistant.</p>
-<h2>Subscribe to the AI Podcast</h2>
-<p>Get the<a href="https://blogs.nvidia.com/ai-podcast/"> AI Podcast</a> through<a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439"> iTunes</a>,<a href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjI2NDAzNDEzMy9zb3VuZHMucnNz"> Google Podcasts</a>,<a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm"> Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music, </a><a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher,<a href="https://overcast.fm/itunes1186480811/the-ai-podcast"> Overcast</a>,<a href="https://player.fm/series/the-ai-podcast"> PlayerFM</a>, Pocket Casts,<a href="http://www.podbay.fm/show/1186480811"> Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast"> PodBean</a>, PodCruncher, PodKicker,<a href="https://soundcloud.com/theaipodcast"> Soundcloud</a>,<a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L"> Spotify</a>,<a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr"> Stitcher</a> and<a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/"> TuneIn</a>.</p>
-<p>Make the AI Podcast better: Have a few minutes to spare? Fill out<a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short"> this listener survey</a>.</p>
-<p>&nbsp;</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1159"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Through the Wormhole: Media.Monks’ Vision for Enhancing Media and Marketing With AI]]></media:title>
-			<media:description type="html"></media:description>
 			</media:content>
 			</item>
 	</channel>

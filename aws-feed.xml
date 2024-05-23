@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 21 May 2024 12:40:52 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 23 May 2024 15:35:06 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,58 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Announcing: Seqera Containers for the bioinformatics community</title>
+		<link>https://aws.amazon.com/blogs/hpc/announcing-seqera-containers-for-the-bioinformatics-community/</link>
+		
+		<dc:creator><![CDATA[Brendan Bouffler]]></dc:creator>
+		<pubDate>Thu, 23 May 2024 15:35:06 +0000</pubDate>
+				<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Life Sciences]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[Bioinformatics]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[Genomics]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<guid isPermaLink="false">771f9023418ab35b6435bfa6a8543c7119414297</guid>
+
+					<description>Genomics community: rejoice! Seqera + AWS have teamed up to announce Seqera Containers, an open-source, no cost, reliable way to generate containers (on the fly if you wish) for your workflows - in the cloud or not, using Nextflow, or not. This is a global community resource we're thrilled to be able to support.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3652" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/09/boofla88_a_robotics_simulation_involving_robots_carrying_shippi_a9b0df15-954a-4cdf-900d-edf64a5475b2.png" alt="Announcing: Seqera Containers for the bioinformatics community" width="380" height="212"&gt;&lt;em&gt;This post was contributed by Brendan Bouffler, Head of Developer Relations, HPC Engineering at AWS, Phil Ewels, Snr Product Manager for Open Source at Seqera, and Paolo Di Tommaso, the CTO &amp;amp; co-founder of Seqera.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Life sciences is a rapidly-moving area of research, and you don’t need to look too far for amazing examples where the practitioners of this field have adopted new tools and techniques to solve ever harder problems. Within this domain, bioinformatics has emerged as a crucial discipline, bridging the gap between biology and computer science. Many of the features in AWS Batch have been driven by this community, leading to a close relationship between our teams and the people working at the front lines of research.&lt;/p&gt; 
+&lt;p&gt;But while biological data has become more complex and massive, it has also become increasingly personal, and inevitably regulated. The world needed researchers across borders and geographies to share insights and techniques without necessarily moving the data, or sharing the same infrastructure. The conditions were set for another uptake of new technology.&lt;/p&gt; 
+&lt;p&gt;Adopting containers for packaging applications turned out to be pivotal for this shift: it revolutionized the way bioinformatics workflows are &lt;a href="https://seqera.io/blog/nextflow-and-aws-batch-inside-the-integration-part-1-of-3/"&gt;developed&lt;/a&gt;, &lt;a href="https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-1-of-2/"&gt;deployed&lt;/a&gt;, &lt;em&gt;and &lt;/em&gt;&lt;a href="https://nf-co.re/"&gt;&lt;em&gt;shared&lt;/em&gt;&lt;/a&gt; – increasing the reproducibility of an analysis. But while they’ve unquestionably simplified the life of bioinformaticians, their creation and usage is not without some friction.&lt;/p&gt; 
+&lt;p&gt;Today, in conjunction with our friends at &lt;a href="https://seqera.io/about/"&gt;Seqera&lt;/a&gt;, we’re announcing a project we’re supporting called &lt;strong&gt;Seqera Containers. &lt;/strong&gt;This is a freely-available resource for the entire bioinformatics community (in the cloud or not) which simplifies the container experience – allowing researchers to generate a container for any combination of Conda and PyPI packages at the click of a button. Best of all, Seqera Containers are publicly accessible to everyone, at no-cost.&lt;/p&gt; 
+&lt;h2&gt;Building containers on-demand – powered by Wave and AWS&lt;/h2&gt; 
+&lt;p&gt;Seqera Containers is not a traditional container registry: users are not expected to browse existing container images or push local images to a remote. Instead, Seqera Containers provides a simple form to choose a combination of packages from Conda or the Python Package Index (PyPI). Clicking “Get Container” returns a Docker or Singularity image URI which can be used immediately.&lt;/p&gt; 
+&lt;div id="attachment_3716" style="width: 1328px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3716" loading="lazy" class="size-full wp-image-3716" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/23/IMG-2024-05-23-07.44.30-1.png" alt="Figure 1 - the community wave registry is easy to access, and even easier to use." width="1318" height="942"&gt;
+ &lt;p id="caption-attachment-3716" class="wp-caption-text"&gt;Figure 1 – the community wave registry is easy to access, and even easier to use.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Wave containerization service&lt;/h2&gt; 
+&lt;p&gt;The beating heart of Seqera Containers is &lt;a href="https://seqera.io/wave/"&gt;Wave&lt;/a&gt; – an &lt;a href="https://github.com/seqeralabs/wave"&gt;open-source&lt;/a&gt; technology built by Seqera for next-generation container provisioning that aims to simplify the usage of containers. Instead of writing Dockerfile scripts to build images, a developer or end user can request a just-in-time container image tailored for the target execution platform using only package names and version numbers from popular software packaging tools &lt;a href="https://conda.io/"&gt;Conda&lt;/a&gt; (including &lt;a href="https://bioconda.github.io/"&gt;Bioconda&lt;/a&gt;&lt;u&gt;),&lt;/u&gt; and the &lt;a href="https://pypi.org/"&gt;Python Package Index&lt;/a&gt; and later, &lt;a href="https://packages.spack.io/"&gt;Spack&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Wave can also compile images on the fly to match your compute infrastructure – including x86 and Arm64-based processors (where upstream packages are available).&lt;/p&gt; 
+&lt;p&gt;Wave supports both Docker and Singularity images – and thus any other container technologies that use Docker images, like Podman, Shifter, Sarus, or Charliecloud. Seqera Containers provides an OCI compliant registry for native Singularity image builds and even allows direct .sif image download as a flat file, without needing Singularity installed locally.&lt;/p&gt; 
+&lt;p&gt;As part of the build process, Wave conducts a vulnerability scan using the &lt;a href="https://trivy.dev/"&gt;Trivy&lt;/a&gt; security scanner and is able to generate &lt;a href="https://en.wikipedia.org/wiki/Software_supply_chain"&gt;SBOM manifests&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Reproducible container URIs&lt;/h2&gt; 
+&lt;p&gt;Building containers on demand is convenient, but for the sake of performance, reproducibility, and provenance, it’s important to use the exact same image for every run. To do this, Wave generates a checksum for the build and can push the built image to a traditional OCI registry. Subsequent requests with the same checksum will be returned directly from the registry.&lt;/p&gt; 
+&lt;p&gt;So, when you request an image through the Seqera Containers web interface, most of the time the images will come from the cache – meaning virtually instant access and consistent reuse by you, or anyone in the community. That image cache doesn’t expire, so those images will still be there when you need to reproduce that analysis in a few years’ time.&lt;/p&gt; 
+&lt;h2&gt;Built-in support for Nextflow&lt;/h2&gt; 
+&lt;p&gt;We hope that this service and these containers will be of use to the entire bioinformatics community. However, the experience of using Seqera Containers will be particularly good for Nextflow users.&lt;/p&gt; 
+&lt;p&gt;Using the &lt;a href="https://nextflow.io/docs/latest/wave.html"&gt;Nextflow wave plugin&lt;/a&gt;, pipeline developers can avoid specifying container URIs in their pipeline code entirely. Instead, just naming the software packages in the conda (or, later, spack) declarations and then setting wave.enabled = true and wave.freeze = true is all you need. This instructs Nextflow to request an image from Wave for these packages, store it in the Seqera Containers public registry, and then use this at run time.&lt;/p&gt; 
+&lt;p&gt;Wave isn’t restricted to working with Nextflow, there is also a &lt;a href="https://github.com/seqeralabs/wave-cli"&gt;Wave CLI&lt;/a&gt; which anyone can use to generate containers as well as an &lt;a href="https://docs.seqera.io/wave/api"&gt;API&lt;/a&gt;, both of which have all the same functionality as the Nextflow plugin and Seqera Containers web interface.&lt;/p&gt; 
+&lt;h2&gt;It’s available now&lt;/h2&gt; 
+&lt;p&gt;The impact of container technology on the progress of life sciences research just can’t be overstated.&lt;/p&gt; 
+&lt;p&gt;It addresses big challenges in bioinformatics, like reproducibility, scalability, and collaboration. It eases software management, and empowers researchers to focus on their core scientific endeavors. This has accelerated the pace of discoveries, fostered collaboration, and enhanced the overall quality and reproducibility of bioinformatics research.&lt;/p&gt; 
+&lt;p&gt;We think today’s announcement pushes containers, and bioinformatics one step further, by making it dramatically easier to get your hands on containers in the right shape, size, and form-factor to meet the needs of your pipelines. Batch users will definitely enjoy using this. But, we’re pretty sure this will be a community resource everyone will love, and AWS is thrilled to be able to support the Seqera team to deliver this for the entire community.&lt;/p&gt; 
+&lt;p&gt;If you still need convincing, try it out yourself now – head to &lt;a href="https://seqera.io/containers/"&gt;https://seqera.io/containers/&lt;/a&gt; and type in some of your favorite bioinformatics tool names before clicking “Build”. Pull your Docker image and get to work.&lt;/p&gt; 
+&lt;p&gt;And if you have ideas for Seqera or AWS, don’t hesitate to reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Using machine learning to drive faster automotive design cycles</title>
 		<link>https://aws.amazon.com/blogs/hpc/using-machine-learning-to-drive-faster-automotive-design-cycles/</link>
 		
@@ -47,7 +99,7 @@
 &lt;p&gt;In this work, we’ll focus on computational fluid dynamics (CFD) simulations for intelligent aerodynamic surface design, though there are often other design considerations like impact response, noise, vibration and harshness.&lt;/p&gt; 
 &lt;p&gt;The goal of this work is &lt;em&gt;not&lt;/em&gt; to develop a comprehensive toolkit for aerodynamic design – we want to present a simple user experience to show how engineers can use scientific ML methods, together with AWS services to deliver business value. We’ll mainly use &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/hpc/dcv/"&gt;Nice DCV&lt;/a&gt;, &lt;a href="https://aws.amazon.com/pm/serv-s3/"&gt;Amazon S3&lt;/a&gt; and &lt;a href="https://aws.amazon.com/pm/sagemaker/"&gt;Amazon SageMaker&lt;/a&gt;. We’ll also explain how to build a web application that uses ML and generative design to enhance these development processes.&lt;/p&gt; 
 &lt;div id="attachment_3604" style="width: 857px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3604" class="size-full wp-image-3604" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.33.24.png" alt="Figure 1 – Overview of Workflow Structure incorporating Web Application UI overview, AI/ML Methodology and AWS Implementation" width="847" height="433"&gt;
+ &lt;img aria-describedby="caption-attachment-3604" loading="lazy" class="size-full wp-image-3604" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.33.24.png" alt="Figure 1 – Overview of Workflow Structure incorporating Web Application UI overview, AI/ML Methodology and AWS Implementation" width="847" height="433"&gt;
  &lt;p id="caption-attachment-3604" class="wp-caption-text"&gt;Figure 1 – Overview of Workflow Structure incorporating Web Application UI overview, AI/ML Methodology and AWS Implementation&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h2&gt;Roadmap for this post&lt;/h2&gt; 
@@ -2220,87 +2272,6 @@ Finished            : Thu Dec 14 00:14:53 2023&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;4 – Kaszowska-Mojsa, J., Farmer, D., Bydlon, S., Gleiser, I., 2023. Cloud-Powered Insights: Unveiling the Effects of Macroprudential Policy in a Small Open Economy, available on: &lt;a href="https://monetaristinheels.com/project"&gt;https://monetaristinheels.com/project&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;5 – Kaszowska-Mojsa, J., Farmer, J.D., Włodarczyk, P., 2023. The details of the model, available on: &lt;a href="https://monetaristinheels.com/project"&gt;https://monetaristinheels.com/project&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;This research uses data from the &lt;em&gt;Eurosystem Household Finance and Consumption Survey&lt;/em&gt;. The results published and the related observations and analysis may not correspond to results or analysis of the data producers.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Amazon’s renewable energy forecasting: continuous delivery with Jupyter Notebooks</title>
-		<link>https://aws.amazon.com/blogs/hpc/amazons-renewable-energy-forecasting-continuous-delivery-with-jupyter-notebooks/</link>
-		
-		<dc:creator><![CDATA[Alec Hewitt]]></dc:creator>
-		<pubDate>Tue, 13 Feb 2024 15:03:26 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Sustainability]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">982561089e42b9831b7f993bd780876777cb7008</guid>
-
-					<description>Interested in eliminating friction between data science and engineering teams? Read this post to learn how Amazon successfully transitioned Jupyter Notebooks from the lab to production.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3301" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/boofla88_a_wind_farms_of_turbines_across_a_rolling_green_hills__e8683f7d-f097-4513-af62-46cbd2b6ad88.png" alt="Amazon’s renewable energy forecasting- continuous delivery with Jupyter Notebooks copy" width="380" height="212"&gt;&lt;/em&gt;You might associate the phrase ‘Jupyter Notebooks in production’ with a scrappy startup short on engineers or a hobbyist tinkering in their free time. However, this story unfolds at Amazon, where a team transitioned from requiring software engineers to replicate scientists’ work for production, to enabling scientists to seamlessly deploy Jupyter Notebooks into production.&lt;/p&gt; 
-&lt;p&gt;Amazon’s Renewable Energy Optimization team produces software to maximize the effectiveness of our portfolio of wind and solar farms. The team develops and runs machine learning models that forecast the state of the electricity grid in the next few days. As Amazon’s portfolio of wind and solar farms has expanded, the techniques that our scientists and software engineers use to create and run these machine learning models has evolved, too.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll walk you through a science-to-production workflow that’s probably familiar to you, explain the logic that supported our novel approach and – finally – let you benefit from what we learned implementing it all.&lt;/p&gt; 
-&lt;h2&gt;The problem&lt;/h2&gt; 
-&lt;p&gt;Initially, scientists and software engineers were separated. Scientists developed models and optimization techniques using Jupyter Notebooks. They’d pass these to a software engineer who would translate them into ‘production code’. Scientists &lt;em&gt;never&lt;/em&gt; wrote production code.&lt;/p&gt; 
-&lt;p&gt;Although this worked for our initial deployments, the process had several limitations:&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;It was slow.&lt;/strong&gt; Once a scientist settled on a model they wanted to use in production, it took two or three months for an engineer to translate that code into production. This created a bottleneck for the scientists and ran against the model of &lt;a href="https://aws.amazon.com/builders-library/going-faster-with-continuous-delivery/"&gt;continuous delivery&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Nobody understood the production code.&lt;/strong&gt; The engineer translating the notebook didn’t fully understand the science being used in the code. Once the code had been translated, it was difficult for the scientist to understand because the engineer changed the code structure. We ended up with code that no one understood. This made it difficult to debug errors and issues in the production code.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;There were inconsistencies between environments.&lt;/strong&gt; Scientists developed the notebooks using Amazon SageMaker or their local machine using dependencies they had installed manually. The engineer built the code using an Amazon internal build system. This frequently meant there were different versions of libraries in use. Subtle differences led to large differences between what scientists were expecting and what happened in production.&lt;/p&gt; 
-&lt;p&gt;We needed engineers and scientists to use the same platform. This meant either getting scientists to write production-level code or we had to run Jupyter Notebooks in production (a little heretical).&lt;/p&gt; 
-&lt;h2&gt;What’s a Jupyter Notebook and why do scientists like them?&lt;/h2&gt; 
-&lt;p&gt;A &lt;a href="https://docs.jupyter.org/en/latest/projects/architecture/content-architecture.html#the-jupyter-notebook-interface"&gt;Jupyter Notebook&lt;/a&gt; is a JSON document that contains both the source code and output of the code execution. Users execute cells of the notebook and then the output of each cell run is saved into the JSON notebook itself. Every time a notebook is run, it gets mutated and overwritten with the latest run.&lt;/p&gt; 
-&lt;div id="attachment_3292" style="width: 751px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3292" loading="lazy" class="size-full wp-image-3292" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.21.13.png" alt="Figure 1 – Jupyter Server reads the JSON Notebook file on disk and displays it to the user. The user then requests commands to be executed which the Jupyter Server send to the Jupyter Kernel to perform. The JupyteServer receives the output of the commands from the Jupyter Kernal and updates the Notebook on disk." width="741" height="325"&gt;
- &lt;p id="caption-attachment-3292" class="wp-caption-text"&gt;Figure 1 – Jupyter Server reads the JSON Notebook file on disk and displays it to the user. The user then requests commands to be executed which the Jupyter Server send to the Jupyter Kernel to perform. The JupyteServer receives the output of the commands from the Jupyter Kernal and updates the Notebook on disk.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Jupyter Notebooks have a lot of advantages for scientists. They allow for quick iteration of ideas because a single operation can be run multiple times without having to run the entire program again. They’re also great for visualizing and analyzing the output from code. Tables, charts, or images can be displayed in the notebook, right next to the source code that generated them.&lt;/p&gt; 
-&lt;div id="attachment_3293" style="width: 905px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3293" loading="lazy" class="size-full wp-image-3293" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.21.42.png" alt="Figure 2 – Information displayed a graph in a Jupyter Notebook vs the same information in CloudWatch Logs." width="895" height="361"&gt;
- &lt;p id="caption-attachment-3293" class="wp-caption-text"&gt;Figure 2 – Information displayed a graph in a Jupyter Notebook vs the same information in CloudWatch Logs.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;However, Jupyter Notebooks are not designed to run in production. There’s no built-in functionality to programmatically run a notebook with different parameters. They’re also not easy to test and they’re constantly evolving documents that change every time they are run which makes collaboration and reproducibility difficult. So despite Jupyter Notebooks offering desirable features, they weren’t compatible with our &lt;a href="https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/summary-of-best-practices.html"&gt;software engineering best practices&lt;/a&gt; for production deployments.&lt;/p&gt; 
-&lt;h2&gt;Why did we change our mind?&lt;/h2&gt; 
-&lt;p&gt;Our views changed when we discovered the framework &lt;a href="https://github.com/nteract/papermill/tree/main"&gt;Papermill&lt;/a&gt; and its &lt;a href="https://netflixtechblog.com/scheduling-notebooks-348e6c14cfd6"&gt;usage at Netflix&lt;/a&gt; and &lt;a href="https://arxiv.org/abs/2209.09125"&gt;other industry leaders.&lt;/a&gt; Papermill is a library for executing notebooks programmatically. Specifically, it allowed us to turn a Jupyter Notebook into an immutable object, and then parametrize it.&lt;/p&gt; 
-&lt;p&gt;Papermill replaces the user and UI. It acts as another client to the Jupyter Kernel using the same protocol as the Jupyter Server. However, rather than overriding the source notebook each time it runs, it will output a new notebook for each run. Therefore, each time Papermill runs a notebook, a new notebook is created. The notebook has gone from being a mutable document to immutable source code.&lt;/p&gt; 
-&lt;p&gt;Additionally, Papermill allows each run to have different parameters. This allows a single notebook to perform a solar forecast for different locations based on a parameter that’s passed to the notebook.&lt;/p&gt; 
-&lt;div id="attachment_3294" style="width: 851px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3294" loading="lazy" class="size-full wp-image-3294" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.22.13.png" alt="Figure 3 – With Papermill, the Jupyter Server is replaced. Papermill is responsible for sending the commands to the Jupyter Kernel and reading and writing the output notebooks to disk. " width="841" height="396"&gt;
- &lt;p id="caption-attachment-3294" class="wp-caption-text"&gt;Figure 3 – With Papermill, the Jupyter Server is replaced. Papermill is responsible for sending the commands to the Jupyter Kernel and reading and writing the output notebooks to disk.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We now had a way to programmatically trigger a parametrized notebook. The next step was to ensure the scientists’ development environment matched the production environment.&lt;/p&gt; 
-&lt;h2&gt;Keeping science environment consistent with production&lt;/h2&gt; 
-&lt;p&gt;When we had to answer why one of our wind farms had been underperforming at one of Amazon’s infamous “&lt;a href="https://wa.aws.amazon.com/wat.concept.coe.en.html"&gt;Correction of Errors&lt;/a&gt;” meetings, it wasn’t the first time someone said, “&lt;em&gt;It worked on my machine!&lt;/em&gt;”. This was not a new problem and we knew existing technologies existed to solve it.&lt;/p&gt; 
-&lt;p&gt;Initially, scientists used the pre-built &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-images.html"&gt;SageMaker images&lt;/a&gt; to manage the dependencies for their notebooks. These images are useful for experimentation; however, &lt;em&gt;we didn’t have control of the exact version of each library that we were using&lt;/em&gt;. Specifically, some scientific Python libraries had the same version, but the systems used different &lt;a href="https://numpy.org/doc/stable/reference/routines.linalg.html"&gt;linear algebra libraries&lt;/a&gt; which affected the end result of our forecasts. We therefore decided to &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html"&gt;bring our own custom image into SageMaker&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html"&gt;SageMaker custom images&lt;/a&gt; allows you to import an image from &lt;a href="https://aws.amazon.com/ecr/"&gt;Amazon Elastic Container Registry (Amazon ECR)&lt;/a&gt; that you have built yourself. This could be built in AWS CodeBuild or in another build system outside of AWS. We used this feature of SageMaker to build our own custom images with all the dependencies decided by our internal AWS Code Artifact Repository.&lt;/p&gt; 
-&lt;p&gt;The same image being imported into SageMaker is exactly the same image that will be deployed to production and used on our development machines. This ensures when scientists are using a third party dependency, like &lt;a href="https://numpy.org/devdocs/index.html"&gt;Numpy&lt;/a&gt; or &lt;a href="https://pandas.pydata.org/"&gt;Pandas&lt;/a&gt;, they have the confidence that it’s exactly the same version that will be used in production.&lt;/p&gt; 
-&lt;p&gt;Once the scientist is happy with the notebook they’ve been experimenting with, they’ll submit it to our internal build system. The end result is a Docker image that contains the notebook as well as all of its dependencies.&lt;/p&gt; 
-&lt;div id="attachment_3295" style="width: 909px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3295" loading="lazy" class="size-full wp-image-3295" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.22.48.png" alt="Figure 4 – Scientists use Amazon SageMaker Studio for experimentation using the same docker image that is deployed into production." width="899" height="620"&gt;
- &lt;p id="caption-attachment-3295" class="wp-caption-text"&gt;Figure 4 – Scientists use Amazon SageMaker Studio for experimentation using the same docker image that is deployed into production.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;How do the notebooks run in production?&lt;/h2&gt; 
-&lt;p&gt;Once a notebook has been built into the image, it can be run in production. The image has the notebook as well as a framework we built that runs the notebook using the Papermill library. An &lt;a href="https://aws.amazon.com/pm/eventbridge/"&gt;Amazon EventBridge&lt;/a&gt; rule triggers the notebook to run at the appropriate time with the appropriate parameters.&lt;/p&gt; 
-&lt;p&gt;&lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; runs the notebook in &lt;a href="https://aws.amazon.com/ecs/"&gt;Amazon Elastic Container Service&lt;/a&gt; using the image that we pushed to the ECR repository. After the notebook finishes executing, we save the raw JSON notebook and the HTML representation of the notebook to &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Services (Amazon S3).&lt;/a&gt; These output notebooks can also be viewed in a web browser via an &lt;a href="https://aws.amazon.com/cloudfront/"&gt;Amazon CloudFront distribution&lt;/a&gt; in front of the Amazon S3 bucket.&lt;/p&gt; 
-&lt;div id="attachment_3296" style="width: 834px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3296" loading="lazy" class="size-full wp-image-3296" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/09/CleanShot-2024-02-09-at-14.23.33.png" alt="Figure 5 – Notebooks are run on Amazon ECS using AWS Batch. The Batch jobs are triggered by schedules in Amazon EventBridge." width="824" height="813"&gt;
- &lt;p id="caption-attachment-3296" class="wp-caption-text"&gt;Figure 5 – Notebooks are run on Amazon ECS using AWS Batch. The Batch jobs are triggered by schedules in Amazon EventBridge.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We use &lt;a href="https://aws.amazon.com/dynamodb/"&gt;Amazon DynamoDB&lt;/a&gt; to store the status of each notebook run as well as additional metadata about the notebook run. Engineers and scientists can then use this information to debug the status of a notebook run. Even better, non-technical users can view that status of our forecasting and see key outputs in the notebook itself.&lt;/p&gt; 
-&lt;div id="attachment_3315" style="width: 892px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3315" loading="lazy" class="size-full wp-image-3315" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/12/CleanShot-2024-02-12-at-10.57.02.png" alt="Figure 6 – Internal website that displays the list of notebook runs that have been saved into DynamoDB." width="882" height="406"&gt;
- &lt;p id="caption-attachment-3315" class="wp-caption-text"&gt;Figure 6 – Internal website that displays the list of notebook runs that have been saved into DynamoDB.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We set up the infrastructure and build pipeline using &lt;a href="https://aws.amazon.com/cdk/"&gt;AWS CDK&lt;/a&gt; which enables us to treat our &lt;a href="https://docs.aws.amazon.com/whitepapers/latest/introduction-devops-aws/infrastructure-as-code.html"&gt;infrastructure as code&lt;/a&gt;. This simplifies spinning up new environments, minimizes configuration errors, and leverages high-level constructs for faster, more reliable work.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;We started this project with the aim of allowing scientists to deploy more frequently without relying on engineers. We achieved that, but we &lt;em&gt;also&lt;/em&gt; improved how both scientists &lt;em&gt;and&lt;/em&gt; engineers interact with the production system. They can debug production notebooks through a web server that displays the output notebooks. This led to the use of these notebooks for reports and metrics presentations – accessible to others via shared links.&lt;/p&gt; 
-&lt;p&gt;The infrastructure choices also increased our velocity. Previously our system was computationally intensive and it took two weeks to evaluate it sequentially on a very large machine. AWS Batch allows us to run more than a thousand &lt;em&gt;much smaller&lt;/em&gt; instances in parallel so our model evaluation went down to 3 hours. Solving these problems allowed our small &lt;a href="https://aws.amazon.com/executive-insights/content/amazon-two-pizza-team/"&gt;2-pizza team&lt;/a&gt; to dramatically increase our iteration speed and at the same time increased the reliability of our system.&lt;/p&gt; 
-&lt;p&gt;At the outset of this work, scientists couldn’t tell their containers from their images – and the only thing engineers knew about Jupyter Notebooks was that they “&lt;em&gt;were not for production!&lt;/em&gt;”. But, by taking the time to understand each other’s tools and the problems that they were solving we built a system that let us to have consistent environments &lt;strong&gt;&lt;em&gt;and&lt;/em&gt;&lt;/strong&gt; continuous delivery of new science models.&lt;/p&gt;</content:encoded>
 					
 		
 		
