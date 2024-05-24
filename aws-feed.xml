@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 23 May 2024 15:35:06 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 23 May 2024 21:57:46 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -18,9 +18,9 @@
 		
 		<dc:creator><![CDATA[Brendan Bouffler]]></dc:creator>
 		<pubDate>Thu, 23 May 2024 15:35:06 +0000</pubDate>
-				<category><![CDATA[High Performance Computing]]></category>
+				<category><![CDATA[Featured]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
 		<category><![CDATA[Life Sciences]]></category>
-		<category><![CDATA[Uncategorized]]></category>
 		<category><![CDATA[AWS Batch]]></category>
 		<category><![CDATA[Bioinformatics]]></category>
 		<category><![CDATA[Containers]]></category>
@@ -30,7 +30,7 @@
 		<category><![CDATA[Scientific Computing]]></category>
 		<guid isPermaLink="false">771f9023418ab35b6435bfa6a8543c7119414297</guid>
 
-					<description>Genomics community: rejoice! Seqera + AWS have teamed up to announce Seqera Containers, an open-source, no cost, reliable way to generate containers (on the fly if you wish) for your workflows - in the cloud or not, using Nextflow, or not. This is a global community resource we're thrilled to be able to support.</description>
+					<description>Genomics community: rejoice! Seqera and AWS have teamed up to announce Seqera Containers, an open-source, no cost, reliable way to generate containers.</description>
 										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3652" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/09/boofla88_a_robotics_simulation_involving_robots_carrying_shippi_a9b0df15-954a-4cdf-900d-edf64a5475b2.png" alt="Announcing: Seqera Containers for the bioinformatics community" width="380" height="212"&gt;&lt;em&gt;This post was contributed by Brendan Bouffler, Head of Developer Relations, HPC Engineering at AWS, Phil Ewels, Snr Product Manager for Open Source at Seqera, and Paolo Di Tommaso, the CTO &amp;amp; co-founder of Seqera.&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Life sciences is a rapidly-moving area of research, and you don’t need to look too far for amazing examples where the practitioners of this field have adopted new tools and techniques to solve ever harder problems. Within this domain, bioinformatics has emerged as a crucial discipline, bridging the gap between biology and computer science. Many of the features in AWS Batch have been driven by this community, leading to a close relationship between our teams and the people working at the front lines of research.&lt;/p&gt; 
 &lt;p&gt;But while biological data has become more complex and massive, it has also become increasingly personal, and inevitably regulated. The world needed researchers across borders and geographies to share insights and techniques without necessarily moving the data, or sharing the same infrastructure. The conditions were set for another uptake of new technology.&lt;/p&gt; 
