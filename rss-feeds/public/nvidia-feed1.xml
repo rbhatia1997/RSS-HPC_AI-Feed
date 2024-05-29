@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 28 May 2024 01:59:00 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 29 May 2024 17:06:30 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,172 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>Riding the Wayve of AV 2.0, Driven by Generative AI</title>
+		<link>https://blogs.nvidia.com/blog/wayve-generative-ai/</link>
+		
+		<dc:creator><![CDATA[Norm Marks]]></dc:creator>
+		<pubDate>Wed, 29 May 2024 16:24:31 +0000</pubDate>
+				<category><![CDATA[Driving]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[NVIDIA DRIVE]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71805</guid>
+
+					<description><![CDATA[Generative AI is propelling AV 2.0, a new era in autonomous vehicle technology characterized by large, unified, end-to-end AI models capable of managing various aspects of the vehicle stack, including perception, planning and control. London-based startup Wayve is pioneering this new era, developing autonomous driving technologies that can be built on NVIDIA DRIVE Orin and	<a class="read-more" href="https://blogs.nvidia.com/blog/wayve-generative-ai/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Generative AI is propelling AV 2.0, a new era in autonomous vehicle technology characterized by large, unified, end-to-end AI models capable of managing various aspects of the vehicle stack, including perception, planning and control.</p>
+<p>London-based startup Wayve is pioneering this new era, developing autonomous driving technologies that can be built on <a href="https://www.nvidia.com/en-us/self-driving-cars/in-vehicle-computing/" target="_blank" rel="noopener">NVIDIA DRIVE Orin</a> and its successor NVIDIA DRIVE Thor, which uses the <a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/" target="_blank" rel="noopener">NVIDIA Blackwell GPU architecture</a> designed for <a href="https://blogs.nvidia.com/blog/what-is-a-transformer-model/" target="_blank" rel="noopener">transformer</a>, <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language model</a> (LLM) and <a href="https://www.nvidia.com/en-us/glossary/data-science/generative-ai/" target="_blank" rel="noopener">generative AI</a> workloads.</p>
+<p>In contrast to AV 1.0’s focus on refining a vehicle’s perception capabilities using multiple deep neural networks, AV 2.0 calls for comprehensive in-vehicle intelligence to drive decision-making in dynamic, real-world environments.</p>
+<p><iframe title="Wayve and NVIDIA: Developing AI Foundation Models for Autonomous Driving" width="500" height="281" src="https://www.youtube.com/embed/kx-JJhrs3sU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Wayve, a member of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33" target="_blank" rel="noopener">NVIDIA Inception</a> program for cutting-edge startups, specializes in developing AI foundation models for autonomous driving, equipping vehicles with a “robot brain” that can learn from and interact with their surroundings.</p>
+<p>“NVIDIA has been the oxygen of everything that allows us to train AI,” said Alex Kendall, cofounder and CEO of Wayve. “We train on NVIDIA GPUs, and the software ecosystem NVIDIA provides allows us to iterate quickly — this is what enables us to build billion-parameter models trained on petabytes of data.”</p>
+<p>Generative AI also plays a key role in Wayve’s development process, enabling <a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/" target="_blank" rel="noopener">synthetic data generation</a> so AV makers can use a model’s previous experiences to create and simulate novel driving scenarios.</p>
+<p>The company is building embodied AI, a set of technologies that integrate advanced AI into vehicles and robots to transform how they respond to and learn from human behavior, enhancing safety.</p>
+<p>Wayve recently announced its Series C investment round — with participation from NVIDIA — that will support the development and launch of the first embodied AI products for production vehicles. As Wayve’s core AI model advances, these products will enable manufacturers to efficiently upgrade cars to higher levels of driving automation, from <a href="https://blogs.nvidia.com/blog/whats-difference-level-2-level-5-autonomy/" target="_blank" rel="noopener">L2+ assisted driving to L4 automated driving</a>.</p>
+<p>As part of its embodied AI development, Wayve launched GAIA-1, a generative AI model for autonomy that creates realistic driving videos using video, text and action inputs. It also launched LINGO-2, a driving model that links vision, language and action inputs to explain and determine driving behavior.</p>
+<p>“One of the neat things about generative AI is that it allows you to combine different modes of data seamlessly,” Kendall said. “You can bring in the knowledge of all the texts, the general purpose reasoning and capabilities that we get from LLMs and apply that reasoning to driving — this is one of the more promising approaches that we know of to be able to get to true generalized autonomy and eventually L5 capabilities on the road.”</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/wayve.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/wayve-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Riding the Wayve of AV 2.0, Driven by Generative AI]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Decoding How NVIDIA RTX AI PCs and Workstations Tap the Cloud to Supercharge Generative AI</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-rtx-pc-hybrid/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 29 May 2024 13:00:53 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artficial Intelligence]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71827</guid>
+
+					<description><![CDATA[Generative AI is enabling new capabilities for Windows applications and games. It’s powering unscripted, dynamic NPCs, it’s enabling creators to generate novel works of art, and it’s helping gamers boost frame rates by up to 4x.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for GeForce RTX PC and RTX workstation users.</i></p>
+<p><a href="https://www.nvidia.com/en-us/glossary/generative-ai/">Generative AI</a> is enabling new capabilities for Windows applications and games. It’s powering unscripted, dynamic NPCs, it’s enabling creators to generate novel works of art, and it’s helping gamers boost frame rates by up to 4x. But this is just the beginning.</p>
+<p>As the capabilities and use cases for generative AI continue to grow, so does the demand for compute to support it.</p>
+<p>Hybrid AI combines the onboard AI acceleration of <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a> with scalable, cloud-based GPUs to effectively and efficiently meet the demands of AI workloads.</p>
+<h2><b>Hybrid AI, a Love Story</b></h2>
+<p>With growing AI adoption, app developers are looking for deployment options: AI running locally on RTX GPUs delivers high performance and low latency, and is always available — even when not connected to the internet. On the other hand, AI running in the cloud can run larger models and scale across many GPUs, serving multiple clients simultaneously. In many cases, a single application will use both.</p>
+<p>Hybrid AI is a kind of matchmaker that harmonizes local PC and workstation compute with cloud scalability. It provides the flexibility to optimize AI workloads based on specific use cases, cost and performance. It helps developers ensure that AI tasks run where it makes the most sense for their specific applications.</p>
+<p>Whether the AI is running locally or in the cloud it gets accelerated by NVIDIA GPUs and NVIDIA’s AI stack, including TensorRT and TensorRT-LLM. That means less time staring at pinwheels of death and more opportunity to deliver cutting-edge, AI powered features to users.</p>
+<p>A range of NVIDIA tools and technologies support hybrid AI workflows for creators, gamers, and developers.</p>
+<h2><b>Dream in the Cloud, Bring to Life on RTX</b></h2>
+<p>Generative AI has demonstrated its ability to help artists ideate, prototype and brainstorm new creations. One such solution, the cloud-based <a href="https://www.istockphoto.com/ai">Generative AI by iStock</a> — powered by <a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">NVIDIA Edify</a> — is a generative photography service that was built for and with artists, training only on licensed content and with compensation for artist contributors.</p>
+<p>Generative AI by iStock goes beyond image generation, providing artists with extensive tools to explore styles, variations, modify parts of an image or expand the canvas. With all these tools, artists can ideate numerous times and still bring ideas to life quickly.</p>
+<p>Once the creative concept is ready, artists can bring it back to their local systems. RTX-powered PCs and workstations offer artists AI acceleration in more than 125 of the top creative apps to realize the full vision — whether it’s creating an amazing piece of artwork in Photoshop with local AI tools, animating the image with a parallax effect in DaVinci Resolve, or building a 3D scene with the reference image in Blender with ray tracing acceleration, and AI denoising in Optix.</p>
+<h2><b>Hybrid ACE Brings NPCs to Life</b></h2>
+<p>Hybrid AI is also enabling a <a href="https://blogs.nvidia.com/blog/ai-decoded-ace-microservices-digital-humans/">new realm of interactive PC gaming</a> with <a href="https://developer.nvidia.com/ace">NVIDIA ACE</a>, allowing game developers and digital creators to integrate state-of-the-art generative AI models into digital avatars on RTX AI PCs.</p>
+<p><iframe title="NVIDIA ACE | NVIDIA x Inworld AI - Pushing the Boundaries of Game Characters in Covert Protocol" width="500" height="281" src="https://www.youtube.com/embed/uryeFhnNzEs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Powered by AI neural networks, <a href="https://developer.nvidia.com/ace">NVIDIA ACE</a> lets developers and designers create non-playable characters (NPCs) that can understand and respond to human player text and speech. It leverages AI models, including speech-to-text models to handle natural language spoken aloud, to generate NPCs’ responses in real time.</p>
+<h2><b>A Hybrid Developer Tool That Runs Anywhere</b></h2>
+<p>Hybrid also helps developers build and tune new AI models. <a href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/">NVIDIA AI Workbench</a> helps developers quickly create, test and customize pretrained generative AI models and LLMs on RTX GPUs. It offers streamlined access to popular repositories like Hugging Face, GitHub and <a href="https://catalog.ngc.nvidia.com/?filters=&amp;orderBy=weightPopularDESC&amp;query=&amp;page=&amp;pageSize=">NVIDIA NGC</a>, along with a simplified user interface that enables data scientists and developers to easily reproduce, collaborate on and migrate projects.</p>
+<p><iframe title="NVIDIA AI Workbench | Fine Tuning Generative AI" width="500" height="281" src="https://www.youtube.com/embed/ntMRzPzSvM4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Projects can be easily scaled up when additional performance is needed — whether to the data center, a public cloud or <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> — and then brought back to local RTX systems on a PC or workstation for inference and light customization. Data scientists and developers can leverage pre-built Workbench projects to chat with documents using retrieval-augmented generation (<a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">RAG</a>), customize LLMs using fine-tuning, accelerate data science workloads with seamless CPU-to-GPU transitions and more.</p>
+<p>The <a href="https://github.com/NVIDIA/workbench-example-hybrid-rag">Hybrid RAG Workbench project</a> provides a customizable RAG application that developers can run and adapt themselves. They can embed their documents locally and run inference either on a local RTX system, a cloud endpoint hosted on <a href="http://ai.nvidia.com">NVIDIA’s API catalog</a> or using <a href="http://ai.nvidia.com">NVIDIA NIM</a> microservices. The project can be adapted to use various models, endpoints and containers, and provides the ability for developers to quantize models to run on their GPU of choice.</p>
+<p>NVIDIA GPUs power remarkable AI solutions locally on <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA GeForce RTX</a> PCs and RTX workstations and in the cloud. Creators, gamers and developers can get the best of both worlds with growing hybrid AI workflows.</p>
+<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/hybrid-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/hybrid-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Decoding How NVIDIA RTX AI PCs and Workstations Tap the Cloud to Supercharge Generative AI]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Tidy Tech: How Two Stanford Students Are Building Robots for Handling Household Chores</title>
+		<link>https://blogs.nvidia.com/blog/stanford-students-robots-household-chores/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 29 May 2024 13:00:16 +0000</pubDate>
+				<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[The AI Podcast]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71821</guid>
+
+					<description><![CDATA[Imagine having a robot that could help you clean up after a party — or fold heaps of laundry. Chengshu Eric Li and Josiah David Wong, two Stanford University Ph.D. students advised by renowned American computer scientist Professor Fei-Fei Li, are making that a ‌dream come true. In this episode of the AI Podcast, host	<a class="read-more" href="https://blogs.nvidia.com/blog/stanford-students-robots-household-chores/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Imagine having a robot that could help you clean up after a party — or fold heaps of laundry. Chengshu Eric Li and Josiah David Wong, two Stanford University Ph.D. students advised by renowned American computer scientist Professor Fei-Fei Li, are making that a ‌dream come true. In this episode of the <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">AI Podcast</a>, host Noah Kravitz spoke with the two about their project, BEHAVIOR-1K, which aims to enable robots to perform 1,000 household chores, including picking up fallen objects or cooking. To train the robots, they’re using the <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse platform</a>, as well as reinforcement and imitation learning techniques. Listen to hear more about the breakthroughs and challenges Li and Wong experienced along the way.</p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1832461098%3Fsecret_token%3Ds-syNAqY6PTo6&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="How Two Stanford Students Are Building Robots for Handling Household Chores - Ep. 219" href="https://soundcloud.com/theaipodcast/household-robots/s-syNAqY6PTo6" target="_blank" rel="noopener">How Two Stanford Students Are Building Robots for Handling Household Chores &#8211; Ep. 219</a></div>
+<p>Stay tuned for more AI Podcast episodes recorded live from GTC.</p>
+<h2><b>Time Stamps</b></h2>
+<p><span>3:33: Background on the BEHAVIOR-1K project</span></p>
+<p><span>5:00: Why use a simulated environment to train robots? </span></p>
+<p><span>6:48: Why build a new simulation engine instead of using an existing one? </span></p>
+<p><span>10:48: The process of training the robots to perform household chores</span></p>
+<p><span>14:04: Some of the most complex tasks taught to the robots</span></p>
+<p><span>19:07: How are large language models and large vision models affecting the progress of robotics?</span></p>
+<p><span>24:09: What’s next for the project?  </span></p>
+<h2>You Might Also Like…</h2>
+<p><a href="https://soundcloud.com/theaipodcast/ai-llm" target="_blank" rel="noopener"><b>NVIDIA’s Annalamai Chockalingam on the Rise of LLMs &#8211; Ep. 206</b></a></p>
+<p>Generative AI and large language models (LLMs) are stirring change across industries — but according to NVIDIA Senior Product Manager of Developer Marketing Annamalai Chockalingam, “we’re still in the early innings.” In the latest episode of NVIDIA’s AI Podcast, host Noah Kravitz spoke with Chockalingam about LLMs: what they are, their current state and their future potential.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-stroller" target="_blank" rel="noopener"><b>How GluxKind Created Ella, the AI-Powered Smart Stroller &#8211; Ep. 193</b><b><br />
+</b><br />
+</a>Imagine a stroller that can drive itself, help users up hills, brake on slopes and provide alerts of potential hazards. That’s what GlüxKind has done with Ella, an award-winning smart stroller that uses the NVIDIA Jetson edge AI and robotics platform to power its AI features.</p>
+<p><a href="https://soundcloud.com/theaipodcast/gantheftauto-harrison-kinsley-on-ai-generated-gaming-environments" target="_blank" rel="noopener"><b>GANTheftAuto: Harrison Kinsley on AI-Generated Gaming Environments &#8211; Ep. 151</b></a></p>
+<p>Machines have long played games &#8211; think of Deep Blue or AlphaGo. Now they&#8217;re building them. GANTheftAuto creator Harrison Kinsley talks about his creation on the latest episode of the AI Podcast.</p>
+<p><a href="https://soundcloud.com/theaipodcast/nvidia-liila-torabi" target="_blank" rel="noopener"><b>NVIDIA’s Liila Torabi Talks the New Era of Robotics Through Isaac Sim &#8211; Ep. 147</b></a></p>
+<p>Robots are not just limited to the assembly line. At NVIDIA, Liila Torabi works on making the next generation of robotics possible. Torabi is the senior product manager for Isaac Sim, a robotics and AI simulation platform powered by NVIDIA Omniverse. Torabi spoke with NVIDIA AI Podcast host Noah Kravitz about the new era of robotics, one driven by making robots smarter through AI.</p>
+<h2>Subscribe to the AI Podcast</h2>
+<p>Get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music,</a> <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast"> PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
+<p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1159"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Tidy Tech: How Two Stanford Students Are Building Robots for Handling Household Chores]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA Scoops Up Wins at COMPUTEX Best Choice Awards</title>
 		<link>https://blogs.nvidia.com/blog/computex-best-choice-awards-2024/</link>
 		
@@ -102,14 +268,14 @@
 <h2><b>Realizing the Benefits of OpenUSD</b></h2>
 <p>SoftServe and Continental’s Industrial Co-Pilot brings together generative AI and immersive 3D visualization to help factory teams increase productivity during equipment and production line maintenance. With the copilot, engineers can oversee production lines and monitor the performance of individual stations or the shop floor.</p>
 <p>They can also interact with the copilot to conduct root cause analysis and receive step-by-step work instructions and recommendations, leading to reduced documentation processes and improved maintenance procedures. It’s expected that these advancements will contribute to increased productivity and a10% reduction in maintenance effort and downtime.</p>
-<p><img fetchpriority="high" decoding="async" class="wp-image-71782 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2.png" alt="" width="578" height="324" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-400x224.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-1536x861.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-803x450.png 803w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-384x215.png 384w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-1280x718.png 1280w" sizes="(max-width: 578px) 100vw, 578px" /></p>
+<p><img loading="lazy" decoding="async" class="wp-image-71782 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2.png" alt="" width="578" height="324" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-400x224.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-1536x861.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-803x450.png 803w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-384x215.png 384w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-1280x718.png 1280w" sizes="(max-width: 578px) 100vw, 578px" /></p>
 <p>In a <a href="https://www.youtube.com/live/cqggH5skWH8?si=ZMUXPYIH7A0K5el4">recent Omniverse community livestream</a>, Benjamin Huber, who leads advanced automation and digitalization in the user experience business area at Continental, highlighted the significance of the company’s collaboration with SoftServe and its adoption of Omniverse.</p>
 <p>The Omniverse platform equips Continental and SoftServe developers with the tools needed to build a new era of AI-enabled industrial applications and services. And by breaking down data silos and fostering multi-platform cooperation with OpenUSD, SoftServe and Continental developers enable engineers to work seamlessly across disciplines and systems, driving efficiency and innovation throughout their processes.</p>
 <p>“Any engineer, no matter what tool they’re working with, can transform their data into OpenUSD and then interchange data from one discipline to another, and from one tool to another,” said Huber.</p>
 <p>This sentiment was echoed by Vasyl Boliuk, senior lead and test automation engineer at SoftServe, who shared how OpenUSD and Omniverse — along with other NVIDIA technologies like <a href="https://www.nvidia.com/en-us/ai-data-science/products/riva/">NVIDIA Riva</a>, <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> and <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/">NVIDIA NIM</a> microservices — enabled SoftServe and Continental teams to develop custom large language models and connect them to new 3D workflows.</p>
 <p>“OpenUSD allows us to add any attribute or any piece of metadata we want to our applications,” he said.</p>
 <p>Boliuk, Huber and other SoftServe and Continental representatives joined the livestream to share more about the potential unlocked from these OpenUSD-powered solutions. Watch the replay:</p>
-<p><iframe title="Generative AI-Powered Virtual Factory Solutions With OpenUSD" width="500" height="281" src="https://www.youtube.com/embed/cqggH5skWH8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Generative AI-Powered Virtual Factory Solutions With OpenUSD" width="500" height="281" src="https://www.youtube.com/embed/cqggH5skWH8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>By embracing cutting-edge technologies and fostering collaboration, SoftServe and Continental are helping reshape automotive manufacturing.</p>
 <h2><b>Get Plugged Into the World of OpenUSD</b></h2>
 <p>Watch SoftServe and Continental’s on-demand NVIDIA GTC talks to learn more about their virtual factory solutions and experience developing on NVIDIA Omniverse with OpenUSD:</p>
@@ -160,7 +326,7 @@
 <p>Leading the seven games joining <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> this week is the newest game in Ninja Theory’s <i>Hellblade</i> franchise, <i>Senua’s Saga: Hellblade II</i>. This day-and-date release expands the cloud gaming platform’s extensive library of over 1,900 games.</p>
 <p>Members can also look forward to a new reward — a free in-game mount — for <i>The Elder Scrolls Online </i>starting Thursday, May 30. Get ready by opting into <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW’s Rewards program</a>.</p>
 <h2><b>Senua Returns</b></h2>
-<figure id="attachment_71778" aria-describedby="caption-attachment-71778" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-71778" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-672x368.jpg" alt="Senua's Saga: Hellblade II screen" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-672x368.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-400x219.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-768x420.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-1536x840.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-823x450.jpg 823w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-393x215.jpg 393w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-183x100.jpg 183w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-1280x700.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71778" class="wp-caption-text">Head to the cloud to overcome the darkness.</figcaption></figure>
+<figure id="attachment_71778" aria-describedby="caption-attachment-71778" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71778" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-672x368.jpg" alt="Senua's Saga: Hellblade II screen" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-672x368.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-400x219.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-768x420.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-1536x840.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-823x450.jpg 823w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-393x215.jpg 393w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-183x100.jpg 183w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-1280x700.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71778" class="wp-caption-text">Head to the cloud to overcome the darkness.</figcaption></figure>
 <p>In <i>Senua’s Saga: Hellblade II</i>, the sequel to the award-winning <i>Hellblade: Senua’s Sacrifice</i>, Senua returns in a brutal journey of survival through the myth and torment of Viking Iceland.</p>
 <p>Intent on saving those who’ve fallen victim to the horrors of tyranny, Senua battles the forces of darkness within and without. Sink deep into the next chapter of Senua’s story, a crafted experience told through cinematic immersion, beautifully realized visuals and encapsulating sound.</p>
 <p><a href="http://geforcenow.com">Priority and Ultimate members</a> can fully immerse themselves in Senua’s story with epic cinematic gameplay at higher resolutions and frame rates over free members. Ultimate members can stream at up to 4K 120 frames per second with exclusive access to GeForce RTX 4080 SuperPODs in the cloud, even on underpowered devices.</p>
@@ -218,7 +384,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>In the latest ranking of the world’s most energy-efficient supercomputers, known as the <a href="https://top500.org/lists/green500/2024/06/">Green500</a>, NVIDIA-powered systems swept the top three spots, and took seven of the top 10.</p>
 <p>The strong showing demonstrates how accelerated computing represents the most energy-efficient method for high-performance computing.</p>
 <p>The top three systems were all powered by the <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA GH200 Grace Hopper Superchip</a>, showcasing the widespread adoption and efficiency of NVIDIA’s Grace Hopper architecture.</p>
-<p>Leading the pack was the JEDI system, at Germany’s <a href="https://www.fz-juelich.de">Forschungszentrum Jülich</a>, which achieved an impressive 72.73 GFlops per Watt.</p>
+<p>Leading the pack was the JEDI system, at Germany’s <a href="https://www.fz-juelich.de">Forschungszentrum Jülich</a>, which achieved an impressive 72.73 GFlops per Watt and is based on Eviden’s BullSequana XH3000 liquid-cooled system.</p>
 <p>More’s coming. The ability to do more work using less power is driving the construction of more Grace Hopper supercomputers around the world.</p>
 <h2><strong>Accelerating the Green Revolution in Supercomputing</strong></h2>
 <p>Such achievements underscore NVIDIA’s pivotal role in advancing the global agenda for sustainable high-performance computing over the past decade.</p>
@@ -229,7 +395,7 @@
 <h2><strong>Redefining Efficiency in Supercomputing</strong></h2>
 <p>This capability is crucial for accelerating tasks that address complex scientific challenges, speeding up the work of researchers across various disciplines.</p>
 <p>NVIDIA’s supercomputing technology excels in traditional benchmarks — and it’s set new standards in energy efficiency.</p>
-<p><span>For instance, the Alps system, at the </span><span>Swiss National Supercomputing Centre (CSCS),</span><span> is equipped with NVIDIA Grace Hopper GH200. An optimized subset of the system, dubbed preAlps, placed fifth on the latest Green500. CSCS also submitted the full system to the TOP500 list, recording 270 petaflops on the High-Performance Linpack benchmark, used for solving complex linear equations. </span></p>
+<p>For instance, the Alps system, at the Swiss National Supercomputing Centre (CSCS), is equipped with NVIDIA Grace Hopper GH200. An optimized subset of the system, dubbed preAlps, placed fifth on the latest Green500. CSCS also submitted the full system to the TOP500 list, recording 270 petaflops on the High-Performance Linpack benchmark, used for solving complex linear equations.</p>
 <p>The Green500 rankings highlight platforms that provide highly efficient FP64 performance, which is crucial for accurate simulations used in scientific computing. This result underscores NVIDIA&#8217;s commitment to powering supercomputers for tasks across a full range of capabilities.</p>
 <p>This metric demonstrates substantial system performance, leading to its high ranking on the TOP500 list of the world&#8217;s fastest supercomputers. The high position on the Green500 list indicates that this scalable performance does not come at the cost of energy efficiency.</p>
 <p>Such performance shows how the Grace Hopper architecture introduces a new era in processing technology, merging tightly coupled CPU and GPU functionalities to enhance not only performance but also significantly improve energy efficiency.</p>
@@ -240,6 +406,7 @@
 <p>As NVIDIA continues to push the boundaries of what’s possible in high-performance computing, it remains committed to enhancing the energy efficiency of global computing infrastructure.</p>
 <p>The success of the Grace Hopper supercomputers in the Green500 rankings highlights NVIDIA’s leadership and its commitment to more sustainable global computing.</p>
 <p><a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/">Explore how NVIDIA’s pioneering role in green computing</a> is advancing scientific research, as well as shaping a more sustainable future worldwide.</p>
+<p><em>Feature image: Jupiter system at Jülich supercomputer center, courtesy of Eviden.</em></p>
 ]]></content:encoded>
 					
 		
@@ -941,202 +1108,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[CaLLM, Cool and Connected: Cerence Uses Generative AI to Transform the In-Car Experience]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA to Help Elevate Japan’s Sovereign AI Efforts Through Generative AI Infrastructure Build-Out</title>
-		<link>https://blogs.nvidia.com/blog/japan-sovereign-ai/</link>
-		
-		<dc:creator><![CDATA[Masataka Osaki]]></dc:creator>
-		<pubDate>Tue, 14 May 2024 13:00:42 +0000</pubDate>
-				<category><![CDATA[Cloud]]></category>
-		<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71602</guid>
-
-					<description><![CDATA[Following an announcement by Japan’s Ministry of Economy, Trade and Industry, NVIDIA will play a central role in developing the nation’s generative AI infrastructure as Japan seeks to capitalize on the technology’s economic potential and further develop its workforce. NVIDIA is collaborating with key digital infrastructure providers, including GMO Internet Group, Highreso, KDDI Corporation, RUTILEA,	<a class="read-more" href="https://blogs.nvidia.com/blog/japan-sovereign-ai/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Following an announcement by Japan’s Ministry of Economy, Trade and Industry, NVIDIA will play a central role in developing the nation’s generative AI infrastructure as Japan seeks to capitalize on the technology’s economic potential and further develop its workforce.</p>
-<p>NVIDIA is collaborating with key digital infrastructure providers, including GMO Internet Group, Highreso, KDDI Corporation, RUTILEA, SAKURA internet Inc. and SoftBank Corp., which the ministry has certified to spearhead the development of cloud infrastructure crucial for AI applications.</p>
-<p>Over the last two months, the ministry announced plans to allocate $740 million, approximately ¥114.6 billion, to assist six local firms in this initiative. Following on from last year, this is a significant effort by the Japanese government to subsidize AI computing resources, by expanding the number of companies involved.</p>
-<p>With this move, Japan becomes the latest nation to embrace the concept of <a href="https://blogs.nvidia.com/blog/what-is-sovereign-ai/">sovereign AI</a>, aiming to fortify its local startups, enterprises and research efforts with advanced AI technologies.</p>
-<p>Across the globe, nations are building up domestic computing capacity through various models. Some procure and operate sovereign AI clouds with state-owned <a href="https://www.nvidia.com/en-us/industries/telecommunications/ai-factories/">telecommunications providers</a> or utilities. Others are sponsoring local cloud partners to provide a shared AI computing platform for public and private sector use.</p>
-<p>Japan’s initiative follows NVIDIA founder and CEO Jensen Huang&#8217;s visit last year, where he met with political and business leaders — including Japanese Prime Minister Fumio Kishida — to discuss the future of AI.</p>
-<p>During his trip, Huang emphasized that “AI factories” — next-generation data centers designed to handle the most computationally intensive AI tasks — are crucial for turning vast amounts of data into intelligence. “The AI factory will become the bedrock of modern economies across the world,” Huang said during a meeting with the Japanese press in December.</p>
-<p>The Japanese government plans to subsidize a significant portion of the costs for building AI supercomputers, which will facilitate AI adoption, enhance workforce skills, support Japanese language model development and bolster resilience against natural disasters and climate change.</p>
-<p>Under the country’s Economic Security Promotion Act, the ministry aims to secure a stable supply of local cloud services, reducing the time and cost of developing next-generation AI technologies.</p>
-<p>Japan’s technology powerhouses are already moving fast to embrace AI. Last week, SoftBank Corp. announced that it will invest ¥150 billion, approximately $960 million, for its plan to expand the infrastructure needed to develop Japan’s top-class AI, including purchases of NVIDIA accelerated computing.</p>
-<p>The news follows Huang’s meetings with leaders in Canada, France, India, Japan, Malaysia, Singapore and Vietnam over the past year, as countries seek to supercharge their regional economies and embrace challenges such as climate change with AI.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/tokyo-crop2-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1454"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/tokyo-crop2-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA to Help Elevate Japan’s Sovereign AI Efforts Through Generative AI Infrastructure Build-Out]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Drug Discovery, STAT! NVIDIA, Recursion Speed Pharma R&#038;D With AI Supercomputer</title>
-		<link>https://blogs.nvidia.com/blog/drug-discovery-recursion-supercomputer/</link>
-		
-		<dc:creator><![CDATA[Rory Kelleher]]></dc:creator>
-		<pubDate>Mon, 13 May 2024 09:00:20 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artficial Intelligence]]></category>
-		<category><![CDATA[Customer Stories]]></category>
-		<category><![CDATA[DGX Cloud]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[New GPU Uses]]></category>
-		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
-		<category><![CDATA[NVIDIA Quantum-2]]></category>
-		<category><![CDATA[Science]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71542</guid>
-
-					<description><![CDATA[Described as the largest system in the pharmaceutical industry, BioHive-2 at the Salt Lake City headquarters of Recursion debuts today at No. 35, up more than 100 spots from its predecessor on the latest TOP500 list of the world’s fastest supercomputers. The advance represents the company’s most recent effort to accelerate drug discovery with NVIDIA	<a class="read-more" href="https://blogs.nvidia.com/blog/drug-discovery-recursion-supercomputer/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Described as the largest system in the pharmaceutical industry, BioHive-2 at the Salt Lake City headquarters of Recursion debuts today at No. 35, up more than 100 spots from its predecessor on the latest TOP500 list of the world’s fastest supercomputers.</p>
-<p>The advance represents the company’s most recent effort to accelerate drug discovery with NVIDIA technologies.</p>
-<p>“Just as with large language models, we see AI models in the biology domain improve performance substantially as we scale our training with more data and compute horsepower, which ultimately leads to greater impacts on patients’ lives,” said Recursion’s CTO, Ben Mabey, who’s been applying machine learning to healthcare for more than a decade.</p>
-<p>BioHive-2 packs 504 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> linked on an <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2</a> InfiniBand network to deliver 2 exaflops of AI performance. The resulting <a href="https://www.nvidia.com/en-us/data-center/dgx-superpod/">NVIDIA DGX SuperPOD</a> is nearly 5x faster than Recursion’s first-generation system, BioHive-1.</p>
-<h2><b>Performance Powers Through Complexity</b></h2>
-<p>That performance is key to rapid progress because “biology is insanely complex,” Mabey said.</p>
-<p>Finding a new drug candidate can take scientists years performing millions of wet-lab experiments.</p>
-<p>That work is vital; Recursion’s scientists run more than 2 million such experiments a week. But going forward, they’ll use AI models on BioHive-2 to direct their platform to the most promising biology areas to run their experiments.</p>
-<p>“With AI in the loop today, we can get 80% of the value with 40% of the wet lab work, and that ratio will improve going forward,” he said.</p>
-<h2><b>Biological Data Propels Healthcare AI</b></h2>
-<p>Recursion is collaborating with biopharma companies such as Bayer AG, Roche and Genentech. Over time, it also amassed a more than 50-petabyte database of biological, chemical and patient data, helping it build powerful AI models that are accelerating drug discovery.</p>
-<p>“We believe it’s one of the largest biological datasets on Earth — it was built with AI training in mind, intentionally spanning biology and chemistry,” said Mabey, who joined the company more than seven years ago in part due to its commitment to building such a dataset.</p>
-<h2><b>Creating an AI Phenomenon</b></h2>
-<p>Processing that data on BioHive-1, Recursion developed a family of <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation models</a> called Phenom. They turn a series of microscopic cellular images into meaningful representations for understanding the underlying biology.</p>
-<p>A member of that family, <a href="https://www.recursion.com/news/nothing-short-of-phenomenal-new-deep-learning-model-available-on-nvidias-bionemo-platform">Phenom-Beta</a>, is now available as a cloud API and the first third-party model on <a href="https://www.nvidia.com/en-us/clara/bionemo/">NVIDIA BioNeMo</a>, a <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> platform for drug discovery.</p>
-<p>Over several months of research and iteration, BioHive-1 trained <a href="http://arxiv.org/abs/2404.10242">Phenom-1</a> using more than 3.5 billion cellular images. Recursion’s expanded system enables training even more powerful models with larger datasets in less time.</p>
-<p>The company also used <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>, powered by Oracle Cloud Infrastructure, to provide additional supercomputing resources to power their work.</p>
-<figure id="attachment_71588" aria-describedby="caption-attachment-71588" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation.gif"><img loading="lazy" decoding="async" class="size-large wp-image-71588" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-672x338.gif" alt="Animation of how Recursion trains AI models for drug discovery on NVIDIA GPUs" width="672" height="338" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-672x338.gif 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-400x201.gif 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-768x386.gif 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-842x423.gif 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-406x204.gif 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Recursion-Phenom-AI-model-animation-188x94.gif 188w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-71588" class="wp-caption-text">Much like how LLMs are trained to generate missing words in a sentence, Phenom models are trained by asking them to generate the masked out pixels in images of cells.</figcaption></figure>
-<p>The Phenom-1 model serves Recursion and its partners in several ways, including finding and optimizing molecules to treat a variety of diseases and cancers. Earlier models helped Recursion predict drug candidates for COVID-19 nine out of 10 times.</p>
-<p>The company announced its <a href="https://ir.recursion.com/news-releases/news-release-details/recursion-announces-collaboration-and-50-million-investment">collaboration with NVIDIA</a> in July. Less than 30 days later, the combination of BioHive-1 and DGX Cloud <a href="https://ir.recursion.com/news-releases/news-release-details/recursion-bridges-protein-and-chemical-space-massive-protein">screened and analyzed</a> a massive chemical library to predict protein targets for approximately 36 billion chemical compounds.</p>
-<p>In January, the company <a href="https://ir.recursion.com/news-releases/news-release-details/recursion-unveils-lowe-drug-discovery-software-jp-morgan">demonstrated</a> LOWE, an AI workflow engine with a natural-language interface to help make its tools more accessible to scientists. And in April it <a href="https://portal.valencelabs.com/blogs/post/introducing-molgps---a-foundational-gnn-for-molecular-property-prediction-Ti4InC3788me9f5">described</a> a billion-parameter AI model it built to provide a new way to predict the properties of key molecules of interest in healthcare.</p>
-<p>Recursion uses NVIDIA software to optimize its systems.</p>
-<p>“We love CUDA and <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, and we’re looking to see if <a href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> can help us distribute our models more easily, both internally and to partners,” he said.</p>
-<h2><b>A Shared Vision for Healthcare</b></h2>
-<p>The efforts are part of a broad vision that Jensen Huang, NVIDIA founder and CEO, described in a <a href="https://blogs.nvidia.com/blog/nvidia-ceo-ai-drug-discovery-jp-morgan-healthcare-2024/">fireside chat</a> with Recursion’s chairman as moving toward simulating biology.</p>
-<p>“You can now recognize and learn the language of almost anything with structure, and you can translate it to anything with structure … This is the generative AI revolution,” Huang said.</p>
-<p>“We share a similar view,” said Mabey.</p>
-<p>“We are in the early stages of a very interesting time where just as computers accelerated chip design, AI can speed up drug design. Biology is much more complex, so it will take years to play out, but looking back, people will see this was a real turning point in healthcare,” he added.</p>
-<p><i>Learn about </i><a href="https://www.nvidia.com/en-us/clara/"><i>NVIDIA’s AI platform for healthcare and life sciences</i></a><i> and subscribe to </i><a href="https://www.nvidia.com/en-us/industries/healthcare-life-sciences/healthcare-news-sign-up/"><i>NVIDIA healthcare news</i></a><i>.</i></p>
-<p><i>Pictured at top: BioHive-2 with a few members of the Recursion team (from left) Paige Despain, John Durkin, Joshua Fryer, Jesse Dean, Ganesh Jagannathan, Chris Gibson, Lindsay Ellinger, Michael Secora, Alex Timofeyev, and Ben Mabey. </i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/BioHive2-with-Recursion-crop-team-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1085"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/BioHive2-with-Recursion-crop-team-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Drug Discovery, STAT! NVIDIA, Recursion Speed Pharma R&D With AI Supercomputer]]></media:title>
-			<media:description type="html">Picture of Recursion team with BioHive-2 AI supercomputer for drug discovery</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Blackwell Platform Pushes the Boundaries of Scientific Computing</title>
-		<link>https://blogs.nvidia.com/blog/blackwell-scientific-computing/</link>
-		
-		<dc:creator><![CDATA[Dion Harris]]></dc:creator>
-		<pubDate>Mon, 13 May 2024 06:00:30 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[CUDA]]></category>
-		<category><![CDATA[HPC Stories]]></category>
-		<category><![CDATA[RAPIDS]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71547</guid>
-
-					<description><![CDATA[Quantum computing. Drug discovery. Fusion energy. Scientific computing and physics-based simulations are poised to make giant steps across domains that benefit humanity as advances in accelerated computing and AI drive the world’s next big breakthroughs. NVIDIA unveiled at GTC in March the NVIDIA Blackwell platform, which promises generative AI on trillion-parameter large language models (LLMs)	<a class="read-more" href="https://blogs.nvidia.com/blog/blackwell-scientific-computing/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Quantum computing. Drug discovery. Fusion energy. Scientific computing and physics-based simulations are poised to make giant steps across domains that benefit humanity as advances in accelerated computing and AI drive the world’s next big breakthroughs.</p>
-<p>NVIDIA unveiled at GTC in March <a href="https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing">the NVIDIA Blackwell platform</a>, which promises generative AI on trillion-parameter large language models (LLMs) at up to 25x less cost and energy consumption than the NVIDIA Hopper architecture.</p>
-<p>Blackwell has powerful implications for AI workloads, and its technology capabilities can also help to deliver discoveries across all types of scientific computing applications, including traditional numerical simulation.</p>
-<p>By reducing energy costs, accelerated computing and AI drive <a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/">sustainable computing</a>. Many scientific computing applications already benefit. Weather can be simulated at 200x lower cost and with 300x less energy, while digital twin simulations have 65x lower cost and 58x less energy consumption versus traditional CPU-based systems and others.</p>
-<h2><b>Multiplying Scientific Computing Simulations With Blackwell</b></h2>
-<p>Scientific computing and physics-based simulation often rely on what’s known as double-precision formats, or <a href="https://blogs.nvidia.com/blog/double-precision-tensor-cores/">FP64 (floating point</a>), to solve problems. <a href="https://resources.nvidia.com/en-us-blackwell-architecture">Blackwell GPUs</a> deliver 30% more FP64 and FP32 FMA (fused multiply-add) performance  than Hopper.</p>
-<p>Physics-based simulations are critical to product design and development. From planes and trains to bridges, silicon chips and pharmaceuticals — testing and improving products in simulation saves researchers and developers billions of dollars.</p>
-<p>Today application-specific integrated circuits (ASICs) are designed almost exclusively on CPUs in a long and complex workflow, including analog analysis to identify voltages and currents.</p>
-<p>But that’s changing. The <a href="https://www.nvidia.com/en-us/industries/industrial-sector/cadence/">Cadence</a> SpectreX simulator is one example of an analog circuit design solver. SpectreX circuit simulations are projected to run 13x quicker on a GB200 Grace Blackwell Superchip — which connects Blackwell GPUs and Grace CPUs — than on a traditional CPU.</p>
-<p>Also, GPU-accelerated computational fluid dynamics, or CFD, has become a key tool. Engineers and equipment designers use it to predict the behavior of designs. Cadence Fidelity runs CFD simulations that are projected to run as much as 22x faster on GB200 systems than on traditional CPU-powered systems. With parallel scalability and 30TB of memory per GB200 NVL72 rack, it’s possible to capture flow details like never before.</p>
-<p>In another application, Cadence Reality’s digital twin software can be used to create a virtual replica of a physical data center, including all its components — servers, cooling systems and power supplies. Such a virtual model allows engineers to test different configurations and scenarios before implementing them in the real world, saving time and costs.</p>
-<p>Cadence Reality’s magic happens from physics-based algorithms that can simulate how heat, airflow and power usage affect data centers. This helps engineers and data center operators to more effectively manage capacity, predict potential operational problems and make informed decisions to optimize the layout and operation of the data center for improved efficiency and capacity utilization. With Blackwell GPUs, these simulations are projected to run up to 30x faster than with CPUs, offering accelerated timelines and higher energy efficiency.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-71581 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-672x379.jpg" alt="" width="672" height="379" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-672x379.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-400x226.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-381x215.jpg 381w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart-177x100.jpg 177w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cadence-Chart.jpg 752w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
-<h2><b>AI for Scientific Computing</b></h2>
-<p>New Blackwell accelerators and networking will deliver leaps in performance for advanced simulation.</p>
-<p>The NVIDIA GB200 kicks off a new era for high-performance computing (HPC). Its architecture sports a second-generation transformer engine optimized to accelerate inference workloads for LLMs.</p>
-<p>This delivers a 30x speedup on resource-intensive applications like the 1.8-trillion-parameter GPT-MoE (generative pretrained transformer-mixture of experts) model compared to the H100 generation, unlocking new possibilities for HPC. By enabling LLMs to process and decipher vast amounts of scientific data, HPC applications can sooner reach valuable insights that can accelerate scientific discovery.</p>
-<p>Sandia National Laboratories <a href="https://blogs.nvidia.com/blog/generative-ai-science-isc/">is building</a> an LLM copilot for parallel programming. Traditional AI can generate basic serial computing code efficiently, but when it comes to parallel computing code for HPC applications, LLMs can falter. Sandia researchers are tackling this issue head-on with an ambitious project — automatically generating parallel code in Kokkos, a specialized programming language designed by multiple national labs for running tasks across tens of thousands of processors in the world’s most powerful supercomputers.</p>
-<p>Sandia is using an AI technique known as <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a>, or RAG, which combines information-retrieval capabilities with language generation models. The team is creating a Kokkos database and integrating it with AI models using RAG.</p>
-<p>Initial results are promising. Different RAG approaches from Sandia have demonstrated autonomously generated Kokkos code for parallel computing applications. By overcoming hurdles in AI-based parallel code generation, Sandia aims to unlock new possibilities in HPC across leading supercomputing facilities worldwide. Other examples <a href="https://developer.nvidia.com/blog/ai-for-a-scientific-computing-revolution/">include</a> renewables research, climate science and drug discovery.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-scaled.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-71567 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GB200NVL72-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
-<h2><b>Driving Quantum Computing Advances</b></h2>
-<p>Quantum computing unlocks a time machine trip for fusion energy, climate research, drug discovery and many more areas. So researchers are hard at work simulating future quantum computers on NVIDIA GPU-based systems and software to develop and test quantum algorithms faster than ever.</p>
-<p>The <a href="https://developer.nvidia.com/blog/introducing-cuda-quantum-the-platform-for-hybrid-quantum-classical-computing/">NVIDIA CUDA-Q platform</a> enables both simulation of quantum computers and hybrid application development with a unified programming model for CPUs, GPUs and <a href="https://blogs.nvidia.com/blog/what-is-a-qpu/">QPUs</a> (quantum processing units) working together.</p>
-<p>CUDA-Q is speeding simulations in chemistry workflows for BASF, high-energy and nuclear physics for Stony Brook and quantum chemistry for NERSC.</p>
-<p>NVIDIA Blackwell architecture will help drive quantum simulations to new heights. Utilizing the latest NVIDIA NVLink multi-node interconnect technology helps shuttle data faster for speedup benefits to quantum simulations.</p>
-<h2><b>Accelerating Data Analytics for Scientific Breakthroughs </b></h2>
-<p>Data processing with RAPIDS is popular for scientific computing. Blackwell introduces a hardware decompression engine to decompress compressed data and speed up analytics in RAPIDS.</p>
-<p>The decompression engine provides performance improvements up to 800GB/s and enables Grace Blackwell to perform 18x faster than CPUs — on Sapphire Rapids — and 6x faster than NVIDIA H100 Tensor Core GPUs for query benchmarks.</p>
-<p>Rocketing data transfers with 8TB/s of high-memory bandwidth and the Grace CPU high-speed NVLink Chip-to-Chip (C2C) interconnect, the engine speeds up the entire process of database queries. Yielding top-notch performance across data analytics and data science use cases, Blackwell speeds data insights and reduces costs.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-71578 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-580x500.jpg" alt="" width="580" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-580x500.jpg 580w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-400x345.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-768x662.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-1536x1325.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-522x450.jpg 522w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-249x215.jpg 249w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-406x350.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-116x100.jpg 116w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333-1280x1104.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Bar-chart333.jpg 2048w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
-<h2><b>Driving Extreme Performance for Scientific Computing with NVIDIA Networking</b></h2>
-<p>The NVIDIA Quantum-X800 InfiniBand networking platform offers the highest throughput for scientific computing infrastructure.</p>
-<p>It includes NVIDIA Quantum Q3400 and Q3200 switches and the NVIDIA ConnectX-8 SuperNIC, together hitting twice the bandwidth of the prior generation. The Q3400 platform offers 5x higher bandwidth capacity and 14.4Tflops of in-network computing with NVIDIA’s scalable hierarchical aggregation and reduction protocol (SHARPv4), providing a 9x increase compared with the prior generation.</p>
-<p>The performance leap and power efficiency translates to significant reductions in workload completion time and energy consumption for scientific computing.</p>
-<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/"><i>NVIDIA Blackwell</i></a><i>. </i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gb200-nvl-rack-gtc24-press-1920x1080-1.jpg"
-			type="image/jpeg"
-			width="1920"
-			height="1080"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gb200-nvl-rack-gtc24-press-1920x1080-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Blackwell Platform Pushes the Boundaries of Scientific Computing]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
