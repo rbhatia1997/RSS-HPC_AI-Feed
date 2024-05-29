@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 28 May 2024 14:57:10 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 29 May 2024 17:57:19 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,368 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Large scale training with NeMo Megatron on AWS ParallelCluster using P5 instances</title>
+		<link>https://aws.amazon.com/blogs/hpc/large-scale-training-with-nemo-megatron-on-aws-parallelcluster-using-p5-instances/</link>
+		
+		<dc:creator><![CDATA[Aman Shanbhag]]></dc:creator>
+		<pubDate>Wed, 29 May 2024 13:52:05 +0000</pubDate>
+				<category><![CDATA[Amazon Machine Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[FEA]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Slurm]]></category>
+		<guid isPermaLink="false">9f2f940ec2831d85025f4b4f1d755f1419ed79d4</guid>
+
+					<description>This post was contributed by Akshit Arora (NVIDIA), Peter Dykas (NVIDIA), Aman Shanbhag (AWS), Sean Smith (AWS), Pierre-Yves (AWS) Today we’ll take you on a step-by-step guide to help you to create a cluster of p5.48xlarge instances, using AWS ParallelCluster to launch GPT training through the NVIDIA NeMo Megatron framework, using Slurm. We’ve put detailed […]</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Akshit Arora (NVIDIA), Peter Dykas (NVIDIA), Aman Shanbhag (AWS), Sean Smith (AWS), Pierre-Yves (AWS)&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Today we’ll take you on a step-by-step guide to help you to create a cluster of p5.48xlarge instances, using &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/what-is-aws-parallelcluster.html"&gt;AWS ParallelCluster&lt;/a&gt; to launch GPT training through the NVIDIA NeMo Megatron framework, using Slurm. We’ve put detailed information about this &lt;a href="https://github.com/aws-samples/awsome-distributed-training/tree/main/3.test_cases/2.nemo-launcher"&gt;in our GitHub repo&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;We use ParallelCluster to execute NVIDIA NeMo Megatron across multiple nodes, because it takes care of mounting a fast shared filesystem between the nodes, synchronizing the SSH keys, creating a host file, and all the other overheads that make job submission possible.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/what-is-aws-parallelcluster.html"&gt;AWS ParallelCluster&lt;/a&gt; is a supported, open-source cluster management tool that makes it easy to create, scale, and manage clusters of GPU-based instances based on the open-source Slurm scheduler. It uses a YAML configuration file to stand up a head node, GPU compute nodes, and a file system. Users can login and submit jobs to pre-provisioned nodes, or dynamically spin-up Amazon Elastic Compute Cloud (Amazon EC2) instances using On-Demand or Spot. ParallelCluster also offers a &lt;a href="ParallelCluster%20also%20offers%20a%20web-based%20user%20interface%20that%20serves%20as%20a%20dashboard%20for%20creating,%20monitoring,%20and%20managing%20clusters."&gt;web-based user interface&lt;/a&gt; that serves as a dashboard for creating, monitoring, and managing clusters.&lt;/p&gt; 
+&lt;h2&gt;Introducing NVIDIA NeMO Framework&lt;/h2&gt; 
+&lt;p&gt;The NVIDIA NeMo Framework (or just &lt;em&gt;NeMo FW&lt;/em&gt; for the rest of this post) focuses on foundation model-training for generative AI models. Large language model (LLM) pre-training typically needs a lot of compute and model parallelism to efficiently scale training. NeMo FW’s model training scales to thousands of GPUs and can be used for training LLMs on trillions of tokens.&lt;/p&gt; 
+&lt;p&gt;The &lt;em&gt;&lt;a href="https://github.com/NVIDIA/NeMo-Megatron-Launcher"&gt;NVIDIA NeMo Megatron Launcher&lt;/a&gt;&lt;/em&gt; &lt;em&gt;(NeMo Launcher)&lt;/em&gt; is a cloud-native tool for launching end-to-end NeMo FW training jobs. The Launcher is designed to be a simple and easy-to-use tool for launching NeMo FW training jobs on CSPs or on-prem clusters.&lt;/p&gt; 
+&lt;p&gt;The launcher is typically used from a head node and only requires a minimal python installation. Launcher will generate (and launch) the submission scripts needed by the cluster scheduler and will also organize and store the job results. Launcher includes tested configuration files, but anything in a configuration file can be modified by the user. Launcher supports many functionalities, from cluster setup and configuration, data downloading, curating and model training setup, evaluation and deployment.&lt;/p&gt; 
+&lt;h2&gt;Steps to create cluster and launch jobs&lt;/h2&gt; 
+&lt;p&gt;This guide assumes that Amazon EC2 P5 instances are available in us-east-2 for you, but this may vary depending on your account / capacity reservation and the region you plan to use.&lt;/p&gt; 
+&lt;h3&gt;Step 0: Install ParallelCluster CLI&lt;/h3&gt; 
+&lt;p&gt;Installing CLI Instructions: &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-virtual-environment.html"&gt;https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-virtual-environment.html&lt;/a&gt;&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;If &lt;code&gt;virtualenv&lt;/code&gt; is not installed, install &lt;code&gt;virtualenv&lt;/code&gt; using &lt;code&gt;pip3&lt;/code&gt;.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;python3 -m pip install --upgrade pip
+python3 -m pip install --user --upgrade virtualenv
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="2"&gt; 
+ &lt;li&gt;Create a virtual environment, name it, and activate it.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;python3 -m virtualenv ~/apc-ve
+source ~/apc-ve/bin/activate
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="3"&gt; 
+ &lt;li&gt;Install ParallelCluster into your virtual environment.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;(apc-ve)~$ python3 -m pip install "aws-parallelcluster" --upgrade --user&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="4"&gt; 
+ &lt;li&gt;Install Node Version Manager (&lt;code&gt;nvm&lt;/code&gt;) and the latest Long-Term Support (LTS) &lt;code&gt;Node.js&lt;/code&gt; version.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+$ chmod ug+x ~/.nvm/nvm.sh
+$ source ~/.nvm/nvm.sh
+$ nvm install --lts
+$ node --version
+$ export PATH=$PATH:~/.local/bin
+$ pcluster version
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h3&gt;Step 1: Create a VPC and Security Groups&lt;/h3&gt; 
+&lt;div id="attachment_3704" style="width: 931px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3704" loading="lazy" class="size-full wp-image-3704" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/22/IMG-2024-05-22-13.06.54.png" alt="Figure 1 – A VPC configuration in a new account with one public subnet and one private subnet in the target region. The P5 instance topology is defined to have 32 ENI cards of 100Gbps each." width="921" height="433"&gt;
+ &lt;p id="caption-attachment-3704" class="wp-caption-text"&gt;Figure 1 – A VPC configuration in a new account with one public subnet and one private subnet in the target region. The P5 instance topology is defined to have 32 ENI cards of 100Gbps each.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;If you’re using a new AWS account, your VPC configuration will consist of one public subnet and a private subnet in the target region. We &lt;a href="https://github.com/aws/aws-ofi-nccl/blob/master/topology/p5.48xl-topo.xml"&gt;define the P5 instance topology&lt;/a&gt; to have a total of 32 Elastic Network Interfaces (ENI) cards of 100Gbps each. To handle 32 ENIs, compute instances need to be placed into a private subnet, otherwise your cluster will fail in creation because a public IP is not automatically assigned on instances with multiple NICs. You can find more information about deploying a VPC for ParallelCluster &lt;a href="https://github.com/aws-samples/awsome-distributed-training/tree/main/1.architectures/1.vpc_network#vpc-cloudformation-stacks"&gt;in our GitHub repo&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Unless you’re comfortable deploying a private subnet and setting the routes and security groups, we recommend that you deploy a custom VPC using the CloudFormation template called ML-VPC. This template is region-agnostic and enables you to create a VPC with the required network architecture to run your workloads.&lt;/p&gt; 
+&lt;p&gt;You can follow the steps to deploy your new VPC:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Deploy this &lt;a href="https://console.aws.amazon.com/cloudformation/home?#/stacks/quickcreate?templateURL=https%3A%2F%2Fawsome-distributed-training.s3.amazonaws.com%2Ftemplates%2F1.vpc-multi-az.yaml&amp;amp;stackName=ML-VPC"&gt;CloudFormation template&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;You’ll see a list of parameters: 
+  &lt;ul&gt; 
+   &lt;li&gt;In &lt;strong&gt;Name of your VPC&lt;/strong&gt;, you can leave it as default LargeScaleVPC.&lt;/li&gt; 
+   &lt;li&gt;For &lt;strong&gt;Availability zones&lt;/strong&gt; (AZ’s), select your desired AZ. This will deploy a public and private subnet in that AZ. &lt;em&gt;If you’re using a capacity reservation (CR), use the AZ specific to the CR.&lt;/em&gt;&lt;/li&gt; 
+   &lt;li&gt;Keep the &lt;strong&gt;S3 Endpoint&lt;/strong&gt;, &lt;strong&gt;Public Subnet&lt;/strong&gt; and &lt;strong&gt;DynamoDB Endpoint&lt;/strong&gt; as true.&lt;/li&gt; 
+  &lt;/ul&gt; &lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;ol start="3"&gt; 
+ &lt;li&gt;Check the acknowledgement box in the &lt;strong&gt;Capabilities&lt;/strong&gt; section and create the stack.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;It’ll take a few minutes to deploy your network architecture. The stack outputs tab will contain IDs of your security groups and subnets. You’ll need to keep this information handy for the next step.&lt;/p&gt; 
+&lt;h3&gt;Step 2: Build ParallelCluster custom AMI&lt;/h3&gt; 
+&lt;p&gt;We used the following configuration (which we saved as image_build.yaml), for adding ParallelCluster dependencies on top of the &lt;a href="https://aws.amazon.com/releasenotes/aws-deep-learning-base-gpu-ami-ubuntu-22-04/"&gt;AWS Deep Learning Base GPU AMI&lt;/a&gt;. This Deep Learning AMI page also contains a command for retrieving the AMI ID (search for “Query AMI-ID with AWSCLI”). You can specify which AMI to use as base depending on your requirements, and then install ParallelCluster dependencies on top of it following &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/building-custom-ami-v3.html"&gt;the tutorial in our service documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Now ensure that the &lt;code&gt;SubnetId&lt;/code&gt;, &lt;code&gt;ParentImage&lt;/code&gt;, and &lt;code&gt;SecurityGroupIds&lt;/code&gt; are set to the values exported when deploying your network architecture in Step 1. Save the configuration to the file &lt;code&gt;image_build.yaml&lt;/code&gt;.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;Build:
+ InstanceType: p5.48xlarge
+ SubnetId: subnet-xxxxxx
+ ParentImage: ami-xxxxxx
+ SecurityGroupIds:
+ - sg-xxxxxx
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; We specify security groups and subnet specific to private subnet (in the required AZ) created as a result of Step 1.&lt;/p&gt; 
+&lt;p&gt;Now launch the ParallelCluster custom AMI creation job like this:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster build-image --image-id p5-pcluster-dlgpu-baseami --image-configuration image_build.yaml --region us-east-2&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This step takes about 30-45 minutes to complete.&lt;/p&gt; 
+&lt;h3&gt;Step 3: Launch ParallelCluster&lt;/h3&gt; 
+&lt;p&gt;Once the AMI is ready, it’s time to launch your cluster.&lt;/p&gt; 
+&lt;p&gt;Here’s a reference configuration:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;Image:
+ Os: ubuntu2204
+HeadNode:
+ InstanceType: m5.8xlarge
+ LocalStorage:
+   RootVolume:
+     Size: 200
+     DeleteOnTermination: true
+ Networking:
+   SubnetId: subnet-xxxxxx
+ Ssh:
+   KeyName: &amp;lt;key-name&amp;gt;
+ Iam:
+   S3Access:
+     - BucketName: &amp;lt;s3-bucket-name&amp;gt;
+ CustomActions:
+   OnNodeConfigured:
+     Script: https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/authentication-credentials/multi-runner/postinstall.sh
+     Args:
+       - https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/authentication-credentials/pyxis/postinstall.sh
+       - -/fsx
+       - https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/main/docker/postinstall.sh
+Scheduling:
+ Scheduler: slurm
+ SlurmQueues:
+ - Name: compute
+   ComputeSettings:
+     LocalStorage:
+       RootVolume:
+         Size: 200
+   ComputeResources:
+   - Name: compute
+     InstanceType: p5.48xlarge
+     MinCount: 2
+     MaxCount: 2
+     CapacityReservationTarget:
+           CapacityReservationId: cr-xxxxxx
+     Efa:
+       Enabled: true
+   Networking:
+     PlacementGroup:
+       Enabled: true
+     SubnetIds:
+       - subnet-xxxxxx
+   CustomActions:
+     OnNodeConfigured:
+       Script: https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/authentication-credentials/multi-runner/postinstall.sh
+       Args:
+         - https://raw.githubusercontent.com/aws-samples/aws-parallelcluster-post-install-scripts/authentication-credentials/pyxis/postinstall.sh
+         - -/fsx
+   Image:
+     CustomAmi: ami-xxxxxx
+SharedStorage:
+ - MountDir: /fsx
+   Name: FSxDataMount
+   StorageType: FsxLustre
+   FsxLustreSettings:
+     StorageCapacity: 1200
+     DeploymentType: PERSISTENT_2
+Monitoring:
+ DetailedMonitoring: true
+ Logs:
+   CloudWatch:
+     Enabled: true # good for debug
+ Dashboards:
+   CloudWatch:
+     Enabled: false # provide basic dashboards
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Now, you should:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Update the &lt;code&gt;Region&lt;/code&gt; to your intended region&lt;/li&gt; 
+ &lt;li&gt;Update the &lt;code&gt;Networking:SubnetId&lt;/code&gt; (for the head node) to the &lt;strong&gt;public subnet&lt;/strong&gt; you created in Step 1.&lt;/li&gt; 
+ &lt;li&gt;Update the &lt;code&gt;Ssh:KeyName&lt;/code&gt;, to your specific key.&lt;/li&gt; 
+ &lt;li&gt;Update the &lt;code&gt;MinCount&lt;/code&gt; and &lt;code&gt;MaxCount&lt;/code&gt; to the desired numbers of instances you’d like in the cluster.&lt;/li&gt; 
+ &lt;li&gt;Set the &lt;code&gt;CapacityReservationId&lt;/code&gt;, if any.&lt;/li&gt; 
+ &lt;li&gt;Update the compute node &lt;code&gt;Networking:SubnetId&lt;/code&gt; to private subnet you created in Step 1.&lt;/li&gt; 
+ &lt;li&gt;Optionally: 
+  &lt;ol&gt; 
+   &lt;li&gt;Set the &lt;code&gt;Iam:S3Access:BucketName&lt;/code&gt;, if you’d like the compute instances to be able to access an Amazon Simple Storage Service (Amazon S3) bucket.&lt;/li&gt; 
+   &lt;li&gt;Update the &lt;code&gt;ImportPath&lt;/code&gt; within &lt;code&gt;SharedStorage&lt;/code&gt; to an Amazon S3 bucket URI, if you’d like to initialize your Lustre storage with data from an S3 bucket.&lt;/li&gt; 
+  &lt;/ol&gt; &lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;There’s more information about postinstall scripts and a library of especially useful ones &lt;a href="https://github.com/aws-samples/aws-parallelcluster-post-install-scripts/tree/main"&gt;in our GitHub repo&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;You can launch the cluster-creation process using a command like this once you’ve chosen a name for your cluster:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster --cluster-name &amp;lt;cluster-name&amp;gt; --cluster-configuration pcluster_config.yaml --region us-east-2  --rollback-on-failure False&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Some additional commands you’ll need later:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;To destroy a cluster: &lt;code&gt;pcluster delete-cluster -n &amp;lt;cluster-name&amp;gt; -r us-east-2&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;To SSH to the head node: &lt;code&gt;pcluster ssh -n &amp;lt;cluster-name&amp;gt; -r us-east-2 -i ssh_key.pem&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;You can use &lt;code&gt;sinfo&lt;/code&gt; on the head node to validate the cluster.&lt;/li&gt; 
+ &lt;li&gt;You can get cluster status, too: &lt;code&gt;pcluster describe-cluster -n &amp;lt;cluster-name&amp;gt; -r us-east-2&lt;/code&gt;&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Once your cluster is launched, you can validate some important elements by checking package versions:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Elastic fabric adapter (EFA) – this is the custom-built, high-speed network interface into the Amazon EC2 fabric for running HPC and distributed machine-learning codes:&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;$ fi_info --version
+fi_info: 1.18.2amzn1.0
+libfabric: 1.18.2amzn1.0
+libfabric api: 1.18
+ 
+$ cat /opt/amazon/efa_installed_packages
+# EFA installer version: 1.24.1
+# Debug packages installed: no
+# Packages installed:
+efa-config_1.15_all efa-profile_1.5_all libfabric-aws-bin_1.18.1_amd64 libfabric-aws-dev_1.18.1_amd64 libfabric1-aws_1.18.1_amd64 openmpi40-aws_4.1.5-1_amd64 ibacm_46.0-1_amd64 ibverbs-providers_46.0-1_amd64 ibverbs-utils_46.0-1_amd64 infiniband-diags_46.0-1_amd64 libibmad-dev_46.0-1_amd64 libibmad5_46.0-1_amd64 libibnetdisc-dev_46.0-1_amd64 libibnetdisc5_46.0-1_amd64 libibumad-dev_46.0-1_amd64 libibumad3_46.0-1_amd64 libibverbs-dev_46.0-1_amd64 libibverbs1_46.0-1_amd64 librdmacm-dev_46.0-1_amd64 librdmacm1_46.0-1_amd64 rdma-core_46.0-1_amd64 rdmacm-utils_46.0-1_amd64 efa_2.5.0-1.amzn1_amd64
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;We have a &lt;a href="https://github.com/aws/aws-ofi-nccl/blob/master/doc/efa-env-var.md"&gt;document&lt;/a&gt; to help streamline EFA environment variables in your Docker image and scripts, along with some additional guidance.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Message-passing interface (MPI)&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;$ mpirun --version
+mpirun (Open MPI) 4.1.6&lt;/code&gt;&lt;/pre&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;AWS-OFI-NCCL plugin&lt;/li&gt; 
+ &lt;li style="list-style-type: none"&gt; 
+  &lt;ol&gt; 
+   &lt;li&gt;NCCL is the NVIDIA Collective Communications Library; it provides inter-GPU communication primitives. &lt;a href="https://github.com/aws/aws-ofi-nccl"&gt;AWS-OFI-NCCL&lt;/a&gt; is a plug-in that enables developers on AWS to use libfabric as a network provider while running NCCL based applications.&lt;/li&gt; 
+   &lt;li&gt;The plugin is the easiest way to get the version is by running a NCCL (NVIDIA Collective Communications Library) test. You can build the tests using &lt;a href="https://github.com/NVIDIA/nccl-tests"&gt;these instructions&lt;/a&gt;, and look for logs reporting the version. You should see something like: &lt;code&gt;Initializing aws-ofi-nccl 1.7.4-aws&lt;/code&gt;&lt;/li&gt; 
+  &lt;/ol&gt; &lt;/li&gt; 
+ &lt;li&gt;NCCL version – you should also find &lt;code&gt;NCCL version 2.18.5+cuda12.2&lt;/code&gt; in the logs of the NCCL test.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;To resolve issues regarding Cluster Creation, please refer &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/troubleshooting-v3-cluster-deployment.html"&gt;to our troubleshooting documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3&gt;Step 4: Cluster validation&lt;/h3&gt; 
+&lt;p&gt;NeMo Launcher offers a &lt;a href="https://docs.nvidia.com/nemo-framework/user-guide/latest/cloudserviceproviders.html#cluster-validation"&gt;cluster validation script&lt;/a&gt; which runs NVIDIA &lt;a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/cloud-native/containers/dcgm"&gt;DCGM&lt;/a&gt; (Data Center GPU Manager) tests and NCCL tests. The DCGM is a suite of tools for managing and monitoring NVIDIA GPUs in cluster environments. All DCGM functionality is available via the dcgmi, which is the DCGM command-line utility.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd /path/to/NeMoMegatronLauncher/csp_tools/aws &amp;amp;&amp;amp; bash cluster_validation.sh --nodes=2&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;To resolve issues regarding Cluster Validation, please refer to the “Troubleshooting” section later.&lt;/p&gt; 
+&lt;h3&gt;Step 5: Launch GPT training job&lt;/h3&gt; 
+&lt;p&gt;Use &lt;code&gt;enroot&lt;/code&gt; to import the container to local:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;enroot import --output nemo_megatron_training.sqsh dockerd://nvcr.io/ea-bignlp/nemofw-training:23.07-py3&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Next, download the vocab and merges files:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;wget https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-vocab.json
+wget https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-merges.txt
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Here is the &lt;code&gt;config.yaml&lt;/code&gt; for a GPT 20B training job. Make a copy of this file and make changes as we describe next:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;defaults:
+  - _self_
+  - cluster: bcm  # Leave it as bcm even if using bcp. It will be ignored for bcp.
+  - data_preparation: gpt3/download_gpt3_pile
+  - training: gpt3/20b
+  - conversion: gpt3/convert_gpt3
+  - fine_tuning: null
+  - prompt_learning: null
+  - adapter_learning: null
+  - ia3_learning: null
+  - evaluation: gpt3/evaluate_all
+  - export: gpt3/export_gpt3
+  - override hydra/job_logging: stdout
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+
+debug: False
+
+stages:
+  - training
+  # - conversion
+  # - evaluation
+  # - export
+
+cluster_type: bcm  # bcm or bcp. If bcm, it must match - cluster above.
+launcher_scripts_path: /home/ubuntu/NeMo-Megatron-Launcher/launcher_scripts  # Path to NeMo Megatron Launch scripts, should ends with /launcher_scripts
+data_dir: /fsx/gpt3_dataset  # Location to store and read the data.
+base_results_dir: /fsx/gpt3_dataset/results  # Location to store the results, checkpoints and logs.
+container_mounts:
+  - /home/ubuntu/NeMo-Megatron-Launcher/csp_tools/aws/:/nccl
+container: /home/ubuntu/NeMo-Megatron-Launcher/nemo_megatron_training.sqsh
+
+wandb_api_key_file: null  # File where the w&amp;amp;B api key is stored. Key must be on the first line.
+
+env_vars:
+  NCCL_TOPO_FILE: /nccl/topo.xml # Should be a path to an XML file describing the topology
+  UCX_IB_PCI_RELAXED_ORDERING: null # Needed to improve Azure performance
+  NCCL_IB_PCI_RELAXED_ORDERING: null # Needed to improve Azure performance
+  NCCL_IB_TIMEOUT: null # InfiniBand Verbs Timeout. Set to 22 for Azure
+  NCCL_DEBUG: INFO # Logging level for NCCL. Set to "INFO" for debug information
+  NCCL_PROTO: simple # Protocol NCCL will use. Set to "simple" for AWS
+  TRANSFORMERS_OFFLINE: 1
+  NCCL_AVOID_RECORD_STREAMS: 1
+
+# GPU Mapping
+numa_mapping:
+  enable: True  # Set to False to disable all mapping (performance will suffer).
+  mode: unique_contiguous  # One of: all, single, single_unique, unique_interleaved or unique_contiguous.
+  scope: node  # Either node or socket.
+  cores: all_logical  # Either all_logical or single_logical.
+  balanced: True  # Whether to assing an equal number of physical cores to each process.
+  min_cores: 1  # Minimum number of physical cores per process.
+  max_cores: 8  # Maximum number of physical cores per process. Can be null to use all available cores.
+
+# Do not modify below, use the values above instead.
+data_preparation_config: ${hydra:runtime.choices.data_preparation}
+training_config: ${hydra:runtime.choices.training}
+fine_tuning_config: ${hydra:runtime.choices.fine_tuning}
+prompt_learning_config: ${hydra:runtime.choices.prompt_learning}
+adapter_learning_config: ${hydra:runtime.choices.adapter_learning}
+ia3_learning_config: ${hydra:runtime.choices.ia3_learning}
+evaluation_config: ${hydra:runtime.choices.evaluation}
+conversion_config: ${hydra:runtime.choices.conversion}
+export_config: ${hydra:runtime.choices.export}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;In this &lt;code&gt;config.yaml&lt;/code&gt; file:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Update the &lt;code&gt;launcher_scripts_path&lt;/code&gt; to the absolute path for NeMo Launcher’s launcher_scripts&lt;/li&gt; 
+ &lt;li&gt;Update the &lt;code&gt;data_dir&lt;/code&gt; to wherever the data is residing.&lt;/li&gt; 
+ &lt;li&gt;Update container with path to &lt;code&gt;sqsh&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;Update the &lt;code&gt;base_results_dir&lt;/code&gt; to point to the directory where you’d like to organize the results.&lt;/li&gt; 
+ &lt;li&gt;Update &lt;code&gt;NCCL_TOPO_FILE&lt;/code&gt; to point to a xml &lt;a href="https://github.com/aws/aws-ofi-nccl/blob/master/topology/p5.48xl-topo.xml"&gt;specific to P5&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;Optionally update &lt;code&gt;container_mounts&lt;/code&gt; to mount a specific directory from host into container.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;You can find some example configuration files &lt;a href="https://github.com/NVIDIA/NeMo-Framework-Launcher/blob/main/launcher_scripts/conf/config.yaml"&gt;in our GitHub repo&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;To launch the job:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd /path/to/NeMoMegatronLauncher/launcher_scripts &amp;amp;&amp;amp; python main.py &amp;amp;&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Once you launch this job, you can look at the &lt;code&gt;.log&lt;/code&gt; file (of format &lt;code&gt;log-nemo-megatron-&amp;lt;model_name&amp;gt;_&amp;lt;date&amp;gt;.log&lt;/code&gt;) to track the logs of the training job. Additionally, you can use a &lt;code&gt;.err&lt;/code&gt; file (of format &lt;code&gt;log-nemo-megatron-&amp;lt;model_name&amp;gt;_&amp;lt;date&amp;gt;.err&lt;/code&gt;) to track the errors and warnings, if any, of your training job. If you set up TensorBoard, you can also check the events file (of format &lt;code&gt;events.out.tfevents.&amp;lt;compute_details&amp;gt;&lt;/code&gt;) to look over the loss curves, learning rates and other parameters that NeMo tracks. For more information on this, refer to &lt;a href="https://www.tensorflow.org/tensorboard/get_started"&gt;the TensorBoard documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Note: The files mentioned above are located in the directory specified by you in the &lt;code&gt;base_results_dir&lt;/code&gt; field in the &lt;code&gt;config.yaml&lt;/code&gt; file above.&lt;/p&gt; 
+&lt;p&gt;This is what an example &lt;code&gt;.log&lt;/code&gt; file looks like. Note, this is only a part of the entire log file (“…” below entails omitted parts of the output), until step 3 of the training job (the actual logs contain logs until step 60000000):&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;    ************** Experiment configuration ***********
+…
+[NeMo I 2024-01-18 00:20:43 exp_manager:394] Experiments will be logged at /shared/backup120820231021/gpt_results/gpt3_126m_8_fp8_01172024_1619/results
+[NeMo I 2024-01-18 00:20:43 exp_manager:835] TensorboardLogger has been set up
+…
+[NeMo I 2024-01-18 00:21:13 lr_scheduler:910] Scheduler "&amp;lt;nemo.core.optim.lr_scheduler.CosineAnnealing object at 0x7fe75b3387f0&amp;gt;" 
+    will be used during training (effective maximum steps = 60000000) - 
+    Parameters : 
+…
+Sanity Checking DataLoader 0:   0%|                | 0/2 [00:00&amp;lt;?, ?it/s]
+Sanity Checking DataLoader 0: 100%|████████| 2/2 [00:07&amp;lt;00:00,  3.92s/it]
+…                                                      
+Epoch 0: :   0%| | 1/60000000 [00:35&amp;lt;583621:51:56, v_num=, reduced_train_
+Epoch 0: :   0%| | 2/60000000 [00:36&amp;lt;303128:00:21, v_num=, reduced_train_
+Epoch 0: :   0%| | 3/60000000 [00:36&amp;lt;202786:11:11, v_num=, reduced_train_
+…
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;div id="attachment_3705" style="width: 949px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3705" loading="lazy" class="size-full wp-image-3705" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/22/IMG-2024-05-22-13.25.45.png" alt="Figure 2 – Sample output graphs from our run using TensorBoard." width="939" height="301"&gt;
+ &lt;p id="caption-attachment-3705" class="wp-caption-text"&gt;Figure 2 – Sample output graphs from our run using TensorBoard.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Troubleshooting&lt;/h2&gt; 
+&lt;h3&gt;Cluster creation failed&lt;/h3&gt; 
+&lt;p&gt;Bringing up a cluster can fail for many reasons. The easiest way to debug is to create a cluster with &lt;code&gt;--rollback-on-failure False&lt;/code&gt;. Then you can see information in the AWS CloudFormation console detailing why the cluster creation failed. Even more detailed information will be in the logs on the head node which you can find in: &lt;code&gt;/var/log/cfn-init.log /var/log/cloud-init.log /var/log/cloud-init-output.log&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;The most common reason for cluster failure is that you may not have access to the target EC2 capacity. You’ll see this in the &lt;code&gt;/var/log/parallelcluster/clustermgtd&lt;/code&gt; log on the head node, or in CloudFormation.&lt;/p&gt; 
+&lt;h3&gt;Cluster Validation Issues&lt;/h3&gt; 
+&lt;h3&gt;1 – DCGMI output&lt;/h3&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;Error: Unable to complete diagnostic for group 2147483647. Return: (-21) Host engine connection invalid/disconnected.
+srun: error: compute-st-compute-1: task 0: Exited with exit code 235
+Error: Unable to complete diagnostic for group 2147483647. Return: (-21) Host engine connection invalid/disconnected.
+srun: error: compute-st-compute-2: task 1: Exited with exit code 235
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;&lt;strong&gt;Resolution&lt;/strong&gt;: The DCGM container may not be accessible from &lt;a href="https://docs.nvidia.com/ngc/index.html"&gt;NGC&lt;/a&gt;. Try converting the DCGM container to a local &lt;code&gt;.sqsh&lt;/code&gt; file using &lt;code&gt;enroot&lt;/code&gt; and pointing the validation script (&lt;code&gt;csp_tools/aws/dcgmi_diag.sh&lt;/code&gt;) to this local file, like this:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;enroot import --output dcgm.sqsh 'docker://$oauthtoken@nvcr.io#nvidia/cloud-native/dcgm:2.3.5-1-ub
+i8' 
+srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h3&gt;2 – PMIX Error in NCCL Logs&lt;/h3&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;[compute-st-compute-2:201457] PMIX ERROR: ERROR in file gds_ds12_lock_pthread.c at line 168&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;&lt;strong&gt;Resolution&lt;/strong&gt;: This is a non-fatal error. Try adding export &lt;code&gt;PMIX_MCA_gds=^ds12&lt;/code&gt; to the &lt;code&gt;csp_tools/aws/nccl.sh&lt;/code&gt; script.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this blog post, we’ve shown you how to leverage the AWS ParallelCluster and the NeMo Megatron Framework to enable large-scale Large Language Model (LLM) training on AWS P5 instances. Together, ParallelCluster and the NeMo Megatron Framework can empower researchers and developers to train LLMs on trillions of tokens, scaling to thousands of GPUs, which means accelerating time-to-market for cutting-edge natural language processing (NLP) applications.&lt;/p&gt; 
+&lt;p&gt;To learn more about training GPT3 Nemo Megatron on Slurm, refer to &lt;a href="https://github.com/aws-samples/awsome-distributed-training/tree/main/3.test_cases/2.nemo-launcher"&gt;AWS Sample&lt;/a&gt;s. To learn more about ParallelCluster and Nemo Megatron, check out the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/what-is-aws-parallelcluster.html"&gt;ParallelCluster User Guide&lt;/a&gt;, &lt;a href="https://github.com/NVIDIA/NeMo-Megatron-Launcher"&gt;NeMo Megatron Launcher&lt;/a&gt;, and &lt;a href="https://www.mlworkshops.com/01-getting-started/05-pcui-connect.html"&gt;Parallel Cluster UI&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Building an AI simulation assistant with agentic workflows</title>
 		<link>https://aws.amazon.com/blogs/hpc/building-an-ai-simulation-assistant-with-agentic-workflows/</link>
 		
@@ -28,7 +390,7 @@
 		<guid isPermaLink="false">a1c68c7ee69e75af5f1ce9d202a580c62bf691db</guid>
 
 					<description>Simulations provide critical insights but running them takes specialized people, which can slow everyone down. We show how a Simulation Assistant can use LLMs and agents to start these workflows via chat so you can get results sooner.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3673" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/20/building-an-AI-simulation-assistant.png" alt="" width="380" height="212"&gt;Simulations have become indispensable tools which enable organizations to predict outcomes, evaluate risks, and make informed decisions. Simulations provide valuable insights that drive strategic decision-making – running the gamut from supply chain optimization to exploration of design alternatives for products and processes.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3673" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/20/building-an-AI-simulation-assistant.png" alt="" width="380" height="212"&gt;Simulations have become indispensable tools which enable organizations to predict outcomes, evaluate risks, and make informed decisions. Simulations provide valuable insights that drive strategic decision-making – running the gamut from supply chain optimization to exploration of design alternatives for products and processes.&lt;/p&gt; 
 &lt;p&gt;But running and analyzing simulations can be a time-consuming task because it requires specialized teams of data scientists, analysts, and subject matter experts. In the manufacturing sector, these experts are in high demand to model and optimize complex production processes. This regularly leads to backlogs and delays in obtaining critical insights. In the healthcare industry, specialized teams of epidemiologists and statisticians run the simulations for infectious disease modeling that public health officials need to make decisions. The limited bandwidth of these specialists creates bottlenecks and inefficiencies that impact the ability to rapidly respond to emerging health crises in a data-driven manner.&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll examine an generative AI-based “Simulation Assistant” demo application built using &lt;a href="https://python.langchain.com/v0.1/docs/modules/agents/"&gt;LangChain Agents&lt;/a&gt; and &lt;a href="https://www.anthropic.com/"&gt;Anthropic’s&lt;/a&gt; recently released Claude V3 large language model (LLM) on Amazon Bedrock.&lt;/p&gt; 
 &lt;p&gt;By leveraging the latest advancements in LLMs and AWS, we’ll show you how to streamline and democratize your simulation workflows using a scalable and serverless architecture for an application with a chatbot-style interface. This will allow users to launch and interact with simulations using natural language prompts.&lt;/p&gt; 
@@ -40,9 +402,9 @@
 &lt;/ol&gt; 
 &lt;p&gt;Whether you’re a business analyst, product manager, researcher, or a simulation expert, this demonstration offers an intuitive and efficient way to harness the power of simulations by leveraging the capabilities of generative AI through Amazon Bedrock and the scalability of AWS – driving innovation and operational excellence across diverse industries.&lt;/p&gt; 
 &lt;h2&gt;Solution overview&lt;/h2&gt; 
-&lt;div id="attachment_3670" style="width: 880px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3670" loading="lazy" class="size-full wp-image-3670" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/20/IMG-2024-05-20-09.09.04.png" alt="Figure 1 – Architectural diagram for Simulation Assistant application. A containerized Streamlit web app is deployed via a load-balanced AWS Fargate service. The web app instantiates an LLM-based agent with access to seven tools. The retriever tool provides RAG capabilities using Amazon Kendra. Others tools enable the agent to perform a custom mathematical transform, invoke a simple inflation simulation executed using AWS Lambda, invoke a set of containerized investment portfolio simulations using AWS Batch that store results in an Amazon DynamoDB table, and analyze a batch of simulation results by generating plots." width="870" height="551"&gt;
- &lt;p id="caption-attachment-3670" class="wp-caption-text"&gt;Figure 1 – Architectural diagram for Simulation Assistant application. A containerized Streamlit web app is deployed via a load-balanced AWS Fargate service. The web app instantiates an LLM-based agent with access to seven tools. The retriever tool provides RAG capabilities using Amazon Kendra. Others tools enable the agent to perform a custom mathematical transform, invoke a simple inflation simulation executed using AWS Lambda, invoke a set of containerized investment portfolio simulations using AWS Batch that store results in an Amazon DynamoDB table, and analyze a batch of simulation results by generating plots.&lt;/p&gt;
+&lt;div id="attachment_3742" style="width: 1511px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3742" loading="lazy" class="size-full wp-image-3742" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/29/Sim_Assist_Demo_May24update-AWS-Architecture.drawio.png" alt="Figure 1 – Architectural diagram for Simulation Assistant application. A containerized Streamlit web app is deployed via a load-balanced AWS Fargate service. The web app instantiates an LLM-based agent with access to seven tools. The retriever tool provides RAG capabilities using Amazon Kendra. Others tools enable the agent to perform a custom mathematical transform, invoke a simple inflation simulation executed using AWS Lambda, invoke a set of containerized investment portfolio simulations using AWS Batch that store results in an Amazon DynamoDB table, and analyze a batch of simulation results by generating plots." width="1501" height="1163"&gt;
+ &lt;p id="caption-attachment-3742" class="wp-caption-text"&gt;Figure 1 – Architectural diagram for Simulation Assistant application. A containerized Streamlit web app is deployed via a load-balanced AWS Fargate service. The web app instantiates an LLM-based agent with access to seven tools. The retriever tool provides RAG capabilities using Amazon Kendra. Others tools enable the agent to perform a custom mathematical transform, invoke a simple inflation simulation executed using AWS Lambda, invoke a set of containerized investment portfolio simulations using AWS Batch that store results in an Amazon DynamoDB table, and analyze a batch of simulation results by generating plots.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;Figure 1 depicts the architecture of the Simulation Assistant application. A web application, built using &lt;a href="https://streamlit.io/"&gt;Streamlit&lt;/a&gt;, serves as the user interface. Streamlit is an open-source Python library that allows you to create interactive web applications for machine learning and data science use cases. We’ve containerized this app using Docker and stored it in an &lt;a href="https://aws.amazon.com/ecr/"&gt;Amazon Elastic Container Registry (ECR)&lt;/a&gt; repository.&lt;/p&gt; 
 &lt;p&gt;The containerized web application is deployed as a load-balanced AWS Fargate Service within an &lt;a href="https://aws.amazon.com/ecs/"&gt;Amazon Elastic Container Service (ECS)&lt;/a&gt; cluster. &lt;a href="https://aws.amazon.com/fargate/"&gt;AWS Fargate&lt;/a&gt; is a serverless compute engine that allows you to run containers without managing servers or clusters. By using Fargate, the Simulation Assistant application can scale its compute resources up or down automatically based on the incoming traffic, ensuring optimal performance and cost-efficiency.&lt;/p&gt; 
@@ -81,7 +443,7 @@
  &lt;p id="caption-attachment-3671" class="wp-caption-text"&gt;Figure 2 – Workflow of an LLM-based agent with tools for batch simulation execution. User requests are formatted into prompts by the application and sent to the LLM, which decomposes the request, selects and triggers the appropriate tool with extracted parameters (run_batch_simulations tool with simulation inputs). Tool results are returned to the LLM for generating a final response displayed to the user, including information for accessing and analyzing simulation outputs.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;For a deeper look into how we used these tools and to see the Simulation Assistant demo in action (including the batch simulation query described above) you can check out the video demo below. This will walk you through some potential interactions with the application, and shows the LLM-based agent interacting with various tools representing different aspects of a simulation workflow. You’ll see the agent list the available tools and provide instructions on how to use them when prompted.&lt;/p&gt; 
-&lt;p&gt;&lt;iframe loading="lazy" title="2024 04 02 SimAssist shortdemo Apr2024 WithAudio" width="500" height="281" src="https://www.youtube-nocookie.com/embed/chmq52YX84A?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;iframe loading="lazy" title="Figure 3 â&#128;&#147; A video showing the Simulation Assistant demo in action. Click to play." width="500" height="281" src="https://www.youtube-nocookie.com/embed/chmq52YX84A?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
 &lt;p&gt;&lt;em&gt;Figure 3 – A video showing the Simulation Assistant demo in action. Click to play.&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;The core portion of the demo involves the user asking the agent to run a set of 100 investment portfolio simulations with specific parameters like starting amount, cash flow, and number of steps. The agent interprets this natural language query, extracts the necessary parameters, and triggers an AWS Batch job to execute the simulations in parallel. Once the simulations complete, the agent retrieves the results from a database and visualizes them using another tool.&lt;/p&gt; 
 &lt;p&gt;Additionally, the video contrasts the agent’s capabilities with a standard LLM’s response to the same query, so you can see the enhanced abilities provided by the agent-tool architecture. You’ll also notice the agent breaking down a complex problem into steps and leveraging multiple tools in different orders to solve it, demonstrating the flexibility of the approach.&lt;/p&gt; 
@@ -2174,84 +2536,6 @@ Finished            : Thu Dec 14 00:14:53 2023&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;With data stored in Amazon S3 behind the scenes, Mountpoint for Amazon S3 delivers the durability, scalability, and high throughput needed to support demanding machine learning training workloads. It also provides a cost-efficient storage solution.&lt;/p&gt; 
 &lt;p&gt;Mountpoint for Amazon S3 is easy to integrate with other AWS ParallelCluster, and this extends to AWS Batch, and self-managed EC2 instances, too – all popular methods for distributed training workflows. The quick, scalable, and economical nature of Amazon S3 behind Mountpoint removes traditional data storage challenges customers often face when pursuing ML training.&lt;/p&gt; 
 &lt;p&gt;You can get started with Mountpoint for S3 today by building on the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/storage/mountpoint_s3"&gt;sample we’ve provided in the HPC Recipe Library&lt;/a&gt;. We highly encourage you to closely examine how the install/configure scripts operate and other recipes in the recipe library. These recipes are designed for cross-platform compatibility and robustness working with ParallelCluster, requiring little to no modification to use.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Accelerating agent-based simulation for autonomous driving</title>
-		<link>https://aws.amazon.com/blogs/hpc/accelerating-agent-based-simulation-for-autonomous-driving-with-hpc/</link>
-		
-		<dc:creator><![CDATA[Ilan Gleiser]]></dc:creator>
-		<pubDate>Mon, 26 Feb 2024 11:02:29 +0000</pubDate>
-				<category><![CDATA[Automotive]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Industries]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">b5625f70c17b5e2ef046c36732be097d809e0318</guid>
-
-					<description>AWS is powering the future of self-driving cars. Check out this post to see how high performance computing is transforming agent-based models for the CARLA RAI Challenge.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3356" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/23/boofla88_a_robot_wearing_a_hat_and_driving_a_car_on_a_sunny_day_6f8f05d1-fe46-48fc-9828-a49a1cf22794.png" alt="" width="380" height="212"&gt;Driving innovation has always been at the core of AWS and one of the realms in which this innovation is most palpable is in the burgeoning industry of autonomous vehicles. By accelerating agent-based models (ABM) simulations with high performance computing, AWS is at the forefront of this technological revolution, and nowhere is this more evident than in their support of the CARLA RAI Challenge and their commitment to Responsible AI (RAI).&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll tell you about the challenge itself, the tools we’ve leveraged to set it up, and show you how you can participate.&lt;/p&gt; 
-&lt;h2&gt;The CARLA RAI challenge and autonomous driving&lt;/h2&gt; 
-&lt;p&gt;The &lt;a href="https://carla-rai-challenge.github.io/"&gt;CARLA Responsible AI Challenge&lt;/a&gt; is an initiative led by the Oxford Robotics Institute, building upon the previous &lt;a href="https://leaderboard.carla.org/challenge/"&gt;CARLA Challenges&lt;/a&gt; by extending the Leaderboard with additional RAI related metrics while leveraging the CARLA open-source autonomous driving simulator.&lt;/p&gt; 
-&lt;p&gt;We’re hoping to stimulate creative minds to build capable artificial intelligence (AI) agents with the ability to navigate diverse and complex driving scenarios. The challenge has a strong emphasis on the principles of Responsible AI to promote safety in AI systems through rigorous assessment of models under &lt;em&gt;robustness&lt;/em&gt;, &lt;em&gt;environmental sustainability&lt;/em&gt;, and &lt;em&gt;transparency&lt;/em&gt; lenses.&lt;/p&gt; 
-&lt;p&gt;The role of AI in autonomous driving has never been more crucial, and the CARLA RAI Challenge serves to highlight this fact. Participants are encouraged to push the limits of technology and create AI agents that can navigate in all possible driving conditions – not just ideal ones. From bustling city traffic to desolate country roads, from bright sunny days to foggy nights – the AI agent should be prepared to handle it all.&lt;/p&gt; 
-&lt;div id="attachment_3349" style="width: 909px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3349" loading="lazy" class="size-full wp-image-3349" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/23/CleanShot-2024-02-23-at-13.16.47.png" alt="Fig 1: The main goal of the challenge remains the assessment of the driving proficiency of autonomous agents in realistic traffic situations, as defined in the leaderboard mechanics. Teams will have to complete 10 routes in 2 weather conditions through 5 repetitions." width="899" height="382"&gt;
- &lt;p id="caption-attachment-3349" class="wp-caption-text"&gt;Figure 1: The main goal of the challenge remains the assessment of the driving proficiency of autonomous agents in realistic traffic situations, as defined in the &lt;a href="https://leaderboard.carla.org/#task"&gt;leaderboard mechanics&lt;/a&gt;. Teams will have to complete 10 routes in 2 weather conditions through 5 repetitions. Source: CARLA Challenge Simulator.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The competition goes beyond just AI innovation. By challenging participants to ensure their AI systems can adapt to varying traffic, weather, and hardware conditions, the competition ensures driving models’ robustness.&lt;/p&gt; 
-&lt;p&gt;But &lt;em&gt;Responsible AI&lt;/em&gt; is important, too. Participants are encouraged to develop transparent or explainable models to facilitate accountability. This allows for better understanding, and therefore, improvements in AI behavior.&lt;/p&gt; 
-&lt;p&gt;Finally, the challenge promotes environmental sustainability by encouraging model development activities that cut down on carbon dioxide (CO2) emissions.&lt;/p&gt; 
-&lt;p&gt;The timeline for the challenge is as follows:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;The challenge will be opened on April 10th, 2024.&lt;/li&gt; 
- &lt;li&gt;The closing date for the challenge is July 9th, 2024.&lt;/li&gt; 
- &lt;li&gt;Teams are required to submit their video presentation by July 21st, 2024.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Role of AWS in agent-based simulations&lt;/h2&gt; 
-&lt;p&gt;Using AWS for agent-based simulations helps to provide a robust and scalable environment for testing – and refining – the AI agents participating in the challenge. AWS offers expansive computational resources via its cloud-based infrastructure.&lt;/p&gt; 
-&lt;p&gt;AWS operates at a huge scale, making it possible to run the resource-intensive simulations needed for testing the AI agents. Each simulation is a high-fidelity virtual representation of various driving scenarios, involving many variables and needing a lot of processing power. These simulations are not just one-off events, but need to be run repeatedly as the AI agents are continuously tweaked and improved.&lt;/p&gt; 
-&lt;p&gt;But it’s not just about resources: collaboration is critical for innovation. The cloud provides an environment where researchers, developers, and AI enthusiasts can come together to share ideas, learn from each other, and drive forward the development of autonomous driving technology.&lt;/p&gt; 
-&lt;p&gt;This means that AWS is a collaborator and enabler in the world of autonomous driving, making significant contributions to the advancement of agent-based simulations and, by extension, the entire field of autonomous vehicles.&lt;/p&gt; 
-&lt;h2&gt;The power of agent-based models in autonomous driving&lt;/h2&gt; 
-&lt;p&gt;Agent-based models (ABM) are changing the world of autonomous driving. Their power lies in their ability to replicate real-world driving conditions at a local level, with remarkable accuracy and detail – the perfect environment for testing AI agents.&lt;/p&gt; 
-&lt;p&gt;An agent-based model is a complex system where each entity (agent), operates independently according to a set of rules. In the context of autonomous driving, these agents might represent other vehicles, pedestrians, or even elements of the environment like traffic lights and road markings. By simulating the actions and interactions of these agents, ABMs &amp;nbsp;can recreate a wide range of driving scenarios – from rush hour in a busy city to a quiet country road at night.&lt;/p&gt; 
-&lt;p&gt;Agent-based models are also flexible. We can easily modify them to include new types of agents, or adjust the behavior of existing ones, allowing researchers to simulate virtually any driving scenario imaginable. This adaptability is key for the development of AI systems trying to replicate what they might encounter on real roads.&lt;/p&gt; 
-&lt;p&gt;But the true power of ABMs is that they can learn and evolve. As the agents navigate the virtual environment, they learn. Each run provides data that can be used to fine-tune the agent and optimize its algorithm. This iterative process of learning and adaptation is what makes agent-based models such a powerful tool for autonomous driving research.&lt;/p&gt; 
-&lt;h2&gt;How the CARLA RAI Challenge runs on AWS&lt;/h2&gt; 
-&lt;p&gt;Running multiple simulations simultaneously drastically reduces the time spent testing and refining the agents, clearly a boon for developers, who can iterate faster. That means we need to have a scalable mechanism to grow the resources when we need to do a lot of work.&lt;/p&gt; 
-&lt;p&gt;Once a developer creates and containerizes their agents, they can deploy them on AWS. In Figure 2, you can tell that the first step involves using the EvalAI website to submit Docker containers to the Amazon Elastic Container Registry (ECR), makes it easy to store, share, and deploy container images.&lt;/p&gt; 
-&lt;p&gt;In step 2, the user submits the simulation configuration data, which will be forwarded by EvalAI into an Amazon Simple Queue Service (Amazon SQS) queue, which then triggers an Amazon EventBridge event (step 3) that connects applications with data from diverse sources.&lt;/p&gt; 
-&lt;p&gt;The event initiated by SQS leads to the execution of an AWS Step Functions pipeline (step 4), which carries out a series of tasks based on the established deployment graph. The Step Functions then execute step 5, where a Lambda function is used to stash user information into Amazon DynamoDB, which is a NoSQL database that offers excellent scalability.&lt;/p&gt; 
-&lt;p&gt;Step 6 involves the actual simulation itself, which is done using the Amazon Elastic Kubernetes Service (Amazon EKS). EKS facilitates the scaling of containerized applications across a cluster. This elasticity allows for the automatic shutdown of all unused resources, too. All the operational logs and simulation results are logged into Amazon CloudWatch for analysis and diagnostics later.&lt;/p&gt; 
-&lt;p&gt;Finally – at step 7 – another Lambda function stores the simulation results in an Amazon Simple Storage Service bucket (Amazon S3). This is an excellent solution for storing a lot of files. The last step also returns the results using a REST API to the user through the EvalAI web interface.&lt;/p&gt; 
-&lt;div id="attachment_3350" style="width: 781px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3350" loading="lazy" class="size-full wp-image-3350" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/23/CleanShot-2024-02-23-at-13.18.08.png" alt="Figure 1 – The elastic cloud architecture for the CARLA RAI Challenge. Each stage is designed to scale, which means multiple simulations can run simultaneously. This drastically reduces the time spent on testing and refining the agents." width="771" height="390"&gt;
- &lt;p id="caption-attachment-3350" class="wp-caption-text"&gt;Figure 2 – The elastic cloud architecture powering the CARLA RAI Challenge. This architecture was introduced in the previous CARLA Challenge. Each stage is designed to scale, which means multiple simulations can run simultaneously. This drastically reduces the time spent on testing and refining the agents.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Challenge breakdown&lt;/h2&gt; 
-&lt;p&gt;Here’s a breakdown of the challenge.&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;strong&gt;Getting Started with CARLA&lt;/strong&gt;: Participants need to &lt;a href="https://carla-rai-challenge.github.io/create/"&gt;download&lt;/a&gt; and set up a specific version of CARLA (0.9.10.1) on their computers. This version is necessary because it matches the environment used in the online servers where the agents are assessed.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Configuration and Setup&lt;/strong&gt;: After installing CARLA, participants must adjust some configurations to link additional components specific for the challenge. This include the &lt;em&gt;Leaderboard&lt;/em&gt; system the &lt;em&gt;Scenario Runner&lt;/em&gt;, and &lt;em&gt;Routes:&lt;/em&gt; 
-  &lt;ol&gt; 
-   &lt;li&gt;&lt;strong&gt;Leaderboard&lt;/strong&gt;: the control center for the challenge. It runs the autonomous agent created by participants through a series of tests across different routes and traffic conditions. It evaluates how well the agent performs in each scenario.&lt;/li&gt; 
-   &lt;li&gt;&lt;strong&gt;Scenarios&lt;/strong&gt;: These are predefined traffic situations that the autonomous agent must navigate through successfully. There are ten types of scenarios, each with different parameters. These simulate real-world traffic situations in the virtual towns available in CARLA.&lt;/li&gt; 
-   &lt;li&gt;&lt;strong&gt;Routes&lt;/strong&gt;: These are paths from one point to another that the agent must follow. Routes have start and end points and may include specific weather conditions they have to simulate. Participants can train their agents using the provided routes, but the routes used for final evaluation in the challenge are a secret.&lt;/li&gt; 
-  &lt;/ol&gt; &lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Testing the Agent&lt;/strong&gt;: Before submitting, we encourage participants to test their agents using a basic setup. This test them manually control an agent through a simulation, to get clear understanding of what the agent will face during the challenge.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Final Submission and Evaluation&lt;/strong&gt;: Once they complete the program, we’ll ask participants to prepare their autonomous agent as a Docker image, which will undergo rigorous testing by the Leaderboard on undisclosed routes and scenarios. It’s crucial that the agent is able to successfully navigate these routes while following traffic laws and handling a variety of traffic situations. We’ll evaluate the performance of the agent in these tasks, focusing on how the agents cope in degraded driving and traffic conditions. Special metrics in the challenge include things like robustness against harsh environmental situations, data drift, sensor failures, and environmental impacts of running the agents.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h2&gt;What’s next? AWS and autonomous driving&lt;/h2&gt; 
-&lt;p&gt;As the landscape of autonomous driving continues to advance, we see AWS continuing to advance. Their ongoing dedication to delivering robust, high performance computing solutions, and their support for forward-thinking initiatives like the CARLA RAI Challenge is a promising combination.&lt;/p&gt; 
-&lt;p&gt;That’s because rapid progress in autonomous driving demands powerful, scalable, and reliable computational resources – definitely the cloud’s wheelhouse.&lt;/p&gt; 
-&lt;p&gt;Beyond this, the contribution that AWS makes to promoting a culture of collaboration and innovation within the AI and autonomous driving communities is an important driver. The cloud is important for researchers, developers, and AI enthusiasts to exchange ideas and learn from each other. And all of this collectively pushes the boundaries of what’s possible.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt;</content:encoded>
 					
 		
 		
