@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 29 May 2024 16:24:31 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 29 May 2024 17:06:30 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -384,7 +384,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>In the latest ranking of the world’s most energy-efficient supercomputers, known as the <a href="https://top500.org/lists/green500/2024/06/">Green500</a>, NVIDIA-powered systems swept the top three spots, and took seven of the top 10.</p>
 <p>The strong showing demonstrates how accelerated computing represents the most energy-efficient method for high-performance computing.</p>
 <p>The top three systems were all powered by the <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA GH200 Grace Hopper Superchip</a>, showcasing the widespread adoption and efficiency of NVIDIA’s Grace Hopper architecture.</p>
-<p>Leading the pack was the JEDI system, at Germany’s <a href="https://www.fz-juelich.de">Forschungszentrum Jülich</a>, which achieved an impressive 72.73 GFlops per Watt.</p>
+<p>Leading the pack was the JEDI system, at Germany’s <a href="https://www.fz-juelich.de">Forschungszentrum Jülich</a>, which achieved an impressive 72.73 GFlops per Watt and is based on Eviden’s BullSequana XH3000 liquid-cooled system.</p>
 <p>More’s coming. The ability to do more work using less power is driving the construction of more Grace Hopper supercomputers around the world.</p>
 <h2><strong>Accelerating the Green Revolution in Supercomputing</strong></h2>
 <p>Such achievements underscore NVIDIA’s pivotal role in advancing the global agenda for sustainable high-performance computing over the past decade.</p>
@@ -395,7 +395,7 @@
 <h2><strong>Redefining Efficiency in Supercomputing</strong></h2>
 <p>This capability is crucial for accelerating tasks that address complex scientific challenges, speeding up the work of researchers across various disciplines.</p>
 <p>NVIDIA’s supercomputing technology excels in traditional benchmarks — and it’s set new standards in energy efficiency.</p>
-<p><span>For instance, the Alps system, at the </span><span>Swiss National Supercomputing Centre (CSCS),</span><span> is equipped with NVIDIA Grace Hopper GH200. An optimized subset of the system, dubbed preAlps, placed fifth on the latest Green500. CSCS also submitted the full system to the TOP500 list, recording 270 petaflops on the High-Performance Linpack benchmark, used for solving complex linear equations. </span></p>
+<p>For instance, the Alps system, at the Swiss National Supercomputing Centre (CSCS), is equipped with NVIDIA Grace Hopper GH200. An optimized subset of the system, dubbed preAlps, placed fifth on the latest Green500. CSCS also submitted the full system to the TOP500 list, recording 270 petaflops on the High-Performance Linpack benchmark, used for solving complex linear equations.</p>
 <p>The Green500 rankings highlight platforms that provide highly efficient FP64 performance, which is crucial for accurate simulations used in scientific computing. This result underscores NVIDIA&#8217;s commitment to powering supercomputers for tasks across a full range of capabilities.</p>
 <p>This metric demonstrates substantial system performance, leading to its high ranking on the TOP500 list of the world&#8217;s fastest supercomputers. The high position on the Green500 list indicates that this scalable performance does not come at the cost of energy efficiency.</p>
 <p>Such performance shows how the Grace Hopper architecture introduces a new era in processing technology, merging tightly coupled CPU and GPU functionalities to enhance not only performance but also significantly improve energy efficiency.</p>
@@ -406,6 +406,7 @@
 <p>As NVIDIA continues to push the boundaries of what’s possible in high-performance computing, it remains committed to enhancing the energy efficiency of global computing infrastructure.</p>
 <p>The success of the Grace Hopper supercomputers in the Green500 rankings highlights NVIDIA’s leadership and its commitment to more sustainable global computing.</p>
 <p><a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/">Explore how NVIDIA’s pioneering role in green computing</a> is advancing scientific research, as well as shaping a more sustainable future worldwide.</p>
+<p><em>Feature image: Jupiter system at Jülich supercomputer center, courtesy of Eviden.</em></p>
 ]]></content:encoded>
 					
 		
