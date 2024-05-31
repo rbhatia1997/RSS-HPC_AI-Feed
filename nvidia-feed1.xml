@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 30 May 2024 21:13:00 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 31 May 2024 17:24:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,62 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>NVIDIA Grace Hopper Superchip Accelerates Murex MX.3 Analytics Performance, Reduces Power Consumption</title>
+		<link>https://blogs.nvidia.com/blog/grace-hopper-murex-mx-3/</link>
+		
+		<dc:creator><![CDATA[Prabhu Ramamoorthy]]></dc:creator>
+		<pubDate>Fri, 31 May 2024 15:00:58 +0000</pubDate>
+				<category><![CDATA[Accelerated Analytics]]></category>
+		<category><![CDATA[GPU Computing]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71839</guid>
+
+					<description><![CDATA[After the 2008 financial crisis and increased risk-management regulations that followed, Pierre Spatz anticipated banks would focus on reducing computing expenses. As head of quantitative research at Murex, a trading and risk management software company based in Paris, Spatz adopted NVIDIA’s CUDA and GPU-accelerated computing, aiming for top performance and energy efficiency. Always seeking the	<a class="read-more" href="https://blogs.nvidia.com/blog/grace-hopper-murex-mx-3/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>After the 2008 financial crisis and increased risk-management regulations that followed, Pierre Spatz anticipated banks would focus on reducing computing expenses.</p>
+<p>As head of quantitative research at Murex, a trading and risk management software company based in Paris, Spatz adopted NVIDIA’s CUDA and GPU-accelerated computing, aiming for top performance and energy efficiency.</p>
+<p>Always seeking the latest technologies, the company’s quants team has begun trials of the <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA Grace Hopper Superchip</a>. The effort is focused on helping customers better price and manage credit and market risk exposures of derivatives contracts.</p>
+<p>More than 60,000 daily users in 65 countries rely on the Murex MX.3 platform. MX.3 assists banks, asset managers, pension funds and other financial institutions with their trading, risk and operations across asset classes.</p>
+<h2><b>Managing Risk With MX.3 Driven by Grace Hopper</b></h2>
+<p>Financial institutions need high-performance computing infrastructure to run risk models on vast amounts of data for pricing and risk calculations, and to deliver real-time decision-making capabilities.</p>
+<p>MX.3 coverage includes both credit and market risk, BASEL capital standards, fundamental review of the trading book and x-valuation adjustment (XVA). XVA is used for different types of valuation adjustments related to derivative contracts, such as the credit value adjustment (CVA), the margin value adjustment and the funding valuation adjustment.</p>
+<p>Murex is testing Grace Hopper on the MX.3 platform for XVA calculations, as well as for market risk calibration, pricing evaluation, sensitivity, and profit and loss calculations on various asset classes.</p>
+<p>Grace Hopper offers faster calculation as well as power savings to the Murex platform.</p>
+<p>“On counterparty credit risk workloads such as CVA, Grace Hopper is the perfect fit, leveraging a heterogeneous architecture with a unique mix of CPU and GPU computations,” Spatz said. “On risk calculations, Grace is not only the fastest processor, but also far more power-efficient, making green IT a reality in the trading world.”</p>
+<p>When running XVA workloads in MX.3, the Murex research and development lab has noticed Grace Hopper can offer a 4x reduction in energy consumption and a 7x performance improvement compared with CPU-based systems.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002.jpg"><img fetchpriority="high" decoding="async" class="aligncenter wp-image-71879" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-400x270.jpg" alt="" width="400" height="270" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-400x270.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-672x454.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-768x519.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-666x450.jpg 666w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-318x215.jpg 318w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-148x100.jpg 148w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002.jpg 1027w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
+<h2><b>Pricing FX Barrier Options in MX.3 With Grace Hopper </b></h2>
+<p>To price foreign exchange (FX) barrier options, Murex has used its flagship and latest stochastic local volatility model and also noticed impressive performance improvements when running on Grace Hopper. A barrier option is a derivative with a payoff that relies on whether its underlying asset price reaches or crosses a specified threshold during the span of the option contract.</p>
+<p>The pricing evaluation is done with a 2D partial differential equation, which is more cost-effective on the Arm-based NVIDIA Grace CPU in GH200. Pricing this derivative with MX.3 on Grace Hopper goes 2.3x faster compared with Intel Xeon Gold 6148.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002.jpg"><img decoding="async" class="aligncenter wp-image-71883" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-400x253.jpg" alt="" width="400" height="253" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-400x253.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-672x424.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-768x485.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-712x450.jpg 712w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-340x215.jpg 340w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-158x100.jpg 158w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002.jpg 904w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
+<p>The NVIDIA Grace CPU also offers significant power efficiencies for FX barrier calculations on a watts-per-server basis, and it’s 5x better.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002.jpg"><img decoding="async" class="aligncenter wp-image-71887" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-400x267.jpg" alt="" width="400" height="267" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-322x215.jpg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002.jpg 760w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
+<p>NVIDIA’s next-generation accelerated computing platform is driving energy efficiency and cost-saving for high-performance computing for quantitative analytics in capital markets, says Murex, pointing to the results above.</p>
+<p><i>Learn about NVIDIA AI solutions for </i><a href="https://www.nvidia.com/en-us/industries/finance/"><i>financial services</i></a><i>. </i></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/finance-tech-blog-murex-1920x1080-1.jpg"
+			type="image/jpeg"
+			width="1920"
+			height="1080"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/finance-tech-blog-murex-1920x1080-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Grace Hopper Superchip Accelerates Murex MX.3 Analytics Performance, Reduces Power Consumption]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Elevate Your Expertise: NVIDIA Introduces AI Infrastructure and Operations Training and Certification</title>
 		<link>https://blogs.nvidia.com/blog/ai-infrastructure-operations-training-certification/</link>
 		
@@ -37,7 +93,7 @@
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span data-contrast="auto">NVIDIA has introduced a self-paced course</span><span data-contrast="auto">,</span><span data-contrast="auto"> called </span><a href="https://academy.nvidia.com/en/course/ai-infrastructure-operations-fundamentals/?cm=64727&amp;nvid=nv-int-tblg-131693" target="_blank" rel="noopener"><i><span data-contrast="none">AI Infrastructure and Operations Fundamentals</span></i></a><i><span data-contrast="auto">,</span></i><span data-contrast="auto"> to provide enterprise professionals with essential training on the infrastructure and operational aspects of AI and accelerated computing.</span><span data-ccp-props="{}"> </span></p>
 <p><span data-contrast="auto">From enhancing speech recognition systems to powering self-driving cars, AI is transforming everyday life. The new course explains how to deploy and manage scalable infrastructure to support AI-based solutions, helping IT pros realize AI’s potential and stay competitive in the rapidly changing technological landscape.</span><span data-ccp-props="{}"> </span></p>
-<p><b><span data-contrast="auto">Course Overview </span></b><span data-ccp-props="{}"> </span></p>
+<h2><b><span data-contrast="auto">Course Overview </span></b><span data-ccp-props="{}"> </span></h2>
 <p><span data-contrast="auto">The course is ideal for anyone seeking to expand their knowledge of AI and its applications. It was created and taught by NVIDIA experts with real-world experience and deep technical domain expertise.</span></p>
 <p><span data-contrast="auto">The course is divided into three modules. The first, </span><i><span data-contrast="auto">Introduction to AI</span></i><span data-contrast="none">, </span><span data-contrast="auto">covers foundational AI concepts and principles. Learners will:  </span><span data-ccp-props="{}"> </span></p>
 <ul>
@@ -109,11 +165,11 @@
 <p>Plus, it’s time to get rewarded. Get a free in-game mount in <i>Elder Scrolls Online</i> starting today by opting into <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW’s Rewards program</a>.</p>
 <h2><b>Heroes Rise to the Cloud</b></h2>
 <p>Dive into the immersive realms of <i>World of Warcraft, </i>including the latest expansion<i> Dragonflight, </i>the nostalgic journey of <i>World of Warcraft Classic</i> and the recently launched <i>World of Warcraft Cataclysm Classic</i>. These popular, massively multiplayer, online role-playing experiences from Blizzard Entertainment immerse players in legendary battles.</p>
-<figure id="attachment_71862" aria-describedby="caption-attachment-71862" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-71862" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-672x378.png" alt="World of Warcraft: Dragonflight on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71862" class="wp-caption-text"><em>Dragonriders fly best in the cloud.</em></figcaption></figure>
+<figure id="attachment_71862" aria-describedby="caption-attachment-71862" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71862" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-672x378.png" alt="World of Warcraft: Dragonflight on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71862" class="wp-caption-text"><em>Dragonriders fly best in the cloud.</em></figcaption></figure>
 <p>Embark on a journey of endless adventure in the rich and dynamic universe of Azeroth in the latest modern expansion, <i>World of Warcraft: Dragonflight</i>. The expansive landscapes of the Dragon Isles are available to explore — even on the back of a fearsome dragon. The newly awakened Dracthyr Evokers are also available, <i>World of Warcraft</i>’s first-ever playable race-and-class combo. GeForce NOW Priority and Ultimate members can get immersed in the cinematic gameplay with support for RTX ON.</p>
-<figure id="attachment_71859" aria-describedby="caption-attachment-71859" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-71859" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-672x415.jpg" alt="World of Warcraft Cataclysm Classic on GeForce NOW" width="672" height="415" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-672x415.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-400x247.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-768x474.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-1536x948.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-729x450.jpg 729w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-348x215.jpg 348w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-162x100.jpg 162w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-1280x790.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71859" class="wp-caption-text"><em>Witness the return of Deathwing.</em></figcaption></figure>
+<figure id="attachment_71859" aria-describedby="caption-attachment-71859" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71859" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-672x415.jpg" alt="World of Warcraft Cataclysm Classic on GeForce NOW" width="672" height="415" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-672x415.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-400x247.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-768x474.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-1536x948.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-729x450.jpg 729w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-348x215.jpg 348w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-162x100.jpg 162w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-1280x790.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71859" class="wp-caption-text"><em>Witness the return of Deathwing.</em></figcaption></figure>
 <p>Face the return of Deathwing the Destroyer, whose violent emergence shatters and reshapes the continent of Azeroth. Journey into an era of fire and destruction in <i>World of Warcraft Cataclysm Classic</i> and usher in a new era for Azeroth. The updated game brings new dungeons and raids, fresh race and class combinations, and more.</p>
-<figure id="attachment_71856" aria-describedby="caption-attachment-71856" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-71856" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-672x378.jpg" alt="World of Warcraft Classic on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71856" class="wp-caption-text"><em>Azeroth awaits.</em></figcaption></figure>
+<figure id="attachment_71856" aria-describedby="caption-attachment-71856" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71856" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-672x378.jpg" alt="World of Warcraft Classic on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71856" class="wp-caption-text"><em>Azeroth awaits.</em></figcaption></figure>
 <p>Whether a seasoned adventurer or a newcomer to the game, head to the Azeroth of yesteryear in <i>World of Warcraft Classic</i> and relive the experience of the game as it was upon its initial launch, with a few new upgrades. Explore the Eastern Kingdoms and Kalimdor, venture into iconic dungeons or engage in legendary player-vs-player battles.</p>
 <p>Experience it all with a <a href="http://geforcenow.com">GeForce NOW membership</a>, which means no waiting for downloads or games to update, even for the upcoming <i>World of Warcraft</i> expansion <i>The War Within</i>.</p>
 <h2><b>Mount Up</b></h2>
@@ -1102,62 +1158,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[How Basecamp Research Helps Catalog Earth’s Biodiversity]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Fire It Up: Mozilla Firefox Adds Support for AI-Powered NVIDIA RTX Video</title>
-		<link>https://blogs.nvidia.com/blog/ai-decoded-rtxvideo-firefox/</link>
-		
-		<dc:creator><![CDATA[Brian Choi]]></dc:creator>
-		<pubDate>Wed, 15 May 2024 13:00:42 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[AI Decoded]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71641</guid>
-
-					<description><![CDATA[Mozilla Firefox, the popular open-source browser, is the latest partner to incorporate NVIDIA RTX Video, a technology that uses AI to improve video quality on Windows PCs and workstations. ]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><em>Editor’s note: This post is part of the </em><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/" target="_blank" rel="noopener"><em>AI Decoded series</em></a><em>, which demystifies AI by making the technology more accessible, and which showcases new hardware, software, tools and accelerations for RTX PC users.</em></p>
-<p>Mozilla Firefox, the popular open-source browser, is the latest partner to incorporate NVIDIA RTX Video, a technology that uses AI to improve video quality on Windows PCs and workstations. The browser’s latest release taps local <a href="https://www.nvidia.com/en-us/design-visualization/desktop-graphics/" target="_blank" rel="noopener">NVIDIA RTX GPUs</a> to make streaming and video better than ever.</p>
-<h2><strong>Pixel Perfect</strong></h2>
-<p>First announced at CES in January 2023, RTX Video is a collection of AI video enhancements that improve the quality of videos played on browsers through platforms like YouTube, Prime Video and Disney+. The technology makes videos streamed on <a href="https://www.nvidia.com/en-us/geforce/rtx/" target="_blank" rel="noopener">NVIDIA GeForce RTX</a>-powered PCs and RTX-powered workstations appear sharper and more detailed without requiring a higher-resolution source.</p>
-<p><iframe loading="lazy" title="Introducing RTX Video HDR: AI-Upscale Video to HDR Quality" width="500" height="281" src="https://www.youtube.com/embed/hlrk_qqqUNA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>RTX Video is made up of two parts. <a href="https://blogs.nvidia.com/blog/rtx-video-super-resolution/" target="_blank" rel="noopener">RTX Video Super Resolution</a> upscales low-resolution video for cleaner, crisper imagery. It works by analyzing the lower-resolution video and using deep learning to predict what the higher-resolution version should look like. The algorithm then combines this predicted image with a traditionally upscaled version to reduce or eliminate compression artifacts and sharpen the final output.</p>
-<p><a href="https://blogs.nvidia.com/blog/rtx-video-hdr-remix-studio-driver/" target="_blank" rel="noopener">RTX Video HDR</a> goes one step further: when enabled, it analyzes standard dynamic range (SDR) video content through AI neural networks to add high-dynamic range (HDR) information, improving visibility, details and vibrancy.</p>
-<p>Since 90% of video online is 1080p or lower and SDR, enabling RTX Video is like pushing the “remaster” button on most of the content users watch everyday.</p>
-<h2><strong>Pretty Foxy</strong></h2>
-<p>Mozilla Firefox now supports RTX Video Super Resolution and HDR in its latest stable version (v126). It’s never been easier for users to access AI-enhanced upscaling, de-artifacting and HDR effects for online videos.</p>
-<p>“Video is a core pillar of the modern web, and we are committed to delivering a great experience for our users,” said Bobby Holley, chief technology officer of Firefox at Mozilla. “Mozilla is integrating RTX Video into Firefox to improve video quality for our users with compatible GPUs.”</p>
-<p>Firefox joins other Chromium-based browsers, including Google Chrome and Microsoft Edge, in supporting RTX Video. RTX Video Super Resolution is also supported in popular video players like VLC.</p>
-<p>Enabling RTX Video is easy:</p>
-<ol>
-<li>Update to the latest GeForce RTX Game Ready Driver, <a href="https://www.nvidia.com/en-us/studio/">NVIDIA Studio</a> or NVIDIA RTX Enterprise Driver.</li>
-<li>Ensure Windows HDR features are enabled by navigating to System &gt; Display &gt; HDR.</li>
-<li>Open the NVIDIA Control Panel and navigate to Adjust Video Image Settings &gt; RTX Video Enhancement.</li>
-<li>Turn on “Super Resolution” and “High Dynamic Range.”</li>
-</ol>
-<p>Note that RTX Video HDR requires an NVIDIA GeForce RTX or RTX professional GPU connected to an HDR10-compatible monitor or TV.</p>
-<p>For more information, check out the <a href="https://nvidia.custhelp.com/app/answers/detail/a_id/5448/~/rtx-video-faq" target="_blank" rel="noopener">RTX Video FAQ</a>.</p>
-<p><em>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </em><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai" target="_blank" rel="noopener"><em>AI Decoded newsletter</em></a><em>.</em></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/firefox-rtx-video-nv-blog-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/firefox-rtx-video-nv-blog-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Fire It Up: Mozilla Firefox Adds Support for AI-Powered NVIDIA RTX Video]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
