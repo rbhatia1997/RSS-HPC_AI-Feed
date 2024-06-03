@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 03 Jun 2024 05:07:10 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 03 Jun 2024 17:16:05 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -32,6 +32,7 @@
 		<category><![CDATA[Data Science]]></category>
 		<category><![CDATA[Financial Services]]></category>
 		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71798</guid>
 
 					<description><![CDATA[European neobank bunq is debunking financial fraudsters with the help of NVIDIA accelerated computing and AI. Dubbed “the bank of the free,” bunq offers online banking anytime, anywhere. Through the bunq app, users can handle all their financial needs exclusively online, without needing to visit a physical bank. With more than 12 million customers and	<a class="read-more" href="https://blogs.nvidia.com/blog/bunq-financial-services-generative-ai/">
@@ -55,8 +56,8 @@
 <p>Bunq is seeking to tap AI’s potential across its operations.</p>
 <p>“We’re constantly looking for new ways to apply AI for the benefit of our users,” el Hassouni said. “More than half of our user tickets are handled automatically. We also use AI to spot fake IDs when onboarding new users, automate our marketing efforts and much more.”</p>
 <p>Finn, a personal AI assistant available to bunq customers, is powered by the company’s proprietary <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language model</a> and generative AI. It can answer user questions like, “How much did I spend on groceries last month?” and “What’s the name of the Indian restaurant I ate at last week?”</p>
-<p><span>The company is exploring </span><a href="https://developer.nvidia.com/blog/translate-your-enterprise-data-into-actionable-insights-with-nvidia-nemo-retriever/" target="_blank" rel="noopener"><span>NVIDIA NeMo Retriever</span></a><span>, a collection of generative AI microservices available in </span><a href="https://developer.nvidia.com/nemo-microservices" target="_blank" rel="noopener"><span>early access</span></a><span>, to further improve Finn’s accuracy. NeMo Retriever is a part of </span><a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener"><span>NVIDIA NIM</span></a><span> inference microservices, which provide models as optimized containers, available with NVIDIA AI Enterprise.</span></p>
-<p><span>“Our initial testing of NeMo Retriever embedding NIM has been extremely positive, and our collaboration with NVIDIA on LLMs is poised to help us to take Finn to the next level and enhance customer experience,” el Hassouni said. </span></p>
+<p>The company is exploring <a href="https://developer.nvidia.com/blog/translate-your-enterprise-data-into-actionable-insights-with-nvidia-nemo-retriever/" target="_blank" rel="noopener">NVIDIA NeMo Retriever</a>, a collection of generative AI microservices available in <a href="https://developer.nvidia.com/nemo-microservices" target="_blank" rel="noopener">early access</a>, to further improve Finn’s accuracy. NeMo Retriever is a part of <a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener">NVIDIA NIM</a> inference microservices, which provide models as optimized containers, available with NVIDIA AI Enterprise.</p>
+<p>“Our initial testing of NeMo Retriever embedding NIM has been extremely positive, and our collaboration with NVIDIA on LLMs is poised to help us to take Finn to the next level and enhance customer experience,” el Hassouni said.</p>
 <p>Plus, for the digital bank’s marketing efforts, AI helps analyze consumer engagement metrics to inform future campaigns.</p>
 <p>“We’re creating a borderless banking experience for our users, always keeping them at the heart of everything we do,” el Hassouni said.</p>
 <p><i>Watch bunq’s </i><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62593/" target="_blank" rel="noopener"><i>NVIDIA GTC session on demand</i></a><i> and </i><i>subscribe to </i><a href="https://www.nvidia.com/en-us/industries/finance/?nvmid=subscribe" target="_blank" rel="noopener"><i>NVIDIA financial services news</i></a><i>. </i></p>
@@ -93,6 +94,7 @@
 		<category><![CDATA[Gaming]]></category>
 		<category><![CDATA[Generative AI]]></category>
 		<category><![CDATA[COMPUTEX 2024]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71820</guid>
 
 					<description><![CDATA[“Generative AI is reshaping industries and opening new opportunities for innovation and growth,” NVIDIA founder and CEO Jensen Huang said in an address ahead of this week’s COMPUTEX technology conference in Taipei. “Today, we’re at the cusp of a major shift in computing,” Huang told the audience, clad in his trademark black leather jacket. “The	<a class="read-more" href="https://blogs.nvidia.com/blog/computex-2024-jensen-huang/">
@@ -330,6 +332,7 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 <p>For example, the robot arms may learn how to pick up a Blackwell server and place it on an <a href="https://blogs.nvidia.com/blog/isaac-amr-nova-orin-autonomous-mobile-robots/">autonomous mobile robot</a> (AMR). The arms can use Isaac Manipulator&#8217;s cuMotion to find inspection paths for products, even when objects are placed in the way.</p>
 <p>Foxconn’s AMRs, from Taiwan’s FARobot, will learn how to see and navigate the factory floor using <a href="https://developer.nvidia.com/isaac/perceptor">NVIDIA Perceptor</a>, software that helps them build a real-time 3D map that indicates any obstacles. The robot’s routes are generated and optimized by <a href="https://www.nvidia.com/en-us/ai-data-science/products/cuopt/">NVIDIA cuOpt</a>, a world-record holding route optimization microservice.</p>
 <p>Unlike many transport robots that need to stick to carefully drawn lines on the factory floor, these smart AMRs will navigate around obstacles to get wherever they need to go.</p>
+<p><iframe loading="lazy" title="Building Digital Twins of Foxconn’s Robotic Factories" width="500" height="281" src="https://www.youtube.com/embed/HjpwGgmt57U?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <h2><b>A Global Trend to Industrial Digitization</b></h2>
 <p>The Guadalajara factory is just the beginning. Foxconn is starting to design digital twins of factories around the world, including one in Taiwan where it will manufacture electric buses.</p>
 <p>Foxconn is also deploying <a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/">NVIDIA Metropolis</a>, an application framework for smart cities and spaces, to give cameras on the shop floor AI-powered vision. That gives plant managers deeper insights into daily operations and opportunities to further streamline operations and improve worker safety.</p>
@@ -370,6 +373,7 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 		<category><![CDATA[Healthcare and Life Sciences]]></category>
 		<category><![CDATA[Inception]]></category>
 		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
 		<category><![CDATA[Social Impact]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71886</guid>
 
@@ -397,11 +401,13 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 <p>Generative AI-powered digital health applications enhance patient-doctor interactions, helping to improve patient outcomes and deliver more efficient healthcare.</p>
 <p>Precision medicine company <a href="https://simbiosys.com/" target="_blank" rel="nofollow noopener">SimBioSys</a> recently downloaded the Llama 3 NIM to help analyze a breast cancer patient’s diagnosis and tailor guidance for the physician regarding the patient’s unique characteristics.</p>
 <p><a href="https://artisight.com/" target="_blank" rel="nofollow noopener">Artisight</a>, a startup focused on smart hospital transformation, uses Llama 3 to automate documentation and care coordination in all its clinical locations with ambient voice and vision systems.</p>
-<p><a href="https://www.aitemsolutions.com/" target="_blank" rel="nofollow noopener">AITEM</a>, which offers medical and veterinary AI diagnostic solutions, is building healthcare-specific chatbots with the model.</p>
+<p><a href="https://www.linkedin.com/pulse/aitem-nvidia-nim-revolutionizing-veterinary-care-laika-y4eve/?trackingId=nH4tgIRb5LbQJxCwBCX%2F3A%3D%3D" target="_blank" rel="nofollow noopener">AITEM</a>, which offers medical and veterinary AI diagnostic solutions, is building healthcare-specific chatbots with the model.</p>
 <p>And <a href="https://www.abridge.com/" target="_blank" rel="nofollow noopener">Abridge</a>, which offers a generative AI platform for clinical conversations, is using the NIM to build a physician-patient encounter summarization solution.</p>
 <p>Transcripta Bio, Activ Surgical, SimBioSys, Artisight, AITEM and Abridge are all members of <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33" target="_blank" rel="noopener">NVIDIA Inception</a>, a free program that helps startups evolve faster through cutting-edge technology, opportunities to connect with venture capitalists and access to the latest technical resources from NVIDIA.</p>
 <p>The NVIDIA NIM collection of inference microservices is available with <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a>, a software platform that streamlines development and deployment of production-grade copilots and other generative AI applications.</p>
 <p><a href="http://ai.nvidia.com" target="_blank" rel="noopener"><i>Download the Meta Llama 3 NIM</i></a><i> now and learn more about how generative AI is reshaping healthcare and other industries by joining </i><a href="https://www.nvidia.com/en-us/events/computex/" target="_blank" rel="noopener"><i>NVIDIA at COMPUTEX</i></a><i>, running through June 7 in Taipei, Taiwan.</i></p>
+<p><i><span>Watch NVIDIA founder and CEO Jensen Huang’s </span></i><a href="https://www.youtube.com/live/pKXDVsWZmUU?si=sYFHqkbGiiJZ8FXg"><i><span>COMPUTEX keynote</span></i></a><i><span> in replay:</span></i></p>
+<p><iframe loading="lazy" title="NVIDIA CEO Jensen Huang Keynote at COMPUTEX 2024" width="500" height="281" src="https://www.youtube.com/embed/pKXDVsWZmUU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 ]]></content:encoded>
 					
 		
@@ -435,6 +441,7 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 		<category><![CDATA[Embedded Computing]]></category>
 		<category><![CDATA[Hardware]]></category>
 		<category><![CDATA[Industrial and Manufacturing]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71870</guid>
 
 					<description><![CDATA[Fueled by generative AI, enterprises globally are creating “AI factories,” where data comes in and intelligence comes out. Critical to this movement are validated systems and reference architectures that reduce the risk and time involved in deploying specialized infrastructure that can support complex, computationally intensive generative AI workloads. At the COMPUTEX trade show, NVIDIA today	<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-certified-systems-spectrum-x-igx/">
@@ -456,6 +463,8 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 <p>ASUS, Dell Technologies, GIGABYTE, Hewlett Packard Enterprise, Ingrasys, Lenovo, QCT and Supermicro will soon offer NVIDIA-Certified Spectrum-X Ready systems.</p>
 <p>And NVIDIA-Certified IGX systems will soon be available from ADLINK, Advantech, Aetina, Ahead, Cosmo Intelligent Medical Devices (a division of Cosmo Pharmaceuticals), Dedicated Computing, Leadtek, Onyx and YUAN.</p>
 <p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/data-center/products/certified-systems/" target="_blank" rel="noopener"><i>NVIDIA-Certified Systems</i></a><i> and the latest generative AI technologies by joining </i><a href="https://www.nvidia.com/en-us/events/computex/" target="_blank" rel="noopener"><i>NVIDIA at COMPUTEX</i></a><i>.</i></p>
+<p><i><span>Watch NVIDIA founder and CEO Jensen Huang’s </span></i><i><span>COMPUTEX keynote</span></i><i><span> in replay:</span></i></p>
+<p><iframe loading="lazy" title="NVIDIA CEO Jensen Huang Keynote at COMPUTEX 2024" width="500" height="281" src="https://www.youtube.com/embed/pKXDVsWZmUU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 ]]></content:encoded>
 					
 		
@@ -585,15 +594,15 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 		
 		
 			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Taiwan-typhoon-tracked-with-CorrDiff.jpg"
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/taiwan-typhoon-corrdiff.jpg"
 			type="image/jpeg"
-			width="13113"
-			height="6951"
+			width="1280"
+			height="680"
 			>
 			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/Taiwan-typhoon-tracked-with-CorrDiff.jpg"
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/taiwan-typhoon-corrdiff-842x450.jpg"
 			width="842"
-			height="446"
+			height="450"
 			/>
 			<media:title type="html"><![CDATA[Power Tool: Generative AI Tracks Typhoons, Tames Energy Use]]></media:title>
 			<media:description type="html"></media:description>
@@ -876,6 +885,7 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 		<category><![CDATA[AI Decoded]]></category>
 		<category><![CDATA[Artficial Intelligence]]></category>
 		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
 		<category><![CDATA[NVIDIA RTX]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71827</guid>
 
@@ -1000,6 +1010,7 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 		<category><![CDATA[High Performance Computing]]></category>
 		<category><![CDATA[NVIDIA BlueField]]></category>
 		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71806</guid>
 
 					<description><![CDATA[Building on more than a dozen years of stacking wins at the COMPUTEX trade show’s annual Best Choice Awards, NVIDIA was today honored with BCAs for its latest technologies. The NVIDIA GH200 Grace Hopper Superchip won the Computer and System Category Award; the NVIDIA Spectrum-X AI Ethernet networking platform won the Networking and Communication Category	<a class="read-more" href="https://blogs.nvidia.com/blog/computex-best-choice-awards-2024/">
@@ -1054,6 +1065,7 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 				<category><![CDATA[Pro Graphics]]></category>
 		<category><![CDATA[3D]]></category>
 		<category><![CDATA[Into the Omniverse]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
 		<category><![CDATA[Omniverse]]></category>
 		<category><![CDATA[Universal Scene Description]]></category>
 		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71772</guid>
@@ -1079,8 +1091,8 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 <h2><b>Get Plugged Into the World of OpenUSD</b></h2>
 <p>Watch SoftServe and Continental’s on-demand NVIDIA GTC talks to learn more about their virtual factory solutions and experience developing on NVIDIA Omniverse with OpenUSD:</p>
 <ul>
-<li style="font-weight: 400"><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62919/">Transforming Factory Planning and Manufacturing Operations Within Digital Mega Plants</a></li>
-<li style="font-weight: 400"><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61799/">Getting Started With Generative AI and OpenUSD for Industrial Metaverse Applications</a></li>
+<li style="font-weight: 400;"><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62919/">Transforming Factory Planning and Manufacturing Operations Within Digital Mega Plants</a></li>
+<li style="font-weight: 400;"><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61799/">Getting Started With Generative AI and OpenUSD for Industrial Metaverse Applications</a></li>
 </ul>
 <p>Learn about the latest technologies driving the next industrial revolution by watching NVIDIA founder and CEO Jensen Huang’s <a href="https://www.nvidia.com/en-us/events/computex/">COMPUTEX keynote</a> on Sunday, June 2, at 7 p.m. Taiwan time.</p>
 <p>Check out a new <a href="https://www.youtube.com/playlist?list=PL3jK4xNnlCVcUP08kj6eOzvCA82U_JKiy">video series</a> about how OpenUSD can improve 3D workflows. For more resources on OpenUSD, explore the Alliance for OpenUSD <a href="https://forum.aousd.org/">forum</a> and visit the <a href="https://aousd.org/">AOUSD website</a>.</p>
