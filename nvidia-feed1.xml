@@ -20,6 +20,68 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>Digital Bank Debunks Financial Fraud With Generative AI</title>
+		<link>https://blogs.nvidia.com/blog/bunq-financial-services-generative-ai/</link>
+		
+		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
+		<pubDate>Mon, 03 Jun 2024 07:00:28 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Customer Stories]]></category>
+		<category><![CDATA[Data Science]]></category>
+		<category><![CDATA[Financial Services]]></category>
+		<category><![CDATA[GPU]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71798</guid>
+
+					<description><![CDATA[European neobank bunq is debunking financial fraudsters with the help of NVIDIA accelerated computing and AI. Dubbed “the bank of the free,” bunq offers online banking anytime, anywhere. Through the bunq app, users can handle all their financial needs exclusively online, without needing to visit a physical bank. With more than 12 million customers and	<a class="read-more" href="https://blogs.nvidia.com/blog/bunq-financial-services-generative-ai/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>European neobank <a href="https://www.bunq.com/about" target="_blank" rel="noopener">bunq</a> is debunking financial fraudsters with the help of NVIDIA accelerated computing and AI.</p>
+<p>Dubbed “the bank of the free,” bunq offers online banking anytime, anywhere. Through the bunq app, users can handle all their financial needs exclusively online, without needing to visit a physical bank.</p>
+<p>With more than 12 million customers and 8 billion euros’ worth of deposits made to date, bunq has become one of the largest neobanks in the European Union. Founded in 2012, it was the first bank to obtain a European banking license in over three decades.</p>
+<p>To meet growing customer needs, bunq turned to <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> to help <a href="https://blogs.nvidia.com/blog/ai-fraud-detection-rapids-triton-tensorrt-nemo/" target="_blank" rel="noopener">detect fraud and money laundering</a>. Its automated transaction-monitoring system, powered by NVIDIA accelerated computing, greatly improved its training speed.</p>
+<p>“AI has enormous potential to help humanity in so many ways, and this is a great example of how human intelligence can be coupled with AI,” said Ali el Hassouni, head of data and AI at bunq.</p>
+<h2><b>Faster Fraud Detection</b></h2>
+<p>Financial fraud is more prevalent than ever, el Hassouni said in a recent <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62593/" target="_blank" rel="noopener">talk at NVIDIA GTC</a>.</p>
+<p>Traditional transaction-monitoring systems are rules based, meaning algorithms flag suspicious transactions according to a set of criteria that determine if an activity presents risk of fraud or money laundering. These criteria must be manually set, resulting in high false-positive rates and making such systems labor intensive and difficult to scale.</p>
+<p>Instead, using <a href="https://blogs.nvidia.com/blog/supervised-unsupervised-learning/" target="_blank" rel="noopener">supervised and unsupervised learning</a>, bunq’s AI-powered transaction-monitoring system is completely automated and easily scalable.</p>
+<p>Bunq achieved this using NVIDIA GPUs, which accelerated its data processing pipeline more than 5x.</p>
+<p>In addition, compared with previous methods, bunq trained its fraud-detection model nearly 100x faster using the open-source <a href="https://developer.nvidia.com/rapids" target="_blank" rel="noopener">NVIDIA RAPIDS</a> suite of GPU-accelerated data science libraries.</p>
+<p>RAPIDS is part of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform, which accelerates data science pipelines and streamlines the development and deployment of production-grade generative AI applications.</p>
+<p>“We chose NVIDIA’s advanced, GPU-optimized software, as it enables us to use larger datasets and speed the training of new models — sometimes by an order of magnitude — resulting in improved model accuracy and reduced false positives,” said el Hassouni.</p>
+<h2><b>AI Across the Bank</b></h2>
+<p>Bunq is seeking to tap AI’s potential across its operations.</p>
+<p>“We’re constantly looking for new ways to apply AI for the benefit of our users,” el Hassouni said. “More than half of our user tickets are handled automatically. We also use AI to spot fake IDs when onboarding new users, automate our marketing efforts and much more.”</p>
+<p>Finn, a personal AI assistant available to bunq customers, is powered by the company’s proprietary <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language model</a> and generative AI. It can answer user questions like, “How much did I spend on groceries last month?” and “What’s the name of the Indian restaurant I ate at last week?”</p>
+<p><span>The company is exploring </span><a href="https://developer.nvidia.com/blog/translate-your-enterprise-data-into-actionable-insights-with-nvidia-nemo-retriever/" target="_blank" rel="noopener"><span>NVIDIA NeMo Retriever</span></a><span>, a collection of generative AI microservices available in </span><a href="https://developer.nvidia.com/nemo-microservices" target="_blank" rel="noopener"><span>early access</span></a><span>, to further improve Finn’s accuracy. NeMo Retriever is a part of </span><a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener"><span>NVIDIA NIM</span></a><span> inference microservices, which provide models as optimized containers, available with NVIDIA AI Enterprise.</span></p>
+<p><span>“Our initial testing of NeMo Retriever embedding NIM has been extremely positive, and our collaboration with NVIDIA on LLMs is poised to help us to take Finn to the next level and enhance customer experience,” el Hassouni said. </span></p>
+<p>Plus, for the digital bank’s marketing efforts, AI helps analyze consumer engagement metrics to inform future campaigns.</p>
+<p>“We’re creating a borderless banking experience for our users, always keeping them at the heart of everything we do,” el Hassouni said.</p>
+<p><i>Watch bunq’s </i><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62593/" target="_blank" rel="noopener"><i>NVIDIA GTC session on demand</i></a><i> and </i><i>subscribe to </i><a href="https://www.nvidia.com/en-us/industries/finance/?nvmid=subscribe" target="_blank" rel="noopener"><i>NVIDIA financial services news</i></a><i>. </i></p>
+<p><i>Learn more about AI and financial services at </i><a href="https://europe.money2020.com/" target="_blank" rel="noopener"><i>Money20/20 Europe</i></a><i>, a fintech conference running June 4-6 in Amsterdam, where NVIDIA will host an AI Summit in collaboration with AWS, and where bunq will present on a panel about AI for fraud detection.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/bunq-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/bunq-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Digital Bank Debunks Financial Fraud With Generative AI]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>‘Accelerate Everything,’ NVIDIA CEO Says Ahead of COMPUTEX</title>
 		<link>https://blogs.nvidia.com/blog/computex-2024-jensen-huang/</link>
 		
@@ -1101,67 +1163,6 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 			/>
 			<media:title type="html"><![CDATA[Senua’s Story Continues: GeForce NOW Brings ‘Senua’s Saga: Hellblade II’ to the Cloud]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Watt a Win: NVIDIA Sweeps New Ranking of World’s Most Energy-Efficient Supercomputers</title>
-		<link>https://blogs.nvidia.com/blog/green500-energy-efficient-supercomputers/</link>
-		
-		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
-		<pubDate>Tue, 21 May 2024 16:11:03 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71762</guid>
-
-					<description><![CDATA[In the latest ranking of the world’s most energy-efficient supercomputers, known as the Green500, NVIDIA-powered systems swept the top three spots, and took seven of the top 10. The strong showing demonstrates how accelerated computing represents the most energy-efficient method for high-performance computing. The top three systems were all powered by the NVIDIA GH200 Grace	<a class="read-more" href="https://blogs.nvidia.com/blog/green500-energy-efficient-supercomputers/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>In the latest ranking of the world’s most energy-efficient supercomputers, known as the <a href="https://top500.org/lists/green500/2024/06/">Green500</a>, NVIDIA-powered systems swept the top three spots, and took seven of the top 10.</p>
-<p>The strong showing demonstrates how accelerated computing represents the most energy-efficient method for high-performance computing.</p>
-<p>The top three systems were all powered by the <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA GH200 Grace Hopper Superchip</a>, showcasing the widespread adoption and efficiency of NVIDIA’s Grace Hopper architecture.</p>
-<p>Leading the pack was the JEDI system, at Germany’s <a href="https://www.fz-juelich.de">Forschungszentrum Jülich</a>, which achieved an impressive 72.73 GFlops per Watt and is based on Eviden’s BullSequana XH3000 liquid-cooled system.</p>
-<p>More’s coming. The ability to do more work using less power is driving the construction of more Grace Hopper supercomputers around the world.</p>
-<h2><strong>Accelerating the Green Revolution in Supercomputing</strong></h2>
-<p>Such achievements underscore NVIDIA’s pivotal role in advancing the global agenda for sustainable high-performance computing over the past decade.</p>
-<p>Accelerated computing has proven to be the cornerstone of energy efficiency, with the majority of systems on the Green500 list — including 40 of the top 50 — now featuring this advanced technology.</p>
-<p>Pioneered by NVIDIA, <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/#:~:text=Accelerated%20computing%20uses%20parallel%20processing,analytics%20to%20simulations%20and%20visualizations.">accelerated computing</a> uses GPUs that optimize throughput — getting a lot done at once — to perform complex computations faster than systems based on CPUs alone.</p>
-<p>And the Grace Hopper architecture is proving to be a game-changer by enhancing computational speed and dramatically increasing energy efficiency across multiple platforms.</p>
-<p>For example, the GH200 chip embedded within the Grace Hopper systems offers over 1,000x more energy efficiency on mixed precision and AI tasks than previous generations.</p>
-<h2><strong>Redefining Efficiency in Supercomputing</strong></h2>
-<p>This capability is crucial for accelerating tasks that address complex scientific challenges, speeding up the work of researchers across various disciplines.</p>
-<p>NVIDIA’s supercomputing technology excels in traditional benchmarks — and it’s set new standards in energy efficiency.</p>
-<p>For instance, the Alps system, at the Swiss National Supercomputing Centre (CSCS), is equipped with NVIDIA Grace Hopper GH200. An optimized subset of the system, dubbed preAlps, placed fifth on the latest Green500. CSCS also submitted the full system to the TOP500 list, recording 270 petaflops on the High-Performance Linpack benchmark, used for solving complex linear equations.</p>
-<p>The Green500 rankings highlight platforms that provide highly efficient FP64 performance, which is crucial for accurate simulations used in scientific computing. This result underscores NVIDIA&#8217;s commitment to powering supercomputers for tasks across a full range of capabilities.</p>
-<p>This metric demonstrates substantial system performance, leading to its high ranking on the TOP500 list of the world&#8217;s fastest supercomputers. The high position on the Green500 list indicates that this scalable performance does not come at the cost of energy efficiency.</p>
-<p>Such performance shows how the Grace Hopper architecture introduces a new era in processing technology, merging tightly coupled CPU and GPU functionalities to enhance not only performance but also significantly improve energy efficiency.</p>
-<p>This advancement is supported by the incorporation of an optimized high-efficiency link that moves data between the CPU and GPU.</p>
-<p>NVIDIA’s upcoming <a href="https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing">Blackwell platform</a> is set to build on this by offering the computational power of the Titan supercomputer launched 10 years ago — a $100 million system the size of a tennis court — yet be efficient enough to be powered by a wall socket just like a typical home appliance.</p>
-<p>In short, over the past decade, NVIDIA innovations have enhanced the accessibility and sustainability of high-performance computing, making scientific breakthroughs faster, cheaper and greener.</p>
-<h2><strong>A Future Defined by Sustainable Innovation</strong></h2>
-<p>As NVIDIA continues to push the boundaries of what’s possible in high-performance computing, it remains committed to enhancing the energy efficiency of global computing infrastructure.</p>
-<p>The success of the Grace Hopper supercomputers in the Green500 rankings highlights NVIDIA’s leadership and its commitment to more sustainable global computing.</p>
-<p><a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/">Explore how NVIDIA’s pioneering role in green computing</a> is advancing scientific research, as well as shaping a more sustainable future worldwide.</p>
-<p><em>Feature image: Jupiter system at Jülich supercomputer center, courtesy of Eviden.</em></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/JUPITER-supercomputer-2-in-Germany.jpg"
-			type="image/jpeg"
-			width="1389"
-			height="737"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2023/11/JUPITER-supercomputer-2-in-Germany-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Watt a Win: NVIDIA Sweeps New Ranking of World’s Most Energy-Efficient Supercomputers]]></media:title>
-			<media:description type="html">Image of JUPITER supercomputer in Germany</media:description>
 			</media:content>
 			</item>
 	</channel>
