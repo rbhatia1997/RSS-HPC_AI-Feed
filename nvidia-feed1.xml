@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 04 Jun 2024 01:51:59 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 04 Jun 2024 16:49:44 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,116 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>SAP and NVIDIA Create AI for ‘The Most Valuable Language,’ CEOs Unveil at Sapphire Orlando</title>
+		<link>https://blogs.nvidia.com/blog/sap-sapphire-ai-omniverse/</link>
+		
+		<dc:creator><![CDATA[Erik Pounds]]></dc:creator>
+		<pubDate>Tue, 04 Jun 2024 16:00:46 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71768</guid>
+
+					<description><![CDATA[German enterprise cloud leader SAP is harnessing generative AI and industrial digital twins in the development of next-generation enterprise applications for its customers. At SAP’s Sapphire event today, in Orlando, Florida, NVIDIA and the enterprise software company unveiled generative AI efforts featuring NVIDIA AI Enterprise software to offer two new capabilities for Joule, SAP’s generative	<a class="read-more" href="https://blogs.nvidia.com/blog/sap-sapphire-ai-omniverse/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>German enterprise cloud leader SAP is harnessing generative AI and industrial digital twins in the development of next-generation enterprise applications for its customers.</p>
+<p>At SAP’s Sapphire event today, in Orlando, Florida, NVIDIA and the enterprise software company unveiled generative AI efforts featuring <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software to offer two new capabilities for <a href="https://www.sap.com/products/artificial-intelligence/ai-assistant.html">Joule</a>, SAP’s generative AI copilot — SAP Consulting capabilities and ABAP Developer capabilities.</p>
+<p>To help streamline the selling and buying process of complex products, SAP is also integrating <a href="https://www.nvidia.com/en-us/omniverse/cloud/">NVIDIA Omniverse Cloud</a> application programming interfaces, or APIs, into its Intelligent Product Recommendation solution. This will enable salespeople to visualize 3D product digital twins directly in SAP Intelligent Product Recommendation. <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, based on <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a>, lets users simulate how configurable equipment might physically fit into and operate in the real world, saving time and costs while improving efficiency and safety.</p>
+<p>These new advances come after the <a href="https://nvidianews.nvidia.com/news/sap-nvidia-generative-ai-enterprise-applications">companies announced AI-focused collaborations</a> at GTC in March.</p>
+<p>“One of the most amazing breakthroughs in large language models and generative AI is that we&#8217;ve managed to learn the representation of almost any language,” said NVIDIA founder and CEO Jensen Huang, speaking by video link at the SAP Sapphire conference. “In our company, the most valuable language is CUDA. At SAP, the most valuable language is ABAP.”</p>
+<p>“We&#8217;ve created some amazing generative APIs that understand the language of SAP, that understand the language of supply chains, that understand the language of ERP systems, so that we have a specialist, an agent and AI to help us to do all the things that we want to do to manage our business,” said SAP CEO Christian Klein.</p>
+<h2><b>NVIDIA AI Helps to Accelerate Joule, SAP’s Generative AI Copilot  </b></h2>
+<p><a href="https://www.sap.com/products/artificial-intelligence/ai-assistant.html">Joule</a>, which is embedded across SAP’s portfolio of cloud solutions and applications, allows users to work faster while gaining smarter insights grounded in business data. At SAP Sapphire, the company announced a new consulting capability for Joule leveraging NVIDIA NeMo Retriever microservices.</p>
+<p>NVIDIA NeMo Retriever connects AI applications with proprietary data to drive <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a>, or RAG. This brings domain expertise and knowledge of the business to LLMs so that AI copilots and coding assistants can give more accurate and relevant responses.</p>
+<p>With the new AI-powered SAP Consulting capabilities — connected to 200,000 pages of SAP learning content, help, product documentation, and community content — tens of thousands of SAP consultants can be more productive, while accessing the latest product and process details when working with end customers. Joule’s SAP Consulting capabilities are already being previewed by internal SAP consultants as well as leading system integrators.</p>
+<p>NVIDIA-powered AI is also coming to assist the more than 5 million developers using SAP’s ABAP programming language. SAP’s custom model was trained on over 250 million lines of proprietary ABAP code using <a href="https://www.nvidia.com/en-us/data-center/hgx/">NVIDIA HGX H100</a> systems and will be deployed using <a href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> inference microservices for optimal runtime performance. Joule’s ABAP Developer capabilities can help developers generate, complete and explain code as well as create software unit tests, which allows them to spend more time building and deploying features rather than manually writing lines of code.</p>
+<p>As announced at GTC 2024, this NVIDIA AI Enterprise software, including NeMo and NIM, is expected to be accessible in the generative AI hub in SAP AI Core for developers and customers to leverage.</p>
+<h2><b>Omniverse to Help Optimize Sales Processes for Complex Products</b></h2>
+<p>Using NVIDIA AI and Omniverse, SAP is building the future of connectivity and is reimagining key business processes, including the sales process for manufacturers.</p>
+<p>SAP Intelligent Product Recommendation software utilizes generative AI to analyze requirements described in natural language and generate recommendations for the most suitable configurable products. With Omniverse Cloud APIs integrated with the application, users can then interact with physically accurate models of complex products in a digital twin of the environment where they will be installed. This lets sales teams generate quotes more quickly and helps sales representatives recommend the best solutions for their customers’ needs.</p>
+<p><iframe title="Building the Future of Connectivity With SAP Using Generative AI and 3D Product Digital Twins" width="500" height="281" src="https://www.youtube.com/embed/flBI6BOvun8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>In addition, SAP Intelligent Product Recommendation can use NVIDIA AI to analyze text from multiple sources, including emails and notes captured in customer relationship management software or from product specifications documents. This lets the software generate  recommendations based on key, custom parameters, such as power requirements, lead times and expected carbon footprint.</p>
+<p>Watch the replay of the Sapphire Orlando keynote <a href="https://www.youtube.com/@sap">here</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/SAP_SAPPHIRE24_11938-002-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1366"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/SAP_SAPPHIRE24_11938-002-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[SAP and NVIDIA Create AI for ‘The Most Valuable Language,’ CEOs Unveil at Sapphire Orlando]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA and Cisco Weave Fabric for Generative AI</title>
+		<link>https://blogs.nvidia.com/blog/cisco-nexus-hyperfabric-nim/</link>
+		
+		<dc:creator><![CDATA[Kevin Deierling]]></dc:creator>
+		<pubDate>Tue, 04 Jun 2024 15:06:40 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Networking]]></category>
+		<category><![CDATA[NVIDIA BlueField]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72014</guid>
+
+					<description><![CDATA[Building and deploying AI applications at scale requires a new class of computing infrastructure — one that can handle the massive amounts of data, compute power and networking bandwidth needed by generative AI models. To better ensure these models perform optimally and efficiently, NVIDIA is teaming with Cisco to enable enterprise generative AI infrastructure. Cisco’s	<a class="read-more" href="https://blogs.nvidia.com/blog/cisco-nexus-hyperfabric-nim/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Building and deploying AI applications at scale requires a new class of computing infrastructure — one that can handle the massive amounts of data, compute power and networking bandwidth needed by <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> models.</p>
+<p>To better ensure these models perform optimally and efficiently, NVIDIA is teaming with Cisco to enable enterprise generative AI infrastructure.</p>
+<p><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2024/m06/cisco-reveals-nexus-hyperfabric-the-new-generative-ai-infrastructure-solution-with-nvidia-to-help-simplify-data-center-operations.html">Cisco’s new Nexus HyperFabric</a> AI cluster solution, developed in collaboration with NVIDIA, provides a path for enterprises to operationalize generative AI. Cisco HyperFabric is an enterprise-ready, end-to-end infrastructure solution to scale generative AI workloads. It combines NVIDIA <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> and AI software with Cisco AI-native networking and a robust <a href="https://www.vastdata.com/press-releases/vast-cisco-nvidia-optimize-enteprise-ai-with-full-stack-solution">VAST Data Platform</a>.</p>
+<p>“Enterprise applications are transforming into generative AI applications, significantly increasing data processing requirements and overall infrastructure complexity,” said Kevin Wollenweber, senior vice president and general manager of data center and provider connectivity at Cisco. “Together, Cisco and NVIDIA are advancing HyperFabric to advance generative AI for the world’s enterprises so they can use their data and domain expertise to transform productivity and insight.”</p>
+<h2><b>Powering an Enterprise-Ready AI Cluster Solution</b></h2>
+<p>Foundational to the solution are <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a>, which provide the accelerated computing needed to process massive datasets. The solution utilizes <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, a cloud-native software platform that acts as the operating system for enterprise AI. NVIDIA AI Enterprise streamlines the development and deployment of production-grade AI copilots and other generative AI applications, ensuring optimized performance, security and application programming interface stability.</p>
+<p>Included with NVIDIA AI Enterprise, <a href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> inference microservices accelerate the deployment of <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation models</a> while ensuring data security. NIM microservices are designed to bridge the gap between complex AI development and enterprise operational needs. As organizations across various industries embark on their AI journeys, the combination of <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-generative-ai-developers">NVIDIA NIM and the Cisco Nexus HyperFabric</a> AI cluster supports the entire process, from ideation to development and deployment of production-scale AI applications.</p>
+<p>The Cisco Nexus HyperFabric AI cluster solution integrates <a href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a> and <a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/">NVIDIA BlueField-3</a> SuperNICs and DPUs to enhance system performance and security. The SuperNICs offer advanced network capabilities, ensuring seamless, high-speed connectivity across the infrastructure. BlueField-3 DPUs offload, accelerate and isolate the infrastructure services, creating a more efficient AI solution.</p>
+<p>BlueField-3 DPUs can also run security services like the <a href="https://www.cisco.com/site/us/en/products/security/hypershield/index.html">Cisco Hypershield</a> solution. It enables an AI-native, hyperdistributed security architecture, where security shifts closer to the workloads needing protection. Cisco Hypershield is another notable area of collaboration between the companies, focusing on creating AI-powered security solutions.</p>
+<h2><b>Join NVIDIA at Cisco Live</b></h2>
+<p>Learn more about how Cisco and NVIDIA power generative AI at Cisco Live — running through June 6 in Las Vegas — where the companies will showcase NVIDIA AI technologies at the Cisco AI Hub and share best practices for enterprises to get started with AI.</p>
+<p>Attend these sessions to discover how to accelerate generative AI with NVIDIA, Cisco and other ecosystem partners:</p>
+<ul>
+<li>Keynote Deep Dive: “Harness a Bold New Era: Transform Data Center and Service Provider Connectivity” with NVIDIA’s Kevin Deierling and Cisco’s Jonathan Davidson, Kevin Wollenweber, Jeremy Foster and Bill Gartner — Wednesday, June 5, from 1-2 p.m. PT</li>
+<li>AI Hub Theater Presentation: “Accelerate, Deploy Generative AI Anywhere With NVIDIA Inference Microservices” with Marty Jain, vice president of sales and business development at NVIDIA — Tuesday, June 4, from 2:15-2:45 p.m. PT</li>
+<li>WWT AI Hub Booth: Thought leadership interview with NVIDIA’s Jain and WWT Vice President of Cloud, Infrastructure and AI Solutions Neil Anderson — Wednesday, June 5, from 10-11 a.m. PT</li>
+<li>NetApp Theater: “Accelerating Gen AI With NVIDIA Inference Microservices on FlexPod” with Sicong Ji, strategic platforms and solutions lead at NVIDIA — Wednesday, June 5, from 1:30-1:40 p.m. PT</li>
+<li>Pure Storage Theater: “Accelerating Gen AI With NVIDIA Inference Microservices on FlashStack” with Joslyn Shakur, sales alliance manager at NVIDIA — Wednesday, June 5, from 2-2:10 p.m. PT ​</li>
+</ul>
+<p><i>Sign up for</i><a href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/news/"> <i>generative AI news</i></a><i> to stay up to date on the latest breakthroughs, developments and technologies.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/corp-blog-nvidia-cisco-lockup-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/corp-blog-nvidia-cisco-lockup-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA and Cisco Weave Fabric for Generative AI]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>‘Create a Data Flywheel With AI,’ NVIDIA CEO Jensen Huang Tells Attendees at Snowflake Summit</title>
 		<link>https://blogs.nvidia.com/blog/snowflake-summit-2024/</link>
 		
@@ -179,7 +289,7 @@
 <h2>NVIDIA NIM to Transform Millions Into Gen AI Developers</h2>
 <p>With <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-generative-ai-developers">NVIDIA NIM</a>, the world’s 28 million developers can now easily create generative AI applications. NIM — inference microservices that provide models as optimized containers — can be deployed on clouds, data centers or workstations.</p>
 <p>NIM also enables enterprises to maximize their infrastructure investments. For example, running Meta Llama 3-8B in a NIM produces up to 3x more generative AI tokens on accelerated infrastructure than without NIM.</p>
-<p><img decoding="async" class="aligncenter size-large wp-image-71989" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-1536x1025.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-322x215.jpg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-1280x854.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><br />
+<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-71989" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-1536x1025.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-322x215.jpg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-1280x854.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><br />
 Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-generative-ai-developers">200 technology partners</a> — including Cadence, Cloudera, <a href="https://www.cohesity.com/press/unlock-gen-ai-capabilities-via-nvidia-collaboration/">Cohesity</a>, <a href="https://www.datastax.com/press-release/datastax-to-deliver-high-performance-rag-solution-with-20x-faster-embeddings-and-indexing-at-80-lower-cost-using-nvidia-microservices">DataStax</a>, <a href="https://www.netapp.com/newsroom/press-releases/news-rel-20240514-813887/">NetApp</a>, Scale AI, and <a href="https://news.synopsys.com/2024-03-18-Synopsys-Showcases-EDA-Performance-and-Next-Gen-Capabilities-with-NVIDIA-Accelerated-Computing,-Generative-AI-and-Omniverse">Synopsys </a>— are integrating NIM into their platforms to speed generative AI deployments for domain-specific applications, such as copilots, code assistants, digital human avatars and more. <a href="https://huggingface.co/blog/train-dgx-cloud">Hugging Face</a> is now offering NIM — starting with <a href="https://ai.meta.com/blog/meta-llama-3/">Meta Llama 3</a>.</p>
 <p>&#8220;Today we just posted up in Hugging Face the Llama 3 fully optimized, it&#8217;s available there for you to try. You can even take it with you,&#8221; Huang said. &#8220;So you could run it in the cloud, run it in any cloud, download this container, put it into your own data center, and you can host it to make it available for your customers.&#8221;</p>
 <h2>NVIDIA Brings AI Assistants to Life With GeForce RTX AI PCs</h2>
@@ -1043,130 +1153,6 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Tidy Tech: How Two Stanford Students Are Building Robots for Handling Household Chores]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Scoops Up Wins at COMPUTEX Best Choice Awards</title>
-		<link>https://blogs.nvidia.com/blog/computex-best-choice-awards-2024/</link>
-		
-		<dc:creator><![CDATA[Melody Tu]]></dc:creator>
-		<pubDate>Tue, 28 May 2024 03:00:53 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[COMPUTEX 2024]]></category>
-		<category><![CDATA[Data Science]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[NVIDIA BlueField]]></category>
-		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71806</guid>
-
-					<description><![CDATA[Building on more than a dozen years of stacking wins at the COMPUTEX trade show’s annual Best Choice Awards, NVIDIA was today honored with BCAs for its latest technologies. The NVIDIA GH200 Grace Hopper Superchip won the Computer and System Category Award; the NVIDIA Spectrum-X AI Ethernet networking platform won the Networking and Communication Category	<a class="read-more" href="https://blogs.nvidia.com/blog/computex-best-choice-awards-2024/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Building on more than a dozen years of stacking wins at the <a href="https://www.nvidia.com/en-us/events/computex/" target="_blank" rel="noopener">COMPUTEX</a> trade show’s annual <a href="https://bcaward.computex.biz/default.aspx" target="_blank" rel="noopener">Best Choice Awards</a>, NVIDIA was today honored with BCAs for its latest technologies.</p>
-<p>The <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/" target="_blank" rel="noopener">NVIDIA GH200 Grace Hopper Superchip</a> won the Computer and System Category Award; the <a href="https://www.nvidia.com/en-us/networking/spectrumx/" target="_blank" rel="noopener">NVIDIA Spectrum-X</a> AI Ethernet networking platform won the Networking and Communication Category Award; and the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform won a Golden Award.</p>
-<p>The awards — judged on the functionality, innovation and market potential of products exhibited at the leading computer and technology expo — were announced ahead of the show, which runs from June 4-7, in Taipei.</p>
-<p>NVIDIA founder and CEO Jensen Huang will deliver a COMPUTEX <a href="https://events.nvidia.com/jensen-huang-taipei-keynote-2024" target="_blank" rel="noopener">keynote address</a> on Sunday, June 2, at 7 p.m. Taiwan time, at the NTU Sports Center and online.</p>
-<h2><b>NVIDIA AI Enterprise Takes Gold</b></h2>
-<p>NVIDIA AI Enterprise — a cloud-native software platform that streamlines the development and deployment of copilots and other <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> applications — won a Golden Award.</p>
-<p>The platform lifts the burden of maintaining and securing complex AI software, so businesses can focus on building and harnessing the technology’s game-changing insights.</p>
-<p>Microservices that come with NVIDIA AI Enterprise — including <a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener">NVIDIA NIM</a> and <a href="https://www.nvidia.com/en-us/technologies/cuda-x/" target="_blank" rel="noopener">NVIDIA CUDA-X</a> — optimize model performance and run anywhere with enterprise-grade security, support and stability, offering users a smooth transition from prototype to production.</p>
-<p>Plus, the platform’s ability to improve AI performance results in better overall utilization of computing resources. This means companies using NVIDIA AI Enterprise need fewer servers to support the same workloads, greatly reducing their energy costs and data center footprint.</p>
-<h2><b>More BCA Wins for NVIDIA Technologies</b></h2>
-<p>NVIDIA GH200 and Spectrum-X were named best in their respective categories.</p>
-<p>The NVIDIA GH200 Grace Hopper Superchip is the world’s first truly heterogeneous accelerated platform for AI and high-performance computing workloads. It combines the power-efficient <a href="https://www.nvidia.com/en-us/data-center/grace-cpu/" target="_blank" rel="noopener">NVIDIA Grace CPU</a> with an <a href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/" target="_blank" rel="noopener">NVIDIA Hopper architecture-based GPU</a> over a high-bandwidth 900GB/s coherent <a href="https://www.nvidia.com/en-us/data-center/nvlink-c2c/" target="_blank" rel="noopener">NVIDIA NVLink </a>chip-to-chip interconnect.</p>
-<p>The superchip — shipping worldwide and <a href="https://blogs.nvidia.com/blog/gh200-grace-hopper-superchip-powers-ai-supercomputers/" target="_blank" rel="noopener">powering more than 40 AI supercomputers</a> across global research centers, system makers and cloud providers — <a href="https://nvidianews.nvidia.com/news/nvidia-grace-hopper-ignites-new-era-of-ai-supercomputing" target="_blank" rel="noopener">supercharges scientific innovation</a> with accelerated computing and scale-out solutions for AI inference, <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language models</a>, recommenders, vector databases, HPC applications and more.</p>
-<p>The Spectrum-X platform, featuring <a href="https://www.nvidia.com/en-us/networking/spectrumx/" target="_blank" rel="noopener">NVIDIA Spectrum SN5600 switches</a> and <a href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/" target="_blank" rel="noopener">NVIDIA BlueField-3 SuperNICs</a>, is the world’s first Ethernet fabric built for AI, accelerating generative AI network performance 1.6x over traditional Ethernet fabrics.</p>
-<p>It can serve as the backend AI fabric for any AI cloud or large enterprise deployment, and is available from major server manufacturers as part of the full NVIDIA AI stack.</p>
-<h2><b>NVIDIA Partners Recognized</b></h2>
-<p>Other BCA winners include NVIDIA partners Acer, ASUS, MSI and YUAN, which were given Golden Awards for their respective laptops, gaming motherboards and smart-city applications — all powered by NVIDIA technologies, such as <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/" target="_blank" rel="noopener">NVIDIA GeForce RTX 4090 GPUs</a>, the <a href="https://www.nvidia.com/en-us/studio/" target="_blank" rel="noopener">NVIDIA Studio platform</a> for creative workflows and the <a href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/" target="_blank" rel="noopener">NVIDIA Jetson platform</a> for edge AI and robotics.</p>
-<p>ASUS also won a Computer and System Category Award, while MSI won a Gaming and Entertainment Category Award.</p>
-<p><i>Learn more about the latest generative AI, HPC and networking technologies by joining </i><a href="https://www.nvidia.com/en-us/events/computex/" target="_blank" rel="noopener"><i>NVIDIA at COMPUTEX</i></a><i>.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/computex-bca-gh200-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/computex-bca-gh200-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Scoops Up Wins at COMPUTEX Best Choice Awards]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Into the Omniverse: SoftServe and Continental Drive Digitalization With OpenUSD and Generative AI</title>
-		<link>https://blogs.nvidia.com/blog/softserve-and-continental-drive-digitalization-with-openusd-and-generative-ai/</link>
-		
-		<dc:creator><![CDATA[James McKenna]]></dc:creator>
-		<pubDate>Thu, 23 May 2024 13:00:08 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Into the Omniverse]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Universal Scene Description]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71772</guid>
-
-					<description><![CDATA[Leading German automotive technology company enhances manufacturing workflows with OpenUSD-powered virtual factory solutions.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of </i><a href="https://www.nvidia.com/en-us/omniverse/news/"><i>Into the Omniverse</i></a><i>, a series focused on how artists, developers and enterprises can transform their workflows using the latest advances in </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>OpenUSD</i></a><i> and </i><a href="https://www.nvidia.com/en-us/omniverse/usd/"><i>NVIDIA Omniverse</i></a><i>.</i></p>
-<p>Industrial digitalization is driving automotive innovation.</p>
-<p>In response to the industry’s growing demand for seamless, connected driving experiences, <a href="https://www.softserveinc.com/en-us">SoftServe</a>, a leading IT consulting and digital services provider, worked with <a href="https://www.continental.com/en/">Continental</a>, a leading German automotive technology company, to develop <a href="https://developer.nvidia.com/blog/spotlight-continental-and-softserve-deliver-generative-ai-powered-virtual-factory-solutions-with-openusd/">Industrial Co-Pilot</a>, a virtual agent powered by <a href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> that enables engineers to streamline maintenance workflows.</p>
-<p>SoftServe helps manufacturers like Continental to further optimize their operations by integrating the Universal Scene Description, or <a href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a>, framework into virtual factory solutions — such as Industrial Co-Pilot — developed on the <a href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform.</p>
-<p>OpenUSD offers the flexibility and extensibility organizations need to harness the full potential of digital transformation, streamlining operations and driving efficiency. Omniverse is a platform of application programming interfaces, software development kits and services that enable developers to easily integrate OpenUSD and <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a> rendering technologies into existing software tools and simulation workflows.</p>
-<h2><b>Realizing the Benefits of OpenUSD</b></h2>
-<p>SoftServe and Continental’s Industrial Co-Pilot brings together generative AI and immersive 3D visualization to help factory teams increase productivity during equipment and production line maintenance. With the copilot, engineers can oversee production lines and monitor the performance of individual stations or the shop floor.</p>
-<p>They can also interact with the copilot to conduct root cause analysis and receive step-by-step work instructions and recommendations, leading to reduced documentation processes and improved maintenance procedures. It’s expected that these advancements will contribute to increased productivity and a10% reduction in maintenance effort and downtime.</p>
-<p><img loading="lazy" decoding="async" class="wp-image-71782 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2.png" alt="" width="578" height="324" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-400x224.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-672x377.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-768x431.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-1536x861.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-803x450.png 803w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-384x215.png 384w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Copy-of-IndustrialCopilotDashboard2-1280x718.png 1280w" sizes="(max-width: 578px) 100vw, 578px" /></p>
-<p>In a <a href="https://www.youtube.com/live/cqggH5skWH8?si=ZMUXPYIH7A0K5el4">recent Omniverse community livestream</a>, Benjamin Huber, who leads advanced automation and digitalization in the user experience business area at Continental, highlighted the significance of the company’s collaboration with SoftServe and its adoption of Omniverse.</p>
-<p>The Omniverse platform equips Continental and SoftServe developers with the tools needed to build a new era of AI-enabled industrial applications and services. And by breaking down data silos and fostering multi-platform cooperation with OpenUSD, SoftServe and Continental developers enable engineers to work seamlessly across disciplines and systems, driving efficiency and innovation throughout their processes.</p>
-<p>“Any engineer, no matter what tool they’re working with, can transform their data into OpenUSD and then interchange data from one discipline to another, and from one tool to another,” said Huber.</p>
-<p>This sentiment was echoed by Vasyl Boliuk, senior lead and test automation engineer at SoftServe, who shared how OpenUSD and Omniverse — along with other NVIDIA technologies like <a href="https://www.nvidia.com/en-us/ai-data-science/products/riva/">NVIDIA Riva</a>, <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> and <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/">NVIDIA NIM</a> microservices — enabled SoftServe and Continental teams to develop custom large language models and connect them to new 3D workflows.</p>
-<p>“OpenUSD allows us to add any attribute or any piece of metadata we want to our applications,” he said.</p>
-<p>Boliuk, Huber and other SoftServe and Continental representatives joined the livestream to share more about the potential unlocked from these OpenUSD-powered solutions. Watch the replay:</p>
-<p><iframe loading="lazy" title="Generative AI-Powered Virtual Factory Solutions With OpenUSD" width="500" height="281" src="https://www.youtube.com/embed/cqggH5skWH8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>By embracing cutting-edge technologies and fostering collaboration, SoftServe and Continental are helping reshape automotive manufacturing.</p>
-<h2><b>Get Plugged Into the World of OpenUSD</b></h2>
-<p>Watch SoftServe and Continental’s on-demand NVIDIA GTC talks to learn more about their virtual factory solutions and experience developing on NVIDIA Omniverse with OpenUSD:</p>
-<ul>
-<li style="font-weight: 400;"><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62919/">Transforming Factory Planning and Manufacturing Operations Within Digital Mega Plants</a></li>
-<li style="font-weight: 400;"><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61799/">Getting Started With Generative AI and OpenUSD for Industrial Metaverse Applications</a></li>
-</ul>
-<p>Learn about the latest technologies driving the next industrial revolution by watching NVIDIA founder and CEO Jensen Huang’s <a href="https://www.nvidia.com/en-us/events/computex/">COMPUTEX keynote</a> on Sunday, June 2, at 7 p.m. Taiwan time.</p>
-<p>Check out a new <a href="https://www.youtube.com/playlist?list=PL3jK4xNnlCVcUP08kj6eOzvCA82U_JKiy">video series</a> about how OpenUSD can improve 3D workflows. For more resources on OpenUSD, explore the Alliance for OpenUSD <a href="https://forum.aousd.org/">forum</a> and visit the <a href="https://aousd.org/">AOUSD website</a>.</p>
-<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, access </i><a href="https://developer.nvidia.com/usd"><i>OpenUSD</i></a><i> resources and learn how </i><a href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise</i><i> can connect team</i></a><i>s. Follow Omniverse on </i><a href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i> and </i><a href="https://twitter.com/nvidiaomniverse"><i>X</i></a><i>. For more, join the </i><a href="https://www.nvidia.com/en-us/omniverse/community/"><i>Omniverse community</i></a><i> on the </i><a href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels. </i></p>
-<p><i>Featured image courtesy of SoftServe.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/nv-ov-ito-1280x680_softserve_052024-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/nv-ov-ito-1280x680_softserve_052024-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Into the Omniverse: SoftServe and Continental Drive Digitalization With OpenUSD and Generative AI]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
