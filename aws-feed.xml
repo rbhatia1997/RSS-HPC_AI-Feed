@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 29 May 2024 19:56:54 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 04 Jun 2024 11:35:47 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,144 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Securing HPC on AWS: implementing STIGs in AWS ParallelCluster</title>
+		<link>https://aws.amazon.com/blogs/hpc/securing-hpc-on-aws-implementing-stigs-in-aws-parallelcluster/</link>
+		
+		<dc:creator><![CDATA[Alex Domijan]]></dc:creator>
+		<pubDate>Tue, 04 Jun 2024 11:35:47 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Security, Identity, & Compliance]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[visualization]]></category>
+		<guid isPermaLink="false">a5572dfa24f9456e8fb3e01a8a7cc20766ce2442</guid>
+
+					<description>Want to accelerate creating compliant Amazon EC2 images? Learn how HPC users can leverage cloud-native methods for applying STIG security standards.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright size-full wp-image-3698" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/Securing-HPC.png" alt="" width="380" height="212"&gt;&lt;/em&gt;Today, we’ll discuss cloud-native methods that HPC customers can use to accelerate their process for creating Amazon Elastic Compute Cloud (Amazon EC2) images for AWS ParallelCluster that are compliant with Security Technical Implementation Guides (STIGs), a set of standards maintained by the US government.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll walk you through the process of applying STIGs to your ParallelCluster environment, help you identify the decisions you need to make on the way, and show you some of the tools you can use to make it all easier.&lt;/p&gt; 
+&lt;h2&gt;What’s a STIG?&lt;/h2&gt; 
+&lt;p&gt;STIGs are maintained by &lt;a href="https://public.cyber.mil/stigs/downloads/"&gt;a US government organization&lt;/a&gt;, and are simply a set of security standards that can be applied to different environments, like &lt;a href="https://aws.amazon.com/pm/ec2/?gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQS_X3FGRFdQeMzTWl84Gi1PUFg8U7-Y2A8g30P269Hh4BW5wxBXvIaAmfOEALw_wcB&amp;amp;trk=9cd376cd-1c18-46f2-9f75-0e1cdbca94c5&amp;amp;sc_channel=ps&amp;amp;ef_id=Cj0KCQjwiMmwBhDmARIsABeQ7xQS_X3FGRFdQeMzTWl84Gi1PUFg8U7-Y2A8g30P269Hh4BW5wxBXvIaAmfOEALw_wcB:G:s&amp;amp;s_kwcid=AL!4422!3!651751059309!e!!g!!amazon%20ec2!19852662176!145019189697"&gt;Amazon EC2&lt;/a&gt;. Think of STIGs as a checklist of items to apply to your EC2 instances where each checklist item has a corresponding severity level attached to it that says, “&lt;em&gt;the risk of not doing x is a low, medium, or high security risk&lt;/em&gt;”. You’ll also see these security levels referred to as Category Codes (CAT) where CAT 1 corresponds to a high security risk, CAT 2 to medium, and CAT 3 to low.&lt;/p&gt; 
+&lt;p&gt;For example, one high security-risk STIG checklist item for Red Hat Enterprise Linux (RHEL) 8 is to not allow accounts configured with blank or null passwords. To resolve this, an administrator can login to the operating system and manually configure accounts to not have a blank or null password. With hundreds of checklist items it is easy to see why this can quickly become a burdensome task. The process described in this post automates up to 87% of the otherwise manual STIG remediation process.&lt;/p&gt; 
+&lt;h2&gt;Why do customers want to implement STIGs?&lt;/h2&gt; 
+&lt;p&gt;In short, some want to, and some need to. Customers such as the U.S. Department of Defense (DoD) must adhere to stringent compliance standards for operating system hardening. Other customers may prefer to use STIGs as a benchmark to improve their security posture.&lt;/p&gt; 
+&lt;p&gt;Customers like the DoD often operate in AWS without any access to the Internet. Organizational policy dictates the reason for why, which is usually to reduce the risk of sensitive data going places it shouldn’t. We address how customers with these network restrictions can accelerate STIG hardening using AWS cloud native tools.&lt;/p&gt; 
+&lt;p&gt;Once you’ve “&lt;em&gt;STIG’d&lt;/em&gt;” your ParallelCluster instances, how can you verify which checklist items you have crossed off? This is where&amp;nbsp;&lt;a href="https://www.open-scap.org/"&gt;OpenSCAP&lt;/a&gt;, an open-source security and compliance tool, comes into play. OpenSCAP automates continuous monitoring, vulnerability management, and reporting of security policy compliance data. While OpenSCAP is primarily designed to align with DoD security standards, it’s used to establish security baselines across many industries.&lt;/p&gt; 
+&lt;p&gt;This post will focus on some supported ParallelCluster operating systems (OS): RHEL8, Amazon Linux 2 (AL2), and Ubuntu 20.04 (at the time of writing this, the &lt;a href="https://public.cyber.mil/stigs/downloads/"&gt;DISA STIG document library&lt;/a&gt; didn’t contain a benchmark for Ubuntu 22.04 – which is why it’s not mentioned).&lt;/p&gt; 
+&lt;p&gt;We worked through the process defined in this post using the &lt;a href="https://aws.amazon.com/govcloud-us/?whats-new-ess.sort-by=item.additionalFields.postDateTime&amp;amp;whats-new-ess.sort-order=desc"&gt;AWS GovCloud West&lt;/a&gt; region, but you should be able to repeat it in other AWS regions.&lt;/p&gt; 
+&lt;p&gt;For HPC customers completely new to AWS, we recommend reviewing this &lt;a href="https://aws.amazon.com/blogs/hpc/the-plumbing-best-practice-infrastructure-to-facilitate-hpc-on-aws/"&gt;blog post&lt;/a&gt; which speaks about best practices for setting up a foundation in AWS to build your HPC workloads on.&lt;/p&gt; 
+&lt;h2&gt;AMIs for AWS ParallelCluster&lt;/h2&gt; 
+&lt;p&gt;An &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html"&gt;Amazon Machine Image&lt;/a&gt; (AMI) is a template that contains a software configuration (for example, an OS, an application server, and applications). From an AMI, you launch an&amp;nbsp;EC2 instance, which is a copy of the AMI running as a virtual server in the cloud. AMIs used for ParallelCluster are unique because they have software installed on them necessary for operating the cluster management tool.&lt;/p&gt; 
+&lt;p&gt;Customers can optionally choose to create custom AMIs for ParallelCluster using &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/custom-ami-v3.html"&gt;two methods&lt;/a&gt;, both of which we can use for achieving STIG compliance, depending on factors like Internet connectivity and OS choice.&lt;/p&gt; 
+&lt;p&gt;The first option is the build image configuration process which you can trigger from a ParallelCluster CLI &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/pcluster.build-image-v3.html"&gt;command&lt;/a&gt;: &lt;code&gt;pcluster build-image&lt;/code&gt;. This process uses &lt;a href="https://aws.amazon.com/image-builder/"&gt;Amazon EC2 Image Builder&lt;/a&gt; to launch a build instance, apply the &lt;a href="https://github.com/aws/aws-parallelcluster-cookbook"&gt;ParallelCluster cookbook&lt;/a&gt;, install the ParallelCluster software stack, and perform other necessary configuration tasks.&lt;/p&gt; 
+&lt;p&gt;The second option involves taking a baseline ParallelCluster AMI (one produced by the ParallelCluster team themselves) and customizing it by performing manual modifications through &lt;a href="https://aws.amazon.com/systems-manager/"&gt;AWS Systems Manager&lt;/a&gt; (SSM).&lt;/p&gt; 
+&lt;h2&gt;Process comparison&lt;/h2&gt; 
+&lt;p&gt;Should you take a baseline ParallelCluster image and then apply STIGs, or take an image that already has STIGs applied (a “golden image”), and then install ParallelCluster on top? The end result is fundamentally similar, but there are some trade-offs depending on which route you choose.&lt;/p&gt; 
+&lt;p&gt;The benefit of applying STIGs after a ParallelCluster image is created is that you can minimize permissions attached to the EC2 instance’s role. There &lt;em&gt;are&lt;/em&gt; additional &lt;a href="https://aws.amazon.com/iam/"&gt;AWS Identity and Access Management&lt;/a&gt; (IAM) permissions required to trigger the build image process and you can find them in &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/iam-roles-in-parallelcluster-v3.html#iam-roles-in-parallelcluster-v3-user-policy-build-image"&gt;our documentation&lt;/a&gt;. The tradeoff you’re making is that you would be standing up a new image build pipeline to accommodate security policy (STIG) enforcement starting from a baseline ParallelCluster image.&lt;/p&gt; 
+&lt;p&gt;An advantage of taking a golden image and installing ParallelCluster is that you can maintain an already established image build pipeline that may accelerate internal compliance processes. However, this would require a wider permissions boundary in comparison to the previous example. There’s also a chance that installing new software could impact how STIG compliant your images are. For customers interested in trying this process on your own AMIs, you can follow along with any of the sections below depending on Internet connectivity and operating system requirements as the process is the same. In either case, we recommend performing compliance scans on your images.&lt;/p&gt; 
+&lt;h2&gt;Accelerating RHEL8, AL2, and Ubuntu 20.04 STIG compliance&lt;/h2&gt; 
+&lt;p&gt;Apart from the OS your use cases require, the process to achieve&amp;nbsp;STIG compliance is determined by whether your Amazon EC2 instances have Internet connectivity or not. If your compliance requirements allow you the flexibility to choose, then it’s easier with Internet connectivity.&lt;/p&gt; 
+&lt;p&gt;For users &lt;strong&gt;with&lt;/strong&gt; Internet connectivity who want to use RHEL8 or AL2 operating systems, refer to the instructions in our &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/stig#rhel8-and-al2-instances-with-internet-connectivity"&gt;GitHub repo&lt;/a&gt; that’s part of the HPC Recipes Library which will guide you through the EC2 Image Builder process.&lt;/p&gt; 
+&lt;p&gt;For users &lt;strong&gt;without&lt;/strong&gt; Internet connectivity who want to use RHEL8 or AL2 operating systems, refer to &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/stig#rhel8-and-al2-instances-without-internet-connectivity"&gt;these instructions&lt;/a&gt; in the same repository. This type of connectivity scenario is perhaps more common amongst customers with STIG requirements. These customers can take advantage of &lt;a href="https://aws.amazon.com/privatelink/"&gt;AWS PrivateLink&lt;/a&gt; which is a feature of Virtual Private Cloud (&lt;a href="https://aws.amazon.com/vpc/"&gt;VPC&lt;/a&gt;) and allows for private connectivity to AWS services. To take advantage of this technology for purposes of accelerating STIG compliance, ensure that you configure the &lt;a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/setup-create-vpc.html"&gt;required VPC endpoints&lt;/a&gt; to allow connectivity from your private subnet to SSM. You’ll also need the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/network-configuration-v3.html#aws-parallelcluster-in-a-single-public-subnet-no-internet-v3"&gt;required VPC endpoints&lt;/a&gt; for ParallelCluster which will be used to launch your cluster with the resulting AMI.&lt;/p&gt; 
+&lt;p&gt;The process for Ubuntu 20.04 includes an extra step compared to RHEL8 and AL2 operating systems because there are a couple of findings that Systems Manager cannot rectify during its run command. Due to this, we launch a baseline ParallelCluster Ubuntu 20.04 EC2 instance with a user data script that resolves findings &lt;a href="https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2022-08-25/finding/V-219166"&gt;V-219166&lt;/a&gt;, &lt;a href="https://www.stigviewer.com/stig/canonical_ubuntu_20.04_lts/2023-09-08/finding/V-238237"&gt;V-238237&lt;/a&gt;, and &lt;a href="https://www.stigviewer.com/stig/canonical_ubuntu_20.04_lts/2021-03-23/finding/V-238218"&gt;V-238218.&lt;/a&gt; As with RHEL8 and AL2 operating systems, customers without Internet connectivity should ensure they configure the required VPC endpoints to allow connectivity from your private subnet to SSM, and the required VPC endpoints for ParallelCluster. Instructions for Ubuntu 20.04 can be found in our &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/stig#ubuntu-2004-instances-with-or-without-internet-connectivity"&gt;HPC samples repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;As previously mentioned, there are corresponding severity levels (high, medium, low) associated with STIG checklist items. Customers can choose which security level they want to apply to their Amazon EC2 instances which is described in our &lt;a href="https://docs.aws.amazon.com/systems-manager-automation-runbooks/latest/userguide/awsec2-configure-stig.html"&gt;SSM documentation&lt;/a&gt;. We used the STIG High baseline which includes any vulnerability that can result in loss of confidentiality, availability, or integrity. Customers can optionally choose to make additional modifications to the AMIs after the STIG process of their choosing has been performed. In any event, we recommend testing AMI compatibility with your application prior to deploying to a production environment.&lt;/p&gt; 
+&lt;h2&gt;Results&lt;/h2&gt; 
+&lt;p&gt;Customers may be interested to find out what the effects of running the EC2 Image Builder STIG High component or Systems Manager STIG High document has on their respective operating systems.&lt;/p&gt; 
+&lt;p&gt;We used OpenSCAP to perform compliance scanning to assess the security posture of our instances. It also uses the concept of profiles to determine which checks it will run and the profile can vary on mission requirements and OS.&lt;/p&gt; 
+&lt;p&gt;For the purposes of maintaining a consistent benchmark for before and after assessments, we used the &lt;code&gt;xccdf_mil.disa.stig_profile_MAC-2_Sensitive&lt;/code&gt; profile for RHEL8 and Ubuntu 20.04 operating systems, and &lt;code&gt;stig-rhel7-disa&lt;/code&gt; on AL2.&lt;/p&gt; 
+&lt;p&gt;Each of the ‘Baseline’ AMIs in the screenshots that follow refer to the baseline ParallelCluster AMI. In other words, these are the AMIs you would find by typing the CLI &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/pcluster.list-official-images-v3.html"&gt;command&lt;/a&gt;: &lt;code&gt;pcluster list-official-images&lt;/code&gt;. Note that the baseline and subsequent STIG high AMI results may change in future ParallelCluster releases.&lt;/p&gt; 
+&lt;div id="attachment_3684" style="width: 1253px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3684" loading="lazy" class="size-full wp-image-3684" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/IMG-2024-05-21-12.46.20.png" alt="Figure 1 - RHEL8 baseline ParallelCluster AMI OpenSCAP results from running the xccdf_mil.disa.stig_profile_MAC-2_Sensitive profile. This shows the EC2 instance as passing 83 checks and failing 148 for a result of being 35.93% compliant with this profile." width="1243" height="451"&gt;
+ &lt;p id="caption-attachment-3684" class="wp-caption-text"&gt;Figure 1 – RHEL8 baseline ParallelCluster AMI OpenSCAP results from running the xccdf_mil.disa.stig_profile_MAC-2_Sensitive profile. This shows the EC2 instance as passing 83 checks and failing 148 for a result of being 35.93% compliant with this profile.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3685" style="width: 1270px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3685" loading="lazy" class="size-full wp-image-3685" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/IMG-2024-05-21-12.46.41.png" alt="Figure 2 - RHEL8 ParallelCluster AMI after running the Amazon STIG High runbook. OpenSCAP results are from running the xccdf_mil.disa.stig_profile_MAC-2_Sensitive profile. This shows the EC2 instance as passing 201 checks and failing 30 for a result of being 87.01% compliant with this profile." width="1260" height="447"&gt;
+ &lt;p id="caption-attachment-3685" class="wp-caption-text"&gt;Figure 2 – RHEL8 ParallelCluster AMI after running the Amazon STIG High runbook. OpenSCAP results are from running the xccdf_mil.disa.stig_profile_MAC-2_Sensitive profile. This shows the EC2 instance as passing 201 checks and failing 30 for a result of being 87.01% compliant with this profile.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3686" style="width: 1243px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3686" loading="lazy" class="size-full wp-image-3686" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/IMG-2024-05-21-12.47.16.png" alt="Figure 3 - Amazon Linux 2 baseline ParallelCluster AMI OpenSCAP results from running the stig-rhel7-disa profile. This shows the EC2 instance as passing 54 checks and failing 160 for a result of being 58.88% compliant with this profile." width="1233" height="446"&gt;
+ &lt;p id="caption-attachment-3686" class="wp-caption-text"&gt;Figure 3 – Amazon Linux 2 baseline ParallelCluster AMI OpenSCAP results from running the stig-rhel7-disa profile. This shows the EC2 instance as passing 54 checks and failing 160 for a result of being 58.88% compliant with this profile.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3687" style="width: 1263px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3687" loading="lazy" class="size-full wp-image-3687" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/IMG-2024-05-21-12.47.33.png" alt="Figure 4 - Amazon Linux 2 ParallelCluster AMI after running the Amazon STIG High runbook. OpenSCAP results are from running the stig-rhel7-disa profile. This shows the EC2 instance as passing 142 checks and failing 72 for a result of being 68.09% compliant with this profile." width="1253" height="449"&gt;
+ &lt;p id="caption-attachment-3687" class="wp-caption-text"&gt;Figure 4 – Amazon Linux 2 ParallelCluster AMI after running the Amazon STIG High runbook. OpenSCAP results are from running the stig-rhel7-disa profile. This shows the EC2 instance as passing 142 checks and failing 72 for a result of being 68.09% compliant with this profile.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3688" style="width: 1273px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3688" loading="lazy" class="size-full wp-image-3688" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/IMG-2024-05-21-12.48.01.png" alt="Figure 5 - Ubuntu 20.04 baseline ParallelCluster AMI OpenSCAP results from running the xccdf_mil.disa.stig_profile_MAC-2_Sensitive profile. This shows the EC2 instance as passing 17 checks and failing 92 for a result of being 15.6% compliant with this profile." width="1263" height="454"&gt;
+ &lt;p id="caption-attachment-3688" class="wp-caption-text"&gt;Figure 5 – Ubuntu 20.04 baseline ParallelCluster AMI OpenSCAP results from running the xccdf_mil.disa.stig_profile_MAC-2_Sensitive profile. This shows the EC2 instance as passing 17 checks and failing 92 for a result of being 15.6% compliant with this profile.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3689" style="width: 1259px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3689" loading="lazy" class="size-full wp-image-3689" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/IMG-2024-05-21-12.48.17.png" alt="Figure 6 - Ubuntu 20.04 ParallelCluster AMI after running the Amazon STIG High runbook. OpenSCAP results are from running the xccdf_mil.disa.stig_profile_MAC-2_Sensitive profile. This shows the EC2 instance as passing 42 checks and failing 67 for a result of being 38.53% compliant with this profile." width="1249" height="446"&gt;
+ &lt;p id="caption-attachment-3689" class="wp-caption-text"&gt;Figure 6 – Ubuntu 20.04 ParallelCluster AMI after running the Amazon STIG High runbook. OpenSCAP results are from running the xccdf_mil.disa.stig_profile_MAC-2_Sensitive profile. This shows the EC2 instance as passing 42 checks and failing 67 for a result of being 38.53% compliant with this profile.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Running your own OpenSCAP scans&lt;/h2&gt; 
+&lt;p&gt;If you want to perform additional STIGs on ParallelCluster AMIs, you may want to run those images through the same OpenSCAP profiles used for this blog post.&lt;/p&gt; 
+&lt;p&gt;We’ve stored the scripts for &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/blob/main/recipes/pcluster/stig/assets/EC2_RHEL8_SCAP_Assessment.sh"&gt;RHEL8&lt;/a&gt;, &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/blob/main/recipes/pcluster/stig/assets/EC2_AL2_SCAP_Assessment.sh"&gt;AL2&lt;/a&gt;, and &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/blob/main/recipes/pcluster/stig/assets/EC2_UBUNTU_2004_SCAP_Assessment.sh"&gt;Ubuntu 20.04&lt;/a&gt; in our GitHub repo. These scripts &lt;em&gt;do&lt;/em&gt; require Internet connectivity to run because they download a series of tools like the AWS CLI and OpenSCAP, and STIG benchmarks to the EC2 instance being evaluated.&lt;/p&gt; 
+&lt;p&gt;You’ll need to &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html"&gt;create an S3 bucket&lt;/a&gt;, and update the name of the bucket inside the script where it saves the results of the evaluations. The scripts use EC2 instance &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html"&gt;metadata&lt;/a&gt;&amp;nbsp;to dynamically name the output files in Amazon S3 after the instance, so they’re not overwritten as new instances are tested.&lt;/p&gt; 
+&lt;p&gt;To run these scripts with minimal effort, you can run them as a user-data script upon launch and have the HTML results automatically sent to your S3 bucket. Inputting a user-data script follows the same logic as described under step 3 of the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/stig#ubuntu-2004-instances-with-or-without-internet-connectivity"&gt;Ubuntu 20.04 section&lt;/a&gt;. For RHEL8 and Ubuntu 20.04 operating systems, it takes approximately 10 minutes from instance launch to see the results uploaded to your Amazon S3 bucket. AL2 takes approximately 20-25 minutes.&lt;/p&gt; 
+&lt;h2&gt;Using the resulting images&lt;/h2&gt; 
+&lt;p&gt;The STIG’d AMIs can be found in the EC2 section of the Management Console and referenced in a ParallelCluster configuration file. You can create clusters using the ParallelCluster &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-configuring.html"&gt;CLI&lt;/a&gt; or the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/configure-create-pcui-v3.html"&gt;UI&lt;/a&gt;. For purposes of this post, we’ll show an example of placing the STIG’d AMI ID into the ParallelCluster configuration file for a cluster in GovCloud West.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;Region: us-gov-west-1
+Image:
+  Os: rhel8
+HeadNode:
+  InstanceType: c5a.4xlarge
+  Networking:
+    SubnetId: {your-subnet-id}
+  Ssh:
+    KeyName: {your-keypair}
+  Image:
+    CustomAmi: {your-AMI-id}
+SharedStorage:
+  - MountDir: /fsx  
+    Name: FSxExtData
+    StorageType: FsxLustre
+    FsxLustreSettings:
+      StorageCapacity: 1200
+      DeploymentType: PERSISTENT_1
+      PerUnitStorageThroughput: 50
+      DeletionPolicy: Delete
+Scheduling:
+  Scheduler: slurm
+  SlurmSettings:
+    QueueUpdateStrategy: DRAIN
+  SlurmQueues:
+  - Name: queue1
+    ComputeResources:
+    - Name: compute
+      Instances:
+      - InstanceType: hpc7a.48xlarge
+      MinCount: 1
+      MaxCount: 10
+      Efa:
+       Enabled: true
+    Networking:
+      SubnetIds:
+      - {your-subnet-id}
+      PlacementGroup:
+        Enabled: true
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You should edit the Items enclosed in the {} to include your identifiers.&lt;/p&gt; 
+&lt;p&gt;Once you’ve created the file you can launch the cluster using the command:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster --cluster-name &amp;lt;name&amp;gt; --cluster-configuration &amp;lt;file-name&amp;gt;.yml&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You should see validation warning messages because you are using a custom AMI, however these messages can be ignored and will not impact the creation of the cluster. You can track the cluster creation status through the &lt;a href="https://aws.amazon.com/cloudformation/"&gt;AWS CloudFormation&lt;/a&gt; console or by using the ParallelCluster CLI command:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster list-clusters&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Verifying levels of compliance for compute resources is a requirement in some industries, and desired in others. Throughout this post, we’ve discussed several different cloud-native methods HPC customers with compliance requirements can choose from to accelerate their STIG process in AWS ParallelCluster depending on their Internet connectivity (or lack thereof) and operating system choice.&lt;/p&gt; 
+&lt;p&gt;We recommend validating that your output images work with your application in a development environment prior to running in production.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Large scale training with NVIDIA NeMo Megatron on AWS ParallelCluster using P5 instances</title>
 		<link>https://aws.amazon.com/blogs/hpc/large-scale-training-with-nemo-megatron-on-aws-parallelcluster-using-p5-instances/</link>
 		
@@ -73,7 +211,7 @@ $ pcluster version
 &lt;/code&gt;&lt;/pre&gt; 
 &lt;h3&gt;Step 1: Create a VPC and Security Groups&lt;/h3&gt; 
 &lt;div id="attachment_3704" style="width: 931px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3704" class="size-full wp-image-3704" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/22/IMG-2024-05-22-13.06.54.png" alt="Figure 1 – A VPC configuration in a new account with one public subnet and one private subnet in the target region. The P5 instance topology is defined to have 32 ENI cards of 100Gbps each." width="921" height="433"&gt;
+ &lt;img aria-describedby="caption-attachment-3704" loading="lazy" class="size-full wp-image-3704" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/22/IMG-2024-05-22-13.06.54.png" alt="Figure 1 – A VPC configuration in a new account with one public subnet and one private subnet in the target region. The P5 instance topology is defined to have 32 ENI cards of 100Gbps each." width="921" height="433"&gt;
  &lt;p id="caption-attachment-3704" class="wp-caption-text"&gt;Figure 1 – A VPC configuration in a new account with one public subnet and one private subnet in the target region. The P5 instance topology is defined to have 32 ENI cards of 100Gbps each.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;If you’re using a new AWS account, your VPC configuration will consist of one public subnet and a private subnet in the target region. We &lt;a href="https://github.com/aws/aws-ofi-nccl/blob/master/topology/p5.48xl-topo.xml"&gt;define the P5 instance topology&lt;/a&gt; to have a total of 32 Elastic Network Interfaces (ENI) cards of 100Gbps each. To handle 32 ENIs, compute instances need to be placed into a private subnet, otherwise your cluster will fail in creation because a public IP is not automatically assigned on instances with multiple NICs. You can find more information about deploying a VPC for ParallelCluster &lt;a href="https://github.com/aws-samples/awsome-distributed-training/tree/main/1.architectures/1.vpc_network#vpc-cloudformation-stacks"&gt;in our GitHub repo&lt;/a&gt;.&lt;/p&gt; 
@@ -2352,190 +2490,6 @@ process MY_PROCESS {
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;Through this blog, we have illustrated a streamlined method for summarizing complex documents into key ESG initiatives that offer a deeper comprehension of the sustainability aspects of your investments. With the implementation of machine learning methods powered by large language models (LLMs), we have introduced a unique approach to ESG that more effectively identifies the impact of global markets on both organizational strategy and reputational risk. Additionally, we have highlighted the significant economic influence of ESG factors on market risk calculation.&lt;/p&gt; 
 &lt;p&gt;As a starting point to a data-driven ESG journey, this approach can be further improved by bringing the internal data you hold about your various investments and the additional metrics you could bring from third-party data, propagating the risks through the propagated-weighted ESG framework to keep driving more sustainable finance and impactful investments.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Improve the speed and cost of HPC deployment with Mountpoint for Amazon S3</title>
-		<link>https://aws.amazon.com/blogs/hpc/improve-the-speed-and-cost-of-hpc-deployment-with-mountpoint-for-amazon-s3/</link>
-		
-		<dc:creator><![CDATA[Scott Ma]]></dc:creator>
-		<pubDate>Tue, 27 Feb 2024 16:13:55 +0000</pubDate>
-				<category><![CDATA[Amazon Simple Storage Service (S3)]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Storage]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">42afa6fa28622939a4baad7a9810532f4a323104</guid>
-
-					<description>Don't sacrifice performance OR ease of use with your HPC storage. Learn how Mountpoint for Amazon S3 combines high throughput and low latency with the simplicity of S3.</description>
-										<content:encoded>&lt;p&gt;HPC workloads like genome sequencing and protein folding involve processing huge amounts of input data. Genome sequencing aims to determine an organism’s complete DNA sequence by analyzing extensive genome databases containing gene and genome reference sequences from thousands of species. Protein folding uses molecular dynamics simulations to model the physical movements of atoms and molecules in a protein.&lt;/p&gt; 
-&lt;p&gt;These workloads require analyzing massive input datasets.&amp;nbsp;To support these kinds of applications that need high bandwidth, low latency, and parallel access to lots of data, AWS offers managed storage services like &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; and &lt;a href="https://aws.amazon.com/efs"&gt;Amazon EFS &lt;/a&gt;that provide file systems optimized for compute-intensive workloads, which eliminates the need for customers to manage underlying storage infrastructure.&lt;/p&gt; 
-&lt;p&gt;When selecting storage for your machine learning training data, &lt;a href="https://aws.amazon.com/s3/features/mountpoint/"&gt;Mountpoint for Amazon S3&lt;/a&gt; can provide a good alternative to support these types of workloads. Mountpoint for Amazon S3 is an open-source file client that you can use to &lt;em&gt;mount&lt;/em&gt; &lt;em&gt;an S3 bucket&lt;/em&gt; on your compute instances, accessing it as a local file system. It translates local file system API calls to REST API calls on S3 objects, and is optimized for high-throughput performance. It builds on the &lt;a href="https://docs.aws.amazon.com/sdkref/latest/guide/common-runtime.html"&gt;AWS Common Runtime&lt;/a&gt; (CRT) library, which is purpose-built for high-performance and low-resource usage to make efficient use of your fleet.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll deploy Mountpoint for Amazon S3 in an AWS ParallelCluster using the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;Community Recipe Library for HPC Infrastructure on AWS&lt;/a&gt;. We’ll then run the &lt;a href="https://ior.readthedocs.io/en/latest/index.html"&gt;IOR parallel I/O benchmark tool&lt;/a&gt;&amp;nbsp;to compare the performance of Mountpoint for Amazon S3 across the cluster, testing access speeds for reading files of varying sizes stored in Amazon S3.&lt;/p&gt; 
-&lt;h2&gt;Setting expectations&lt;/h2&gt; 
-&lt;p&gt;As shown in Figure 1, We should expect to see the parallel performance scaling well as we increase the number of nodes in the cluster accessing the shared Amazon S3 storage at the same time. We hope this shows you how to achieve high throughput access to virtually limitless Amazon S3 data using a simple approach running ParallelCluster.&lt;/p&gt; 
-&lt;div id="attachment_3338" style="width: 1810px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3338" loading="lazy" class="size-full wp-image-3338" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/20/CleanShot-2024-02-20-at-13.25.38@2x.png" alt="Figure 1 - Read and write performance scales well with the number of nodes." width="1800" height="1058"&gt;
- &lt;p id="caption-attachment-3338" class="wp-caption-text"&gt;Figure 1 – Read and write performance scales well with the number of nodes.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;What do you need to try this out?&lt;/h2&gt; 
-&lt;ul&gt; 
- &lt;li&gt;AWS ParallelCluster Command line interface (CLI) with Node installed. See &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-pip.html"&gt;Installing AWS ParallelCluster in a non-virtual environment using pip&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;An existing bucket for the performance test.&lt;/li&gt; 
- &lt;li&gt;An existing Security Group, Subnet, EC2 Key&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Steps to deployment with ParallelCluster&lt;/h2&gt; 
-&lt;ol&gt; 
- &lt;li&gt;For our deployment, we’ll download this ParallelCluster config file &lt;strong&gt;&lt;a href="https://raw.githubusercontent.com/aws-samples/aws-hpc-s3mountpoint/main/pcluster-example-config.yml"&gt;here&lt;/a&gt;&lt;/strong&gt;. This config file uses the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/storage/mountpoint_s3"&gt;HPC Github Sample Recipe for Mountpoint for Amazon S3&lt;/a&gt; to help to deploy the mountpoint to the cluster nodes.&lt;/li&gt; 
- &lt;li&gt;Once you’ve downloaded the full ParallelCluster config file, update your own values in the config file,&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p style="padding-left: 40px"&gt;&lt;strong&gt;DEMO-BUCKET-NAME&lt;/strong&gt; – an existing bucket for testing. Create one if needed.&lt;br&gt; &lt;strong&gt;HOST-FILESYSTEM-PATH&lt;/strong&gt; – the path that the bucket will mount to inside the nodes. (e.g. &lt;code&gt;/testpath&lt;/code&gt;)&lt;br&gt; &lt;strong&gt;Your Subnet ID&lt;/strong&gt; – a subnet ID for deployment (e.g. &lt;code&gt;subnet-xxxxxxxx&lt;/code&gt;). Find the subnet Id in the &lt;a href="https://us-east-1.console.aws.amazon.com/vpcconsole/home?region=us-east-1#subnets:"&gt;Subnets home&lt;/a&gt;.&lt;br&gt; &lt;strong&gt;Your Security Group&lt;/strong&gt; – the id of the security group (e.g. &lt;code&gt;sg-xxxxxxxx&lt;/code&gt;). Find the security group id in the &lt;a href="https://us-east-1.console.aws.amazon.com/vpcconsole/home?region=us-east-1#SecurityGroups:"&gt;Security Groups home.&lt;/a&gt; Make sure the security group is for the same VPC the subnet is under.&lt;br&gt; &lt;strong&gt;Your ed25519 key&lt;/strong&gt; – the name of the EC2 Key Pair. You can find the name of your key in the &lt;a href="https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#KeyPairs:v=3;"&gt;Ec2 Key Pair home&lt;/a&gt;. If you do not have one, create a new one.&lt;/p&gt; 
-&lt;ol start="3"&gt; 
- &lt;li&gt;Now, you can use this command to deploy a cluster:&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster -c &amp;lt;template file&amp;gt; -r &amp;lt;region&amp;gt; -n &amp;lt;cluster_name&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
-&lt;h2&gt;Deep-dive into the configuration&lt;/h2&gt; 
-&lt;p&gt;To examine the config file further, it refers to three post-install scripts designed to work with &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/custom-bootstrap-actions-v3.html"&gt;ParallelCluster custom bootstrap actions&lt;/a&gt;. The first two scripts are from the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes"&gt;HPC recipes for AWS&lt;/a&gt;, whereas the last script was created specifically for this blog. These scripts are being run on the cluster head node &lt;em&gt;and&lt;/em&gt; all the compute nodes where the S3 bucket will be mounted. The script &lt;code&gt;s3-mp-install-ior.sh&lt;/code&gt; installs the IOR I/O performance benchmark suite and its necessary dependencies on the designated nodes. IOR is a parallel input/output benchmark that can test the performance of parallel storage systems using different interfaces and access patterns. The installation log, located at &lt;code&gt;/var/log/ior-install.log,&lt;/code&gt; provides debugging information about the installation process.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;install.sh&lt;/strong&gt; – installs Mountpoint for Amazon S3 and prepares the mount point directory&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;mount.sh&lt;/strong&gt; – configures a systemd service that uses Mountpoint for Amazon S3 to mount a bucket to a directory&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;s3-mp-install-ior.sh&lt;/strong&gt; – installs the IOR I/O performance benchmark suite. Since the performance testing is for the compute node to perform, this is optional for the head node.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Cluster head node&lt;/h2&gt; 
-&lt;p&gt;Here’s an example of the Head Node section of the ParallelCluster configuration. The bucket &lt;code&gt;DEMO-BUCKET-NAME&lt;/code&gt;&amp;nbsp;is mounted to the location &lt;code&gt;HOST-FILESYSTEM-PATH&lt;/code&gt;&amp;nbsp;on the host&lt;strong&gt;.&amp;nbsp;&lt;/strong&gt;&lt;code&gt;HOST-FILESYSTEM-PATH&lt;/code&gt; is an absolute path like &lt;code&gt;/s3mountpoint&lt;/code&gt;&lt;strong&gt;.&lt;/strong&gt;&amp;nbsp;You can mount multiple buckets on a single host.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;HeadNode:
-  CustomActions:
-    OnNodeConfigured:
-      Sequence:
-        - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/install.sh
-        - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/mount.sh
-          Args:
-            - &amp;lt;&amp;lt;DEMO-BUCKET-NAME&amp;gt;&amp;gt;
-            - &amp;lt;&amp;lt;HOST-FILESYSTEM-PATH&amp;gt;&amp;gt;
-            - '--allow-delete --allow-root'
-  Iam:
-    AdditionalIamPolicies:
-      - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-    S3Access:
-      - BucketName: &amp;lt;&amp;lt;DEMO-BUCKET-NAME&amp;gt;&amp;gt;
-        EnableWriteAccess: true 
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;We’ll be using &lt;code&gt;--allow-delete --allow-root&lt;/code&gt; to enable read/write to the bucket because read/write access is required by the performance testing tool. If you’re using this mountpoint for a &lt;strong&gt;read only&lt;/strong&gt; scenario like storing training data, it’s recommended that you use &lt;code&gt;--read-only&lt;/code&gt; to prevent accidental overwriting to the training data set. For more options to configure the mount point, see the &lt;a href="https://github.com/awslabs/mountpoint-s3/blob/main/doc/CONFIGURATION.md"&gt;Mountpoint configuration documentation&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;To access the S3 bucket from the header node, you need to enable S3 access through either the S3Access configuration under &lt;strong&gt;HeadNode/Iam/S3Access&lt;/strong&gt; or by attaching an additional IAM policy under &lt;strong&gt;HeadNode/Iam/AdditionalIamPolicies&lt;/strong&gt;. You can use a managed policy such as &lt;code&gt;AmazonS3ReadOnlyAccess&lt;/code&gt; to provide generic read-only access, or you can create a custom policy with more specific permissions tailored to your use case. The key requirement is that the &lt;code&gt;EC2 InstanceRole&lt;/code&gt; for the header node must have permissions to access the S3 bucket in order for it to read data from or write data to that location. The same will apply to the &lt;code&gt;ComputeNode&lt;/code&gt; section.&lt;/p&gt; 
-&lt;h3&gt;Compute nodes&lt;/h3&gt; 
-&lt;p&gt;Next, let’s look at an example of mounting the same bucket &lt;code&gt;DEMO-BUCKET-NAME&lt;/code&gt;&amp;nbsp;to a local path of&amp;nbsp;&lt;code&gt;HOST-FILESYSTEM-PATH&lt;/code&gt; in the Compute Nodes section of the ParallelCluster config file.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;Scheduling:
-    SlurmQueues:
-        - Name: demo
-          CustomActions:
-            OnNodeConfigured:
-                Sequence:
-                  - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/install.sh
-                  - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/mount.sh
-                    Args:
-                      - &amp;lt;&amp;lt;DEMO-BUCKET-NAME&amp;gt;&amp;gt;
-                      - &amp;lt;&amp;lt;HOST-FILESYSTEM-PATH&amp;gt;&amp;gt;
-                      - '--allow-delete --allow-root'
-                  - Script: https://raw.githubusercontent.com/aws-samples/aws-hpc-s3mountpoint/main/s3-mp-install-ior.sh
-Iam:
-        AdditionalIamPolicies:
-          - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
-        S3Access:
-          - BucketName: &amp;lt;&amp;lt;DEMO-BUCKET-NAME&amp;gt;&amp;gt;
-            EnableWriteAccess: true
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;h2&gt;Steps to run Performance Testing&lt;/h2&gt; 
-&lt;p&gt;To execute the IOR benchmark across compute nodes, we’ll use &lt;code&gt;sbatch&lt;/code&gt; to submit a job to the HPC cluster. We’ll &lt;a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-sessions-start.html#start-ec2-console"&gt;SSH into the head node&lt;/a&gt; using Session Manager to author an &lt;code&gt;sbatch&lt;/code&gt; script that calls &lt;code&gt;mpirun&lt;/code&gt; to launch the IOR executable with our desired parameters as below. The &lt;code&gt;sbatch&lt;/code&gt; script will specify the number of tasks, and Slurm will manage the number of nodes required.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;## create the sbatch submission script
-cd ~
-cat &amp;gt; ior_submission.sbatch &amp;lt;&amp;lt; EOF
-#!/bin/bash
-#SBATCH --job-name=ior-perf-test
-#SBATCH --output=%N_%x_%j_%t.out
-#SBATCH --ntasks-per-node=8
-#SBATCH --ntasks=8
-
-module load intelmpi
-mpirun bash -c " 
-     cd &amp;lt;&amp;lt;HOST-FILESYSTEM-PATH&amp;gt;&amp;gt;
-     ior -r -w -v -F -o=S@S@S -b=2000m -i=1 -t=50m -a=POSIX --posix.odirect"
-EOF
-
-## submit the script
-cd ~
-sbatch ior_submission.sbatch
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Slurm will spawn the MPI processes across the cluster worker nodes to perform the parallel I/O tests. The output file will be available on the first compute node.&lt;/p&gt; 
-&lt;h2&gt;Performance results&lt;/h2&gt; 
-&lt;p&gt;Using this setup, we can use IOR to do some load tests across all our cluster compute nodes. It’s worth noting that the actual mounting operation itself takes just a few seconds&lt;/p&gt; 
-&lt;p&gt;In our test runs, we used a single Amazon S3 bucket and attained exceptional read and write speeds – 4.23 GB/s (4.038 GiB/s) write throughput and 4.85 GB/s (4.622 GiB/s) read throughput per node (using c6i.16xlarge). This high read performance makes Mountpoint extremely well-suited for supporting the intensive read operations inherent in HPC workloads. Here’s some sample output from our own tests running on c6i.16xlarge instances:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-bash"&gt;Loading intelmpi version 2021.9.0
-IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
-Began               : Thu Dec 14 00:13:39 2023
-Command line        : /shared/ior/bin/ior -r -w -v -F -o=S@S@S -b=2000m -i=1 -t=50m -a=POSIX --posix.odirect
-Machine             : Linux queue1-st-pclustercr1-1
-TestID              : 0
-StartTime           : Thu Dec 14 00:13:39 2023
-Path                : S.00000000
-FS                  : 0.0 GiB   Used FS: -nan%   Inodes: 0.0 Mi   Used Inodes: -nan%
-Participating tasks : 64
-
-Options:
-api                 : POSIX
-apiVersion          :
-test filename       : S@S@S
-access              : file-per-process
-type                : independent
-segments            : 1
-ordering in a file  : sequential
-ordering inter file : no tasks offsets
-nodes               : 1
-tasks               : 64
-clients per node    : 64
-memoryBuffer        : CPU
-dataAccess          : CPU
-GPUDirect           : 0
-repetitions         : 1
-xfersize            : 50 MiB
-blocksize           : 1.95 GiB
-aggregate filesize  : 125 GiB
-verbose             : 1
-
-Results:
-
-access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
-------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
-Commencing write performance test: Thu Dec 14 00:13:55 2023
-write     4038       83.06      0.039900    2048000    51200      28.34      30.82      30.06      31.70      0
-Commencing read performance test: Thu Dec 14 00:14:18 2023
-
-read      4622       92.53      0.682358    2048000    51200      0.086130   27.67      17.48      27.69      0
-remove    -          -          -           -          -          -          -          -          7.57       0
-Max Write: 4037.71 MiB/sec (4233.85 MB/sec)
-Max Read:  4622.06 MiB/sec (4846.58 MB/sec)
-
-Summary of all tests:
-Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
-write        4037.71    4037.71    4037.71       0.00      80.75      80.75      80.75       0.00   31.70114         NA            NA     0     64  64    1   1     0        1         0    0      1 2097152000 52428800  128000.0 POSIX      0
-read         4622.06    4622.06    4622.06       0.00      92.44      92.44      92.44       0.00   27.69330         NA            NA     0     64  64    1   1     0        1         0    0      1 2097152000 52428800  128000.0 POSIX      0
-Finished            : Thu Dec 14 00:14:53 2023&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;IOR’s test is designed to scale and maintain consistent throughput &lt;em&gt;per server&lt;/em&gt; as we add more compute nodes. You also have the option to modify the performance test settings like &lt;code&gt;blockSize&lt;/code&gt; (-b) and &lt;code&gt;transferSize&lt;/code&gt; (-t) to see how the throughput changes when you adjust those values.&lt;/p&gt; 
-&lt;p&gt;For our performance runs, we used the options listed in table 1. As you prepare your dataset for testing, take time to optimize the IOR settings. Tailor them to your specific data characteristics for improved accuracy. For instance, adjust the blockSize downward if holding many smaller files. Or remove the -f option if processes commonly read the same files. Taking these steps allows IOR to better simulate your real-world environment. For additional options, refer to the&lt;a href="https://ior.readthedocs.io/en/latest/userDoc/options.html"&gt; IOR official documentation&lt;/a&gt;.&lt;/p&gt; 
-&lt;div id="attachment_3339" style="width: 1846px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3339" loading="lazy" class="size-full wp-image-3339" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/20/CleanShot-2024-02-20-at-13.37.27@2x.png" alt="Table 1 - IOR Options used for our performance test runs." width="1836" height="574"&gt;
- &lt;p id="caption-attachment-3339" class="wp-caption-text"&gt;Table 1 – IOR Options used for our performance test runs.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;With data stored in Amazon S3 behind the scenes, Mountpoint for Amazon S3 delivers the durability, scalability, and high throughput needed to support demanding machine learning training workloads. It also provides a cost-efficient storage solution.&lt;/p&gt; 
-&lt;p&gt;Mountpoint for Amazon S3 is easy to integrate with other AWS ParallelCluster, and this extends to AWS Batch, and self-managed EC2 instances, too – all popular methods for distributed training workflows. The quick, scalable, and economical nature of Amazon S3 behind Mountpoint removes traditional data storage challenges customers often face when pursuing ML training.&lt;/p&gt; 
-&lt;p&gt;You can get started with Mountpoint for S3 today by building on the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/storage/mountpoint_s3"&gt;sample we’ve provided in the HPC Recipe Library&lt;/a&gt;. We highly encourage you to closely examine how the install/configure scripts operate and other recipes in the recipe library. These recipes are designed for cross-platform compatibility and robustness working with ParallelCluster, requiring little to no modification to use.&lt;/p&gt;</content:encoded>
 					
 		
 		
