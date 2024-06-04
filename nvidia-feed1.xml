@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 03 Jun 2024 17:16:05 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 04 Jun 2024 01:51:59 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,58 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>‘Create a Data Flywheel With AI,’ NVIDIA CEO Jensen Huang Tells Attendees at Snowflake Summit</title>
+		<link>https://blogs.nvidia.com/blog/snowflake-summit-2024/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Tue, 04 Jun 2024 01:10:03 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artficial Intelligence]]></category>
+		<category><![CDATA[Conversational AI]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[Inference]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71833</guid>
+
+					<description><![CDATA[AI gives every company an opportunity to turn its processes into a data flywheel, NVIDIA founder and CEO Jensen Huang told thousands of attendees Monday at the Snowflake Data Cloud Summit. Companies need to “take all the most important processes they do, capture them in a data flywheel and turn that into the company’s AI	<a class="read-more" href="https://blogs.nvidia.com/blog/snowflake-summit-2024/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>AI gives every company an opportunity to turn its processes into a data flywheel, NVIDIA founder and CEO Jensen Huang told thousands of attendees Monday at the <a href="https://www.snowflake.com/summit/">Snowflake Data Cloud Summit</a>.</p>
+<p>Companies need to “take all the most important processes they do, capture them in a data flywheel and turn that into the company’s AI to drive that flywheel even further,” said Huang, joining from Taipei a virtual fireside chat with Snowflake CEO Sridhar Ramaswamy in San Francisco.</p>
+<p>The two executives described how the combination of the Snowflake AI Data Cloud and NVIDIA AI will simplify and accelerate enterprise AI.</p>
+<p>“You want to jump on this train as fast as you can. Don’t let it fly by because you can use it to transform your business or go into new businesses,” said Huang, the day after he gave <a href="https://blogs.nvidia.com/blog/computex-2024-jensen-huang/">a keynote</a> kicking off COMPUTEX in Taiwan.</p>
+<h2>Snowflake Users Can Tap Into NVIDIA AI Enterprise</h2>
+<p>For example, businesses will be able to deploy Snowflake Arctic, an enterprise-focused large language model (<a href="https://www.nvidia.com/en-us/glossary/large-language-models/">LLM</a>), in seconds using <a href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> inference microservices, part of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform. <b></b></p>
+<p>Arctic was trained on <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> and is available on the <a href="http://ai.nvidia.com/">NVIDIA API catalog</a>, fully supported by <a href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a>, software that accelerates generative AI inference.<b></b></p>
+<p>The two companies also will integrate <a href="https://www.snowflake.com/en/data-cloud/cortex/">Snowflake Cortex AI</a> and <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo Retriever</a>, so businesses can link their AI-powered applications to information sources, ensuring highly accurate results with retrieval-augmented generation (<a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">RAG</a>).<b></b></p>
+<p>Ramaswamy gave examples of generative AI applications developed with the <a href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> framework and <a href="https://www.snowflake.com/blog/snowpark-container-services-deploy-genai-full-stack-apps/">Snowpark Container Services</a> that will be available on <a href="https://www.snowflake.com/en/data-cloud/marketplace/">Snowflake Marketplace</a> for use by thousands of Snowflake customers.</p>
+<p>“NVIDIA’s industry-leading accelerated computing is game changing for our customers and our own research team that used it to create the state-of-the-art Artic model for our customers,” said Ramaswamy.</p>
+<p>To learn more, watch NVIDIA GTC on-demand sessions presented by Snowflake on <a href="https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=https%3A%2F%2Fwww.nvidia.com%2Fgtc%2Fsession-catalog%2F%3Ftab.allsessions%3D1700692987788001F1cG%26search%3Dsnowflake%23%2Fsession%2F1702422863196001fBxI&amp;esheet=53911634&amp;newsitemid=20240318504019&amp;lan=en-US&amp;anchor=how+to+build+chatbots+with+a+RAG+architecture&amp;index=9&amp;md5=27b303967b1c71903d72d2bf0c49a75b&amp;_fsi=kByWGLbM">how to build chatbots with a RAG architecture</a> and <a href="https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=https%3A%2F%2Fwww.nvidia.com%2Fgtc%2Fsession-catalog%2F%3Ftab.allsessions%3D1700692987788001F1cG%26search%3Dsnowflake%23%2Fsession%2F1702414327834001cExw&amp;esheet=53911634&amp;newsitemid=20240318504019&amp;lan=en-US&amp;anchor=how+to+leverage+LLMs+for+life+sciences&amp;index=10&amp;md5=b66c9d7183682ef8666f8ca5e3c3a975">how to leverage LLMs for life sciences</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Jensen-at-Snowflake-Summit-2024.jpg"
+			type="image/jpeg"
+			width="1139"
+			height="603"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Jensen-at-Snowflake-Summit-2024-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[‘Create a Data Flywheel With AI,’ NVIDIA CEO Jensen Huang Tells Attendees at Snowflake Summit]]></media:title>
+			<media:description type="html">Jensen Huang at Snowflake Summit 2024</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Digital Bank Debunks Financial Fraud With Generative AI</title>
 		<link>https://blogs.nvidia.com/blog/bunq-financial-services-generative-ai/</link>
 		
@@ -1115,65 +1167,6 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Into the Omniverse: SoftServe and Continental Drive Digitalization With OpenUSD and Generative AI]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Senua’s Story Continues: GeForce NOW Brings ‘Senua’s Saga: Hellblade II’ to the Cloud</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-senuas-saga-hellblade-2/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 23 May 2024 13:00:05 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71774</guid>
-
-					<description><![CDATA[Every week, GFN Thursday brings new games to the cloud, featuring some of the latest and greatest titles for members to play. Leading the seven games joining GeForce NOW this week is the newest game in Ninja Theory’s Hellblade franchise, Senua’s Saga: Hellblade II. This day-and-date release expands the cloud gaming platform’s extensive library of	<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-senuas-saga-hellblade-2/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Every week, GFN Thursday brings new games to the cloud, featuring some of the latest and greatest titles for members to play.</p>
-<p>Leading the seven games joining <a href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> this week is the newest game in Ninja Theory’s <i>Hellblade</i> franchise, <i>Senua’s Saga: Hellblade II</i>. This day-and-date release expands the cloud gaming platform’s extensive library of over 1,900 games.</p>
-<p>Members can also look forward to a new reward — a free in-game mount — for <i>The Elder Scrolls Online </i>starting Thursday, May 30. Get ready by opting into <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW’s Rewards program</a>.</p>
-<h2><b>Senua Returns</b></h2>
-<figure id="attachment_71778" aria-describedby="caption-attachment-71778" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71778" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-672x368.jpg" alt="Senua's Saga: Hellblade II screen" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-672x368.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-400x219.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-768x420.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-1536x840.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-823x450.jpg 823w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-393x215.jpg 393w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-183x100.jpg 183w, https://blogs.nvidia.com/wp-content/uploads/2024/05/GFN_Thursday-Senuas_Saga_Hellblade_II-1280x700.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71778" class="wp-caption-text">Head to the cloud to overcome the darkness.</figcaption></figure>
-<p>In <i>Senua’s Saga: Hellblade II</i>, the sequel to the award-winning <i>Hellblade: Senua’s Sacrifice</i>, Senua returns in a brutal journey of survival through the myth and torment of Viking Iceland.</p>
-<p>Intent on saving those who’ve fallen victim to the horrors of tyranny, Senua battles the forces of darkness within and without. Sink deep into the next chapter of Senua’s story, a crafted experience told through cinematic immersion, beautifully realized visuals and encapsulating sound.</p>
-<p><a href="http://geforcenow.com">Priority and Ultimate members</a> can fully immerse themselves in Senua’s story with epic cinematic gameplay at higher resolutions and frame rates over free members. Ultimate members can stream at up to 4K 120 frames per second with exclusive access to GeForce RTX 4080 SuperPODs in the cloud, even on underpowered devices.</p>
-<h2><b>Level Up With New Games</b></h2>
-<p>Check out the full list of new games this week:</p>
-<ul>
-<li><i>Synergy </i>(New release on <a href="https://store.steampowered.com/app/1989070?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 21)</li>
-<li><i>Senua’s Saga: Hellblade II</i> (New release on <a href="https://store.steampowered.com/app/2461850?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/senuas-saga-hellblade-ii/9pmbb7nghv95?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, May 21)</li>
-<li><i>Crown Wars: The Black Prince </i>(New release on <a href="https://store.steampowered.com/app/1658920?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 23)</li>
-<li><i>Serum</i> (New release on <a href="https://store.steampowered.com/app/1610520?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 23)</li>
-<li><i>Ships at Sea</i> (New release on <a href="https://store.steampowered.com/app/1266540?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 23)</li>
-<li><i>Exo One </i>(<a href="https://store.steampowered.com/app/773370?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Phantom Brigade </i>(<a href="https://store.steampowered.com/app/553540?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-</ul>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">what&#39;s a life lesson you learned from a game?</p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1793310854592491909?ref_src=twsrc%5Etfw">May 22, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-thursday-5-23-nv-blog-1280x680-no-copy.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-thursday-5-23-nv-blog-1280x680-no-copy-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Senua’s Story Continues: GeForce NOW Brings ‘Senua’s Saga: Hellblade II’ to the Cloud]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
