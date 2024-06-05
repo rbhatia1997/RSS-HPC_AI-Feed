@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 05 Jun 2024 01:13:50 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 05 Jun 2024 16:46:45 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,147 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>Creativity Accelerated: New RTX-Powered AI Hardware and Software Announced at COMPUTEX</title>
+		<link>https://blogs.nvidia.com/blog/rtx-ai-pc-studio-computex/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Wed, 05 Jun 2024 13:00:59 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[In the NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[NVIDIA Studio]]></category>
+		<category><![CDATA[NVIDIA Studio Driver]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72029</guid>
+
+					<description><![CDATA[NVIDIA launched NVIDIA Studio at COMPUTEX in 2019. Five years and more than 500 NVIDIA RTX-accelerated apps and games later, it’s bringing AI to even more creators with an array of new RTX technology integrations announced this week at COMPUTEX 2024.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA launched <a href="https://www.nvidia.com/en-us/studio/" target="_blank" rel="noopener">NVIDIA Studio</a> at COMPUTEX in 2019. Five years and more than 500 NVIDIA RTX-accelerated apps and games later, it’s bringing AI to even more creators with an array of new RTX technology integrations announced this week at COMPUTEX 2024.</p>
+<p><iframe title="Multiply Your AI Performance with NVIDIA GeForce RTX AI PCs" width="500" height="281" src="https://www.youtube.com/embed/vrkXR2ZjGGI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Newly announced <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/" target="_blank" rel="noopener">NVIDIA GeForce RTX</a> AI laptops — including the ASUS ProArt PX13 and P16 and MSI Stealth 16 AI+ laptops — will feature dedicated RTX Tensor Cores to accelerate AI performance and power-efficient systems-on-a-chip with Windows 11 AI PC features. They join over 200 laptops already accelerated with RTX AI technology.</p>
+<p>NVIDIA RTX Video, a collection of technologies including <a href="https://blogs.nvidia.com/blog/rtx-video-super-resolution/" target="_blank" rel="noopener">RTX Video Super Resolution</a> and <a href="https://blogs.nvidia.com/blog/rtx-video-hdr-remix-studio-driver/" target="_blank" rel="noopener">RTX Video HDR</a> that enhance video content streamed in browsers like Google Chrome, Microsoft Edge and Mozilla Firefox, is coming to the free VLC Media Player. And for the first time in June, creators can enjoy these AI-enhanced video effects in popular creative apps like DaVinci Resolve and Wondershare Filmora.</p>
+<p>DaVinci Resolve and Cyberlink PowerDirector are adding NVIDIA’s new H.265 Ultra-High-Quality (UHQ) mode, which uses the <a href="https://developer.nvidia.com/video-codec-sdk" target="_blank" rel="noopener">NVIDIA NVENC</a> to increase high-efficiency video coding (HEVC) and encoding efficiency by 10%.</p>
+<p><a href="https://www.nvidia.com/en-us/geforce/rtx-remix/" target="_blank" rel="noopener">NVIDIA RTX Remix</a>, a modding platform for remastering classic games with RTX, will soon be made open source, allowing more modders to streamline how assets are replaced and scenes are relit. RTX Remix will also be made accessible via a new REST application programming interface (API) to connect the platform to other modding tools like Blender and Hammer.</p>
+<p>Creative apps are continuing to adopt AI-powered <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/" target="_blank" rel="noopener">NVIDIA DLSS</a> for higher-quality ray-traced visuals in the viewport, with 3D modeling platform Womp being the latest to integrate DLSS 3.5 with Ray Reconstruction.</p>
+<p>NVIDIA unveiled <a href="https://www.nvidia.com/en-us/geforce/news/g-assist-ai-assistant/" target="_blank" rel="noopener">Project G-Assist</a>, an RTX-powered AI-assistant technology demo that provides context-aware help for PC games and apps.</p>
+<p>The new <a href="https://www.nvidia.com/en-us/geforce/news/nvidia-app-beta-update-av1-performance-tuning/" target="_blank" rel="noopener">NVIDIA app beta update</a> adds 120 frames per second AV1 video capture and one-click performance-tuning.</p>
+<p>And the latest <a href="https://www.nvidia.com/en-us/geforce/game-ready-drivers/" target="_blank" rel="noopener">Game Ready Driver</a> and <a href="https://www.nvidia.com/en-us/studio/" target="_blank" rel="noopener">NVIDIA Studio Driver</a> are available for installation today.</p>
+<h2><b>Video Gets the AI Treatment</b></h2>
+<p><a href="https://blogs.nvidia.com/blog/rtx-video-hdr-remix-studio-driver/" target="_blank" rel="noopener">RTX Video</a> is a collection of real-time, AI-based video enhancements — powered by RTX GPUs equipped with AI Tensor Cores — to dramatically improve video quality.</p>
+<p><iframe title="Introducing RTX Video Super Resolution - 4K AI Upscaling for Chrome &amp; Edge Video" width="500" height="281" src="https://www.youtube.com/embed/XA-tQpQqD7U?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>It includes RTX Video Super Resolution — an upscaling technology that removes compression artifacts and generates additional pixels to improve video sharpness and clarity up to 4K — and RTX Video HDR, which transforms standard dynamic range videos into stunning high-dynamic range on HDR10 displays.</p>
+<p><iframe title="Introducing RTX Video HDR: AI-Upscale Video to HDR Quality" width="500" height="281" src="https://www.youtube.com/embed/FHAjydnpos8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>NVIDIA has released the <a href="https://developer.nvidia.com/rtx-video-sdk" target="_blank" rel="noopener">RTX Video software development kit</a>, which allows app developers to add RTX Video effects to creator workflows.</p>
+<p>Blackmagic Design’s DaVinci Resolve, a powerful video editing app with color correction, visual effects, graphics and audio post-production capabilities, will be one of the first to integrate RTX Video. The integration is being demoed on the COMPUTEX show floor.</p>
+<p><iframe loading="lazy" title="Faster Video Editing in DaVinci Resolve with AI-Powered RTX Video Technology" width="500" height="281" src="https://www.youtube.com/embed/U7dYsgy7VDM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Wondershare Filmora, a video editing app with AI tools and pro-level social media video editing features, will support RTX Video HDR, coming soon.</p>
+<figure id="attachment_72033" aria-describedby="caption-attachment-72033" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-72033" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w-672x379.jpg" alt="" width="672" height="379" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w-672x379.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w-400x226.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w-768x433.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w-798x450.jpg 798w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w-381x215.jpg 381w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w-177x100.jpg 177w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-hdr-side-by-side-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72033" class="wp-caption-text">Wondershare Filmora will soon support RTX Video HDR.</figcaption></figure>
+<p>VLC Media Player — an open-source, cross-platform media player, has added RTX Video HDR in its <a href="https://www.videolan.org/vlc/features.html" target="_blank" rel="noopener">latest beta release</a>, following its recently added support for <a href="https://blogs.nvidia.com/blog/ai-decoded-rtxvideo-firefox/" target="_blank" rel="noopener">Mozilla Firefox</a>.</p>
+<figure id="attachment_72036" aria-describedby="caption-attachment-72036" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-72036" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w-672x338.jpg" alt="" width="672" height="338" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w-672x338.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w-400x201.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w-768x386.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w-842x424.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w-406x204.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w-188x95.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-perf-chart-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72036" class="wp-caption-text">NVIDIA hardware encoders deliver a generational boost in encoding efficiency to HEVC. Performance tested on dual Xeon Gold-6140@2.3GHz running NVIDIA L4 Tensor Core GPUs with driver 520.65.</figcaption></figure>
+<p>NVIDIA also released a new UHQ mode in NVENC, a dedicated hardware encoder on RTX GPUs, for the HEVC video compression standard (also known as H.265). The new mode increases compression by 10% without diminishing quality, making NVENC HEVC 34% more efficient than the typically used x264 Medium compression standard.</p>
+<p>DaVinci Resolve and Cyberlink PowerDirector video editing software will be adding support for the new UHQ mode in their next updates. Stay tuned for official launch dates.</p>
+<h2>RTX Remix Open Sources Creator Toolkit</h2>
+<p><a href="https://www.nvidia.com/en-us/geforce/rtx-remix/" target="_blank" rel="noopener">NVIDIA RTX Remix</a> allows modders to easily capture game assets, automatically enhance materials with generative AI tools and create stunning RTX remasters with full ray tracing.</p>
+<p>RTX Remix open beta recently added DLSS 3.5 support featuring Ray Reconstruction, an AI model that creates higher-quality images for intensive ray-traced games and apps.</p>
+<p>Later this month, NVIDIA will make the RTX Remix Toolkit open source, allowing more modders to streamline how assets are replaced and scenes are relit. The company is also increasing the supported file formats for RTX Remix’s asset ingestor and bolstering RTX Remix’s AI Texture Tools with new models.</p>
+<figure id="attachment_72039" aria-describedby="caption-attachment-72039" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-72039" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w-672x379.jpg" alt="" width="672" height="379" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w-672x379.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w-400x226.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w-768x433.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w-798x450.jpg 798w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w-381x215.jpg 381w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w-177x100.jpg 177w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-rtx-remix-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72039" class="wp-caption-text">The RTX Remix toolkit is now completely open source.</figcaption></figure>
+<p>NVIDIA is also making the capabilities of RTX Remix accessible via a new powerful REST API, allowing modders to livelink RTX Remix to other DCC tools such as Blender and modding tools such as Hammer. NVIDIA is also providing an SDK for the RTX Remix runtime to allow modders to deploy RTX Remix’s renderer into other applications and games beyond DirectX 8 and 9 classics.</p>
+<h2><b>Catch Some Rays</b></h2>
+<p><a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/" target="_blank" rel="noopener">NVIDIA DLSS</a> 3.5 with Ray Reconstruction enhances ray-traced image quality on NVIDIA RTX and GeForce RTX GPUs by replacing hand-tuned denoisers with an NVIDIA supercomputer-trained AI network that generates higher-quality pixels in between sampled rays.</p>
+<p>Previewing content in the viewport, even with high-end hardware, can sometimes offer less-than-ideal image quality, as traditional denoisers require hand-tuning for every scene. With DLSS 3.5, the AI neural network recognizes a wide variety of scenes, producing high-quality preview images and drastically reducing time spent rendering.</p>
+<p>The free browser-based 3D modeling platform <a href="https://beta.womp.com/discover?preview=777651" target="_blank" rel="noopener">Womp has added DLSS 3.5</a> to enhance interactive, photorealistic modeling in the viewport.</p>
+<figure id="attachment_72042" aria-describedby="caption-attachment-72042" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-72042" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w-672x255.jpg" alt="" width="672" height="255" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w-672x255.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w-400x152.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w-768x291.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w-842x319.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w-406x154.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w-188x71.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/studio-itns-rokaarh-wk112-dlss-1280w.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72042" class="wp-caption-text">DLSS 3.5 with Ray Reconstruction unlocks sharper visuals in the viewport.</figcaption></figure>
+<p>Chaos Vantage and D5 Render, two popular professional-grade 3D apps that feature real-time preview modes with ray tracing, have also seen drastic performance increases with DLSS 3.5 — up to a 60% boost from Ray Reconstruction and 4x from all DLSS technologies.</p>
+<h2><b>Tools That Accelerate AI Apps</b></h2>
+<p>The vast ecosystem of open-source AI models currently available are usually pretrained for general purposes and run in data centers.</p>
+<p>To create more effective app-specific AI tools that run on local PCs, NVIDIA has introduced the RTX AI Toolkit — an end-to-end workflow for the customization, optimization and deployment of AI models on RTX AI PCs.</p>
+<p>Partners such as Adobe, Topaz and Blackmagic Design are integrating RTX AI Toolkit within their popular creative apps to accelerate AI performance on RTX PCs.</p>
+<p>Developers can learn more on the <a href="https://developer.nvidia.com/blog/streamline-ai-powered-app-development-with-nvidia-rtx-ai-toolkit-for-windows-rtx-pcs/" target="_blank" rel="noopener">NVIDIA Technical Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/computex-2024-nv-blog-header-preview-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/computex-2024-nv-blog-header-preview-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Creativity Accelerated: New RTX-Powered AI Hardware and Software Announced at COMPUTEX]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Yotta CEO Sunil Gupta on Supercharging India’s Fast-Growing AI Market</title>
+		<link>https://blogs.nvidia.com/blog/yotta-ceo-supercharging-indias-ai-market/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 05 Jun 2024 13:00:51 +0000</pubDate>
+				<category><![CDATA[The AI Podcast]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72028</guid>
+
+					<description><![CDATA[India’s AI market is expected to be massive. Yotta Data Services is setting its sights on supercharging it. In this episode of NVIDIA’s AI Podcast, Sunil Gupta, cofounder, managing director and CEO of Yotta Data Services, speaks with host Noah Kravitz about the company’s Shakti Cloud offering, which provides scalable GPU services for enterprises of	<a class="read-more" href="https://blogs.nvidia.com/blog/yotta-ceo-supercharging-indias-ai-market/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>India’s AI market is expected to be massive. Yotta Data Services is setting its sights on supercharging it. In this episode of NVIDIA’s <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">AI Podcast</a>, Sunil Gupta, cofounder, managing director and CEO of Yotta Data Services, speaks with host Noah Kravitz about the company’s Shakti Cloud offering, which provides scalable GPU services for enterprises of all sizes. Yotta is the first Indian cloud services provider in the <a href="https://www.nvidia.com/en-us/about-nvidia/partners/" target="_blank" rel="noopener">NVIDIA Partner Network</a>, and its Shakti Cloud is India’s fastest AI supercomputing infrastructure, with 16 exaflops of compute capacity supported by over 16,000 <a href="https://www.nvidia.com/en-us/data-center/h100/" target="_blank" rel="noopener">NVIDIA H100 Tensor Core GPUs</a>. Tune in to hear Gupta’s insights on India’s potential as a major AI market and how to balance data center growth with sustainability and <a href="https://www.nvidia.com/en-us/glossary/energy-efficiency/#:~:text=Energy%20efficiency%20refers%20to%20a,or%20function%20within%20acceptable%20limits." target="_blank" rel="noopener">energy efficiency</a>.</p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1837778895%3Fsecret_token%3Ds-gJGZMXVJTxc&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Yotta CEO Sunil Gupta on Supercharging India’s Fast-Growing AI Market - Ep. 225" href="https://soundcloud.com/theaipodcast/yotta-ceo-sunil-gupta/s-gJGZMXVJTxc" target="_blank" rel="noopener">Yotta CEO Sunil Gupta on Supercharging India’s Fast-Growing AI Market &#8211; Ep. 225</a></div>
+<p>Stay tuned for more AI Podcast episodes recorded live from GTC.</p>
+<h2><b>Time Stamps</b></h2>
+<p>1:18: Background on Yotta<br />
+2:58: What is Shakti Cloud?<br />
+6:44: What does Shakti Cloud mean for India’s tech sector?<br />
+10:36: The self-service, scalable capabilities of Shakti Cloud<br />
+19:48: Balancing data center growth with sustainability<br />
+24:35: Yotta’s work with NVIDIA<br />
+27:48: What’s next for Yotta?</p>
+<h2><b>You Might Also Like…</b></h2>
+<p><a href="https://soundcloud.com/theaipodcast/arthur-adam-wenchel" target="_blank" rel="noopener"><b>Performance AI: Insights From Arthur’s Adam Wenchel &#8211; Ep. 221</b></a></p>
+<p>In this episode of the NVIDIA AI Podcast, recorded live at the GTC 2024, host Noah Kravitz sits down with Adam Wenchel, co-founder and CEO of Arthur, about the company’s technology, which enhances the performance of AI systems across various metrics like accuracy, explainability and fairness.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-alan-chalker" target="_blank" rel="noopener"><b>How the Ohio Supercomputing Center Drives the Future of Computing &#8211; Ep. 213</b><b><br />
+</b><br />
+</a>NASCAR races are all about speed, but even the fastest cars need to factor in safety, especially as rules and tracks change. The Ohio Supercomputer Center is ready to help. In this episode of NVIDIA’s AI Podcast, host Noah Kravitz speaks with Alan Chalker, the director of strategic programs at the OSC, about all things supercomputing.</p>
+<p><a href="https://soundcloud.com/theaipodcast/replit-ceo-amjad-masad" target="_blank" rel="noopener"><b>Replit CEO Amjad Masad on Empowering the Next Billion Software Creators &#8211; Ep. 201</b></a></p>
+<p>Replit aims to empower the next billion software creators. In this week’s episode of NVIDIA’s AI Podcast, host Noah Kraviz dives into a conversation with Replit CEO Amjad Masad about bridging the gap between ideas and software, a task simplified by advances in generative AI.</p>
+<p><a href="https://soundcloud.com/theaipodcast/renderedai" target="_blank" rel="noopener"><b>Rendered.ai CEO Nathan Kundtz on Using AI to Build Better AI &#8211; Ep. 177</b></a></p>
+<p>Data is the fuel that makes artificial intelligence run. Training machine learning and AI systems requires data, but compiling quality real-world data for AI and ML can be difficult and expensive. That’s where synthetic data comes in. In this episode of NVIDIA’s AI Podcast, Nathan Kundtz, founder and CEO of Rendered.ai, speaks with host Noah Kravtiz about a platform as a service for creating synthetic data to train AI models.</p>
+<h2><b>Subscribe to the AI Podcast</b></h2>
+<p>Get the<a href="https://blogs.nvidia.com/ai-podcast/" target="_blank" rel="noopener"> AI Podcast</a> through<a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439" target="_blank" rel="noopener"> iTunes</a>,<a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm" target="_blank" rel="noopener"> Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast" target="_blank" rel="noopener">Amazon Music, </a><a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us" target="_blank" rel="noopener">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast" target="_blank" rel="noopener">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast" target="_blank" rel="noopener">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811" target="_blank" rel="noopener">Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast" target="_blank" rel="noopener"> PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L" target="_blank" rel="noopener">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr" target="_blank" rel="noopener">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/" target="_blank" rel="noopener">TuneIn</a>.</p>
+<p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short" target="_blank" rel="noopener">this listener survey</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1159"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Yotta CEO Sunil Gupta on Supercharging India’s Fast-Growing AI Market]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>SAP and NVIDIA Create AI for ‘The Most Valuable Language,’ CEOs Unveil at Sapphire Orlando</title>
 		<link>https://blogs.nvidia.com/blog/sap-sapphire-ai-omniverse/</link>
 		
@@ -49,7 +190,7 @@
 <h2><b>Omniverse to Help Optimize Sales Processes for Complex Products</b></h2>
 <p>Using NVIDIA AI and Omniverse, SAP is building the future of connectivity and is reimagining key business processes, including the sales process for manufacturers.</p>
 <p>SAP Intelligent Product Recommendation software utilizes generative AI to analyze requirements described in natural language and generate recommendations for the most suitable configurable products. With Omniverse Cloud APIs integrated with the application, users can then interact with physically accurate models of complex products in a digital twin of the environment where they will be installed. This lets sales teams generate quotes more quickly and helps sales representatives recommend the best solutions for their customers’ needs.</p>
-<p><iframe title="Building the Future of Connectivity With SAP Using Generative AI and 3D Product Digital Twins" width="500" height="281" src="https://www.youtube.com/embed/flBI6BOvun8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Building the Future of Connectivity With SAP Using Generative AI and 3D Product Digital Twins" width="500" height="281" src="https://www.youtube.com/embed/flBI6BOvun8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>In addition, SAP Intelligent Product Recommendation can use NVIDIA AI to analyze text from multiple sources, including emails and notes captured in customer relationship management software or from product specifications documents. This lets the software generate  recommendations based on key, custom parameters, such as power requirements, lead times and expected carbon footprint.</p>
 <p>Watch the replay of the Sapphire Orlando keynote <a href="https://www.youtube.com/@sap">here</a>.</p>
 ]]></content:encoded>
@@ -266,10 +407,10 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>“Generative AI is reshaping industries and opening new opportunities for innovation and growth,” NVIDIA founder and CEO Jensen Huang said in an address ahead of this week’s COMPUTEX technology conference in Taipei.</p>
 <p>“Today, we’re at the cusp of a major shift in computing,” Huang told the audience, clad in his trademark black leather jacket. “The intersection of AI and accelerated computing is set to redefine the future.”</p>
 <p>Huang spoke ahead of one of the world’s premier technology conferences to an audience of more than 6,500 industry leaders, press, entrepreneurs, gamers, creators and AI enthusiasts gathered at the glass-domed National Taiwan University Sports Center set in the verdant heart of Taipei.</p>
-<p><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-71980" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-672x464.jpg" alt="" width="672" height="464" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-672x464.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-400x276.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-768x530.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-1536x1060.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-652x450.jpg 652w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-312x215.jpg 312w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-145x100.jpg 145w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-1280x883.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024.jpg 1980w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-71980" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-672x464.jpg" alt="" width="672" height="464" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-672x464.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-400x276.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-768x530.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-1536x1060.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-652x450.jpg 652w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-312x215.jpg 312w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-145x100.jpg 145w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-1280x883.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024.jpg 1980w" sizes="(max-width: 672px) 100vw, 672px" /></p>
 <p>The theme: NVIDIA accelerated platforms are in full production, whether through AI PCs and consumer devices featuring a host of NVIDIA RTX-powered capabilities or enterprises building and deploying AI factories with NVIDIA’s full-stack computing platform.</p>
 <p>“The future of computing is accelerated,” Huang said. “With our innovations in AI and accelerated computing, we’re pushing the boundaries of what’s possible and driving the next wave of technological advancement.”<br />
-<iframe title="YouTube video player" src="https://www.youtube.com/embed/pKXDVsWZmUU?si=bYffxIwUxYMev6hK" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><strong> </strong></p>
+<iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/pKXDVsWZmUU?si=bYffxIwUxYMev6hK" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><strong> </strong></p>
 <h2>‘One-Year Rhythm’</h2>
 <p>More’s coming, with Huang revealing a roadmap for new semiconductors that will arrive on a one-year rhythm. Revealed for the first time, the Rubin platform will succeed the upcoming Blackwell platform, featuring new GPUs, a new Arm-based CPU — Vera — and advanced networking with NVLink 6, CX9 SuperNIC and the X1600 converged InfiniBand/Ethernet switch.</p>
 <p>“Our company has a one-year rhythm. Our basic philosophy is very simple: build the entire data center scale, disaggregate and sell to you parts on a one-year rhythm, and push everything to technology limits,” Huang explained.</p>
@@ -310,7 +451,7 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 <p>Huang emphasized NVIDIA Isaac’s role in boosting factory and warehouse efficiency, with global leaders like BYD Electronics, Siemens, Teradyne Robotics and Intrinsic adopting its advanced libraries and AI models.</p>
 <p><a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> on the IGX platform, with partners like ADLINK, Advantech and ONYX, delivers edge AI solutions meeting strict regulatory standards, essential for medical technology and other industries.</p>
 <p>Huang ended his keynote on the same note he began it on, paying tribute to Taiwan and NVIDIA’s many partners there. “Thank you,” Huang said. “I love you guys.”</p>
-<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/pKXDVsWZmUU?si=bYffxIwUxYMev6hK" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/pKXDVsWZmUU?si=bYffxIwUxYMev6hK" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 ]]></content:encoded>
 					
 		
@@ -437,7 +578,7 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 <p><a href="https://developer.nvidia.com/metropolis-for-factories">NVIDIA Metropolis for Factories</a> offers a state-of-the-art AI reference workflow for bringing sophisticated and accurate AOI inspection applications to production faster.</p>
 <p>TRI, Taiwan’s leading AOI equipment maker, has announced it&#8217;s integrating NVIDIA Metropolis for Factories workflow and capabilities into its latest AOI systems and is also planning to use NVIDIA NIM to further optimize system performance.</p>
 <p>Wistron is expanding its <a href="https://youtu.be/XlJMZ1rqSco">OneAI platform</a> for visual inspection and AOI with Metropolis. OneAI has been deployed in more than 10 Wistron factories globally, spanning hundreds of inspection points.</p>
-<p>MediaTek, a leading innovator in connectivity and multimedia, and one of Taiwan’s largest IoT silicon vendors, announced at COMPUTEX that it’s teaming with NVIDIA to integrate NVIDIA TAO training and pretrained models into its AI development workflow for IoT device customers. The collaboration brings Metropolis and the latest advances in AI and visual perception to billions of IoT far-edge devices and streamlines software development for MediaTek’s next phase of growth in edge IoT.</p>
+<p>MediaTek, a leading innovator in connectivity and multimedia, and one of Taiwan’s largest IoT silicon vendors, <a href="https://corp.mediatek.com/news-events/press-releases/mediatek-integrates-nvidia-tao-toolkit-with-neuropilot-sdk-for-accelerated-development-of-edge-ai-applications-in-iot">announced</a> at COMPUTEX that it’s teaming with NVIDIA to integrate NVIDIA TAO training and pretrained models into its AI development workflow for IoT device customers. The collaboration brings Metropolis and the latest advances in AI and visual perception to billions of IoT far-edge devices and streamlines software development for MediaTek’s next phase of growth in edge IoT.</p>
 <p><i>Learn about </i><a href="https://developer.nvidia.com/metropolis-for-factories"><i>NVIDIA Metropolis for Factories</i></a>,<i> </i><a href="https://www.nvidia.com/en-us/ai/"><i>NVIDIA NIM</i></a><i> and the </i><a href="https://developer.nvidia.com/blog/optimize-processes-for-large-spaces-with-a-multi-camera-tracking-workflow/"><i>NVIDIA Metropolis multi-camera tracking workflow</i></a>,<i> which developers can use to build state-of-the-art real-time locating services and worker safety into their factory or warehouse operations. </i></p>
 ]]></content:encoded>
 					
@@ -1035,125 +1176,6 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Riding the Wayve of AV 2.0, Driven by Generative AI]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Decoding How NVIDIA RTX AI PCs and Workstations Tap the Cloud to Supercharge Generative AI</title>
-		<link>https://blogs.nvidia.com/blog/ai-decoded-rtx-pc-hybrid/</link>
-		
-		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
-		<pubDate>Wed, 29 May 2024 13:00:53 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[AI Decoded]]></category>
-		<category><![CDATA[Artficial Intelligence]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71827</guid>
-
-					<description><![CDATA[Generative AI is enabling new capabilities for Windows applications and games. It’s powering unscripted, dynamic NPCs, it’s enabling creators to generate novel works of art, and it’s helping gamers boost frame rates by up to 4x.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for GeForce RTX PC and RTX workstation users.</i></p>
-<p><a href="https://www.nvidia.com/en-us/glossary/generative-ai/">Generative AI</a> is enabling new capabilities for Windows applications and games. It’s powering unscripted, dynamic NPCs, it’s enabling creators to generate novel works of art, and it’s helping gamers boost frame rates by up to 4x. But this is just the beginning.</p>
-<p>As the capabilities and use cases for generative AI continue to grow, so does the demand for compute to support it.</p>
-<p>Hybrid AI combines the onboard AI acceleration of <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX</a> with scalable, cloud-based GPUs to effectively and efficiently meet the demands of AI workloads.</p>
-<h2><b>Hybrid AI, a Love Story</b></h2>
-<p>With growing AI adoption, app developers are looking for deployment options: AI running locally on RTX GPUs delivers high performance and low latency, and is always available — even when not connected to the internet. On the other hand, AI running in the cloud can run larger models and scale across many GPUs, serving multiple clients simultaneously. In many cases, a single application will use both.</p>
-<p>Hybrid AI is a kind of matchmaker that harmonizes local PC and workstation compute with cloud scalability. It provides the flexibility to optimize AI workloads based on specific use cases, cost and performance. It helps developers ensure that AI tasks run where it makes the most sense for their specific applications.</p>
-<p>Whether the AI is running locally or in the cloud it gets accelerated by NVIDIA GPUs and NVIDIA’s AI stack, including TensorRT and TensorRT-LLM. That means less time staring at pinwheels of death and more opportunity to deliver cutting-edge, AI powered features to users.</p>
-<p>A range of NVIDIA tools and technologies support hybrid AI workflows for creators, gamers, and developers.</p>
-<h2><b>Dream in the Cloud, Bring to Life on RTX</b></h2>
-<p>Generative AI has demonstrated its ability to help artists ideate, prototype and brainstorm new creations. One such solution, the cloud-based <a href="https://www.istockphoto.com/ai">Generative AI by iStock</a> — powered by <a href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">NVIDIA Edify</a> — is a generative photography service that was built for and with artists, training only on licensed content and with compensation for artist contributors.</p>
-<p>Generative AI by iStock goes beyond image generation, providing artists with extensive tools to explore styles, variations, modify parts of an image or expand the canvas. With all these tools, artists can ideate numerous times and still bring ideas to life quickly.</p>
-<p>Once the creative concept is ready, artists can bring it back to their local systems. RTX-powered PCs and workstations offer artists AI acceleration in more than 125 of the top creative apps to realize the full vision — whether it’s creating an amazing piece of artwork in Photoshop with local AI tools, animating the image with a parallax effect in DaVinci Resolve, or building a 3D scene with the reference image in Blender with ray tracing acceleration, and AI denoising in Optix.</p>
-<h2><b>Hybrid ACE Brings NPCs to Life</b></h2>
-<p>Hybrid AI is also enabling a <a href="https://blogs.nvidia.com/blog/ai-decoded-ace-microservices-digital-humans/">new realm of interactive PC gaming</a> with <a href="https://developer.nvidia.com/ace">NVIDIA ACE</a>, allowing game developers and digital creators to integrate state-of-the-art generative AI models into digital avatars on RTX AI PCs.</p>
-<p><iframe loading="lazy" title="NVIDIA ACE | NVIDIA x Inworld AI - Pushing the Boundaries of Game Characters in Covert Protocol" width="500" height="281" src="https://www.youtube.com/embed/uryeFhnNzEs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>Powered by AI neural networks, <a href="https://developer.nvidia.com/ace">NVIDIA ACE</a> lets developers and designers create non-playable characters (NPCs) that can understand and respond to human player text and speech. It leverages AI models, including speech-to-text models to handle natural language spoken aloud, to generate NPCs’ responses in real time.</p>
-<h2><b>A Hybrid Developer Tool That Runs Anywhere</b></h2>
-<p>Hybrid also helps developers build and tune new AI models. <a href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/">NVIDIA AI Workbench</a> helps developers quickly create, test and customize pretrained generative AI models and LLMs on RTX GPUs. It offers streamlined access to popular repositories like Hugging Face, GitHub and <a href="https://catalog.ngc.nvidia.com/?filters=&amp;orderBy=weightPopularDESC&amp;query=&amp;page=&amp;pageSize=">NVIDIA NGC</a>, along with a simplified user interface that enables data scientists and developers to easily reproduce, collaborate on and migrate projects.</p>
-<p><iframe loading="lazy" title="NVIDIA AI Workbench | Fine Tuning Generative AI" width="500" height="281" src="https://www.youtube.com/embed/ntMRzPzSvM4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>Projects can be easily scaled up when additional performance is needed — whether to the data center, a public cloud or <a href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> — and then brought back to local RTX systems on a PC or workstation for inference and light customization. Data scientists and developers can leverage pre-built Workbench projects to chat with documents using retrieval-augmented generation (<a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">RAG</a>), customize LLMs using fine-tuning, accelerate data science workloads with seamless CPU-to-GPU transitions and more.</p>
-<p>The <a href="https://github.com/NVIDIA/workbench-example-hybrid-rag">Hybrid RAG Workbench project</a> provides a customizable RAG application that developers can run and adapt themselves. They can embed their documents locally and run inference either on a local RTX system, a cloud endpoint hosted on <a href="http://ai.nvidia.com">NVIDIA’s API catalog</a> or using <a href="http://ai.nvidia.com">NVIDIA NIM</a> microservices. The project can be adapted to use various models, endpoints and containers, and provides the ability for developers to quantize models to run on their GPU of choice.</p>
-<p>NVIDIA GPUs power remarkable AI solutions locally on <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA GeForce RTX</a> PCs and RTX workstations and in the cloud. Creators, gamers and developers can get the best of both worlds with growing hybrid AI workflows.</p>
-<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/hybrid-nv-blog-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/hybrid-nv-blog-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Decoding How NVIDIA RTX AI PCs and Workstations Tap the Cloud to Supercharge Generative AI]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Tidy Tech: How Two Stanford Students Are Building Robots for Handling Household Chores</title>
-		<link>https://blogs.nvidia.com/blog/stanford-students-robots-household-chores/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Wed, 29 May 2024 13:00:16 +0000</pubDate>
-				<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[The AI Podcast]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71821</guid>
-
-					<description><![CDATA[Imagine having a robot that could help you clean up after a party — or fold heaps of laundry. Chengshu Eric Li and Josiah David Wong, two Stanford University Ph.D. students advised by renowned American computer scientist Professor Fei-Fei Li, are making that a ‌dream come true. In this episode of the AI Podcast, host	<a class="read-more" href="https://blogs.nvidia.com/blog/stanford-students-robots-household-chores/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Imagine having a robot that could help you clean up after a party — or fold heaps of laundry. Chengshu Eric Li and Josiah David Wong, two Stanford University Ph.D. students advised by renowned American computer scientist Professor Fei-Fei Li, are making that a ‌dream come true. In this episode of the <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">AI Podcast</a>, host Noah Kravitz spoke with the two about their project, BEHAVIOR-1K, which aims to enable robots to perform 1,000 household chores, including picking up fallen objects or cooking. To train the robots, they’re using the <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse platform</a>, as well as reinforcement and imitation learning techniques. Listen to hear more about the breakthroughs and challenges Li and Wong experienced along the way.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1832461098%3Fsecret_token%3Ds-syNAqY6PTo6&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="How Two Stanford Students Are Building Robots for Handling Household Chores - Ep. 219" href="https://soundcloud.com/theaipodcast/household-robots/s-syNAqY6PTo6" target="_blank" rel="noopener">How Two Stanford Students Are Building Robots for Handling Household Chores &#8211; Ep. 219</a></div>
-<p>Stay tuned for more AI Podcast episodes recorded live from GTC.</p>
-<h2><b>Time Stamps</b></h2>
-<p><span>3:33: Background on the BEHAVIOR-1K project</span></p>
-<p><span>5:00: Why use a simulated environment to train robots? </span></p>
-<p><span>6:48: Why build a new simulation engine instead of using an existing one? </span></p>
-<p><span>10:48: The process of training the robots to perform household chores</span></p>
-<p><span>14:04: Some of the most complex tasks taught to the robots</span></p>
-<p><span>19:07: How are large language models and large vision models affecting the progress of robotics?</span></p>
-<p><span>24:09: What’s next for the project?  </span></p>
-<h2>You Might Also Like…</h2>
-<p><a href="https://soundcloud.com/theaipodcast/ai-llm" target="_blank" rel="noopener"><b>NVIDIA’s Annalamai Chockalingam on the Rise of LLMs &#8211; Ep. 206</b></a></p>
-<p>Generative AI and large language models (LLMs) are stirring change across industries — but according to NVIDIA Senior Product Manager of Developer Marketing Annamalai Chockalingam, “we’re still in the early innings.” In the latest episode of NVIDIA’s AI Podcast, host Noah Kravitz spoke with Chockalingam about LLMs: what they are, their current state and their future potential.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-stroller" target="_blank" rel="noopener"><b>How GluxKind Created Ella, the AI-Powered Smart Stroller &#8211; Ep. 193</b><b><br />
-</b><br />
-</a>Imagine a stroller that can drive itself, help users up hills, brake on slopes and provide alerts of potential hazards. That’s what GlüxKind has done with Ella, an award-winning smart stroller that uses the NVIDIA Jetson edge AI and robotics platform to power its AI features.</p>
-<p><a href="https://soundcloud.com/theaipodcast/gantheftauto-harrison-kinsley-on-ai-generated-gaming-environments" target="_blank" rel="noopener"><b>GANTheftAuto: Harrison Kinsley on AI-Generated Gaming Environments &#8211; Ep. 151</b></a></p>
-<p>Machines have long played games &#8211; think of Deep Blue or AlphaGo. Now they&#8217;re building them. GANTheftAuto creator Harrison Kinsley talks about his creation on the latest episode of the AI Podcast.</p>
-<p><a href="https://soundcloud.com/theaipodcast/nvidia-liila-torabi" target="_blank" rel="noopener"><b>NVIDIA’s Liila Torabi Talks the New Era of Robotics Through Isaac Sim &#8211; Ep. 147</b></a></p>
-<p>Robots are not just limited to the assembly line. At NVIDIA, Liila Torabi works on making the next generation of robotics possible. Torabi is the senior product manager for Isaac Sim, a robotics and AI simulation platform powered by NVIDIA Omniverse. Torabi spoke with NVIDIA AI Podcast host Noah Kravitz about the new era of robotics, one driven by making robots smarter through AI.</p>
-<h2>Subscribe to the AI Podcast</h2>
-<p>Get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music,</a> <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811">Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast"> PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
-<p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1159"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Tidy Tech: How Two Stanford Students Are Building Robots for Handling Household Chores]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
