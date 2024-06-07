@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 05 Jun 2024 23:33:19 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 07 Jun 2024 03:22:25 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,103 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>Why Accelerated Data Processing Is Crucial for AI Innovation in Every Industry</title>
+		<link>https://blogs.nvidia.com/blog/accelerated-data-processing-ai-industry-innovation/</link>
+		
+		<dc:creator><![CDATA[Ben Oliveri]]></dc:creator>
+		<pubDate>Fri, 07 Jun 2024 15:00:19 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Data Science]]></category>
+		<category><![CDATA[Financial Services]]></category>
+		<category><![CDATA[Healthcare and Life Sciences]]></category>
+		<category><![CDATA[Industrial and Manufacturing]]></category>
+		<category><![CDATA[RAPIDS]]></category>
+		<category><![CDATA[Telecommunications]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72077</guid>
+
+					<description><![CDATA[Across industries, AI is supercharging innovation with machine-powered computation. In finance, bankers are using AI to detect fraud more quickly and keep accounts safe, telecommunications providers are improving networks to deliver superior service, scientists are developing novel treatments for rare diseases, utility companies are building cleaner, more reliable energy grids and automotive companies are making	<a class="read-more" href="https://blogs.nvidia.com/blog/accelerated-data-processing-ai-industry-innovation/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Across industries, AI is supercharging innovation with machine-powered computation. In finance, bankers are using AI to detect fraud more quickly and keep accounts safe, telecommunications providers are improving networks to deliver superior service, scientists are developing novel treatments for rare diseases, utility companies are building cleaner, more reliable energy grids and automotive companies are making self-driving cars safer and more accessible.</p>
+<p>The backbone of top AI use cases is data. Effective and precise AI models require training on extensive datasets. Enterprises seeking to harness the power of AI must establish a data pipeline that involves extracting data from diverse sources, transforming it into a consistent format and storing it efficiently.</p>
+<p>Data scientists work to refine datasets through multiple experiments to fine-tune AI models for optimal performance in real-world applications. These applications, from voice assistants to personalized recommendation systems, require rapid processing of large data volumes to deliver real-time performance.</p>
+<p>As AI models become more complex and begin to handle diverse data types such as text, audio, images, and video, the need for rapid data processing becomes more critical. Organizations that continue to rely on legacy CPU-based computing are struggling with hampered innovation and performance due to data bottlenecks, escalating data center costs, and insufficient computing capabilities.</p>
+<p>Many businesses are turning to <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> to integrate AI into their operations. This method leverages GPUs, specialized hardware, software, and parallel computing techniques to boost computing performance by as much as 150x and <a href="https://blogs.nvidia.com/blog/gpu-energy-efficiency-nersc/">increase energy efficiency by up to 42x</a>.</p>
+<p>Leading companies across different sectors are using accelerated data processing to spearhead groundbreaking AI initiatives.</p>
+<h2><b>Finance Organizations Detect Fraud in a Fraction of a Second</b></h2>
+<p>Financial organizations face a significant challenge in detecting patterns of fraud due to the vast amount of transactional data that requires rapid analysis. Additionally, the scarcity of labeled data for actual instances of fraud poses a difficulty in training AI models. Conventional data science pipelines lack the required acceleration to handle the large data volumes associated with fraud detection. This leads to slower processing times that hinder real-time data analysis and fraud detection capabilities.</p>
+<p>To overcome these challenges, <a href="https://resources.nvidia.com/en-us-financial-services-industry/american-express-adopts-ai">American Express</a>, which handles more than 8 billion transactions per year, uses accelerated computing to train and deploy long short-term memory (LSTM) models. These models excel in sequential analysis and detection of anomalies, and can adapt and learn from new data, making them ideal for combating fraud.</p>
+<p>Leveraging parallel computing techniques on GPUs, American Express significantly speeds up the training of its LSTM models. GPUs also enable live models to process huge volumes of transactional data to make high-performance computations to detect fraud in real time.</p>
+<p>The system operates within two milliseconds of latency to better protect customers and merchants, delivering a 50x improvement over a CPU-based configuration. By combining the accelerated LSTM deep neural network with its existing methods, American Express has improved fraud detection accuracy by up to 6% in specific segments.</p>
+<p>Financial companies can also use accelerated computing to reduce data processing costs. Running data-heavy Spark3 workloads on NVIDIA GPUs, PayPal confirmed the potential to <a href="https://resources.nvidia.com/en-us-financial-services-industry/gtc24-s62506">reduce cloud costs by up to 70%</a> for big data processing and AI applications.</p>
+<p>By processing data more efficiently, financial institutions can detect fraud in real time, enabling faster decision-making without disrupting transaction flow and minimizing the risk of financial loss.</p>
+<h2><b>Telcos Simplify Complex Routing Operations</b></h2>
+<p>Telecommunications providers generate immense amounts of data from various sources, including network devices, customer interactions, billing systems, and network performance and maintenance.</p>
+<p>Managing national networks that handle hundreds of petabytes of data every day requires complex technician routing to ensure service delivery. To optimize technician dispatch, advanced routing engines perform trillions of computations, taking into account factors like weather, technician skills, customer requests and fleet distribution. Success in these operations depends on meticulous data preparation and sufficient computing power.</p>
+<p>AT&amp;T, which operates one of the nation’s largest field dispatch teams to service its customers, is enhancing data-heavy routing operations with NVIDIA cuOpt, which relies on heuristics, metaheuristics and optimizations to calculate complex vehicle routing problems.</p>
+<p>In early trials, <a href="https://nvidianews.nvidia.com/news/at-t-supercharges-operations-with-nvidia-ai">cuOpt delivered routing solutions in 10 seconds</a>, achieving a 90% reduction in cloud costs and enabling technicians to complete more service calls daily. <a href="https://www.nvidia.com/en-us/deep-learning-ai/software/rapids/">NVIDIA RAPIDS</a>, a suite of software libraries that enables acceleration of data science and analytics pipelines, further accelerates cuOpt, allowing companies to integrate local search heuristics and metaheuristics like Tabu search for continuous route optimization.</p>
+<p>AT&amp;T is adopting <a href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/apache-spark-3/">NVIDIA RAPIDS Accelerator for Apache Spark</a> to enhance the performance of Spark-based AI and data pipelines. This has helped the company boost operational efficiency on everything from training AI models to maintaining network quality to reducing customer churn and improving fraud detection. With RAPIDS Accelerator, AT&amp;T is reducing its cloud computing spend for target workloads while enabling faster performance and reducing its carbon footprint.</p>
+<p>Accelerated data pipelines and processing will be critical as telcos seek to improve operational efficiency while delivering the highest possible service quality.</p>
+<h2><b>Biomedical Researchers Condense Drug Discovery Timelines</b></h2>
+<p>As researchers utilize technology to study the roughly 25,000 genes in the human genome to understand their relationship with diseases, there has been an explosion of medical data and peer-reviewed research papers. Biomedical researchers rely on these papers to narrow down the field of study for novel treatments. However, conducting literature reviews of such a massive and expanding body of relevant research has become an impossible task.</p>
+<p>AstraZeneca, a leading pharmaceutical company, developed a Biological Insights Knowledge Graph (BIKG) to aid scientists across the drug discovery process, from literature reviews to screen hit rating, target identification and more. This graph integrates public and internal databases with information from scientific literature, modeling between 10 million and 1 billion complex biological relationships.</p>
+<p>BIKG has been effectively used for gene ranking, aiding scientists in hypothesizing high-potential targets for novel disease treatments. <a href="https://www.nvidia.com/en-us/on-demand/session/gtcfall21-a31252/">At NVIDIA GTC</a>, the AstraZeneca team presented a project that successfully identified genes linked to resistance in lung cancer treatments.</p>
+<p>To narrow down potential genes, data scientists and biological researchers collaborated to define the criteria and gene features ideal for targeting in treatment development. They trained a machine learning algorithm to search the BIKG databases for genes with the designated features mentioned in literature as treatable. Utilizing NVIDIA RAPIDS for faster computations, the team reduced the initial gene pool from 3,000 to just 40 target genes, a task that previously took months but now takes mere seconds.</p>
+<p>By supplementing drug development with accelerated computing and AI, pharmaceutical companies and researchers can finally use the enormous troves of data building up in the medical field to develop novel drugs faster and more safely, ultimately having a life-saving impact.</p>
+<h2><b>Utility Companies Build the Future of Clean Energy </b></h2>
+<p>There’s been a significant push to shift to carbon-neutral energy sources in the energy sector. With the cost of harnessing renewable resources such as solar energy falling drastically over the last 10 years, the opportunity to make real progress toward a clean energy future has never been greater.</p>
+<p>However, this shift toward integrating clean energy from wind farms, solar farms and home batteries has introduced new complexities in grid management. As energy infrastructure diversifies and two-way power flows must be accommodated, managing the grid has become more data-intensive. New smart grids are now required to handle high-voltage areas for vehicle charging. They must also manage the availability of distributed stored energy sources and adapt to variations in usage across the network.</p>
+<p><a href="https://resources.nvidia.com/en-us-energy-utilities/gtc24-s61864">Utilidata, a prominent grid-edge software company</a>, has collaborated with NVIDIA to develop a distributed AI platform, Karman, for the grid edge using a custom NVIDIA Jetson Orin edge AI module. This custom chip and platform, embedded in electricity meters, transforms each meter into a data collection and control point, capable of handling thousands of data points per second.</p>
+<p>Karman processes real-time, high-resolution data from meters at the network’s edge. This enables utility companies to gain detailed insights into grid conditions, predict usage and seamlessly integrate distributed energy resources in seconds, rather than minutes or hours. Additionally, with inference models on edge devices, network operators can anticipate and quickly identify line faults to predict potential outages and conduct preventative maintenance to increase grid reliability.</p>
+<p>Through the integration of AI and accelerated data analytics, Karman helps utility providers transform existing infrastructure into efficient smart grids. This allows for tailored, localized electricity distribution to meet fluctuating demand patterns without extensive physical infrastructure upgrades, facilitating a more cost-effective modernization of the grid.</p>
+<h2><b>Automakers Enable Safer, More Accessible, Self-Driving Vehicles</b></h2>
+<p>As auto companies strive for full self-driving capabilities, vehicles must be able to detect objects and navigate in real time. This requires high-speed data processing tasks, including feeding live data from cameras, lidar, radar and GPS into AI models that make navigation decisions to keep roads safe.</p>
+<p>The autonomous driving inference workflow is complex and includes multiple AI models along with necessary preprocessing and postprocessing steps. Traditionally, these steps were handled on the client side using CPUs. However, this can lead to significant bottlenecks in processing speeds, which is an unacceptable drawback for an application where fast processing equates to safety.</p>
+<p>To enhance the efficiency of autonomous driving workflows, <a href="https://resources.nvidia.com/en-us-automotive-resource-library/nio">electric vehicle manufacturer NIO</a> integrated NVIDIA Triton Inference Server into its inference pipeline. NVIDIA Triton is open-source, multi-framework, inference-serving software. By centralizing data processing tasks, NIO reduced latency by 6x in some core areas and increased overall data throughput by up to 5x.</p>
+<p>NIO’s GPU-centric approach made it easier to update and deploy new AI models without the need to change anything on the vehicles themselves. Additionally, the company could use multiple AI models at the same time on the same set of images without having to send data back and forth over a network, which saved on data transfer costs and improved performance.</p>
+<p>By using accelerated data processing, autonomous vehicle software developers ensure they can reach a high-performance standard to avoid traffic accidents, lower transportation costs and improve mobility for users.</p>
+<h2><b>Retailers Improve Demand Forecasting</b></h2>
+<p>In the fast-paced retail environment, the ability to process and analyze data quickly is critical to adjusting inventory levels, personalizing customer interactions and optimizing pricing strategies on the fly. The larger a retailer is and the more products it carries, the more complex and compute-intensive its data operations will be.</p>
+<p>Walmart, the largest retailer in the world, turned to accelerated computing to significantly improve forecasting accuracy for 500 million item-by-store combinations across 4,500 stores.</p>
+<p>As Walmart’s data science team built more robust machine learning algorithms to take on this mammoth forecasting challenge, the existing computing environment began to falter, with jobs failing to complete or generating inaccurate results. The company found that data scientists were having to remove features from algorithms just so they would run to completion.</p>
+<p>To improve its forecasting operations, <a href="https://blogs.nvidia.com/blog/walmart-nvidia/">Walmart started using NVIDIA GPUs and RAPIDs</a>. The company now uses a forecasting model with 350 data features to predict sales across all product categories. These features encompass sales data, promotional events, and external factors like weather conditions and major events like the Super Bowl, which influence demand.</p>
+<p>Advanced models helped Walmart improve forecast accuracy from 94% to 97% while eliminating an estimated $100 million in fresh produce waste and reducing stockout and markdown scenarios. GPUs also ran models 100x faster with jobs complete in just four hours, an operation that would’ve taken several weeks in a CPU environment.</p>
+<p>By shifting data-intensive operations to GPUs and accelerated computing, retailers can lower both their cost and their carbon footprint while delivering best-fit choices and lower prices to shoppers.</p>
+<h2><b>Public Sector Improves Disaster Preparedness </b></h2>
+<p>Drones and satellites capture huge amounts of aerial image data that public and private organizations use to predict weather patterns, track animal migrations and observe environmental changes. This data is invaluable for research and planning, enabling more informed decision-making in fields like agriculture, disaster management and efforts to combat climate change. However, the value of this imagery can be limited if it lacks specific location metadata.</p>
+<p>A federal agency working with NVIDIA needed a way to automatically pinpoint the location of images missing geospatial metadata, which is essential for missions such as search and rescue, responding to natural disasters and monitoring the environment. However, identifying a small area within a larger region using an aerial image without metadata is extremely challenging, akin to locating a needle in a haystack. Algorithms designed to help with geolocation must address variations in image lighting and differences due to images being taken at various times, dates and angles.</p>
+<p>To identify non-geotagged aerial images, NVIDIA, Booz Allen and the government agency collaborated on a solution that uses computer vision algorithms to extract information from image pixel data to scale the image similarity search problem.</p>
+<p>When attempting to solve this problem, an NVIDIA solutions architect first used a Python-based application. Initially running on CPUs, processing took more than 24 hours. GPUs supercharged this to just minutes, performing thousands of data operations in parallel versus only a handful of operations on a CPU. By shifting the application code to CuPy, an open-sourced GPU-accelerated library, the application experienced a remarkable 1.8-million-x speedup, returning results in 67 microseconds.</p>
+<p>With a solution that can process images and the data of large land masses in just minutes, organizations can gain access to the critical information needed to respond more quickly and effectively to emergencies and plan proactively, potentially saving lives and safeguarding the environment.</p>
+<h2><b>Accelerate AI Initiatives and Deliver Business Results</b></h2>
+<p>Companies using accelerated computing for data processing are advancing AI initiatives and positioning themselves to innovate and perform at higher levels than their peers.</p>
+<p>Accelerated computing handles larger datasets more efficiently, enables faster model training and selection of optimal algorithms, and facilitates more precise results for live AI solutions.</p>
+<p>Enterprises that use it can achieve superior price-performance ratios compared to traditional CPU-based systems and enhance their ability to deliver outstanding results and experiences to customers, employees and partners.</p>
+<p><i>Learn how </i><a href="https://www.nvidia.com/en-us/data-center/solutions/accelerated-computing/"><i>accelerated computing</i></a><i> helps organizations achieve AI objectives and drive innovation. </i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/industries-corp-blog-data-processing-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/industries-corp-blog-data-processing-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Why Accelerated Data Processing Is Crucial for AI Innovation in Every Industry]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Here Comes a New Challenger: ‘Street Fighter 6’ Joins GeForce NOW</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-street-fighter-6-xdefiant/</link>
 		
@@ -1111,98 +1208,6 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Elevate Your Expertise: NVIDIA Introduces AI Infrastructure and Operations Training and Certification]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>GeForce NOW Brings the Heat With ‘World of Warcraft’</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-world-of-warcraft/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 30 May 2024 13:00:17 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71843</guid>
-
-					<description><![CDATA[World of Warcraft comes to the cloud this week, part of the 17 games joining the GeForce NOW library, with seven available to stream this week. Plus, it’s time to get rewarded. Get a free in-game mount in Elder Scrolls Online starting today by opting into GeForce NOW’s Rewards program. Heroes Rise to the Cloud	<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-world-of-warcraft/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>World of Warcraft </i>comes to the cloud this week, part of the 17 games joining the <a href="http://play.geforcenow.com">GeForce NOW library</a>, with seven available to stream this week.</p>
-<p>Plus, it’s time to get rewarded. Get a free in-game mount in <i>Elder Scrolls Online</i> starting today by opting into <a href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW’s Rewards program</a>.</p>
-<h2><b>Heroes Rise to the Cloud</b></h2>
-<p>Dive into the immersive realms of <i>World of Warcraft, </i>including the latest expansion<i> Dragonflight, </i>the nostalgic journey of <i>World of Warcraft Classic</i> and the recently launched <i>World of Warcraft Cataclysm Classic</i>. These popular, massively multiplayer, online role-playing experiences from Blizzard Entertainment immerse players in legendary battles.</p>
-<figure id="attachment_71862" aria-describedby="caption-attachment-71862" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71862" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-672x378.png" alt="World of Warcraft: Dragonflight on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/image-34-1280x720.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71862" class="wp-caption-text"><em>Dragonriders fly best in the cloud.</em></figcaption></figure>
-<p>Embark on a journey of endless adventure in the rich and dynamic universe of Azeroth in the latest modern expansion, <i>World of Warcraft: Dragonflight</i>. The expansive landscapes of the Dragon Isles are available to explore — even on the back of a fearsome dragon. The newly awakened Dracthyr Evokers are also available, <i>World of Warcraft</i>’s first-ever playable race-and-class combo. GeForce NOW Priority and Ultimate members can get immersed in the cinematic gameplay with support for RTX ON.</p>
-<figure id="attachment_71859" aria-describedby="caption-attachment-71859" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71859" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-672x415.jpg" alt="World of Warcraft Cataclysm Classic on GeForce NOW" width="672" height="415" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-672x415.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-400x247.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-768x474.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-1536x948.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-729x450.jpg 729w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-348x215.jpg 348w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-162x100.jpg 162w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Cataclysm_Classic_Azeroth_Aflame_Key_Art-1280x790.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71859" class="wp-caption-text"><em>Witness the return of Deathwing.</em></figcaption></figure>
-<p>Face the return of Deathwing the Destroyer, whose violent emergence shatters and reshapes the continent of Azeroth. Journey into an era of fire and destruction in <i>World of Warcraft Cataclysm Classic</i> and usher in a new era for Azeroth. The updated game brings new dungeons and raids, fresh race and class combinations, and more.</p>
-<figure id="attachment_71856" aria-describedby="caption-attachment-71856" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71856" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-672x378.jpg" alt="World of Warcraft Classic on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/05/WoW_Classic_Molten_Core_3840x2160-1-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71856" class="wp-caption-text"><em>Azeroth awaits.</em></figcaption></figure>
-<p>Whether a seasoned adventurer or a newcomer to the game, head to the Azeroth of yesteryear in <i>World of Warcraft Classic</i> and relive the experience of the game as it was upon its initial launch, with a few new upgrades. Explore the Eastern Kingdoms and Kalimdor, venture into iconic dungeons or engage in legendary player-vs-player battles.</p>
-<p>Experience it all with a <a href="http://geforcenow.com">GeForce NOW membership</a>, which means no waiting for downloads or games to update, even for the upcoming <i>World of Warcraft</i> expansion <i>The War Within</i>.</p>
-<h2><b>Mount Up</b></h2>
-<p>GeForce NOW members get access to rewards that enhance the gaming experience. This week <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-elder-scrolls-online-japan-expansion-april-games-list/"><i>The Elder Scrolls Online</i></a> 10-year celebration continues with an in-game reward for GeForce NOW members.</p>
-<figure id="attachment_71853" aria-describedby="caption-attachment-71853" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71853" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-672x336.jpg" alt="New member reward on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-eso-reward-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71853" class="wp-caption-text"><em>Manes flow freely in the cloud.</em></figcaption></figure>
-<p>Mounts offer a great way to travel the world and provide a completely different experience to traveling on foot. This new free reward provides members with a trusty companion beyond the starter option. The mount has a sunny disposition, matching its vibrant, multihued coat. It’s an excellent horse for a new rider or one who regularly ventures into treacherous situations.</p>
-<p>Members can claim their free mount starting today by opting into rewards and checking their email for instructions on how to redeem. Ultimate and Priority members can redeem starting today, while free members will be able to claim it starting May 31. It’s available until June 30, first come first served.</p>
-<h2><b>New Games, Assemble!</b></h2>
-<figure id="attachment_71850" aria-describedby="caption-attachment-71850" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-71850" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-672x336.jpg" alt="Capes on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-spotlight-capes-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-71850" class="wp-caption-text"><em>Turn-based strategy with a superhero twist.</em></figcaption></figure>
-<p>Build a team of heroes and fight to take back the city in <i>Capes</i>, a turn-based strategy game from Daedlic Entertainment. Recruit, train and deploy a team to take back the city from the villains that hold it hostage. Level up heroes to gain access to new abilities and powerful upgrades — plus, each hero gains a unique team-up ability from each of their allies.</p>
-<p>Check out the full list of new games this week:</p>
-<ul>
-<li><i>The Rogue Prince of Persia</i> (New release on <a href="https://store.steampowered.com/app/2717880?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 27)</li>
-<li><i>Capes </i>(New release on <a href="https://store.steampowered.com/app/2081080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 29)</li>
-<li><i>Lords of the Fallen </i>(New release on Xbox, available on PC Game Pass, May 30)</li>
-<li><i>Soulmask </i>(New release on <a href="https://store.steampowered.com/app/2646460?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 31)</li>
-<li><i>World of Warcraft: Dragonflight</i> (<a href="https://shop.battle.net/family/world-of-warcraft?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
-<li><i>World of Warcraft Classic </i>(<a href="https://us.shop.battle.net/en-us/family/world-of-warcraft-classic?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
-<li><i>World of Warcraft Cataclysm Classic </i>(<a href="https://us.shop.battle.net/en-us/family/world-of-warcraft-classic?utm_source=nvidia&amp;utm_medium=referral&amp;utm_campaign=geforce_now">Battle.net</a>)</li>
-</ul>
-<p>And members can look for the following later this month:<i></i></p>
-<ul>
-<li><i>Autopsy Simulator </i>(New release on <a href="https://store.steampowered.com/app/1283230?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, June 6)</li>
-<li><i>Chornobyl Liquidators</i> (New release on <a href="https://store.steampowered.com/app/1113010?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, June 6)</li>
-<li><i>SunnySide </i>(New release on <a href="https://store.steampowered.com/app/1746930?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, June 14)</li>
-<li><i>Still Wakes the Deep </i>(New release on <a href="https://store.steampowered.com/app/1622910?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/1622910?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, June 18)</li>
-<li><i>Disney Speedstorm </i>(<a href="https://store.steampowered.com/app/1537830?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/disney-speedstorm/9pmr3t9nsf8w?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Farm Together 2 </i>(<a href="https://store.steampowered.com/app/2418520?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Resident Evil Village </i>(<a href="https://store.steampowered.com/app/1196590?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Star Traders: Frontiers </i>(<a href="https://store.steampowered.com/app/335620?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Street Fighter 6</i> (<a href="https://store.steampowered.com/app/1364780?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Torque Drift 2 </i>(<a href="https://www.epicgames.com/store/p/torque-drift-2-b08765?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-</ul>
-<h2><b>More to May</b></h2>
-<p>In addition to the 24 games announced last month, four more joined the <a href="http://play.geforcenow.com">GeForce NOW library</a>:<i></i></p>
-<ul>
-<li><i>Senua’s Saga: Hellblade II</i> (New release on <a href="https://store.steampowered.com/app/2461850?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a href="https://www.xbox.com/games/store/senuas-saga-hellblade-ii/9pmbb7nghv95?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, May 21)</li>
-<li><i>Serum</i> (New release on <a href="https://store.steampowered.com/app/1610520?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, May 23)</li>
-<li><i>Palworld </i>(<a href="https://store.steampowered.com/app/1623730?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, and <a href="https://www.xbox.com/en-us/games/store/palworld-game-preview/9nkv34xdw014">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Tomb Raider: Definitive Edition</i> (<a href="https://www.xbox.com/games/store/tomb-raider-definitive-edition/bqxts0sx4w0n?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-</ul>
-<p><i>Gestalt</i>, <i>Norland</i> and <i>Sunnyside</i> have delayed their launch dates to later this year. Stay tuned to GFN Thursday for updates.</p>
-<p>From Tamriel to Teyvet, Night City to Sanctuary, GeForce NOW brings the world of PC gaming to nearly any device. Share your favorite gaming destinations all month long using #GreetingsFromGFN for a chance to be featured on the @NVIDIAGFN channels.</p>
-<p>What are you planning to play this weekend? Let us know on <a href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">What’s an MMO that has taken over your life at one point in time? <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/2694.png" alt="⚔" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a href="https://twitter.com/NVIDIAGFN/status/1795847572793274591?ref_src=twsrc%5Etfw">May 29, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-thursday-5-30-nv-blog-1280x680-no-cta.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/gfn-thursday-5-30-nv-blog-1280x680-no-cta-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[GeForce NOW Brings the Heat With ‘World of Warcraft’]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
