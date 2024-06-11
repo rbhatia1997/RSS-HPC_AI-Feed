@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 04 Jun 2024 11:35:47 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 11 Jun 2024 17:09:26 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,180 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Call for participation: HPC tutorial series from the HPCIC</title>
+		<link>https://aws.amazon.com/blogs/hpc/call-for-participation-hpc-tutorial-series-from-the-hpcic/</link>
+		
+		<dc:creator><![CDATA[Brendan Bouffler]]></dc:creator>
+		<pubDate>Tue, 11 Jun 2024 17:09:26 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Public Sector]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Slurm]]></category>
+		<category><![CDATA[Storage]]></category>
+		<category><![CDATA[Sustainability]]></category>
+		<category><![CDATA[visualization]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">7634a0bf6ed82010fb48611fdb16217bc1cbb185</guid>
+
+					<description>Interested in getting hands-on experience with cutting-edge HPC tools? Check out this blog post on an upcoming virtual training series from @LLNL and @AWSCloud. Learn emerging technologies from the experts this August.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3849" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-16.56.36.png" alt="Call for participation: HPC tutorial series from the HPCIC" width="380" height="161"&gt;Lawrence Livermore National Laboratory (LLNL) and AWS are joining forces to provide a training opportunity for emerging HPC tools and application. This takes the form of a series of tutorials over the summer by the HPC Innovation Center (HPCIC) at the Lab, which focuses on a broad suite of open-source software projects originating from LLNL. The series aims to give attendees experience with these cutting-edge technologies.&lt;/p&gt; 
+&lt;p&gt;This &lt;a href="https://hpcic.llnl.gov/tutorials/2024-hpc-tutorials"&gt;virtual series&lt;/a&gt; consists of nine distinct tutorials through the month of August. Each tutorial focuses on a specific package from the HPCIC. You’ll get hands-on experience with each project and learn more about running HPC on AWS. Each event will be hosted on AWS resources and use &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; to provide the environment for attendees.&lt;/p&gt; 
+&lt;p&gt;LLNL has a long history of delivering some of the world’s largest supercomputers and the supporting software to effectively use them. This collaboration between LLNL and AWS brings these projects and industry best practices to a broader community. Together we are democratizing access to next generation computational research tools and HPC resources.&lt;/p&gt; 
+&lt;h2&gt;How to Participate&lt;/h2&gt; 
+&lt;p&gt;Come join us in learning how these projects can help advance your HPC research and improve efficiency. These tutorials provide a great opportunity to learn modern techniques and tools in an adaptive cloud environment.&lt;/p&gt; 
+&lt;p&gt;To register your interest, use the &lt;a href="https://llnlfed.webex.com/webappng/sites/llnlfed/webinar/webinarSeries/register/f0f129eba81946dc8a30552fc657ee94"&gt;signup form&lt;/a&gt;. Details of each event and registration deadlines are listed in the following table.&lt;/p&gt; 
+&lt;table style="width: 90%"&gt; 
+ &lt;thead&gt; 
+  &lt;tr style="background-color: #000000;height: 20px"&gt; 
+   &lt;th style="width: 20%"&gt;&lt;span style="color: #ffffff"&gt;Date&lt;/span&gt;&lt;/th&gt; 
+   &lt;th style="width: 20%" width="72"&gt;&lt;span style="color: #ffffff"&gt;&lt;strong&gt;Time&lt;/strong&gt;&lt;/span&gt;&lt;/th&gt; 
+   &lt;td width="406"&gt;&lt;span style="color: #ffffff"&gt;&lt;strong&gt;Tutorial&lt;/strong&gt;&lt;/span&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/thead&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Thu Aug 1&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;9–11am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;BLT:&lt;/strong&gt;&amp;nbsp;build, link, and test large-scale applications&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Tue Aug 6&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;8–11:30am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;Spack (part 1 of 2):&lt;/strong&gt;&amp;nbsp;learn to install your software quickly&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Wed Aug 7&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;8–11:30am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;Spack (part 2 of 2)&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Thu Aug 8&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;9–12pm&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;Caliper:&lt;/strong&gt;&amp;nbsp;integrate performance profiling capabilities into your applications&lt;br&gt; &lt;strong&gt;Hatchet:&lt;/strong&gt;&amp;nbsp;analyze hierarchical performance data&lt;br&gt; &lt;strong&gt;Thicket:&lt;/strong&gt;&amp;nbsp;optimize application performance on supercomputers&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Tue Aug 13&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;9– 11am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;RAJA:&lt;/strong&gt;&amp;nbsp;run and port codes across different GPUs&lt;br&gt; &lt;strong&gt;Umpire:&lt;/strong&gt;&amp;nbsp;discover, provision, and manage HPC memory&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Thu Aug 15&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;9–11am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;Axom:&lt;/strong&gt;&amp;nbsp;leverage robust, flexible software components for scientific applications&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Tue Aug 20&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;9–11am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;Ascent:&lt;/strong&gt;&amp;nbsp;visualize and analyze your simulations in situ&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Thu Aug 22&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;9–11am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;MFEM:&lt;/strong&gt;&amp;nbsp;use scalable finite element discretizations&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Tue Aug 27&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;9–11am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;WEAVE:&lt;/strong&gt;&amp;nbsp;analyze runs of your code&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Thu 29&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td width="72"&gt;9–11am&lt;/td&gt; 
+   &lt;td width="406"&gt;&lt;strong&gt;Flux:&lt;/strong&gt;&amp;nbsp;run thousands of jobs in a workflow&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;We’re excited about this opportunity to give back to the HPC community alongside LLNL and look forward to meeting you all over the duration of the event.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Integrating Research and Engineering Studio with AWS ParallelCluster</title>
+		<link>https://aws.amazon.com/blogs/hpc/research-and-engineering-studio-integration-with-aws-parallelcluster/</link>
+		
+		<dc:creator><![CDATA[Doug Morand]]></dc:creator>
+		<pubDate>Tue, 11 Jun 2024 13:38:50 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[DCV]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[VDI]]></category>
+		<category><![CDATA[visualization]]></category>
+		<guid isPermaLink="false">975dc9ecff3f91bdf9cbec7ea6b4ab9cc4b3a431</guid>
+
+					<description>Researchers, engineers &amp;amp; scientists - learn how to leverage AWS ParallelCluster with Research &amp;amp; Engineering Studio for a full-featured cloud workspace. Read this post for details on this new integration.</description>
+										<content:encoded>&lt;p&gt;&lt;a href="https://aws.amazon.com/hpc/res/"&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3787" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/06/Integrating-Research-and-Engineering-Studio-with-AWS-ParallelCluster-1.png" alt="Integrating Research and Engineering Studio with AWS ParallelCluster" width="380" height="213"&gt;Research and Engineering Studio on AWS (RES)&lt;/a&gt; is an easy-to-use self-service portal for researchers and engineers to access and manage their cloud-based workspaces with persistent storage and secure virtual desktops to access their data and run interactive applications.&lt;/p&gt; 
+&lt;p&gt;The people who use RES are also frequently users of HPC clusters. RES today does not ship with direct integration to other AWS solutions for HPC, like &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;So today, we’re happy to announce a new HPC recipe which creates a RES-compatible &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/login-nodes-v3.html"&gt;ParallelCluster login node&lt;/a&gt; software stack. This solution uses new features added to RES 2024.04 including &lt;a href="https://docs.aws.amazon.com/res/latest/ug/res-ready-ami.html"&gt;RES-ready AMIs&lt;/a&gt; and project &lt;a href="https://docs.aws.amazon.com/res/latest/ug/projects.html#project-launch-template"&gt;launch templates&lt;/a&gt;. The RES-ready AMI allows you to pre-install RES dependencies for your virtual desktop instances (VDIs) to pre-bake software and configuration into your images, and improve boot times for your end users.&lt;/p&gt; 
+&lt;p&gt;These AMIs can be registered as a RES &lt;a href="https://docs.aws.amazon.com/res/latest/ug/evdi.html#software-stacks"&gt;software stack&lt;/a&gt; for your end users to create a VDI, which joins a ParallelCluster to become their own personal login node. Using this recipe, you’ll see how to create customized software stacks that can be used as conduits to access other native AWS cloud services.&lt;/p&gt; 
+&lt;h2&gt;ParallelCluster login node for RES&lt;/h2&gt; 
+&lt;p&gt;Starting from version 3.7.0, ParallelCluster provides login nodes for users to access the Slurm-based environment in the cloud. Both RES and ParallelCluster support multi-user access using Active Directory (AD) integration. With that mechanism in place, shared storage and user authentication becomes easier to manage.&lt;/p&gt; 
+&lt;p&gt;We start with an existing ParallelCluster that’s integrated with the same AD and using the same &lt;code&gt;ldap_id_mapping&lt;/code&gt; setting. We take a snapshot of a login node of the cluster, turn it into an Amazon Machine Image (AMI), and use as the Base image within an EC2 Image Builder recipe to create a RES-ready AMI. The &lt;code&gt;ldap_ip_mapping&lt;/code&gt; setting is an installation-level setting used by System Security Services Daemon (SSSD). This setting (when enabled) allows SSSD to generate a UID/GID.&lt;/p&gt; 
+&lt;p&gt;This setting is used in both RES and ParallelCluster. In RES, it’s enabled through the &lt;code&gt;EnableLdapIDMapping&lt;/code&gt; AWS CloudFormation parameter which you use to &lt;a href="https://docs.aws.amazon.com/res/latest/ug/launch-the-product.html"&gt;launch the product&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;In ParallelCluster, it’s configured in the &lt;code&gt;DirectoryService&lt;/code&gt; section of the configuration file, as part of &lt;code&gt;AdditionalSssdConfigs&lt;/code&gt; (more on this &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/DirectoryService-v3.html#yaml-DirectoryService-AdditionalSssdConfigs"&gt;in our docs&lt;/a&gt;), like this:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;DirectoryService:
+…
+  AdditionalSssdConfigs:
+    ldap_id_mapping: true
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The RES-compatible login node AMI is created through an &lt;a href="https://aws.amazon.com/systems-manager/"&gt;AWS Systems Manager&lt;/a&gt; (SSM) automation document. SSM allows you to gather insights and automate tasks across your AWS accounts.&lt;/p&gt; 
+&lt;p&gt;This automation process performs two tasks:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;It creates an Amazon Machine Image (AMI) from the login node&lt;/li&gt; 
+ &lt;li&gt;Updates the ParallelCluster &lt;em&gt;head node security group&lt;/em&gt; by adding ingress rules to allow connections from RES virtual desktops. Slurm (6819-6829) and NFS (2049) ingress connections are allowed via the &lt;code&gt;RESPCLoginNodeSG&lt;/code&gt; security group. This group will be used later to associate to RES project(s) when creating login node VDI instances.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;After the RES-compatible login node AMI has been created, we can create the RES-ready AMI using &lt;a href="https://aws.amazon.com/image-builder/"&gt;EC2 Image Builder&lt;/a&gt;. EC2 Image Builder simplifies the build process of building and maintaining “golden images”. Our SSM automation process will create an Image Builder recipe that includes the base AMI, and an additional component for the RES login node to configure the image to work as a RES VDI. The resulting AMI from the Image Builder pipeline will be used to create a RES software stack.&lt;/p&gt; 
+&lt;p&gt;Once the RES-ready AMI has been created by Image Builder, a RES administrator can login to create the Project and Software Stack by in two steps:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Update a RES Project to modify the Launch template (or create a project if it’s their first time using RES). The &lt;code&gt;RESPCLoginNodeSG&lt;/code&gt; must be added to any project that requires access to the ParallelCluster. This can be added in the RES project &lt;em&gt;Resource Configurations -&amp;gt; Advanced Options -&amp;gt; Add Security Groups&lt;/em&gt; configuration section.&lt;/li&gt; 
+ &lt;li&gt;Create a new Software Stack using the RES-ready AMI created from the Image Builder pipeline.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Once the software stack has been created, end-users that have access to it as part of a Project can create their own, dedicated, login node virtual desktops.&lt;/p&gt; 
+&lt;h2&gt;Virtual desktop login node in action&lt;/h2&gt; 
+&lt;p&gt;End-users will access the login node virtual desktop in the same way they access other virtual desktops.&lt;/p&gt; 
+&lt;div id="attachment_3776" style="width: 957px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3776" loading="lazy" class="size-full wp-image-3776" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/06/IMG-2024-06-06-13.46.01.png" alt="Figure 1 – The Virtual Desktops contain a virtual desktop (PC-LoginNode372) which is a based on a LoginNode instance compatible with ParallelCluster." width="947" height="550"&gt;
+ &lt;p id="caption-attachment-3776" class="wp-caption-text"&gt;Figure 1 – The Virtual Desktops contain a virtual desktop (PC-LoginNode372) which is a based on a LoginNode instance compatible with ParallelCluster.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Once end users have access to the login node VDI they can interact with ParallelCluster in the same way they’re accustomed. They’ll have access to the same shared storage in the ParallelCluster Login Node &lt;em&gt;and&lt;/em&gt; in the RES VDI. The next couple of screenshots show examples of shared storage accessed from both the Login Node and RES VDI.&lt;/p&gt; 
+&lt;div id="attachment_3777" style="width: 998px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3777" loading="lazy" class="size-full wp-image-3777" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/06/IMG-2024-06-06-13.46.34.png" alt="Figure 2 – A terminal session on a ParallelCluster Login Node showing the user shared storage directory listing" width="988" height="257"&gt;
+ &lt;p id="caption-attachment-3777" class="wp-caption-text"&gt;Figure 2 – A terminal session on a ParallelCluster Login Node showing the user shared storage directory listing&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3778" style="width: 996px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3778" loading="lazy" class="size-full wp-image-3778" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/06/IMG-2024-06-06-13.46.54.png" alt="Figure 3 – A RES virtual desktop session showing the same shared storage directory accessible from the ParallelCluster Login Node" width="986" height="428"&gt;
+ &lt;p id="caption-attachment-3778" class="wp-caption-text"&gt;Figure 3 – A RES virtual desktop session showing the same shared storage directory accessible from the ParallelCluster Login Node&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;End users can now interact with a ParallelCluster (PC) from a RES VDI. This VDI acts similarly to a ParallelCluster login node with the added benefit that end-users in the RES environment can launch their own login node, with VDI, any time they need one.&lt;/p&gt; 
+&lt;div id="attachment_3791" style="width: 1448px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3791" loading="lazy" class="size-full wp-image-3791" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/07/res-loginnode-screenvideo.gif" alt="Figure 4 – A virtual desktop session showing examples of Slurm commands demonstrating the integration with ParallelCluster." width="1438" height="544"&gt;
+ &lt;p id="caption-attachment-3791" class="wp-caption-text"&gt;Figure 4 – A virtual desktop session showing examples of Slurm commands demonstrating the integration with ParallelCluster.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Getting started with RES-compatible ParallelCluster login nodes&lt;/h2&gt; 
+&lt;p&gt;You can follow the steps to create a RES-compatible login node for your ParallelCluster by heading to the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/login_node_for_res"&gt;Login Node for Research and Engineering Studio&lt;/a&gt; recipe that’s part of the &lt;a href="https://hpc.news/recipes"&gt;HPC Recipes Library&lt;/a&gt; (a great resource, if you’re unfamiliar with it until now).&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Integrating AWS ParallelCluster and Research and Engineering Studio unlocks the ability for end users using interactive desktops to process large amounts of data when HPC is necessary. It’s a great experience, because not only does this put large-scale computational power in the hands of scientists, it does so in a way that’s friendly to use, and accessible any time they need it.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Securing HPC on AWS: implementing STIGs in AWS ParallelCluster</title>
 		<link>https://aws.amazon.com/blogs/hpc/securing-hpc-on-aws-implementing-stigs-in-aws-parallelcluster/</link>
 		
@@ -35,7 +209,7 @@
 		<guid isPermaLink="false">a5572dfa24f9456e8fb3e01a8a7cc20766ce2442</guid>
 
 					<description>Want to accelerate creating compliant Amazon EC2 images? Learn how HPC users can leverage cloud-native methods for applying STIG security standards.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright size-full wp-image-3698" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/Securing-HPC.png" alt="" width="380" height="212"&gt;&lt;/em&gt;Today, we’ll discuss cloud-native methods that HPC customers can use to accelerate their process for creating Amazon Elastic Compute Cloud (Amazon EC2) images for AWS ParallelCluster that are compliant with Security Technical Implementation Guides (STIGs), a set of standards maintained by the US government.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3698" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/21/Securing-HPC.png" alt="" width="380" height="212"&gt;&lt;/em&gt;Today, we’ll discuss cloud-native methods that HPC customers can use to accelerate their process for creating Amazon Elastic Compute Cloud (Amazon EC2) images for AWS ParallelCluster that are compliant with Security Technical Implementation Guides (STIGs), a set of standards maintained by the US government.&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll walk you through the process of applying STIGs to your ParallelCluster environment, help you identify the decisions you need to make on the way, and show you some of the tools you can use to make it all easier.&lt;/p&gt; 
 &lt;h2&gt;What’s a STIG?&lt;/h2&gt; 
 &lt;p&gt;STIGs are maintained by &lt;a href="https://public.cyber.mil/stigs/downloads/"&gt;a US government organization&lt;/a&gt;, and are simply a set of security standards that can be applied to different environments, like &lt;a href="https://aws.amazon.com/pm/ec2/?gclid=Cj0KCQjwiMmwBhDmARIsABeQ7xQS_X3FGRFdQeMzTWl84Gi1PUFg8U7-Y2A8g30P269Hh4BW5wxBXvIaAmfOEALw_wcB&amp;amp;trk=9cd376cd-1c18-46f2-9f75-0e1cdbca94c5&amp;amp;sc_channel=ps&amp;amp;ef_id=Cj0KCQjwiMmwBhDmARIsABeQ7xQS_X3FGRFdQeMzTWl84Gi1PUFg8U7-Y2A8g30P269Hh4BW5wxBXvIaAmfOEALw_wcB:G:s&amp;amp;s_kwcid=AL!4422!3!651751059309!e!!g!!amazon%20ec2!19852662176!145019189697"&gt;Amazon EC2&lt;/a&gt;. Think of STIGs as a checklist of items to apply to your EC2 instances where each checklist item has a corresponding severity level attached to it that says, “&lt;em&gt;the risk of not doing x is a low, medium, or high security risk&lt;/em&gt;”. You’ll also see these security levels referred to as Category Codes (CAT) where CAT 1 corresponds to a high security risk, CAT 2 to medium, and CAT 3 to low.&lt;/p&gt; 
@@ -621,7 +795,11 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 		<guid isPermaLink="false">771f9023418ab35b6435bfa6a8543c7119414297</guid>
 
 					<description>Genomics community: rejoice! Seqera and AWS have teamed up to announce Seqera Containers, an open-source, no cost, reliable way to generate containers.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3652" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/09/boofla88_a_robotics_simulation_involving_robots_carrying_shippi_a9b0df15-954a-4cdf-900d-edf64a5475b2.png" alt="Announcing: Seqera Containers for the bioinformatics community" width="380" height="212"&gt;&lt;em&gt;This post was contributed by Brendan Bouffler, Head of Developer Relations, HPC Engineering at AWS, Phil Ewels, Snr Product Manager for Open Source at Seqera, and Paolo Di Tommaso, the CTO &amp;amp; co-founder of Seqera.&lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;div id="attachment_3815" style="width: 390px" class="wp-caption alignright"&gt;
+ &lt;a href="https://youtu.be/SE6ZCvh1ThQ" target="_new" rel="noopener"&gt;&lt;img aria-describedby="caption-attachment-3815" loading="lazy" class="wp-image-3815 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/YT-Containers-just-got-easier.png" alt="Announcing: Seqera Containers for the bioinformatics community" width="380" height="213"&gt;&lt;/a&gt;
+ &lt;p id="caption-attachment-3815" class="wp-caption-text"&gt;You can watch a demo led by Phil Ewels on our Tech Shorts channel on YouTube.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;em&gt;This post was contributed by Brendan Bouffler, Head of Developer Relations, HPC Engineering at AWS, Phil Ewels, Snr Product Manager for Open Source at Seqera, and Paolo Di Tommaso, the CTO &amp;amp; co-founder of Seqera.&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Life sciences is a rapidly-moving area of research, and you don’t need to look too far for amazing examples where the practitioners of this field have adopted new tools and techniques to solve ever harder problems. Within this domain, bioinformatics has emerged as a crucial discipline, bridging the gap between biology and computer science. Many of the features in AWS Batch have been driven by this community, leading to a close relationship between our teams and the people working at the front lines of research.&lt;/p&gt; 
 &lt;p&gt;But while biological data has become more complex and massive, it has also become increasingly personal, and inevitably regulated. The world needed researchers across borders and geographies to share insights and techniques without necessarily moving the data, or sharing the same infrastructure. The conditions were set for another uptake of new technology.&lt;/p&gt; 
 &lt;p&gt;Adopting containers for packaging applications turned out to be pivotal for this shift: it revolutionized the way bioinformatics workflows are &lt;a href="https://seqera.io/blog/nextflow-and-aws-batch-inside-the-integration-part-1-of-3/"&gt;developed&lt;/a&gt;, &lt;a href="https://aws.amazon.com/blogs/hpc/leveraging-seqera-platform-on-aws-batch-for-machine-learning-workflows-part-1-of-2/"&gt;deployed&lt;/a&gt;, &lt;em&gt;and &lt;/em&gt;&lt;a href="https://nf-co.re/"&gt;&lt;em&gt;shared&lt;/em&gt;&lt;/a&gt; – increasing the reproducibility of an analysis. But while they’ve unquestionably simplified the life of bioinformaticians, their creation and usage is not without some friction.&lt;/p&gt; 
@@ -645,6 +823,10 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 &lt;p&gt;Using the &lt;a href="https://nextflow.io/docs/latest/wave.html"&gt;Nextflow wave plugin&lt;/a&gt;, pipeline developers can avoid specifying container URIs in their pipeline code entirely. Instead, just naming the software packages in the conda (or, later, spack) declarations and then setting wave.enabled = true and wave.freeze = true is all you need. This instructs Nextflow to request an image from Wave for these packages, store it in the Seqera Containers public registry, and then use this at run time.&lt;/p&gt; 
 &lt;p&gt;Wave isn’t restricted to working with Nextflow, there is also a &lt;a href="https://github.com/seqeralabs/wave-cli"&gt;Wave CLI&lt;/a&gt; which anyone can use to generate containers as well as an &lt;a href="https://docs.seqera.io/wave/api"&gt;API&lt;/a&gt;, both of which have all the same functionality as the Nextflow plugin and Seqera Containers web interface.&lt;/p&gt; 
 &lt;h2&gt;It’s available now&lt;/h2&gt; 
+&lt;div id="attachment_3818" style="width: 390px" class="wp-caption alignright"&gt;
+ &lt;a href="https://youtu.be/HjNwpJPMvWQ" target="new" rel="noopener"&gt;&lt;img aria-describedby="caption-attachment-3818" loading="lazy" class="size-full wp-image-3818" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/YT-on-demand-containers-for-bioinformatics.png" alt="Paolo Di Tommaso talks about Nextflow and the revolution it started." width="380" height="213"&gt;&lt;/a&gt;
+ &lt;p id="caption-attachment-3818" class="wp-caption-text"&gt;Paolo Di Tommaso talks about Nextflow and the revolution it started.&lt;/p&gt;
+&lt;/div&gt; 
 &lt;p&gt;The impact of container technology on the progress of life sciences research just can’t be overstated.&lt;/p&gt; 
 &lt;p&gt;It addresses big challenges in bioinformatics, like reproducibility, scalability, and collaboration. It eases software management, and empowers researchers to focus on their core scientific endeavors. This has accelerated the pace of discoveries, fostered collaboration, and enhanced the overall quality and reproducibility of bioinformatics research.&lt;/p&gt; 
 &lt;p&gt;We think today’s announcement pushes containers, and bioinformatics one step further, by making it dramatically easier to get your hands on containers in the right shape, size, and form-factor to meet the needs of your pipelines. Batch users will definitely enjoy using this. But, we’re pretty sure this will be a community resource everyone will love, and AWS is thrilled to be able to support the Seqera team to deliver this for the entire community.&lt;/p&gt; 
@@ -1238,7 +1420,11 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 		<guid isPermaLink="false">2f2bf7a37ba03c570aa2e58624876ea742c109fd</guid>
 
 					<description>Want to set up a high-speed shared file system for your #HPC or #AI workloads in under an hour? Learn how with this new blog post.</description>
-										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3546" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/16/Red-speedometer.png" alt="" width="380" height="212"&gt;High throughput shared files systems are an essential part of any HPC or AI environment. Whether you want to train large language models (LLMs), find effective new drugs, or lead the search for new sources of energy, shared file systems are responsible for feeding compute and storing the hard-won results.&lt;/p&gt; 
+										<content:encoded>&lt;div id="attachment_3822" style="width: 390px" class="wp-caption alignright"&gt;
+ &lt;a href="https://youtu.be/Nm3j5PWPFrY" target="new" rel="noopener"&gt;&lt;img aria-describedby="caption-attachment-3822" loading="lazy" class="size-full wp-image-3822" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/YT-Huge-tracts-of-Lustre.png" alt="" width="380" height="213"&gt;&lt;/a&gt;
+ &lt;p id="caption-attachment-3822" class="wp-caption-text"&gt;You can see a demo with Randy on our HPC Tech Shorts channel on YouTube: https://youtu.be/Nm3j5PWPFrY&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;High throughput shared files systems are an essential part of any HPC or AI environment. Whether you want to train large language models (LLMs), find effective new drugs, or lead the search for new sources of energy, shared file systems are responsible for feeding compute and storing the hard-won results.&lt;/p&gt; 
 &lt;p&gt;If you manage or use an on-premise environment, you know the complexity, value, and cost of providing a high throughput persistent data repository. You probably also know it typically takes weeks or months to plan and provision a large Lustre environment from scratch.&lt;/p&gt; 
 &lt;p&gt;In this post, I’ll show how to build persistent shared file systems capable of &lt;em&gt;terabytes per second&lt;/em&gt; in AWS in under an hour.&lt;/p&gt; 
 &lt;h2&gt;Background&lt;/h2&gt; 
@@ -2244,252 +2430,6 @@ process MY_PROCESS {
 &lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
 &lt;h3&gt;Reference&lt;/h3&gt; 
 &lt;p&gt;[1] Ruffolo, J.A., Madani, A. Designing proteins with language models. Nat Biotechnol 42, 200–202 (2024). &lt;a href="https://doi.org/10.1038/s41587-024-02123-4"&gt;https://doi.org/10.1038/s41587-024-02123-4&lt;/a&gt;&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Introducing new alerts to help users detect and react to blocked job queues in AWS Batch</title>
-		<link>https://aws.amazon.com/blogs/hpc/introducing-new-alerts-to-help-users-detect-and-react-to-blocked-job-queues-in-aws-batch/</link>
-		
-		<dc:creator><![CDATA[Naina Thangaraj]]></dc:creator>
-		<pubDate>Thu, 14 Mar 2024 18:29:42 +0000</pubDate>
-				<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Containers]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">4dfd9662b13958ccd5756233dff2259adb1eb906</guid>
-
-					<description>Heads up AWS Batch users! Learn how to get notifications when your job queue gets blocked so you can quickly troubleshoot and keep your workflows moving. Details in our blog.</description>
-										<content:encoded>&lt;p&gt;As many readers will know, AWS Batch provides functionality that enables you to run batch workloads on the managed container orchestration services in AWS: Amazon ECS and Amazon EKS. One of the core concepts of Batch is that it provides a job queue you can submit your work to. Batch is designed to transition your jobs from &lt;code&gt;SUBMITTED&lt;/code&gt; to &lt;code&gt;RUNNABLE&lt;/code&gt; states if they pass preliminary checks, and from &lt;code&gt;RUNNING&lt;/code&gt; to either &lt;code&gt;FAILED&lt;/code&gt; or &lt;code&gt;SUCCEEDED&lt;/code&gt; after the job is placed on a compute resource and completes. Batch is also sends an event to Amazon CloudWatch Events for each corresponding job state update.&lt;/p&gt; 
-&lt;p&gt;Sometimes, though, a &lt;code&gt;RUNNABLE&lt;/code&gt; job at the head of the queue can block all other jobs behind it from running. This could be caused by a misconfiguration in your AWS account, or it might be because your account doesn’t have access to the specific instances required for the job (like a GPU, for example). We’ve&amp;nbsp;&lt;a href="https://repost.aws/knowledge-center/batch-job-stuck-runnable-status"&gt;documented several common causes&lt;/a&gt;&amp;nbsp;– and their resolutions – but to fix the issue you&amp;nbsp;&lt;em&gt;first need to know that the blocked job queue condition exists&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;Today we’re introducing&amp;nbsp;CloudWatch Events notifications for blocked job queues. We’ve designed this new feature to provide you with an event any time Batch detects that a job queue is blocked by a &lt;code&gt;RUNNABLE&lt;/code&gt; job at the head of the queue. Even better, the feature is designed to show the reason the job is stuck in&amp;nbsp;&lt;em&gt;both&lt;/em&gt;&amp;nbsp;the CloudWatch event and the&amp;nbsp;&lt;code&gt;statusReason&lt;/code&gt;&amp;nbsp;of the job&amp;nbsp;returned from &lt;code&gt;DescribeJobs&lt;/code&gt;&amp;nbsp;and&amp;nbsp;&lt;code&gt;ListJobs&lt;/code&gt;&amp;nbsp;API calls.&lt;/p&gt; 
-&lt;h2&gt;Common causes of blocked job queues&lt;/h2&gt; 
-&lt;p&gt;There are many reasons why a job at the head of the queue can block other jobs behind it from running.&lt;/p&gt; 
-&lt;p&gt;IAM roles, network, and security settings are often the culprits, but there are several more reasons for a blocked job queue&amp;nbsp;&lt;em&gt;that Batch can detect&lt;/em&gt;&amp;nbsp;in your environment:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;your queue’s attached compute environments (CEs) have all received insufficient capacity errors&lt;/li&gt; 
- &lt;li&gt;your CEs have a&amp;nbsp;&lt;code&gt;maxVcpu&lt;/code&gt;&amp;nbsp;that’s too small for the job requirements&lt;/li&gt; 
- &lt;li&gt;your CEs lack any instances that meet the job requirements&lt;/li&gt; 
- &lt;li&gt;your service role has a permission issue&lt;/li&gt; 
- &lt;li&gt;all your CEs are in an &lt;code&gt;INVALID&lt;/code&gt; state (which usually means networking or IAM roles are preventing instances joining the compute fleet)&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;With the new CloudWatch Events notifications we’re announcing today, Batch can now send a notification when it detects a common reason for jobs being stuck in &lt;code&gt;RUNNABLE&lt;/code&gt;, but&amp;nbsp;&lt;em&gt;not&lt;/em&gt; for every &lt;code&gt;RUNNABLE&lt;/code&gt; job simply waiting for its turn. Finally, sometimes Batch will detect a blocked job queue but can’t determine the specific reason. In this case, Batch can still send a notification of a blocked job queue, but you’ll need to do a bit of detective work to figure out the root cause.&lt;/p&gt; 
-&lt;h2&gt;Taking action&lt;/h2&gt; 
-&lt;p&gt;There are two ways you can programmatically act on the blocked job queue events that Batch sends to CloudWatch Events.&lt;/p&gt; 
-&lt;h3&gt;Acting on events with Amazon EventBridge&lt;/h3&gt; 
-&lt;p&gt;The first way you can automate an action (based on a matching event pattern) is to define Amazon EventBridge &lt;a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rules.html"&gt;rules&lt;/a&gt; with different&amp;nbsp;EventBridge &lt;a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html"&gt;targets&lt;/a&gt;&amp;nbsp;for each event type.&lt;/p&gt; 
-&lt;p&gt;For example, when you receive a message about a job that requires more memory than any instance can provide, you could use an AWS Lambda function to terminate the job request—to unblock the job queue—and then send the event information into an Amazon SQS queue so you can inspect the job details later.&lt;/p&gt; 
-&lt;p&gt;When you review those SQS messages, you can decide if you want to adjust the CE to meet the needs of these types of jobs,&amp;nbsp;&lt;em&gt;or&lt;/em&gt;&amp;nbsp;create a new Batch environment to handle more resource-intensive jobs.&lt;/p&gt; 
-&lt;p&gt;The Batch user guide has examples showing how to&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/batch_cwet.html"&gt;listen for&lt;/a&gt;&amp;nbsp;and&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/batch_sns_tutorial.html"&gt;react to&lt;/a&gt;&amp;nbsp;the CloudWatch events using EventBridge.&lt;/p&gt; 
-&lt;h3&gt;Auto terminating stuck jobs&lt;/h3&gt; 
-&lt;p&gt;The second way you can act to address blocked job queues is at the level of the job queue itself.&lt;/p&gt; 
-&lt;p&gt;Batch now has a&amp;nbsp;&lt;code&gt;jobStateTimeLimitActions&lt;/code&gt;&amp;nbsp;parameter for job queues that lets you automatically cancel a stuck job after a defined period of time,&amp;nbsp;&lt;code&gt;maxTimeSeconds&lt;/code&gt;. If you opt to define this parameter, Batch is designed to start the timeout clock ticking when it detects that a job is blocking the queue. Batch will also update the&amp;nbsp;&lt;code&gt;statusReason&lt;/code&gt;&amp;nbsp;field at this time. Once the stuck job at the head of the queue is cancelled, a “&lt;em&gt;Batch Job State Change”&lt;/em&gt;&amp;nbsp;CloudWatch event is emitted with the underlying reason. If Batch detects that another job at the head of the queue is blocking the queue, a &lt;em&gt;“Batch Job Queue Blocked”&lt;/em&gt; CloudWatch event is emitted, and starts a new &lt;code&gt;maxTimeSeconds&lt;/code&gt; timer to take the action you defined once the limit is reached.&lt;/p&gt; 
-&lt;p&gt;Here’s an example showing how to specify that the job queue will wait for a job that is blocked by compute environments having reached maximum capacity for 4 hours (maxTimeSeconds=14400) before cancelling the job.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-json"&gt;"jobStateTimeLimitActions": [
-      {                              
-         "reason" :  "MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE", 
-         "state": "RUNNABLE",            
-         "maxTimeSeconds" : 14400,
-         "action" : "CANCEL"            
-      }
-]
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Table 1 lists the scenarios we discussed, the output message in CloudWatch Events, and the&amp;nbsp;&lt;code&gt;jobStateTimeLimitAction.reason&lt;/code&gt;&amp;nbsp;that you can specify to cancel the stuck job in the job queue. The table also lists the “&lt;em&gt;Batch Job State Change”&lt;/em&gt;&amp;nbsp;CloudWatch event message if the job was automatically canceled.&lt;/p&gt; 
-&lt;table class="alignleft" style="border-color: #000000" border="0"&gt; 
- &lt;caption&gt;
-  &lt;em&gt;Table 1: AWS Batch CloudWatch Events messages for blocked job queue events. The &lt;strong&gt;Scenerio&lt;/strong&gt; column describes the context Batch determined that a queue was blocked. &lt;strong&gt;Status Parameter&lt;/strong&gt; refers to key fields in event messages that are provided for an event. &lt;strong&gt;Status Parameter Value&lt;/strong&gt; lists an example value for the corresponding parameter. Note that the CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY message will provide a specific instance type name, not just the one in the example.&amp;nbsp;&lt;/em&gt;
- &lt;/caption&gt; 
- &lt;thead&gt; 
-  &lt;tr style="color: white;font-weight: bold;background-color: #000000"&gt; 
-   &lt;td width="95"&gt;Scenario&lt;/td&gt; 
-   &lt;td width="248"&gt;Status Parameter&lt;/td&gt; 
-   &lt;td width="288"&gt;Status Parameter value&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/thead&gt; 
- &lt;tbody&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All your job queue’s connected compute environments have received insufficient capacity errors.&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY – Service cannot fulfill the capacity requested for instance type [instanceTypeName].&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
-   &lt;td width="288"&gt;Canceled by JobStateTimeLimit action due to reason: CAPACITY:INSUFFICIENT_INSTANCE_CAPACITY&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All compute environments have maxVcpu that is smaller than job requirements.&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE – CE(s) associated with the job queue cannot meet the CPU requirement of the job.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
-   &lt;td width="288"&gt;Canceled by JobStateTimeLimit action due to reason: MISCONFIGURATION:COMPUTE_ENVIRONMENT_MAX_RESOURCE&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All compute environments have no connected instances that meet job requirements.&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT – The job resource requirement (vCPU/memory/GPU) is higher than that can be met by the CE(s) attached to the job queue.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
-   &lt;td width="288"&gt;Canceled by JobStateTimeLimit action due to reason: MISCONFIGURATION:JOB_RESOURCE_REQUIREMENT&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All compute environments have service role issues.&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS – Batch service role has a permission issue.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
-   &lt;td width="288"&gt;Canceled by JobStateTimeLimit action due to reason: MISCONFIGURATION:SERVICE_ROLE_PERMISSIONS&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;All connected compute environments are invalid.&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;ACTION_REQUIRED – CE(s) associated with the job queue are invalid.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;&lt;em&gt;Not applicable&lt;/em&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
-   &lt;td width="288"&gt;&lt;em&gt;Not applicable&lt;/em&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="font-weight: bold;background-color: #d2d2d2" rowspan="3" width="95"&gt;&lt;strong&gt;Batch has detected a blocked queue, but is unable to determine the reason.&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;UNDETERMINED – Batch job is blocked, root cause is undetermined.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr style="background-color: #f2f2f2"&gt; 
-   &lt;td width="248"&gt;&lt;code&gt;jobStateTimeLimitActions.reason&lt;/code&gt;&lt;/td&gt; 
-   &lt;td width="288"&gt;&lt;em&gt;Not applicable&lt;/em&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td width="248"&gt;CloudWatch Event &lt;code&gt;statusReason&lt;/code&gt; after job cancellation&lt;/td&gt; 
-   &lt;td width="288"&gt;&lt;em&gt;Not applicable&lt;/em&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;You’ll note that some reasons are not able to be used in the &lt;code&gt;jobStateTimeLimitActions&lt;/code&gt; parameter. One example is when all your queue’s attached compute environments are INVALID, or when Batch is unable to determine the root cause of the blockage. In both of those cases, we recommend setting up EventBridge rules to notify you when they occur.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;AWS Batch has introduced new functionality designed to help you detect and act on blocked job queues, where a job that’s at the head of a queue can’t run for one reason or another and prevents all the others behind it from running, too. We shared how to use EventBridge to catch these new CloudWatch Events, and the Batch job queue API to automatically terminate the stuck job and unblock the queue of jobs behind it.&lt;/p&gt; 
-&lt;p&gt;Finally, we covered the most common root causes along with the error messages to look for. In most cases Batch can automatically determine the root cause of the blockage, allowing you to define specific automated actions for each class of error to take action on and unblock the queue.&lt;/p&gt; 
-&lt;p&gt;To get started using AWS Batch, log into the&amp;nbsp;&lt;a href="https://console.aws.amazon.com/batch/home"&gt;AWS Management Console&lt;/a&gt;, or read the&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/what-is-batch.html"&gt;AWS Batch User Guide&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;For specific guidance on using these new events, refer to the AWS Batch Troubleshooting guide for &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#job_stuck_in_runnable"&gt;jobs stuck in RUNNABLE&lt;/a&gt;, the &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/batch_cwe_events.html#batch-job-queue-blocked-events"&gt;blocked job queue events&lt;/a&gt; documentation, and the &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/cloudwatch_event_stream.html"&gt;Batch EventBridge&lt;/a&gt; documentation on how react to these events.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Using large-language models for ESG sentiment analysis using Databricks on AWS</title>
-		<link>https://aws.amazon.com/blogs/hpc/using-large-language-models-for-esg-sentiment-analysis-using-databricks-on-aws/</link>
-		
-		<dc:creator><![CDATA[Ilan Gleiser]]></dc:creator>
-		<pubDate>Tue, 05 Mar 2024 12:34:23 +0000</pubDate>
-				<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[AI]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[ML]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Sustainability]]></category>
-		<guid isPermaLink="false">5ff183a8b5fd12c0deb708f5dd9760595e67a42c</guid>
-
-					<description>ESG is now a boardroom issue. See how Databricks' AI solution helps understand emissions data and meet new regulations.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="size-full wp-image-3333 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/14/boofla88_environmental_social_and_governance_policies_as_a_conc_58e6417e-1244-4776-8eef-c48fb6d9cb32.png" alt="Using large-language models for ESG sentiment analysis using Databricks on AWS" width="380" height="212"&gt;This post was contributed by Ilan Gleiser, Principal ML Specialist, Global Impact Computing, AWS, &lt;/em&gt;&lt;em&gt;Antoine Amend, Sr. Technical Director, Databricks, &lt;/em&gt;&lt;em&gt;Venkat Viswanathan, Senior Solutions Architect, AWS&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Regulators worldwide recognize the threat of climate change to economies and financial systems, forcing public companies in the US and Europe to be aware of – and disclose – their greenhouse emissions. This has led to a surge in demand from various stakeholders, including asset managers, asset owners, investors, and regulators, for machine-learning models that can analyze the plethora of data on their environmental, social and governance (ESG) policies.&lt;/p&gt; 
-&lt;p&gt;Alongside regulatory change, there is a financial incentive to this endeavor. Typically, ESG ratings have a positive correlation with both valuation and profitability, &lt;a href="https://corpgov.law.harvard.edu/2020/01/14/esg-matters/"&gt;while showing a negative correlation with volatility&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;In this post, we’re going to look at the challenge posed by ESG, as a data and AI problem. In the &lt;a href="https://www.databricks.com/blog/2020/07/10/a-data-driven-approach-to-environmental-social-and-governance.html"&gt;Databricks ESG Solution Accelerator&lt;/a&gt;, we will use natural language processing (NLP) to sort through the vast amounts of structured, and unstructured, data.&lt;/p&gt; 
-&lt;h2&gt;Why Databricks?&lt;/h2&gt; 
-&lt;p&gt;The main benefits for using the Databricks ESG Solution Accelerator are:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Detect differences between sustainability reports and real-time news data in portfolios of securities. Differences between sustainability reports and real-time news data may lead consumers and stakeholders to overvalue a company’s ESG score.&lt;/li&gt; 
- &lt;li&gt;View how companies’ business relationships with one another within a global marketplace can impact their respective ESG scores.&lt;/li&gt; 
- &lt;li&gt;Show how companies on the top decile of the ESG rank have half the volatility (as measured by &lt;em&gt;value-at-risk&lt;/em&gt;) of companies on the bottom end of the ESG ranks and better returns, indicating superior Sharpe ratios.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;Users of the Databricks ESG Solution Accelerator can turn ESG risk into a source of excess returns (or &lt;em&gt;alpha&lt;/em&gt;) if spotted early in the process. This is done by processing unstructured data, like PDFs and real time news data and using machine learning (ML) algorithms that analyses the sentiment of the news data and compares with the sentiment of the data coming from the companies’ sustainability report on the same ESG policy&lt;/p&gt; 
-&lt;h2&gt;The critical problem of unstructured data&lt;/h2&gt; 
-&lt;p&gt;The ESG world generates data that is inherently unstructured. Out of the 40 frequently-disclosed ESG policies by companies, only ten can be measured as tangible figures while the rest are policy initiatives expressed in textual form across various IT systems. This raises the question of how AI can be applied to quantify and compare organizations ESG policies in a more objective manner.&lt;/p&gt; 
-&lt;p&gt;To help customers unlock the value of their sustainability data stored in the AWS cloud, we are highlighting Databricks ESG Solution Accelerator as described in “&lt;a href="https://www.databricks.com/blog/2020/07/10/a-data-driven-approach-to-environmental-social-and-governance.html"&gt;&lt;em&gt;A Data-driven Approach to Environmental, Social, and Governance using the Databricks Solutions Accelerator&lt;/em&gt;&lt;/a&gt;” and showing you step by step, how to run the accelerator on AWS.&lt;/p&gt; 
-&lt;p&gt;The notebooks show you how machine learning can enable asset managers, regulators, and investors to assess the sustainability exposure of their investments and empower their businesses with a holistic and data-driven view of their environmental, social, and corporate governance strategies.&lt;/p&gt; 
-&lt;p&gt;Specifically, the first notebook will extract key ESG initiatives communicated in yearly sustainability PDF reports and compare these with real time actual media coverage from news analytics data as in Figure 1. The idea behind this approach is to spot differences between sustainability reports and real-time news data to offer decision makers with the most accurate and promptly available information.&lt;/p&gt; 
-&lt;div id="attachment_3323" style="width: 840px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3323" loading="lazy" class="size-full wp-image-3323" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/13/CleanShot-2024-02-13-at-11.02.26.png" alt="Figure 1. Extract the key ESG initiatives as communicated in yearly PDF reports and compare these with the actual media coverage from news analytics data" width="830" height="406"&gt;
- &lt;p id="caption-attachment-3323" class="wp-caption-text"&gt;Figure 1. Extract the key ESG initiatives as communicated in yearly PDF reports and compare these with the actual media coverage from news analytics data&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Databricks Solution Accelerators on AWS: speedways to innovation&lt;/h2&gt; 
-&lt;p&gt;Databricks ESG Solution Accelerator for AWS provides an expedited path to production for AWS customers who store their data on Amazon S3. Businesses can simplify the migration of their data and AI workloads to Databricks on AWS and quickly start utilizing the accelerator notebooks. The Databricks ESG Solution Accelerator come in a pair of notebooks that are easy to set up and provide prompt feedback, enabling asset management, MLOPS governance, and risk teams to achieve their goals in a much shorter time frame. Customers can take advantage of AWS’s computing power and virtually limitless storage, resulting in increased flexibility, scalability, and dependability at a reduced cost compared to developing an in-house solution.&lt;/p&gt; 
-&lt;p&gt;To support users from different lines of business, these accelerators are designed to meet the different goals of multiple teams – portfolio managers and asset owners can use them to maximize alpha or minimize risk; regulators can identify new potential hot spots; and corporations can gather public sentiment of their news in the media.&lt;/p&gt; 
-&lt;h2&gt;ESG Accelerator Logic&lt;/h2&gt; 
-&lt;p&gt;Although all these accelerators work together, businesses can apply them as stand-alone projects or layer them. The process goes as follows:&lt;/p&gt; 
-&lt;p&gt;Extract ESG initiatives from ESG reports using PyPDF2 and categorize them based on different topics. Then, tokenize and lemmatize the content for algorithmic ingestion. The next step is to automatically classify sentences extracted from ESG reports using atopic modeling algorithm. This classification allows customer/users to compare different companies’ by clustering them side-by-side to identify key focus areas (or ESG policies) voluntarily disclosed by companies in their sustainability reports.&lt;/p&gt; 
-&lt;p&gt;To create a data-driven ESG score, the Databricks ESG Solution Accelerator runs a sentiment analysis on financial news articles related to each company is conducted using the Global Database of Event Location and Tones (GDELT) files, updated every 15mins. The assumption is that overall tone captured from financial news articles is a good proxy for companies’ ESG scores. This approach generates scores for each company across all its ESG dimensions. A propagated weighted ESG (PW-ESG) metric is then calculated to provide a global view of risk by quantifying the links between companies and assessing their importance.&lt;/p&gt; 
-&lt;p&gt;Finally, to validate the assumption that high-ranked ESG companies offer better risk-adjusted returns than low-ranked ESG companies, the portfolio is split into two books – best and worst 10% ESG scores, respectively – and their historical returns and corresponding 95% Value-at-Risk are computed. The results show that low-ranked ESG portfolio has 2 times more risk than high-ranked ESG portfolio for the same level of returns.&lt;/p&gt; 
-&lt;h3&gt;Benefits of notebook 1 – spotting differences between sustainability reports and real-time news data&lt;/h3&gt; 
-&lt;p&gt;The goal of notebook #1 is to understand what the statements are all about, learning a vocabulary that is ESG specific with themes like diversity and inclusion, code of conduct, supporting communities and renewable energy.&lt;/p&gt; 
-&lt;p&gt;The ESG Solution Accelerator supports Databricks/AWS customers who host their data on AWS, offering a machine learning platform that educates itself on a wide array of subjects and themes that are significant in today’s corporate social responsibility environment. These themes range from ‘diversity and inclusion’, ‘code of conduct’, and ‘supporting communities’, to ‘renewable energy’, ‘impact investing’, and ‘valuing employees’. The automated learning feature enables the algorithm to provide valuable insights in these specific fields, allowing businesses the opportunity to better understand and incorporate these aspects into their investment and risk management strategies.&lt;/p&gt; 
-&lt;div id="attachment_3324" style="width: 765px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3324" loading="lazy" class="size-full wp-image-3324" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/13/CleanShot-2024-02-13-at-11.03.22.png" alt="Fig 2: Cluster analysis of machine learned policies emerging from unstructured Sustainability Reports PDF files" width="755" height="433"&gt;
- &lt;p id="caption-attachment-3324" class="wp-caption-text"&gt;Fig 2: Cluster analysis of machine learned policies emerging from unstructured Sustainability Reports PDF files&lt;/p&gt;
-&lt;/div&gt; 
-&lt;div id="attachment_3325" style="width: 774px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3325" loading="lazy" class="size-full wp-image-3325" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/13/CleanShot-2024-02-13-at-11.03.29.png" alt="Fig 3: Comparing organizations side-by-side, based on how much they disclose in each of those categories." width="764" height="554"&gt;
- &lt;p id="caption-attachment-3325" class="wp-caption-text"&gt;Fig 3: Comparing organizations side-by-side, based on how much they disclose in each of those categories.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;&lt;em&gt;&amp;nbsp;&lt;/em&gt;In a separate blog post, we show you how you can fine-tune a large language model and accelerate hyperparameter grid search for sentiment analysis with BERT models using Weights &amp;amp; Biases, Amazon EKS, and TorchElastic.&lt;/p&gt; 
-&lt;h3&gt;Benefit of Notebook 2 – Understand How ESG Scores correlate with market risk and returns&lt;/h3&gt; 
-&lt;p&gt;The second notebook presents a method for constructing a synthetic portfolio and incorporating ESG insights into the market risk framework. This involves considering not only a company’s outward appearance, but also its potential for performance. Research and literature suggest that companies with strong ESG practices typically exhibit lower market volatility. Our examination of value at risk highlights that a synthetic portfolio lacking such practices can be twice as volatile. Ultimately, we aim to connect research and product by integrating our findings into a comprehensive BI to AI Dashboard.&lt;/p&gt; 
-&lt;p&gt;Combining all those insights, to understand what a company says about ESG vs how much a company does across those 24 machines learned policies, informs us in real time about news events that may positively or negatively affect the ESG score of every company, and in turn, the impact it may have on its market performance.&lt;/p&gt; 
-&lt;p&gt;Combining all those insights into one platform helps us understand what a company says about ESG versus how much it actually does across the 24 machine-learned policies. This platform informs us in real time about news events that may positively or negatively affect the ESG score of every company, and subsequently, the impact it may have on its market performance.&lt;/p&gt; 
-&lt;p&gt;ESG factors are among major market factors, like value, momentum, and volatility. The taxonomy of ESG factors has proved adaptive, as the market empirically prices new indicators. In addition, the recent advances in quantifying the effect of ESG factors on performance, in developing a regulatory and legal framework for ESG, and in establishing new ESG ratings should continue to have a positive effect on asset flows into ESG-related strategies&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt; 
-&lt;h2&gt;Running the Accelerator on AWS&lt;/h2&gt; 
-&lt;p&gt;Databricks built the ESG Solution Accelerator using the Delta Lake &lt;a href="https://www.databricks.com/glossary/medallion-architecture"&gt;Medallion Architecture&lt;/a&gt; to ingest data from raw, enriched, and purpose-built tables categorized as Bronze, Silver, and Gold Delta Lake tables.&lt;/p&gt; 
-&lt;p&gt;Delta Lake is an open-source project built for data ‘lakehouses’ with compute engines, including Apache Spark, Trino, PrestoDB, Flink, and Hive, and with APIs for Scala, Java, Rust, Ruby, and Python. Delta Lake is an &lt;em&gt;ACID table storage layer&lt;/em&gt; over cloud object stores like S3 that provides data reliability including, but not limited to, schema enforcement and evolution, time travel, scalable metadata handling, audit history, DML operations, and unifies stream and batch processing. You can store the data in Delta Lake tables in your encrypted S3 bucket.&lt;/p&gt; 
-&lt;div id="attachment_3326" style="width: 876px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3326" loading="lazy" class="size-full wp-image-3326" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/02/13/CleanShot-2024-02-13-at-11.04.47.png" alt="Fig 4. This schematic depicts how the Solutions Accelerator leverages corporate disclosures, news feeds, and portfolio ticker symbols to collect, transform, enrich, and apply machine learning models to create ESG scores from corporate disclosures and from the news feeds. This depicts the gaps between the corporate disclosures and the news feeds." width="866" height="424"&gt;
- &lt;p id="caption-attachment-3326" class="wp-caption-text"&gt;Figure 4. This schematic depicts how the Solutions Accelerator leverages corporate disclosures, news feeds, and portfolio ticker symbols to collect, transform, enrich, and apply machine learning models to create ESG scores from corporate disclosures and from the news feeds. This depicts the gaps between the corporate disclosures and the news feeds.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;A machine learning model is created using open-source MLFlow to enrich the data with ML-based approach. Databricks workloads are run within the customer’s VPC account in either Amazon EC2 instances or in Amazon Elastic Container Registry (Amazon ECR) containers.&lt;/p&gt; 
-&lt;p&gt;AWS native services and AWS partner services further consume the data from Delta Lake. Some examples include using Amazon QuickSight for BI and visualization, Amazon Athena for advanced analytics, AWS Glue for data catalog, and Amazon SageMaker for more models, inference, and serving.&lt;/p&gt; 
-&lt;p&gt;Along with these are ancillary components like AWS Identity &amp;amp; Access Management (IAM), which control access and set guardrails to the applications and services, and Amazon CloudWatch for monitoring the applications and services to ensure proper functioning, can be implemented.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Steps to use the template for the ESG Sentiment use case&lt;/strong&gt;&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;If you are new to AWS, &lt;a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/"&gt;create and activate a new account&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;If you are new to Databricks on AWS, &lt;a href="https://aws.amazon.com/quickstart/architecture/databricks/#:~:text=If%20you%20don't%20already,existing%20cross%2Daccount%20IAM%20role"&gt;create and setup the Databricks account&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;Login to Databricks &lt;code&gt;&amp;lt;account_name&amp;gt;.cloud.databricks.com&lt;/code&gt; with your username and password.&lt;/li&gt; 
- &lt;li&gt;Clone your repos using &lt;strong&gt;Repos&lt;/strong&gt; → &lt;strong&gt;Add Repo&lt;/strong&gt; → &lt;strong&gt;Select Git Hub&lt;/strong&gt; from the &lt;strong&gt;Git provider&lt;/strong&gt; → Enter &lt;code&gt;https://github.com/databricks-industry-solutions/esg-scoring&lt;/code&gt; in &lt;strong&gt;Git repository URL field&lt;/strong&gt; → provide your repository name in &lt;strong&gt;Repository name&lt;/strong&gt; field. Then &lt;strong&gt;submit&lt;/strong&gt;.&lt;/li&gt; 
- &lt;li&gt;Go to &lt;strong&gt;Compute&lt;/strong&gt; → &lt;strong&gt;Create Cluster&lt;/strong&gt; and select &lt;strong&gt;ML and 10.4 LTS ML&lt;/strong&gt; (Scala 2.12, Spark 3.2.1 and above) → &lt;strong&gt;Worker Type Instance Type&lt;/strong&gt;, &lt;strong&gt;Min workers&lt;/strong&gt; as 2, &lt;strong&gt;Max workers&lt;/strong&gt; as 8), and &lt;strong&gt;Driver Type&lt;/strong&gt; as Worker Type, Check &lt;strong&gt;Enable Auto scaling&lt;/strong&gt;, Check &lt;strong&gt;Terminate&lt;/strong&gt; after 60 minutes of inactivity&lt;/li&gt; 
- &lt;li&gt;Create your cluster&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Repos&lt;/strong&gt; → Select your repo → Select the Notebook (there are 5 note books) → Open the Notebook sequentially → Attach Cluster from the &lt;strong&gt;Connect&lt;/strong&gt; drop down and select the one you created in the last step —&amp;gt; &lt;strong&gt;Run&lt;/strong&gt; → &lt;strong&gt;Run All&lt;/strong&gt;&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;You can read the &lt;a href="https://www.databricks.com/blog/2020/07/10/a-data-driven-approach-to-environmental-social-and-governance.html"&gt;Databricks ESG solution accelerator explainer&lt;/a&gt; to learn more, or watch the &lt;a href="https://www.youtube.com/watch?v=tEjacxTxS_4"&gt;video&lt;/a&gt;. And you can check out the Databricks page in AWS Marketplace to get started with &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-ubybkhtmjqhhc"&gt;Databricks on AWS&lt;/a&gt;, and visit the &lt;a href="https://aws.amazon.com/marketplace/solutions/sustainability/?ref_=mp_nav_solution_sus"&gt;AWS Sustainability Solutions&lt;/a&gt; page for ready-to-deploy ESG solutions.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Through this blog, we have illustrated a streamlined method for summarizing complex documents into key ESG initiatives that offer a deeper comprehension of the sustainability aspects of your investments. With the implementation of machine learning methods powered by large language models (LLMs), we have introduced a unique approach to ESG that more effectively identifies the impact of global markets on both organizational strategy and reputational risk. Additionally, we have highlighted the significant economic influence of ESG factors on market risk calculation.&lt;/p&gt; 
-&lt;p&gt;As a starting point to a data-driven ESG journey, this approach can be further improved by bringing the internal data you hold about your various investments and the additional metrics you could bring from third-party data, propagating the risks through the propagated-weighted ESG framework to keep driving more sustainable finance and impactful investments.&lt;/p&gt;</content:encoded>
 					
 		
 		
