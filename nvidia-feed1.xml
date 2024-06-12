@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 12 Jun 2024 01:48:29 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 12 Jun 2024 17:17:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,188 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>Scaling to New Heights: NVIDIA MLPerf Training Results Showcase Unprecedented Performance and Elasticity</title>
+		<link>https://blogs.nvidia.com/blog/mlperf-training-benchmarks/</link>
+		
+		<dc:creator><![CDATA[Dave Salvator]]></dc:creator>
+		<pubDate>Wed, 12 Jun 2024 15:00:30 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Networking]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72098</guid>
+
+					<description><![CDATA[The full-stack NVIDIA accelerated computing platform has once again demonstrated exceptional performance in the latest MLPerf Training v4.0 benchmarks. NVIDIA more than tripled the performance on the large language model (LLM) benchmark, based on GPT-3 175B, compared to the record-setting NVIDIA submission made last year. Using an AI supercomputer featuring 11,616 NVIDIA H100 Tensor Core	<a class="read-more" href="https://blogs.nvidia.com/blog/mlperf-training-benchmarks/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>The full-stack NVIDIA accelerated computing platform has once again demonstrated exceptional performance in the latest MLPerf Training v4.0 benchmarks.</p>
+<p>NVIDIA more than tripled the performance on the large language model (LLM) benchmark, based on GPT-3 175B, compared to the record-setting NVIDIA submission made last year. Using an AI supercomputer featuring 11,616 <a href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> connected with <a href="https://www.nvidia.com/en-us/networking/quantum2/">NVIDIA Quantum-2 InfiniBand</a> networking, NVIDIA  achieved this remarkable feat through larger scale — more than triple that of the 3,584 H100 GPU submission a year ago — and extensive full-stack engineering.</p>
+<p>Thanks to the scalability of the NVIDIA AI platform, Eos can now train massive AI models like GPT-3 175B even faster, and this great AI performance translates into significant business opportunities. For example, in NVIDIA’s recent earnings call, we described how LLM service providers can turn a single dollar invested into seven dollars in just four years running the Llama 3 70B model on NVIDIA HGX H200 servers. This return assumes an LLM service provider serving Llama 3 70B at $0.60/M tokens, with an HGX H200 server throughput of <a href="https://blogs.nvidia.com/blog/meta-llama3-inference-acceleration/">24,000 tokens/second</a>.</p>
+<h2><b>NVIDIA</b> <b>H200 GPU Supercharges Generative AI and HPC </b></h2>
+<p>The NVIDIA H200 Tensor GPU builds upon the strength of the Hopper architecture, with 141GB of HBM3 memory and over 40% more memory bandwidth compared to the H100 GPU. Pushing the boundaries of what’s possible in AI training, the NVIDIA H200 Tensor Core GPU extended the H100’s performance by up to 47% in its MLPerf Training debut.</p>
+<h2><b>NVIDIA Software Drives Unmatched Performance Gains</b></h2>
+<p>Additionally, our submissions using a 512 H100 GPU configuration are now up to 27% faster compared to just one year ago due to numerous optimizations to the NVIDIA software stack. This improvement highlights how continuous software enhancements can significantly boost performance, even with the same hardware.</p>
+<p>This work also delivered nearly perfect scaling. As the number of GPUs increased by 3.2x — going from 3,584 H100 GPUs last year to 11,616 H100 GPUs with this submission — so did the delivered performance.</p>
+<p>Learn more about these optimizations on the <a href="https://developer.nvidia.com/blog/nvidia-sets-new-generative-ai-performance-and-scale-records-in-mlperf-training-v4-0/">NVIDIA Technical Blog</a>.</p>
+<h2><b>Excelling at LLM Fine-Tuning</b></h2>
+<p>As enterprises seek to customize pretrained large language models, LLM fine-tuning is becoming a key industry workload. MLPerf introduced a new LLM fine-tuning benchmark this round, based on the popular low-rank adaptation (LoRA) technique applied to Meta Llama 2 70B.</p>
+<p>The NVIDIA platform excelled at this task, scaling from eight to 1,024 GPUs, with the largest-scale NVIDIA submission completing the benchmark in a record 1.5 minutes.</p>
+<h2><b>Accelerating Stable Diffusion and GNN Training</b></h2>
+<p>NVIDIA also accelerated Stable Diffusion v2 training performance by up to 80% at the same system scales submitted last round. These advances reflect numerous enhancements to the NVIDIA software stack, showcasing how software and hardware improvements go hand-in-hand to deliver top-tier performance.</p>
+<p>On the new graph neural network (GNN) test based on R-GAT, the NVIDIA platform with H100 GPUs excelled at both small and large scales. The H200 delivered a 47% boost on single-node GNN training compared to the H100. This showcases the powerful performance and high efficiency of NVIDIA GPUs, which make them ideal for a wide range of AI applications.</p>
+<h2><b>Broad Ecosystem Support</b></h2>
+<p>Reflecting the breadth of the NVIDIA AI ecosystem, 10 NVIDIA partners submitted results, including ASUS, Dell Technologies, Fujitsu, GIGABYTE, Hewlett Packard Enterprise, Lenovo, Oracle, Quanta Cloud Technology, Supermicro and Sustainable Metal Cloud. This broad participation, and their own impressive benchmark results, underscores the widespread adoption and trust in NVIDIA’s AI platform across the industry.</p>
+<p><a href="https://mlcommons.org/">MLCommons</a>’ ongoing work to bring benchmarking best practices to AI computing is vital. By enabling peer-reviewed comparisons of AI and HPC platforms, and keeping pace with the rapid changes that characterize AI computing, MLCommons provides companies everywhere with crucial data that can help guide important purchasing decisions.</p>
+<p>And with the <a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">NVIDIA Blackwell</a> platform, next-level AI performance on trillion-parameter generative AI models for both training and inference is coming soon.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/hpc-promo-corp-blog-mlperf-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/hpc-promo-corp-blog-mlperf-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Scaling to New Heights: NVIDIA MLPerf Training Results Showcase Unprecedented Performance and Elasticity]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>TOPS of the Class: Decoding AI Performance on RTX AI PCs and Workstations</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-tops/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 12 Jun 2024 13:00:25 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artficial Intelligence]]></category>
+		<category><![CDATA[Conversational AI]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72090</guid>
+
+					<description><![CDATA[The era of the AI PC is here, and it’s powered by NVIDIA RTX and GeForce RTX technologies. ]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/" target="_blank" rel="noopener"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+<p>The era of the AI PC is here, and it’s powered by <a href="https://www.nvidia.com/en-us/design-visualization/desktop-graphics/" target="_blank" rel="noopener">NVIDIA RTX</a> and <a href="https://www.nvidia.com/en-us/geforce/rtx/" target="_blank" rel="noopener">GeForce RTX</a> technologies. With it comes a new way to evaluate performance for AI-accelerated tasks, and a new language that can be daunting to decipher when choosing between the desktops and laptops available.</p>
+<p>While PC gamers understand frames per second (FPS) and similar stats, measuring AI performance requires new metrics.</p>
+<h2><b>Coming Out on TOPS</b></h2>
+<p>The first baseline is TOPS, or trillions of operations per second. Trillions is the important word here — the processing numbers behind <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> tasks are absolutely massive. Think of TOPS as a raw performance metric, similar to an engine’s horsepower rating. More is better.</p>
+<p>Compare, for example, the recently announced Copilot+ PC lineup by Microsoft, which includes neural processing units (NPUs) able to perform upwards of 40 TOPS. Performing 40 TOPS is sufficient for some light AI-assisted tasks, like asking a local chatbot where yesterday’s notes are.</p>
+<p>But many generative AI tasks are more demanding. NVIDIA RTX and GeForce RTX GPUs deliver unprecedented performance across all generative tasks — the GeForce RTX 4090 GPU offers more than 1,300 TOPS. This is the kind of horsepower needed to handle AI-assisted digital content creation, AI super resolution in PC gaming, generating images from text or video, querying local <a href="https://blogs.nvidia.com/blog/what-are-large-language-models-used-for/" target="_blank" rel="noopener">large language models</a> (LLMs) and more.</p>
+<h2><b>Insert Tokens to Play</b></h2>
+<p>TOPS is only the beginning of the story. LLM performance is measured in the number of tokens generated by the model.</p>
+<p>Tokens are the output of the LLM. A token can be a word in a sentence, or even a smaller fragment like punctuation or whitespace. Performance for AI-accelerated tasks can be measured in “tokens per second.”</p>
+<p>Another important factor is batch size, or the number of inputs processed simultaneously in a single inference pass. As an LLM will sit at the core of many modern AI systems, the ability to handle multiple inputs (e.g. from a single application or across multiple applications) will be a key differentiator. While larger batch sizes improve performance for concurrent inputs, they also require more memory, especially when combined with larger models.</p>
+<figure id="attachment_72118" aria-describedby="caption-attachment-72118" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-72118" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-672x322.png" alt="" width="672" height="322" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-672x322.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-400x192.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-768x368.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-1536x737.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-842x404.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-406x195.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-188x90.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart-1280x614.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/NV-chart.png 1880w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72118" class="wp-caption-text">The more you batch, the more (time) you save.</figcaption></figure>
+<p>RTX GPUs are exceptionally well-suited for LLMs due to their large amounts of dedicated video random access memory (VRAM), Tensor Cores and <a href="https://developer.nvidia.com/tensorrt#section-inference-for-llms" target="_blank" rel="noopener">TensorRT-LLM</a> software.</p>
+<p>GeForce RTX GPUs offer up to 24GB of high-speed VRAM, and NVIDIA RTX GPUs up to 48GB, which can handle larger models and enable higher batch sizes. RTX GPUs also take advantage of Tensor Cores — dedicated AI accelerators that dramatically speed up the computationally intensive operations required for deep learning and generative AI models. That maximum performance is easily accessed when an application uses the <a href="https://developer.nvidia.com/tensorrt" target="_blank" rel="noopener">NVIDIA TensorRT</a> software development kit (SDK), which unlocks the highest-performance generative AI on the more than 100 million Windows PCs and workstations powered by RTX GPUs.</p>
+<p>The combination of memory, dedicated AI accelerators and optimized software gives RTX GPUs massive throughput gains, especially as batch sizes increase.</p>
+<h2><b>Text-to-Image, Faster Than Ever</b></h2>
+<p>Measuring image generation speed is another way to evaluate performance. One of the most straightforward ways uses Stable Diffusion, a popular image-based AI model that allows users to easily convert text descriptions into complex visual representations.</p>
+<p><iframe title="Accelerate Stable Diffusion with NVIDIA RTX GPUs" width="500" height="281" src="https://www.youtube.com/embed/fUAEBoJCJW8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>With Stable Diffusion, users can quickly create and refine images from text prompts to achieve their desired output. When using an RTX GPU, these results can be generated faster than processing the AI model on a CPU or NPU.</p>
+<p>That performance is <a href="https://blogs.nvidia.com/blog/ai-decoded-tensorrt-stable-diffusion-automatic1111/" target="_blank" rel="noopener">even higher</a> when using the <a href="https://github.com/NVIDIA/Stable-Diffusion-WebUI-TensorRT" target="_blank" rel="noopener">TensorRT extension</a> for the popular Automatic1111 interface. RTX users can generate images from prompts up to 2x faster with the SDXL Base checkpoint — significantly streamlining Stable Diffusion workflows.</p>
+<p>ComfyUI, another popular Stable Diffusion user interface, added <a href="https://github.com/comfyanonymous/ComfyUI_TensorRT" target="_blank" rel="noopener">TensorRT acceleration</a> last week. RTX users can now generate images from prompts up to 60% faster, and can even convert these images to videos using Stable Video Diffuson up to 70% faster with TensorRT.</p>
+<p><iframe title="Generate Images Faster with Stable Diffusion and RTX" width="500" height="281" src="https://www.youtube.com/embed/64QEVfbPHyg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>TensorRT acceleration can be put to the test in the new UL Procyon AI Image Generation benchmark, which delivers speedups of 50% on a GeForce RTX 4080 SUPER GPU compared with the fastest non-TensorRT implementation.</p>
+<p>TensorRT acceleration will soon be released for Stable Diffusion 3 — Stability AI’s new, highly anticipated text-to-image model — boosting performance by 50%. Plus, the new <a href="https://developer.nvidia.com/blog/accelerate-generative-ai-inference-performance-with-nvidia-tensorrt-model-optimizer-now-publicly-available/" target="_blank" rel="noopener">TensorRT-Model Optimizer</a> enables accelerating performance even further. This results in a 70% speedup compared with the non-TensorRT implementation, along with a 50% reduction in memory consumption.</p>
+<p>Of course, seeing is believing — the true test is in the real-world use case of iterating on an original prompt. Users can refine image generation by tweaking prompts significantly faster on RTX GPUs, taking seconds per iteration compared with minutes on a Macbook Pro M3 Max. Plus, users get both speed and security with everything remaining private when running locally on an RTX-powered PC or workstation.</p>
+<h2><b>The Results Are in and Open Sourced</b></h2>
+<p>But don’t just take our word for it. The team of AI researchers and engineers behind the open-source <a href="http://jan.ai" target="_blank" rel="noopener">Jan.ai</a> recently integrated <a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener">TensorRT-LLM</a> into its local chatbot app, then <a href="https://jan.ai/post/benchmarking-nvidia-tensorrt-llm" target="_blank" rel="noopener">tested</a> these optimizations for themselves.</p>
+<figure id="attachment_72112" aria-describedby="caption-attachment-72112" style="width: 648px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/Chart.png"><img loading="lazy" decoding="async" class="size-full wp-image-72112" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Chart.png" alt="" width="648" height="437" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Chart.png 648w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Chart-400x270.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Chart-319x215.png 319w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Chart-148x100.png 148w" sizes="(max-width: 648px) 100vw, 648px" /></a><figcaption id="caption-attachment-72112" class="wp-caption-text">Source: Jan.ai</figcaption></figure>
+<p>The researchers tested its implementation of TensorRT-LLM against the open-source llama.cpp inference engine across a variety of GPUs and CPUs used by the community. They found that TensorRT is “30-70% faster than llama.cpp on the same hardware,” as well as more efficient on consecutive processing runs. The team also included its methodology, inviting others to measure generative AI performance for themselves.</p>
+<p>From games to generative AI, speed wins. TOPS, images per second, tokens per second and batch size are all considerations when determining performance champs.</p>
+<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/AI-perf-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/AI-perf-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[TOPS of the Class: Decoding AI Performance on RTX AI PCs and Workstations]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Nerding About NeRFs: How Neural Radiance Fields Transform 2D Images Into Hyperrealistic 3D Models</title>
+		<link>https://blogs.nvidia.com/blog/neural-radiance-fields-3d-models/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 12 Jun 2024 13:00:12 +0000</pubDate>
+				<category><![CDATA[The AI Podcast]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72094</guid>
+
+					<description><![CDATA[Let’s talk about NeRFs — no, not the neon-colored foam dart blasters, but neural radiance fields, a technology that might just change the nature of images forever. In this episode of NVIDIA’s AI Podcast recorded live at GTC, host Noah Kravitz speaks with Michael Rubloff, founder and managing editor of radiancefields.com, about radiance field-based technologies.	<a class="read-more" href="https://blogs.nvidia.com/blog/neural-radiance-fields-3d-models/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Let’s talk about NeRFs — no, not the neon-colored foam dart blasters, but neural radiance fields, a technology that might just change the nature of images forever. In this episode of NVIDIA’s <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">AI Podcast</a> recorded live at GTC, host Noah Kravitz speaks with Michael Rubloff, founder and managing editor of <a href="http://radiancefields.com" target="_blank" rel="noopener">radiancefields.com</a>, about radiance field-based technologies. NeRFs allow users to take a series of 2D images or video to create a hyperrealistic 3D model — something like a photograph of a scene, but that can be looked at from multiple angles. Tune in to learn more about the technology’s creative and commercial applications and how it might transform the way people capture and experience the world.</p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1844347677%3Fsecret_token%3Ds-seIzfk7GvkQ&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Michael Rubloff Explains How Neural Radiance Fields Turn 2D Images Into 3D Models - Ep. 226" href="https://soundcloud.com/theaipodcast/nerf/s-seIzfk7GvkQ" target="_blank" rel="noopener">Michael Rubloff Explains How Neural Radiance Fields Turn 2D Images Into 3D Models &#8211; Ep. 226</a></div>
+<p>Watch the replay of Rubloff’s <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62751/" target="_blank" rel="noopener">GTC session</a> on the intersection of generative AI and extended reality.</p>
+<h2><b>Time Stamps</b></h2>
+<p>1:18: What are NeRFs?<br />
+3:01: How do NeRFs work?<br />
+3:44: What&#8217;s the difference between NeRFs and Gaussian splatting?<br />
+4:36: How are NeRFs being used?<br />
+7:22: What is a radiance field?<br />
+14:18: How might radiance fields affect creative applications?<br />
+17:50: Examples of NeRFs in action in the media right now<br />
+21:00: Rubloff&#8217;s insight on where NeRFs will go in the future</p>
+<h2><b>You Might Also Like…</b></h2>
+<p><a href="https://soundcloud.com/theaipodcast/mediamonks-lewis-smithingham" target="_blank" rel="noopener"><b>Media.Monks’ Lewis Smithingham on Enhancing Media and Marketing With AI &#8211; Ep. 222</b></a></p>
+<p>Meet Media.Monks’ Wormhole, an alien-like, conversational robot with a quirky personality and the ability to offer keen marketing expertise. Lewis Smithingham, senior vice president of innovation and special ops at Media.Monks, a global marketing and advertising company, discusses the creation of Wormhole and AI’s potential to enhance media and entertainment.</p>
+<p><a href="https://soundcloud.com/theaipodcast/robin-wang" target="_blank" rel="noopener"><b>Living Optics CEO Robin Wang on Democratizing Hyperspectral Imaging &#8211; Ep. 219 </b><b><br />
+</b><br />
+</a>Step into the realm of the unseen with Robin Wang, CEO of Living Optics. The startup cofounder discusses the power of Living Optics’ hyperspectral imaging camera, which can capture visual data across 96 colors, reveals details invisible to the human eye.</p>
+<p><a href="https://soundcloud.com/theaipodcast/pinar-demirdag-cuebric" target="_blank" rel="noopener"><b>Exploring Filmmaking With Cuebric’s AI: Insights from Pinar Seyhan Demirdag &#8211; Ep. 214</b></a></p>
+<p>Pinar Seyhan Demirdag, co-founder and CEO of Cuebric, which is on a mission to offer new filmmaking and content creation solutions through immersive, two-and-a-half-dimensional cinematic environments.</p>
+<p><a href="https://soundcloud.com/theaipodcast/ai-deepdub" target="_blank" rel="noopener"><b>Deepdub’s Ofir Krakowski on Redefining Dubbing From Hollywood to Bollywood &#8211; Ep. 202</b></a></p>
+<p>Deepdub acts as a digital bridge, providing access to content by using generative AI to break down language and cultural barriers. The Israel-based startup’s co-founder and CEO, Ofir Krakowski, describes how Deepdub uses AI-driven dubbing to help entertainment companies boost efficiency and cut costs while increasing accessibility.</p>
+<h2><b>Subscribe to the AI Podcast</b></h2>
+<p>Get the<a href="https://blogs.nvidia.com/ai-podcast/" target="_blank" rel="noopener"> AI Podcast</a> through<a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439" target="_blank" rel="noopener"> iTunes</a>, <a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm" target="_blank" rel="noopener">Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast" target="_blank" rel="noopener">Amazon Music</a>, <a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us" target="_blank" rel="noopener">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast" target="_blank" rel="noopener">Overcast</a>,<a href="https://player.fm/series/the-ai-podcast" target="_blank" rel="noopener"> PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811" target="_blank" rel="noopener">Podbay</a>, <a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast" target="_blank" rel="noopener">PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L" target="_blank" rel="noopener">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr" target="_blank" rel="noopener">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/" target="_blank" rel="noopener">TuneIn</a>.</p>
+<p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short" target="_blank" rel="noopener">this listener survey</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/ski_video.gif"
+			type="image/gif"
+			width="654"
+			height="368"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/ski_video.gif"
+			width="654"
+			height="368"
+			/>
+			<media:title type="html"><![CDATA[Nerding About NeRFs: How Neural Radiance Fields Transform 2D Images Into Hyperrealistic 3D Models]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Why Accelerated Data Processing Is Crucial for AI Innovation in Every Industry</title>
 		<link>https://blogs.nvidia.com/blog/accelerated-data-processing-ai-industry-innovation/</link>
 		
@@ -140,16 +322,16 @@
 <p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 <p>Plus, make sure to follow @NVIDIAGFN on X to see picturesque in-game locations from where members are sending their #GreetingsfromGFN.</p>
 <h2><b>Get Ready to Rumble</b></h2>
-<figure id="attachment_72052" aria-describedby="caption-attachment-72052" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-72052" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-672x378.jpg" alt="Street Fighter 6 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72052" class="wp-caption-text"><em>Are Ryu ready?</em></figcaption></figure>
+<figure id="attachment_72052" aria-describedby="caption-attachment-72052" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72052" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-672x378.jpg" alt="Street Fighter 6 on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Street_Fighter_6.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72052" class="wp-caption-text"><em>Are Ryu ready?</em></figcaption></figure>
 <p>Unleash the ultimate Hadoken with <i>Street Fighter 6</i> on GeForce NOW. The renowned 2D fighting game returns with intense battles, special moves, combos and Super Art attacks to defeat opponents. With a roster of 22 iconic fighters, including classic World Warriors like Ryu, Chun-Li, Guile and Akuma, plus all-new characters like Kimberly, Jamie, Marisa and Manon, there’s no better time to hit the streets.</p>
 <p>The newest installment introduces innovative features and enhanced visuals across three distinct game modes — Fighting Ground, World Tour and Battle Hub — for gamers to level up and put their skills to the test. The game’s blend of classic mechanics and fresh enhancements is captivating longtime fans and newcomers alike.</p>
 <p>Become a World Warrior in the cloud with a GeForce NOW Ultimate membership and stream all the fighting glory at up to stunning 4K resolution. Witness every punch, kick and Hadoken with others by hopping online for some head-to-head competition.</p>
 <h2><b>Defying Gravity</b></h2>
-<figure id="attachment_72056" aria-describedby="caption-attachment-72056" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-72056" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-672x336.jpg" alt="XDefiant on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72056" class="wp-caption-text"><em>Discover which faction will reign supreme in “XDefiant.”</em></figcaption></figure>
+<figure id="attachment_72056" aria-describedby="caption-attachment-72056" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72056" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-672x336.jpg" alt="XDefiant on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-XDefiant.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72056" class="wp-caption-text"><em>Discover which faction will reign supreme in “XDefiant.”</em></figcaption></figure>
 <p><i>XDefiant</i>, a free-to-play first-person shooter, combines intense gunplay with strategic team dynamics. Set in a world where factions inspired by iconic Ubisoft franchises clash, the game enables players to customize their loadouts and engage in fast-paced battles. Choose stealthy tactics or all-out aggression for a diverse and thrilling multiplayer experience.</p>
 <p>Prepare for adrenaline-fueled firefights and tactical showdowns at up to 240 frames per second with an Ultimate membership. Every frame counts in the fight against other factions.</p>
 <h2><b>Get in the Pass Lane</b></h2>
-<figure id="attachment_72063" aria-describedby="caption-attachment-72063" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-72063" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-672x336.jpg" alt="PC Game Pass member reward on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72063" class="wp-caption-text"><em>It’s rewarding to be a GeForce NOW member.</em></figcaption></figure>
+<figure id="attachment_72063" aria-describedby="caption-attachment-72063" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72063" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-672x336.jpg" alt="PC Game Pass member reward on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfn-pc-game-pass-reward-tw-li-2048x1024-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72063" class="wp-caption-text"><em>It’s rewarding to be a GeForce NOW member.</em></figcaption></figure>
 <p>Get ready for a summer of gaming. GeForce NOW Ultimate and Priority members new to PC Game Pass and part of the GeForce NOW Rewards program can now receive three free months of Microsoft’s service.</p>
 <p>With PC Game Pass and GeForce NOW, members can play high-quality Xbox PC titles with the power of an <a href="https://www.nvidia.com/en-us/geforce/rtx/">NVIDIA GeForce RTX</a> server in the cloud. Jump into the action in iconic franchises like <i>Starfield</i>, <i>Forza Motorsport</i> and <i>Remnant II</i> with support for more titles added every GFN Thursday.</p>
 <p>This special offer is available for a limited time, and only for GeForce NOW members new to PC Game Pass.</p>
@@ -1026,188 +1208,6 @@ Nearly <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-g
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Leading Medical Centers in Taiwan Adopt NVIDIA Accelerated Computing to Advance Biomedical Research]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Power Tool: Generative AI Tracks Typhoons, Tames Energy Use</title>
-		<link>https://blogs.nvidia.com/blog/weather-forecast-corrdiff/</link>
-		
-		<dc:creator><![CDATA[Dion Harris]]></dc:creator>
-		<pubDate>Sun, 02 Jun 2024 11:43:30 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Software]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Climate]]></category>
-		<category><![CDATA[COMPUTEX 2024]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71915</guid>
-
-					<description><![CDATA[Weather forecasters in Taiwan had their hair blown back when they saw a typhoon up close, created on a computer that slashed the time and energy needed for the job. It’s a reaction that users in many fields are feeling as generative AI shows them how new levels of performance contribute to reductions in total	<a class="read-more" href="https://blogs.nvidia.com/blog/weather-forecast-corrdiff/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Weather forecasters in Taiwan had their hair blown back when they saw a typhoon up close, created on a computer that slashed the time and energy needed for the job.</p>
-<p>It’s a reaction that users in many fields are feeling as <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> shows them how new levels of performance contribute to reductions in total cost of ownership.</p>
-<h2><b>Inside the AI of the Storm</b></h2>
-<p>Tracking a typhoon provided a great test case of generative AI’s prowess. The work traditionally begins with clusters of CPUs cranking on complex algorithms to create atmospheric models with a 25-kilometer resolution.</p>
-<p>Enter <a href="https://arxiv.org/abs/2309.15214" target="_blank" rel="noopener">CorrDiff</a>, a generative AI model that’s part of <a href="https://www.nvidia.com/en-us/high-performance-computing/earth-2/" target="_blank" rel="noopener">NVIDIA Earth-2</a>, a set of services and software for weather and climate research.</p>
-<p>Using a class of diffusion models that power today’s text-to-image services, CorrDiff resolved the <a href="https://resources.nvidia.com/en-us-energy-efficiency/energy-efficiency-solution-brief-weather-prediction">25-km models to two kilometers 1,000x faster, using 3<b>,</b>000x less energy</a> for a single inference than traditional methods.</p>
-<h2><b>CorrDiff Cuts Costs 50x, Energy Use 25x</b></h2>
-<p>CorrDiff shines on the NVIDIA AI platform, even when retraining the model once a year and using statistical groups of a thousand forecasts to boost the accuracy of predictions. Compared to traditional methods under these conditions, it slashes cost by 50x cost and energy use by 25x a year.</p>
-<p>That means work that used to require nearly $3 million for a cluster of CPUs and the energy to run them can be done for about $60,000 on a single system with an <a href="https://www.nvidia.com/en-us/data-center/h100/" target="_blank" rel="noopener">NVIDIA H100 Tensor Core GPU</a>. It’s a massive reduction that shows how generative AI and <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/" target="_blank" rel="noopener">accelerated computing</a> increases energy efficiency and lowers total cost of ownership.</p>
-<p>The technology also helps forecasters see more precisely where a typhoon will land, potentially saving lives.</p>
-<p>“NVIDIA’s CorrDiff generative AI model opens the door to the use of AI-generated kilometer-scale weather forecasts, enabling Taiwan to prepare better for typhoons,” said Hongey Chen, a director of Taiwan’s National Science and Technology Center for Disaster Reduction.</p>
-<p>The Taiwan forecasters could save nearly a gigawatt-hour a year, using CorrDiff. Energy savings could balloon if the nearly 200 regional weather data centers around the world adopt the technology for more <a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/" target="_blank" rel="noopener">sustainable computing</a>.</p>
-<p>Companies that sell commercial forecasts are <a href="https://blogs.nvidia.com/blog/generative-ai-science-isc/" target="_blank" rel="noopener">also adopting CorrDiff</a>, attracted by its speed and savings.</p>
-<h2><b>Broad Horizons for Energy Efficiency</b></h2>
-<p>NVIDIA Earth-2 takes these capabilities to a planetary scale. It fuses AI, physics simulations and observed data to help countries and companies respond to global issues like climate change. That will help address the impacts of climate change, which is expected to cost a million lives and $1.7 trillion per year by 2050.</p>
-<p>Accelerated computing and generative AI are bringing new levels of performance and energy efficiency to many applications. Explainers on <a href="https://blogs.nvidia.com/blog/what-is-green-computing/" target="_blank" rel="noopener">green computing</a> and why <a href="https://blogs.nvidia.com/blog/why-gpus-are-great-for-ai/" target="_blank" rel="noopener">GPUs are great for AI</a> provide more context and some examples.</p>
-<p>Compare the costs and energy consumption of popular workloads running on an x86 CPU-based server versus an NVIDIA GPU server with <a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/energy-efficiency-calculator/" target="_blank" rel="noopener">this simple calculator</a>. And watch Huang’s <a href="https://www.nvidia.com/en-us/events/computex/" target="_blank" rel="noopener">keynote address</a> at COMPUTEX to get the big picture.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/taiwan-typhoon-corrdiff.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/taiwan-typhoon-corrdiff-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Power Tool: Generative AI Tracks Typhoons, Tames Energy Use]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Grace Hopper Superchip Accelerates Murex MX.3 Analytics Performance, Reduces Power Consumption</title>
-		<link>https://blogs.nvidia.com/blog/grace-hopper-murex-mx-3/</link>
-		
-		<dc:creator><![CDATA[Prabhu Ramamoorthy]]></dc:creator>
-		<pubDate>Fri, 31 May 2024 15:00:58 +0000</pubDate>
-				<category><![CDATA[Accelerated Analytics]]></category>
-		<category><![CDATA[GPU Computing]]></category>
-		<category><![CDATA[High-Performance Computing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71839</guid>
-
-					<description><![CDATA[After the 2008 financial crisis and increased risk-management regulations that followed, Pierre Spatz anticipated banks would focus on reducing computing expenses. As head of quantitative research at Murex, a trading and risk management software company based in Paris, Spatz adopted NVIDIA’s CUDA and GPU-accelerated computing, aiming for top performance and energy efficiency. Always seeking the	<a class="read-more" href="https://blogs.nvidia.com/blog/grace-hopper-murex-mx-3/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>After the 2008 financial crisis and increased risk-management regulations that followed, Pierre Spatz anticipated banks would focus on reducing computing expenses.</p>
-<p>As head of quantitative research at Murex, a trading and risk management software company based in Paris, Spatz adopted NVIDIA’s CUDA and GPU-accelerated computing, aiming for top performance and energy efficiency.</p>
-<p>Always seeking the latest technologies, the company’s quants team has begun trials of the <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA Grace Hopper Superchip</a>. The effort is focused on helping customers better price and manage credit and market risk exposures of derivatives contracts.</p>
-<p>More than 60,000 daily users in 65 countries rely on the Murex MX.3 platform. MX.3 assists banks, asset managers, pension funds and other financial institutions with their trading, risk and operations across asset classes.</p>
-<h2><b>Managing Risk With MX.3 Driven by Grace Hopper</b></h2>
-<p>Financial institutions need high-performance computing infrastructure to run risk models on vast amounts of data for pricing and risk calculations, and to deliver real-time decision-making capabilities.</p>
-<p>MX.3 coverage includes both credit and market risk, BASEL capital standards, fundamental review of the trading book and x-valuation adjustment (XVA). XVA is used for different types of valuation adjustments related to derivative contracts, such as the credit value adjustment (CVA), the margin value adjustment and the funding valuation adjustment.</p>
-<p>Murex is testing Grace Hopper on the MX.3 platform for XVA calculations, as well as for market risk calibration, pricing evaluation, sensitivity, and profit and loss calculations on various asset classes.</p>
-<p>Grace Hopper offers faster calculation as well as power savings to the Murex platform.</p>
-<p>“On counterparty credit risk workloads such as CVA, Grace Hopper is the perfect fit, leveraging a heterogeneous architecture with a unique mix of CPU and GPU computations,” Spatz said. “On risk calculations, Grace is not only the fastest processor, but also far more power-efficient, making green IT a reality in the trading world.”</p>
-<p>When running XVA workloads in MX.3, the Murex research and development lab has noticed Grace Hopper can offer a 4x reduction in energy consumption and a 7x performance improvement compared with CPU-based systems.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-71879" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-400x270.jpg" alt="" width="400" height="270" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-400x270.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-672x454.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-768x519.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-666x450.jpg 666w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-318x215.jpg 318w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002-148x100.jpg 148w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-1-002.jpg 1027w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
-<h2><b>Pricing FX Barrier Options in MX.3 With Grace Hopper </b></h2>
-<p>To price foreign exchange (FX) barrier options, Murex has used its flagship and latest stochastic local volatility model and also noticed impressive performance improvements when running on Grace Hopper. A barrier option is a derivative with a payoff that relies on whether its underlying asset price reaches or crosses a specified threshold during the span of the option contract.</p>
-<p>The pricing evaluation is done with a 2D partial differential equation, which is more cost-effective on the Arm-based NVIDIA Grace CPU in GH200. Pricing this derivative with MX.3 on Grace Hopper goes 2.3x faster compared with Intel Xeon Gold 6148.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-71883" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-400x253.jpg" alt="" width="400" height="253" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-400x253.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-672x424.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-768x485.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-712x450.jpg 712w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-340x215.jpg 340w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002-158x100.jpg 158w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-2-002.jpg 904w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
-<p>The NVIDIA Grace CPU also offers significant power efficiencies for FX barrier calculations on a watts-per-server basis, and it’s 5x better.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002.jpg"><img loading="lazy" decoding="async" class="aligncenter wp-image-71887" src="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-400x267.jpg" alt="" width="400" height="267" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-322x215.jpg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/05/Murex-Blog_Figure-3-002.jpg 760w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
-<p>NVIDIA’s next-generation accelerated computing platform is driving energy efficiency and cost-saving for high-performance computing for quantitative analytics in capital markets, says Murex, pointing to the results above.</p>
-<p><i>Learn about NVIDIA AI solutions for </i><a href="https://www.nvidia.com/en-us/industries/finance/"><i>financial services</i></a><i>. </i></p>
-<p>&nbsp;</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/finance-tech-blog-murex-1920x1080-1.jpg"
-			type="image/jpeg"
-			width="1920"
-			height="1080"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/finance-tech-blog-murex-1920x1080-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Grace Hopper Superchip Accelerates Murex MX.3 Analytics Performance, Reduces Power Consumption]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Elevate Your Expertise: NVIDIA Introduces AI Infrastructure and Operations Training and Certification</title>
-		<link>https://blogs.nvidia.com/blog/ai-infrastructure-operations-training-certification/</link>
-		
-		<dc:creator><![CDATA[Ann Sheridan]]></dc:creator>
-		<pubDate>Thu, 30 May 2024 15:00:23 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Education]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71841</guid>
-
-					<description><![CDATA[NVIDIA has introduced a self-paced course, called AI Infrastructure and Operations Fundamentals, to provide enterprise professionals with essential training on the infrastructure and operational aspects of AI and accelerated computing.  From enhancing speech recognition systems to powering self-driving cars, AI is transforming everyday life. The new course explains how to deploy and manage scalable infrastructure	<a class="read-more" href="https://blogs.nvidia.com/blog/ai-infrastructure-operations-training-certification/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span data-contrast="auto">NVIDIA has introduced a self-paced course</span><span data-contrast="auto">,</span><span data-contrast="auto"> called </span><a href="https://academy.nvidia.com/en/course/ai-infrastructure-operations-fundamentals/?cm=64727&amp;nvid=nv-int-tblg-131693" target="_blank" rel="noopener"><i><span data-contrast="none">AI Infrastructure and Operations Fundamentals</span></i></a><i><span data-contrast="auto">,</span></i><span data-contrast="auto"> to provide enterprise professionals with essential training on the infrastructure and operational aspects of AI and accelerated computing.</span><span data-ccp-props="{}"> </span></p>
-<p><span data-contrast="auto">From enhancing speech recognition systems to powering self-driving cars, AI is transforming everyday life. The new course explains how to deploy and manage scalable infrastructure to support AI-based solutions, helping IT pros realize AI’s potential and stay competitive in the rapidly changing technological landscape.</span><span data-ccp-props="{}"> </span></p>
-<h2><b><span data-contrast="auto">Course Overview </span></b><span data-ccp-props="{}"> </span></h2>
-<p><span data-contrast="auto">The course is ideal for anyone seeking to expand their knowledge of AI and its applications. It was created and taught by NVIDIA experts with real-world experience and deep technical domain expertise.</span></p>
-<p><span data-contrast="auto">The course is divided into three modules. The first, </span><i><span data-contrast="auto">Introduction to AI</span></i><span data-contrast="none">, </span><span data-contrast="auto">covers foundational AI concepts and principles. Learners will:  </span><span data-ccp-props="{}"> </span></p>
-<ul>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="1" data-aria-level="2"><span data-contrast="auto">Discover how AI is being applied in various sectors</span><span data-contrast="auto">,</span><span data-contrast="auto"> to drive innovation and efficiency </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="1" data-aria-level="2"><span data-contrast="auto">Trace the progression of AI from basic machine learning to advanced deep learning to generative AI — and learn how each phase unlocked new capabilities </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="3" data-aria-level="2"><span data-contrast="auto">Explore how GPUs revolutionized AI, providing the computational power necessary for complex AI tasks </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="4" data-aria-level="2"><span data-contrast="auto">Understand the importance of a robust software stack in ensuring optimal performance and efficiency </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="5" data-aria-level="2"><span data-contrast="auto">Delve into the environments where AI workloads operate, whether on premises or in the cloud </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-</ul>
-<p><i><span data-contrast="auto">AI Infrastructure</span></i><span data-contrast="none">, </span><span data-contrast="auto">the second module</span><span data-contrast="auto">,</span><span data-contrast="auto"> dives into the critical infrastructure components that support AI operations. Learners will: </span><span data-ccp-props="{}"> </span></p>
-<ul>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="6" data-aria-level="2"><span data-contrast="auto">Gain knowledge about the hardware that powers AI, including the latest advancements in compute platforms, networking and storage  </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="7" data-aria-level="2"><span data-contrast="auto">Explore practices that reduce data center carbon footprints and energy usage</span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="8" data-aria-level="2"><span data-contrast="auto">Discover how reference architectures can serve as a foundation for building the most effective AI designs </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="9" data-aria-level="2"><span data-contrast="auto">Evaluate the benefits of transitioning from on-premises data centers to cloud-based solutions </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-</ul>
-<p><i><span data-contrast="auto">AI Operations</span></i><span data-contrast="auto">, </span><span data-contrast="auto">the final module</span><span data-contrast="auto">,</span><span data-contrast="auto"> focuses on the practical aspect of managing AI infrastructure. Learners will: </span><span data-ccp-props="{}"> </span></p>
-<ul>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="1" data-aria-level="2"><span data-contrast="auto">Gain insights into the tools and techniques that enable effective infrastructure management and monitoring </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-<li data-leveltext="o" data-font="Courier New" data-listid="1" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:1490,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="2" data-aria-level="2"><span data-contrast="auto">Learn about orchestrating AI clusters and scheduling tasks to maximize performance and resource efficiency </span><span data-ccp-props="{&quot;335559685&quot;:630,&quot;335559991&quot;:270}"> </span></li>
-</ul>
-<h2><b><span data-contrast="auto">Certification: AI Infrastructure and Operations Associate </span></b><span data-ccp-props="{}"> </span></h2>
-<p><span data-contrast="auto">Alongside the course, NVIDIA offers a new </span><a href="https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-operations-associate/?nvid=nv-int-tblg-138971" target="_blank" rel="noopener"><span data-contrast="none">AI Infrastructure and Operations associate certification</span></a><span data-contrast="none">.</span><span data-contrast="auto"> This entry-level credential validates knowledge of the foundational con</span><span data-contrast="none">cept</span><span data-contrast="auto">s of adopting AI computing with NVIDIA solutions. Topics covered in this exam include:</span><span data-ccp-props="{}"> </span></p>
-<ul>
-<li data-leveltext="" data-font="Symbol" data-listid="2" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="1" data-aria-level="1"><span data-contrast="auto">Accelerated computing use cases</span><span data-ccp-props="{}"> </span></li>
-<li data-leveltext="" data-font="Symbol" data-listid="2" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="2" data-aria-level="1"><span data-contrast="auto">AI, machine learning and deep learning</span><span data-ccp-props="{}"> </span></li>
-<li data-leveltext="" data-font="Symbol" data-listid="2" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="3" data-aria-level="1"><span data-contrast="auto">GPU architecture</span><span data-ccp-props="{}"> </span></li>
-<li data-leveltext="" data-font="Symbol" data-listid="2" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="4" data-aria-level="1"><span data-contrast="auto">NVIDIA’s software suite</span><span data-ccp-props="{}"> </span></li>
-<li data-leveltext="" data-font="Symbol" data-listid="2" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-aria-posinset="5" data-aria-level="1"><span data-contrast="auto">Infrastructure and operation considerations for adopting NVIDIA solutions</span><span data-ccp-props="{}"> </span></li>
-</ul>
-<p><span data-contrast="auto">Whether attendees want to enhance existing skills, support projects, advance career paths</span><span data-contrast="auto">,</span><span data-contrast="auto"> or embark on a new professional trajectory, this AI course and certification will further the knowledge and skills needed to excel in using AI.</span><span data-ccp-props="{}"> </span></p>
-<p><span data-contrast="auto">Learn more about this </span><a href="https://www.nvidia.com/en-us/learn/learning-path/dgx-data-center/?nvid=nv-int-tblg-390056" target="_blank" rel="noopener"><span data-contrast="none">training and certification</span></a><span data-contrast="none">.</span><span data-contrast="auto"> </span><span data-ccp-props="{}"> </span></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/nvt-blog-nca-aiio-exam-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/nvt-blog-nca-aiio-exam-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Elevate Your Expertise: NVIDIA Introduces AI Infrastructure and Operations Training and Certification]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
