@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 13 Jun 2024 01:07:09 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Jun 2024 21:06:19 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,115 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>NVIDIA Releases Open Synthetic Data Generation Pipeline for Training Large Language Models</title>
+		<link>https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/</link>
+		
+		<dc:creator><![CDATA[Ankit Patel]]></dc:creator>
+		<pubDate>Fri, 14 Jun 2024 15:51:33 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
+		<category><![CDATA[Synthetic Data Generation]]></category>
+		<category><![CDATA[TensorRT]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72165</guid>
+
+					<description><![CDATA[NVIDIA today announced Nemotron-4 340B, a family of open models that developers can use to generate synthetic data for training large language models (LLMs) for commercial applications across healthcare, finance, manufacturing, retail and every other industry. High-quality training data plays a critical role in the performance, accuracy and quality of responses from a custom LLM	<a class="read-more" href="https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p dir="ltr">NVIDIA today announced Nemotron-4 340B, a family of open models that developers can use to generate synthetic data for training large language models (LLMs) for commercial applications across healthcare, finance, manufacturing, retail and every other industry.</p>
+<p dir="ltr">High-quality training data plays a critical role in the performance, accuracy and quality of responses from a custom LLM — but robust datasets can be prohibitively expensive and difficult to access.</p>
+<p dir="ltr">Through a uniquely permissive <a href="https://developer.download.nvidia.com/licenses/nvidia-open-model-license-agreement-june-2024.pdf" target="_blank" rel="noopener">open model license</a>, Nemotron-4 340B gives developers a free, scalable way to generate synthetic data that can help build powerful LLMs.</p>
+<p dir="ltr">The Nemotron-4 340B family includes base, instruct and reward models that form a pipeline to generate synthetic data used for training and refining LLMs. The models are optimized to work with <a href="https://github.com/NVIDIA/NeMo" target="_blank" rel="noopener">NVIDIA NeMo</a>, an open-source framework for end-to-end model training, including data curation, customization and evaluation. They’re also optimized for inference with the open-source <a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener">NVIDIA TensorRT-LLM</a> library.</p>
+<p dir="ltr">Nemotron-4 340B can be downloaded now from <a href="https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911" target="_blank" rel="noopener">Hugging Face</a>. Developers will soon be able to access the models at <a href="http://ai.nvidia.com/" target="_blank" rel="noopener">ai.nvidia.com</a>, where they’ll be packaged as an <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/" target="_blank" rel="noopener">NVIDIA NIM</a> microservice with a standard application programming interface that can be deployed anywhere.</p>
+<h2 dir="ltr">Navigating Nemotron to Generate Synthetic Data</h2>
+<p dir="ltr">LLMs can help developers generate synthetic training data in scenarios where access to large, diverse labeled datasets is limited.</p>
+<p dir="ltr">The <a href="https://huggingface.co/nvidia/Nemotron-4-340B-Instruct" target="_blank" rel="noopener">Nemotron-4 340B Instruct</a> model creates diverse synthetic data that mimics the characteristics of real-world data, helping improve data quality to increase the performance and robustness of custom LLMs across various domains.</p>
+<p dir="ltr">Then, to boost the quality of the AI-generated data, developers can use the <a href="https://huggingface.co/nvidia/Nemotron-4-340B-Reward" target="_blank" rel="noopener">Nemotron-4 340B Reward</a> model to filter for high-quality responses. Nemotron-4 340B Reward grades responses on five attributes: helpfulness, correctness, coherence, complexity and verbosity. It’s currently first place on the <a target="_blank" href="https://huggingface.co/spaces/allenai/reward-bench">Hugging Face RewardBench leaderboard</a>, created by <a href="https://allenai.org/" target="_blank" rel="noopener">AI2</a>, for evaluating the capabilities, safety and pitfalls of reward models.</p>
+<figure id="attachment_72168" aria-describedby="caption-attachment-72168" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-scaled.jpg"><img fetchpriority="high" decoding="async" class="wp-image-72168 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-672x378.jpg" alt="nemotron synthetic data generation pipeline diagram" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72168" class="wp-caption-text">In this synthetic data generation pipeline, (1) the Nemotron-4 340B Instruct model is first used to produce synthetic text-based output. An evaluator model, (2) Nemotron-4 340B Reward, then assesses this generated text — providing feedback that guides iterative improvements and ensures the synthetic data is accurate, relevant and aligned with specific requirements.</figcaption></figure>
+<p dir="ltr">Researchers can also create their own instruct or reward models by customizing the <a href="https://huggingface.co/nvidia/Nemotron-4-340B-Base" target="_blank" rel="noopener">Nemotron-4 340B Base</a> model using their proprietary data, combined with the included <a href="https://huggingface.co/datasets/nvidia/HelpSteer2" target="_blank" rel="noopener">HelpSteer2 dataset</a>.</p>
+<h2 dir="ltr">Fine-Tuning With NeMo, Optimizing for Inference With TensorRT-LLM</h2>
+<p dir="ltr">Using open-source NVIDIA NeMo and NVIDIA TensorRT-LLM, developers can optimize the efficiency of their instruct and reward models to generate synthetic data and to score responses.</p>
+<p dir="ltr">All Nemotron-4 340B models are optimized with TensorRT-LLM to take advantage of tensor parallelism, a type of model parallelism in which individual weight matrices are split across multiple GPUs and servers, enabling efficient inference at scale.</p>
+<p dir="ltr">Nemotron-4 340B Base, trained on 9 trillion tokens, can be customized using the NeMo framework to adapt to specific use cases or domains. This fine-tuning process benefits from extensive pretraining data and yields more accurate outputs for specific downstream tasks.</p>
+<p dir="ltr">A variety of customization methods are available through the NeMo framework, including supervised fine-tuning and parameter-efficient fine-tuning methods such as low-rank adaptation, or LoRA.</p>
+<p dir="ltr">To boost model quality, developers can align their models with <a href="https://github.com/NVIDIA/NeMo-Aligner" target="_blank" rel="noopener">NeMo Aligner</a> and datasets annotated by Nemotron-4 340B Reward. Alignment is a key step in training LLMs, where a model’s behavior is fine-tuned using algorithms like reinforcement learning from human feedback (RLHF) to ensure its outputs are safe, accurate, contextually appropriate and consistent with its intended goals.</p>
+<p dir="ltr">Businesses seeking enterprise-grade support and security for production environments can also access NeMo and TensorRT-LLM through the cloud-native <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform, which provides accelerated and efficient runtimes for generative AI foundation models.</p>
+<h2 dir="ltr">Evaluating Model Security and Getting Started</h2>
+<p dir="ltr">The Nemotron-4 340B Instruct model underwent extensive safety evaluation, including adversarial tests, and performed well across a wide range of risk indicators. Users should still perform careful evaluation of the model’s outputs to ensure the synthetically generated data is suitable, safe and accurate for their use case.</p>
+<p dir="ltr">For more information on model security and safety evaluation, read the model card.</p>
+<p dir="ltr">Download Nemotron-4 340B models via <a href="https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911" target="_blank" rel="noopener">Hugging Face</a>. For more details, read the <a target="_blank" href="https://research.nvidia.com/publication/2024-06_nemotron-4-340b">research papers on the model</a> and <a href="https://arxiv.org/abs/2406.08673" target="_blank" rel="noopener">dataset</a>.</p>
+<p><i>See </i><a href="https://www.nvidia.com/en-eu/about-nvidia/terms-of-service/" target="_blank" rel="noopener"><i>notice</i></a><i> regarding software product information.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/llm-blog-customization-techniques-2847735-1280x680-1.png"
+			type="image/png"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/llm-blog-customization-techniques-2847735-1280x680-1-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Releases Open Synthetic Data Generation Pipeline for Training Large Language Models]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>‘The Proudest Refugee’: How Veronica Miller Charts Her Own Path at NVIDIA</title>
+		<link>https://blogs.nvidia.com/blog/nvidia-life-veronica-miller/</link>
+		
+		<dc:creator><![CDATA[Haley Hirai]]></dc:creator>
+		<pubDate>Fri, 14 Jun 2024 13:00:11 +0000</pubDate>
+				<category><![CDATA[NVIDIA Life]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72096</guid>
+
+					<description><![CDATA[When she was five years old, Veronica Miller (née Teklai) and her family left their homeland of Eritrea, in the Horn of Africa, to escape an ongoing war with Ethiopia and create a new life in the U.S. She grew up in East Orange, New Jersey, watching others judge her parents and turn them away	<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-life-veronica-miller/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>When she was five years old, Veronica Miller (née Teklai) and her family left their homeland of Eritrea, in the Horn of Africa, to escape an ongoing war with Ethiopia and create a new life in the U.S.</p>
+<p>She grew up in East Orange, New Jersey, watching others judge her parents and turn them away from jobs they were qualified for because of their appearance, their accented English or their unfamiliar names.</p>
+<p>After working in the shipping industry for 20 years, Miller’s dad eventually became a New York City cab driver, an often-dangerous job in the 1980s. Her mom, despite earning a computer science degree in the U.S., trained to become a home health aide, where jobs were more available.</p>
+<p>“My parents’ resilience and courage made my life possible,” Miller said.</p>
+<p>After graduating from Ramapo College of New Jersey with a degree in international business, Miller worked at large automotive companies in client support, production support and project management.</p>
+<p><img decoding="async" class="size-large wp-image-72099 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-333x500.jpg" alt="" width="333" height="500" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-333x500.jpg 333w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-267x400.jpg 267w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-768x1152.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-1024x1536.jpg 1024w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-scaled.jpg 1365w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-300x450.jpg 300w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-143x215.jpg 143w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-67x100.jpg 67w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-1280x1920.jpg 1280w" sizes="(max-width: 333px) 100vw, 333px" /></p>
+<p>Now working as a technical program manager in product security at NVIDIA, she feels like her family’s journey has come full circle.</p>
+<p>“It’s the honor of my life being here at NVIDIA: I’m the proudest refugee,” she said.</p>
+<p>In her role, Miller functions like a conductor in an orchestra. She works with engineers to bridge gaps and understand challenges to define solutions — always trying to create opportunities to turn a “no” into a “yes” through collaboration.</p>
+<p>At NVIDIA, Miller feels like she can be herself, helping her thrive. She no longer feels the pressure to conform to fit in, allowing her creativity to flow freely and solve problems.</p>
+<p><img decoding="async" class="aligncenter size-large wp-image-72105" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-1280x853.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p>“Previously in my career, I never wore my hair curly. After someone once asked to touch my curly hair, I believed it would be easier to make myself look like everyone else. I thought it was the best way to let my work be the focus instead of my hair,” she said. “NVIDIA is the first employer that encouraged me to bring my full self to work.”</p>
+<p>Outside of work, Veronica and her husband, Nathan, are passionate about paying it forward and helping local youth in Trenton, New Jersey. Together, they’ve developed The Miller Family Foundation to help with community needs, including education. The foundation’s scholarship fund has donated $20,000 to low-income high school students to provide support for college tuition and career mentorship.</p>
+<p>“I truly believe anyone could get here. There wasn’t anyone that showed me the path. It was belief in myself, a ton of research and endless hard work,” she said. “We’re in a special place where my husband and I can give the next generation some of the financial support and career guidance we didn’t have.”</p>
+<p><i>Learn more about </i><a target="_blank" href="https://www.nvidia.com/en-us/about-nvidia/careers/life-at-nvidia/"><i>NVIDIA life, culture and careers</i></a><i>. </i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Featured-Photo-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1365"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Featured-Photo-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[‘The Proudest Refugee’: How Veronica Miller Charts Her Own Path at NVIDIA]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Cloud Ahoy! Treasure Awaits With ‘Sea of Thieves’ on GeForce NOW</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-sea-of-thieves/</link>
 		
@@ -35,15 +144,15 @@
 	</a>
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Set sail for adventure, pirates. <i>Sea of Thieves </i>makes waves in the cloud this week. It’s an adventure-filled GFN Thursday with four new games joining the <a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> library.</p>
-<figure id="attachment_72154" aria-describedby="caption-attachment-72154" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-72154" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-672x357.png" alt="#GreetingsfromGFN" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72154" class="wp-caption-text"><em>#GreetingsFromGFN by Cloud Gaming Photography.</em></figcaption></figure>
+<figure id="attachment_72154" aria-describedby="caption-attachment-72154" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72154" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-672x357.png" alt="#GreetingsfromGFN" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/gfgfn-right.png.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72154" class="wp-caption-text"><em>#GreetingsFromGFN by Cloud Gaming Photography.</em></figcaption></figure>
 <p>Plus, members are sharing their favorite locations they can access from the cloud. Follow along all month on @NVIDIAGFN social media accounts and post your own favorite cloud screenshots using #GreetingsfromGFN.</p>
 <h2><b>Seas the Day</b></h2>
 <p>Live the pirate life in the smash-hit pirate adventure game from Rare and Xbox Game Studios. <i>Sea of Thieves</i> takes place in an open world where players can explore the vast seas, engage in ship battles, hunt for treasure and embark on exciting quests.</p>
-<figure id="attachment_72160" aria-describedby="caption-attachment-72160" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-72160" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-672x378.jpg" alt="Sea of Thieves on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72160" class="wp-caption-text"><em>Come sea what’s possible in the cloud.</em></figcaption></figure>
+<figure id="attachment_72160" aria-describedby="caption-attachment-72160" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72160" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-672x378.jpg" alt="Sea of Thieves on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Sea_of_Thieves-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72160" class="wp-caption-text"><em>Come sea what’s possible in the cloud.</em></figcaption></figure>
 <p>The <i>Sea of Thieves</i> environment is always changing, as various seasons bring new features to the game and offer rich rewards for pirates old and new. Visit uncharted islands in search of treasure, dive deep into narrative-focused Tall Tales, take part in events and forge a path to become a true Pirate Legend. The newest season features the mysterious Sunken City, Cursed Sloop skeleton ships and fresh cosmetics.</p>
 <p>Every pirate needs a crew, so grab some mateys and carve a fearsome reputation across the open seas, or adventure solo to keep all the bountiful treasure. Make the journey more rewarding with a <a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/memberships/">GeForce NOW Ultimate membership</a>, and play with gamers across the world with up to eight-hour gaming sessions for a kraken good time.</p>
 <h2><b>New Games Zoom Onto the Cloud</b></h2>
-<figure id="attachment_72157" aria-describedby="caption-attachment-72157" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-72157" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-672x336.jpg" alt="Disney Speedstorm on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72157" class="wp-caption-text"><em>Take the tracks by storm.</em></figcaption></figure>
+<figure id="attachment_72157" aria-describedby="caption-attachment-72157" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72157" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-672x336.jpg" alt="Disney Speedstorm on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Disney_Speedstorm.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72157" class="wp-caption-text"><em>Take the tracks by storm.</em></figcaption></figure>
 <p>Drift into the ultimate hero-based combat racing game in <i>Disney Speedstorm</i>, a free-to-play kart-racing game that features characters and high-speed circuits inspired by beloved Disney and Pixar worlds. Customize racers and karts, master each character’s unique skills and engage in thrilling multiplayer races. Whether exploring the docks of the Pirates’ Island track from <i>Pirates of the Caribbean</i> or the wilds of the Jungle Ruins map from <i>The Jungle Book</i>, players can experience iconic environments in the game.</p>
 <p>Check out the list of new games this week:</p>
 <ul>
@@ -1068,138 +1177,6 @@ Nearly <a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-nim-mo
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Taiwan Electronics Giants Drive Industrial Automation With NVIDIA Metropolis and NIM]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Foxconn Trains Robots, Streamlines Assembly With NVIDIA AI and Omniverse</title>
-		<link>https://blogs.nvidia.com/blog/foxconn-digital-twin-ai/</link>
-		
-		<dc:creator><![CDATA[Madison Huang]]></dc:creator>
-		<pubDate>Sun, 02 Jun 2024 13:02:56 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[COMPUTEX 2024]]></category>
-		<category><![CDATA[Industrial and Manufacturing]]></category>
-		<category><![CDATA[Isaac]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71911</guid>
-
-					<description><![CDATA[Foxconn operates more than 170 factories around the world — the latest one a virtual plant pushing the state of the art in industrial automation. It’s the digital twin of a new factory in Guadalajara, hub of Mexico’s electronics industry. Foxconn’s engineers are defining processes and training robots in this virtual environment, so the physical	<a class="read-more" href="https://blogs.nvidia.com/blog/foxconn-digital-twin-ai/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Foxconn operates more than 170 factories around the world — the latest one a virtual plant pushing the state of the art in industrial automation.</p>
-<p>It’s the digital twin of a new factory in Guadalajara, hub of Mexico’s electronics industry. Foxconn’s engineers are defining processes and training robots in this virtual environment, so the physical plant can produce at high efficiency the next engine of accelerated computing, <a target="_blank" href="https://www.nvidia.com/en-us/data-center/hgx/">NVIDIA Blackwell HGX systems</a>.</p>
-<p>To design an optimal assembly line, factory engineers need to find the best placement for dozens of robotic arms, each weighing hundreds of pounds. To accurately monitor the overall process, they situate thousands of sensors, including many networked video cameras in a matrix to show plant operators all the right details.</p>
-<h2><b>Virtual Factories Create Real Savings</b></h2>
-<p>Such challenges are why companies like Foxconn are increasingly creating <a href="https://blogs.nvidia.com/blog/virtual-factories-industrial-digitalization/">virtual factories</a> for simulation and testing.</p>
-<p>“Our digital twin will guide us to new levels of automation and industrial efficiency, saving time, cost and energy,” said Young Liu, chairman of the company that last year had revenues of nearly $200 billion.</p>
-<p>Based on its efforts so far, the company anticipates that it can increase the manufacturing efficiency of complex servers using the simulated plant, leading to significant cost savings and reducing kilowatt-hour usage by over 30% annually.</p>
-<h2><b>Foxconn Teams With NVIDIA, Siemens</b></h2>
-<p>Foxconn is building its digital twin with software from the Siemens Xcelerator portfolio including Teamcenter and <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform for developing 3D workflows and applications based on <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a>.</p>
-<p>NVIDIA and Siemens <a href="https://blogs.nvidia.com/blog/siemens-immersive-visualization-generative-ai/">announced</a> in March that they will connect Siemens Xcelerator applications to <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/cloud/">NVIDIA Omniverse Cloud</a> API microservices. Foxconn will be among the first to employ the combined services, so its digital twin is physically accurate and visually realistic.</p>
-<p>Engineers will employ Teamcenter with Omniverse APIs to design robot work cells and assembly lines. Then they’ll use Omniverse to pull all the 3D CAD elements into one virtual factory where their robots will be trained with <a target="_blank" href="https://developer.nvidia.com/isaac/sim">NVIDIA Isaac Sim</a>.</p>
-<h2><b>Robots Attend a Virtual School</b></h2>
-<p>A growing set of manufacturers is building digital twins to streamline factory processes. Foxconn is among the first to take the next step in automation — training their AI robots in the digital twin.</p>
-<p>Inside the Foxconn virtual factory, robot arms from manufacturers such as Epson can learn how to see, grasp and move objects with <a target="_blank" href="https://developer.nvidia.com/isaac/manipulator">NVIDIA Isaac Manipulator</a>, a collection of NVIDIA-accelerated libraries and AI foundation models for robot arms.</p>
-<p>For example, the robot arms may learn how to pick up a Blackwell server and place it on an <a href="https://blogs.nvidia.com/blog/isaac-amr-nova-orin-autonomous-mobile-robots/">autonomous mobile robot</a> (AMR). The arms can use Isaac Manipulator&#8217;s cuMotion to find inspection paths for products, even when objects are placed in the way.</p>
-<p>Foxconn’s AMRs, from Taiwan’s FARobot, will learn how to see and navigate the factory floor using <a target="_blank" href="https://developer.nvidia.com/isaac/perceptor">NVIDIA Perceptor</a>, software that helps them build a real-time 3D map that indicates any obstacles. The robot’s routes are generated and optimized by <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/cuopt/">NVIDIA cuOpt</a>, a world-record holding route optimization microservice.</p>
-<p>Unlike many transport robots that need to stick to carefully drawn lines on the factory floor, these smart AMRs will navigate around obstacles to get wherever they need to go.</p>
-<p><iframe loading="lazy" title="Building Digital Twins of Foxconn’s Robotic Factories" width="500" height="281" src="https://www.youtube.com/embed/HjpwGgmt57U?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<h2><b>A Global Trend to Industrial Digitization</b></h2>
-<p>The Guadalajara factory is just the beginning. Foxconn is starting to design digital twins of factories around the world, including one in Taiwan where it will manufacture electric buses.</p>
-<p>Foxconn is also deploying <a target="_blank" href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/">NVIDIA Metropolis</a>, an application framework for smart cities and spaces, to give cameras on the shop floor AI-powered vision. That gives plant managers deeper insights into daily operations and opportunities to further streamline operations and improve worker safety.</p>
-<p>With an estimated 10 million factories worldwide, the $46 trillion manufacturing sector is a rich field for industrial digitalization.</p>
-<p>Delta Electronics, MediaTek, MSI and Pegatron are among other top <a target="_blank" href="https://nvidianews.nvidia.com/news/robotic-factories-industrial-digitalization-electronic-makers-ai-omniverse">electronics makers revealed at COMPUTEX</a> this week how they’re using NVIDIA AI and Omniverse to build digital twins of their factories.</p>
-<p>Like Foxconn, they’re racing to make their factories more agile, autonomous and sustainable to serve the demand for more than a billion smartphones, PCs and servers a year.</p>
-<p>A <a target="_blank" href="https://resources.nvidia.com/en-us-digital-twin-reference-architecture/ov-factory-digital-twin-reference-architecture">reference architecture</a> shows how to develop factory digital twins  with the NVIDIA AI and Omniverse platforms. And learn about <a target="_blank" href="https://resources.nvidia.com/en-us-digital-twins-article/omniverse-enterprise-2">the experiences</a> of five companies doing this work.</p>
-<p><em>Watch NVIDIA founder and CEO Jensen Huang’s <a target="_blank" href="https://www.nvidia.com/en-us/events/computex/">COMPUTEX keynote</a> to get the latest on AI and more.</em></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/robotic-factory.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/robotic-factory-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Foxconn Trains Robots, Streamlines Assembly With NVIDIA AI and Omniverse]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Gen AI Healthcare Accelerated: Dozens of Companies Adopt Meta Llama 3 NIM</title>
-		<link>https://blogs.nvidia.com/blog/llama-3-nim-healthcare-generative-ai/</link>
-		
-		<dc:creator><![CDATA[Brad Genereaux]]></dc:creator>
-		<pubDate>Sun, 02 Jun 2024 12:30:52 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[COMPUTEX 2024]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<category><![CDATA[Social Impact]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71886</guid>
-
-					<description><![CDATA[Meta Llama 3, Meta’s openly available state-of-the-art large language model — trained and optimized using NVIDIA accelerated computing — is dramatically boosting healthcare and life sciences workflows, helping deliver applications that aim to improve patients’ lives. Now available as a downloadable NVIDIA NIM inference microservice at ai.nvidia.com, Llama 3 is equipping healthcare developers, researchers and	<a class="read-more" href="https://blogs.nvidia.com/blog/llama-3-nim-healthcare-generative-ai/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Meta Llama 3, Meta’s openly available state-of-the-art large language model — trained and optimized using NVIDIA <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/" target="_blank" rel="noopener">accelerated computing</a> — is dramatically boosting healthcare and life sciences workflows, helping deliver applications that aim to improve patients’ lives.</p>
-<p>Now available as a downloadable <a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener">NVIDIA NIM</a> inference microservice at <a href="http://ai.nvidia.com" target="_blank" rel="noopener">ai.nvidia.com</a>, Llama 3 is equipping healthcare developers, researchers and companies to innovate responsibly across a wide variety of applications. The NIM comes with a standard application programming interface that can be deployed anywhere.</p>
-<p>For use cases spanning surgical planning and digital assistants to drug discovery and clinical trial optimization, developers can use Llama 3 to easily deploy optimized <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> models for copilots, chatbots and more.</p>
-<p>At <a href="https://www.nvidia.com/en-us/events/computex/" target="_blank" rel="noopener">COMPUTEX</a>, one of the world’s premier technology events, NVIDIA today announced that hundreds of AI ecosystem partners are embedding NIM into their solutions.</p>
-<p>More than 40 of these adopters are healthcare and life sciences startups and enterprises using the Llama 3 NIM to build and run applications that accelerate digital biology, digital surgery and digital health.</p>
-<h2><b>Advancing Digital Biology</b></h2>
-<p>Techbio and pharmaceutical companies, along with life sciences platform providers, use NVIDIA NIM for generative biology, chemistry and molecular prediction. With the Llama 3 NIM for intelligent assistants and <a href="https://www.nvidia.com/en-us/clara/bionemo/" target="_blank" rel="noopener">NVIDIA BioNeMo</a> NIM microservices for digital biology, researchers can build and scale end-to-end workflows for drug discovery and clinical trials.</p>
-<p><a href="https://www2.deloitte.com/us/en/pages/consulting/solutions/deloitte-nvidia-atlas-ai-for-drug-discovery.html" target="_blank" rel="nofollow noopener">Deloitte</a> is driving efficiency for garnering data-based insights from gene to function for research copilots, scientific research mining, chemical property prediction and drug repurposing with its Atlas AI drug discovery accelerator, powered by the NVIDIA BioNeMo, NeMo and Llama 3 NIM microservices.</p>
-<p><a href="https://www.transcriptabio.com/" target="_blank" rel="nofollow noopener">Transcripta Bio</a> harnesses Llama 3 and BioNeMo for accelerated intelligent drug discovery. Its proprietary artificial intelligence modeling suite, Conductor AI, uses its Drug-Gene Atlas to help discover and predict the effects of new drugs at <a href="https://www.genome.gov/about-genomics/fact-sheets/Transcriptome-Fact-Sheet" target="_blank" rel="nofollow noopener">transcriptome</a> scale.</p>
-<h2><b>Bolstering Clinical Trials</b></h2>
-<p><a href="https://quantiphi.com/" target="_blank" rel="nofollow noopener">Quantiphi</a> — an AI-first digital engineering company and an Elite Service Delivery Partner in the <a href="https://www.nvidia.com/en-us/about-nvidia/partners/" target="_blank" rel="noopener">NVIDIA Partner Network</a> — is using NVIDIA NIM to develop generative AI solutions for clinical research and development, diagnostics and patient care. These innovations are enabling organizations to save substantial cost, enhance workforce productivity and improve patient outcomes.</p>
-<p><a href="https://www.concertai.com/" target="_blank" rel="nofollow noopener">ConcertAI </a>is advancing a broad set of translational and clinical development solutions within its CARA AI platform. The company has integrated the Llama 3 NIM to support population-scale patient matching to clinical trials, study automation and research site copilots with real-time insights and model management for large-scale AI applications.</p>
-<p><a href="https://www.mendel.ai/" target="_blank" rel="nofollow noopener">Mendel AI</a> is developing clinically focused AI solutions that can understand nuances in medical data at scale to provide actionable insights, with applications across clinical research, real-world evidence generation and cohort selection. It has deployed a fine-tuned Llama 3 NIM for its Hypercube copilot, offering a 36% performance improvement. Mendel is also exploring potential use cases with Llama 3 NIM to extract clinical information from patient records and to translate natural language into clinical queries.</p>
-<h2><b>Improving Digital Surgery</b></h2>
-<p>The operating room is bolstered by AI and the latest digital technologies, too.</p>
-<p><a href="https://www.activsurgical.com/" target="_blank" rel="noopener">Activ Surgical</a> is using Llama 3 to accelerate development of its AI copilot and augmented-reality solution for real-time surgical guidance. The company’s ActivSight technology, which allows surgeons to view critical physiological structures and functions, aims to reduce surgical complication rates, improving patient care and safety.</p>
-<h2><b>Enhancing Digital Health</b></h2>
-<p>Generative AI-powered digital health applications enhance patient-doctor interactions, helping to improve patient outcomes and deliver more efficient healthcare.</p>
-<p>Precision medicine company <a href="https://simbiosys.com/" target="_blank" rel="nofollow noopener">SimBioSys</a> recently downloaded the Llama 3 NIM to help analyze a breast cancer patient’s diagnosis and tailor guidance for the physician regarding the patient’s unique characteristics.</p>
-<p><a href="https://artisight.com/" target="_blank" rel="nofollow noopener">Artisight</a>, a startup focused on smart hospital transformation, uses Llama 3 to automate documentation and care coordination in all its clinical locations with ambient voice and vision systems.</p>
-<p><a href="https://www.linkedin.com/pulse/aitem-nvidia-nim-revolutionizing-veterinary-care-laika-y4eve/?trackingId=nH4tgIRb5LbQJxCwBCX%2F3A%3D%3D" target="_blank" rel="nofollow noopener">AITEM</a>, which offers medical and veterinary AI diagnostic solutions, is building healthcare-specific chatbots with the model.</p>
-<p>And <a href="https://www.abridge.com/" target="_blank" rel="nofollow noopener">Abridge</a>, which offers a generative AI platform for clinical conversations, is using the NIM to build a physician-patient encounter summarization solution.</p>
-<p>Transcripta Bio, Activ Surgical, SimBioSys, Artisight, AITEM and Abridge are all members of <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33" target="_blank" rel="noopener">NVIDIA Inception</a>, a free program that helps startups evolve faster through cutting-edge technology, opportunities to connect with venture capitalists and access to the latest technical resources from NVIDIA.</p>
-<p>The NVIDIA NIM collection of inference microservices is available with <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a>, a software platform that streamlines development and deployment of production-grade copilots and other generative AI applications.</p>
-<p><a href="http://ai.nvidia.com" target="_blank" rel="noopener"><i>Download the Meta Llama 3 NIM</i></a><i> now and learn more about how generative AI is reshaping healthcare and other industries by joining </i><a href="https://www.nvidia.com/en-us/events/computex/" target="_blank" rel="noopener"><i>NVIDIA at COMPUTEX</i></a><i>, running through June 7 in Taipei, Taiwan.</i></p>
-<p><i><span>Watch NVIDIA founder and CEO Jensen Huang’s </span></i><a target="_blank" href="https://www.youtube.com/live/pKXDVsWZmUU?si=sYFHqkbGiiJZ8FXg"><i><span>COMPUTEX keynote</span></i></a><i><span> in replay:</span></i></p>
-<p><iframe loading="lazy" title="NVIDIA CEO Jensen Huang Keynote at COMPUTEX 2024" width="500" height="281" src="https://www.youtube.com/embed/pKXDVsWZmUU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/healthcare-llama-3-nim-computex-1280x680-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/healthcare-llama-3-nim-computex-1280x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Gen AI Healthcare Accelerated: Dozens of Companies Adopt Meta Llama 3 NIM]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
