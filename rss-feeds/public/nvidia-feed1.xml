@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 17 Jun 2024 04:46:57 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 17 Jun 2024 13:00:03 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,263 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.3</generator>
 	<item>
+		<title>Seamless in Seattle: NVIDIA Research Showcases Advancements in Visual Generative AI at CVPR</title>
+		<link>https://blogs.nvidia.com/blog/visual-generative-ai-cvpr-research/</link>
+		
+		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
+		<pubDate>Mon, 17 Jun 2024 13:00:36 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[NVIDIA Research]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Synthetic Data Generation]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72167</guid>
+
+					<description><![CDATA[NVIDIA researchers are at the forefront of the rapidly advancing field of visual generative AI, developing new techniques to create and interpret images, videos and 3D environments. More than 50 of these projects will be showcased at the Computer Vision and Pattern Recognition (CVPR) conference, taking place June 17-21 in Seattle. Two of the papers	<a class="read-more" href="https://blogs.nvidia.com/blog/visual-generative-ai-cvpr-research/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA researchers are at the forefront of the rapidly advancing field of visual generative AI, developing new techniques to create and interpret images, videos and 3D environments.</p>
+<p>More than 50 of these projects will be showcased at the <a target="_blank" href="https://www.nvidia.com/en-us/events/cvpr/">Computer Vision and Pattern Recognition (CVPR)</a> conference, taking place June 17-21 in Seattle. Two of the papers — one on the <a target="_blank" href="https://github.com/NVlabs/edm2">training dynamics of diffusion models</a> and another on <a target="_blank" href="https://arxiv.org/abs/2403.16439">high-definition maps for autonomous vehicles</a> — are finalists for CVPR’s Best Paper Awards.</p>
+<p>NVIDIA is also the <a href="https://blogs.nvidia.com/blog/auto-research-cvpr-2024/">winner of the CVPR Autonomous Grand Challenge’s End-to-End Driving at Scale</a> track — a significant milestone that demonstrates the company’s use of generative AI for comprehensive self-driving models. The winning submission, which outperformed more than 450 entries worldwide, also received CVPR’s Innovation Award.</p>
+<p>NVIDIA’s research at CVPR includes a text-to-image model that can be easily customized to depict a specific object or character, a new model for object pose estimation, a technique to edit neural radiance fields (<a href="https://blogs.nvidia.com/blog/ai-decoded-instant-nerf/">NeRFs</a>) and a visual language model that can understand memes. Additional papers introduce domain-specific innovations for industries including automotive, healthcare and robotics.</p>
+<p>Collectively, the work introduces powerful AI models that could enable creators to more quickly bring their artistic visions to life, accelerate the training of autonomous robots for manufacturing, and support healthcare professionals by helping process radiology reports.</p>
+<p>“Artificial intelligence, and generative AI in particular, represents a pivotal technological advancement,” said Jan Kautz, vice president of learning and perception research at NVIDIA. “At CVPR, NVIDIA Research is sharing how we’re pushing the boundaries of what’s possible — from powerful image generation models that could supercharge professional creators to autonomous driving software that could help enable next-generation self-driving cars.”</p>
+<p>At CVPR, NVIDIA also announced <a target="_blank" href="https://nvidianews.nvidia.com/news/omniverse-microservices-physical-ai">NVIDIA Omniverse Cloud Sensor RTX</a>, a set of microservices that enable physically accurate sensor simulation to accelerate the development of fully autonomous machines of every kind.</p>
+<h2><b>Forget Fine-Tuning: JeDi Simplifies Custom Image Generation</b></h2>
+<p>Creators harnessing diffusion models, the most popular method for generating images based on text prompts, often have a specific character or object in mind — they may, for example, be developing a storyboard around an animated mouse or brainstorming an ad campaign for a specific toy.</p>
+<p>Prior research has enabled these creators to personalize the output of diffusion models to focus on a specific subject using fine-tuning — where a user trains the model on a custom dataset — but the process can be time-consuming and inaccessible for general users.</p>
+<p><a target="_blank" href="https://research.nvidia.com/labs/dir/jedi/">JeDi</a>, a paper by researchers from Johns Hopkins University, Toyota Technological Institute at Chicago and NVIDIA, proposes a new technique that allows users to easily personalize the output of a diffusion model within a couple of seconds using reference images. The team found that the model achieves state-of-the-art quality, significantly outperforming existing fine-tuning-based and fine-tuning-free methods.</p>
+<p>JeDi can also be combined with <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation</a>, or RAG, to generate visuals specific to a database, such as a brand’s product catalog.</p>
+<div style="width: 1452px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-72167-1" width="1452" height="680" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/JeDi-cow-sculpture.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/JeDi-cow-sculpture.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/06/JeDi-cow-sculpture.mp4</a></video></div>
+<p>&nbsp;</p>
+<h2><b>New Foundation Model Perfects the Pose</b></h2>
+<p>NVIDIA researchers at CVPR are also presenting <a target="_blank" href="https://nvlabs.github.io/FoundationPose/">FoundationPose</a>, a <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation model</a> for object pose estimation and tracking that can be instantly applied to new objects during inference, without the need for fine-tuning.</p>
+<p>The model, which <a target="_blank" href="https://bop.felk.cvut.cz/leaderboards/pose-estimation-unseen-bop23/core-datasets/">set a new record</a> on a popular benchmark for object pose estimation, uses either a small set of reference images or a 3D representation of an object to understand its shape. It can then identify and track how that object moves and rotates in 3D across a video, even in poor lighting conditions or complex scenes with visual obstructions.</p>
+<p>FoundationPose could be used in industrial applications to help autonomous robots identify and track the objects they interact with. It could also be used in augmented reality applications where an AI model is used to overlay visuals on a live scene.</p>
+<p><iframe title="ar maze" width="500" height="281" src="https://www.youtube.com/embed/IvXSd4r12G8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>NeRFDeformer Transforms 3D Scenes With a Single Snapshot</b></h2>
+<p>A NeRF is an AI model that can render a 3D scene based on a series of 2D images taken from different positions in the environment. In fields like robotics, NeRFs can be used to generate immersive 3D renders of complex real-world scenes, such as a cluttered room or a construction site. However, to make any changes, developers would need to manually define how the scene has transformed — or remake the NeRF entirely.</p>
+<p>Researchers from the University of Illinois Urbana-Champaign and NVIDIA have simplified the process with NeRFDeformer. The method, being presented at CVPR, can successfully transform an existing NeRF using a single RGB-D image, which is a combination of a normal photo and a depth map that captures how far each object in a scene is from the camera.</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-72222" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM.png" alt="" width="1316" height="794" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM.png 1316w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-400x241.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-672x405.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-768x463.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-746x450.png 746w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-356x215.png 356w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-166x100.png 166w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-1280x772.png 1280w" sizes="(max-width: 1316px) 100vw, 1316px" /></p>
+<h2><b>VILA Visual Language Model Gets the Picture</b></h2>
+<p>A CVPR research collaboration between NVIDIA and the Massachusetts Institute of Technology is advancing the state of the art for vision language models, which are generative AI models that can process videos, images and text.</p>
+<p>The group developed <a target="_blank" href="https://arxiv.org/abs/2312.07533">VILA</a>, a family of open-source visual language models that outperforms prior neural networks <a target="_blank" href="https://mmmu-benchmark.github.io/#leaderboard">on key benchmarks</a> that test how well AI models answer questions about images. VILA’s unique pretraining process unlocked new model capabilities, including enhanced world knowledge, stronger in-context learning and the ability to reason across multiple images.</p>
+<figure id="attachment_72225" aria-describedby="caption-attachment-72225" style="width: 1999px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-72225" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA.png" alt="figure showing how VILA can reason based on multiple images" width="1999" height="809" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA.png 1999w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-400x162.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-672x272.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-768x311.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-1536x622.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-842x341.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-406x164.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-188x76.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-1280x518.png 1280w" sizes="(max-width: 1999px) 100vw, 1999px" /><figcaption id="caption-attachment-72225" class="wp-caption-text">VILA can understand memes and reason based on multiple images or video frames.</figcaption></figure>
+<p>The VILA model family can be optimized for inference using the <a target="_blank" href="https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/">NVIDIA TensorRT-LLM</a> open-source library and can be deployed on NVIDIA GPUs in data centers, workstations and even <a target="_blank" href="https://developer.nvidia.com/blog/visual-language-intelligence-and-edge-ai-2-0/">edge devices</a>.</p>
+<p>Read more about VILA on the <a target="_blank" href="https://developer.nvidia.com/blog/visual-language-models-on-nvidia-hardware-with-vila/">NVIDIA Technical Blog</a> and <a target="_blank" href="https://github.com/NVlabs/VILA">GitHub</a>.</p>
+<h2><b>Generative AI Fuels Autonomous Driving, Smart City Research</b></h2>
+<p>A dozen of the NVIDIA-authored CVPR papers focus on autonomous vehicle research. Other AV-related highlights include:</p>
+<ul>
+<li style="font-weight: 300;" aria-level="1"><a target="_blank" href="http://research.nvidia.com/labs/av-applied-research">NVIDIA’s AV applied research</a>, which <a href="https://blogs.nvidia.com/blog/auto-research-cvpr-2024/">won the CVPR Autonomous Grand Challenge</a>, is featured in <a target="_blank" href="https://www.youtube.com/watch?v=wfpLLSz5iWY">this demo</a>.</li>
+<li style="font-weight: 300;" aria-level="1"><a target="_blank" href="https://research.nvidia.com/labs/toronto-ai/">Sanja Fidler</a>, vice president of AI research at NVIDIA, will present on vision language models at the <a target="_blank" href="https://cvpr2024.wad.vision/">Workshop on Autonomous Driving</a> on June 17.</li>
+<li style="font-weight: 300;" aria-level="1"><a target="_blank" href="https://arxiv.org/abs/2403.16439">Producing and Leveraging Online Map Uncertainty in Trajectory Prediction</a>, a paper authored by researchers from the University of Toronto and NVIDIA, has been selected as one of 24 finalists for CVPR’s best paper award.</li>
+</ul>
+<p>Also at CVPR, NVIDIA contributed the largest ever indoor synthetic dataset to the <a href="https://blogs.nvidia.com/blog/ai-city-challenge-omniverse-cvpr/">AI City Challenge</a>, helping researchers and developers advance the development of solutions for smart cities and industrial automation. The challenge’s datasets were generated using <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform of APIs, SDKs and services that enable developers to build <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a>-based applications and workflows.</p>
+<p><a target="_blank" href="https://www.nvidia.com/en-us/research/">NVIDIA Research</a> has hundreds of scientists and engineers worldwide, with teams focused on topics including AI, computer graphics, computer vision, self-driving cars and robotics. Learn more about <a target="_blank" href="https://www.nvidia.com/en-us/events/cvpr/">NVIDIA Research at CVPR</a>.</p>
+]]></content:encoded>
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/06/JeDi-cow-sculpture.mp4" length="4129498" type="video/mp4" />
+
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/cat-astronaut.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/cat-astronaut-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Seamless in Seattle: NVIDIA Research Showcases Advancements in Visual Generative AI at CVPR]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Research Wins CVPR Autonomous Grand Challenge for End-to-End Driving</title>
+		<link>https://blogs.nvidia.com/blog/auto-research-cvpr-2024/</link>
+		
+		<dc:creator><![CDATA[Danny Shapiro]]></dc:creator>
+		<pubDate>Mon, 17 Jun 2024 13:00:10 +0000</pubDate>
+				<category><![CDATA[Driving]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[NVIDIA DGX]]></category>
+		<category><![CDATA[NVIDIA DRIVE]]></category>
+		<category><![CDATA[NVIDIA Research]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72147</guid>
+
+					<description><![CDATA[Making moves to accelerate self-driving car development, NVIDIA was today named an Autonomous Grand Challenge winner at the Computer Vision and Pattern Recognition (CVPR) conference, running this week in Seattle. Building on last year’s win in 3D Occupancy Prediction, NVIDIA Research topped the leaderboard this year in the End-to-End Driving at Scale category with its	<a class="read-more" href="https://blogs.nvidia.com/blog/auto-research-cvpr-2024/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Making moves to accelerate self-driving car development, NVIDIA was today named an Autonomous Grand Challenge winner at the <a href="https://www.nvidia.com/en-us/events/cvpr/" target="_blank" rel="noopener">Computer Vision and Pattern Recognition</a> (CVPR) conference, running this week in Seattle.</p>
+<p>Building on last year’s win in <a href="https://blogs.nvidia.com/blog/autonomous-driving-challenge-cvpr/" target="_blank" rel="noopener">3D Occupancy Prediction</a>, <a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener">NVIDIA Research</a> topped the leaderboard this year in the <a href="https://opendrivelab.com/challenge2024/#end_to_end_driving_at_scale" target="_blank" rel="noopener">End-to-End Driving at Scale category</a> with its Hydra-MDP model, outperforming more than 400 entries worldwide.</p>
+<p>This milestone shows the importance of <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> in building applications for physical AI deployments in autonomous vehicle (AV) development. The technology can also be applied to industrial environments, healthcare, robotics and other areas.</p>
+<p>The winning submission received CVPR’s Innovation Award as well, recognizing NVIDIA’s approach to improving “any end-to-end driving model using learned open-loop proxy metrics.”</p>
+<p>In addition, NVIDIA announced <a href="https://nvidianews.nvidia.com/news/omniverse-microservices-physical-ai" target="_blank" rel="noopener">NVIDIA Omniverse Cloud Sensor RTX</a>, a set of microservices that enable physically accurate sensor simulation to accelerate the development of fully autonomous machines of every kind.</p>
+<h2><b>How End-to-End Driving Works</b></h2>
+<p>The race to develop self-driving cars isn’t a sprint but more a never-ending triathlon, with three distinct yet crucial parts operating simultaneously: AI training, simulation and autonomous driving. Each requires its own accelerated computing platform, and together, the full-stack systems purpose-built for these steps form a powerful triad that enables continuous development cycles, always improving in performance and safety.</p>
+<p>To accomplish this, a model is first trained on an AI supercomputer such as <a href="https://www.nvidia.com/en-us/data-center/dgx-platform/" target="_blank" rel="noopener">NVIDIA DGX</a>. It’s then tested and validated in simulation — using the <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse</a> platform and running on an <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ovx/">NVIDIA OVX</a> system — before entering the vehicle, where, lastly, the <a href="https://www.nvidia.com/en-us/deep-learning-ai/products/agx-systems/" target="_blank" rel="noopener">NVIDIA DRIVE AGX</a> platform processes sensor data through the model in real time.</p>
+<p>Building an autonomous system to navigate safely in the complex physical world is extremely challenging. The system needs to perceive and understand its surrounding environment holistically, then make correct, safe decisions in a fraction of a second. This requires human-like situational awareness to handle potentially dangerous or rare scenarios.</p>
+<p>AV software development has traditionally been based on a modular approach, with separate components for object detection and tracking, trajectory prediction, and path planning and control.</p>
+<p>End-to-end autonomous driving systems streamline this process using a unified model to take in sensor input and produce vehicle trajectories, helping avoid overcomplicated pipelines and providing a more holistic, data-driven approach to handle real-world scenarios.</p>
+<p>Watch a video about the Hydra-MDP model, winner of the CVPR Autonomous Grand Challenge for End-to-End Driving:</p>
+<p><iframe loading="lazy" title="NVIDIA Research Wins CVPR Autonomous Grand Challenge for End-to-End Driving" width="500" height="281" src="https://www.youtube.com/embed/wfpLLSz5iWY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>Navigating the Grand Challenge </b></h2>
+<p>This year’s CVPR challenge asked participants to develop an end-to-end AV model, trained using the nuPlan dataset, to generate driving trajectory based on sensor data.</p>
+<p>The models were submitted for testing inside the open-source NAVSIM simulator and were tasked with navigating thousands of scenarios they hadn’t experienced yet. Model performance was scored based on metrics for safety, passenger comfort and deviation from the original recorded trajectory.</p>
+<p>NVIDIA Research’s winning end-to-end model ingests camera and lidar data, as well as the vehicle’s trajectory history, to generate a safe, optimal vehicle path for five seconds post-sensor input.</p>
+<p>The workflow NVIDIA researchers used to win the competition can be replicated in high-fidelity simulated environments with NVIDIA Omniverse. This means AV simulation developers can recreate the workflow in a physically accurate environment before testing their AVs in the real world. NVIDIA Omniverse Cloud Sensor RTX microservices will be available later this year. <a href="https://developer.nvidia.com/omniverse/join" target="_blank" rel="noopener">Sign up</a> for early access.</p>
+<p>In addition, NVIDIA ranked second for its submission to the CVPR Autonomous Grand Challenge for <a href="https://opendrivelab.com/challenge2024/#driving_with_language" target="_blank" rel="noopener">Driving with Language</a>. NVIDIA’s approach connects vision language models and autonomous driving systems, integrating the power of <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language models</a> to help make decisions and achieve generalizable, explainable driving behavior.</p>
+<h2><b>Learn More at CVPR </b></h2>
+<p>More than <a href="https://www.nvidia.com/en-us/events/cvpr/" target="_blank" rel="noopener">50 NVIDIA papers</a> were accepted to this year’s CVPR, on topics spanning automotive, healthcare, robotics and more. Over a dozen papers will cover NVIDIA automotive-related research, including:</p>
+<ul>
+<li><a href="https://arxiv.org/html/2406.06978v1" target="_blank" rel="noopener">Hydra-MDP: End-to-End Multimodal Planning With Multi-Target Hydra-Distillation</a>
+<ul>
+<li><a target="_blank" href="https://arxiv.org/html/2406.06978v1">Winner of CVPR’s </a><a target="_blank" href="https://opendrivelab.com/challenge2024/#end_to_end_driving_at_scale">End-to-End Driving at Scale challenge</a></li>
+<li>Read the <a href="https://developer.nvidia.com/blog/end-to-end-driving-at-scale-with-hydra-mdp/" target="_blank" rel="noopener">NVIDIA technical blog</a></li>
+</ul>
+</li>
+<li><a href="https://arxiv.org/abs/2403.16439" target="_blank" rel="noopener">Producing and Leveraging Online Map Uncertainty in Trajectory Prediction</a>
+<ul>
+<li>CVPR best paper award finalist</li>
+</ul>
+</li>
+<li><a href="https://arxiv.org/abs/2402.05932" target="_blank" rel="noopener">Driving Everywhere With Large Language Model Policy Adaptation</a>
+<ul>
+<li>See <a href="https://www.youtube.com/watch?v=fQ3HJbEkP4U" target="_blank" rel="noopener">DRIVE Labs: LLM-Based Road Rules Guide Simplifies Driving</a></li>
+</ul>
+</li>
+<li><a href="https://arxiv.org/abs/2312.03031" target="_blank" rel="noopener">Is Ego Status All You Need for Open-Loop End-to-End Autonomous Driving?</a></li>
+<li><a href="https://arxiv.org/abs/2403.09230" target="_blank" rel="noopener">Improving Distant 3D Object Detection Using 2D Box Supervision</a></li>
+<li><a href="https://arxiv.org/abs/2312.05247" target="_blank" rel="noopener">Dynamic LiDAR Resimulation Using Compositional Neural Fields</a></li>
+<li><a href="https://arxiv.org/abs/2312.01696" target="_blank" rel="noopener">BEVNeXt: Reviving Dense BEV Frameworks for 3D Object Detection</a></li>
+<li><a href="https://xinshuoweng.github.io/paradrive/" target="_blank" rel="noopener">PARA-Drive: Parallelized Architecture for Real-Time Autonomous Driving</a></li>
+</ul>
+<p>Sanja Fidler, vice president of AI research at NVIDIA, will speak on vision language models at the CVPR <a href="https://cvpr2024.wad.vision" target="_blank" rel="noopener">Workshop on Autonomous Driving</a>.</p>
+<p><i>Learn more about </i><a href="https://www.nvidia.com/en-us/research/" target="_blank" rel="noopener"><i>NVIDIA Research</i></a><i>, a global team of hundreds of scientists and engineers focused on topics including AI, computer graphics, computer vision, self-driving cars and robotics.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/cvpr-auto.gif"
+			type="image/gif"
+			width="1200"
+			height="700"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/cvpr-auto-842x450.gif"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Research Wins CVPR Autonomous Grand Challenge for End-to-End Driving]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>NVIDIA Advances Physical AI at CVPR With Largest Indoor Synthetic Dataset</title>
+		<link>https://blogs.nvidia.com/blog/ai-city-challenge-omniverse-cvpr/</link>
+		
+		<dc:creator><![CDATA[Akhil Docca]]></dc:creator>
+		<pubDate>Mon, 17 Jun 2024 13:00:09 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[NVIDIA Isaac Sim]]></category>
+		<category><![CDATA[NVIDIA Research]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<category><![CDATA[Synthetic Data Generation]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72204</guid>
+
+					<description><![CDATA[NVIDIA contributed the largest ever indoor synthetic dataset to the Computer Vision and Pattern Recognition (CVPR) conference’s annual AI City Challenge — helping researchers and developers advance the development of solutions for smart cities and industrial automation. The challenge, garnering over 700 teams from nearly 50 countries, tasks participants to develop AI models to enhance	<a class="read-more" href="https://blogs.nvidia.com/blog/ai-city-challenge-omniverse-cvpr/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA contributed the largest ever indoor synthetic dataset to the <a target="_blank" href="https://www.nvidia.com/en-us/events/cvpr/">Computer Vision and Pattern Recognition (CVPR)</a> conference’s annual <a target="_blank" href="https://www.aicitychallenge.org/">AI City Challenge</a> — helping researchers and developers advance the development of solutions for smart cities and industrial automation.</p>
+<p>The challenge, garnering over 700 teams from nearly 50 countries, tasks participants to develop AI models to enhance operational efficiency in physical settings, such as retail and warehouse environments, and intelligent traffic systems.</p>
+<p>Teams tested their models on the datasets that were generated using <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform of application programming interfaces (APIs), software development kits (SDKs) and services that enable developers to build <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a>-based applications and workflows.</p>
+<h2><b>Creating and Simulating Digital Twins for Large Spaces</b></h2>
+<p>In large indoor spaces like factories and warehouses, daily activities involve a steady stream of people, small vehicles and future autonomous robots. Developers need solutions that can observe and measure activities, optimize operational efficiency, and prioritize human safety in complex, large-scale settings.</p>
+<p>Researchers are addressing that need with computer vision models that can perceive and understand the physical world. It can be used in applications like <a target="_blank" href="https://www.youtube.com/watch?v=l5M4sqaRd6w">multi-camera tracking</a>, in which a model tracks multiple entities within a given environment.</p>
+<p>To ensure their accuracy, the models must be trained on large, ground-truth datasets for a variety of real-world scenarios. But collecting that data can be a challenging, time-consuming and costly process.</p>
+<p>AI researchers are turning to physically based simulations — such as digital twins of the physical world — to enhance AI simulation and training. These virtual environments can help generate <a target="_blank" href="https://www.nvidia.com/en-us/use-cases/synthetic-data/">synthetic data</a> used to train AI models. Simulation also provides a way to run a multitude of “what-if” scenarios in a safe environment while addressing privacy and AI bias issues.</p>
+<p>Creating synthetic data is important for AI training because it offers a large, scalable, and expandable amount of data. Teams can generate a diverse set of training data by changing many parameters including lighting, object locations, textures and colors.</p>
+<h2><b>Building Synthetic Datasets for the AI City Challenge</b></h2>
+<p>This year’s AI City Challenge consists of five computer vision challenge tracks that span traffic management to worker safety.</p>
+<p>NVIDIA contributed datasets for the first track, Multi-Camera Person Tracking, which saw the highest participation, with over 400 teams. The challenge used a benchmark and the largest synthetic dataset of its kind — comprising 212 hours of 1080p videos at 30 frames per second spanning 90 scenes across six virtual environments, including a warehouse, retail store and hospital.</p>
+<p>Created in Omniverse, these scenes simulated nearly 1,000 cameras and featured around 2,500 digital human characters. It also provided a way for the researchers to generate data of the right size and fidelity to achieve the desired outcomes.</p>
+<p>The benchmarks were created using Omniverse Replicator in <a target="_blank" href="https://developer.nvidia.com/isaac/sim">NVIDIA Isaac Sim</a>, a reference application that enables developers to design, simulate and train AI for robots, smart spaces or autonomous machines in physically based virtual environments built on NVIDIA Omniverse.</p>
+<p><a target="_blank" href="https://docs.omniverse.nvidia.com/isaacsim/latest/replicator_tutorials/tutorial_replicator_omni_replicator_agent.html">Omniverse Replicator</a>, an SDK for building synthetic data generation pipelines, automated many manual tasks involved in generating quality synthetic data, including domain randomization, camera placement and calibration, character movement, and semantic labeling of data and ground-truth for benchmarking.</p>
+<p>Ten institutions and organizations are collaborating with NVIDIA for the AI City Challenge:</p>
+<ul>
+<li>Australian National University, Australia</li>
+<li>Emirates Center for Mobility Research, UAE</li>
+<li>Indian Institute of Technology Kanpur, India</li>
+<li>Iowa State University, U.S.</li>
+<li>Johns Hopkins University, U.S.</li>
+<li>National Yung-Ming Chiao-Tung University, Taiwan</li>
+<li>Santa Clara University, U.S.</li>
+<li>The United Arab Emirates University, UAE</li>
+<li>University at Albany – SUNY, U.S.</li>
+<li>Woven by Toyota, Japan</li>
+</ul>
+<h2><b>Driving the Future of Generative Physical AI </b></h2>
+<p>Researchers and companies around the world are developing infrastructure automation and robots powered by physical AI — which are models that can understand instructions and autonomously perform complex tasks in the real world.</p>
+<p><a target="_blank" href="https://www.youtube.com/watch?v=AYSfcgVv9-U">Generative physical AI</a> uses reinforcement learning in simulated environments, where it perceives the world using accurately simulated sensors, performs actions grounded by laws of physics, and receives feedback to reason about the next set of actions.</p>
+<p>Developers can tap into developer SDKs and APIs, such as the NVIDIA Metropolis developer stack — which includes a <a target="_blank" href="https://developer.nvidia.com/blog/optimize-processes-for-large-spaces-with-the-multi-camera-tracking-workflow/">multi-camera tracking reference workflow</a> — to add enhanced perception capabilities for factories, warehouses and retail operations. And with <a target="_blank" href="https://developer.nvidia.com/blog/supercharge-robotics-workflows-with-ai-and-simulation-using-nvidia-isaac-sim-4-0-and-nvidia-isaac-lab/">the latest release of NVIDIA Isaac Sim</a>, developers can supercharge robotics workflows by simulating and training AI-based robots in physically based virtual spaces before real-world deployment.</p>
+<p>Researchers and developers are also combining high-fidelity, physics-based simulation with advanced AI to bridge the gap between<a target="_blank" href="https://developer.nvidia.com/blog/closing-the-sim-to-real-gap-training-spot-quadruped-locomotion-with-nvidia-isaac-lab/"> simulated training and real-world application</a>. This helps ensure that synthetic training environments closely mimic real-world conditions for more seamless robot deployment.</p>
+<p>NVIDIA is taking the accuracy and scale of simulations further with the recently <a target="_blank" href="https://nvidianews.nvidia.com/news/omniverse-microservices-physical-ai">announced NVIDIA Omniverse Cloud Sensor RTX</a>, a set of microservices that enable physically accurate sensor simulation to accelerate the development of fully autonomous machines.</p>
+<p>This technology will allow autonomous systems, whether a factory, vehicle or robot, to gather essential data to effectively perceive, navigate and interact with the real world. Using these microservices, developers can run large-scale tests on sensor perception within realistic, virtual environments, significantly reducing the time and cost associated with real-world testing.</p>
+<p>Omniverse Cloud Sensor RTX microservices will be available later this year. <a target="_blank" href="https://developer.nvidia.com/omniverse/join">Sign up</a> for early access.</p>
+<h2><b>Showcasing Advanced AI With Research</b></h2>
+<p>Participants submitted research papers for the AI City Challenge and a few achieved top rankings, including:</p>
+<ul>
+<li><a target="_blank" href="https://openaccess.thecvf.com/content/CVPR2024W/AICity/papers/Yoshida_Overlap_Suppression_Clustering__for_Offline_Multi-Camera_People_Tracking_CVPRW_2024_paper.pdf">Overlap Suppression Clustering for Offline Multi-Camera People Tracking</a>: This paper introduces a tracking method that includes identifying individuals within a single camera&#8217;s view, selecting clear images for easier recognition, grouping similar appearances, and helping to clarify identities in challenging situations.</li>
+<li><a target="_blank" href="https://openaccess.thecvf.com/content/CVPR2024W/AICity/papers/Xie_A_Robust_Online_Multi-Camera_People_Tracking_System_With_Geometric_Consistency_CVPRW_2024_paper.pdf">A Robust Online Multi-Camera People Tracking System With Geometric Consistency and State-aware Re-ID Correction</a>: This research presents a new system that uses geometric and appearance data to improve tracking accuracy, and includes a mechanism that adjusts identification features to fix tracking errors.</li>
+<li><a target="_blank" href="https://openaccess.thecvf.com/content/CVPR2024W/AICity/papers/Kim_Cluster_Self-Refinement_for_Enhanced_Online_Multi-Camera_People_Tracking_CVPRW_2024_paper.pdf">Cluster Self-Refinement for Enhanced Online Multi-Camera People Tracking</a>: This research paper addresses specific challenges faced in online tracking, such as the storage of poor-quality data and errors in identity assignment.</li>
+</ul>
+<p>All accepted papers will be presented at the <a target="_blank" href="https://cvpr.thecvf.com/virtual/2024/workshop/23656">AI City Challenge 2024 Workshop</a>, taking place on June 17.</p>
+<p>At CVPR 2024, NVIDIA Research will present over 50 papers, introducing generative physical AI breakthroughs with potential applications in areas like autonomous vehicle development and robotics.</p>
+<p>Papers that used NVIDIA Omniverse to generate synthetic data or digital twins of environments for model simulation, testing and validation include:</p>
+<ul>
+<li><a target="_blank" href="https://arxiv.org/abs/2312.08344">FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects</a>: FoundationPose is a versatile model for estimating and tracking the 3D position and orientation of objects. The model operates by using a few reference images or a 3D representation to accurately understand an object&#8217;s shape.</li>
+<li><a target="_blank" href="https://arxiv.org/abs/2404.01440">Neural Implicit Representation for Building Digital Twins of Unknown Articulated Objects</a>: This research paper presents a method for creating digital models of objects from two 3D scans, improving accuracy by analyzing how movable parts connect and move between positions.</li>
+<li><a target="_blank" href="https://arxiv.org/abs/2405.09546">BEHAVIOR Vision Suite: Customizable Dataset Generation via Simulation</a>: The BEHAVIOR Vision Suite generates customizable synthetic data for computer vision research, allowing researchers to adjust settings like lighting and object placement.</li>
+</ul>
+<p>Read more about NVIDIA Research at <a target="_blank" href="https://www.nvidia.com/en-us/events/cvpr/">CVPR</a>, and learn more about the <a target="_blank" href="https://www.aicitychallenge.org/">AI City Challenge</a>.</p>
+<p><i>Get started with NVIDIA Omniverse by downloading the standard license </i><a target="_blank" href="https://www.nvidia.com/en-us/omniverse/download/"><i>free</i></a><i>, access </i><a target="_blank" href="https://developer.nvidia.com/usd"><i>OpenUSD</i></a><i> resources and learn how </i><a target="_blank" href="https://www.nvidia.com/en-us/omniverse/enterprise/"><i>Omniverse Enterprise can connect teams</i></a><i>. Follow Omniverse on </i><a target="_blank" href="https://www.instagram.com/nvidiaomniverse/"><i>Instagram</i></a><i>, </i><a target="_blank" href="https://medium.com/@nvidiaomniverse"><i>Medium</i></a><i>, </i><a target="_blank" href="https://www.linkedin.com/showcase/nvidia-omniverse/"><i>LinkedIn</i></a><i> and </i><a target="_blank" href="https://twitter.com/nvidiaomniverse"><i>X</i></a><i>. For more, join the </i><a target="_blank" href="https://www.nvidia.com/en-us/omniverse/community/"><i>Omniverse community</i></a><i> on the </i><a target="_blank" href="https://forums.developer.nvidia.com/c/omniverse/300"><i>forums</i></a><i>, </i><a target="_blank" href="https://discord.com/invite/XWQNJDNuaC"><i>Discord server</i></a><i>, </i><a target="_blank" href="https://www.twitch.tv/nvidiaomniverse"><i>Twitch</i></a><i> and </i><a target="_blank" href="https://www.youtube.com/channel/UCSKUoczbGAcMld7HjpCR8OA"><i>YouTube</i></a><i> channels.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/nv-ov-ai-city-4up-16x9-1280x680-1.jpeg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/nv-ov-ai-city-4up-16x9-1280x680-1-842x450.jpeg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Advances Physical AI at CVPR With Largest Indoor Synthetic Dataset]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>‘Believe in Something Unconventional, Something Unexplored,’ NVIDIA CEO Tells Caltech Grads</title>
 		<link>https://blogs.nvidia.com/blog/jensen-huang-caltech-commencement-address/</link>
 		
@@ -49,7 +306,7 @@
 <p>“The world can be unfair and deal you with tough cards. Swiftly shake it off,” he said, with a tongue-in-cheek reference to one of Taylor Swift’s biggest hits. “There’s another opportunity out there — or create one.”</p>
 <p>Huang concluded by sharing a story from his travels to Japan, where, as he watched a gardener painstakingly tending to Kyoto’s famous moss garden, he realized that when a person is dedicated to their craft and prioritizes doing their life’s work, they always have plenty of time.</p>
 <p>“Prioritize your life,” he said, “and you will have plenty of time to do the important things.”</p>
-<p><iframe title="Caltech&#039;s 130th Commencement Ceremony" width="500" height="281" src="https://www.youtube.com/embed/-qXDdToZHzE?start=3137&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Caltech&#039;s 130th Commencement Ceremony" width="500" height="281" src="https://www.youtube.com/embed/-qXDdToZHzE?start=3137&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p><i>Main image courtesy of Caltech. </i></p>
 ]]></content:encoded>
 					
@@ -98,7 +355,7 @@
 <p dir="ltr">LLMs can help developers generate synthetic training data in scenarios where access to large, diverse labeled datasets is limited.</p>
 <p dir="ltr">The <a href="https://huggingface.co/nvidia/Nemotron-4-340B-Instruct" target="_blank" rel="noopener">Nemotron-4 340B Instruct</a> model creates diverse synthetic data that mimics the characteristics of real-world data, helping improve data quality to increase the performance and robustness of custom LLMs across various domains.</p>
 <p dir="ltr">Then, to boost the quality of the AI-generated data, developers can use the <a href="https://huggingface.co/nvidia/Nemotron-4-340B-Reward" target="_blank" rel="noopener">Nemotron-4 340B Reward</a> model to filter for high-quality responses. Nemotron-4 340B Reward grades responses on five attributes: helpfulness, correctness, coherence, complexity and verbosity. It’s currently first place on the <a target="_blank" href="https://huggingface.co/spaces/allenai/reward-bench">Hugging Face RewardBench leaderboard</a>, created by <a href="https://allenai.org/" target="_blank" rel="noopener">AI2</a>, for evaluating the capabilities, safety and pitfalls of reward models.</p>
-<figure id="attachment_72168" aria-describedby="caption-attachment-72168" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-scaled.jpg"><img fetchpriority="high" decoding="async" class="wp-image-72168 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-672x378.jpg" alt="nemotron synthetic data generation pipeline diagram" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72168" class="wp-caption-text">In this synthetic data generation pipeline, (1) the Nemotron-4 340B Instruct model is first used to produce synthetic text-based output. An evaluator model, (2) Nemotron-4 340B Reward, then assesses this generated text — providing feedback that guides iterative improvements and ensures the synthetic data is accurate, relevant and aligned with specific requirements.</figcaption></figure>
+<figure id="attachment_72168" aria-describedby="caption-attachment-72168" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-scaled.jpg"><img loading="lazy" decoding="async" class="wp-image-72168 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-672x378.jpg" alt="nemotron synthetic data generation pipeline diagram" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72168" class="wp-caption-text">In this synthetic data generation pipeline, (1) the Nemotron-4 340B Instruct model is first used to produce synthetic text-based output. An evaluator model, (2) Nemotron-4 340B Reward, then assesses this generated text — providing feedback that guides iterative improvements and ensures the synthetic data is accurate, relevant and aligned with specific requirements.</figcaption></figure>
 <p dir="ltr">Researchers can also create their own instruct or reward models by customizing the <a href="https://huggingface.co/nvidia/Nemotron-4-340B-Base" target="_blank" rel="noopener">Nemotron-4 340B Base</a> model using their proprietary data, combined with the included <a href="https://huggingface.co/datasets/nvidia/HelpSteer2" target="_blank" rel="noopener">HelpSteer2 dataset</a>.</p>
 <h2 dir="ltr">Fine-Tuning With NeMo, Optimizing for Inference With TensorRT-LLM</h2>
 <p dir="ltr">Using open-source NVIDIA NeMo and NVIDIA TensorRT-LLM, developers can optimize the efficiency of their instruct and reward models to generate synthetic data and to score responses.</p>
@@ -148,7 +405,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>When she was five years old, Veronica Miller (née Teklai) and her family left their homeland of Eritrea, in the Horn of Africa, to escape an ongoing war with Ethiopia and create a new life in the U.S.</p>
 <p>She grew up in East Orange, New Jersey, watching others judge her parents and turn them away from jobs they were qualified for because of their appearance, their accented English or their unfamiliar names.</p>
 <p>After working in the shipping industry for 20 years, Miller’s dad eventually became a New York City cab driver, an often-dangerous job in the 1980s. Her mom, despite earning a computer science degree in the U.S., trained to become a home health aide, where jobs were more available.</p>
-<p>“My parents’ resilience and courage made my life possible,” Miller said.<a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-scaled.jpg"><img decoding="async" class="alignright wp-image-72099 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-267x400.jpg" alt="" width="267" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-267x400.jpg 267w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-333x500.jpg 333w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-768x1152.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-1024x1536.jpg 1024w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-scaled.jpg 1365w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-300x450.jpg 300w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-143x215.jpg 143w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-67x100.jpg 67w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-1280x1920.jpg 1280w" sizes="(max-width: 267px) 100vw, 267px" /></a></p>
+<p>“My parents’ resilience and courage made my life possible,” Miller said.<a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-scaled.jpg"><img loading="lazy" decoding="async" class="alignright wp-image-72099 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-267x400.jpg" alt="" width="267" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-267x400.jpg 267w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-333x500.jpg 333w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-768x1152.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-1024x1536.jpg 1024w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-scaled.jpg 1365w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-300x450.jpg 300w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-143x215.jpg 143w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-67x100.jpg 67w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-1280x1920.jpg 1280w" sizes="(max-width: 267px) 100vw, 267px" /></a></p>
 <p>After graduating from Ramapo College of New Jersey with a degree in international business, Miller worked at large automotive companies in client support, production support and project management.</p>
 <p>Now working as a technical program manager in product security at NVIDIA, she feels like her family’s journey has come full circle.</p>
 <p>“It’s the honor of my life being here at NVIDIA: I’m the proudest refugee,” she said.</p>
@@ -952,222 +1209,6 @@
 			/>
 			<media:title type="html"><![CDATA[‘Create a Data Flywheel With AI,’ NVIDIA CEO Jensen Huang Tells Attendees at Snowflake Summit]]></media:title>
 			<media:description type="html">Jensen Huang at Snowflake Summit 2024</media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Digital Bank Debunks Financial Fraud With Generative AI</title>
-		<link>https://blogs.nvidia.com/blog/bunq-financial-services-generative-ai/</link>
-		
-		<dc:creator><![CDATA[Angie Lee]]></dc:creator>
-		<pubDate>Mon, 03 Jun 2024 07:00:28 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Customer Stories]]></category>
-		<category><![CDATA[Data Science]]></category>
-		<category><![CDATA[Financial Services]]></category>
-		<category><![CDATA[GPU]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71798</guid>
-
-					<description><![CDATA[European neobank bunq is debunking financial fraudsters with the help of NVIDIA accelerated computing and AI. Dubbed “the bank of the free,” bunq offers online banking anytime, anywhere. Through the bunq app, users can handle all their financial needs exclusively online, without needing to visit a physical bank. With more than 12 million customers and	<a class="read-more" href="https://blogs.nvidia.com/blog/bunq-financial-services-generative-ai/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>European neobank <a href="https://www.bunq.com/about" target="_blank" rel="noopener">bunq</a> is debunking financial fraudsters with the help of NVIDIA accelerated computing and AI.</p>
-<p>Dubbed “the bank of the free,” bunq offers online banking anytime, anywhere. Through the bunq app, users can handle all their financial needs exclusively online, without needing to visit a physical bank.</p>
-<p>With more than 12 million customers and 8 billion euros’ worth of deposits made to date, bunq has become one of the largest neobanks in the European Union. Founded in 2012, it was the first bank to obtain a European banking license in over three decades.</p>
-<p>To meet growing customer needs, bunq turned to <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> to help <a href="https://blogs.nvidia.com/blog/ai-fraud-detection-rapids-triton-tensorrt-nemo/" target="_blank" rel="noopener">detect fraud and money laundering</a>. Its automated transaction-monitoring system, powered by NVIDIA accelerated computing, greatly improved its training speed.</p>
-<p>“AI has enormous potential to help humanity in so many ways, and this is a great example of how human intelligence can be coupled with AI,” said Ali el Hassouni, head of data and AI at bunq.</p>
-<h2><b>Faster Fraud Detection</b></h2>
-<p>Financial fraud is more prevalent than ever, el Hassouni said in a recent <a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62593/" target="_blank" rel="noopener">talk at NVIDIA GTC</a>.</p>
-<p>Traditional transaction-monitoring systems are rules based, meaning algorithms flag suspicious transactions according to a set of criteria that determine if an activity presents risk of fraud or money laundering. These criteria must be manually set, resulting in high false-positive rates and making such systems labor intensive and difficult to scale.</p>
-<p>Instead, using <a href="https://blogs.nvidia.com/blog/supervised-unsupervised-learning/" target="_blank" rel="noopener">supervised and unsupervised learning</a>, bunq’s AI-powered transaction-monitoring system is completely automated and easily scalable.</p>
-<p>Bunq achieved this using NVIDIA GPUs, which accelerated its data processing pipeline more than 5x.</p>
-<p>In addition, compared with previous methods, bunq trained its fraud-detection model nearly 100x faster using the open-source <a href="https://developer.nvidia.com/rapids" target="_blank" rel="noopener">NVIDIA RAPIDS</a> suite of GPU-accelerated data science libraries.</p>
-<p>RAPIDS is part of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform, which accelerates data science pipelines and streamlines the development and deployment of production-grade generative AI applications.</p>
-<p>“We chose NVIDIA’s advanced, GPU-optimized software, as it enables us to use larger datasets and speed the training of new models — sometimes by an order of magnitude — resulting in improved model accuracy and reduced false positives,” said el Hassouni.</p>
-<h2><b>AI Across the Bank</b></h2>
-<p>Bunq is seeking to tap AI’s potential across its operations.</p>
-<p>“We’re constantly looking for new ways to apply AI for the benefit of our users,” el Hassouni said. “More than half of our user tickets are handled automatically. We also use AI to spot fake IDs when onboarding new users, automate our marketing efforts and much more.”</p>
-<p>Finn, a personal AI assistant available to bunq customers, is powered by the company’s proprietary <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language model</a> and generative AI. It can answer user questions like, “How much did I spend on groceries last month?” and “What’s the name of the Indian restaurant I ate at last week?”</p>
-<p>The company is exploring <a href="https://developer.nvidia.com/blog/translate-your-enterprise-data-into-actionable-insights-with-nvidia-nemo-retriever/" target="_blank" rel="noopener">NVIDIA NeMo Retriever</a>, a collection of generative AI microservices available in <a href="https://developer.nvidia.com/nemo-microservices" target="_blank" rel="noopener">early access</a>, to further improve Finn’s accuracy. NeMo Retriever is a part of <a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener">NVIDIA NIM</a> inference microservices, which provide models as optimized containers, available with NVIDIA AI Enterprise.</p>
-<p>“Our initial testing of NeMo Retriever embedding NIM has been extremely positive, and our collaboration with NVIDIA on LLMs is poised to help us to take Finn to the next level and enhance customer experience,” el Hassouni said.</p>
-<p>Plus, for the digital bank’s marketing efforts, AI helps analyze consumer engagement metrics to inform future campaigns.</p>
-<p>“We’re creating a borderless banking experience for our users, always keeping them at the heart of everything we do,” el Hassouni said.</p>
-<p><i>Watch bunq’s </i><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62593/" target="_blank" rel="noopener"><i>NVIDIA GTC session on demand</i></a><i> and </i><i>subscribe to </i><a href="https://www.nvidia.com/en-us/industries/finance/?nvmid=subscribe" target="_blank" rel="noopener"><i>NVIDIA financial services news</i></a><i>. </i></p>
-<p><i>Learn more about AI and financial services at </i><a href="https://europe.money2020.com/" target="_blank" rel="noopener"><i>Money20/20 Europe</i></a><i>, a fintech conference running June 4-6 in Amsterdam, where NVIDIA will host an AI Summit in collaboration with AWS, and where bunq will present on a panel about AI for fraud detection.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/bunq-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/bunq-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Digital Bank Debunks Financial Fraud With Generative AI]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>‘Accelerate Everything,’ NVIDIA CEO Says Ahead of COMPUTEX</title>
-		<link>https://blogs.nvidia.com/blog/computex-2024-jensen-huang/</link>
-		
-		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
-		<pubDate>Sun, 02 Jun 2024 14:12:31 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Driving]]></category>
-		<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[COMPUTEX 2024]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71820</guid>
-
-					<description><![CDATA[“Generative AI is reshaping industries and opening new opportunities for innovation and growth,” NVIDIA founder and CEO Jensen Huang said in an address ahead of this week’s COMPUTEX technology conference in Taipei. “Today, we’re at the cusp of a major shift in computing,” Huang told the audience, clad in his trademark black leather jacket. “The	<a class="read-more" href="https://blogs.nvidia.com/blog/computex-2024-jensen-huang/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>“Generative AI is reshaping industries and opening new opportunities for innovation and growth,” NVIDIA founder and CEO Jensen Huang said in an address ahead of this week’s COMPUTEX technology conference in Taipei.</p>
-<p>“Today, we’re at the cusp of a major shift in computing,” Huang told the audience, clad in his trademark black leather jacket. “The intersection of AI and accelerated computing is set to redefine the future.”</p>
-<p>Huang spoke ahead of one of the world’s premier technology conferences to an audience of more than 6,500 industry leaders, press, entrepreneurs, gamers, creators and AI enthusiasts gathered at the glass-domed National Taiwan University Sports Center set in the verdant heart of Taipei.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-71980" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-672x464.jpg" alt="" width="672" height="464" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-672x464.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-400x276.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-768x530.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-1536x1060.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-652x450.jpg 652w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-312x215.jpg 312w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-145x100.jpg 145w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024-1280x883.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/crowd-computex-2024.jpg 1980w" sizes="(max-width: 672px) 100vw, 672px" /></p>
-<p>The theme: NVIDIA accelerated platforms are in full production, whether through AI PCs and consumer devices featuring a host of NVIDIA RTX-powered capabilities or enterprises building and deploying AI factories with NVIDIA’s full-stack computing platform.</p>
-<p>“The future of computing is accelerated,” Huang said. “With our innovations in AI and accelerated computing, we’re pushing the boundaries of what’s possible and driving the next wave of technological advancement.”<br />
-<iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/pKXDVsWZmUU?si=bYffxIwUxYMev6hK" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><strong> </strong></p>
-<h2>‘One-Year Rhythm’</h2>
-<p>More’s coming, with Huang revealing a roadmap for new semiconductors that will arrive on a one-year rhythm. Revealed for the first time, the Rubin platform will succeed the upcoming Blackwell platform, featuring new GPUs, a new Arm-based CPU — Vera — and advanced networking with NVLink 6, CX9 SuperNIC and the X1600 converged InfiniBand/Ethernet switch.</p>
-<p>“Our company has a one-year rhythm. Our basic philosophy is very simple: build the entire data center scale, disaggregate and sell to you parts on a one-year rhythm, and push everything to technology limits,” Huang explained.</p>
-<p>NVIDIA’s creative team used AI tools from members of the <a target="_blank" href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a> startup program, built on <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> and NVIDIA’s accelerated computing, to create the COMPUTEX keynote. Packed with demos, this showcase highlighted these innovative tools and the transformative impact of NVIDIA’s technology.</p>
-<h2>‘Accelerated Computing Is Sustainable Computing’</h2>
-<p>NVIDIA is driving down the cost of turning data into intelligence, Huang explained as he began his talk.</p>
-<p>“Accelerated computing is sustainable computing,” he emphasized, outlining how the combination of GPUs and CPUs can deliver up to a 100x speedup while only increasing power consumption by a factor of three, achieving 25x more performance per Watt over CPUs alone.</p>
-<p>“The more you buy, the more you save,” Huang noted, highlighting this approach’s significant cost and energy savings.</p>
-<h2>Industry Joins NVIDIA to Build AI Factories to Power New Industrial Revolution</h2>
-<p>Leading computer manufacturers, particularly from Taiwan, the global IT hub, have embraced NVIDIA GPUs and networking solutions. Top companies include <a target="_blank" href="https://www.asrockrack.com/general/news.asp?id=239">ASRock Rack</a>, <a target="_blank" href="https://servers.asus.com/NEWS/ASUS-Presents-ESC-AI-POD-with-NVIDIA-GB200-NVL72-at-Computex-2024">ASUS</a>, <a target="_blank" href="https://www.gigabyte.com/Press/News/2168">GIGABYTE</a>, Ingrasys, Inventec, <a target="_blank" href="https://svr.pegatroncorp.com/News/6">Pegatron</a>, QCT, Supermicro, Wistron and Wiwynn, which are creating cloud, on-premises and edge AI systems.</p>
-<p>The NVIDIA MGX modular reference design platform now supports Blackwell, including the GB200 NVL2 platform, designed for optimal performance in large language model inference, retrieval-augmented generation and data processing.</p>
-<p>AMD and Intel are supporting the MGX architecture with plans to deliver, for the first time, their own CPU host processor module designs. Any server system builder can use these reference designs to save development time while ensuring consistency in design and performance.</p>
-<h2>Next-Generation Networking with Spectrum-X</h2>
-<p>In networking, Huang unveiled plans for the <a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-supercharges-ethernet-networking-for-generative-ai">annual release of Spectrum-X products</a> to cater to the growing demand for high-performance Ethernet networking for AI.</p>
-<p>NVIDIA Spectrum-X, the first Ethernet fabric built for AI, enhances network performance by 1.6x more than traditional Ethernet fabrics. It accelerates the processing, analysis and execution of AI workloads and, in turn, the development and deployment of AI solutions.</p>
-<p>CoreWeave, GMO Internet Group, Lambda, Scaleway, STPX Global and Yotta are among the first AI cloud service providers embracing Spectrum-X to bring extreme networking performance to their AI infrastructures.</p>
-<h2>NVIDIA NIM to Transform Millions Into Gen AI Developers</h2>
-<p>With <a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-generative-ai-developers">NVIDIA NIM</a>, the world’s 28 million developers can now easily create generative AI applications. NIM — inference microservices that provide models as optimized containers — can be deployed on clouds, data centers or workstations.</p>
-<p>NIM also enables enterprises to maximize their infrastructure investments. For example, running Meta Llama 3-8B in a NIM produces up to 3x more generative AI tokens on accelerated infrastructure than without NIM.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-71989" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-1536x1025.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-322x215.jpg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248-1280x854.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4248.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><br />
-Nearly <a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-generative-ai-developers">200 technology partners</a> — including Cadence, Cloudera, <a target="_blank" href="https://www.cohesity.com/press/unlock-gen-ai-capabilities-via-nvidia-collaboration/">Cohesity</a>, <a target="_blank" href="https://www.datastax.com/press-release/datastax-to-deliver-high-performance-rag-solution-with-20x-faster-embeddings-and-indexing-at-80-lower-cost-using-nvidia-microservices">DataStax</a>, <a target="_blank" href="https://www.netapp.com/newsroom/press-releases/news-rel-20240514-813887/">NetApp</a>, Scale AI, and <a target="_blank" href="https://news.synopsys.com/2024-03-18-Synopsys-Showcases-EDA-Performance-and-Next-Gen-Capabilities-with-NVIDIA-Accelerated-Computing,-Generative-AI-and-Omniverse">Synopsys </a>— are integrating NIM into their platforms to speed generative AI deployments for domain-specific applications, such as copilots, code assistants, digital human avatars and more. <a target="_blank" href="https://huggingface.co/blog/train-dgx-cloud">Hugging Face</a> is now offering NIM — starting with <a target="_blank" href="https://ai.meta.com/blog/meta-llama-3/">Meta Llama 3</a>.</p>
-<p>&#8220;Today we just posted up in Hugging Face the Llama 3 fully optimized, it&#8217;s available there for you to try. You can even take it with you,&#8221; Huang said. &#8220;So you could run it in the cloud, run it in any cloud, download this container, put it into your own data center, and you can host it to make it available for your customers.&#8221;</p>
-<h2>NVIDIA Brings AI Assistants to Life With GeForce RTX AI PCs</h2>
-<p><a target="_blank" href="https://www.nvidia.com/en-us/geforce/news/computex-2024-nvidia-geforce-announcements">NVIDIA’s RTX AI PCs</a>, powered by RTX technologies, are set to revolutionize consumer experiences with over 200 RTX AI laptops and more than 500 AI-powered apps and games.</p>
-<p>The <a target="_blank" href="https://developer.nvidia.com/blog/streamline-ai-powered-app-development-with-nvidia-rtx-ai-toolkit-for-windows-rtx-pcs/">RTX AI Toolkit</a> and newly available PC-based NIM inference microservices for the <a target="_blank" href="https://nvidianews.nvidia.com/news/digital-humans-ace-generative-ai-microservices">NVIDIA ACE digital human platform</a> underscore NVIDIA’s commitment to AI accessibility.</p>
-<p><a target="_blank" href="https://www.nvidia.com/en-us/geforce/news/g-assist-ai-assistant">Project G-Assist, an RTX-powered AI assistant technology demo</a>, was also announced, showcasing context-aware assistance for PC games and apps.</p>
-<p>And Microsoft and NVIDIA are collaborating to help developers bring new generative AI capabilities to their Windows native and web apps with easy API access to RTX-accelerated SLMs that enable RAG capabilities that run on-device as part of Windows Copilot Runtime.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-71968" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-672x448.jpg" alt="" width="672" height="448" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-1536x1025.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-322x215.jpg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569-1280x854.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/2G8A4569.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></p>
-<h2>NVIDIA Robotics Adopted by Industry Leaders</h2>
-<p>NVIDIA is spearheading the $50 trillion industrial digitization shift, with sectors embracing autonomous operations and digital twins — virtual models that enhance efficiency and cut costs. Through its Developer Program, NVIDIA offers access to NIM, fostering AI innovation.</p>
-<p>Taiwanese manufacturers are transforming their factories using NVIDIA’s technology, with Huang showcasing Foxconn’s use of NVIDIA Omniverse, Isaac and Metropolis to create digital twins, combining vision AI and robot development tools for enhanced robotic facilities.</p>
-<p>“The next wave of AI is physical AI. AI that understands the laws of physics, AI that can work among us,” Huang said, emphasizing the importance of robotics and AI in future developments.</p>
-<p>The <a target="_blank" href="https://www.nvidia.com/en-us/industries/robotics/">NVIDIA Isaac platform</a> provides a robust toolkit for developers to build AI robots, including AMRs, industrial arms and humanoids, powered by AI models and supercomputers like Jetson Orin and Thor.</p>
-<p>“Robotics is here. Physical AI is here. This is not science fiction, and it’s being used all over Taiwan. It’s just really, really exciting,” Huang added.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter wp-image-71986 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-672x449.jpg" alt="" width="672" height="449" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-672x449.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-768x513.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-1536x1026.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-674x450.jpg 674w, https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-322x215.jpg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024-1280x855.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/robots-computex-2024.jpg 2045w" sizes="(max-width: 672px) 100vw, 672px" /></p>
-<p>Global electronics giants are integrating NVIDIA’s autonomous robotics into their factories, leveraging simulation in Omniverse to test and validate this new wave of AI for the physical world. This includes over 5 million preprogrammed robots worldwide.</p>
-<p>“All the factories will be robotic. The factories will orchestrate robots, and those robots will be building products that are robotic,” Huang explained.</p>
-<p>Huang emphasized NVIDIA Isaac’s role in boosting factory and warehouse efficiency, with global leaders like BYD Electronics, Siemens, Teradyne Robotics and Intrinsic adopting its advanced libraries and AI models.</p>
-<p><a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> on the IGX platform, with partners like ADLINK, Advantech and ONYX, delivers edge AI solutions meeting strict regulatory standards, essential for medical technology and other industries.</p>
-<p>Huang ended his keynote on the same note he began it on, paying tribute to Taiwan and NVIDIA’s many partners there. “Thank you,” Huang said. “I love you guys.”</p>
-<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/pKXDVsWZmUU?si=bYffxIwUxYMev6hK" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/earth-computex-2024-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1366"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/earth-computex-2024-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[‘Accelerate Everything,’ NVIDIA CEO Says Ahead of COMPUTEX]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>KServe Providers Dish Up NIMble Inference in Clouds and Data Centers</title>
-		<link>https://blogs.nvidia.com/blog/kserve-nim-inference/</link>
-		
-		<dc:creator><![CDATA[Adam Tetelman]]></dc:creator>
-		<pubDate>Sun, 02 Jun 2024 13:14:59 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Software]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[COMPUTEX 2024]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71902</guid>
-
-					<description><![CDATA[Deploying generative AI in the enterprise is about to get easier than ever. NVIDIA NIM, a set of generative AI inference microservices, works with KServe, open-source software that automates putting AI models to work at the scale of a cloud computing application. The combination ensures generative AI can be deployed like any other large enterprise	<a class="read-more" href="https://blogs.nvidia.com/blog/kserve-nim-inference/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Deploying generative AI in the enterprise is about to get easier than ever.</p>
-<p><a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener">NVIDIA NIM</a>, a set of generative AI inference microservices, works with <a href="https://kserve.github.io/website/latest/" target="_blank" rel="noopener">KServe</a>, open-source software that automates putting AI models to work at the scale of a cloud computing application.</p>
-<p>The combination ensures <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> can be deployed like any other large enterprise application. It also makes NIM widely available through platforms from dozens of companies, such as Canonical, Nutanix and Red Hat.</p>
-<p>The integration of NIM on KServe extends NVIDIA’s technologies to the open-source community, ecosystem partners and customers. Through NIM, they can all access the performance, support and security of the <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform with an API call — the push-button of modern programming.</p>
-<h2><b>Serving AI on Kubernetes</b></h2>
-<p>KServe got its start as part of Kubeflow, a machine learning toolkit based on Kubernetes, the open-source system for deploying and managing software containers that hold all the components of large distributed applications.</p>
-<p>As Kubeflow expanded its work on AI inference, what became KServe was born and ultimately evolved into its own open-source project.</p>
-<p>Many companies have contributed to and adopted the KServe software that runs today at companies including AWS, Bloomberg, Canonical, Cisco, Hewlett Packard Enterprise, IBM, Red Hat, Zillow and NVIDIA.</p>
-<h2><b>Under the Hood With KServe</b></h2>
-<p>KServe is essentially an extension of Kubernetes that runs AI inference like a powerful cloud application. It uses a standard protocol, runs with optimized performance and supports PyTorch, Scikit-learn, TensorFlow and XGBoost without users needing to know the details of those AI frameworks.</p>
-<p>The software is especially useful these days, when new large language models (<a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">LLMs</a>) are emerging rapidly.</p>
-<p>KServe lets users easily go back and forth from one model to another, testing which one best suits their needs. And when an updated version of a model gets released, a KServe feature called “canary rollouts” automates the job of carefully validating and gradually deploying it into production.</p>
-<p>Another feature, GPU autoscaling, efficiently manages how models are deployed as demand for a service ebbs and flows, so customers and service providers have the best possible experience.</p>
-<h2><b>An API Call to Generative AI</b></h2>
-<p>The goodness of KServe is now available with the ease of NVIDIA NIM.</p>
-<p>With NIM, a simple API call takes care of all the complexities. Enterprise IT admins get the metrics they need to ensure their application is running with optimal performance and efficiency, whether it’s in their data center or on a remote cloud service — even if they change the AI models they’re using.</p>
-<p>NIM lets IT professionals become generative AI pros, transforming their company’s operations. That’s why a host of enterprises such as Foxconn and ServiceNow are <a href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-generative-ai-developers" target="_blank" rel="noopener">deploying NIM microservices</a>.</p>
-<h2><b>NIM Rides Dozens of Kubernetes Platforms</b></h2>
-<p>Thanks to its integration with KServe, users will be able access NIM on dozens of enterprise platforms such as Canonical’s Charmed KubeFlow and Charmed Kubernetes, <a href="https://ir.nutanix.com/news-releases/news-release-details/nutanix-and-nvidia-collaborate-accelerate-enterprise-ai-adoption" target="_blank" rel="noopener">Nutanix GPT-in-a-Box 2.0</a>, <a href="https://developers.redhat.com/articles/2024/03/15/empower-conversational-ai-scale-kserve" target="_blank" rel="noopener">Red Hat’s OpenShift AI</a> and many others.</p>
-<p>“Red Hat has been working with NVIDIA to make it easier than ever for enterprises to deploy AI using open source technologies,” said KServe contributor Yuan Tang, a principal software engineer at Red Hat. “By enhancing KServe and adding support for NIM in Red Hat OpenShift AI, we’re able to provide streamlined access to NVIDIA’s generative AI platform for Red Hat customers.”</p>
-<p>“Through the integration of NVIDIA NIM inference microservices with Nutanix GPT-in-a-Box 2.0, customers will be able to build scalable, secure, high-performance generative AI applications in a consistent way, from the cloud to the edge,” said the vice president of engineering at Nutanix, Debojyoti Dutta, whose team contributes to KServe and Kubeflow.</p>
-<p>“As a company that also contributes significantly to KServe, we’re pleased to offer NIM through Charmed Kubernetes and Charmed Kubeflow,” said Andreea Munteanu, MLOps product manager at Canonical. “Users will be able to access the full power of generative AI, with the highest performance, efficiency and ease thanks to the combination of our efforts.”</p>
-<p>Dozens of other software providers can feel the benefits of NIM simply because they include KServe in their offerings.</p>
-<h2><b>Serving the Open-Source Community</b></h2>
-<p>NVIDIA has a long track record on the KServe project. As noted in a <a href="https://developers.redhat.com/articles/2024/03/15/empower-conversational-ai-scale-kserve?extIdCarryOver=true&amp;sc_cid=701f2000001OH6fAAG" target="_blank" rel="noopener">recent technical blog</a>, KServe’s Open Inference Protocol is used in <a href="https://developer.nvidia.com/triton-inference-server" target="_blank" rel="noopener">NVIDIA Triton Inference Server</a>, which helps users run many AI models simultaneously across many GPUs, frameworks and operating modes.</p>
-<p>With KServe, NVIDIA focuses on use cases that involve running one AI model at a time across many GPUs.</p>
-<p>As part of the NIM integration, NVIDIA plans to be an active contributor to KServe, building on its portfolio of contributions to open-source software that includes Triton and <a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener">TensorRT-LLM</a>. NVIDIA is also an active member of the <a href="https://www.cncf.io/" target="_blank" rel="noopener">Cloud Native Computing Foundation</a>, which supports open-source code for generative AI and other projects.</p>
-<p>Try the NIM API on the <a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener">NVIDIA API Catalog</a> using the <a href="https://build.nvidia.com/meta/llama3-8b" target="_blank" rel="noopener">Llama 3 8B</a> or <a href="https://build.nvidia.com/meta/llama3-70b" target="_blank" rel="noopener">Llama 3 70B</a> LLM models today. Hundreds of NVIDIA partners worldwide are using NIM to deploy generative AI.</p>
-<p>Watch NVIDIA founder and CEO Jensen Huang’s <a href="https://www.nvidia.com/en-us/events/computex/" target="_blank" rel="noopener">COMPUTEX keynote</a> to get the latest on AI and more.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/NIM-Kubernetes-logos-1.jpg"
-			type="image/jpeg"
-			width="1409"
-			height="749"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/05/NIM-Kubernetes-logos-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[KServe Providers Dish Up NIMble Inference in Clouds and Data Centers]]></media:title>
-			<media:description type="html"></media:description>
 			</media:content>
 			</item>
 	</channel>
