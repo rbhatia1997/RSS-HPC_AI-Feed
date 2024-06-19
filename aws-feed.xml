@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 12 Jun 2024 09:47:49 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Jun 2024 14:47:06 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,68 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>An agent-based simulation of Amazon’s inbound supply chain</title>
+		<link>https://aws.amazon.com/blogs/hpc/an-agent-based-simulation-of-amazons-inbound-supply-chain/</link>
+		
+		<dc:creator><![CDATA[Siva Veluchamy]]></dc:creator>
+		<pubDate>Wed, 19 Jun 2024 14:47:06 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Sustainability]]></category>
+		<guid isPermaLink="false">897cb050a52ce3f07883cdad8b87aedea2e5ba9c</guid>
+
+					<description>Hundreds of millions of products, the entire *first-mile* of distribution - learn how Amazon simulated their massive US supply chain, end-to-end, with help from a company called Simudyne.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright wp-image-3762 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/30/An-agent-based-simulation-of-Amazons-inbound-supply-chain-2.png" alt="An agent-based simulation of Amazon's inbound supply chain" width="380" height="212"&gt;&lt;/p&gt; 
+&lt;p&gt;Amazon has a complex inbound supply chain network for our retail operations in the United States, and we’re always seeking innovative ways to make it more efficient.&lt;/p&gt; 
+&lt;p&gt;Recently, we embarked on an ambitious project: simulating our entire US inbound supply chain. To put this into perspective, this is the entire “first-mile” of distribution, tracking the movement of hundreds of millions of individual products through the network. This was a significant first step towards enhancing the network’s efficiency, and was made possible by using &lt;a href="https://docs.simudyne.com/overview"&gt;Simudyne’s Software Development Kit&lt;/a&gt; and the compute power of AWS.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll walk you through the story of our supply chain, and how we came to pull of what we think is quite an amazing feat. The supply chain toolkit used to build this is available on AWS Marketplace, so if you’re reading this – and interested in supply chain simulation – you can just dive right in.&lt;/p&gt; 
+&lt;h2&gt;Amazon’s inbound network: a complex system&lt;/h2&gt; 
+&lt;p&gt;Amazon’s inbound network in the US is a multi-stage, complex, and dynamic system where goods flow from a myriad of suppliers to strategically-located cross-dock facilities (we call them IXDs), and ultimately to Fulfillment Centers.&lt;/p&gt; 
+&lt;p&gt;Suppliers range from local startups to international conglomerates, each feeding into the diverse Amazon inventory. The IXDs are vital in this system, acting as high-efficiency transit hubs where products are sorted and prepped for their next leg to the Fulfillment Centers.&lt;/p&gt; 
+&lt;p&gt;Fulfillment Centers are large facilities, outfitted with advanced technologies like artificial intelligence (AI) systems and robotics. Items are stored, cataloged, and eventually dispatched to customers from these locations. This segment of the supply chain exemplifies the need for balance in optimization – a blend of efficiency, cost management, and technological innovation.&lt;/p&gt; 
+&lt;p&gt;Optimizing a network like this is challenging. We need to balance cost efficiency and customer satisfaction, align operations with environmental sustainability, ensure adaptability to future market shifts, and deal manage technological advancements.&lt;/p&gt; 
+&lt;p&gt;There must also be an understanding of the interface between the &lt;em&gt;micro&lt;/em&gt; aspects of fulfillment centers (i.e., what’s happening within individual centers/facilities) and the &lt;em&gt;macro&lt;/em&gt; aspects of a supply chain network (i.e., phenomena that emerge when examining the web of relationships between facilities).&lt;/p&gt; 
+&lt;p&gt;One way to approach this optimization problem is by building and executing computer simulations, or mathematical models that aim to mimic systems, like supply chain networks, so the simulations can be used to study how those systems work. Building a supply chain simulation that can represent this variety of scales needs an intricate understanding of the supply chain’s dynamics – from warehousing logistics to the last-mile delivery intricacies.&lt;/p&gt; 
+&lt;h2&gt;Solving for complexity: the power of agent-based models&lt;/h2&gt; 
+&lt;p&gt;Simudyne’s Agent-Based Modeling (ABM) technology and SDK turned out to be a game-changer in our optimization toolkit. This technology allows us to simulate the Amazon supply chain with high fidelity, with each agent representing a distinct component like a warehouse or delivery vehicle. By mimicking real-world behavior and decision-making processes, we can analyze and optimize various aspects of supply chains like topology, inventory placement, resource allocation, and so forth.&lt;/p&gt; 
+&lt;p&gt;Simudyne’s SDK is designed to strike a balance between handling the multi-scale system representation problem, the effort needed to build and implement simulations, and the ability of simulations to take advantage of large-scale computing that can speed up the business decision-making process.&lt;/p&gt; 
+&lt;p&gt;Key to this balance is Simudyne’s advanced approach to agent-based modeling, which leverages a graph-based approach designed for more accurate and efficient simulations. Unlike traditional agent-based modeling tools that might use graph representation primarily for data visualization, Simudyne’s method involves using the graph as the core computational structure.&lt;/p&gt; 
+&lt;p&gt;In this setup, each agent, whether a facility, vehicle, or another entity, is a node with connections to other nodes, representing their interactions and relationships. This structure allows agents to make independent observations and decisions based on their interactions, leading to a more dynamic and realistic simulation of the real world.&lt;/p&gt; 
+&lt;h2&gt;Sumdyne’s SDK&lt;/h2&gt; 
+&lt;p&gt;Simudyne uses a &lt;a href="https://docs.simudyne.com/features/graph-computation"&gt;Pregel-like framework for processing large-scale graphs&lt;/a&gt;. Pregel supports parallelized processing of massive graphs and graph computations by distributing the workload across multiple cores, for instance across large Amazon EC2 instances like the r6a.32xlarge, with 128 vCPUs. This technique is highly efficient for handling the complex, large-scale supply chain simulations that Amazon requires.&lt;/p&gt; 
+&lt;p&gt;Simudyne’s Java-based SDK employs structures like &lt;em&gt;Parallel Streams&lt;/em&gt; and &lt;em&gt;Concurrent Lists&lt;/em&gt; that unlock additional intra-simulation parallelization potential. The SDK is designed for scalability from small-scale tests to large-scale production without needing significant code rewrites, ensuring that our simulation models are not only accurate, but flexible and adaptable.&lt;/p&gt; 
+&lt;p&gt;Simudyne recently released a &lt;a href="https://docs.simudyne.com/supply_chain_toolkit"&gt;Supply Chain Toolkit&lt;/a&gt; that specifically enhances the SDK with specialized tools for modeling supply chain networks. The new toolkit includes some useful classes for representing the network:&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;Facility&lt;/code&gt; agent&lt;strong&gt; &amp;nbsp;&lt;/strong&gt;– a class which &lt;a href="https://docs.simudyne.com/supply_chain_toolkit/facility"&gt;users can extend&lt;/a&gt; to represent various types of facilities within a supply chain. This class includes essential functions for managing the flow of products, and users can add multiple &lt;code&gt;LoadingBay&lt;/code&gt; classes for different types of docks.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;TransportMessages&lt;/code&gt; – a class that &lt;a href="https://docs.simudyne.com/supply_chain_toolkit/transport_message"&gt;facilitates the movement&lt;/a&gt; of inventory between facilities, with options for cargo to be represented either as &lt;code&gt;Product&lt;/code&gt; class or as a string for memory efficiency.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;LoadingBay&lt;/code&gt; – a class that &lt;a href="https://docs.simudyne.com/supply_chain_toolkit/loading_bay"&gt;represents loading docks&lt;/a&gt; in the simulation, with a transport queue and a specified capacity, allowing for various types of docks and custom priority handling.&lt;/p&gt; 
+&lt;p&gt;For visualizing supply chain networks, the &lt;a href="https://docs.simudyne.com/supply_chain_toolkit/python_visualization"&gt;Simudyne SDK integrates with Python tools like Plotly&lt;/a&gt;, so we can create interactive maps to display facility information. We can customize this visualization to display additional data points and network connections.&lt;/p&gt; 
+&lt;p&gt;Overall, the toolkit is designed to provide a comprehensive suite for simulating and optimizing supply chain networks, offering operational researchers and supply chain analysts a powerful tool for modeling complex dynamics and managing high-throughput scenarios.&lt;/p&gt; 
+&lt;div id="attachment_3794" style="width: 1396px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3794" loading="lazy" class="size-full wp-image-3794" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/07/IMG-2024-06-07-14.51.33.png" alt="Fig 1: Sample Dashboard Connecting Simudyne SDK to Custom Visualization Layer" width="1386" height="581"&gt;
+ &lt;p id="caption-attachment-3794" class="wp-caption-text"&gt;Fig 1: Sample Dashboard Connecting Simudyne SDK to Custom Visualization Layer&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Running supply chain simulations on AWS&lt;/p&gt; 
+&lt;p&gt;Using the Simudyne SDK and the Supply Chain Toolkit, Amazon’s Worldwide Design Engineering team, Simudyne, and AWS’s Emerging Technologies &amp;amp; Workloads team worked together to build a simulation of Amazon’s US inbound supply chain on AWS.&lt;/p&gt; 
+&lt;p&gt;We’ve shown the reference architecture in Figure 2. The simulation code connects to an Amazon Redshift data warehouse to pull relevant supply chain data that’s used in the simulations.&lt;/p&gt; 
+&lt;p&gt;Typically, a full-scale simulation of the US inbound supply chain can be executed on a r6a.32xlarge EC2 instance, which not only has 128 vCPUs, but also comes with over 1 TiB of RAM. Agent-based simulations are often memory-intensive applications and more performant when the state of agents during simulations can be saved and operated in memory, making high-memory instances found on AWS very handy. On an r6a.32xlarge instance, three (3) simulation weeks of the full US inbound supply chain ran in about an hour.&lt;/p&gt; 
+&lt;div id="attachment_3755" style="width: 1004px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3755" loading="lazy" class="size-full wp-image-3755" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/30/IMG-2024-05-30-10.36.03.png" alt="Figure 2: AWS reference architecture used to run simulations of the Amazon US inbound supply chain." width="994" height="599"&gt;
+ &lt;p id="caption-attachment-3755" class="wp-caption-text"&gt;Figure 2: AWS reference architecture used to run simulations of the Amazon US inbound supply chain.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Using Simudyne’s technology to simulate our supply chain has opened new avenues for us. We think It can provide insights into cost reduction, service improvement, environmental impact, and strategic adaptability.&lt;/p&gt; 
+&lt;p&gt;This project is not just a testament to Amazon’s commitment to innovation but also an example for people exploring the frontiers of supply chain optimization. We’ll continue to refine our models and strategies because the potential for groundbreaking improvements in e-commerce logistics remains vast and exciting.&lt;/p&gt; 
+&lt;p&gt;Now that we’ve successfully modeled our inbound supply chain network helping with the Inbound regionalization initiative as outlined in our CEO’s letter to shareholders, our focus is now shifting to simulating the outbound network – the critical journey of products from our Fulfillment Centers to customers. This new phase of modeling will let us explore and experiment with various strategies – including intermodal transport – within the simulated environment.&lt;/p&gt; 
+&lt;p&gt;This allows us to refine and validate our strategies before we implement them in the real world. In our upcoming posts, we plan to share insights from our experience extending our simulations and using AI to further optimize the network, offering a glimpse into the cutting-edge methods driving supply chain efficiency.&lt;/p&gt; 
+&lt;p&gt;Simudyne currently offers a 30-day free trial of its SDK, which you can find in &lt;a href="https://aws.amazon.com/marketplace/seller-profile?id=seller-2hr6jozikusxs"&gt;AWS Marketplace&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Call for participation: HPC tutorial series from the HPCIC</title>
 		<link>https://aws.amazon.com/blogs/hpc/call-for-participation-hpc-tutorial-series-from-the-hpcic/</link>
 		
@@ -39,7 +101,7 @@
 		<guid isPermaLink="false">7634a0bf6ed82010fb48611fdb16217bc1cbb185</guid>
 
 					<description>Interested in getting hands-on experience with cutting-edge HPC tools? Check out this blog post on an upcoming virtual training series from @LLNL and @AWSCloud. Learn emerging technologies from the experts this August.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3849" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-16.56.36.png" alt="Call for participation: HPC tutorial series from the HPCIC" width="380" height="161"&gt;Lawrence Livermore National Laboratory (LLNL) and AWS are joining forces to provide a training opportunity for emerging HPC tools and application. This takes the form of a series of tutorials over the summer by the HPC Innovation Center (HPCIC) at the Lab, which focuses on a broad suite of open-source software projects originating from LLNL. The series aims to give attendees experience with these cutting-edge technologies.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3849" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-16.56.36.png" alt="Call for participation: HPC tutorial series from the HPCIC" width="380" height="161"&gt;Lawrence Livermore National Laboratory (LLNL) and AWS are joining forces to provide a training opportunity for emerging HPC tools and application. This takes the form of a series of tutorials over the summer by the HPC Innovation Center (HPCIC) at the Lab, which focuses on a broad suite of open-source software projects originating from LLNL. The series aims to give attendees experience with these cutting-edge technologies.&lt;/p&gt; 
 &lt;p&gt;This &lt;a href="https://hpcic.llnl.gov/tutorials/2024-hpc-tutorials"&gt;virtual series&lt;/a&gt; consists of nine distinct tutorials through the month of August. Each tutorial focuses on a specific package from the HPCIC. You’ll get hands-on experience with each project and learn more about running HPC on AWS. Each event will be hosted on AWS resources and use &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; to provide the environment for attendees.&lt;/p&gt; 
 &lt;p&gt;LLNL has a long history of delivering some of the world’s largest supercomputers and the supporting software to effectively use them. This collaboration between LLNL and AWS brings these projects and industry best practices to a broader community. Together we are democratizing access to next generation computational research tools and HPC resources.&lt;/p&gt; 
 &lt;h2&gt;How to Participate&lt;/h2&gt; 
@@ -2331,105 +2393,6 @@ process MY_PROCESS {
 &lt;p&gt;Start with a small workload to gauge the tool’s compatibility and scalability with your project. AWS has a comprehensive suite of services and is ready to support you at every step of your journey, ensuring that you have the right resources and environment to push the boundaries of your research.&lt;/p&gt; 
 &lt;p&gt;AWS Partners are also here to help you implement these tools. Partners like &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-7shbi5vvdvezu"&gt;Ronin&lt;/a&gt; and &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-ppiyshk2oin3i?sr=0-1&amp;amp;ref_=beagle&amp;amp;applicationId=AWSMPContessa"&gt;Ansys&lt;/a&gt; bring valuable expertise that can accelerate your time to research on AWS.&lt;/p&gt; 
 &lt;p&gt;We recommend consulting with your research team and AWS account team to help you make the best decision for your project. As your research evolves, AWS’s scalable and diverse computing environment will continue to provide the necessary tools and support to meet your computational needs. To dive deeper into the nuances of a few of the tools we touched on in this post, we encourage you to check out some of our previous posts about &lt;a href="https://aws.amazon.com/blogs/hpc/choosing-between-batch-or-parallelcluster-for-hpc/"&gt;Choosing between AWS Batch or AWS ParallelCluster for HPC&lt;/a&gt;, &lt;a href="https://aws.amazon.com/blogs/hpc/why-use-fargate-with-aws-batch-for-serverless-batch-compute/"&gt;why you should use Fargate with AWS Batch&lt;/a&gt;, and how you can &lt;a href="https://aws.amazon.com/blogs/hpc/save-up-to-90-using-ec2-spot-even-for-long-running-hpc-jobs/"&gt;save up to 90% using EC2 Spot&lt;/a&gt;.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Protein language model training with NVIDIA BioNeMo framework on AWS ParallelCluster</title>
-		<link>https://aws.amazon.com/blogs/hpc/protein-language-model-training-with-nvidia-bionemo-framework-on-aws-parallelcluster/</link>
-		
-		<dc:creator><![CDATA[Marissa Powers]]></dc:creator>
-		<pubDate>Mon, 18 Mar 2024 15:59:38 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[AI]]></category>
-		<category><![CDATA[Amazon FSx for Lustre]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[ML]]></category>
-		<category><![CDATA[Protein Folding]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">61fad9f084c647737166e7ff7d7a263d356d7d5e</guid>
-
-					<description>In this new post, we discuss pre-training ESM-1nv for protein language modeling with NVIDIA BioNeMo on AWS. Learn how you can efficiently deploy and customize generative models like ESM-1nv on GPU clusters with ParallelCluster. Whether you're studying protein sequences, predicting properties, or discovering new therapeutics, this post has tips to accelerate your protein AI workloads on the cloud.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Marissa Powers and Ankur Srivastava from AWS, and Neel Patel from NVIDIA.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Proteins are large, complex biomolecules. They make up muscles, form into enzymes and antibodies, and perform signaling throughout the body. Today, &lt;a href="https://www.proteinatlas.org/humanproteome/tissue/druggable"&gt;proteins are the therapeutic target&lt;/a&gt; for the majority of pharmaceutical drugs. Increasingly, scientists are using language models to better understand protein function, generate new protein sequences, and predict protein properties [1].&lt;/p&gt; 
-&lt;p&gt;With the recent proliferation of new models and tools in this field, researchers are looking for help to simplify the training, customization, and deployment of these generative AI models. And our high performance computing (HPC) customers are asking for how to easily perform distributed training with these models on AWS.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll demonstrate how to pre-train the &lt;code&gt;ESM-1nv&lt;/code&gt; model with the &lt;a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/clara/containers/bionemo-framework"&gt;NVIDIA BioNeMo framework&lt;/a&gt; using NVIDIA GPUs on AWS ParallelCluster, an open-source cluster management tool that makes it easy for you to deploy and manage HPC clusters on AWS. &lt;a href="https://www.nvidia.com/en-us/clara/bionemo/"&gt;NVIDIA BioNeMo&lt;/a&gt; is a generative AI platform for drug discovery. It supports running commonly used models, including ESM-1, ESM-2, ProtT5nv, DNABert, MegaMolBART, DiffDock, EquiDock, and OpenFold. For the latest information on supported models, see the &lt;a href="https://docs.nvidia.com/bionemo-framework/latest/"&gt;BioNeMo framework documentation&lt;/a&gt;.&lt;/p&gt; 
-&lt;div id="attachment_3420" style="width: 911px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3420" loading="lazy" class="size-full wp-image-3420" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/18/CleanShot-2024-03-18-at-14.35.22.png" alt="Figure 1: This image shows the workflow for developing models on NVIDIA BioNeMo. The process is divided into phases for model development and customization and then fine-tuning and deployment." width="901" height="392"&gt;
- &lt;p id="caption-attachment-3420" class="wp-caption-text"&gt;Figure 1: This image shows the workflow for developing models on NVIDIA BioNeMo. The process is divided into phases for model development and customization and then fine-tuning and deployment.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;This example deployment also leverages Amazon FSx for Lustre and the Elastic Fabric Adapter (EFA), which can both be provisioned and configured by ParallelCluster. With ParallelCluster, users can scale out distributed training jobs across hundreds or thousands of vCPUs. Code examples, including cluster configuration files, are &lt;a href="https://github.com/aws-samples/awsome-distributed-training/tree/main/3.test_cases/14.bionemo"&gt;available on GitHub&lt;/a&gt;&lt;strong&gt;. &lt;/strong&gt;&lt;/p&gt; 
-&lt;h2&gt;Walkthrough&lt;/h2&gt; 
-&lt;p&gt;For this example, we will (1) create an HPC cluster using AWS ParallelCluster, (2) configure the cluster with BioNeMo framework and download datasets, and (3) execute a pre-training job on the cluster.&lt;/p&gt; 
-&lt;h3&gt;Prerequisites&lt;/h3&gt; 
-&lt;p&gt;We assume you have access to an AWS account and are authenticated in that account. The configuration file used here uses &lt;a href="https://aws.amazon.com/ec2/instance-types/p4/"&gt;p4de.24xlarge&lt;/a&gt; instance types powered by 8 x &lt;a href="https://www.nvidia.com/en-us/data-center/a100/"&gt;NVIDIA A100&lt;/a&gt; 80GB Tensor Core GPUs and was tested in the us-east-1 region. We have also tested it with &lt;a href="https://aws.amazon.com/ec2/instance-types/p5/"&gt;p5.48xlarge&lt;/a&gt; instances powered by 8 x &lt;a href="https://www.nvidia.com/en-us/data-center/h100/"&gt;NVIDIA H100&lt;/a&gt; Tensor Core GPUs, which delivered better performance. Check your AWS service quotas to ensure you have sufficient access to these instance types.&lt;/p&gt; 
-&lt;p&gt;ParallelCluster must be installed on a local node or instance. &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/install-v3-virtual-environment.html"&gt;Follow the instructions&lt;/a&gt; in our documentation to install ParallelCluster in a virtual environment.&lt;/p&gt; 
-&lt;p&gt;Finally, to pull down the BioNeMo container, you will need an NVIDIA NGC API key. To set this up, follow the guidance under “NGC Setup” in the &lt;a href="https://docs.nvidia.com/bionemo-framework/latest/quickstart-fw.html#ngc-setup"&gt;&lt;strong&gt;BioNeMo documentation&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Create a cluster&lt;/h2&gt; 
-&lt;p&gt;The AWS &lt;code&gt;awsome-distributed-training&lt;/code&gt; &lt;a href="https://github.com/aws-samples/awsome-distributed-training"&gt;GitHub repo&lt;/a&gt; provides configuration templates for running distributed training on multiple AWS services, including Amazon EKS, AWS Batch, and AWS ParallelCluster. In this example, we’ll create a cluster using one of the provided ParallelCluster configuration files. You can see an overview of the architecture in Figure 2.&lt;/p&gt; 
-&lt;div id="attachment_3421" style="width: 841px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3421" loading="lazy" class="size-full wp-image-3421" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/18/CleanShot-2024-03-18-at-14.36.56.png" alt="Figure 2 – In this distributed training architecture, ParallelCluster deploys a cluster consisting of a head node in a public subnet, a single queue of p4de.24xlarge instances in a private subnet, an FSx for Lustre filesystem, and a shared Amazon Elastic Block Storage (EBS) volume. FSx is used for input and output datasets, and the EBS volume is used to store job-specific submission scripts and log files. All the resources are deployed within a user’s own VPC." width="831" height="570"&gt;
- &lt;p id="caption-attachment-3421" class="wp-caption-text"&gt;Figure 2 – In this distributed training architecture, ParallelCluster deploys a cluster consisting of a head node in a public subnet, a single queue of p4de.24xlarge instances in a private subnet, an FSx for Lustre filesystem, and a shared Amazon Elastic Block Storage (EBS) volume. FSx is used for input and output datasets, and the EBS volume is used to store job-specific submission scripts and log files. All the resources are deployed within a user’s own VPC.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;To start, clone the awsome-distributed-training GitHub repository:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;git clone https://github.com/aws-samples/awsome-distributed-training.git&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Navigate to the &lt;em&gt;templates&lt;/em&gt; directory in the locally cloned repository:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;cd 1.architectures/2.aws-parallelcluster&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;The configuration file we will use is distributed-training-p4de_postinstall_scripts.yaml. Open the file and update to use an ubuntu-based AMI:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;Image:
-  Os: ubuntu2004
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;ParallelCluster will deploy the head node and compute nodes in subnets you specify in the YAML file. You can choose to deploy all resources in the same subnet or use separate subnets for the head node and compute nodes. We recommend that you deploy all resources in the same Availability Zone (AZ). That’s because ParallelCluster will create a Lustre file system for the cluster – which resides in a single AZ, and deploying workloads across multiple Availability Zones will cause additional cost incursions due to the cross-AZ traffic.&lt;/p&gt; 
-&lt;p&gt;Update the head node subnet in L13 in the YAML file. Update the compute nodes subnet in L50:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;HeadNode:
-  InstanceType: m5.8xlarge
-  Networking:
-    SubnetId: PLACEHOLDER_PUBLIC_SUBNET
-  Ssh:
-    KeyName: PLACEHOLDER_SSH_KEY
-...
-  SlurmQueues:
-    - Name: compute-gpu
-      CapacityType: ONDEMAND
-      Networking:
-        SubnetIds:
-          - PLACEHOLDER_PRIVATE_SUBNET
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;If you are using an On-Demand Capacity Reservation (ODCR), provide the resource id in the YAML file. If not, comment out these two lines:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-yaml"&gt;      CapacityReservationTarget:
-        CapacityReservationId: PLACEHOLDER_CAPACITY_RESERVATION_ID
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Once the YAML file has been updated, use ParallelCluster to create the cluster:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;pcluster create-cluster \
-   --cluster-name bionemo-cluster \
-   --cluster-configuration distributed-training-p4de_postinstall_scripts.yaml \
-   --region us-east-1 \
-   --dryrun false
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Cluster creation will take 20-30 minutes. You can monitor the status of cluster creation with:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;watch pcluster describe-cluster \
-   --cluster-name bionemo-cluster \
-   --region us-east-1 \
-   --query clusterStatus
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;The cluster will be deployed as an AWS CloudFormation stack. You can also monitor resource creation from the CloudFormation console or by querying CloudFormation in the CLI.&lt;/p&gt; 
-&lt;h3&gt;Configure cluster and input datasets&lt;/h3&gt; 
-&lt;p&gt;Once the cluster status is complete, follow the guidance in the &lt;a href="https://github.com/aws-samples/awsome-distributed-training/tree/main/3.test_cases/14.bionemo"&gt;GitHub repo&lt;/a&gt; to finish setup and model pre-training. At a high level, these steps walk through how to (1) pull down the BioNeMo framework container; (2) build an AWS-optimized image; (3) download and pre-process the &lt;code&gt;UniRef50&lt;/code&gt; dataset; and (4) run the &lt;code&gt;ESM-1nv&lt;/code&gt; pre-training job.&lt;/p&gt; 
-&lt;p&gt;Once you submit the pre-training job, you can monitor progress by running tail on the output log file:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;tail -f /apps/slurm-esm1nv-&amp;lt;job-id&amp;gt;.out&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;For more detailed monitoring of the cluster, including memory, networking, and storage usage on both the head node and compute nodes, consider creating a Grafana dashboard. A detailed guide for creating a dashboard for ParallelCluster clusters is &lt;a href="https://github.com/aws-samples/aws-parallelcluster-monitoring"&gt;available on Github&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we demonstrated how to pre-train ESM-1nv with the NVIDIA BioNeMo framework and NVIDIA GPUs on AWS ParallelCluster. For information about other models supported by the NVIDIA BioNeMo framework, see the BioNeMo framework documentation. For guides on deploying other distributed training jobs on AWS, check out the additional test case in the awsome-distributed-training repository in GitHub.&lt;/p&gt; 
-&lt;p&gt;For alternative options for deploying BioNeMo framework on AWS, check out our guide for &lt;a href="https://aws.amazon.com/blogs/industries/find-the-next-blockbuster-with-nvidia-bionemo-framework-on-amazon-sagemaker/"&gt;Amazon SageMaker&lt;/a&gt;.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
-&lt;h3&gt;Reference&lt;/h3&gt; 
-&lt;p&gt;[1] Ruffolo, J.A., Madani, A. Designing proteins with language models. Nat Biotechnol 42, 200–202 (2024). &lt;a href="https://doi.org/10.1038/s41587-024-02123-4"&gt;https://doi.org/10.1038/s41587-024-02123-4&lt;/a&gt;&lt;/p&gt;</content:encoded>
 					
 		
 		

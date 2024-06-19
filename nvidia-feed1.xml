@@ -20,6 +20,79 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.4</generator>
 	<item>
+		<title>Decoding How NVIDIA AI Workbench Powers App Development</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-workbench-hybrid-rag/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 19 Jun 2024 13:00:25 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72261</guid>
+
+					<description><![CDATA[NVIDIA AI Workbench simplifies AI developer workflows by helping users build their own RAG projects, customize models and more.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible and showcases new hardware, software, tools and accelerations for NVIDIA RTX PC and workstation users.</i></p>
+<p>The demand for tools to simplify and optimize <a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> development is skyrocketing. Applications based on <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented generation (RAG)</a> — a technique for enhancing the accuracy and reliability of generative AI models with facts fetched from specified external sources — and customized models are enabling developers to tune AI models to their specific needs.</p>
+<p>While such work may have required a complex setup in the past, new tools are making it easier than ever.</p>
+<p><a target="_blank" href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/">NVIDIA AI Workbench</a> simplifies AI developer workflows by helping users build their own RAG projects, customize models and more. It’s part of the <a target="_blank" href="https://developer.nvidia.com/blog/streamline-ai-powered-app-development-with-nvidia-rtx-ai-toolkit-for-windows-rtx-pcs/">RTX AI Toolkit</a> — a suite of tools and software development kits for customizing, optimizing and deploying AI capabilities — launched at <a target="_blank" href="https://www.nvidia.com/en-us/events/computex/">COMPUTEX</a> earlier this month. AI Workbench removes the complexity of technical tasks that can derail experts and halt beginners.</p>
+<h2><b>What Is NVIDIA AI Workbench?</b></h2>
+<p>Available for free, NVIDIA AI Workbench enables users to develop, experiment with, test and prototype AI applications across GPU systems of their choice — from laptops and workstations to data center and cloud. It offers a new approach for creating, using and sharing GPU-enabled development environments across people and systems.</p>
+<p>A simple <a target="_blank" href="https://docs.nvidia.com/ai-workbench/user-guide/latest/installation/overview.html">installation</a> gets users up and running with AI Workbench on a local or remote machine in just minutes. Users can then start a new project or replicate one from <a target="_blank" href="https://github.com/nvidia?q=workbench&amp;type=all&amp;language=&amp;sort">the examples on GitHub</a>. Everything works through GitHub or GitLab, so users can easily collaborate and distribute work. Learn more about <a target="_blank" href="https://docs.nvidia.com/ai-workbench/user-guide/latest/overview/introduction.html">getting started with AI Workbench</a>.</p>
+<h2><b>How AI Workbench Helps Address AI Project Challenges</b></h2>
+<p>Developing AI workloads can require manual, often complex processes, right from the start.</p>
+<p>Setting up GPUs, updating drivers and managing versioning incompatibilities can be cumbersome. Reproducing projects across different systems can require replicating manual processes over and over. Inconsistencies when replicating projects, like issues with data fragmentation and version control, can hinder collaboration. Varied setup processes, moving credentials and secrets, and changes in the environment, data, models and file locations can all limit the portability of projects.</p>
+<p>AI Workbench makes it easier for data scientists and developers to manage their work and collaborate across heterogeneous platforms. It integrates and automates various aspects of the development process, offering:<b></b></p>
+<ul>
+<li><b>Ease of setup:</b> AI Workbench streamlines the process of setting up a developer environment that’s GPU-accelerated, even for users with limited technical knowledge.</li>
+<li><b>Seamless collaboration: </b>AI Workbench integrates with version-control and project-management tools like GitHub and GitLab, reducing friction when collaborating.</li>
+<li><b>Consistency when scaling from local to cloud:</b> AI Workbench ensures consistency across multiple environments, supporting scaling up or down from local workstations or PCs to data centers or the cloud.<b></b></li>
+</ul>
+<h2><b>RAG for Documents, Easier Than Ever</b></h2>
+<p>NVIDIA offers sample development <a target="_blank" href="https://docs.nvidia.com/ai-workbench/user-guide/latest/overview/projects.html">Workbench Projects</a> to help users get started with AI Workbench. The <a target="_blank" href="https://github.com/NVIDIA/workbench-example-hybrid-rag">hybrid RAG Workbench Project</a> is one example: It runs a custom, text-based RAG web application with a user’s documents on their local workstation, PC or remote system.</p>
+<p>Every Workbench Project runs in a “container” — software that includes all the necessary components to run the AI application. The hybrid RAG sample pairs a Gradio chat interface frontend on the host machine with a containerized RAG server — the backend that services a user’s request and routes queries to and from the vector database and the selected <a target="_blank" href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language model</a>.</p>
+<p>This Workbench Project supports a wide variety of LLMs <a target="_blank" href="https://github.com/NVIDIA/workbench-example-hybrid-rag?tab=readme-ov-file#table-1-default-supported-models-by-inference-mode">available on NVIDIA’s GitHub page</a>. Plus, the hybrid nature of the project lets users select where to run inference.</p>
+<figure id="attachment_72265" aria-describedby="caption-attachment-72265" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-72265" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects-672x382.png" alt="" width="672" height="382" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects-672x382.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects-400x228.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects-768x437.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects-791x450.png 791w, https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects-378x215.png 378w, https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects-176x100.png 176w, https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects-1280x728.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/06/git-based-projects.png 1413w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72265" class="wp-caption-text">Workbench Projects let users version the development environment and code.</figcaption></figure>
+<p>Developers can run the embedding model on the host machine and run inference locally on a Hugging Face Text Generation Inference server, on target cloud resources using NVIDIA inference endpoints like the <a target="_blank" href="http://build.nvidia.com">NVIDIA API catalog</a>, or with self-hosting microservices such as <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> or third-party services.</p>
+<p>The hybrid RAG Workbench Project also includes:</p>
+<ul>
+<li><b>Performance metrics:</b> Users can evaluate how RAG- and non-RAG-based user queries perform across each inference mode. Tracked metrics include Retrieval Time, Time to First Token (TTFT) and Token Velocity.</li>
+<li><b>Retrieval transparency:</b> A panel shows the exact snippets of text — retrieved from the most contextually relevant content in the vector database — that are being fed into the LLM and improving the response’s relevance to a user’s query.</li>
+<li><b>Response customization:</b> Responses can be tweaked with a variety of parameters, such as maximum tokens to generate, temperature and frequency penalty.</li>
+</ul>
+<p>To get started with this project, simply <a target="_blank" href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/workbench/">install AI Workbench</a> on a local system. The hybrid RAG Workbench Project can be brought from GitHub into the user’s account and duplicated to the local system.</p>
+<p>More resources are available in the <a target="_blank" href="https://docs.nvidia.com/ai-workbench/user-guide/latest/quickstart/example-projects.html">AI Decoded user guide</a>. In addition, community members provide helpful video tutorials, like the one from Joe Freeman below.</p>
+<p><iframe title="NVIDIA AI Workbench Topology running on Windows, WSL and Linux  with an example" width="500" height="281" src="https://www.youtube.com/embed/MTA3D4LJfc0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>Customize, Optimize, Deploy</b></h2>
+<p>Developers often seek to customize AI models for specific use cases. Fine-tuning, a technique that changes the model by training it with additional data, can be useful for style transfer or changing model behavior. AI Workbench helps with fine-tuning, as well.</p>
+<p>The <a target="_blank" href="https://github.com/NVIDIA/RTX-AI-Toolkit/blob/main/tutorial-llama3-finetune.md">Llama-factory AI Workbench Project</a> enables QLoRa, a fine-tuning method that minimizes memory requirements, for a variety of models, as well as model quantization via a simple graphical user interface. Developers can use public or their own datasets to meet the needs of their applications.</p>
+<p>Once fine-tuning is complete, the model can be quantized for improved performance and a smaller memory footprint, then deployed to native Windows applications for local inference or to NVIDIA NIM for cloud inference. Find a complete tutorial for this project on the <a target="_blank" href="https://github.com/NVIDIA/RTX-AI-Toolkit">NVIDIA RTX AI Toolkit repository</a>.</p>
+<h2><b>Truly Hybrid — Run AI Workloads Anywhere</b></h2>
+<p>The Hybrid-RAG Workbench Project described above is hybrid in more than one way. In addition to offering a choice of inference mode, the project can be run locally on NVIDIA RTX workstations and GeForce RTX PCs, or scaled up to remote cloud servers and data centers.</p>
+<p>The ability to run projects on systems of the user’s choice — without the overhead of setting up the infrastructure — extends to all Workbench Projects. Find more examples and instructions for fine-tuning and customization in the AI Workbench <a target="_blank" href="https://docs.nvidia.com/ai-workbench/user-guide/latest/quickstart/quickstart-basic.html">quick-start guide</a>.</p>
+<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/ai-workbench-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/ai-workbench-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Decoding How NVIDIA AI Workbench Powers App Development]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Light Bulb Moment: NVIDIA CEO Sees Bright Future for AI-Powered Electric Grid</title>
 		<link>https://blogs.nvidia.com/blog/ai-electric-grid-edison/</link>
 		
@@ -124,11 +197,11 @@
 <h2><b>NeRFDeformer Transforms 3D Scenes With a Single Snapshot</b></h2>
 <p>A NeRF is an AI model that can render a 3D scene based on a series of 2D images taken from different positions in the environment. In fields like robotics, NeRFs can be used to generate immersive 3D renders of complex real-world scenes, such as a cluttered room or a construction site. However, to make any changes, developers would need to manually define how the scene has transformed — or remake the NeRF entirely.</p>
 <p>Researchers from the University of Illinois Urbana-Champaign and NVIDIA have simplified the process with NeRFDeformer. The method, being presented at CVPR, can successfully transform an existing NeRF using a single RGB-D image, which is a combination of a normal photo and a depth map that captures how far each object in a scene is from the camera.</p>
-<p><img fetchpriority="high" decoding="async" class="aligncenter size-full wp-image-72222" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM.png" alt="" width="1316" height="794" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM.png 1316w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-400x241.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-672x405.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-768x463.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-746x450.png 746w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-356x215.png 356w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-166x100.png 166w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-1280x772.png 1280w" sizes="(max-width: 1316px) 100vw, 1316px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-72222" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM.png" alt="" width="1316" height="794" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM.png 1316w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-400x241.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-672x405.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-768x463.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-746x450.png 746w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-356x215.png 356w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-166x100.png 166w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Screenshot-2024-06-05-at-5.05.51-PM-1280x772.png 1280w" sizes="(max-width: 1316px) 100vw, 1316px" /></p>
 <h2><b>VILA Visual Language Model Gets the Picture</b></h2>
 <p>A CVPR research collaboration between NVIDIA and the Massachusetts Institute of Technology is advancing the state of the art for vision language models, which are generative AI models that can process videos, images and text.</p>
 <p>The group developed <a target="_blank" href="https://arxiv.org/abs/2312.07533">VILA</a>, a family of open-source visual language models that outperforms prior neural networks <a target="_blank" href="https://mmmu-benchmark.github.io/#leaderboard">on key benchmarks</a> that test how well AI models answer questions about images. VILA’s unique pretraining process unlocked new model capabilities, including enhanced world knowledge, stronger in-context learning and the ability to reason across multiple images.</p>
-<figure id="attachment_72225" aria-describedby="caption-attachment-72225" style="width: 1999px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-72225" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA.png" alt="figure showing how VILA can reason based on multiple images" width="1999" height="809" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA.png 1999w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-400x162.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-672x272.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-768x311.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-1536x622.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-842x341.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-406x164.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-188x76.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-1280x518.png 1280w" sizes="(max-width: 1999px) 100vw, 1999px" /><figcaption id="caption-attachment-72225" class="wp-caption-text">VILA can understand memes and reason based on multiple images or video frames.</figcaption></figure>
+<figure id="attachment_72225" aria-describedby="caption-attachment-72225" style="width: 1999px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-72225" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA.png" alt="figure showing how VILA can reason based on multiple images" width="1999" height="809" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA.png 1999w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-400x162.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-672x272.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-768x311.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-1536x622.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-842x341.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-406x164.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-188x76.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/VILA-1280x518.png 1280w" sizes="(max-width: 1999px) 100vw, 1999px" /><figcaption id="caption-attachment-72225" class="wp-caption-text">VILA can understand memes and reason based on multiple images or video frames.</figcaption></figure>
 <p>The VILA model family can be optimized for inference using the <a target="_blank" href="https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/">NVIDIA TensorRT-LLM</a> open-source library and can be deployed on NVIDIA GPUs in data centers, workstations and even <a target="_blank" href="https://developer.nvidia.com/blog/visual-language-intelligence-and-edge-ai-2-0/">edge devices</a>.</p>
 <p>Read more about VILA on the <a target="_blank" href="https://developer.nvidia.com/blog/visual-language-models-on-nvidia-hardware-with-vila/">NVIDIA Technical Blog</a> and <a target="_blank" href="https://github.com/NVlabs/VILA">GitHub</a>.</p>
 <h2><b>Generative AI Fuels Autonomous Driving, Smart City Research</b></h2>
@@ -1165,63 +1238,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[SAP and NVIDIA Create AI for ‘The Most Valuable Language,’ CEOs Unveil at Sapphire Orlando]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA and Cisco Weave Fabric for Generative AI</title>
-		<link>https://blogs.nvidia.com/blog/cisco-nexus-hyperfabric-nim/</link>
-		
-		<dc:creator><![CDATA[Kevin Deierling]]></dc:creator>
-		<pubDate>Tue, 04 Jun 2024 15:06:40 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Networking]]></category>
-		<category><![CDATA[NVIDIA BlueField]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72014</guid>
-
-					<description><![CDATA[Building and deploying AI applications at scale requires a new class of computing infrastructure — one that can handle the massive amounts of data, compute power and networking bandwidth needed by generative AI models. To better ensure these models perform optimally and efficiently, NVIDIA is teaming with Cisco to enable enterprise generative AI infrastructure. Cisco’s	<a class="read-more" href="https://blogs.nvidia.com/blog/cisco-nexus-hyperfabric-nim/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Building and deploying AI applications at scale requires a new class of computing infrastructure — one that can handle the massive amounts of data, compute power and networking bandwidth needed by <a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> models.</p>
-<p>To better ensure these models perform optimally and efficiently, NVIDIA is teaming with Cisco to enable enterprise generative AI infrastructure.</p>
-<p><a target="_blank" href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2024/m06/cisco-reveals-nexus-hyperfabric-the-new-generative-ai-infrastructure-solution-with-nvidia-to-help-simplify-data-center-operations.html">Cisco’s new Nexus HyperFabric</a> AI cluster solution, developed in collaboration with NVIDIA, provides a path for enterprises to operationalize generative AI. Cisco HyperFabric is an enterprise-ready, end-to-end infrastructure solution to scale generative AI workloads. It combines NVIDIA <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a> and AI software with Cisco AI-native networking and a robust <a target="_blank" href="https://www.vastdata.com/press-releases/vast-cisco-nvidia-optimize-enteprise-ai-with-full-stack-solution">VAST Data Platform</a>.</p>
-<p>“Enterprise applications are transforming into generative AI applications, significantly increasing data processing requirements and overall infrastructure complexity,” said Kevin Wollenweber, senior vice president and general manager of data center and provider connectivity at Cisco. “Together, Cisco and NVIDIA are advancing HyperFabric to advance generative AI for the world’s enterprises so they can use their data and domain expertise to transform productivity and insight.”</p>
-<h2><b>Powering an Enterprise-Ready AI Cluster Solution</b></h2>
-<p>Foundational to the solution are <a target="_blank" href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a>, which provide the accelerated computing needed to process massive datasets. The solution utilizes <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, a cloud-native software platform that acts as the operating system for enterprise AI. NVIDIA AI Enterprise streamlines the development and deployment of production-grade AI copilots and other generative AI applications, ensuring optimized performance, security and application programming interface stability.</p>
-<p>Included with NVIDIA AI Enterprise, <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> inference microservices accelerate the deployment of <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundation models</a> while ensuring data security. NIM microservices are designed to bridge the gap between complex AI development and enterprise operational needs. As organizations across various industries embark on their AI journeys, the combination of <a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-nim-model-deployment-generative-ai-developers">NVIDIA NIM and the Cisco Nexus HyperFabric</a> AI cluster supports the entire process, from ideation to development and deployment of production-scale AI applications.</p>
-<p>The Cisco Nexus HyperFabric AI cluster solution integrates <a target="_blank" href="https://www.nvidia.com/en-us/data-center/tensor-cores/">NVIDIA Tensor Core GPUs</a> and <a target="_blank" href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/">NVIDIA BlueField-3</a> SuperNICs and DPUs to enhance system performance and security. The SuperNICs offer advanced network capabilities, ensuring seamless, high-speed connectivity across the infrastructure. BlueField-3 DPUs offload, accelerate and isolate the infrastructure services, creating a more efficient AI solution.</p>
-<p>BlueField-3 DPUs can also run security services like the <a target="_blank" href="https://www.cisco.com/site/us/en/products/security/hypershield/index.html">Cisco Hypershield</a> solution. It enables an AI-native, hyperdistributed security architecture, where security shifts closer to the workloads needing protection. Cisco Hypershield is another notable area of collaboration between the companies, focusing on creating AI-powered security solutions.</p>
-<h2><b>Join NVIDIA at Cisco Live</b></h2>
-<p>Learn more about how Cisco and NVIDIA power generative AI at Cisco Live — running through June 6 in Las Vegas — where the companies will showcase NVIDIA AI technologies at the Cisco AI Hub and share best practices for enterprises to get started with AI.</p>
-<p>Attend these sessions to discover how to accelerate generative AI with NVIDIA, Cisco and other ecosystem partners:</p>
-<ul>
-<li>Keynote Deep Dive: “Harness a Bold New Era: Transform Data Center and Service Provider Connectivity” with NVIDIA’s Kevin Deierling and Cisco’s Jonathan Davidson, Kevin Wollenweber, Jeremy Foster and Bill Gartner — Wednesday, June 5, from 1-2 p.m. PT</li>
-<li>AI Hub Theater Presentation: “Accelerate, Deploy Generative AI Anywhere With NVIDIA Inference Microservices” with Marty Jain, vice president of sales and business development at NVIDIA — Tuesday, June 4, from 2:15-2:45 p.m. PT</li>
-<li>WWT AI Hub Booth: Thought leadership interview with NVIDIA’s Jain and WWT Vice President of Cloud, Infrastructure and AI Solutions Neil Anderson — Wednesday, June 5, from 10-11 a.m. PT</li>
-<li>NetApp Theater: “Accelerating Gen AI With NVIDIA Inference Microservices on FlexPod” with Sicong Ji, strategic platforms and solutions lead at NVIDIA — Wednesday, June 5, from 1:30-1:40 p.m. PT</li>
-<li>Pure Storage Theater: “Accelerating Gen AI With NVIDIA Inference Microservices on FlashStack” with Joslyn Shakur, sales alliance manager at NVIDIA — Wednesday, June 5, from 2-2:10 p.m. PT ​</li>
-</ul>
-<p><i>Sign up for</i><a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/generative-ai/news/"> <i>generative AI news</i></a><i> to stay up to date on the latest breakthroughs, developments and technologies.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/corp-blog-nvidia-cisco-lockup-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/corp-blog-nvidia-cisco-lockup-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA and Cisco Weave Fabric for Generative AI]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
