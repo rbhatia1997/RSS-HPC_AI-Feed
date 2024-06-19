@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 18 Jun 2024 15:20:58 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Jun 2024 00:03:46 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,70 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.4</generator>
 	<item>
+		<title>Light Bulb Moment: NVIDIA CEO Sees Bright Future for AI-Powered Electric Grid</title>
+		<link>https://blogs.nvidia.com/blog/ai-electric-grid-edison/</link>
+		
+		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
+		<pubDate>Tue, 18 Jun 2024 23:40:22 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artficial Intelligence]]></category>
+		<category><![CDATA[Digital Twin]]></category>
+		<category><![CDATA[Energy]]></category>
+		<category><![CDATA[Events]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[New GPU Uses]]></category>
+		<category><![CDATA[NVIDIA Jetson]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72246</guid>
+
+					<description><![CDATA[The electric grid and the utilities managing it have an important role to play in the next industrial revolution that’s being driven by AI and accelerated computing, said NVIDIA founder and CEO Jensen Huang Monday at the annual meeting of the Edison Electric Institute (EEI), an association of U.S. and international utilities. “The future of	<a class="read-more" href="https://blogs.nvidia.com/blog/ai-electric-grid-edison/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>The electric grid and the utilities managing it have an important role to play in the next industrial revolution that’s being driven by AI and accelerated computing, said NVIDIA founder and CEO Jensen Huang Monday at the annual meeting of the Edison Electric Institute (EEI), an association of U.S. and international utilities.</p>
+<p>“The future of digital intelligence is quite bright, and so the future of the energy sector is bright, too,” said Huang in a keynote before an audience of more than a thousand utility and energy industry executives.</p>
+<p>Like other companies, utilities will apply AI to increase employee productivity, but “the greatest impact and return is in applying AI in the delivery of energy over the grid,” said Huang, in conversation with Pedro Pizarro, the chair of EEI and president and CEO of Edison International, the parent company of Southern California Edison, one of the nation’s largest electric utilities.</p>
+<p>For example, Huang described how grids will use AI-powered smart meters to let customers sell their excess electricity to neighbors.</p>
+<p>“You will connect resources and users, just like Google, so your power grid becomes a smart network with a digital layer like an app store for energy,” he said.</p>
+<p>“My sense is, like previous industrial revolutions, [AI] will drive productivity to levels that we’ve never seen,” he added.</p>
+<p>A video of the fireside chat will be available here soon.</p>
+<h2><b>AI Lights Up Electric Grids</b></h2>
+<p>Today, electric grids are mainly one-way systems that link a few big power plants to many users. They’ll increasingly become two-way, flexible and distributed networks with solar and wind farms connecting homes and buildings that sport solar panels, batteries and electric vehicle chargers.</p>
+<p>It’s a big job that requires autonomous control systems that process and analyze in real time a massive amount of data — work well suited to AI and<a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/"> accelerated computing</a>.</p>
+<p>AI is being applied to use cases across electric grids, thanks to a wide ecosystem of companies using NVIDIA’s technologies.</p>
+<p>In a recent <a target="_blank" href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61864/">GTC session</a>, utility vendor Hubbell and startup Utilidata, a member of the <a target="_blank" href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a> program, described a new generation of smart meters using the <a target="_blank" href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/">NVIDIA Jetson</a> platform that utilities will deploy to process and analyze real-time grid data using AI models at the edge. Deloitte <a target="_blank" href="https://www.prnewswire.com/news-releases/deloitte-and-utilidata-establish-first-of-its-kind-collaboration-to-revolutionize-the-us-power-grid-for-a-sustainable-future-302175120.html">announced</a> today its support for the effort.</p>
+<p>Siemens Energy detailed in <a target="_blank" href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62524/">a separate GTC session</a> its work with AI and <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> creating digital twins of transformers in substations to improve predictive maintenance, boosting grid resilience. And <a target="_blank" href="https://resources.nvidia.com/en-us-energy-utilities/maximize-wind-energy">a video</a> reports on how Siemens Gamesa used Omniverse and accelerated computing to optimize turbine placements for a large wind farm.</p>
+<p>“Deploying AI and advanced computing technologies developed by NVIDIA enables faster and better grid modernization and we, in turn, can deliver for our customers,” said Maria Pope, CEO of Portland General Electric in Oregon.</p>
+<h2><b>NVIDIA Delivers 45,000x Gain in Energy Efficiency</b></h2>
+<p>The advances come as NVIDIA drives down the costs and energy needed to deploy AI.</p>
+<p>Over the last eight years, NVIDIA increased <a target="_blank" href="https://www.nvidia.com/en-us/glossary/energy-efficiency/">energy efficiency</a> of running AI inference on state-of-the-art large language models a whopping 45,000x, Huang said in his recent <a target="_blank" href="https://www.youtube.com/watch?v=pKXDVsWZmUU">keynote</a> at COMPUTEX.</p>
+<p><a target="_blank" href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">NVIDIA Blackwell architecture GPUs</a> will provide 20x greater energy efficiency than CPUs for AI and <a target="_blank" href="https://www.nvidia.com/en-us/glossary/high-performance-computing/">high-performance computing</a>. If all CPU servers for these jobs transitioned to GPUs, users would save 37 terawatt-hours a year, the equivalent of 25 million metric tons of carbon dioxide and the electricity use of 5 million homes.</p>
+<p>That’s why NVIDIA-powered systems swept the top six spots and took seven of the top 10 in <a href="https://blogs.nvidia.com/blog/green500-energy-efficient-supercomputers/">the latest ranking</a> of the <a target="_blank" href="https://top500.org/lists/green500/2024/06/">Green500</a>, a list of the world’s most energy-efficient supercomputers.</p>
+<p>In addition, <a href="https://blogs.nvidia.com/blog/ai-energy-study/">a recent report</a> calls for governments to accelerate adoption of AI as a significant new tool to drive energy efficiency across many industries. It cited examples of utilities adopting AI to make the electric grid more efficient.</p>
+<p>Learn more about how <a target="_blank" href="https://www.nvidia.com/en-us/industries/energy/power-utilities/">utilities are deploying AI</a> and accelerated computing to improve operations, saving cost and energy.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Final-Edison-fireside-chat-with-Jensen-Huang.jpg"
+			type="image/jpeg"
+			width="1461"
+			height="779"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Final-Edison-fireside-chat-with-Jensen-Huang-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Light Bulb Moment: NVIDIA CEO Sees Bright Future for AI-Powered Electric Grid]]></media:title>
+			<media:description type="html">Jensen Huang in fireside chat at the Edison Electric Institute</media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Seamless in Seattle: NVIDIA Research Showcases Advancements in Visual Generative AI at CVPR</title>
 		<link>https://blogs.nvidia.com/blog/visual-generative-ai-cvpr-research/</link>
 		
@@ -512,6 +576,7 @@
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Accelerated computing is transforming data processing and analytics for enterprises, declared NVIDIA founder and CEO Jensen Huang Wednesday during an on-stage chat with Databricks cofounder and CEO Ali Ghodsi at the <a target="_blank" href="https://www.databricks.com/dataaisummit">Databricks Data + AI Summit 2024</a>.</p>
 <p>&#8220;Every company’s business data is their gold mine,” Huang said, explaining that every company has enormous amounts of data, but extracting insights and distilling intelligence from it has been challenging.</p>
+<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/SAsoWmMhX3Q?si=XL2clmsl3yIimqzn" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 <h2>Databricks Leverages NVIDIA’s Full Stack to Accelerate Generative AI Applications</h2>
 <p>To unlock all that intelligence, Huang and Ghodsi announced the integration of <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">NVIDIA’s accelerated computing</a> with Databricks Photon, Databricks’ engine for fast data processing, designed to power Databricks SQL with top-tier performance and cost efficiency.</p>
 <p>“This is a big announcement,” Huang said, adding that accelerated computing and generative AI are the two most important technological trends today. “NVIDIA and Databricks are going to partner to combine our skills in these areas and bring them to all of you.”</p>
@@ -534,6 +599,7 @@
 <li>“Architecture Analysis for ETL Processing: CPU vs. GPU” at 4:30 p.m. PT;</li>
 <li>“Spark RAPIDS ML: GPU Accelerated Distributed ML in Spark Clusters” at 1:30 p.m. PT</li>
 </ul>
+<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/SAsoWmMhX3Q?si=XL2clmsl3yIimqzn" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 ]]></content:encoded>
 					
 		
@@ -1158,58 +1224,6 @@
 			/>
 			<media:title type="html"><![CDATA[NVIDIA and Cisco Weave Fabric for Generative AI]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>‘Create a Data Flywheel With AI,’ NVIDIA CEO Jensen Huang Tells Attendees at Snowflake Summit</title>
-		<link>https://blogs.nvidia.com/blog/snowflake-summit-2024/</link>
-		
-		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
-		<pubDate>Tue, 04 Jun 2024 01:10:03 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artficial Intelligence]]></category>
-		<category><![CDATA[Conversational AI]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[Inference]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[New GPU Uses]]></category>
-		<category><![CDATA[NVIDIA Hopper Architecture]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=71833</guid>
-
-					<description><![CDATA[AI gives every company an opportunity to turn its processes into a data flywheel, NVIDIA founder and CEO Jensen Huang told thousands of attendees Monday at the Snowflake Data Cloud Summit. Companies need to “take all the most important processes they do, capture them in a data flywheel and turn that into the company’s AI	<a class="read-more" href="https://blogs.nvidia.com/blog/snowflake-summit-2024/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>AI gives every company an opportunity to turn its processes into a data flywheel, NVIDIA founder and CEO Jensen Huang told thousands of attendees Monday at the <a target="_blank" href="https://www.snowflake.com/summit/">Snowflake Data Cloud Summit</a>.</p>
-<p>Companies need to “take all the most important processes they do, capture them in a data flywheel and turn that into the company’s AI to drive that flywheel even further,” said Huang, joining from Taipei a virtual fireside chat with Snowflake CEO Sridhar Ramaswamy in San Francisco.</p>
-<p>The two executives described how the combination of the Snowflake AI Data Cloud and NVIDIA AI will simplify and accelerate enterprise AI.</p>
-<p>“You want to jump on this train as fast as you can. Don’t let it fly by because you can use it to transform your business or go into new businesses,” said Huang, the day after he gave <a href="https://blogs.nvidia.com/blog/computex-2024-jensen-huang/">a keynote</a> kicking off COMPUTEX in Taiwan.</p>
-<h2>Snowflake Users Can Tap Into NVIDIA AI Enterprise</h2>
-<p>For example, businesses will be able to deploy Snowflake Arctic, an enterprise-focused large language model (<a target="_blank" href="https://www.nvidia.com/en-us/glossary/large-language-models/">LLM</a>), in seconds using <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> inference microservices, part of the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform. <b></b></p>
-<p>Arctic was trained on <a target="_blank" href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> and is available on the <a target="_blank" href="http://ai.nvidia.com/">NVIDIA API catalog</a>, fully supported by <a target="_blank" href="https://developer.nvidia.com/blog/nvidia-tensorrt-llm-supercharges-large-language-model-inference-on-nvidia-h100-gpus/">NVIDIA TensorRT-LLM</a>, software that accelerates generative AI inference.<b></b></p>
-<p>The two companies also will integrate <a target="_blank" href="https://www.snowflake.com/en/data-cloud/cortex/">Snowflake Cortex AI</a> and <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo Retriever</a>, so businesses can link their AI-powered applications to information sources, ensuring highly accurate results with retrieval-augmented generation (<a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">RAG</a>).<b></b></p>
-<p>Ramaswamy gave examples of generative AI applications developed with the <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> framework and <a target="_blank" href="https://www.snowflake.com/blog/snowpark-container-services-deploy-genai-full-stack-apps/">Snowpark Container Services</a> that will be available on <a target="_blank" href="https://www.snowflake.com/en/data-cloud/marketplace/">Snowflake Marketplace</a> for use by thousands of Snowflake customers.</p>
-<p>“NVIDIA’s industry-leading accelerated computing is game changing for our customers and our own research team that used it to create the state-of-the-art Artic model for our customers,” said Ramaswamy.</p>
-<p>To learn more, watch NVIDIA GTC on-demand sessions presented by Snowflake on <a target="_blank" href="https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=https%3A%2F%2Fwww.nvidia.com%2Fgtc%2Fsession-catalog%2F%3Ftab.allsessions%3D1700692987788001F1cG%26search%3Dsnowflake%23%2Fsession%2F1702422863196001fBxI&amp;esheet=53911634&amp;newsitemid=20240318504019&amp;lan=en-US&amp;anchor=how+to+build+chatbots+with+a+RAG+architecture&amp;index=9&amp;md5=27b303967b1c71903d72d2bf0c49a75b&amp;_fsi=kByWGLbM">how to build chatbots with a RAG architecture</a> and <a target="_blank" href="https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=https%3A%2F%2Fwww.nvidia.com%2Fgtc%2Fsession-catalog%2F%3Ftab.allsessions%3D1700692987788001F1cG%26search%3Dsnowflake%23%2Fsession%2F1702414327834001cExw&amp;esheet=53911634&amp;newsitemid=20240318504019&amp;lan=en-US&amp;anchor=how+to+leverage+LLMs+for+life+sciences&amp;index=10&amp;md5=b66c9d7183682ef8666f8ca5e3c3a975">how to leverage LLMs for life sciences</a>.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Jensen-at-Snowflake-Summit-2024.jpg"
-			type="image/jpeg"
-			width="1139"
-			height="603"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Jensen-at-Snowflake-Summit-2024-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[‘Create a Data Flywheel With AI,’ NVIDIA CEO Jensen Huang Tells Attendees at Snowflake Summit]]></media:title>
-			<media:description type="html">Jensen Huang at Snowflake Summit 2024</media:description>
 			</media:content>
 			</item>
 	</channel>
