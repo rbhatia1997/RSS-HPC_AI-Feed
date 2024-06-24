@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 20 Jun 2024 16:32:37 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 24 Jun 2024 12:35:25 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,100 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>A library of HPC Applications Best Practices on AWS</title>
+		<link>https://aws.amazon.com/blogs/hpc/a-library-of-hpc-applications-best-practices-on-aws/</link>
+		
+		<dc:creator><![CDATA[Nicola Venuti]]></dc:creator>
+		<pubDate>Mon, 24 Jun 2024 12:35:25 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[FEA]]></category>
+		<category><![CDATA[Finite Element Analysis]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">8da82d09564c8acf86902c1e2a56895df6c02376</guid>
+
+					<description>Want insights on running HPC codes efficiently on AWS? Our HPC specialists compiled their know-how into a new public GitHub repo. Get best practices, templates, scripts and more to optimize your workloads.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3836" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/HPC-Applications-Best-Practices-on-AWS-1.png" alt="" width="380" height="213"&gt;Being an HPC specialist in AWS comes with some critical responsibilities. Key among them is to help customers run their applications as fast as possible, but also in the most cost efficient way, too. We aim to help customers find the most appropriate services for every workload with optimal drivers, settings, and options to get great outcomes.&lt;/p&gt; 
+&lt;p&gt;But the number of HPC related services – and their capabilities sometimes grows fast enough that it’s not easy for you to ensure you’re using AWS effectively.&lt;/p&gt; 
+&lt;p&gt;So today we’re announcing a resource containing the best practices from our HPC Specialist Solution Architect (SSA) community to help you get the most from running your workloads on AWS. We’re hosting these in a &lt;a href="https://github.com/aws-samples/hpc-applications"&gt;GitHub repository&lt;/a&gt; that is publicly available starting today. In addition to Application Best Practices, this repo also contains CloudFormation Templates to create clusters, and launch scripts (with some benchmark results) for selected applications.&lt;/p&gt; 
+&lt;p&gt;We expect to be regularly updating and expanding the list of HPC applications included in the repo, based on your feedback, and participation form our teams. You can propose new applications that would benefit from being included using &lt;a href="https://github.com/aws-samples/hpc-applications/issues"&gt;GitHub Issues&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Background&lt;/h2&gt; 
+&lt;p&gt;Today AWS has more than &lt;a href="https://aws.amazon.com/ec2/"&gt;750 different instance types&lt;/a&gt;, but only some of these are helpful for HPC applications. Even if you just include the &lt;a href="https://www.youtube.com/watch?v=i2T7Hi2Yjoc"&gt;HPC-specific instances&lt;/a&gt;, and the &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html#efa-instance-types"&gt;instance types that support EFA&lt;/a&gt; (the Elastic Fabric Adapter), there’s more than a hundred options.&lt;/p&gt; 
+&lt;p&gt;Customers often benchmark their HPC applications on AWS to understand which of these instance types is best for their code, and to ensure that the way the application is installed and run is aligned with their business needs (e.g., runs as fast as possible, lowest price, and so forth).&lt;/p&gt; 
+&lt;p&gt;Sometimes customers wonder whether they are running a specific application ‘properly’ – are they achieving the best performance?&lt;/p&gt; 
+&lt;p&gt;Sometimes it’s more than idle interest – customers often request benchmarks as part of formal procurement exercises, or before they start a &lt;em&gt;Proof of Concept&lt;/em&gt; (PoC) – with help from our teams.&lt;/p&gt; 
+&lt;p&gt;Running HPC application benchmarks properly – and at scale – is a complex task. It requires preparation, experience, and strong domain knowledge. It’s more complex if you have to leave your comfort-zone and run applications in a new, possibly &lt;em&gt;unknown&lt;/em&gt; environment, too, because this might call for a deep understanding of how the new infrastructure works.&lt;/p&gt; 
+&lt;p&gt;This is why we’ve created the resource we’re launching today. It’s maintained by AWS HPC Specialists Solution Architects, who will take care of updating and improving it as our services evolve, new application versions are released, or more optimal ways are found for running applications.&lt;/p&gt; 
+&lt;p&gt;We’re starting with the most common applications for the computer-aided engineering (CAE) community. These are the codes most requested by our customers.&lt;/p&gt; 
+&lt;h2&gt;Our goals for HPC Applications Best Practices on AWS&lt;/h2&gt; 
+&lt;p&gt;Here’s what we’re aiming to accomplish with this initiative:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Make sure our customers can achieve the best price/performance using our infrastructure and services for their HPC Applications&lt;/li&gt; 
+ &lt;li&gt;Ensure you have references (like time to completion) and datapoints (benchmark metrics) for running these applications using public datasets.&lt;/li&gt; 
+ &lt;li&gt;Share general guidance, settings, and tips that can be applicable to other applications, too.&lt;/li&gt; 
+ &lt;li&gt;Lowering the level of cloud expertise needed to run these workloads in the cloud.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;While the repo isn’t a supported product or service, we’re aiming to give you access to our best thinking – and our experience – on the topics it covers.&lt;/p&gt; 
+&lt;h2&gt;Let’s tour the GitHub repo&lt;/h2&gt; 
+&lt;p&gt;At launch, we’ve structured the repo as follows:&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;/apps&lt;/code&gt; contains a folder for the best practices for each of the included applications. Within this folder you’ll find:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;an &lt;strong&gt;example launch script&lt;/strong&gt;, in some cases multiple ones to cover different architectures (x86 vs GPUs vs Graviton), or different application versions (in case they require different settings in the launch script). The example launch scripts are working examples, that can be executed with minor changes, but we also know every end-user has their own peculiarities and might want to run a given application in a custom way. In this case we’d recommend starting from the working example launch script provided and adapt it to your specific needs.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;short documentation&lt;/strong&gt; about the best practice (README.md file + a few assets). It typically comprises of an introduction, tips and tricks, a deep dive into the architectural choices and the most important application and environment settings aiming at tuning the performance, and finally the benchmark results shared with one or more charts.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;&lt;code&gt;/docs&lt;/code&gt; contains documentation, images, and charts. This doesn’t replace our official application, but complements them with explanations about architectural choices and details about specific applications and environment settings we’ve used.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;/ParallelCluster&lt;/code&gt; contains simple example config files for building an HPC cluster &lt;a href="https://aws.amazon.com/it/hpc/parallelcluster/"&gt;using AWS ParallelCluster&lt;/a&gt;. As we release new services or features for managing HPC resources, we’ll also update this section, accordingly. We’ve included some automated &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/cloudformation-v3.html"&gt;CloudFormation-based&lt;/a&gt; procedures to deploy a basic cluster (using ParallelCluster) in selected AWS Regions. This structure will change over time as our capabilities grow, and as we gather new material.&lt;/p&gt; 
+&lt;p&gt;Each application included in the repository will be supported by slightly different sets of assets (for example, launch scripts, documentation, performance charts). But there’s a minimum set you’ll see for every included application.&lt;/p&gt; 
+&lt;p&gt;Beginning with the &lt;code&gt;/apps&lt;/code&gt; folder, you’ll find the list of Best Practices available in the repo.&lt;/p&gt; 
+&lt;div id="attachment_3827" style="width: 953px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3827" loading="lazy" class="size-full wp-image-3827" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-15.52.33.png" alt="Figure 1. The list of available best practices you can find in the GitHub repository under /apps/" width="943" height="559"&gt;
+ &lt;p id="caption-attachment-3827" class="wp-caption-text"&gt;Figure 1. The list of available best practices you can find in the GitHub repository under /apps/&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Inside any application directory, you’ll find one or more launch scripts that you can use as-is – or customize based on your needs. In some cases, the launch scripts are in sub-directories, broken down by CPU or GPU architectures.&lt;/p&gt; 
+&lt;div id="attachment_3828" style="width: 929px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3828" loading="lazy" class="size-full wp-image-3828" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-15.53.00.png" alt="Figure 2. Shows a typical example of the assets you can expect to find for an application." width="919" height="849"&gt;
+ &lt;p id="caption-attachment-3828" class="wp-caption-text"&gt;Figure 2. Shows a typical example of the assets you can expect to find for an application.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Simple documentation, typically in a Readme.md file (or additional documents linked to it).&lt;/p&gt; 
+&lt;div id="attachment_3829" style="width: 937px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3829" loading="lazy" class="size-full wp-image-3829" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-15.53.43.png" alt="Figure 3. An example of the documentation available." width="927" height="788"&gt;
+ &lt;p id="caption-attachment-3829" class="wp-caption-text"&gt;Figure 3. An example of the documentation available.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The documentation is not meant to be exhaustive – it focuses on what is relevant for running the application in the most optimal way on AWS. For general purpose application documentation (like end-user or admin guides), refer to the official guides that come with the app itself.&lt;/p&gt; 
+&lt;p&gt;Typically, the documentation in the repo will include the list of versions and architectures we’ve tested, application installation tips, general tips, and key settings relevant for tuning the performance, and some performance-related information with charts and metrics for the most relevant Instance types.&lt;/p&gt; 
+&lt;div id="attachment_3830" style="width: 680px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3830" loading="lazy" class="size-full wp-image-3830" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-15.54.43.png" alt="Figure 4. An example of the performance charts we will provide." width="670" height="845"&gt;
+ &lt;p id="caption-attachment-3830" class="wp-caption-text"&gt;Figure 4. An example of the performance charts we will provide.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;How to use these best practices&lt;/h2&gt; 
+&lt;p&gt;If you already have a cluster up and running, you can try these best practices by cloning this repository:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;git clone https://github.com/aws-samples/hpc-applications.git &lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;In case you don’t have an existing HPC Cluster, or if you want to deploy a new one for the scope of these tests, then you can follow &lt;a href="https://github.com/aws-samples/hpc-applications/blob/main/ParallelCluster/README.md"&gt;the guide to launch a new ParallelCluster&lt;/a&gt;. We’ve included a few simple CloudFormation templates that help you to create a new test HPC cluster with just a few clicks. If you want to assemble a more complex environment for testing, using modular templates designed to work together, check out the HPC Recipes Library, which is also available &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/"&gt;as a GitHub repo&lt;/a&gt; (and is well explained in our &lt;a href="https://hpc.news/recipes"&gt;blog post&lt;/a&gt; when we announced it).&lt;/p&gt; 
+&lt;p&gt;To deploy one of the one-click stacks, select your preferred AWS Region among the ones shown in the table, and click the appropriate launch button. You’ll be asked a few questions about networking and storage. If you don’t know how to answer these, just leave the default values: AUTO. The one-click deployment procedure will take care of creating everything needed for your HPC Cluster to run properly.&lt;/p&gt; 
+&lt;div id="attachment_3831" style="width: 459px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3831" loading="lazy" class="size-full wp-image-3831" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-15.55.37.png" alt="Figure 5. the links to the 1-Click CloudFormation templates." width="449" height="409"&gt;
+ &lt;p id="caption-attachment-3831" class="wp-caption-text"&gt;Figure 5. the links to the 1-Click CloudFormation templates.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;After the CloudFormation stack is deployed, you can go to the &lt;strong&gt;Output&lt;/strong&gt; tab in the CloudFormation console and click on the &lt;strong&gt;SystemManagerUrl&lt;/strong&gt; link. This will let you securely access the head node using AWS Systems Manager (SSM), without needing a password or certificate. You’ll find a clone of the GitHub HPC Applications Best Practices repo under &lt;code&gt;/fsx&lt;/code&gt; on the cluster.&lt;/p&gt; 
+&lt;div id="attachment_3832" style="width: 922px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3832" loading="lazy" class="size-full wp-image-3832" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-15.56.42.png" alt="Figure 6. The Outputs tab in the CloudFormation console shows a link to securely connect to the cluster through AWS Systems Manager (SSM), without needing a password or certificate." width="912" height="305"&gt;
+ &lt;p id="caption-attachment-3832" class="wp-caption-text"&gt;Figure 6. The Outputs tab in the CloudFormation console shows a link to securely connect to the cluster through AWS Systems Manager (SSM), without needing a password or certificate.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Fine tuning your HPC applications to run well on any cluster is a complex task. We aim to keep this repository up-to-date with future versions of common applications and AWS services to provide you with the best experience possible with the fewest steps.&lt;/p&gt; 
+&lt;p&gt;We’d love to receive your feedback (using &lt;a href="https://github.com/aws-samples/hpc-applications/issues"&gt;GitHub Issues&lt;/a&gt;) to let us know if this is useful for you, or if you need something else to support your business.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Job queue snapshots: see what’s at the head of your queues in AWS Batch</title>
 		<link>https://aws.amazon.com/blogs/hpc/job-queue-snapshots-see-whats-at-the-head-of-your-queues-in-aws-batch/</link>
 		
@@ -30,7 +124,7 @@
 		<guid isPermaLink="false">f22c191e048a0cdce1210fc4a7b44187ffd3d053</guid>
 
 					<description>AWS Batch just grew a neat new feature: Job queue snapshots. This gives you the visibility you need for managing throughput in a dynamic environment - with competing priorities - and across multiple queues and workloads. Today we give you the inside scoop on how this feature works - especially when you’re using fair share scheduling.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="size-full wp-image-3893 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/20/boofla88_Rows_of_mice_wearing_lab_coats_lined_up_in_orderly_que_05a3c6ff-1f52-4929-b5a0-d81619ecacd2.png" alt="Job queue snapshots: see what’s at the head of your queues in AWS Batch" width="380" height="212"&gt;In 2021, AWS Batch introduced &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/job_scheduling.html"&gt;fair share job queues&lt;/a&gt; which allowed customers to create &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/scheduling-policies.html"&gt;scheduling policies&lt;/a&gt; for a job queue so you can control how to split resources and prioritize jobs &lt;em&gt;that belong to different workloads&lt;/em&gt; (differentiated by their jobs having different &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/scheduling-policy-parameters.html"&gt;share identifiers&lt;/a&gt;). Before this, all Batch job queues acted as independent first-in-first-out (FIFO) queues. That meant if you had multiple groups or workloads in the same AWS account, you needed separate job queues (JQs) and compute environments (CEs) for each business need.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-3893 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/20/boofla88_Rows_of_mice_wearing_lab_coats_lined_up_in_orderly_que_05a3c6ff-1f52-4929-b5a0-d81619ecacd2.png" alt="Job queue snapshots: see what’s at the head of your queues in AWS Batch" width="380" height="212"&gt;In 2021, AWS Batch introduced &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/job_scheduling.html"&gt;fair share job queues&lt;/a&gt; which allowed customers to create &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/scheduling-policies.html"&gt;scheduling policies&lt;/a&gt; for a job queue so you can control how to split resources and prioritize jobs &lt;em&gt;that belong to different workloads&lt;/em&gt; (differentiated by their jobs having different &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/scheduling-policy-parameters.html"&gt;share identifiers&lt;/a&gt;). Before this, all Batch job queues acted as independent first-in-first-out (FIFO) queues. That meant if you had multiple groups or workloads in the same AWS account, you needed separate job queues (JQs) and compute environments (CEs) for each business need.&lt;/p&gt; 
 &lt;p&gt;This in turn meant you needed to manage the distribution of the underlying compute resource across all these CEs. By introducing Fair Share Scheduling (FSS), customers like Amazon Search could consolidate their environments, which reduced their operational overhead, drove up their fleet utilization – and greatly improved their throughput.&lt;/p&gt; 
 &lt;p&gt;But moving away from FIFO queues introduced a different challenge — how to reliably tell what was going to run next across the set of possible jobs at the head of the queue across different share identifiers.&lt;/p&gt; 
 &lt;p&gt;Today we’ll explain a recent addition to AWS Batch that we think will address this: Job queue snapshots. This is a new API &lt;a href="https://aws.amazon.com/about-aws/whats-new/2024/06/aws-batch-job-queue-snapshot-jobs-front-job-queues/"&gt;we launched a few weeks ago&lt;/a&gt; to query the jobs that are at the head of the job queue. We’ll work through the details and give you an practical example of how to use this new information.&lt;/p&gt; 
@@ -2280,84 +2374,6 @@ process MY_PROCESS {
 &lt;p&gt;In this post, we showed how to perform a sensitivity analysis using a Digital Twin to identify the minimum set of sensors and sensor locations while maintaining effective monitoring of our roll-to-roll manufacturing process. MapleSim provides the physics-based model in the form of an FMU and TwinFlow allows us to run scalable number of scenarios on AWS, providing efficient and elastic computing resources.&lt;/p&gt; 
 &lt;p&gt;In this Digital Twin example, the utility of a physics-based digital twin shows how we can quickly obtain actionable insights that directly impact business metrics. Digital twins are extremely versatile and can be leveraged at all phases of product development, from inception, implementation, to monitoring.&lt;/p&gt; 
 &lt;p&gt;If you want to request a proof of concept or if you have feedback on the AWS tools, please reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Renewable energy transition: examining the impacts of wind energy through simulation</title>
-		<link>https://aws.amazon.com/blogs/hpc/renewable-energy-transition-examining-the-impacts-of-wind-energy-through-simulation/</link>
-		
-		<dc:creator><![CDATA[Remco Verzijlbergh]]></dc:creator>
-		<pubDate>Tue, 26 Mar 2024 13:21:20 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Amazon FSx for Lustre]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[Sustainability]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">812815631cfcc972ff806cbc6735cc3480bc8fc4</guid>
-
-					<description>As we move towards a greener future, understanding wind energy's climate impacts is key. Check out this blog post by our friends at Whiffle, to learn how large-scale simulations reveal wind power's effect on our atmosphere.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3403" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/06/Renewable-energy-transition-examining-the-impacts-of-wind-energy-through-simulation-mini.png" alt="Renewable energy transition: examining the impacts of wind energy through simulation" width="380" height="212"&gt;This post was contributed by&lt;/em&gt;&lt;em&gt; Remco&amp;nbsp;Verzijlbergh, co-founder and CEO, Peter Baas, &lt;/em&gt;&lt;em&gt;R&amp;amp;D Specialist &lt;/em&gt;&lt;em&gt;at&amp;nbsp;Whiffle, and Ilan Gleiser &lt;/em&gt;&lt;em&gt;Principal ML Specialist, &lt;/em&gt;&lt;em&gt;Milo Oostergo, Principal Startup SA, and Ross Pivovar Senior SA, Simulations at AWS&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;The world is currently facing a crucial turning point in the fight against climate change, and renewable energy sources like wind energy are playing a major role. As we continue to move towards a more sustainable future, it is important to understand the impacts of the anticipated large-scale roll-out of wind energy. This is where atmospheric model simulation comes into play.&lt;/p&gt; 
-&lt;p&gt;By performing large scale simulations on HPC clusters in the cloud, built using &amp;nbsp;Amazon EC2 P4d instances and powered by Nvidia A100 GPUs, we can get a better understanding of how wind energy affects our atmosphere and the environment as a whole.&lt;/p&gt; 
-&lt;p&gt;In this blog post, we’ll delve into the realm of simulations and explore the impact of wind energy on our planet.&lt;/p&gt; 
-&lt;h2&gt;The Rising Power of Wind Energy&lt;/h2&gt; 
-&lt;p&gt;In the quest for a sustainable future, wind energy has emerged as a powerful player in the fight against climate change. The rising power of wind energy has captured the attention of scientists, policymakers, and the general public alike. It has quickly become a driving force in the transition towards renewable sources of energy, and for good reason.&lt;/p&gt; 
-&lt;p&gt;Harnessing the power of wind is not a new concept. Humans have been utilizing wind energy for centuries, from simple windmills for grinding grains to more advanced wind turbines that generate electricity. However, it is only in recent decades that wind energy has gained significant momentum as a viable alternative to fossil fuels.&lt;/p&gt; 
-&lt;p&gt;One of the main reasons for the increasing popularity of wind energy is its environmental benefits. Unlike traditional energy sources such as coal or natural gas, wind energy does not produce harmful emissions or contribute to air pollution. This is a crucial advantage in the battle against climate change, as reducing greenhouse gas emissions is essential to mitigating its impact.&lt;/p&gt; 
-&lt;p&gt;Furthermore, wind energy is a renewable resource, meaning that it will never run out. As long as the wind keeps blowing, we can continue to harness its power. This is in stark contrast to fossil fuels, which are finite resources that will eventually be depleted.&lt;/p&gt; 
-&lt;p&gt;Another key factor driving the rise of wind energy is its economic potential. As technology has advanced, the cost of producing wind energy has steadily decreased. In fact, wind energy is now one of the cheapest sources of electricity in many parts of the world. This affordability, coupled with the growing demand for clean energy, has led to a boom in wind energy installations globally.&lt;/p&gt; 
-&lt;p&gt;In addition to its environmental and economic benefits, wind energy also has the potential to enhance energy security. Unlike fossil fuels, which are often imported from other countries, wind energy can be produced locally. This reduces dependence on foreign sources of energy and strengthens national energy independence.&lt;/p&gt; 
-&lt;p&gt;The increasing power of wind energy is evident in the rapid growth of wind farms around the world. These vast fields of turbines are capable of generating large amounts of electricity, powering homes, businesses, and even entire cities. As technology continues to advance, wind turbines are becoming more efficient and capable of harnessing even more energy from the wind.&lt;/p&gt; 
-&lt;p&gt;Harnessing wind energy has significant positive effects on the atmosphere. By replacing traditional energy sources with wind energy, we can reduce greenhouse gas emissions and combat climate change. Wind energy does not release carbon dioxide or other pollutants that contribute to air pollution and global warming.&lt;/p&gt; 
-&lt;p&gt;Moreover, wind energy can contribute to improved air quality. By reducing reliance on fossil fuels, which emit harmful pollutants such as sulfur dioxide and nitrogen oxide, wind energy helps to alleviate respiratory issues and promote healthier living conditions.&lt;/p&gt; 
-&lt;h2&gt;Unraveling the Data: Using Simulations to Predict Future Scenarios&lt;/h2&gt; 
-&lt;p&gt;As we strive for a greener future, simulations play a vital role in understanding the impacts of wind energy on our planet. Using superior computing power to solve the complexities of the weather with unparalleled accuracy, we can unravel the data and predict future scenarios. By simulating large-scale wind farms and analyzing the interaction with the atmosphere, we can gain valuable insights into the sustainability and environmental effects of renewable energy. These simulations offer a powerful tool for decision-making and policy development, ensuring a more informed and efficient transition to a sustainable energy future.&lt;/p&gt; 
-&lt;h2&gt;Who is Whiffle?&lt;/h2&gt; 
-&lt;p&gt;Whiffle services are designed to empower renewable energy industries and optimize operations by providing accurate meteorological forecasts, precise wind and solar power production forecasts, comprehensive wind resource modelling and detailed energy yield assessments. They are the driving force behind the revolutionary &lt;a href="https://whiffle.nl/solutions/whiffle-wind/"&gt;Whiffle Wind web app&lt;/a&gt;, which is significant in renewable energy development. With their cutting-edge Large-Eddy Simulation (LES)-powered weather Computational Fluid Dynamics (CFD) modelling technology, Whiffle is helping to pave the way for a greener and more sustainable future.&lt;/p&gt; 
-&lt;p&gt;What sets Whiffle Wind apart is its &lt;a href="https://whiffle.nl/solutions/whiffle-wind/"&gt;user-friendly interface&lt;/a&gt;, in contrast to traditional weather-modeling software which is often complicated and cumbersome. Whiffle Wind makes it easier to access and interpret the data with relative ease, making it a valuable tool for professionals and enthusiasts alike.&lt;/p&gt; 
-&lt;p&gt;Whiffle’s ultra-high resolution atmospheric model is also important to renewable energy development and operations. While traditional weather models work with grid blocks of 10 by 10 kilometers, Whiffle works on a resolution of 100 x 100 meters – a hundred times more information density on all weather-defining factors. With its hyper-local forecasts and simulations, Whiffle can help businesses plan for adverse weather events, ensuring the safety and efficiency of renewable energy operations.&lt;/p&gt; 
-&lt;p&gt;Whiffle’s stack can also deliver highly accurate predictions, allowing businesses to optimize their operational performance. Whiffle’s model includes elements like buildings and trees. High-resolution digital terrain models are used to allow for detailed simulation in complex terrain. Users can upload wind turbines at any desired location to assess their energy production. As a full-blown weather model, Whiffle’s LES also calculates cloud coverage, which allows for detailed solar radiation predictions. &amp;nbsp;This means that whether you need to consider wind farms or solar installations, Whiffle can help you to get the insights you need for making informed decisions.&lt;/p&gt; 
-&lt;p&gt;Core to Whiffle’s technology is &lt;strong&gt;Large-Eddy Simulation&lt;/strong&gt; (LES). This advanced approach to weather modelling follows the laws of atmospheric physics very closely, allowing for detailed simulations of turbulent atmospheric flows. By capturing the small-scale processes that traditional numerical weather prediction models miss, Whiffle can provide a more comprehensive understanding of weather conditions.&lt;/p&gt; 
-&lt;div id="attachment_3399" style="width: 703px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3399" loading="lazy" class="size-full wp-image-3399" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/06/CleanShot-2024-03-06-at-13.57.44.png" alt="Fig 1. Achieve accuracy tailored to your specific site requirements, irrespective of terrain complexity, location or the intricacies of wind turbine clusters." width="693" height="749"&gt;
- &lt;p id="caption-attachment-3399" class="wp-caption-text"&gt;Fig 1. Achieve accuracy tailored to your specific site requirements, irrespective of terrain complexity, location or the intricacies of wind turbine clusters.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Delving into large-scale wind farms: impact and sustainability&lt;/h2&gt; 
-&lt;p&gt;As the renewable energy transition gains momentum, the installation of large-scale wind farms is becoming increasingly common. For example, the installed capacity of offshore wind energy in the Dutch part of the North Sea is expected to grow dramatically in the next few decades. Several research institutes and the Dutch government are examining scenarios with up to 100 GW (around 5,000 to 10,000 large wind turbines) of offshore wind in 2050. For comparison: the currently installed capacity is around 5 GW, so this means a 20-fold increase.&lt;/p&gt; 
-&lt;p&gt;However, the impact of such a large-scale roll-out of wind energy on the atmosphere and vice versa is highly uncertain. Understanding these interactions is crucial for the wind energy sector and policy makers as they strive to develop sustainable and environmentally friendly solutions.&lt;/p&gt; 
-&lt;p&gt;This is where the &lt;a href="https://wins50.nl/"&gt;WINS50&lt;/a&gt; project comes into play. The project, carried out by Whiffle,&amp;nbsp;&lt;a href="https://wins50.nl/projectpartners"&gt;TU Delft&lt;/a&gt;&amp;nbsp;and&amp;nbsp;&lt;a href="https://wins50.nl/projectpartners"&gt;KNMI, &lt;/a&gt;aims to reduce uncertainties surrounding the interaction between a large-scale roll-out of offshore wind energy and the atmosphere. To achieve this, the project uses Whiffle’s high-resolution turbine-resolving weather model, GRASP. With this advanced model, researchers from Whiffle are simulating the entire Dutch North Sea with the currently-installed wind power capacity &lt;em&gt;and&lt;/em&gt; with the projected 2050 capacity. The data they produce will be made available to the wind energy sector and will be used for in-depth studies.&lt;/p&gt; 
-&lt;p&gt;Within the WINS50 project, a multi-GPU LES model has been developed to enable computational domains of hundreds by hundreds of kilometers. This model will provide even more detailed and accurate information about the atmospheric interactions of large-scale wind farms, helping to inform future decision-making and policy development.&lt;/p&gt; 
-&lt;p&gt;With the combination of advanced simulation models and the collaboration between research institutes and the wind energy sector, we can gain a deeper understanding of the impact and sustainability of large-scale wind farms. By reducing uncertainties and improving our knowledge, we can continue to drive the renewable energy transition forward and create a greener and more sustainable future for all.&lt;/p&gt; 
-&lt;h2&gt;Reference Architecture&lt;/h2&gt; 
-&lt;div id="attachment_3400" style="width: 914px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3400" loading="lazy" class="size-full wp-image-3400" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/03/06/CleanShot-2024-03-06-at-13.58.30.png" alt=" Fig 2. AWS High Performance Compute reference architecture comprised of multi GPU AWS Parallel Cluster open-source tool that builds a complete HPC environment with all the benefits of the cloud built-in." width="904" height="412"&gt;
- &lt;p id="caption-attachment-3400" class="wp-caption-text"&gt;&lt;br&gt;Fig 2. AWS High Performance Compute reference architecture comprised of multi GPU AWS Parallel Cluster open-source tool that builds a complete HPC environment with all the benefits of the cloud built-in.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;To run the simulations, Whiffle used&amp;nbsp;&lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt;&amp;nbsp;– a fully-supported open-source tool that builds a complete HPC environment with all the benefits of the cloud built-in. That includes the elasticity to scale horizontally (and contract) based on need, instant access to the latest technologies (CPUs, GPUs, and accelerators), and the flexibility to iterate resource selection in minutes to optimize costs or squeeze out better performance.&lt;/p&gt; 
-&lt;p&gt;For the cluster configuration, Whiffle used a single queue with four&lt;a href="https://aws.amazon.com/ec2/instance-types/p4/"&gt; P4d&lt;/a&gt; instances that are each powered by eight GPUs. The NVSwitch GPU interconnect enables each GPU to communicate with every other GPU in the same instance with 600 GB/s bidirectional throughput and single-hop latency.&lt;/p&gt; 
-&lt;p&gt;Whiffle’s testing showed that the LES model scaled extremely well when run with 8 GPUs in parallel. It supports their philosophy of keeping the model architecture as simple as possible so they can quickly adopt advances in computing and cloud infrastructures. As the performance of parallel GPU compute resources grow, we can all start planning for continental or global scale weather forecasting on a 100m resolution in the future.&lt;/p&gt; 
-&lt;p&gt;The data set and simulation results are stored on &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; which is mounted on the head node and compute nodes, and provides sub-millisecond latencies, high throughput, and millions of IOPS.&lt;/p&gt; 
-&lt;p&gt;The final results from the simulation are stored in &lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Service&lt;/a&gt; (Amazon S3) after post-processing.&lt;/p&gt; 
-&lt;h2&gt;The dataset&lt;/h2&gt; 
-&lt;p&gt;The dataset is the result from the WINS50 LES described above and it’s &lt;a href="https://registry.opendata.aws/whiffle-wins50/"&gt;available in the Registry of Open Data on AWS&lt;/a&gt;. It’s approximately 40TB in size, and consists of three types of data:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Three-dimensional meteorological data over the entire domain at an hourly resolution for selected heights above the surface. Variables included here are wind speed, wind direction, temperature, etc. In addition, surface variables such as the surface pressure of downward solar radiation are available in two-dimensional format at hourly resolution.&lt;/li&gt; 
- &lt;li&gt;For 600 locations distributed over the domain many meteorological variables are provided over the entire atmospheric column with a 10-minute resolution. Turbine data gives energy production, wind speed and thrust for all the simulated turbines, i.e. more than 10,000 for the 2050 scenario. Turbine data is available at 5-minute resolution.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;There are many possible use cases for the data, including scientific fields from the atmospheric sciences and energy system sciences, too. Within the energy sector, the data can inform grid operators, wind farm owners, developers of new wind farms and energy traders. Finally, the data can be used to train AI based models, opening more use cases where computationally-fast models are required.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;As we forge ahead in the renewable energy transition, there are bound to be both opportunities and challenges on the horizon. The growing popularity of wind energy presents a unique opportunity to transition towards a more sustainable future. By harnessing the power of the wind, we can significantly reduce our carbon footprint and combat climate change.&lt;/p&gt; 
-&lt;p&gt;Advancements in technology, like Whiffle’s simulation tools coupled with the use of HPC clusters on AWS, offer new avenues for improving the efficiency and accuracy of wind energy simulations.&lt;/p&gt; 
-&lt;p&gt;But there are challenges. Wildlife impact and visual concerns must be carefully addressed to ensure the widespread adoption of wind energy is safe and beneficial. Acknowledging these challenges and leveraging the power of simulation and HPC, we can work to achieve that.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt;</content:encoded>
 					
 		
 		
