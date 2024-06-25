@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 24 Jun 2024 16:40:05 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 24 Jun 2024 20:44:31 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -549,7 +549,10 @@
 <p dir="ltr">High-quality training data plays a critical role in the performance, accuracy and quality of responses from a custom LLM — but robust datasets can be prohibitively expensive and difficult to access.</p>
 <p dir="ltr">Through a uniquely permissive <a href="https://developer.download.nvidia.com/licenses/nvidia-open-model-license-agreement-june-2024.pdf" target="_blank" rel="noopener">open model license</a>, Nemotron-4 340B gives developers a free, scalable way to generate synthetic data that can help build powerful LLMs.</p>
 <p dir="ltr">The Nemotron-4 340B family includes base, instruct and reward models that form a pipeline to generate synthetic data used for training and refining LLMs. The models are optimized to work with <a href="https://github.com/NVIDIA/NeMo" target="_blank" rel="noopener">NVIDIA NeMo</a>, an open-source framework for end-to-end model training, including data curation, customization and evaluation. They’re also optimized for inference with the open-source <a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener">NVIDIA TensorRT-LLM</a> library.</p>
-<p dir="ltr">Nemotron-4 340B can be downloaded now from the <a target="_blank" href="https://catalog.ngc.nvidia.com/models?filters=&amp;orderBy=scoreDESC&amp;query=nemotron-4-340b">NVIDIA NGC</a> catalog and <a href="https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911" target="_blank" rel="noopener">Hugging Face</a>. Developers will soon be able to access the models at <a href="http://ai.nvidia.com/" target="_blank" rel="noopener">ai.nvidia.com</a>, where they’ll be packaged as an <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/" target="_blank" rel="noopener">NVIDIA NIM</a> microservice with a standard application programming interface that can be deployed anywhere.</p>
+<p dir="ltr">Nemotron-4 340B can be downloaded now from the <a target="_blank" href="https://catalog.ngc.nvidia.com/models?filters=&amp;orderBy=scoreDESC&amp;query=nemotron-4-340b">NVIDIA NGC</a> catalog and from <a href="https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911" target="_blank" rel="noopener">Hugging Face</a>, where developers can also use the <a title="Original URL:
+https://huggingface.co/blog/train-dgx-cloud
+
+Click to follow link." target="_blank" href="https://huggingface.co/blog/train-dgx-cloud" data-outlook-id="5193062f-d639-42ed-b23f-b53853ee7065">Train on DGX Cloud</a> service to easily fine-tune open AI models. Developers will soon be able to access the models at <a href="http://ai.nvidia.com/" target="_blank" rel="noopener">ai.nvidia.com</a>, where they’ll be packaged as an <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/" target="_blank" rel="noopener">NVIDIA NIM</a> microservice with a standard application programming interface that can be deployed anywhere.</p>
 <h2 dir="ltr">Navigating Nemotron to Generate Synthetic Data</h2>
 <p dir="ltr">LLMs can help developers generate synthetic training data in scenarios where access to large, diverse labeled datasets is limited.</p>
 <p dir="ltr">The <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/nemotron-4-340b-instruct" target="_blank" rel="noopener">Nemotron-4 340B Instruct</a> model creates diverse synthetic data that mimics the characteristics of real-world data, helping improve data quality to increase the performance and robustness of custom LLMs across various domains.</p>
@@ -566,7 +569,7 @@
 <h2 dir="ltr">Evaluating Model Security and Getting Started</h2>
 <p dir="ltr">The Nemotron-4 340B Instruct model underwent extensive safety evaluation, including adversarial tests, and performed well across a wide range of risk indicators. Users should still perform careful evaluation of the model’s outputs to ensure the synthetically generated data is suitable, safe and accurate for their use case.</p>
 <p dir="ltr">For more information on model security and safety evaluation, read the model card.</p>
-<p dir="ltr">Download Nemotron-4 340B models via <a target="_blank" href="https://catalog.ngc.nvidia.com/models?filters=&amp;orderBy=scoreDESC&amp;query=nemotron-4-340b"><span>NVIDIA NGC</span></a><span> and </span><a href="https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911" target="_blank" rel="noopener">Hugging Face</a>. For more details, read the <a target="_blank" href="https://research.nvidia.com/publication/2024-06_nemotron-4-340b">research papers on the model</a> and <a href="https://arxiv.org/abs/2406.08673" target="_blank" rel="noopener">dataset</a>.</p>
+<p dir="ltr">Download Nemotron-4 340B models via <a target="_blank" href="https://catalog.ngc.nvidia.com/models?filters=&amp;orderBy=scoreDESC&amp;query=nemotron-4-340b">NVIDIA NGC</a> and <a href="https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911" target="_blank" rel="noopener">Hugging Face</a>. For more details, read the <a target="_blank" href="https://research.nvidia.com/publication/2024-06_nemotron-4-340b">research papers on the model</a> and <a href="https://arxiv.org/abs/2406.08673" target="_blank" rel="noopener">dataset</a>.</p>
 <p><i>See </i><a href="https://www.nvidia.com/en-eu/about-nvidia/terms-of-service/" target="_blank" rel="noopener"><i>notice</i></a><i> regarding software product information.</i></p>
 ]]></content:encoded>
 					
