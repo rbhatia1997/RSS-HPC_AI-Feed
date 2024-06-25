@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 24 Jun 2024 20:44:31 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 25 Jun 2024 05:12:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,60 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.4</generator>
 	<item>
+		<title>EvolutionaryScale Debuts With ESM3 Generative AI Model for Protein Design</title>
+		<link>https://blogs.nvidia.com/blog/evolutionaryscale-esm3-generative-ai-nim-bionemo-h100/</link>
+		
+		<dc:creator><![CDATA[Anthony Costa]]></dc:creator>
+		<pubDate>Tue, 25 Jun 2024 10:00:25 +0000</pubDate>
+				<category><![CDATA[Research]]></category>
+		<category><![CDATA[BioNeMo]]></category>
+		<category><![CDATA[NVIDIA H100]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72720</guid>
+
+					<description><![CDATA[Generative AI has revolutionized software development with prompt-based code generation — protein design is next. EvolutionaryScale today announced the release of its ESM3 model, the third-generation ESM model, which simultaneously reasons over the sequence, structure and functions of proteins, giving protein discovery engineers a programmable platform. The startup, which emerged from the Meta FAIR (Fundamental	<a class="read-more" href="https://blogs.nvidia.com/blog/evolutionaryscale-esm3-generative-ai-nim-bionemo-h100/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Generative AI has revolutionized software development with prompt-based code generation — protein design is next.</p>
+<p>EvolutionaryScale today announced the release of its ESM3 model, the third-generation ESM model, which simultaneously reasons over the sequence, structure and functions of proteins, giving protein discovery engineers a programmable platform.</p>
+<p>The startup, which emerged from the Meta FAIR (Fundamental AI Research) unit, recently landed funding led by Lux Capital, Nat Friedman and Daniel Gross, with investment from NVIDIA.</p>
+<p>At the forefront of programmable biology, EvolutionaryScale can assist researchers in engineering proteins that can help target cancer cells, find alternatives to harmful plastics, drive environmental mitigations and more.</p>
+<p>EvolutionaryScale is pioneering the frontier of programmable biology with the scale-out model development of ESM3, which used <a target="_blank" href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> for the most compute ever put into a biological foundation model. The 98 billion parameter ESM3 model uses roughly 25x more flops and 60x more data than its predecessor, ESM2.</p>
+<p>The company, which developed a database of more than 2 billion protein sequences to train its AI model, offers technology that can provide clues applicable to drug development, disease eradication and, literally, how humans have evolved at scale as a species — as its name suggests — for drug discovery researchers.</p>
+<h2><b>Accelerating In Silico Biological Research With ESM3</b></h2>
+<p>With leaps in training data, EvolutionaryScale aims to accelerate protein discovery with ESM3.</p>
+<p>The model was trained on almost 2.8 billion protein sequences sampled from organisms and biomes, allowing scientists to prompt the model to identify and validate new proteins with increasing levels of accuracy.</p>
+<p>ESM3 offers significant updates over previous versions. The model is natively generative, and it is an “all to all” model, meaning structure and function annotations can be provided as input rather than just as output.</p>
+<p>Once it’s made publicly available, scientists can fine-tune this base model to construct purpose-built models based on their own proprietary data. The boost in protein engineering capabilities due to ESM3’s large-scale generative training across enormous amounts of data offers a time-traveling machine for in silico biological research.</p>
+<h2><b>Driving the Next Big Breakthroughs With NVIDIA BioNeMo</b></h2>
+<p>ESM-3 provides biologists and protein designers with a generative AI boost, helping improve their engineering and understanding of proteins. With simple prompts, it can generate new proteins with a provided scaffold, self-improve its protein design based on feedback and design proteins based on the functionality that the user indicates. These capabilities can be used in tandem in any combination to provide chain-of-thought protein design as if the user were messaging a researcher who had memorized the intricate three-dimensional meaning of every protein sequence known to humans and had learned the language fluently, enabling users to iterate back and forth.</p>
+<p>“In our internal testing we’ve been impressed by the ability of ESM3 to creatively respond to a variety of complex prompts,” said Tom Sercu, co-founder and VP of engineering at EvolutionaryScale. “It was able to solve an extremely hard protein design problem to create a novel Green Fluorescent Protein. We expect ESM3 will help scientists accelerate their work and open up new possibilities — we’re looking forward to seeing how it will contribute to future research in the life sciences.”</p>
+<p>EvolutionaryScale will be opening an API for closed beta today and code and weights are available for a small open version of ESM3 for non-commercial use. This version is coming soon to <a target="_blank" href="https://www.nvidia.com/en-us/clara/bionemo/">NVIDIA BioNeMo</a>, a generative AI platform for drug discovery. The full ESM3 family of models will soon be available to select customers as an <a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Furl.avanan.click%2Fv2%2F___https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fai%2F%2523referrer%3Dai-subdomain%3Fncid%3Dpa-srch-goog-772333%26_bt%3D697697685508%26_bk%3Dnvidia%2520nim%26_bm%3De%26_bn%3Dg%26_bg%3D165151891361%26gad_source%3D1%26gclid%3DEAIaIQobChMI5pHT7fvjhgMVVXN_AB1KOQFuEAAYASAAEgKvWfD_BwE___.YXAzOm91dGNhc3Q6YTpvOjViNjRiMzE4MDU2MWMwZDcyNThmMmI4NWZhYTViNTJiOjY6NDI2ZTphZWVjMmY1N2JjMjFiM2NhODBiNmFmMjFiZTM2YTQyZWM1NDMwZTZhODdmZTYwOWEyZGRiODc2MWJlMGY2MzUxOmg6VA&amp;data=05%7C02%7Crkelleher%40nvidia.com%7C789b16235c954beed3a908dc8ff9ab8b%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638543549716443890%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=wD96MHFHOJjySVQjvo%2FqotZ6KMUZX7Lcr%2FMHAbyGW%2FU%3D&amp;reserved=0">NVIDIA NIM</a> microservice, run-time optimized in collaboration with NVIDIA, and supported by an <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software license for testing at ai.nvidia.com.</p>
+<p>The computing power required to train these models is growing exponentially. ESM3 was trained using the <a target="_blank" href="https://andromeda.ai/">Andromeda cluster</a>, which uses NVIDIA H100 GPUs and NVIDIA Quantum-2 InfiniBand networking.</p>
+<p>The ESM3 model will be available on select partner platforms and NVIDIA BioNeMo.</p>
+<p><i>See </i><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fabout-nvidia%2Flegal-info%2F&amp;data=05%7C02%7Cscmartin%40nvidia.com%7C83515b5492594c57a3cb08dc94b213d0%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638548739762646477%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=KzQTSwL94NtcZYgStTWnnmHHHy53cbxt0r7LKK5pUdQ%3D&amp;reserved=0"><i>notice</i></a><i> regarding software product information.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/hc-corp-blog-evo-scale-1280x680-1.png"
+			type="image/png"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/hc-corp-blog-evo-scale-1280x680-1-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[EvolutionaryScale Debuts With ESM3 Generative AI Model for Protein Design]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Crack the Case With ‘Tell Me Why’ and ‘As Dusk Falls’ on GeForce NOW</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-tell-me-why-as-dusk-falls/</link>
 		
@@ -1191,65 +1245,6 @@ Click to follow link." target="_blank" href="https://huggingface.co/blog/train-d
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Creativity Accelerated: New RTX-Powered AI Hardware and Software Announced at COMPUTEX]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Yotta CEO Sunil Gupta on Supercharging India’s Fast-Growing AI Market</title>
-		<link>https://blogs.nvidia.com/blog/yotta-ceo-supercharging-indias-ai-market/</link>
-		
-		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
-		<pubDate>Wed, 05 Jun 2024 13:00:51 +0000</pubDate>
-				<category><![CDATA[The AI Podcast]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72028</guid>
-
-					<description><![CDATA[India’s AI market is expected to be massive. Yotta Data Services is setting its sights on supercharging it. In this episode of NVIDIA’s AI Podcast, Sunil Gupta, cofounder, managing director and CEO of Yotta Data Services, speaks with host Noah Kravitz about the company’s Shakti Cloud offering, which provides scalable GPU services for enterprises of	<a class="read-more" href="https://blogs.nvidia.com/blog/yotta-ceo-supercharging-indias-ai-market/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>India’s AI market is expected to be massive. Yotta Data Services is setting its sights on supercharging it. In this episode of NVIDIA’s <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">AI Podcast</a>, Sunil Gupta, cofounder, managing director and CEO of Yotta Data Services, speaks with host Noah Kravitz about the company’s Shakti Cloud offering, which provides scalable GPU services for enterprises of all sizes. Yotta is the first Indian cloud services provider in the <a href="https://www.nvidia.com/en-us/about-nvidia/partners/" target="_blank" rel="noopener">NVIDIA Partner Network</a>, and its Shakti Cloud is India’s fastest AI supercomputing infrastructure, with 16 exaflops of compute capacity supported by over 16,000 <a href="https://www.nvidia.com/en-us/data-center/h100/" target="_blank" rel="noopener">NVIDIA H100 Tensor Core GPUs</a>. Tune in to hear Gupta’s insights on India’s potential as a major AI market and how to balance data center growth with sustainability and <a href="https://www.nvidia.com/en-us/glossary/energy-efficiency/#:~:text=Energy%20efficiency%20refers%20to%20a,or%20function%20within%20acceptable%20limits." target="_blank" rel="noopener">energy efficiency</a>.</p>
-<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1837778895%3Fsecret_token%3Ds-gJGZMXVJTxc&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
-<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Yotta CEO Sunil Gupta on Supercharging India’s Fast-Growing AI Market - Ep. 225" href="https://soundcloud.com/theaipodcast/yotta-ceo-sunil-gupta/s-gJGZMXVJTxc" target="_blank" rel="noopener">Yotta CEO Sunil Gupta on Supercharging India’s Fast-Growing AI Market &#8211; Ep. 225</a></div>
-<p>Stay tuned for more AI Podcast episodes recorded live from GTC.</p>
-<h2><b>Time Stamps</b></h2>
-<p>1:18: Background on Yotta<br />
-2:58: What is Shakti Cloud?<br />
-6:44: What does Shakti Cloud mean for India’s tech sector?<br />
-10:36: The self-service, scalable capabilities of Shakti Cloud<br />
-19:48: Balancing data center growth with sustainability<br />
-24:35: Yotta’s work with NVIDIA<br />
-27:48: What’s next for Yotta?</p>
-<h2><b>You Might Also Like…</b></h2>
-<p><a href="https://soundcloud.com/theaipodcast/arthur-adam-wenchel" target="_blank" rel="noopener"><b>Performance AI: Insights From Arthur’s Adam Wenchel &#8211; Ep. 221</b></a></p>
-<p>In this episode of the NVIDIA AI Podcast, recorded live at the GTC 2024, host Noah Kravitz sits down with Adam Wenchel, co-founder and CEO of Arthur, about the company’s technology, which enhances the performance of AI systems across various metrics like accuracy, explainability and fairness.</p>
-<p><a href="https://soundcloud.com/theaipodcast/ai-alan-chalker" target="_blank" rel="noopener"><b>How the Ohio Supercomputing Center Drives the Future of Computing &#8211; Ep. 213</b><b><br />
-</b><br />
-</a>NASCAR races are all about speed, but even the fastest cars need to factor in safety, especially as rules and tracks change. The Ohio Supercomputer Center is ready to help. In this episode of NVIDIA’s AI Podcast, host Noah Kravitz speaks with Alan Chalker, the director of strategic programs at the OSC, about all things supercomputing.</p>
-<p><a href="https://soundcloud.com/theaipodcast/replit-ceo-amjad-masad" target="_blank" rel="noopener"><b>Replit CEO Amjad Masad on Empowering the Next Billion Software Creators &#8211; Ep. 201</b></a></p>
-<p>Replit aims to empower the next billion software creators. In this week’s episode of NVIDIA’s AI Podcast, host Noah Kraviz dives into a conversation with Replit CEO Amjad Masad about bridging the gap between ideas and software, a task simplified by advances in generative AI.</p>
-<p><a href="https://soundcloud.com/theaipodcast/renderedai" target="_blank" rel="noopener"><b>Rendered.ai CEO Nathan Kundtz on Using AI to Build Better AI &#8211; Ep. 177</b></a></p>
-<p>Data is the fuel that makes artificial intelligence run. Training machine learning and AI systems requires data, but compiling quality real-world data for AI and ML can be difficult and expensive. That’s where synthetic data comes in. In this episode of NVIDIA’s AI Podcast, Nathan Kundtz, founder and CEO of Rendered.ai, speaks with host Noah Kravtiz about a platform as a service for creating synthetic data to train AI models.</p>
-<h2><b>Subscribe to the AI Podcast</b></h2>
-<p>Get the<a href="https://blogs.nvidia.com/ai-podcast/" target="_blank" rel="noopener"> AI Podcast</a> through<a href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439" target="_blank" rel="noopener"> iTunes</a>,<a href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm" target="_blank" rel="noopener"> Google Play</a>, <a href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast" target="_blank" rel="noopener">Amazon Music, </a><a href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us" target="_blank" rel="noopener">Castbox</a>, DoggCatcher, <a href="https://overcast.fm/itunes1186480811/the-ai-podcast" target="_blank" rel="noopener">Overcast</a>, <a href="https://player.fm/series/the-ai-podcast" target="_blank" rel="noopener">PlayerFM</a>, Pocket Casts, <a href="http://www.podbay.fm/show/1186480811" target="_blank" rel="noopener">Podbay</a>,<a href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast" target="_blank" rel="noopener"> PodBean</a>, PodCruncher, PodKicker, <a href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">Soundcloud</a>, <a href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L" target="_blank" rel="noopener">Spotify</a>, <a href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr" target="_blank" rel="noopener">Stitcher</a> and <a href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/" target="_blank" rel="noopener">TuneIn</a>.</p>
-<p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short" target="_blank" rel="noopener">this listener survey</a>.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1159"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Yotta CEO Sunil Gupta on Supercharging India’s Fast-Growing AI Market]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
