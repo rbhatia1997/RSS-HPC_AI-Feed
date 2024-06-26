@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 25 Jun 2024 14:57:18 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 26 Jun 2024 13:58:36 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,92 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>How vertical scaling and GPUs can accelerate mixed media modelling for marketing analytics</title>
+		<link>https://aws.amazon.com/blogs/hpc/how-vertical-scaling-and-gpus-can-accelerate-mixed-media-modelling-for-marketing-analytics/</link>
+		
+		<dc:creator><![CDATA[Niro Amerasinghe]]></dc:creator>
+		<pubDate>Wed, 26 Jun 2024 13:58:36 +0000</pubDate>
+				<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">d3547a4030d4f5ce527c3b726e59fa0d2c80abc1</guid>
+
+					<description>In marketing analytics, mixed media modeling (MMM) is a machine learning technique that combines information from various sources, like TV ads, online ads and social media to measure the impact of marketing and advertising campaigns. By using these techniques, businesses can make smarter decisions about where to invest their money for advertising, helping them get […]</description>
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3812" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/AdobeStock_814815853.png" alt="How vertical scaling and GPUs can accelerate mixed media modelling for marketing analytics " width="380" height="212"&gt;In marketing analytics, &lt;em&gt;mixed media modeling&lt;/em&gt; (MMM) is a machine learning technique that combines information from various sources, like TV ads, online ads and social media to measure the impact of marketing and advertising campaigns. By using these techniques, businesses can make smarter decisions about where to invest their money for advertising, helping them get the best return on investment. It’s a bit like having a treasure map that guides you to the most valuable marketing strategies.&lt;/p&gt; 
+&lt;p&gt;A key challenge for marketing analytics teams is the compute-heavy requirement for running these models. With popular libraries like &lt;a href="https://github.com/google/lightweight_mmm"&gt;LightweightMMM&lt;/a&gt;, &lt;a href="https://facebookexperimental.github.io/Robyn/"&gt;Robyn&lt;/a&gt;, and &lt;a href="https://www.pymc-marketing.io/en/stable/"&gt;PyMC Marketing&lt;/a&gt; not being designed to scale horizontally, jobs with a granular breakdown of demographic and geographic regions will take more than 24 hours to complete on workstations with limited compute, leading to delayed insight and hence delayed marketing optimization.&lt;/p&gt; 
+&lt;p&gt;In this blog post, I’ll demonstrate how to accelerate your mixed media modeling (MMM) jobs using AWS Batch. Using the &lt;a href="https://github.com/google/lightweight_mmm"&gt;LightweightMMM&lt;/a&gt; open-source library as an example, I’ll use AWS Batch to help with two key challenges: 1) give teams access to larger GPU and CPU compute resources; and 2) efficiently provision and manage infrastructure while reducing the risk of cost overruns. Using larger compute instances overcomes the inability of these MMM libraries to scale horizontally and results in a big reduction in model training time. At the end of the post, I’ll also go through a time and cost analysis to show you the benefits of using more expensive vertically-scaled instances for these types of workloads.&lt;/p&gt; 
+&lt;h2&gt;Overview of our sample application&lt;/h2&gt; 
+&lt;p&gt;First let’s take a look at a sample application (Figure 1) that is also published in &lt;a href="https://github.com/aws-samples/mixed-media-model-portal"&gt;AWS Samples repo here&lt;/a&gt; (see the link for the deployment method).&lt;/p&gt; 
+&lt;p&gt;You can quickly submit training jobs for MMMs through this application while AWS Batch takes care of the provisioning and, importantly, the removal and cleanup of compute resource. You submit jobs using the &lt;strong&gt;Train new model&lt;/strong&gt; button. The &lt;strong&gt;Details&lt;/strong&gt; button shown in the completed jobs table allows the user to visualize the results and run further inference to optimize a proposed marketing budget.&lt;/p&gt; 
+&lt;div id="attachment_3805" style="width: 950px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3805" loading="lazy" class="size-full wp-image-3805" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-08.53.08.png" alt="Figure 1 – The web frontend for our sample application. Data scientists can submit training jobs for mixed media models leveraging high end compute and obtain results for further analysis after completion." width="940" height="601"&gt;
+ &lt;p id="caption-attachment-3805" class="wp-caption-text"&gt;Figure 1 – The web frontend for our sample application. Data scientists can submit training jobs for mixed media models leveraging high end compute and obtain results for further analysis after completion.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Architecture: AWS Batch integrated with web frontend&lt;/h2&gt; 
+&lt;p&gt;The architectural diagram for the sample application is shown in Figure 2. A &lt;a href="#_Web_front-end"&gt;web application&lt;/a&gt; provides users with a simple user interface (1). When you submit a job, the web application calls an API in the processing layer with the model-training parameters. The processing layer uses AWS Batch to run a training job (2). AWS Batch will automatically provision the required compute and execute the code for the training job. The training job accesses the specified tables in the &lt;a href="#_Data_lake_for"&gt;data lake&lt;/a&gt; to acquire its training data (3). On completion, the trained model is saved back to the data lake (4). Once training is complete, AWS Batch will make sure the compute resources are shutdown so you don’t pay for compute that is not being used. Finally, the processing layer provides an API for inference requests back to the web application by loading the saved model from Amazon Simple Storage Service (Amazon S3) on demand (5).&lt;/p&gt; 
+&lt;div id="attachment_3806" style="width: 952px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3806" loading="lazy" class="size-full wp-image-3806" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-08.53.40.png" alt="Figure 2 - Architectural diagram of a web application to train Mixed Media Models. When a training request is submitted from the web frontend, the job is submitted to AWS Batch via Amazon API Gateway/AWS Lambda. Amazon Athena provides the training data directly to the training job. All the components are serverless with no requirement for pre provisioned unmanaged infrastructure." width="942" height="403"&gt;
+ &lt;p id="caption-attachment-3806" class="wp-caption-text"&gt;Figure 2 – Architectural diagram of a web application to train Mixed Media Models. When a training request is submitted from the web frontend, the job is submitted to AWS Batch via Amazon API Gateway/AWS Lambda. Amazon Athena provides the training data directly to the training job. All the components are serverless with no requirement for pre provisioned unmanaged infrastructure.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Deep dive on components in the architecture&lt;/h2&gt; 
+&lt;h3&gt;Web front-end&lt;/h3&gt; 
+&lt;p&gt;We used Amazon CloudFront and Amazon S3 to provide a simple, cost-effective way to serve a &lt;a href="https://react.dev/"&gt;React&lt;/a&gt; based front end, with Amazon Cognito providing authentication and authorization to control access. The combination of Amazon API Gateway, AWS Lambda, and Amazon DynamoDB provide a job management function exposed as a REST API that can be called by the web application.&lt;/p&gt; 
+&lt;h3&gt;Data lake for storage&lt;/h3&gt; 
+&lt;p&gt;By using Amazon Athena and Amazon S3, a data lake allows team members to prepare variations of the model input data using standard SQL queries. We also have a Lambda function that contains code to generate sample data that is a feature of the &lt;a href="https://github.com/google/lightweight_mmm"&gt;LightweightMMM&lt;/a&gt; framework.&lt;/p&gt; 
+&lt;h3&gt;Processing layer&lt;/h3&gt; 
+&lt;p&gt;The processing layer provides the compute required to both train the model’s and run inference requests. By using Batch, we create a number of different job types, queues, and compute environments to allow training the model on small / medium and large GPU/CPU instances. Batch will automatically provision the required compute using the Amazon Elastic Compute Cloud (Amazon EC2) service with the specified &lt;a href="https://aws.amazon.com/ec2/instance-types/"&gt;instance types&lt;/a&gt; per job. This allows us to expose a simple job submission system via the web front end while using Batch to manage the complexity of the underlying compute infrastructure. The trained jobs are saved into the S3 bucket in the data lake, and we use Lambda to expose inference requests on these trained models.&lt;/p&gt; 
+&lt;h2&gt;The LightweightMMM framework&lt;/h2&gt; 
+&lt;p&gt;The &lt;a href="https://github.com/google/lightweight_mmm"&gt;LightweightMMM&lt;/a&gt; library is written in Python and uses open-source frameworks Jax and NumPyro to create a Bayesian approach to MMM using the &lt;em&gt;Markov Chain Monte Carlo&lt;/em&gt; method.&lt;/p&gt; 
+&lt;p&gt;There are some key input parameters for training the model that can influence the run time.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Historical Data and Granularit&lt;strong&gt;y&lt;/strong&gt; – the length and granularity of historical data used can impact the time it takes a model to complete. For this blog post we will use 3 years’ worth of data with a weekly granularity leading to 160 data points per feature.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Number of Geographies – the number of Geographies multiplies the complexity of the calculation as each data point above must be repeated for each geography as well as the number of Marketing channels. For this blog post we will use different geography numbers to show the impact on run time.&lt;/li&gt; 
+ &lt;li&gt;Marketing Channels – each data point multiplied by the number of Geographies is further multiplied for each marketing channel included in the analysis. For this blog post we will compare 3 and 6 channels.&lt;/li&gt; 
+ &lt;li&gt;Chains – each additional chain requires running the MCMC algorithm independently. This means that you need to perform the sampling and calculations for each chain separately. For this blog post we will use a varying number of Chains to demonstrate the impact on run time.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3&gt;How to maximize GPU memory&lt;/h3&gt; 
+&lt;p&gt;The current implementation of LightweightMMM runs each &lt;em&gt;Chain&lt;/em&gt; on a dedicated GPU, the default settings will pre-allocate GPU memory for each chain and we found that this can lead to &lt;code&gt;Out of Memory&lt;/code&gt; errors when running large MMM models where each chain has a large number of data points (calculated as &lt;code&gt;historical data x geographies x channels&lt;/code&gt;).&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-python"&gt;os.environ["XLA_PYTHON_CLIENT_PREALLOCATE"] = "false"
+os.environ["XLA_PYTHON_CLIENT_MEM_FRACTION"] = ".50"
+os.environ["XLA_PYTHON_CLIENT_ALLOCATOR"] = "platform"
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This configuration inside you python application code can help maximize the GPUs for larger model training jobs. You can refer to &lt;a href="https://jax.readthedocs.io/en/latest/gpu_memory_allocation.html"&gt;Jax Documentation&lt;/a&gt; for more details.&lt;/p&gt; 
+&lt;h3&gt;CUDA and cuDNN on AWS Batch&lt;/h3&gt; 
+&lt;p&gt;For JAX to work with an NVIDIA GPU we needed to ensure:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;The host machine’s CUDA drivers are on the same major version as the container image, and the minor version must be the same or newer.&lt;/li&gt; 
+ &lt;li&gt;The newer NVIDIA GPUs (e.g. H100) perform much better when using CUDA 12.&lt;/li&gt; 
+ &lt;li&gt;Jax has a prebuilt &lt;code&gt;jaxlib&lt;/code&gt; python wheel to support CUDA 12.2 with cuDNN 8.9 and so it is best to align a container image that contains this.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;The simplest solution is to use a pre-built NVIDIA container image with the required libraries, and compiler tools. You can find these in &lt;a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuda"&gt;the NVIDIA container catalog&lt;/a&gt;. We recommend using the developer releases with cuDNN included.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;FROM nvcr.io/NVIDIA/cuda:12.2.2-cudnn8-devel-ubuntu22.04&lt;/code&gt;&lt;/p&gt; 
+&lt;p&gt;You can find a full example of the Docker file we used in our sample application in our &lt;a href="http://github/"&gt;AWS samples repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Time and cost analysis&lt;/h2&gt; 
+&lt;p&gt;To understand the impact of scaling compute when training the models, we ran an experiment with LightweightMMM on a number of different compute configurations and model complexities. The results below have been compiled based on average run times and approximate costs (using On Demand pricing for a consistent baseline) for Amazon EC2 C6i and C7i instance types for CPU, and G5 and P5 instance types for GPUs. We used the &lt;code&gt;us-east-1&lt;/code&gt; Region.&lt;/p&gt; 
+&lt;p&gt;For our experiment, we compared the results against a base configuration of 16-cores which is reflective of the performance of a typical desktop workstation.&lt;/p&gt; 
+&lt;div id="attachment_3807" style="width: 956px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3807" loading="lazy" class="size-full wp-image-3807" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-08.56.37.png" alt="Figure 3 – Shows the average runtime of training a smaller model with 3 marketing channels, 100 geographies with 2 chains using different levels of compute" width="946" height="537"&gt;
+ &lt;p id="caption-attachment-3807" class="wp-caption-text"&gt;Figure 3 – Shows the average runtime of training a smaller model with 3 marketing channels, 100 geographies with 2 chains using different levels of compute&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;For smaller models, increasing the level of processing power using a greater number of CPU cores did not have a significant impact on training time. We think this is due to the overheads of splitting the processing across a larger number of threads. We found that on the extreme end, a 192-core instance with high-parallelism can actually have a &lt;em&gt;negative impact&lt;/em&gt; on the training time.&lt;/p&gt; 
+&lt;p&gt;Using GPUs had a significant positive impact on the training job: a G5 instance with 4 x NVIDIA A10 GPUs ran 4x faster compared to a typical cloud desktop configuration despite being about the same cost to train the model.&lt;/p&gt; 
+&lt;div id="attachment_3808" style="width: 959px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3808" loading="lazy" class="size-full wp-image-3808" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/IMG-2024-06-11-08.57.03.png" alt="Figure 4 – Shows the average runtime of training a larger model with 6 Marketing channels, 300 Geographies using different levels of compute" width="949" height="545"&gt;
+ &lt;p id="caption-attachment-3808" class="wp-caption-text"&gt;Figure 4 – Shows the average runtime of training a larger model with 6 Marketing channels, 300 Geographies using different levels of compute&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;For larger complex models, a 128-core C6i CPU-based instance provided more than a 2x time reduction before higher parallelism started to become detrimental. We found that G5 instances with A10 GPUs didn’t have enough memory to run the larger training configuration. However, the P5 instances with NVIDIA H100 GPUs ran &lt;em&gt;58x faster&lt;/em&gt;, with training completing in approximately 45 minutes. For an approximate cost increase of $50 the run time dropped from 1.5 days to 45 mins. This is a great trade-off from if you’re short on time.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post I covered how you can use AWS Batch to run mixed media models (MMM) faster with Amazon EC2 &lt;a href="https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing"&gt;accelerated compute&lt;/a&gt; instances. I explained how to configure NVIDIA CUDA libraries to enable frameworks like Jax to work on Batch. And I walked you through a time and cost analysis, showing that while larger CPU and GPU instances do come with a higher per-hour price tag than the cheapest options, the time savings can enable data scientists to iterate faster – and build better MMM models – more efficiently.&lt;/p&gt; 
+&lt;p&gt;To get started running mixed media models on AWS Batch, have a look at our &lt;a href="https://github.com/aws-samples/mixed-media-model-portal"&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Harnessing the scale of AWS for financial simulations</title>
 		<link>https://aws.amazon.com/blogs/hpc/harnessing-the-scale-of-aws-for-financial-simulations/</link>
 		
@@ -30,7 +116,7 @@
 		<guid isPermaLink="false">80cee173cb118b7e6b59dd5783c9980d9be60f84</guid>
 
 					<description>Struggling with long compute times for numerical simulations in finance? See how AWS makes it simple to leverage the cloud for large-scale financial modeling. We walk through a real example using QuantLib and Monte Carlo methods.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3768" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/05/boofla88_a_room_of_financial_traders._Its_chaotic_and_busy_with_802574df-b747-498d-9a1e-d94cae8b61a0-copy.png" alt="Harnessing the scale of AWS for financial simulations" width="380" height="212"&gt;In the dynamic world of finance, numerical simulations have become indispensable tools for tackling complex problems where analytical solutions are elusive. However, these simulations can be incredibly time-consuming and computationally intensive, especially when dealing with large-scale tasks.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3768" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/05/boofla88_a_room_of_financial_traders._Its_chaotic_and_busy_with_802574df-b747-498d-9a1e-d94cae8b61a0-copy.png" alt="Harnessing the scale of AWS for financial simulations" width="380" height="212"&gt;In the dynamic world of finance, numerical simulations have become indispensable tools for tackling complex problems where analytical solutions are elusive. However, these simulations can be incredibly time-consuming and computationally intensive, especially when dealing with large-scale tasks.&lt;/p&gt; 
 &lt;p&gt;This is where the benefits of cloud computing come into play. Clouds like AWS offer a plethora of advantages that have made us increasingly popular in the financial industry. Flexible pricing models, massive compute environments, and versatile instance choices allow financial institutions to scale their simulations seamlessly and make use of multiple AWS Regions and Availability Zones for both scale and resiliency.&lt;/p&gt; 
 &lt;p&gt;In this blog post, we’ll show how you can use AWS to execute large-scale financial simulations more easily. We’ll focus on a specific example: calculating option prices using Monte Carlo simulations with the &lt;a href="https://www.quantlib.org/"&gt;QuantLib&lt;/a&gt; open-source library. QuantLib is a powerful tool for modelling, trading, and risk management in the financial industry. Finally, there’s a link to a workshop you can follow – step-by-step – to deploy this in your own AWS account.&lt;/p&gt; 
 &lt;h2&gt;Optimizing financial simulations with AWS Batch and AWS Lambda&lt;/h2&gt; 
@@ -2177,150 +2263,6 @@ process MY_PROCESS {
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;By providing early feedback on Nextflow code, this linter can improve developer productivity, reduce errors, and make workflows more portable. We encourage all Nextflow pipeline authors to integrate it into their continuous integration pipelines and contribute to its evolution.&lt;/p&gt; 
 &lt;p&gt;Static analysis of domain-specific languages like Nextflow opens up new possibilities for accelerating scientific advancements through code quality and collaboration.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Intel Open Omics Acceleration Framework on AWS: fast, cost-efficient, and seamless</title>
-		<link>https://aws.amazon.com/blogs/hpc/intel-open-omics-acceleration-framework-on-aws-fast-cost-efficient-and-seamless/</link>
-		
-		<dc:creator><![CDATA[Olivia Choudhury]]></dc:creator>
-		<pubDate>Tue, 09 Apr 2024 13:50:53 +0000</pubDate>
-				<category><![CDATA[Healthcare]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Genomics]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<guid isPermaLink="false">1b05a2f936ae2290795be4f7bdad69e08725240e</guid>
-
-					<description>With genomics and multi-omics research generating more data than ever, the Open Omics Acceleration Framework from Intel Labs aims to provide a highly productive platform for researchers. Check out recent results in this new blog post.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Olivia Choudhury, PhD and Aniket Deshpande from AWS; Sanchit Misra, PhD, Vasimuddin Md., PhD,&amp;nbsp;Narendra Chaudhary, PhD, Saurabh Kalikar, PhD, and Manasi Tiwari, PhD, Research Scientists at Intel Labs India; Ashish Kumar Patel, contingent worker with Intel Technology India Pvt. Ltd.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;We are living in the exciting times of the rapidly growing field of omics, including genomics, proteomics, transcriptomics, and metabolomics data. Our ability to measure omics data is increasing at a dramatic pace and new data science (AI and data management) pipelines are being developed and quickly standardized. Cloud plays a key role in this initiative by providing massive compute and storage to enable public data repositories, large collaborative projects, and consortia.&lt;/p&gt; 
-&lt;p&gt;To drive and realize the promise of omics, Intel Labs is building the Open Omics Acceleration Framework as a highly productive platform for biologists and data scientists, enabling them to harness computing and data at unprecedented scale and speed at lower costs.&lt;/p&gt; 
-&lt;p&gt;In this post, we benchmark three standard omics pipelines – AlphaFold2-based protein folding, DeepVariant-based variant calling, and Scanpy-based single-cell RNA-Seq analysis – available in the latest version of Open Omics Acceleration Framework (v. 2.1) against prior CPU baseline on Xeon-based Amazon Elastic Compute Cloud (Amazon EC2) instances to showcase its performance and cost benefits.&lt;/p&gt; 
-&lt;h2&gt;Open Omics Acceleration Framework&lt;/h2&gt; 
-&lt;p&gt;The Open Omics Acceleration Framework is a one-click, containerized, customizable, open-sourced framework for accelerating analysis of omics datasets. The framework is being built with a modular design that keeps in mind the different ways the users would want to interact with it. As shown in Figure 1, it consists of three layers:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Pipeline layer&lt;/strong&gt;: for users who are looking for a one-click solution to run standard pipelines. The latest version (v. 2.1) supports the following pipelines: 
-  &lt;ul&gt; 
-   &lt;li&gt;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/fq2sortedbam"&gt;&lt;strong&gt;fq2sortedbam&lt;/strong&gt;&lt;/a&gt;: Given gzipped fastq files from a sample, this workflow performs bwa-mem2-based sequence mapping and sorting to output the sorted BAM file.&lt;/li&gt; 
-   &lt;li&gt;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/deepvariant-based-germline-variant-calling-fq2vcf"&gt;&lt;strong&gt;DeepVariant-based germline pipeline for variant calling (fq2vcf)&lt;/strong&gt;&lt;/a&gt;: Given paired end gzipped fastq files from a sample, this workflow performs sequence mapping, sorting and variant calling (using DeepVariant) to output a vcf file.&lt;/li&gt; 
-   &lt;li&gt;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/alphafold2-based-protein-folding"&gt;&lt;strong&gt;AlphaFold2-based protein folding&lt;/strong&gt;&lt;/a&gt;: Given one or more protein sequences, this workflow performs preprocessing (database search and multiple sequence alignment) and structure prediction (using AlphaFold2) to output the structure(s) of the protein sequences.&lt;/li&gt; 
-   &lt;li&gt;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/single-cell-RNA-seq-analysis"&gt;&lt;strong&gt;Single-cell RNA-Seq analysis&lt;/strong&gt;&lt;/a&gt;: Given a cell by gene matrix, this&amp;nbsp;Scanpy workflow performs data load and preprocessing (filter, linear regression and normalization), dimensionality reduction (PCA), clustering (Louvain / Leiden / kmeans) to cluster the cells into different cell types and visualize those clusters (UMAP / t-SNE).&lt;/li&gt; 
-  &lt;/ul&gt; &lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Toolkit (applications) layer&lt;/strong&gt;: for users who want to use individual tools or to create their own custom pipelines by combining various tools.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Building blocks layer&lt;/strong&gt;: for tool developers, this layer consists of key building blocks – biology-specific and generic-AI algorithms and data structures – that can replace ones used in existing tools to accelerate them or can be used as ingredients to build new efficient tools.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;div id="attachment_3467" style="width: 1966px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3467" loading="lazy" class="size-full wp-image-3467" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.14.22@2x.png" alt="Figure 1: Open Omics Acceleration Framework v. 2.1. This modular architecture consists of 3 layers: pipeline, toolkit (application), and building blocks layers. " width="1956" height="874"&gt;
- &lt;p id="caption-attachment-3467" class="wp-caption-text"&gt;Figure 1: Open Omics Acceleration Framework v. 2.1. This modular architecture consists of 3 layers: pipeline, toolkit (application), and building blocks layers.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Benchmarking the Open Omics Acceleration Framework on Amazon EC2 instances&lt;/h2&gt; 
-&lt;h3&gt;Amazon EC2 instances used for benchmarking&lt;/h3&gt; 
-&lt;p&gt;The five types of Amazon EC2 instances used in this benchmarking study are detailed in Table 1. All of them are powered by 4th Generation Intel® Xeon® Scalable processors. We executed all the experiments using Ubuntu version 22.04. Across the three pipelines, the execution time includes all the steps performed including reading/writing input/output files from/to local disk and therefore, includes both compute and file IO. The cloud costs are computed by multiplying the total execution time in hours by the per hour instance cost.&lt;/p&gt; 
-&lt;div id="attachment_3468" style="width: 1542px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3468" loading="lazy" class="size-full wp-image-3468" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.16.20@2x.png" alt="Table 1: Details of the Amazon EC2 instance types used for benchmarking. On-Demand pricing is from the published date for the us-east-2 (Ohio) region and is subject to change over time. Please consult the Amazon EC2 pricing page for current pricing in your region." width="1532" height="696"&gt;
- &lt;p id="caption-attachment-3468" class="wp-caption-text"&gt;Table 1: Details of the Amazon EC2 instance types used for benchmarking. On-Demand pricing is from the published date for the us-east-2 (Ohio) region and is subject to change over time. Please consult the Amazon EC2 pricing page for current pricing in your region.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Prerequisites&lt;/h2&gt; 
-&lt;p&gt;To run these pipelines, you need an AWS account with permissions to provision Amazon Simple Storage Service (S3) buckets for input and output data storage, and sufficient permissions/limits to provision Amazon EC2 c7i, m7i and r7i instances.&lt;/p&gt; 
-&lt;h2&gt;Steps for benchmarking&lt;/h2&gt; 
-&lt;p&gt;The configuration details and steps used for benchmarking baseline and Open Omics versions of all three pipelines on Amazon EC2 instances are detailed on this &lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/blob/main/benchmarking/AWS-Intel-blog-v2.1-2024/README.md"&gt;GitHub page&lt;/a&gt; of the Open Omics Acceleration Framework. The typical process involves launching the corresponding EC2 Instances, connecting to the instances, installing the software, downloading the datasets, and executing the baseline and Open Omics versions. In the following subsections, we will share an overview of the pipelines and report the benchmarking results.&lt;/p&gt; 
-&lt;h2&gt;AlphaFold2-based protein folding pipeline&lt;/h2&gt; 
-&lt;p&gt;The protein folding problem has significant implications for drug discovery, biotechnology, and understanding the mechanisms of diseases. The task entails predicting the 3D structure of a protein from its amino acid sequence. A protein’s structure governs its function. Therefore, accurate protein structure prediction is vital in biology and drug discovery, and has long been considered a holy grail problem.&lt;/p&gt; 
-&lt;div id="attachment_3469" style="width: 1924px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3469" loading="lazy" class="size-full wp-image-3469" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.18.31@2x.png" alt="Figure 2: The AlphaFold2-based protein structure prediction pipeline that requires an input amino acid sequence. The pipeline has two stages, namely database search for multiple sequence alignment and Evoformer model for structure prediction." width="1914" height="256"&gt;
- &lt;p id="caption-attachment-3469" class="wp-caption-text"&gt;Figure 2: The AlphaFold2-based protein structure prediction pipeline that requires an input amino acid sequence. The pipeline has two stages, namely database search for multiple sequence alignment and Evoformer model for structure prediction.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Our AlphaFold2-based protein folding pipeline takes as input a set of amino acid sequences and outputs the set of corresponding predicted structures in PDB file format. The pipeline has two stages: 1) preprocessing that includes database search and multiple sequence alignment (MSA) over protein sequences, 2) model inference&amp;nbsp;that predict the structure of the protein using Evoformer, a Transformer architecture based Deep Learning (DL) model.&lt;/p&gt; 
-&lt;p&gt;For baseline, we use OpenFold v. 1.0.1 – a faithful reproduction of &lt;a href="https://github.com/google-deepmind/alphafold"&gt;DeepMind AlphaFold2’s model&lt;/a&gt; for model inference and &lt;a href="https://github.com/soedinglab/hh-suite"&gt;hh-suite&lt;/a&gt; v. 3.3.0 and &lt;a href="https://github.com/EddyRivasLab/hmmer"&gt;hmmer&lt;/a&gt; v. 3.3.2 for preprocessing. Open Omics Acceleration Framework contains faster versions of all the steps of this pipeline accelerated using a 4th gen Intel Xeon scalable processor using Intel AMX with bfloat16 precision for DL compute, Intel AVX2 and AVX-512 for non-DL compute and cache optimizations. It also provides a parallel execution framework that folds multiple proteins in parallel in a load balanced fashion.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="aligncenter size-full wp-image-3470" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.20.06@2x.png" alt="" width="1760" height="1210"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="aligncenter size-full wp-image-3471" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.20.14@2x.png" alt="" width="1760" height="1216"&gt;&lt;img loading="lazy" class="aligncenter size-full wp-image-3472" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.20.19@2x.png" alt="" width="1764" height="1208"&gt;&lt;/em&gt;&lt;/p&gt; 
-&lt;div id="attachment_3473" style="width: 1764px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3473" loading="lazy" class="size-full wp-image-3473" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.20.30@2x.png" alt="Figure 3: Performance and cost benefits of Open Omics Acceleration Framework on m7i.24xlarge and m7i.48xlarge over the baseline on m7i.24xlarge for AlphaFold2-based protein folding pipeline for varying protein lengths. " width="1754" height="1208"&gt;
- &lt;p id="caption-attachment-3473" class="wp-caption-text"&gt;Figure 3: Performance and cost benefits of Open Omics Acceleration Framework on m7i.24xlarge and m7i.48xlarge over the baseline on m7i.24xlarge for AlphaFold2-based protein folding pipeline for varying protein lengths.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;OpenFold is a faithful PyTorch based reproduction of AlphaFold2 which can run on CPU. We compare the OpenFold CPU baseline with Open Omics on two sets of proteins sampled from the &lt;a href="https://www.uniprot.org/proteomes/UP000001940"&gt;C. elegans proteome&lt;/a&gt;. Since a large majority of the proteins found in nature have lengths less than 1000, we create the first set with proteins of length under 1000 amino acid residues. The second set consists of proteins up to lengths that OpenFold can handle. On the same m7i.24xlarge instance as baseline, Open Omics achieves significant cost and execution time improvements. Moreover, due to its ability to fold multiple proteins in parallel, it also scales well to the larger m7i.48xlarge instance. For the first set, Open Omics achieves 10.1x speedup on preprocessing and 37.1x speedup on model inference resulting in speedup for end-to-end execution of 17x and cost reduction of 8.5x. For the second set, the speedup values for individual stages are 5.2x and 33.2x, respectively, and overall speedup is 20.8x and cost reduction is 10.4x. For longer sequences, OpenFold did not finish even after 3 days. On the other hand, Open Omics can comfortably handle sequences up to length 7500 on m7i.48xlarge instances.&lt;/p&gt; 
-&lt;h2&gt;DeepVariant-based variant calling pipeline (fq2vcf)&lt;/h2&gt; 
-&lt;p&gt;Variant calling is a fundamental task in DNA sequence analysis. Given the sequencing reads from an individual’s genome, variant calling identifies the variations in the reads against a reference genome. &lt;a href="https://www.nature.com/articles/nbt.4235.epdf?author_access_token=q4ZmzqvvcGBqTuKyKgYrQ9RgN0jAjWel9jnR3ZoTv0NuM3saQzpZk8yexjfPUhdFj4zyaA4Yvq0LWBoCYQ4B9vqPuv8e2HHy4vShDgEs8YxI_hLs9ov6Y1f_4fyS7kGZ"&gt;DeepVariant&lt;/a&gt;, a deep learning-based germline variant caller, is a highly accurate and widely used tool across many genomic studies.&lt;/p&gt; 
-&lt;div id="attachment_3474" style="width: 1918px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3474" loading="lazy" class="size-full wp-image-3474" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.21.48@2x.png" alt="Figure 4: The DeepVariant based fq2vcf pipeline." width="1908" height="256"&gt;
- &lt;p id="caption-attachment-3474" class="wp-caption-text"&gt;Figure 4: The DeepVariant based fq2vcf pipeline.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The variant calling pipeline using DeepVariant, as shown in Figure 4, consists of the following steps: 1) mapping of the input reads to the reference genome, 2) sorting the mapped reads based on the reference coordinate, and 3) calling variants by first creating pileups of the regions that are expected to have variants followed by classifying among variants types using Inception V3 deep learning model. For baseline, we use – &lt;a href="https://github.com/lh3/bwa"&gt;BWA-MEM&lt;/a&gt; v. 0.7.17 for mapping, samtools v. 1.16.1 sort for sorting and &lt;a href="https://github.com/google/deepvariant"&gt;DeepVariant&lt;/a&gt; v. 1.5 for variant calling. &lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/deepvariant-based-germline-variant-calling-fq2vcf"&gt;Open Omics version of the pipeline&lt;/a&gt; is accelerated through use of:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Intel Advanced Matrix Extensions (AMX) with bfloat16 precision for DL compute, Intel AVX-512 for non-DL compute,&lt;/li&gt; 
- &lt;li&gt;Cache optimizations, and&lt;/li&gt; 
- &lt;li&gt;Scaling it to the multiple CPU instances.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;div id="attachment_3475" style="width: 994px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3475" loading="lazy" class="size-full wp-image-3475" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.23.08.png" alt="Figure 5: Performance and cost benefits of Open Omics Acceleration Framework over the baseline for DeepVariant-based fq2vcf pipeline on standard 30x WGS HG001 short read dataset with GRCh38 as the reference genome. Instances used: c7i.24xlarge and c7i.48xlarge." width="984" height="945"&gt;
- &lt;p id="caption-attachment-3475" class="wp-caption-text"&gt;Figure 5: Performance and cost benefits of Open Omics Acceleration Framework over the baseline for DeepVariant-based fq2vcf pipeline on standard 30x WGS HG001 short read dataset with GRCh38 as the reference genome. Instances used: c7i.24xlarge and c7i.48xlarge.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We compare baseline with Open Omics on the standard 30x WGS paired-end short read dataset: HG001 (&lt;a href="//genomics-benchmark-datasets/google-brain/fastq/novaseq/wgs_pcr_free/30x/HG001.novaseq.pcr-free.30x.R1.fastq.gz"&gt;R1&lt;/a&gt; and &lt;a href="//genomics-benchmark-datasets/google-brain/fastq/novaseq/wgs_pcr_free/30x/HG001.novaseq.pcr-free.30x.R2.fastq.gz"&gt;R2&lt;/a&gt;). On the same instance type (c7i.24xlarge), Open Omics achieves 2.21x speedup compared to baseline resulting in a cost of just $8.8 per sample. For use-cases that require a quick turn-around time, Open Omics scales well to 4x c7i.48xlarge instances reducing execution time to nearly 21 mins at just $12.1 per sample – 1.62 times lower cost than baseline. It also scales further to 8x c7i.48xlarge instances, reducing execution time to just 16.8 mins while still keeping the cost lower than the baseline.&lt;/p&gt; 
-&lt;h2&gt;Single-cell RNA-Seq analysis pipeline&lt;/h2&gt; 
-&lt;p&gt;Single-cell analysis involves studying various omics (genomics, transcriptomics, proteomics, metabolomics) data and cell-cell interactions at the individual cell level. Single-cell RNA-seq (scRNA-seq) is an advanced technique that measures gene expression of individual cells, which is analyzed to study the differences in gene expression profiles across cells.&lt;/p&gt; 
-&lt;p&gt;A typical workflow to analyze scRNA-seq data begins with a matrix that consists of the expression levels of the genes in each cell. The data preprocessing steps filter out the noise and uses linear regression and data normalization to correct artifacts from data collection. Subsequently, dimensionality reduction is performed followed by clustering of cells to group them by similarity in genetic activity and visualization of the clusters. With over 2 million downloads,&amp;nbsp;&lt;a href="https://github.com/scverse/scanpy"&gt;Scanpy&lt;/a&gt;&amp;nbsp;is one of the most widely used toolkits for this analysis.&lt;/p&gt; 
-&lt;div id="attachment_3476" style="width: 962px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3476" loading="lazy" class="size-full wp-image-3476" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.24.18.png" alt="Figure 6: Pipeline showing the steps in analysis of single-cell RNA sequencing data starting from gene activity matrix to visualization of different cell clusters." width="952" height="249"&gt;
- &lt;p id="caption-attachment-3476" class="wp-caption-text"&gt;Figure 6: Pipeline showing the steps in analysis of single-cell RNA sequencing data starting from gene activity matrix to visualization of different cell clusters.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 6 illustrates the pipeline we used for this benchmarking. For clustering and visualization, we run all of the options displayed above to demonstrate the benefit of the Open Omics Acceleration Framework on all of them. For the baseline, we use &lt;a href="https://github.com/scverse/scanpy"&gt;scanpy&lt;/a&gt; v. 1.9.1. The &lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework/tree/main/pipelines/single-cell-RNA-seq-analysis"&gt;Open Omics version&lt;/a&gt; is accelerated through: 1) parallelization and fusing of operations in data pre-processing, 2) use of efficient implementations from &lt;a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/scikit-learn.html"&gt;Intel&lt;sup&gt;®&lt;/sup&gt; Extension for Scikit-learn&lt;/a&gt;, &lt;a href="https://katanagraph.ai/"&gt;Katana Graph&lt;/a&gt; and Intel Lab’s &lt;a href="https://github.com/IntelLabs/Trans-Omics-Acceleration-Library"&gt;Trans-Omics Acceleration Library&lt;/a&gt; – some of which were accelerated as a part of this effort.&lt;/p&gt; 
-&lt;div id="attachment_3477" style="width: 964px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3477" loading="lazy" class="size-full wp-image-3477" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.25.02.png" alt="Figure 7: Performance and cost benefits of Open Omics Acceleration Framework over the baseline for Single-cell RNA-Seq pipeline for standard dataset of 1.3 million mouse brain cells." width="954" height="961"&gt;
- &lt;p id="caption-attachment-3477" class="wp-caption-text"&gt;Figure 7: Performance and cost benefits of Open Omics Acceleration Framework over the baseline for Single-cell RNA-Seq pipeline for standard dataset of 1.3 million mouse brain cells.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We compare baseline with Open Omics on the standard dataset of &lt;a href="https://rapids-single-cell-examples.s3.us-east-2.amazonaws.com/1M_brain_cells_10X.sparse.h5ad"&gt;1.3 million mouse brain cells&lt;/a&gt;. The baseline requires the larger memory r7i.24xlarge instance. On the same instance type, Open Omics achieves a 29.3x speedup compared to baseline resulting in a cost of nearly $0.6 per sample. This cost is further improved with the optimizations applied to reduce memory requirements that enables us to use the less expensive compute optimized c7i.24xlarge instance, reducing the cost to just $0.4 per sample.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;To accelerate the ongoing revolution of omics, Intel has built the Open Omics acceleration framework. The current version of Open Omics running on AWS instances based on 4&lt;sup&gt;th&lt;/sup&gt; generation Intel Xeon processors provides significant performance and cost benefits for key pipelines for protein folding, variant calling, and single-cell RNA-Seq analysis.&lt;/p&gt; 
-&lt;p&gt;To learn more about performance of Open Omics and comparison with other solutions, please refer to the following research blogs –&amp;nbsp;&lt;a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Xeon-is-all-you-need-for-AI-inference-Performance/post/1506083"&gt;July’23&lt;/a&gt;, &lt;a href="https://aws.amazon.com/blogs/hpc/accelerating-genomics-pipelines-using-intel-open-omics-on-aws/"&gt;Aug’22&lt;/a&gt;, &lt;a href="https://community.intel.com/t5/Blogs/Tech-Innovation/Artificial-Intelligence-AI/Intel-Labs-Accelerates-Single-cell-RNA-Seq-Analysis/post/1390715"&gt;June’22&lt;/a&gt;, and the GitHub repository –&amp;nbsp;&lt;a href="https://github.com/IntelLabs/Open-Omics-Acceleration-Framework"&gt;Open Omics Acceleration Framework&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.s&lt;/em&gt;&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.09.png" alt="Sanchit Misra" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Sanchit Misra&lt;/h3&gt; 
-  &lt;p&gt;Sanchit Misra, PhD is a senior research scientist and leads the research efforts in building SW/HW computing solutions for AI driven life science at Intel Labs. Sanchit has over 15 years of experience in computational biology, AI, scaling applications on large clusters/supercomputers and driving architecture improvements. Over the years, he has led Intel’s various collaborations with experts in computational biology, AI, HPC and architecture. Before joining Intel Labs, he earned his PhD in high performance computational biology from Northwestern University.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.15.png" alt="Vasimuddin Md" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Vasimuddin Md&lt;/h3&gt; 
-  &lt;p&gt;Vasimuddin Md., PhD is a research scientist at Parallel Computing Lab, Intel Labs. He obtained his Ph.D. from IIT Bombay and has a decade of research experience in the field of Computational Biology, HPC, and AI. At Intel Labs, he works on building computational solutions (both hardware and software) for various challenging problems in Biology.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.22.png" alt="Narendra Chaudhary" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Narendra Chaudhary&lt;/h3&gt; 
-  &lt;p&gt;Narendra Chaudhary, PhD is a research scientist and conducts computational biology/HPC research at Intel Labs. Dr. Chaudhary has experience in improving efficiency and scaling of deep learning applications. Before joining Intel Labs, he earned his PhD in Electrical and Electronics Engineering from Texas A&amp;amp;M University.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.27.png" alt="Saurabh Kalikar" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Saurabh Kalikar&lt;/h3&gt; 
-  &lt;p&gt;Saurabh Kalikar, PhD is a research scientist at Intel – Parallel Computing Lab, where he is involved in designing and implementing performant solutions for the applications running on modern CPUs. His research interests lie in Parallel/Distributed Computing, Compilers, and Architecture-Aware Optimization. Prior to joining Intel Labs, he earned his PhD from Indian Institute of Technology Madras.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.32.png" alt="Manasi Tiwari" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Manasi Tiwari&lt;/h3&gt; 
-  &lt;p&gt;Manasi Tiwari, PhD is a research scientist at Intel – Parallel Computing Lab. She works on ideating and developing parallel solutions for Computational Biology algorithms which are at the intersection of HPC and AI. These solutions range from architecture dependent SIMD solutions to large scale multi-node solutions. Prior to joining Intel, she earned her PhD from Indian Institute of Science, Bangalore.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/03/CleanShot-2024-04-03-at-10.28.37.png" alt="Ashishkumar Patel" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Ashishkumar Patel&lt;/h3&gt; 
-  &lt;p&gt;Ashishkumar Patel is a contingent worker at Intel Technology India Pvt. Ltd. He earned his master’s degree in computer engineering from the Sardar Vallabhbhai National Institute of Technology (NIT), Surat. Ashishkumar has a background in academia and research. Throughout his career, he has made significant contributions to various projects, particularly in the fields of deep learning and computational biology.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
 					
 		
 		
