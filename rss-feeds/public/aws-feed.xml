@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 26 Jun 2024 13:58:36 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 01 Jul 2024 16:28:55 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,94 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Simulating autonomous mining operations using Robotec.ai on AWS</title>
+		<link>https://aws.amazon.com/blogs/hpc/simulating-autonomous-mining-operations-using-robotec-ai-on-aws/</link>
+		
+		<dc:creator><![CDATA[Matt Hansen]]></dc:creator>
+		<pubDate>Mon, 01 Jul 2024 16:28:55 +0000</pubDate>
+				<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">7e189a5a1112ae1b83b595746cad451281851d11</guid>
+
+					<description>Big changes are underway in mining - see how the Boliden Group simulates fleets of autonomous trucks using AWS Batch - for safety and efficiency.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright size-full wp-image-3749" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/30/Simulating-autonomous-mining-operations-using-Robotec.ai-on-AWS-1.png" alt="" width="380" height="212"&gt;This post was contributed by Matthew Hansen, Principal SA, Advanced Computing &amp;amp; Simulation, Ryan Qi, Principal BD/GTM, Advanced Computing from AWS and Dominik Jargot, Software Engineer, Bartłomiej Boczek, Senior Machine Learning Engineer from Robotec.ai, and Peter Burman, Program Manager, Boliden.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Autonomous mining operations represent a significant leap forward in the mining industry, offering enhanced safety, efficiency, and productivity. The introduction of autonomous trucks is at the forefront of this transformation. &lt;a href="https://www.boliden.com/"&gt;Boliden AB&lt;/a&gt;, a Swedish multinational company specializing in precious metals, is an AWS customer using autonomous trucking technology for mining operations. These self-driving heavy-duty vehicles are equipped with advanced sensors and navigation systems, and operate around the clock without human intervention – reducing the risk of accidents and increasing uptime. These trucks follow pre-determined routes to move materials from the mining site to storage or processing sites, communicating real-time data back to a central control system.&lt;/p&gt; 
+&lt;p&gt;Simulations are instrumental in developing and optimizing autonomous mining operations. They create a virtual environment for testing various scenarios and conditions, minimizing the risks and costs of real-world trials. Engineers at Boliden use simulations to evaluate the operations and performance of autonomous trucks, refine control strategies, and ensure systems can adapt to unexpected events or changes in the mining environment. This predictive capability is essential for maintaining safety, enhancing efficiency, and ensuring continuous production, all of which contribute to the long-term sustainability and profitability of mining operations.&lt;/p&gt; 
+&lt;p&gt;In this post, you’ll learn how Boliden simulates multiple autonomous trucks in a mine, and scales those simulations to run dozens of scenarios simultaneously using the recently added multi-container jobs feature in AWS Batch.&lt;/p&gt; 
+&lt;h2&gt;Building autonomous mining simulations&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://robotec.ai/"&gt;Robotec.ai&lt;/a&gt; is a technology leader in the realm of robotics and autonomous vehicles. They have a diverse team of experts in robotics, electrical engineering, software development, AI/ML, and human-technology interaction. Their simulation platform, &lt;a href="https://robotec.ai/products/rosi-simulation-platform/"&gt;RoSi&lt;/a&gt;, is engineered to create hyper-realistic simulations of confined spaces such as mining sites, warehouses, and large agricultural fields. The simulation of virtual mining environments enables accurate modeling of mining equipment and experimentation with many traffic scenarios.&lt;/p&gt; 
+&lt;p&gt;Boliden uses RoSi to simulate the real-time operations of their mines over 40 distinct scenarios that cover a wide spectrum of machine interactions. This rigorous testing regime demands in excess of 1,000 hours of computational simulation every time Boliden changes their mining operations, to ensure robustness and reliability.&lt;/p&gt; 
+&lt;p&gt;Figure 1 illustrates a scenario where two autonomous mining trucks, operating underground and simulated using the RoSi platform, navigate a narrow tunnel while avoiding obstacles and each other. One truck is using an underground turnout to wait for another to pass going the opposite direction. The time spent waiting is idle time that Boliden wants to reduce. The number of turnouts is also an expense they want to minimize. They run scenarios with varying numbers of trucks and turnouts and measure the idle time of the trucks, to find the optimal number of turnouts in the mine.&lt;/p&gt; 
+&lt;p&gt;&lt;iframe loading="lazy" title="Figure 1 - Underground autonomous mining simulations using Robotec.aiâ&#128;&#153;s RoSi platform" width="500" height="375" src="https://www.youtube-nocookie.com/embed/wWVtjBrhf_g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 1 – Underground autonomous mining simulations using Robotec.ai’s RoSi platform&lt;/em&gt;&lt;/p&gt; 
+&lt;h2&gt;Multi-container simulations&lt;/h2&gt; 
+&lt;p&gt;Traditionally, when Boliden used &lt;a href="https://aws.amazon.com/batch"&gt;AWS Batch&lt;/a&gt; to simulate these types of scenarios, the service allowed only jobs with a single container. Consequently, engineers had to spend time on extra job preparation steps, merging all of the simulation components into a large, complex, monolithic container which also made division of work across teams difficult. Any code changes required engineers to rebuild the entire monolithic container, complicating software development (Dev), IT operations (Ops), and debugging.&lt;/p&gt; 
+&lt;p&gt;Recently, though, AWS Batch added multi-container jobs, a feature that streamlines the process for customers to conduct large-scale simulation for complex systems in autonomous vehicles and robotics. This enhancement allows teams like those at Robotec.ai and Boliden to leverage Batch’s sophisticated scaling, scheduling, and cost management features without the added complexity of converting their systems into monolithic containers. Figure 2 illustrates the architecture for simulating mining operations with RoSi, using these multi-container job features in Batch.&lt;/p&gt; 
+&lt;div id="attachment_3724" style="width: 918px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3724" loading="lazy" class="size-full wp-image-3724" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/29/IMG-2024-05-29-14.23.17.png" alt="Figure 2 - Architecture for running mining operation simulations on RoSi and AWS Batch multi-container feature" width="908" height="544"&gt;
+ &lt;p id="caption-attachment-3724" class="wp-caption-text"&gt;Figure 2 – Architecture for running mining operation simulations on RoSi and AWS Batch multi-container feature&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;As shown in Figure 2, engineers can use an array of smaller, independent containers, each representing a mining truck, alongside the RoSi simulator. This approach not only accelerates development by eliminating redundant steps in job setup, but also reduces the need for engineers to develop additional in-house tools, and eases collaboration between software development and IT operations teams.&lt;/p&gt; 
+&lt;h2&gt;How you can run simulations on AWS Batch with RoSi&lt;/h2&gt; 
+&lt;h3&gt;Step 1 – Configure your Job inputs in RoSi&lt;/h3&gt; 
+&lt;p&gt;Using RoSi, you can configure experiment properties specific to each use case. In the Boliden example, the configuration includes the main scenario setup, traffic properties, events, and safety system parameters. Configuration enables testing of the entire underground mine in the simulated environment against the complex system of systems, which typically consists of autonomous vehicles, a traffic management system, and a safety system.&lt;/p&gt; 
+&lt;p&gt;RoSi offers a lot of flexibility in the system configuration, allowing engineers to create isolated tests for individual system parameters, or large-scale system-wide stress tests. The typical flow of batch experiments configuration in RoSi goes like this:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Configure the types and paths of vehicles in the &lt;strong&gt;Events&lt;/strong&gt;&lt;/li&gt; 
+ &lt;li&gt;Configure traffic properties in the &lt;strong&gt;Traffic&lt;/strong&gt; tab, for example, the localization of the turnouts (places where vehicles can freely pass each other) in the narrow tunnels of the mine.&lt;/li&gt; 
+ &lt;li&gt;In the &lt;strong&gt;Main&lt;/strong&gt; tab, configure the scenario details, like the number of vehicles, their positions, and speeds, to simulate various situations.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Figures 3 and 4 show the detail for some of the configuration capabilities of RoSi.&lt;/p&gt; 
+&lt;div id="attachment_3725" style="width: 1195px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3725" loading="lazy" class="size-full wp-image-3725" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/29/IMG-2024-05-29-14.23.56.png" alt="Figure 3 – Turnouts and other traffic parameters configuration in the underground mine." width="1185" height="622"&gt;
+ &lt;p id="caption-attachment-3725" class="wp-caption-text"&gt;Figure 3 – Turnouts and other traffic parameters configuration in the underground mine.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3726" style="width: 1198px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3726" loading="lazy" class="size-full wp-image-3726" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/29/IMG-2024-05-29-14.24.28.png" alt="Figure 4 – A scenario configuration with six autonomous mine vehicles starting in different points of the mine." width="1188" height="623"&gt;
+ &lt;p id="caption-attachment-3726" class="wp-caption-text"&gt;Figure 4 – A scenario configuration with six autonomous mine vehicles starting in different points of the mine.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Step 2 – Submit multi-container jobs from RoSi&lt;/h3&gt; 
+&lt;p&gt;RoSi lets you to run multiple real-time experiments in parallel, which greatly reduces the time needed to test a large number of scenarios, significantly improving efficiency. Engineers can select the configurations required for the batch of experiments from the simulation setup screen (Figure 5).&lt;/p&gt; 
+&lt;p&gt;For convenience, a set of configurations can be stored as a preset that can be reused. After pressing the &lt;strong&gt;Start&lt;/strong&gt; button, RoSi Simulations Manager will perform a cartesian product of selected configs, configure a batch of experiments, and submit them to the AWS Batch job queue. By increasing the number of workers, you can speed up the experiment execution rate – by running them in parallel. Once the jobs are submitted, you can also view them in the Batch console (Figure 6).&lt;/p&gt; 
+&lt;div id="attachment_3727" style="width: 1193px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3727" loading="lazy" class="size-full wp-image-3727" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/29/IMG-2024-05-29-14.24.56.png" alt="Figure 5 – The simulation setup screen, where users can select configurations and start a batch of experiments." width="1183" height="621"&gt;
+ &lt;p id="caption-attachment-3727" class="wp-caption-text"&gt;Figure 5 – The simulation setup screen, where users can select configurations and start a batch of experiments.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3728" style="width: 1249px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3728" loading="lazy" class="size-full wp-image-3728" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/29/IMG-2024-05-29-14.25.25.png" alt="Figure 6 - AWS Batch console while a multi-container job is running." width="1239" height="654"&gt;
+ &lt;p id="caption-attachment-3728" class="wp-caption-text"&gt;Figure 6 – AWS Batch console while a multi-container job is running.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Step 3 – Viewing the simulation data&lt;/h3&gt; 
+&lt;p&gt;Viewing real-time simulation data from the RoSi experiment manager (Figure 7) helps you gain insights before the experiments end. In the mining example, Boliden can evaluate the productivity of each experiment to assess the impact of changing mining variables. Data is streamed, so when the multi-container job is submitted to Batch, you can monitor the job status, and view the logs from each container. All the data is stored in log files saved in an Amazon Simple Storage Service (Amazon S3) bucket, which you can use for post-processing, analysis, visualization, and debugging.&lt;/p&gt; 
+&lt;div id="attachment_3729" style="width: 1193px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3729" loading="lazy" class="size-full wp-image-3729" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/29/IMG-2024-05-29-14.25.53.png" alt="Figure 7 - RoSi dashboard provides status of each experiment in real-time" width="1183" height="670"&gt;
+ &lt;p id="caption-attachment-3729" class="wp-caption-text"&gt;Figure 7 – RoSi dashboard provides status of each experiment in real-time&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Step 4 – Viewing and analyzing the results&lt;/h3&gt; 
+&lt;p&gt;RoSi enables viewing real-time data to automate and optimize multiple aspects of mining operations.&lt;/p&gt; 
+&lt;p&gt;Boliden can track metrics they need in RoSi, and post-process them on AWS. This enables them to effectively manage the mining fleet and reduce the time vehicles wait between operations. The result is a cost-effective use of fuel and optimization of working shifts. Figure 8 depicts wait times (in minutes) of six vehicles running across multiple simulation experiments.&lt;/p&gt; 
+&lt;div id="attachment_3730" style="width: 1214px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3730" loading="lazy" class="size-full wp-image-3730" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/29/IMG-2024-05-29-14.26.18.png" alt="Figure 8 - Waiting times distribution across the mining tunnel with six turnouts." width="1204" height="369"&gt;
+ &lt;p id="caption-attachment-3730" class="wp-caption-text"&gt;Figure 8 – Waiting times distribution across the mining tunnel with six turnouts.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;In this sample data, the vehicles spend the most time waiting at turnout ID 1. In a 24-hour simulation, vehicle six spent the most time waiting at turnout ID 1, waiting approximately 55 minutes of total time.&lt;/p&gt; 
+&lt;p&gt;We can compare this data with other scenarios – with different locations and numbers of turnouts – to find the optimal turnout configuration within the mine, &lt;em&gt;before creating the mine in the real world&lt;/em&gt;, thus ensuring smooth operation and minimizing costs.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we’ve explored running multi-container simulations on AWS to enhance autonomous mining operations, using the advanced capabilities of Robotec.ai’s RoSi simulator, in tandem with AWS Batch.&lt;/p&gt; 
+&lt;p&gt;By partitioning complex systems into containers, such as individual mining trucks, we can analyze their interactions to increase efficiency. The integration of RoSi with Batch means simulation engineers and DevOps teams can orchestrate large-scale simulations, scaling of their compute resources more easily, and getting fast results that help them optimize their operations.&lt;/p&gt; 
+&lt;p&gt;Most of all, this approach paves the way for more streamlined underground mining operations by reducing waiting times and operational costs in &lt;em&gt;the real world&lt;/em&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>How vertical scaling and GPUs can accelerate mixed media modelling for marketing analytics</title>
 		<link>https://aws.amazon.com/blogs/hpc/how-vertical-scaling-and-gpus-can-accelerate-mixed-media-modelling-for-marketing-analytics/</link>
 		
@@ -2071,198 +2159,6 @@ data: hello
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;In this post, we discussed some multi-container simulation use cases, learned how some AWS Partners &amp;nbsp;are using it to run their simulators on AWS Batch, and learned how to quickly get started running multi-container jobs in Batch using a simple example.&lt;/p&gt; 
 &lt;p&gt;For more help using AWS Batch for simulations, follow the User Guide &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html"&gt;Getting Started with AWS Batch&lt;/a&gt;.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Linter rules for Nextflow to improve the detection of errors before runtime</title>
-		<link>https://aws.amazon.com/blogs/hpc/linter-rules-for-nextflow-to-improve-the-detection-of-errors-before-runtime/</link>
-		
-		<dc:creator><![CDATA[Mark Schreiber]]></dc:creator>
-		<pubDate>Tue, 16 Apr 2024 14:58:36 +0000</pubDate>
-				<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Life Sciences]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[Genomics]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<guid isPermaLink="false">918a6c3069ff95919afafe3727710e60191c475d</guid>
-
-					<description>Check out this post to learn how linter rules for Nextflow's DSL can help you catch errors in your workflows before runtime, which means greater developer productivity, which leads directly to a faster time to science.</description>
-										<content:encoded>&lt;p&gt;&lt;a href="https://www.nextflow.io/"&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3518" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/Linter-rules-for-Nextflow-to-improve-the-detection-of-errors-before-runtime-1.png" alt="Linter rules for Nextflow to improve the detection of errors before runtime" width="380" height="212"&gt;Nextflow&lt;/a&gt; is a popular domain-specific language (DSL) and runtime used to define workflows that string together multiple processing steps into a pipeline. This allows it to perform quite complex genomics or scientific analyses including for machine-learning.&lt;/p&gt; 
-&lt;p&gt;Workflows defined in Nextflow code can leverage container orchestration technologies to deploy containerized workloads across clusters, clouds, or HPC environments. As an interpreted language, errors in a Nextflow script are only revealed at runtime. This increases the time and cost of developing and debugging a workflow which could be reduced if errors could be spotted earlier.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll discuss how we created &lt;strong&gt;linter rules&lt;/strong&gt; for Nextflow DSL 2, how these rules can be extended and how you can use them to check your scripts before runtime.&lt;/p&gt; 
-&lt;h2&gt;Background&lt;/h2&gt; 
-&lt;p&gt;Nextflow is commonly used by customers on AWS. Some use the &lt;a href="https://aws.amazon.com/healthomics/"&gt;AWS HealthOmics&lt;/a&gt; managed workflow service and others choose to deploy their own Nextflow engine, integrated with AWS Batch. The HealthOmics service provides a fully-managed experience while &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch &lt;/a&gt;provides a more generalized mechanism for running batch computing tasks.&lt;/p&gt; 
-&lt;p&gt;A key difference between the Nextflow DSL and a traditional programming language is that Nextflow code is interpreted at runtime rather than compiled. This provides flexibility, because workflows can be developed quickly without a build step. But it also means that you might not detect errors in the Nextflow script until the interpreter lands on that specific part of the code during an actual workflow run.&lt;/p&gt; 
-&lt;p&gt;Because genomics workflows often involve processing large volumes of data, a workflow run could run for hours (and hours) before failing on a simple coding mistake. Having to restart these long-running analyses is frustrating and could be costly. This runtime-evaluation model argues for a static analysis tool that can scan Nextflow code &lt;em&gt;before&lt;/em&gt; workflows are run to detect issues early – known as a linter.&lt;/p&gt; 
-&lt;h2&gt;Introducing a linter for Nextflow&lt;/h2&gt; 
-&lt;p&gt;To address the need for static analysis, we’ve developed a static linter that can analyze Nextflow workflow code by taking advantage of the fact that the Nextflow DSL uses &lt;a href="https://groovy-lang.org/"&gt;Groovy&lt;/a&gt;, a dynamic language for the Java Virtual Machine, as its underlying implementation language. By building on Groovy, we can parse Nextflow code and analyze it, syntactically and semantically, without needing to execute the workflow itself.&lt;/p&gt; 
-&lt;p&gt;We built our linter using &lt;a href="https://codenarc.org/"&gt;CodeNarc&lt;/a&gt;, an open-source static analysis tool used to enforce Groovy coding standards and best practices. Under the covers, CodeNarc uses Groovy’s own parser to generate an abstract syntax tree (AST) representing the structure of the code. It then provides a framework for coding semantic rules that can traverse this AST using the &lt;a href="https://en.wikipedia.org/wiki/Visitor_pattern"&gt;visitor pattern&lt;/a&gt; and check for rule violations. We can take advantage of this capability to analyze Nextflow scripts for potential issues.&lt;/p&gt; 
-&lt;h2&gt;Understanding the Nextflow AST&lt;/h2&gt; 
-&lt;p&gt;An abstract syntax tree is a hierarchical data structure that models code at increasing levels of granularity. The root node represents the entire script or program. Child nodes represent top-level statements and expressions with their children representing sub-expressions. By traversing this tree, and examining nodes with semantic meaning, rules can gather the information we need to detect problems.&lt;/p&gt; 
-&lt;p&gt;We built a simple application called AST Echo to determine which AST node types need to be visited to evaluate different Nextflow language elements. Our app parses Nextflow code and prints out the AST hierarchy along with the Groovy node-type associated with each Nextflow construct.&lt;/p&gt; 
-&lt;p&gt;Using this approach, we were able to discover that a Nextflow process declaration is a Groovy &lt;code&gt;MethodCallExpression&lt;/code&gt; and that a Nextflow process block maps to a Groovy &lt;code&gt;ClosureExpression&lt;/code&gt; containing a &lt;code&gt;BlockExpression&lt;/code&gt;. Here’s a partial example of a Nextflow DSL script. We’ve made the &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/examples/example.nf"&gt;full source available on GitHub&lt;/a&gt;.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-clike"&gt;nextflow.enable.dsl=2
-
-process foo {
-    container 'ubuntu:latest'
-    cpus 1
-
-    output:
-    path 'foo.txt'
-
-    script:
-    """
-    your_command &amp;gt; foo.txt
-    """
-}
-
-// other processess …
-
-workflow {
-    data = channel.fromPath('/some/path/*.txt')
-    foo()
-    // further process calls …
-}
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Providing this as input to our AST Echo app will produce something like this.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;(∅:∅)-(∅:∅) &amp;lt;BlockStatement&amp;gt;:  { (nextflow.enable.dsl = 2); this.process(this.foo({ -&amp;gt; ... })); this.process(this.bar({ -&amp;gt; ... })); this.workflow({ -&amp;gt; ... }) }
-  -&amp;gt; (1:1)-(1:22) &amp;lt;ExpressionStatement&amp;gt;:  (nextflow.enable.dsl = 2)
-    -&amp;gt; (1:1)-(1:22) &amp;lt;BinaryExpression&amp;gt;: (nextflow.enable.dsl = 2)
-      -&amp;gt; (1:1)-(1:20) &amp;lt;PropertyExpression&amp;gt;: nextflow.enable.dsl
-        -&amp;gt; (1:9)-(1:16) &amp;lt;PropertyExpression&amp;gt;: nextflow.enable
-          -&amp;gt; (1:1)-(1:9) &amp;lt;VariableExpression&amp;gt;: nextflow
-          -&amp;gt; (1:10)-(1:16) &amp;lt;ConstantExpression&amp;gt;: enable
-        -&amp;gt; (1:17)-(1:20) &amp;lt;ConstantExpression&amp;gt;: dsl
-      -&amp;gt; (1:21)-(1:22) &amp;lt;ConstantExpression&amp;gt;: 2
-  -&amp;gt; (3:1)-(14:2) &amp;lt;ExpressionStatement&amp;gt;:  this.process(this.foo({ -&amp;gt; ... }))
-    -&amp;gt; (3:1)-(14:2) &amp;lt;MethodCallExpression&amp;gt;: this.process(this.foo({ -&amp;gt; ... }))
-      -&amp;gt; (3:1)-(3:1) &amp;lt;VariableExpression&amp;gt;: this
-      -&amp;gt; (3:1)-(3:8) &amp;lt;ConstantExpression&amp;gt;: process
-      -&amp;gt; (3:9)-(14:2) &amp;lt;ArgumentListExpression&amp;gt;: (this.foo({ -&amp;gt; ... }))
-        -&amp;gt; (3:9)-(14:2) &amp;lt;MethodCallExpression&amp;gt;: this.foo({ -&amp;gt; ... })
-          -&amp;gt; (3:9)-(3:9) &amp;lt;VariableExpression&amp;gt;: this
-          -&amp;gt; (3:9)-(3:12) &amp;lt;ConstantExpression&amp;gt;: foo
-          -&amp;gt; (3:13)-(14:2) &amp;lt;ArgumentListExpression&amp;gt;: ({ -&amp;gt; ... })
-            -&amp;gt; (3:13)-(14:2) &amp;lt;ClosureExpression&amp;gt;: { -&amp;gt; ... }
-              -&amp;gt; (4:5)-(14:1) &amp;lt;BlockStatement&amp;gt;:  { this.container(ubuntu:latest); this.cpus(1); this.path(foo.txt); 
-    your_command &amp;gt; foo.txt
-     }
-                -&amp;gt; (4:5)-(4:30) &amp;lt;ExpressionStatement&amp;gt;:  this.container(ubuntu:latest)
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;The root of the AST is on the first line. Each subsequent line is a node of the tree indented by the depth of the node.&lt;/p&gt; 
-&lt;p&gt;The start and stop locations of the code contained in the node are displayed first with their line number and character offset separated by ‘:’. The start and stop are separated by ‘-’. The type of Groovy expression or statement is displayed surrounded by angle brackets. Following this is the code fragment, possibly truncated, contained by the node as interpreted by the Groovy parser.&lt;/p&gt; 
-&lt;h2&gt;Writing linter rules&lt;/h2&gt; 
-&lt;p&gt;Armed with these mappings we can write CodeNarc rules targeting the relevant AST node types.&lt;/p&gt; 
-&lt;p&gt;CodeNarc rules define a set of methods matching AST node types which will be called by CodeNarc when the corresponding nodes are visited during AST traversal. In the body of these visit methods, we can write logic to gather information and detect rule violations. Any issues can be reported by adding them to CodeNarc’s violation list.&lt;/p&gt; 
-&lt;p&gt;For example, we can write a rule that checks if CPU or memory resource requests for processes fall within valid ranges. The rule would override CodeNarcs’s &lt;code&gt;AbstractAstVisitor&lt;/code&gt; &lt;code&gt;visitMethodCallExpression&lt;/code&gt; method which represents a method call in Groovy. It would check if the method call is requesting CPU resources and then evaluate if the arguments are valid.&lt;/p&gt; 
-&lt;p&gt;Let’s look at part of a Groovy implementation of a rule to check the &lt;code&gt;cpu&lt;/code&gt; directive by overriding the &lt;code&gt;visitMethodCallExpression&lt;/code&gt; :&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-clike"&gt;class CpuAstVisitor extends AbstractAstVisitor {
-    def MIN_CPU = 2
-    def MAX_CPU = 96
-
-    @Override
-    void visitMethodCallExpression(MethodCallExpression expression) {
-        if(expression.getMethodAsString() == 'cpus'){
-            checkOneArgument(expression)
-        }
-
-        super.visitMethodCallExpression(expression)
-    }
-
-
-    private checkOneArgument(final MethodCallExpression expression){
-        def methodArguments = AstUtil.getMethodArguments(expression)
-        if (methodArguments.size() == 0) {
-            addViolation(expression, 'the cpus directive must have one argument')
-            return new EmptyExpression()
-        } else if (methodArguments.size() &amp;gt; 1) {
-            addViolation(expression, 'the cpus directive must have only one argument')
-        }
-
-        if( methodArguments.first() instanceof ConstantExpression){
-           checkNumeric((ConstantExpression)methodArguments.first())
-        }
-    }
-
-    private checkNumeric(ConstantExpression expression){
-        try {
-            def val = Integer.parseInt(expression.value.toString())
-            checkMinMax(expression, val)
-        } catch (NumberFormatException ignored){
-            addViolation(expression,
-                    "'${expression.value}' is not a valid number.")
-        }
-
-    }
-    private void checkMinMax(Expression exp, final int val) {
-        if (val &amp;lt; MIN_CPU) {
-            addViolation(exp,
-                    "The minimum CPU count is '$MIN_CPU'.")
-        } else if (val &amp;gt; MAX_CPU) {
-            addViolation(exp,
-                    "The maximum CPU count is '$MAX_CPU'.")
-        }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;During the check, we validate several conditions. Violations are recorded by calling the &lt;code&gt;addViolation&lt;/code&gt; method. At the end of the checks the &lt;code&gt;visitMethodCallExpression&lt;/code&gt; of the super-class is invoked to continue the traversal of the AST. We’ve put the &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/linter-rules/src/main/groovy/software/amazon/nextflow/rules/healthomics/CpuRule.groovy"&gt;full source on GitHub&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;It’s critical to rigorously test rules to ensure they work as expected. CodeNarc provides a convenient rule-testing harness. It allows us to define test Nextflow code snippets along with expected rule violations. CodeNarc then runs analysis on these code fragments and compares the actual violations it finds to the expected results, ensuring that all &lt;em&gt;expected&lt;/em&gt; violations and no &lt;em&gt;unexpected&lt;/em&gt; violations are detected.&lt;/p&gt; 
-&lt;p&gt;For example, we can test that the rule in from our previous code list is violated when the &lt;code&gt;cpus&lt;/code&gt; value is 97 but not violated when the value is 2.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-clike"&gt;@Test
-void cpuRule_MaxViolation(){
-    final SOURCE =
-'''
-process MY_PROCESS {
- cpus 97
-}
-'''
-    assertSingleViolation(SOURCE, 3, 'cpus 97', “The maximum CPU count is ‘96’”)
-    }
-@Test
-void cpuRule_NoViolationsMin(){
-    final SOURCE =
-'''
-process MY_PROCESS {
- cpus 2
-}
-'''
-    assertNoViolations(SOURCE)
-}
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;This checks that the code defined by &lt;code&gt;SOURCE&lt;/code&gt; and asserts that a single violation occurs when &lt;code&gt;cpus&lt;/code&gt; is set to 97 and that no violations occur when cpus are set to 2. We’ve put the &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/linter-rules/src/test/groovy/software/amazon/nextflow/rules/healthomics/CpuRuleTest.groovy"&gt;full source of this test on GitHub&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Running the Linter Rules&lt;/h2&gt; 
-&lt;p&gt;To run the linter rules you build the package and then run from the command line with&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;java  -Dorg.slf4j.simpleLogger.defaultLogLevel=error \
-  -classpath ./linter-rules/build/libs/linter-rules-0.1.jar:CodeNarc-3.3.0-all.jar:slf4j-api-1.7.36.jar:slf4j-simple-1.7.36.jar \
-  org.codenarc.CodeNarc \
-  -report=text:stdout \
-  -rulesetfiles=rulesets/healthomics.xml \
-  -includes=**/**.nf
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;The &lt;code&gt;-includes&lt;/code&gt; argument will inspect all filenames matching the &lt;code&gt;*.nf&lt;/code&gt; pattern in the current working directory, &lt;em&gt;and&lt;/em&gt; any sub-directory. To adjust the rules to be run, you adjust &lt;code&gt;-rulesetfiles&lt;/code&gt; to specify either a custom ruleset in CodeNarc format, or a prebuilt set like &lt;code&gt;rulesets/general.xml&lt;/code&gt;.&lt;/p&gt; 
-&lt;p&gt;To simplify this, we’ve provided a &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/Dockerfile"&gt;Dockerfile&lt;/a&gt; that includes all required dependencies with a convenient entry point along with &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/tree/main?tab=readme-ov-file#docker"&gt;build and usage instructions&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Using this mechanism, the command to run with Docker becomes:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;docker run -v $PWD:/data -e ruleset=healthomics linter-rules-for-nextflow&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;You can find a prebuilt image in the &lt;a href="https://gallery.ecr.aws/aws-genomics/linter-rules-for-nextflow"&gt;Amazon ECR Public Gallery&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Detecting runtime compatibility issues&lt;/h2&gt; 
-&lt;p&gt;Nextflow provides portability across environments, but workflows can still be written in ways that tie them to certain runtime capabilities.&lt;/p&gt; 
-&lt;p&gt;We’ve developed rules that can detect the use of Nextflow features that may not be supported in AWS HealthOmics. For example, AWS HealthOmics ignores certain process directives that are only relevant to other runtime environments. Our rules warn when these directives are used so workflows designed for HealthOmics avoid incompatibility issues.&lt;/p&gt; 
-&lt;p&gt;The AWS HealthOmics workflow service provides a managed environment optimized for security, scalability, and cost efficiency. Workflows must adhere to certain constraints around storage, containers, and infrastructure. We’ve built rules that check Nextflow code for patterns that violate HealthOmics environment policies.&lt;/p&gt; 
-&lt;p&gt;For example, one rule checks that pipeline inputs are loaded from Amazon Simple Storage Service (Amazon S3) buckets, or HealthOmics Sequence Stores, and that pipeline container images are being pulled from Amazon ECR Private repositories.&lt;/p&gt; 
-&lt;p&gt;Other rules check that resource requests don’t exceed HealthOmics instance type capabilities. Configuring these as linter rules allows workflows to be pre-validated rather than discovering issues mid-execution.&lt;/p&gt; 
-&lt;p&gt;In addition to AWS HealthOmics specific checks, we’ve also &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/tree/main/linter-rules/src/main/groovy/software/amazon/nextflow/rules"&gt;created some general rules&lt;/a&gt; that detect invalid syntax, potential portability issues, and other common anti-patterns. For example, &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow/blob/main/linter-rules/src/main/groovy/software/amazon/nextflow/rules/AllowedDirectivesRule.groovy"&gt;a rule that detects&lt;/a&gt; the use of undefined process directives – this often indicates a typo or misunderstanding of the DSL.&lt;/p&gt; 
-&lt;h2&gt;Flexible, extensible, and open-source&lt;/h2&gt; 
-&lt;p&gt;The linter lets you &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow?tab=readme-ov-file#general-nf-rules-only"&gt;include only rule sets you’re interested in&lt;/a&gt;. You can focus strictly on general Nextflow rules or both general rules and HealthOmics best practices. Over time, we expect the rules library will grow to cover more scenarios.&lt;/p&gt; 
-&lt;p&gt;We architected our linter so that rules can easily be contributed by the Nextflow community.&lt;/p&gt; 
-&lt;p&gt;We’ve released the linter rules and the AST Echo utility as &lt;a href="https://github.com/awslabs/linter-rules-for-nextflow"&gt;open-source projects on GitHub&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;The code we’ve provided there uses the Apache 2.0 license. We welcome issues, pull requests, and additional rules from the Nextflow community.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;By providing early feedback on Nextflow code, this linter can improve developer productivity, reduce errors, and make workflows more portable. We encourage all Nextflow pipeline authors to integrate it into their continuous integration pipelines and contribute to its evolution.&lt;/p&gt; 
-&lt;p&gt;Static analysis of domain-specific languages like Nextflow opens up new possibilities for accelerating scientific advancements through code quality and collaboration.&lt;/p&gt;</content:encoded>
 					
 		
 		
