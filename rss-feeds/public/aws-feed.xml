@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Mon, 01 Jul 2024 16:28:55 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 02 Jul 2024 12:35:15 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,128 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Improve HPC workloads on AWS for environmental sustainability</title>
+		<link>https://aws.amazon.com/blogs/hpc/improve-hpc-workloads-on-aws-for-environmental-sustainability/</link>
+		
+		<dc:creator><![CDATA[Sam Mokhtari]]></dc:creator>
+		<pubDate>Tue, 02 Jul 2024 12:35:15 +0000</pubDate>
+				<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Sustainability]]></category>
+		<category><![CDATA[CFD]]></category>
+		<category><![CDATA[Computational Fluid Dynamics]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Slurm]]></category>
+		<category><![CDATA[visualization]]></category>
+		<category><![CDATA[Weather]]></category>
+		<guid isPermaLink="false">da98b13a916f8f924ea8af83da8c8373caefe598</guid>
+
+					<description>Need to cut your carbon footprint without sacrificing productivity? Migrating HPC workloads to the cloud allowed Baker Hughes to reduce emissions by 99%! Get tips for optimizing compute, storage, networking so you can do better.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3870" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/18/boofla88_a_supercomputer_sitting_in_the_middle_of_a_rainforest._013a2b55-5560-40a6-bf1e-9ee121f4dd3c.png" alt="Improve HPC workloads on AWS for environmental sustainability" width="380" height="212"&gt;HPC workloads are used across industries from finance and engineering to genomics and chemistry – all to enable opportunities for innovation and growth. Because the compute is so intensive, these systems can consume large amounts of energy and generate serious carbon emissions. Many businesses are looking to reduce their carbon footprint to meet the Paris accord, and on-premises HPC clusters constitute a noticeable portion of their total data center impact. But by migrating their HPC workloads to AWS &lt;a href="https://aws.amazon.com/solutions/case-studies/baker-hughes-case-study/"&gt;Baker Hughes&lt;/a&gt; was able to reduce their carbon footprint by 99%, setting an example for the community.&lt;/p&gt; 
+&lt;p&gt;If you want to achieve a similar result, it’s critical to optimize your cluster for resource efficiency &lt;em&gt;and&lt;/em&gt; effectiveness. HPC architectures are built on five main pillars: compute, storage, networking, visualization and orchestration.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll focus on each one of these pillars, and discuss tips and best practices that can help you optimize resource usage and the environmental impact of your workloads, while also keeping your productivity goals.&lt;/p&gt; 
+&lt;p&gt;To demonstrate these ideas, we’ll assume the use case of an automotive customer who needs to run computer-aided engineering (CAE). These types of jobs need large volumes of compute, so they’re representative of most simulations you’re likely to be doing in your environment, too.&lt;/p&gt; 
+&lt;h2&gt;Compute&lt;/h2&gt; 
+&lt;h3&gt;Choose the right instance type for your HPC workload&lt;/h3&gt; 
+&lt;p&gt;In an on-premises cluster, the computing nodes are usually homogeneous – they have the same CPU type and the quantity of memory per core. However, HPC workloads don’t all have the same requirements. For example, structural analysis can benefit from having a low latency NVMe scratch disk to access, computational fluid dynamics (CFD) jobs usually span across a greater number of cores, and finite element analysis (FEA) simulations need more memory per core, compared to other types of simulations.&lt;/p&gt; 
+&lt;p&gt;To reduce your carbon footprint, you need to optimize your consumption of computing resources, so it’s important to match your workload to the &lt;strong&gt;right compute instance types&lt;/strong&gt;.&lt;/p&gt; 
+&lt;p&gt;In AWS there are more than 750 types of Amazon Elastic Compute Cloud (Amazon EC2) instances to choose from, each one with different hardware characteristics. Recently, we launched a new family of instances dedicated to HPC workloads.&lt;/p&gt; 
+&lt;p&gt;For our CAE use case, you can use the new Amazon EC2 Hpc7a instance. We’ve seen them perform very well for workloads that can be accelerated by increasing the number of compute cores. You can read about some of our &lt;a href="https://aws.amazon.com/blogs/hpc/deep-dive-into-hpc7a-the-newest-amd-powered-member-of-the-hpc-instance-family/"&gt;benchmark tests in another post&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3&gt;Use AWS Graviton instances if you can&lt;/h3&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/ec2/graviton/"&gt;AWS Graviton&lt;/a&gt;&amp;nbsp;is a custom-designed processor created by AWS, based on the Arm64 architecture and which provides a balance of efficiency, performance, and cost. This makes it a good fit to lower the environmental impact of many HPC workloads. &lt;a href="https://aws.amazon.com/ec2/graviton/graviton-sustainability/"&gt;AWS Graviton-based Amazon EC2 instances use up to 60% less energy&lt;/a&gt; than comparable EC2 instances for the same performance. If your HPC application can be compiled for Arm64, you can use Graviton instances to enable greater energy efficiency for your compute intensive workloads.&lt;/p&gt; 
+&lt;p&gt;Hpc7g Instances are powered by AWS Graviton3E processors, with up to 35% higher vector instruction processing performance than the Graviton3. They are designed to give you the best price/performance for tightly coupled compute-intensive HPC and distributed computing workloads, and deliver 200 Gbps of dedicated network bandwidth that’s optimized for traffic between instances in the same subnet.&lt;br&gt; For CAE, customers can take advantage of open source CFD applications, like OpenFOAM, that can be compiled for Arm architecture processors and are well suited for the hpc7g instance type. But ISVs like Siemens, Cadence, and Ansys, now make versions of their solvers available for Graviton in the same way they do for x86.&lt;/p&gt; 
+&lt;p&gt;The table below summarizes some of the key HPC instance types with their characteristics, and provides a recommendation of the target workload.&lt;/p&gt; 
+&lt;div id="attachment_3869" style="width: 815px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3869" loading="lazy" class="size-full wp-image-3869" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/18/IMG-2024-06-18-11.05.54.png" alt="Table 1 – Comparison of Amazon EC2 HPC specific instance types showing example workloads and attributes" width="805" height="364"&gt;
+ &lt;p id="caption-attachment-3869" class="wp-caption-text"&gt;Table 1 – Comparison of Amazon EC2 HPC specific instance types showing example workloads and attributes&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Choose the right AWS Region for your HPC workload&lt;/h3&gt; 
+&lt;p&gt;AWS Well-Architected framework helps customers to build secure, highly-performant, resilient, and efficient architecture, and is built around six pillars: operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. The framework provides a consistent approach for customers and partners to evaluate architectures and implement scalable designs.&lt;/p&gt; 
+&lt;p&gt;The &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/region-selection.html"&gt;SUS01-BP01&lt;/a&gt; best practices in the AWS Well-Architected &lt;em&gt;Sustainability&lt;/em&gt; pillar, recommends that you choose the AWS Regions for your workload based on both business requirements and sustainability goals.&lt;br&gt; As explained in another &lt;a href="https://aws.amazon.com/blogs/architecture/how-to-select-a-region-for-your-workload-based-on-sustainability-goals/"&gt;blog post&lt;/a&gt;, this process includes two key steps:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Assess and shortlist potential Regions for your workload based on your business requirements.&lt;/li&gt; 
+ &lt;li&gt;Choose Regions near Amazon renewable energy projects and Region(s) where the grid has a lower published carbon intensity.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;As explained in the previous step, for the sample CAE workload, Hpc7a instances can accelerate this workload and help you to achieve your business goals.&lt;/p&gt; 
+&lt;p&gt;By using this simple script, you can assess that this instance type is available, for example, in the Stockholm Region (eu-north-1):&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;#!/bin/sh
+instance_type=hpc7a.96xlarge
+
+# Get a list of all AWS regions
+regions=$(aws ec2 describe-regions --all-regions --query 'Regions[].RegionName' --output text)
+
+echo "AWS Regions where $instance_type is available:"
+
+# Loop through each region and check if the instance type is available
+for region in $regions; do
+  available=$(aws ec2 describe-instance-type-offerings --filters Name=instance-type,Values=$instance_type --region $region --query 'InstanceTypeOfferings[].InstanceType' --output text 2&amp;gt;/dev/null)
+
+  if [ "$available" = "$instance_type" ]; then
+    echo "- $region"
+  fi
+done
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Moreover, the electricity consumed in the Stockholm Region is attributable to 100% renewable energy as listed on the &lt;a href="https://sustainability.aboutamazon.com/environment/the-cloud?energyType=true#renewable-energy-map"&gt;Amazon sustainability website&lt;/a&gt;. So, this Region is a good candidate for running your CAE workloads, and also achieving your sustainability goals.&lt;/p&gt; 
+&lt;h3&gt;Use a mix of EC2 purchase options&lt;/h3&gt; 
+&lt;p&gt;HPC workloads usually have different resource requirements and business priorities. You can use a combination of purchase options to address your specific business needs, balancing instance flexibility, scalability, and efficiency.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Use&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html"&gt;Compute Savings Plans&lt;/a&gt; for predictable, steady-state workloads that allow flexibility if your needs (like target Region, instance families, or instance types) change frequently.&lt;/li&gt; 
+ &lt;li&gt;Use&amp;nbsp;&lt;a href="https://alpha-docs-aws.amazon.com/AWSEC2/latest/UserGuide/ec2-on-demand-instances.html"&gt;On-Demand Instances&lt;/a&gt; for new, and unpredictable workloads&lt;/li&gt; 
+ &lt;li&gt;Use&amp;nbsp;&lt;a href="https://alpha-docs-aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html"&gt;Spot Instances&lt;/a&gt; to supplement the other options for applications that are fault tolerant and flexible.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Our example use case may require periods of intense activity to meet project milestones or client deadlines, where the elasticity of the cloud facilitates access to large amounts of On-Demand compute resources in order to meet tight deadlines. AWS HPC orchestration tools like AWS Batch and AWS ParallelCluster both have support for Spot, On-demand and Saving Plans resources.&lt;/p&gt; 
+&lt;h2&gt;Storage&lt;/h2&gt; 
+&lt;p&gt;AWS provides several types of storage and file system technologies that can be used for HPC workloads. Similar to compute, optimizing your storage choices can help you to accelerate your workload &lt;em&gt;and&lt;/em&gt; help to reduce your carbon emissions.&lt;/p&gt; 
+&lt;p&gt;Every workload has a different data strategy, but we can split them across different stages:&lt;/p&gt; 
+&lt;h4&gt;On-premises storage&lt;/h4&gt; 
+&lt;p&gt;Amazon’s goal is to power our operations with 100% renewable energy by 2025 – five years ahead of our original 2030 target, so migrating your entire portfolio of workloads to AWS is usually a great option to reduce your carbon footprint.&lt;/p&gt; 
+&lt;p&gt;In some cases, this is not possible because your data is generated from on-site instruments or labs. In this case, you need an efficient mechanism to move data to AWS to process in the cloud. Some of our managed file system offerings, such as &lt;a href="https://docs.aws.amazon.com/fsx/latest/FileCacheGuide/what-is.html"&gt;Amazon File Cache&lt;/a&gt;, allow you to mount the on-premises file system to the cloud. By doing that, you’ll avoid unnecessarily replicating your data in the cloud and the results of your simulations will also be accessible on-premises.&lt;/p&gt; 
+&lt;h3&gt;Local Disk&lt;/h3&gt; 
+&lt;p&gt;Use EBS volumes to store your data on the computing nodes. If your applications need access to high-speed, low-latency local storage for scratch files, you can use local NVMe-based SSD block storage physically connected to the host server. Many Amazon EC2 instances – like the Hpc6id – have multiple NVMe disks to accelerate the performance of the most IO demanding workloads. Keep in mind that these local disks are ephemeral, and their content will be automatically erased when you stop the instances. You need to identify which files you need to save when the job has been completed and move them to a persistent storage area, like a shared POSIX file system or Amazon S3.&lt;/p&gt; 
+&lt;h3&gt;Shared POSIX file system&lt;/h3&gt; 
+&lt;p&gt;If your applications need to access a shared file system, you can use one of the AWS managed file systems. For example, Amazon FSx for Lustre is a fully-managed service that provides high-performance storage for compute workloads. Powered by Lustre, the world’s most popular high-performance file system, FSx for Lustre offers shared storage with sub-millisecond latencies, up to &lt;em&gt;terabytes per second&lt;/em&gt; of throughput, and millions of IOPS.&lt;/p&gt; 
+&lt;h3&gt;Long term storage&lt;/h3&gt; 
+&lt;p&gt;Once the jobs are completed, you can migrate your data to a long-term storage in Amazon S3. This will help you to reduce the amount of data in the shared file system. FSx for Lustre also integrates with Amazon S3 via the Data Repository mechanism that allows seamless access to objects in Amazon S3 that can be lazy loaded into the high-performance file system layer. This approach delivers the required access semantics and performance for scalable HPC applications when they’re needed, while also providing the usual capacity, cost, data protection, lifecycle, and sustainability benefits of Amazon S3.&lt;/p&gt; 
+&lt;h3&gt;Use life cycle policies to move and delete data&lt;/h3&gt; 
+&lt;p&gt;HPC workloads have datasets with different retention and access requirements. For example, your HPC application may need frequent access to&amp;nbsp;some datasets for a limited period of time. After that, those datasets can be archived or deleted.&lt;/p&gt; 
+&lt;p&gt;To efficiently manage your HPC datasets, you can configure lifecycle policies, which are rules that define how to handle datasets. You can set automated lifecycle policies to enforce lifecycle rules. You can set up automated lifecycle policies for &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html"&gt;Amazon S3&lt;/a&gt;, &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html"&gt;Elastic Block Storeage (EBS)&lt;/a&gt;, and &lt;a href="https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html"&gt;Amazon EFS&lt;/a&gt;&lt;u&gt;.&lt;/u&gt;&lt;/p&gt; 
+&lt;p&gt;Our example CAE application is well suited to the FSx for Lustre file system since it allows high performance concurrent access from multiple compute instances. You can use the &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html"&gt;S3 Data Repository&lt;/a&gt; settings to automate the migration of the data to Amazon S3 and then the S3 lifecycle policies to move the data from different&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html"&gt;storage classes&lt;/a&gt;&amp;nbsp;like&amp;nbsp;&lt;strong&gt;S3 Standard-IA &lt;/strong&gt;and&amp;nbsp;&lt;strong&gt;S3 Glacier Deep Archive.&lt;/strong&gt;&lt;/p&gt; 
+&lt;h2&gt;Networking&lt;/h2&gt; 
+&lt;p&gt;For tightly coupled workloads, it’s important to remove all network bottlenecks to guarantee the best utilization of your computing resources. These applications are sensitive to network latency so we recommended using &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html"&gt;&lt;strong&gt;Cluster Placement Group&lt;/strong&gt;&lt;/a&gt;&lt;strong&gt;s (CPG)&lt;/strong&gt; and &lt;a href="https://aws.amazon.com/hpc/efa/"&gt;&lt;strong&gt;Elastic Fabric Adapter (EFA)&lt;/strong&gt;&lt;/a&gt;. Deploying your compute nodes in the same &lt;strong&gt;CPG&lt;/strong&gt;, will allow for reliable low-latency communication between the instances, and will help your tightly-coupled application to scale as desired.&lt;br&gt; &lt;strong&gt;Elastic Fabric Adapter (EFA)&lt;/strong&gt; is a network interface for Amazon EC2 instances that enables customers to run HPC applications requiring high levels of inter-instance communications, like computational fluid dynamics, weather modelling, and reservoir simulation, at scale on AWS.&lt;/p&gt; 
+&lt;p&gt;Coming back to our example, most of the HPC applications used in the automotive industry implement distributed memory parallelism using the Message Passing Interface (MPI), allowing a single simulation to employ parallel processing using the cores and memory of multiple instances to increase simulation speed. MPI applications perform best using instances which feature EFA because it reduces latency and increases throughput for MPI parallel communications.&lt;/p&gt; 
+&lt;h2&gt;Orchestration&lt;/h2&gt; 
+&lt;p&gt;If you want to reduce the environmental impact of HPC workloads, it’s important to right size your compute resources and deploy only when needed. There is usually no need to have all your compute always up and running when there are no jobs to run.&lt;/p&gt; 
+&lt;p&gt;On AWS, you can start and stop the computing nodes based on your users’ needs: they submit their jobs and AWS HPC infrastructure scales capacity up (or down) to aim for the right capacity when needed.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt; is a fully managed batch computing service that plans, schedules, and runs your containerized HPC or Machine Learning workloads across the full range of AWS compute offerings, such as Amazon ECS, Amazon EKS, and AWS Fargate, using Spot or On-Demand instances. If you select the allocation strategy, AWS Batch will automatically select the Spot instances that are large enough to meet the requirements of the jobs and are less likely to be interrupted. Using Spot instances is a great mechanism to run your compute intensive workload leveraging our unused capacity.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; is an open-source cluster management tool that makes it easy for you to deploy and manage HPC clusters on AWS. ParallelCluster uses a graphical interface to let you model and provision all the resources needed for your HPC applications in an automated and secure manner. It supports multiple instance types and job submission queues using SLURM.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;For example, automotive customers tend to deploy their HPC infrastructure using AWS ParallelCluster because it can configure EFA automatically and mount an FSx for Lustre file system for the high-performance scratch area.&lt;/p&gt; 
+&lt;h2&gt;Remote visualization&lt;/h2&gt; 
+&lt;p&gt;If you need an interactive graphical application to generate the input files for your jobs, it’s more convenient to also run the pre-processing GUI on AWS. Customers use remote visualization technologies such as &lt;a href="https://aws.amazon.com/hpc/dcv/"&gt;NICE DCV&lt;/a&gt; to stream the graphics from EC2 nodes back to the end-user laptop. By using a remote visualization technology, you remove the need to copy large datasets to and from the cloud.&lt;/p&gt; 
+&lt;p&gt;For our automotive use case, NICE DCV is an excellent choice for the graphics intensive pre-processing and post-processing stages of the HPC workflows. NICE DCV allows you to use graphics instances with powerful GPUs and direct access to the same data used by the simulation stages, allowing high performance and interactive model setup and visualization of results.&lt;/p&gt; 
+&lt;h2&gt;Evaluating sustainability improvements for your workloads&lt;/h2&gt; 
+&lt;p&gt;The best way to evaluate success when optimizing HPC workloads for sustainability is to use&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/evaluate-specific-improvements.html"&gt;proxy measures and unit of work KPIs&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;The aggregate cost of your computational resources can be a good “&lt;em&gt;rule of thumb&lt;/em&gt;” proxy for their energy consumption. Generally, compute resources (EC2 instance types and sizes) with more processing power, use commensurately more energy and mostly have a higher price.&lt;/p&gt; 
+&lt;p&gt;To get a measure of where you currently stand, you could potentially analyze the total volume of simulation or modelling work that you have accomplished within say a typical one-month period, from which you can derive a metric for the average cost per job. Of course, different applications and workloads can have quite different computational resource requirements, so you might be better served deriving an average &lt;em&gt;cost per job&lt;/em&gt; for &lt;em&gt;each job type&lt;/em&gt;. Your challenge is to then try to reduce this average cost per job, by trying different EC2 instance types or sizes that can deliver the required performance at further reduced cost.&lt;/p&gt; 
+&lt;p&gt;For each job type, it’s also important to define a service level agreement (SLA) represented by the maximum allowable run time (cut-off time) to maintain business operations or staff productivity objectives. This defines the practical limit, beyond which further parallelism, or performance optimization doesn’t help.&lt;/p&gt; 
+&lt;p&gt;For the type and quantity of computing resources that you &lt;em&gt;do&lt;/em&gt; select, it’s also important to pay attention to their resource utilization while running the workload. For compute-intensive HPC workloads, you should generally not have any idle instances, and all CPU cores should generally be running at close to 100%, unless explainable by phases of parallel communication or storage I/O. Remember that if network transfers or I/O time are significant it may be beneficial to select EC2 instances with higher speed networking, or perhaps faster local or shared storage options.&lt;/p&gt; 
+&lt;p&gt;To better understand how to use proxy measures to optimize workloads for efficiency, you can read&amp;nbsp;&lt;a href="https://wellarchitectedlabs.com/sustainability/300_labs/300_cur_reports_as_efficiency_reports/"&gt;Sustainability Well-Architected Lab&lt;/a&gt;&amp;nbsp;on&amp;nbsp;&lt;em&gt;Turning the Cost and Usage Report into Efficiency Reports&lt;/em&gt;.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Reducing the environmental impact of HPC workloads is a journey. Moving your workloads to AWS will help you to accelerate the reduction of your carbon footprint emissions quickly. In this post, we provided guidance and recommendations on how to improve your HPC workload on AWS without sacrificing your business outcomes.&lt;/p&gt; 
+&lt;p&gt;To learn more, check out the&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html"&gt;Sustainability Pillar of the AWS Well-Architected Framework&lt;/a&gt;&amp;nbsp;and other blog posts on&amp;nbsp;&lt;a href="https://aws.amazon.com/blogs/architecture/tag/sustainability/"&gt;architecting for sustainability&lt;/a&gt;. For more architecture content, refer to&amp;nbsp;the &lt;a href="https://aws.amazon.com/architecture/"&gt;AWS Architecture Center&lt;/a&gt;&amp;nbsp;for reference architecture diagrams, vetted architecture solutions,&amp;nbsp;&lt;a href="https://aws.amazon.com/architecture/well-architected/"&gt;Well-Architected&lt;/a&gt;&amp;nbsp;best practices, patterns, icons, and more.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Simulating autonomous mining operations using Robotec.ai on AWS</title>
 		<link>https://aws.amazon.com/blogs/hpc/simulating-autonomous-mining-operations-using-robotec-ai-on-aws/</link>
 		
@@ -30,7 +152,7 @@
 		<guid isPermaLink="false">7e189a5a1112ae1b83b595746cad451281851d11</guid>
 
 					<description>Big changes are underway in mining - see how the Boliden Group simulates fleets of autonomous trucks using AWS Batch - for safety and efficiency.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright size-full wp-image-3749" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/30/Simulating-autonomous-mining-operations-using-Robotec.ai-on-AWS-1.png" alt="" width="380" height="212"&gt;This post was contributed by Matthew Hansen, Principal SA, Advanced Computing &amp;amp; Simulation, Ryan Qi, Principal BD/GTM, Advanced Computing from AWS and Dominik Jargot, Software Engineer, Bartłomiej Boczek, Senior Machine Learning Engineer from Robotec.ai, and Peter Burman, Program Manager, Boliden.&lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3749" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/30/Simulating-autonomous-mining-operations-using-Robotec.ai-on-AWS-1.png" alt="" width="380" height="212"&gt;This post was contributed by Matthew Hansen, Principal SA, Advanced Computing &amp;amp; Simulation, Ryan Qi, Principal BD/GTM, Advanced Computing from AWS and Dominik Jargot, Software Engineer, Bartłomiej Boczek, Senior Machine Learning Engineer from Robotec.ai, and Peter Burman, Program Manager, Boliden.&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Autonomous mining operations represent a significant leap forward in the mining industry, offering enhanced safety, efficiency, and productivity. The introduction of autonomous trucks is at the forefront of this transformation. &lt;a href="https://www.boliden.com/"&gt;Boliden AB&lt;/a&gt;, a Swedish multinational company specializing in precious metals, is an AWS customer using autonomous trucking technology for mining operations. These self-driving heavy-duty vehicles are equipped with advanced sensors and navigation systems, and operate around the clock without human intervention – reducing the risk of accidents and increasing uptime. These trucks follow pre-determined routes to move materials from the mining site to storage or processing sites, communicating real-time data back to a central control system.&lt;/p&gt; 
 &lt;p&gt;Simulations are instrumental in developing and optimizing autonomous mining operations. They create a virtual environment for testing various scenarios and conditions, minimizing the risks and costs of real-world trials. Engineers at Boliden use simulations to evaluate the operations and performance of autonomous trucks, refine control strategies, and ensure systems can adapt to unexpected events or changes in the mining environment. This predictive capability is essential for maintaining safety, enhancing efficiency, and ensuring continuous production, all of which contribute to the long-term sustainability and profitability of mining operations.&lt;/p&gt; 
 &lt;p&gt;In this post, you’ll learn how Boliden simulates multiple autonomous trucks in a mine, and scales those simulations to run dozens of scenarios simultaneously using the recently added multi-container jobs feature in AWS Batch.&lt;/p&gt; 
@@ -1903,262 +2025,6 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;Developing and deploying HPC and AI workloads is complex and difficult enough without fighting the headwinds of equipment availability, power and cooling issues, datacenter build out, and vendor interoperability. By leveraging FSx for Lustre, you can enable your organization to cloud burst HPC or AI workloads to AWS, or easily migrate workloads to AWS.&lt;/p&gt; 
 &lt;p&gt;But if your organization is just setting out on an HPC or AI development journey – you can instead start today and shave months or years off your project. If you want to stand on the shoulders of others you can use cluster and filesystem stacks created by experts who’ve all done this before. You can launch customizable templates from our &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipes Library&lt;/a&gt;, which have all been built to be interoperable, and simple to use. Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; if you have ideas for how we can make it easier for you.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Run simulations using multiple containers in a single AWS Batch job</title>
-		<link>https://aws.amazon.com/blogs/hpc/run-simulations-using-multiple-containers-in-a-single-aws-batch-job/</link>
-		
-		<dc:creator><![CDATA[Matt Hansen]]></dc:creator>
-		<pubDate>Mon, 22 Apr 2024 15:39:25 +0000</pubDate>
-				<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[Containers]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">fe5f2de80116bdc4f1c348b4fd64c544ff490f56</guid>
-
-					<description>Run simulations using multiple containers in a single AWS Batch job Matthew Hansen, Principal Solutions Architect, AWS Advanced Computing &amp;amp; Simulation Recently, AWS Batch launched a new feature that makes it possible to run multiple containers within a single job. This enables new scenarios customers have asked about like simulations for autonomous vehicles, multi-robot collaboration, […]</description>
-										<content:encoded>&lt;p&gt;Run simulations using multiple containers in a single AWS Batch job&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Matthew Hansen, Principal Solutions Architect, AWS Advanced Computing &amp;amp; Simulation&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Recently, AWS Batch launched a new feature that makes it possible to run multiple containers within a single job. This enables new scenarios customers have asked about like simulations for autonomous vehicles, multi-robot collaboration, and other advanced simulations.&lt;/p&gt; 
-&lt;p&gt;For autonomous system (AS) developers, this means you can keep your simulation and test scenario code in separate containers from the autonomy and sensor pipelines you want to test. This helps you test your modular system design (like in a software-defined vehicle) which has many components communicating over a local network.&lt;/p&gt; 
-&lt;p&gt;Prior to this launch, you could run these types of simulations in Batch, but: you were limited to a single container per job. For some users that meant creating a very large container (tens of gigabytes) containing all the code for the system, plus a high-fidelity simulator, &lt;em&gt;and&lt;/em&gt; all the test code to run the scenarios. This blows out container build-times and generates long download times. It’ also an unnecessary coupling of components of the autonomous system. We heard you, so today we can talk about multi-container support in AWS Batch to address these issues.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll look at some multi-container simulation use-cases, learn how AWS Partners have used this to run their simulators using Batch, and then show you how to quickly get started running all kinds of multi-container jobs in Batch.&lt;/p&gt; 
-&lt;h2&gt;Complex simulations&lt;/h2&gt; 
-&lt;h4&gt;Autonomous Vehicles&lt;/h4&gt; 
-&lt;p&gt;Today’s autonomous vehicles are simulated for millions of miles before they’re tested in the real world. These vehicles often have multiple sensors, including lidar and cameras, feeding into perception pipelines which are detecting other vehicles, pedestrians, traffic signals, and everything else needed for safe driving. They also have one or more control algorithms that are navigating via GPS, operating the steering and brakes, monitoring heading, speed, fuel, distance travelled, and other systems to operate the vehicle.&lt;/p&gt; 
-&lt;p&gt;Because of this, the number of required software components can be quite large. These components are usually developed by different engineering teams, then integrated for system testing. By enabling each team to build their entire stack or pipeline into a separate container, engineers can test against the other components more easily, without having to rebuild everything into one, massive, monolithic container. Figure 1 is an example of an autonomous vehicle simulation. There are five total containers, &amp;nbsp;one for the test scenario runner, one for the simulator, and three containers for the autonomous vehicle, representing the lidar processing, camera pipeline, and the autonomous control.&lt;/p&gt; 
-&lt;div id="attachment_3577" style="width: 769px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3577" loading="lazy" class="size-full wp-image-3577" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.29.13.png" alt="Figure 1 - An example of an autonomous vehicle simulation. There’s a container for the test scenario runner and the simulator, and three containers for the autonomous vehicle, representing the lidar processing, camera pipeline and the autonomous control." width="759" height="441"&gt;
- &lt;p id="caption-attachment-3577" class="wp-caption-text"&gt;Figure 1 – An example of an autonomous vehicle simulation. There’s a container for the test scenario runner and the simulator, and three containers for the autonomous vehicle, representing the lidar processing, camera pipeline and the autonomous control.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h4&gt;Robotics&lt;/h4&gt; 
-&lt;p&gt;Another use case needing multiple containers is robotics simulation. We’re using robots in growing numbers for logistics, healthcare, and other industries. Robots – like autonomous cars – can also have multiple sensors (lidars, cameras, odometry, inertial measurement units), and a control stack for moving, all of which can be containerized.&lt;/p&gt; 
-&lt;p&gt;Often we want to simulate multiple robots in a single environment, like a warehouse. That means you can go from running a few containers, to running hundreds at once in a single simulation. In the multi-robot example diagram (Figure 2), you can see there are separate containers for the test scenario runner, the simulation app, and four robots, each with containers for lidar, vision processing and control.&lt;/p&gt; 
-&lt;div id="attachment_3578" style="width: 817px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3578" loading="lazy" class="size-full wp-image-3578" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.29.40.png" alt="Figure 2 - A four robot simulation in an AWS Batch multi-node parallel job. On the main node (Node 1) there’s a container each for the test scenario runner and the simulator, and four nodes of three containers for each robot, representing the lidar processing, camera pipeline and the autonomous control." width="807" height="425"&gt;
- &lt;p id="caption-attachment-3578" class="wp-caption-text"&gt;Figure 2 – A four robot simulation in an AWS Batch multi-node parallel job. On the main node (Node 1) there’s a container each for the test scenario runner and the simulator, and four nodes of three containers for each robot, representing the lidar processing, camera pipeline and the autonomous control.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;These are just two examples of simulations that can be run in Batch with multi-container support.&lt;/p&gt; 
-&lt;h2&gt;Partners love this&lt;/h2&gt; 
-&lt;p&gt;A number of AWS partners have used Batch for some time to provide simulation software and services for the AV/ADAS and robotics communities. Over the next few months, we’ll have more posts in this channel which dive deeper into the work they’re all doing.&lt;/p&gt; 
-&lt;h3&gt;IPG Automotive&lt;/h3&gt; 
-&lt;div id="attachment_3579" style="width: 369px" class="wp-caption alignright"&gt;
- &lt;img aria-describedby="caption-attachment-3579" loading="lazy" class="size-full wp-image-3579" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.30.32.png" alt="Figure 3 - IPG CarMaker is an autonomous car simulator" width="359" height="396"&gt;
- &lt;p id="caption-attachment-3579" class="wp-caption-text"&gt;Figure 3 – IPG CarMaker is an autonomous car simulator&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;&lt;a href="https://ipg-automotive.com/en/"&gt;IPG Automotive&lt;/a&gt; is an AWS partner that’s been developing software for decades. They’re best known for their AV/ADAS simulators: CarMaker, TruckMaker and MotorcycleMaker. IPG has been partnering with the AWS Batch team to develop the multi-container feature for Batch to enable their customers to scale out these simulations on AWS.&lt;/p&gt; 
-&lt;p&gt;“&lt;em&gt;Developing cutting-edge autonomous vehicles and ADAS technologies requires hundreds of thousands of hours of testing within simulated environments mirroring real-world driving scenarios&lt;/em&gt;,” according to David Howarth, who is the Director of Business Development at IPG Automotive North America. “&lt;em&gt;By using AWS Batch multi-container jobs for our simulations, IPG’s customers can now seamlessly separate their CarMaker simulator, the 3D virtual environment, and their sensor pipelines into different containers on AWS. This capability accelerates both DevOps and debugging processes, significantly enhancing overall efficiency.&lt;/em&gt;”&lt;/p&gt; 
-&lt;h3&gt;Robotec.ai&lt;/h3&gt; 
-&lt;div id="attachment_3580" style="width: 394px" class="wp-caption alignleft"&gt;
- &lt;img aria-describedby="caption-attachment-3580" loading="lazy" class="size-full wp-image-3580" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.31.08.png" alt="Figure 4 - Simulated autonomous mining operation in RoSi" width="384" height="355"&gt;
- &lt;p id="caption-attachment-3580" class="wp-caption-text"&gt;Figure 4 – Simulated autonomous mining operation in RoSi&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;&lt;a href="https://robotec.ai/"&gt;Robotec.ai&lt;/a&gt; is a growing simulation software company that has developed their own simulator called RoSi. They are working with customers on AV/ADAS, robotics, and autonomous mining operations.&lt;/p&gt; 
-&lt;p&gt;“&lt;em&gt;Our customers demand thorough and safe testing of autonomous vehicles within a simulated environment, for example one of our mining customers, Boliden&lt;/em&gt;,” said Michal Niezgoda, CEO of Robotec.ai. “&lt;em&gt;The AWS Batch multi-container jobs feature streamlines our simulations at scale and powers our RoSi simulator to meet customer needs.”&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;“By using AWS Batch multi-container jobs, we can easily execute a large number of operational scenarios for a mining site with just a few clicks,” &lt;/em&gt;said Peter Burman, Program Manager of Boliden.&lt;em&gt; “This new feature, as part of AWS Batch, integrates seamlessly with other AWS services, allowing us to use the scaling and scheduling capabilities of the cloud and optimize compute costs.”&lt;/em&gt;&lt;/p&gt; 
-&lt;h3&gt;MORAI.ai&lt;/h3&gt; 
-&lt;p&gt;MORAI, a technology company from Korea, offers a digital twin simulation system that accelerates the development and testing of autonomous vehicles, urban air mobility (UAM), autonomous mobile robots (AMR), and maritime autonomous surface ships (MASS).&lt;/p&gt; 
-&lt;div id="attachment_3581" style="width: 322px" class="wp-caption alignright"&gt;
- &lt;img aria-describedby="caption-attachment-3581" loading="lazy" class="size-full wp-image-3581" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.31.38.png" alt="Figure 5 - MORAI Simulation" width="312" height="499"&gt;
- &lt;p id="caption-attachment-3581" class="wp-caption-text"&gt;Figure 5 – MORAI Simulation&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;“&lt;em&gt;Before AWS Batch multi-container jobs, building custom simulation infrastructures for each client took several months. With the multi-container jobs feature, we can get our customers up and running with their simulations in just a few days&lt;/em&gt;,” said Jun Hong, co-founder and head of the R&amp;amp;D center at MORAI. “&lt;em&gt;This is crucial as they conduct extensive testing and validation to ensure their autonomous systems, including AV/ADAS, robotics, and maritime applications, are prepared to safely manage any scenarios they might face in the real world. The new feature significantly streamlines job preparation and reduces our reliance on in-house tool development&lt;/em&gt;.”&lt;/p&gt; 
-&lt;h2&gt;How it works&lt;/h2&gt; 
-&lt;p&gt;Let’s talk about the basic workflow for running multi-container simulations in Batch. The diagram in Figure 3 shows a high-level overview of the workflow we’ll discuss.&lt;/p&gt; 
-&lt;div id="attachment_3582" style="width: 776px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3582" loading="lazy" class="wp-image-3582 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.32.00.png" alt="Figure 6 - The AWS Batch simulation flow. A user creates a multi-container job definition, then submits a job to the job queue for a compute environment." width="766" height="357"&gt;
- &lt;p id="caption-attachment-3582" class="wp-caption-text"&gt;Figure 6 – The AWS Batch simulation flow. A user creates a multi-container job definition, then submits a job to the job queue for a compute environment.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 6 – The AWS Batch simulation flow. A user creates a multi-container job definition, then submits a job to the job queue for a compute environment.&lt;/p&gt; 
-&lt;p&gt;To run a simulation job in AWS Batch you need to:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Build and push your containers into a repository, like Amazon ECR.&lt;/li&gt; 
- &lt;li&gt;Create the Batch resources including: 
-  &lt;ol&gt; 
-   &lt;li&gt;A compute environment (CE)&lt;/li&gt; 
-   &lt;li&gt;A job queue (JQ)&lt;/li&gt; 
-   &lt;li&gt;A multi-container job definition&lt;/li&gt; 
-  &lt;/ol&gt; &lt;/li&gt; 
- &lt;li&gt;Submit the job to the job queue&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h2&gt;Running an example simulation job using multiple containers&lt;/h2&gt; 
-&lt;p&gt;Let’s use this framework to walk through a simple example that demonstrates how to start two containers in a Batch job so they can communicate with each other. One container is a &lt;em&gt;talker&lt;/em&gt; that publishes a message and the other is a &lt;em&gt;listener&lt;/em&gt; that will receive and echo the message. We’ll use &lt;a href="https://docs.ros.org/en/humble/index.html"&gt;ROS 2&lt;/a&gt;, a software library for autonomous vehicles and robotics, to communicate between the two containers. Figure 4 illustrates the simple communication. The &lt;em&gt;talker&lt;/em&gt; container will publish ‘hello’ on the ROS 2 topic named &lt;em&gt;/chatter&lt;/em&gt; and the &lt;em&gt;listener&lt;/em&gt; will echo the message.&lt;/p&gt; 
-&lt;div id="attachment_3583" style="width: 580px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3583" loading="lazy" class="size-full wp-image-3583" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.32.28.png" alt="Figure 7 - An example Batch multi-container job with two containers—a talker and a listener." width="570" height="371"&gt;
- &lt;p id="caption-attachment-3583" class="wp-caption-text"&gt;Figure 7 – An example Batch multi-container job with two containers—a talker and a listener.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;To run this example, we’ll follow the steps we outlined already to create the Batch job, using the console and the AWS Command-Line Interface (CLI). We’ll use a container image that already exists in Amazon ECR, so there’s no need to build or push the image.&lt;/p&gt; 
-&lt;h3&gt;Step 1 – create a compute environment&lt;/h3&gt; 
-&lt;p&gt;First, create an EC2 based compute environment from the AWS Batch console:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Log into your AWS Account, and navigate to the AWS Batch console&lt;/li&gt; 
- &lt;li&gt;In the navigation pane, choose &lt;strong&gt;Environments&lt;/strong&gt;, then &lt;strong&gt;Create &lt;/strong&gt;&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;div id="attachment_3584" style="width: 863px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3584" loading="lazy" class="size-full wp-image-3584" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.33.01.png" alt="Figure 8 - Compute Environments console view" width="853" height="387"&gt;
- &lt;p id="caption-attachment-3584" class="wp-caption-text"&gt;Figure 8 – Compute Environments console view&lt;/p&gt;
-&lt;/div&gt; 
-&lt;ol start="3"&gt; 
- &lt;li&gt;Select &lt;strong&gt;Amazon&lt;/strong&gt; &lt;strong&gt;EC2&lt;/strong&gt; Orchestration Type, then&lt;strong&gt; Confirm&lt;/strong&gt;&lt;/li&gt; 
- &lt;li&gt;Input a &lt;strong&gt;Name, &lt;/strong&gt;&lt;code&gt;CE_EC2&lt;/code&gt;&lt;/li&gt; 
- &lt;li&gt;Select an &lt;strong&gt;Instance Role &lt;/strong&gt;(if you don’t have an instance role follow &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/instance_IAM_role.html"&gt;the user guide&lt;/a&gt;, or choose &lt;strong&gt;Create new role&lt;/strong&gt;)&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Next,&lt;/strong&gt; then &lt;strong&gt;Next&lt;/strong&gt; again, your default VPC and subnet information should be automatically added&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Next&lt;/strong&gt;, then &lt;strong&gt;Create Compute Environment&lt;/strong&gt;&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;You’ve now created a compute environment. You can view it any time from the navigation pane under &lt;strong&gt;Compute Environments&lt;/strong&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt; 
-&lt;div id="attachment_3585" style="width: 864px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3585" loading="lazy" class="size-full wp-image-3585" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.33.27.png" alt="Figure 9 - Compute Environment console with newly created environment" width="854" height="394"&gt;
- &lt;p id="caption-attachment-3585" class="wp-caption-text"&gt;Figure 9 – Compute Environment console with newly created environment&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Step 2 – create a job queue&lt;/h3&gt; 
-&lt;p&gt;Next create a Job Queue for your Compute Environment from the AWS Batch console:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;On the navigation pane, choose &lt;strong&gt;Job Queues&lt;/strong&gt;, then &lt;strong&gt;Create &lt;/strong&gt;&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;div id="attachment_3586" style="width: 862px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3586" loading="lazy" class="size-full wp-image-3586" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.33.45.png" alt="Figure 10 - Job queue console view" width="852" height="391"&gt;
- &lt;p id="caption-attachment-3586" class="wp-caption-text"&gt;Figure 10 – Job queue console view&lt;/p&gt;
-&lt;/div&gt; 
-&lt;ol start="2"&gt; 
- &lt;li&gt;Select &lt;strong&gt;Amazon EC2&lt;/strong&gt; Orchestration Type&lt;/li&gt; 
- &lt;li&gt;Input a &lt;strong&gt;Name&lt;/strong&gt;, &lt;code&gt;JQ_EC2&lt;/code&gt;&lt;/li&gt; 
- &lt;li&gt;From the &lt;strong&gt;Connected compute environments&lt;/strong&gt; drop down list, select the environment you created in step 1 (&lt;code&gt;CE_EC2&lt;/code&gt;).&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Create Job Queue&lt;/strong&gt;&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;You’ve now created a Job Queue to submit your job into. You can view it any time from the navigation pane under &lt;strong&gt;Job Queues.&lt;/strong&gt;&lt;/p&gt; 
-&lt;div id="attachment_3587" style="width: 869px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3587" loading="lazy" class="size-full wp-image-3587" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.34.09.png" alt="Figure 11 - Job queue console with newly created queue" width="859" height="394"&gt;
- &lt;p id="caption-attachment-3587" class="wp-caption-text"&gt;Figure 11 – Job queue console with newly created queue&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Step 3 – create a job definition&lt;/h3&gt; 
-&lt;p&gt;For this step, we’ll use the AWS CLI to create the Job Definition for our job using &lt;em&gt;JSON input&lt;/em&gt;. For instructions on setting up the AWS CLI, see the &lt;a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html"&gt;Getting Started&lt;/a&gt; guide. You’ll need to update to the latest CLI version to get the new Batch multi-container functionality.&lt;/p&gt; 
-&lt;p&gt;Create a new file called &lt;code&gt;ros2-talker-listener.json&lt;/code&gt; and copy the following JSON into that file.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-json"&gt;{
-  "jobDefinitionName": "ros2-talker-listener",
-  "type": "container",
-  "platformCapabilities": [
-    "EC2"
-  ],
-  "timeout": { 
-      "attemptDurationSeconds": 60
-  },
-  "ecsProperties": {
-    "taskProperties": [
-      {
-        "ipcMode": "task",
-        "containers": [
-          {
-            "essential": true,
-            "command": ["/bin/bash", "-c", "ros2 topic pub -t 10 /chatter std_msgs/msg/String '{data: hello}'"],
-            "image": "public.ecr.aws/docker/library/ros:humble",
-            "name": "talker",
-            "resourceRequirements": [
-              {
-                "type": "VCPU",
-                "value": "1"
-              },
-              {
-                "type": "MEMORY",
-                "value": "2048"
-              }
-            ]
-          },
-          {
-            "essential": true,
-            "command": ["/bin/bash", "-c", "ros2 topic echo /chatter"],
-            "image": "public.ecr.aws/docker/library/ros:humble",
-            "name": "listener",
-            "dependsOn": [
-            {
-              "condition": "START",
-              "containerName": "talker"
-            }
-            ],
-            "resourceRequirements": [
-              {
-                "type": "VCPU",
-                "value": "1"
-              },
-              {
-                "type": "MEMORY",
-                "value": "2048"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-}
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;The JSON job definition above includes a new ecsProperties object that defines the two containers we’re running, the &lt;em&gt;talker&lt;/em&gt; and &lt;em&gt;listener&lt;/em&gt; containers. For each container, we’ll pull the image ros:humble from public ECR, and run the command inside each container. This example also requires us to set ipcMode to task so that the containers can communicate, and creates a dependency that the &lt;em&gt;listener&lt;/em&gt; container dependsOn the &lt;em&gt;talker&lt;/em&gt; getting to the START condition. For more details see the &lt;a href="https://docs.aws.amazon.com/batch/latest/APIReference/API_SubmitJob.html"&gt;AWS Batch SubmitJob API documentation&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;To create the job definition, we’ll use the AWS CLI again:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;aws batch register-job-definition --cli-input-json file://ros2-talker-listener.json&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;It’s possible you may see an error that says:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;Unknown parameter in input: "ecsProperties", must be one of: jobDefinitionName, type, parameters, schedulingPriority, containerProperties, nodeProperties, retryStrategy, propagateTags, timeout, tags, platformCapabilities, eksProperties&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;This means your AWS CLI version &lt;em&gt;doesn’t recognize the new parameters to the API&lt;/em&gt;. You’re probably using a version you installed before Batch had this feature, so you need to update it. For instructions on updating the AWS CLI, see the &lt;a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html"&gt;Getting Started&lt;/a&gt; guide.&lt;/p&gt; 
-&lt;p&gt;You can now view your job-definition from the Batch console under &lt;strong&gt;Job definitions:&lt;/strong&gt;&lt;/p&gt; 
-&lt;div id="attachment_3588" style="width: 864px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3588" loading="lazy" class="size-full wp-image-3588" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.34.57.png" alt="Figure 12 - Job definitions console view" width="854" height="389"&gt;
- &lt;p id="caption-attachment-3588" class="wp-caption-text"&gt;Figure 12 – Job definitions console view&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Step 4 – submit your job&lt;/h3&gt; 
-&lt;p&gt;Now that you’ve created the job definition, you can submit the job using the AWS CLI.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;aws batch submit-job --job-queue JQ_EC2 --job-name ros2-talker-listener --job-definition ros2-talker-listener&lt;/code&gt;&lt;/pre&gt; 
-&lt;h3&gt;Step 5 – view results&lt;/h3&gt; 
-&lt;p&gt;Now, return to the AWS Batch console and select &lt;strong&gt;Jobs&lt;/strong&gt; from the left menu. Then choose your job queue (JQ_EC2) from the drop-down menu. You should see your job listed. Click on the job name to view the job details.&lt;/p&gt; 
-&lt;div id="attachment_3589" style="width: 867px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3589" loading="lazy" class="size-full wp-image-3589" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.35.21.png" alt="Figure 13 - Job details console view" width="857" height="389"&gt;
- &lt;p id="caption-attachment-3589" class="wp-caption-text"&gt;Figure 13 – Job details console view&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;After a few minutes, you should see that the job succeeded. You can now view the logs to see what happened.&lt;/p&gt; 
-&lt;p&gt;On the &lt;strong&gt;Job attempts&lt;/strong&gt; tab, select the Log stream name to view the log events in AWS CloudWatch.&lt;/p&gt; 
-&lt;div id="attachment_3590" style="width: 865px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3590" loading="lazy" class="size-full wp-image-3590" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.35.36.png" alt="Figure 14 - CloudWatch logs console view of talker output" width="855" height="389"&gt;
- &lt;p id="caption-attachment-3590" class="wp-caption-text"&gt;Figure 14 – CloudWatch logs console view of talker output&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;You should see the logs for the &lt;em&gt;talker&lt;/em&gt; looping 10 times publishing ‘hello’.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;Waiting for at least 1 matching subscription(s)...
-publisher: beginning loop                         
-publishing #1: std_msgs.msg.String(data='hello')
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Similarly, from the Batch Job details view, select the log name for the listener node, and you should see the log of the &lt;em&gt;listener&lt;/em&gt; echoing the message 10 times.&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;data: hello
----
-data: hello
----
-data: hello
----
-data: hello
----
-data: hello
----
-data: hello
----
-data: hello
----
-data: hello
----
-data: hello
----
-data: hello
----
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;div id="attachment_3591" style="width: 877px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3591" loading="lazy" class="size-full wp-image-3591" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-14.36.00.png" alt="Figure 15 - CloudWatch logs console view of listener output" width="867" height="391"&gt;
- &lt;p id="caption-attachment-3591" class="wp-caption-text"&gt;Figure 15 – CloudWatch logs console view of listener output&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;And that’s it for running and viewing the &lt;em&gt;talker – listener&lt;/em&gt; example. This example demonstrated how you can start two containers in an AWS Batch job and they can communicate with each other.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we discussed some multi-container simulation use cases, learned how some AWS Partners &amp;nbsp;are using it to run their simulators on AWS Batch, and learned how to quickly get started running multi-container jobs in Batch using a simple example.&lt;/p&gt; 
-&lt;p&gt;For more help using AWS Batch for simulations, follow the User Guide &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/Batch_GetStarted.html"&gt;Getting Started with AWS Batch&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 					
 		
 		
