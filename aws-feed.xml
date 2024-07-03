@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 02 Jul 2024 12:35:15 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 03 Jul 2024 12:57:36 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -51,9 +51,9 @@
 &lt;p&gt;&lt;a href="https://aws.amazon.com/ec2/graviton/"&gt;AWS Graviton&lt;/a&gt;&amp;nbsp;is a custom-designed processor created by AWS, based on the Arm64 architecture and which provides a balance of efficiency, performance, and cost. This makes it a good fit to lower the environmental impact of many HPC workloads. &lt;a href="https://aws.amazon.com/ec2/graviton/graviton-sustainability/"&gt;AWS Graviton-based Amazon EC2 instances use up to 60% less energy&lt;/a&gt; than comparable EC2 instances for the same performance. If your HPC application can be compiled for Arm64, you can use Graviton instances to enable greater energy efficiency for your compute intensive workloads.&lt;/p&gt; 
 &lt;p&gt;Hpc7g Instances are powered by AWS Graviton3E processors, with up to 35% higher vector instruction processing performance than the Graviton3. They are designed to give you the best price/performance for tightly coupled compute-intensive HPC and distributed computing workloads, and deliver 200 Gbps of dedicated network bandwidth that’s optimized for traffic between instances in the same subnet.&lt;br&gt; For CAE, customers can take advantage of open source CFD applications, like OpenFOAM, that can be compiled for Arm architecture processors and are well suited for the hpc7g instance type. But ISVs like Siemens, Cadence, and Ansys, now make versions of their solvers available for Graviton in the same way they do for x86.&lt;/p&gt; 
 &lt;p&gt;The table below summarizes some of the key HPC instance types with their characteristics, and provides a recommendation of the target workload.&lt;/p&gt; 
-&lt;div id="attachment_3869" style="width: 815px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3869" loading="lazy" class="size-full wp-image-3869" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/18/IMG-2024-06-18-11.05.54.png" alt="Table 1 – Comparison of Amazon EC2 HPC specific instance types showing example workloads and attributes" width="805" height="364"&gt;
- &lt;p id="caption-attachment-3869" class="wp-caption-text"&gt;Table 1 – Comparison of Amazon EC2 HPC specific instance types showing example workloads and attributes&lt;/p&gt;
+&lt;div id="attachment_3924" style="width: 1003px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3924" loading="lazy" class="size-full wp-image-3924" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/IMG-2024-07-03-12.57.09.png" alt="Table 1 – Comparison of Amazon EC2 HPC specific instance types showing example workloads and attributes" width="993" height="446"&gt;
+ &lt;p id="caption-attachment-3924" class="wp-caption-text"&gt;Table 1 – Comparison of Amazon EC2 HPC specific instance types showing example workloads and attributes&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h3&gt;Choose the right AWS Region for your HPC workload&lt;/h3&gt; 
 &lt;p&gt;AWS Well-Architected framework helps customers to build secure, highly-performant, resilient, and efficient architecture, and is built around six pillars: operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability. The framework provides a consistent approach for customers and partners to evaluate architectures and implement scalable designs.&lt;/p&gt; 

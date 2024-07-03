@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 02 Jul 2024 00:04:52 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 03 Jul 2024 15:32:14 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,62 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.4</generator>
 	<item>
+		<title>Decoding How the Generative AI Revolution BeGAN</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-gan-canvas-app/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Wed, 03 Jul 2024 13:00:55 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72808</guid>
+
+					<description><![CDATA[Generative models have completely transformed the AI landscape — headlined by popular apps such as ChatGPT and Stable Diffusion. ]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/" target="_blank" rel="noopener"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+<p>Generative models have completely transformed the AI landscape — headlined by popular apps such as ChatGPT and Stable Diffusion.</p>
+<p>Paving the way for this boom were foundational AI models and generative adversarial networks (GANs), which sparked a leap in productivity and creativity.</p>
+<p>NVIDIA’s <a href="https://blogs.nvidia.com/blog/gaugan-photorealistic-landscapes-nvidia-research/" target="_blank" rel="noopener">GauGAN</a>, which powers the <a href="https://www.nvidia.com/en-us/studio/canvas/" target="_blank" rel="noopener">NVIDIA Canvas app</a>, is one such model that uses AI to transform rough sketches into photorealistic artwork.</p>
+<h2><b>How It All BeGAN</b></h2>
+<p>GANs are deep learning models that involve two complementary neural networks: a generator and a discriminator.</p>
+<p>These neural networks compete against each other. The generator attempts to create realistic, lifelike imagery, while the discriminator tries to tell the difference between what’s real and what’s generated. As its neural networks keep challenging each other, GANs get better and better at making realistic-looking samples.</p>
+<p>GANs excel at understanding complex data patterns and creating high-quality results. They&#8217;re used in applications including image synthesis, style transfer, data augmentation and image-to-image translation.</p>
+<p>NVIDIA’s GauGAN, named after post-Impressionist painter Paul Gauguin, is an AI demo for photorealistic image generation. Built by NVIDIA Research, it directly led to the development of the NVIDIA Canvas app — and can be experienced for free through the <a target="_blank" href="https://www.nvidia.com/en-us/research/ai-demos/">NVIDIA AI Playground</a>.</p>
+<p>GauGAN has been wildly popular since it debuted at NVIDIA GTC in 2019 — used by art teachers, creative agencies, museums and millions more online.</p>
+<h2><b>Giving Sketch to Scenery a Gogh</b></h2>
+<p>Powered by GauGAN and local <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/" target="_blank" rel="noopener">NVIDIA RTX GPUs</a>, NVIDIA Canvas uses AI to turn simple brushstrokes into realistic landscapes, displaying results in real time.</p>
+<p>Users can start by sketching simple lines and shapes with a palette of real-world elements like grass or clouds —- referred to in the app as “materials.”</p>
+<p><iframe title="NVIDIA Canvas: New Update | 4x Higher Resolution &amp; 5 New Materials" width="500" height="281" src="https://www.youtube.com/embed/wKztRskmsig?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>The AI model then generates the enhanced image on the other half of the screen in real time. For example, a few triangular shapes sketched using the “mountain” material will appear as a stunning, photorealistic range. Or users can select the “cloud” material and with a few mouse clicks transform environments from sunny to overcast.</p>
+<p>The creative possibilities are endless — sketch a pond, and other elements in the image, like trees and rocks, will reflect in the water. Change the material from snow to grass, and the scene shifts from a cozy winter setting to a tropical paradise.</p>
+<figure id="attachment_72809" aria-describedby="caption-attachment-72809" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-72809" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png" alt="" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-400x219.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-768x420.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1536x840.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-823x450.png 823w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-393x215.png 393w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-183x100.png 183w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1280x700.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72809" class="wp-caption-text">Canvas offers nine different styles, each with 10 variations and 20 materials to play with.</figcaption></figure>
+<p>Canvas features a Panorama mode that enables artists to create 360-degree images for use in 3D apps. YouTuber <a href="https://www.youtube.com/watch?v=d2O-kj5KF5w" target="_blank" rel="noopener">Greenskull AI</a> demonstrated Panorama mode by painting an ocean cove, before then importing it into Unreal Engine 5.</p>
+<p><iframe title="NVIDIA Canvas Panorama - Painting in 360° with Ai" width="500" height="281" src="https://www.youtube.com/embed/d2O-kj5KF5w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><a href="https://www.nvidia.com/en-us/studio/canvas/" target="_blank" rel="noopener">Download</a> the NVIDIA Canvas app to get started.</p>
+<p>Consider exploring <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/" target="_blank" rel="noopener">NVIDIA Broadcast</a>, another AI-powered content creation app that transforms any room into a home studio. Broadcast is free for RTX GPU owners.</p>
+<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/canvas-app-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/canvas-app-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Decoding How the Generative AI Revolution BeGAN]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>How an NVIDIA Engineer Unplugs to Recharge During Free Days</title>
 		<link>https://blogs.nvidia.com/blog/nvidia-life-free-days-2024/</link>
 		
@@ -34,10 +90,10 @@
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>On a weekday afternoon, Ashwini Ashtankar sat on the bank of the Doodhpathri River, in a valley nestled in the Himalayas. Taking a deep breath, she noticed that there was no city noise, no pollution — and no work emails.</p>
 <p>Ashtankar, a senior tools development engineer in NVIDIA’s Pune, India, office, took advantage of the company’s free days — two extra days off per quarter when the whole company disconnects from work — to recharge. Free days are fully paid by NVIDIA, not counted as vacation or as personal time off, and are in addition to country-specific holidays and time-away programs.</p>
-<p><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-72789" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-72789" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
 <p>Free days give employees time to take an adventure, a breather — or both. Ashtankar and her husband, Dipen Sisodia — also an NVIDIAN — spent it outdoors, hiking up a mountain, playing in snow and exploring forests and lush green meadows.</p>
 <p>“My free days give me time to focus on myself and recharge,” said Ashtankar. “We didn’t take our laptops. We were able to completely disconnect, like all NVIDIANs were doing at the same time.”</p>
-<p><img decoding="async" class="aligncenter size-large wp-image-72792" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-72792" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
 <p>Ashtankar returned to work feeling refreshed and recharged, she said. Her team tests software features of NVIDIA products, focusing on GPU display drivers and the <a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> game-streaming service, to make sure bugs are found and addressed before a product reaches customers.</p>
 <p>“I take pride in tackling challenges with the highest level of quality and creativity, all in support of delivering the best products to our customers,” she said. “To do that, sometimes the most productive thing we can do is rest and let the soul catch up with the body.”</p>
 <p>Ashtankar plans to build her career at NVIDIA for many years to come.</p>
@@ -80,7 +136,7 @@
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Get ready to feel some chills, even amid the summer heat. Capcom’s award-winning <i>Resident Evil Village</i> brings a touch of horror to the cloud this GFN Thursday, part of three new games joining <a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> this week.</p>
 <p>And a new app update brings a visual enhancement to members, along with new ways to curate their GeForce NOW gaming libraries.</p>
-<figure id="attachment_72772" aria-describedby="caption-attachment-72772" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-72772" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-672x357.png" alt="Greetings on GFN" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72772" class="wp-caption-text"><em>#GreetingsFromGFN by @railbeam.</em></figcaption></figure>
+<figure id="attachment_72772" aria-describedby="caption-attachment-72772" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72772" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-672x357.png" alt="Greetings on GFN" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Greetings_From_GFN-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72772" class="wp-caption-text"><em>#GreetingsFromGFN by @railbeam.</em></figcaption></figure>
 <p>Members are showcasing their favorite locations to visit in the cloud. Follow along with #GreetingsFromGFN on @NVIDIAGFN social media accounts and share picturesque scenes from the cloud for a chance to be featured.</p>
 <h2><b>The Bell Tolls for All</b></h2>
 <figure id="attachment_72769" aria-describedby="caption-attachment-72769" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72769" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-672x378.jpg" alt="Resident Evil Village on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/GFN_Thursday-Resident_Evil_Village-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72769" class="wp-caption-text"><em>The cloud — big enough, even, for Lady Dimitrescu and her towering castle.</em></figcaption></figure>
@@ -151,8 +207,8 @@
 <p>To address the digitalization needs of manufacturing and other industries, <a target="_blank" href="https://www.synctwin.ai/">SyncTwin </a>GmbH — a company that builds software to optimize production, intralogistics and assembly  — developed a <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/solutions/digital-twins/">digital twin</a> app using <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/cuopt/">NVIDIA cuOpt</a>, an accelerated optimization engine for solving complex routing problems, and <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform of application programming interfaces, software development kits and services that enable developers to build <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/usd/">OpenUSD</a>-based applications.</p>
 <p>SyncTwin is harnessing the power of the extensible OpenUSD framework for describing, composing, simulating, and collaborating within 3D worlds to help its customers create physically accurate digital twins of their factories. The digital twins can be used to optimize production and enhance digital precision to meet industrial performance.</p>
 <h2><b>OpenUSD’s Role in Modern Manufacturing</b></h2>
-<p>Manufacturing workflows are incredibly complex, making effective communication and integration across various domains pivotal to ensuring operational efficiency. The <a target="_blank" href="https://developer.nvidia.com/blog/transforming-xls-and-ppt-into-a-factory-digital-twin-with-openusd/">SyncTwin app</a> provides seamless collaboration capabilities for factory plant managers and their teams, enabling them to optimize processes and resources.</p>
-<p>The app uses OpenUSD and Omniverse to help make factory planning and operations easier and more accessible by integrating various manufacturing aspects into a cohesive digital twin. Customers can integrate visual data, production details, product catalogs, orders, schedules, resources and production settings all in one place with OpenUSD.</p>
+<p>Manufacturing workflows are incredibly complex, making effective communication and integration across various domains pivotal to ensuring operational efficiency. The SyncTwin app provides seamless collaboration capabilities for factory plant managers and their teams, enabling them to optimize processes and resources.</p>
+<p>The app uses OpenUSD and Omniverse to help make factory planning and operations easier and more accessible by integrating various manufacturing aspects into a cohesive digital twin. Customers can integrate visual data, production details, product catalogs, orders, schedules, resources and production settings <a target="_blank" href="https://www.google.com/url?q=https://developer.nvidia.com/blog/transforming-microsoft-xls-and-ppt-files-into-a-factory-digital-twin-with-openusd/&amp;sa=D&amp;source=docs&amp;ust=1720024234143097&amp;usg=AOvVaw3pcW7Wfq_o95dh5vj0UF4S">from a variety of file formats all in one place with OpenUSD</a>.</p>
 <p><img loading="lazy" decoding="async" class=" wp-image-72746 aligncenter" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2.png" alt="" width="816" height="440" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2.png 1928w, https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2-400x216.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2-672x362.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2-768x414.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2-1536x829.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2-834x450.png 834w, https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2-399x215.png 399w, https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2-185x100.png 185w, https://blogs.nvidia.com/wp-content/uploads/2024/06/synctwin_blog_steps_app_2-1280x690.png 1280w" sizes="(max-width: 816px) 100vw, 816px" /></p>
 <p>The SyncTwin app creates realistic, virtual environments that facilitate seamless interactions between different sectors of factory operations. This capability enables diverse data — including floorplans from Microsoft PowerPoint and warehouse container data from Excel spreadsheets — to be aggregated in a unified digital twin.</p>
 <p>The flexibility of OpenUSD allows for non-destructive editing and composition of complex 3D assets and animations, further enhancing the digital twin.</p>
@@ -1116,66 +1172,6 @@ Click to follow link." target="_blank" href="https://huggingface.co/blog/train-d
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Cloud Ahoy! Treasure Awaits With ‘Sea of Thieves’ on GeForce NOW]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Every Company’s Data Is Their ‘Gold Mine,’ NVIDIA CEO Says at Databricks Data + AI Summit</title>
-		<link>https://blogs.nvidia.com/blog/databricks-data-ai/</link>
-		
-		<dc:creator><![CDATA[Anne Hecht]]></dc:creator>
-		<pubDate>Wed, 12 Jun 2024 20:25:33 +0000</pubDate>
-				<category><![CDATA[Data Center]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72122</guid>
-
-					<description><![CDATA[Accelerated computing is transforming data processing and analytics for enterprises, declared NVIDIA founder and CEO Jensen Huang Wednesday during an on-stage chat with Databricks cofounder and CEO Ali Ghodsi at the Databricks Data + AI Summit 2024. &#8220;Every company’s business data is their gold mine,” Huang said, explaining that every company has enormous amounts of	<a class="read-more" href="https://blogs.nvidia.com/blog/databricks-data-ai/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Accelerated computing is transforming data processing and analytics for enterprises, declared NVIDIA founder and CEO Jensen Huang Wednesday during an on-stage chat with Databricks cofounder and CEO Ali Ghodsi at the <a target="_blank" href="https://www.databricks.com/dataaisummit">Databricks Data + AI Summit 2024</a>.</p>
-<p>&#8220;Every company’s business data is their gold mine,” Huang said, explaining that every company has enormous amounts of data, but extracting insights and distilling intelligence from it has been challenging.</p>
-<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/SAsoWmMhX3Q?si=XL2clmsl3yIimqzn" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
-<h2>Databricks Leverages NVIDIA’s Full Stack to Accelerate Generative AI Applications</h2>
-<p>To unlock all that intelligence, Huang and Ghodsi announced the integration of <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">NVIDIA’s accelerated computing</a> with Databricks Photon, Databricks’ engine for fast data processing, designed to power Databricks SQL with top-tier performance and cost efficiency.</p>
-<p>“This is a big announcement,” Huang said, adding that accelerated computing and generative AI are the two most important technological trends today. “NVIDIA and Databricks are going to partner to combine our skills in these areas and bring them to all of you.”</p>
-<p>Huang shared that it’s taken NVIDIA five years to build a set of libraries that make it possible to accelerate Photon, allowing users to “wrangle data faster, more cost-effectively and consume a lot less energy.”</p>
-<p>“We are super-excited to partner with you to use GPU acceleration on the Photon engine to enhance core data processing and get them to also run on NVIDIA GPUs,” Ghodsi said.</p>
-<h2>Creating Generative AI Factories With NVIDIA NIM</h2>
-<p>NVIDIA and Databricks also announced that Databricks’ open-source model DBRX is now available as an <a target="_blank" href="http://ai.nvidia.com">NVIDIA NIM</a> microservice hosted on the NVIDIA API catalog.</p>
-<p>NVIDIA NIM inference microservices provide models as fully optimized, pre-built containers for deployment anywhere.</p>
-<p>&#8220;Creating these endpoints is complicated,” Huang explained. “We optimized everything into a microservice, which runs on every cloud and on premises.”</p>
-<p>Microservices dramatically increase enterprise developer productivity by providing a simple, standardized way to add generative AI models to applications.</p>
-<p>Launched in March, DBRX was built entirely on top of Databricks, leveraging all the tools and techniques available to Databricks customers and partners, and was trained with <a target="_blank" href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>, a scalable end-to-end AI platform for developers.</p>
-<p>Organizations can customize DBRX with enterprise data to create high-quality, organization-specific models or use it to build a custom DBRX-style mixture of expert models as a reference architecture.</p>
-<p>Huang said that accelerating data processing is a huge opportunity, encouraging everyone to put accelerated computing and generative AI to work.</p>
-<p>“Whatever you do, just start — you have to engage in this incredibly fast-moving train,” Huang said. “Remember, generative AI is growing exponentially — you don’t want to wait and observe an exponential trend, because in a couple of years, you’ll be so far behind.”</p>
-<h2>Joining the Conversation</h2>
-<p>Attendees at the summit are encouraged to participate in sessions and engage with NVIDIA experts to learn more about how NVIDIA and Databricks are driving the future of AI and data intelligence.</p>
-<p>Key sessions, taking place June 13, include:</p>
-<ul>
-<li>“Development and Deployment of Generative AI with NVIDIA” at 12:30 p.m. PT</li>
-<li>“Architecture Analysis for ETL Processing: CPU vs. GPU” at 4:30 p.m. PT;</li>
-<li>“Spark RAPIDS ML: GPU Accelerated Distributed ML in Spark Clusters” at 1:30 p.m. PT</li>
-</ul>
-<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/SAsoWmMhX3Q?si=XL2clmsl3yIimqzn" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/databricks-jhh-2-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1365"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/databricks-jhh-2-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Every Company’s Data Is Their ‘Gold Mine,’ NVIDIA CEO Says at Databricks Data + AI Summit]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
