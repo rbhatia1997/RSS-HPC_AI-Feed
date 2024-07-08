@@ -12,14 +12,62 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 03 Jul 2024 23:09:22 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 08 Jul 2024 15:59:39 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.5.4</generator>
+	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>In It for the Long Haul: Waabi Pioneers Generative AI to Unleash Fully Driverless Autonomous Trucking</title>
+		<link>https://blogs.nvidia.com/blog/waabi-autonomous-trucking/</link>
+		
+		<dc:creator><![CDATA[Norm Marks]]></dc:creator>
+		<pubDate>Mon, 08 Jul 2024 15:00:00 +0000</pubDate>
+				<category><![CDATA[Driving]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[NVIDIA DRIVE]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72803</guid>
+
+					<description><![CDATA[Artificial intelligence is transforming the transportation industry, helping drive advances in autonomous vehicle (AV) technology. Waabi, a Toronto-based startup, is embracing generative AI to deliver self-driving vehicles at scale — starting with the long-haul trucking sector. At GTC in March, Waabi announced that it will use the NVIDIA DRIVE Thor centralized car computer to bring	<a class="read-more" href="https://blogs.nvidia.com/blog/waabi-autonomous-trucking/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Artificial intelligence is transforming the transportation industry, helping drive advances in autonomous vehicle (AV) technology.</p>
+<p>Waabi, a Toronto-based startup, is embracing generative AI to deliver self-driving vehicles at scale — starting with the long-haul trucking sector.</p>
+<p>At GTC in March, <a href="https://waabi.ai/nvidia-drivethor/" target="_blank" rel="noopener">Waabi announced that it will use the NVIDIA DRIVE Thor</a> centralized car computer to bring a safe, generative AI-powered autonomous trucking solution — the Waabi Driver —  to market.</p>
+<p>As the company plans the launch of fully driverless operations next year, Waabi is reinvigorating the industry with a self-driving solution that’s capital-efficient, can safely handle new scenarios on the road and ultimately scales commercially.</p>
+<p>Waabi is developing on <a href="https://developer.nvidia.com/drive/os" target="_blank" rel="noopener">NVIDIA DRIVE OS</a>, the company’s operating system for safe, AI-defined autonomous vehicles.</p>
+<p>The innovative startup has pioneered an approach that centers on the combination of two generative AI systems: a “teacher,” called Waabi World, an advanced simulator that trains and validates a “student,” called Waabi Driver, a single, end-to-end AI system that’s capable of human-like reasoning and is fully interpretable.</p>
+<p>When paired together, these systems reduce the need for extensive on-road testing and enable a safer, more efficient solution that is highly performant and scalable.</p>
+<p>“We are excited to have a deep collaboration with NVIDIA to bring generative AI to the edge, on our vehicles, at scale,” said Raquel Urtasun, founder and CEO of Waabi.</p>
+<p><iframe title="Waabi and NVIDIA: Bringing Generative AI to the Edge" width="500" height="281" src="https://www.youtube.com/embed/iDGwP45B_GA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Generative AI accelerates the development of AVs by “providing an end-to-end system where, instead of requiring hundreds of engineers to develop a system by hand, it provides the ability to learn foundation models that can run unsupervised by observing and acting on the world,” Urtasun added.</p>
+<p>Waabi’s collaboration with NVIDIA is one in a series of milestones, including the company’s <a href="https://waabi.ai/waabi-series-b-announcement/" target="_blank" rel="noopener">$200 million Series B round</a> with participation from NVIDIA, its <a href="https://waabi.ai/waabi-uber-freight/" target="_blank" rel="noopener">work with logistics company Uber Freight</a>, the launch of its first commercial autonomous trucking routes in the U.S., and the opening of a trucking terminal near Dallas to serve as the center of the company’s operations in the Lone Star state.</p>
+<p>“What we’re building for autonomous vehicles — combining generative AI-powered simulation with a foundation AI model purpose-built for acting in the physical world — will enable faster, safer and more scalable deployment of this transformative technology around the world,” Urtasun noted on the company’s website.</p>
+<p><i>Listen to Urtasun’s </i><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62621/" target="_blank" rel="noopener"><i>talk at GTC</i></a><i> for more on the company’s work on using generative AI to develop autonomous vehicles.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/waabi.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/waabi-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[In It for the Long Haul: Waabi Pioneers Generative AI to Unleash Fully Driverless Autonomous Trucking]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>GeForce NOW Beats the Heat With 22 New Games in July</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-july-2024-games-list/</link>
 		
@@ -139,7 +187,7 @@
 <p><iframe title="NVIDIA Canvas: New Update | 4x Higher Resolution &amp; 5 New Materials" width="500" height="281" src="https://www.youtube.com/embed/wKztRskmsig?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>The AI model then generates the enhanced image on the other half of the screen in real time. For example, a few triangular shapes sketched using the “mountain” material will appear as a stunning, photorealistic range. Or users can select the “cloud” material and with a few mouse clicks transform environments from sunny to overcast.</p>
 <p>The creative possibilities are endless — sketch a pond, and other elements in the image, like trees and rocks, will reflect in the water. Change the material from snow to grass, and the scene shifts from a cozy winter setting to a tropical paradise.</p>
-<figure id="attachment_72809" aria-describedby="caption-attachment-72809" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png"><img decoding="async" class="size-large wp-image-72809" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png" alt="" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-400x219.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-768x420.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1536x840.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-823x450.png 823w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-393x215.png 393w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-183x100.png 183w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1280x700.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72809" class="wp-caption-text">Canvas offers nine different styles, each with 10 variations and 20 materials to play with.</figcaption></figure>
+<figure id="attachment_72809" aria-describedby="caption-attachment-72809" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png"><img loading="lazy" decoding="async" class="size-large wp-image-72809" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png" alt="" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-400x219.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-768x420.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1536x840.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-823x450.png 823w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-393x215.png 393w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-183x100.png 183w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1280x700.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72809" class="wp-caption-text">Canvas offers nine different styles, each with 10 variations and 20 materials to play with.</figcaption></figure>
 <p>Canvas features a Panorama mode that enables artists to create 360-degree images for use in 3D apps. YouTuber <a href="https://www.youtube.com/watch?v=d2O-kj5KF5w" target="_blank" rel="noopener">Greenskull AI</a> demonstrated Panorama mode by painting an ocean cove, before then importing it into Unreal Engine 5.</p>
 <p><iframe loading="lazy" title="NVIDIA Canvas Panorama - Painting in 360° with Ai" width="500" height="281" src="https://www.youtube.com/embed/d2O-kj5KF5w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p><a href="https://www.nvidia.com/en-us/studio/canvas/" target="_blank" rel="noopener">Download</a> the NVIDIA Canvas app to get started.</p>
@@ -1156,53 +1204,6 @@ Click to follow link." target="_blank" href="https://huggingface.co/blog/train-d
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[NVIDIA Releases Open Synthetic Data Generation Pipeline for Training Large Language Models]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>‘The Proudest Refugee’: How Veronica Miller Charts Her Own Path at NVIDIA</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-life-veronica-miller/</link>
-		
-		<dc:creator><![CDATA[Haley Hirai]]></dc:creator>
-		<pubDate>Fri, 14 Jun 2024 13:00:11 +0000</pubDate>
-				<category><![CDATA[NVIDIA Life]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72096</guid>
-
-					<description><![CDATA[When she was five years old, Veronica Miller (née Teklai) and her family left their homeland of Eritrea, in the Horn of Africa, to escape an ongoing war with Ethiopia and create a new life in the U.S. She grew up in East Orange, New Jersey, watching others judge her parents and turn them away	<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-life-veronica-miller/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>When she was five years old, Veronica Miller (née Teklai) and her family left their homeland of Eritrea, in the Horn of Africa, to escape an ongoing war with Ethiopia and create a new life in the U.S.</p>
-<p>She grew up in East Orange, New Jersey, watching others judge her parents and turn them away from jobs they were qualified for because of their appearance, their accented English or their unfamiliar names.</p>
-<p>After working in the shipping industry for 20 years, Miller’s dad eventually became a New York City cab driver, an often-dangerous job in the 1980s. Her mom, despite earning a computer science degree in the U.S., trained to become a home health aide, where jobs were more available.</p>
-<p>“My parents’ resilience and courage made my life possible,” Miller said.<a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-scaled.jpg"><img loading="lazy" decoding="async" class="alignright wp-image-72099 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-267x400.jpg" alt="" width="267" height="400" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-267x400.jpg 267w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-333x500.jpg 333w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-768x1152.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-1024x1536.jpg 1024w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-scaled.jpg 1365w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-300x450.jpg 300w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-143x215.jpg 143w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-67x100.jpg 67w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF3787-1280x1920.jpg 1280w" sizes="(max-width: 267px) 100vw, 267px" /></a></p>
-<p>After graduating from Ramapo College of New Jersey with a degree in international business, Miller worked at large automotive companies in client support, production support and project management.</p>
-<p>Now working as a technical program manager in product security at NVIDIA, she feels like her family’s journey has come full circle.</p>
-<p>“It’s the honor of my life being here at NVIDIA: I’m the proudest refugee,” she said.</p>
-<p>In her role, Miller functions like a conductor in an orchestra. She works with engineers to bridge gaps and understand challenges to define solutions — always trying to create opportunities to turn a “no” into a “yes” through collaboration.</p>
-<p>At NVIDIA, Miller feels like she can be herself, helping her thrive. She no longer feels the pressure to conform to fit in, allowing her creativity to flow freely and solve problems.</p>
-<p>“Previously in my career, I never wore my hair curly. After someone once asked to touch my curly hair, I believed it would be easier to make myself look like everyone else. I thought it was the best way to let my work be the focus instead of my hair,” she said. “NVIDIA is the first employer that encouraged me to bring my full self to work.”</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-scaled.jpg"><img loading="lazy" decoding="async" class="alignleft wp-image-72105 size-medium" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-400x267.jpg" alt="" width="400" height="267" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/06/webDSCF4399-1280x853.jpg 1280w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
-<p>Outside of work, Miller and her husband, Nathan, are passionate about paying it forward and helping local youth in Trenton, New Jersey. Together, they’ve developed The Miller Family Foundation to help with community needs, including education. The foundation’s scholarship fund has donated $20,000 to low-income high school students to provide support for college tuition and career mentorship.</p>
-<p>“I truly believe anyone could get here. There wasn’t anyone that showed me the path. It was belief in myself, a ton of research and endless hard work,” she said. “We’re in a special place where my husband and I can give the next generation some of the financial support and career guidance we didn’t have.”</p>
-<p><i>Learn more about </i><a target="_blank" href="https://www.nvidia.com/en-us/about-nvidia/careers/life-at-nvidia/"><i>NVIDIA life, culture and careers</i></a><i>. </i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Featured-Photo-scaled.jpg"
-			type="image/jpeg"
-			width="2048"
-			height="1365"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Featured-Photo-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[‘The Proudest Refugee’: How Veronica Miller Charts Her Own Path at NVIDIA]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
