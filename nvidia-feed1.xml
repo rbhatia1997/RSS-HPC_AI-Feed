@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 08 Jul 2024 20:55:10 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 09 Jul 2024 15:55:24 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,65 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>Widescreen Wonder: Las Vegas Sphere Delivers Dazzling Displays</title>
+		<link>https://blogs.nvidia.com/blog/sphere-las-vegas/</link>
+		
+		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
+		<pubDate>Tue, 09 Jul 2024 16:00:39 +0000</pubDate>
+				<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Media and Entertainment]]></category>
+		<category><![CDATA[NVIDIA BlueField]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72849</guid>
+
+					<description><![CDATA[Sphere, a new kind of entertainment medium in Las Vegas, is joining the ranks of legendary circular performance spaces such as the Roman Colosseum and Shakespeare’s Globe Theater — captivating audiences with eye-popping LED displays that cover nearly 750,000 square feet inside and outside the venue. Behind the screens, around 150 NVIDIA RTX A6000 GPUs	<a class="read-more" href="https://blogs.nvidia.com/blog/sphere-las-vegas/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Sphere, a new kind of entertainment medium in Las Vegas, is joining the ranks of legendary circular performance spaces such as the Roman Colosseum and Shakespeare’s Globe Theater — captivating audiences with eye-popping LED displays that cover nearly 750,000 square feet inside and outside the venue.</p>
+<p>Behind the screens, around 150 <a target="_blank" href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">NVIDIA RTX A6000 GPUs</a> help power stunning visuals on floor-to-ceiling, 16x16K displays across the Sphere’s interior, as well as 1.2 million programmable LED pucks on the venue’s exterior — the Exosphere, which is the world’s largest LED screen.</p>
+<p>Delivering robust network connectivity, <a target="_blank" href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/">NVIDIA BlueField DPUs</a> and <a target="_blank" href="https://www.nvidia.com/en-us/networking/ethernet-adapters/">NVIDIA ConnectX-6 Dx NICs</a> — along with the <a target="_blank" href="https://docs.nvidia.com/doca/sdk/doca-firefly-service/index.html">NVIDIA DOCA Firefly Service</a> and <a target="_blank" href="https://developer.nvidia.com/networking/rivermax">NVIDIA Rivermax software</a> for media streaming — ensure that all the display panels act as one synchronized canvas.</p>
+<p>“Sphere is captivating audiences not only in Las Vegas, but also around the world on social media, with immersive LED content delivered at a scale and clarity that has never been done before,” said Alex Luthwaite, senior vice president of show systems technology at Sphere Entertainment. “This would not be possible without the expertise and innovation of companies such as NVIDIA that are critical to helping power our vision, working closely with our team to redefine what is possible with cutting-edge display technology.”</p>
+<p>Named <a href="https://time.com/collection/best-inventions-2023/6324099/sphere/" target="_blank" rel="noopener">one of TIME’s Best Inventions of 2023</a>, Sphere hosts original Sphere Experiences, concerts and residencies from the world’s biggest artists, and premier marquee and corporate events.</p>
+<p>Rock band U2 opened Sphere with a 40-show run that concluded in March. Other shows include The Sphere Experience featuring Darren Aronofsky’s <i>Postcard From Earth</i>, a specially created multisensory cinematic experience that showcases all of the venue’s immersive technologies, including high-resolution visuals, advanced concert-grade sound, haptic seats and atmospheric effects such as wind and scents.</p>
+<figure id="attachment_72853" aria-describedby="caption-attachment-72853" style="width: 2048px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-full wp-image-72853" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-scaled.jpg" alt="image of the Earth from space displayed in Sphere" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /><figcaption id="caption-attachment-72853" class="wp-caption-text">“Postcard From Earth” is a multisensory immersive experience. Image courtesy of Sphere Entertainment.</figcaption></figure>
+<h2><b>Behind the Screens: Visual Technology Fueling the Sphere</b></h2>
+<p>Sphere Studios creates video content in its Burbank, Calif., facility, then transfers it digitally to Sphere in Las Vegas. The content is then streamed in real time to rack-mounted workstations equipped with NVIDIA RTX A6000 GPUs, achieving unprecedented performance capable of delivering three layers of 16K resolution at 60 frames per second.</p>
+<p>The NVIDIA Rivermax software helps provide media streaming acceleration, enabling direct data transfers to and from the GPU. Combined, the software and hardware acceleration eliminates jitter and optimizes latency.</p>
+<p>NVIDIA BlueField DPUs also facilitate precision timing through the DOCA Firefly Service, which is used to synchronize clocks in a network with sub-microsecond accuracy.</p>
+<p>“The integration of NVIDIA RTX GPUs, BlueField DPUs and Rivermax software creates a powerful trifecta of advantages for modern accelerated comp</p>
+<p>uting, supporting the unique high-resolution video streams and strict timing requirements needed at Sphere and setting a new standard for media processing capabilities,” said Nir Nitzani, senior product director for networking software at NVIDIA. “This collaboration results in remarkable performance gains, culminating in the extraordinary experiences guests have at Sphere.”<i> </i></p>
+<h2><b>Well-Rounded: From Simulation to Sphere Stage</b></h2>
+<p>To create new immersive content exclusively for Sphere, Sphere Entertainment launched Sphere Studios, which is dedicated to developing the next generation of original immersive entertainment. The Burbank campus consists of numerous development facilities, including a quarter-sized version of Sphere screen in Las Vegas, dubbed Big Dome, which serves as a specialized screening, production facility and lab for content.</p>
+<figure id="attachment_72856" aria-describedby="caption-attachment-72856" style="width: 2048px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-72856" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-scaled.jpeg" alt="dome-shaped building flanked by palm trees" width="2048" height="1366" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-400x267.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-672x448.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-768x512.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-1536x1024.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-675x450.jpeg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-322x215.jpeg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-150x100.jpeg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-1280x854.jpeg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /><figcaption id="caption-attachment-72856" class="wp-caption-text">The Big Dome is 100 feet high and 28,000 square feet. Image courtesy of Sphere Entertainment.</figcaption></figure>
+<p>Sphere Studios also developed the Big Sky camera system, which captures uncompressed, 18K images from a single camera, so that the studio can film content for Sphere without needing to stitch multiple camera feeds together. The studio’s custom image processing software runs on Lenovo servers powered by <a target="_blank" href="https://www.nvidia.com/en-us/data-center/a40/">NVIDIA A40 GPUs</a>.</p>
+<p>The A40 GPUs also fuel creative work, including 3D video, virtualization and ray tracing. To develop visuals for different kinds of shows, the team works with apps including Unreal Engine, Unity, Touch Designer and Notch.</p>
+<p><i>For more, explore upcoming sessions in </i><a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/"><i>NVIDIA’s room at SIGGRAPH</i></a><i> and watch the panel discussion “</i><a target="_blank" href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s63135/"><i>Immersion in Sphere: Redefining Live Entertainment Experiences</i></a><i>” on NVIDIA On-Demand.</i></p>
+<p><i>All images courtesy of Sphere Entertainment.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere-Exosphere.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere-Exosphere-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Widescreen Wonder: Las Vegas Sphere Delivers Dazzling Displays]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>In It for the Long Haul: Waabi Pioneers Generative AI to Unleash Fully Driverless Autonomous Trucking</title>
 		<link>https://blogs.nvidia.com/blog/waabi-autonomous-trucking/</link>
 		
@@ -86,7 +145,7 @@
 <p>Dive into the four titles available to stream on the cloud gaming service this week to stay cool and entertained throughout the summer — whether poolside, on a long road trip or in the air-conditioned comfort of home.</p>
 <p>Plus, get great games at great deals to stream across devices during the Steam Summer Sale. In total, more than 850 titles on GeForce NOW can be found at discounts in a dedicated Steam Summer Sale row on the GeForce NOW app, from now until July 11.</p>
 <h2><b>Time to Grind</b></h2>
-<figure id="attachment_72837" aria-describedby="caption-attachment-72837" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-72837" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-672x336.jpg" alt="The First Descendant on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72837" class="wp-caption-text"><em>Be the first Descendant with the cloud.</em></figcaption></figure>
+<figure id="attachment_72837" aria-describedby="caption-attachment-72837" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72837" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-672x336.jpg" alt="The First Descendant on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72837" class="wp-caption-text"><em>Be the first Descendant with the cloud.</em></figcaption></figure>
 <p>In <i>The First Descendant</i> from NEXON, take on the role of Descendants tasked with safeguarding the powerful Iron Heart from relentless Vulgus invaders. Set in a captivating sci-fi universe, the game is a third-person co-op action role-playing shooter that seamlessly blends looting mechanics with strategic combat. Engage in intense gunplay, face off against formidable bosses and collect valuable loot while fighting to preserve humanity’s future.</p>
 <p>Check out the list of new games this week:</p>
 <ul>
@@ -184,7 +243,7 @@
 <h2><b>Giving Sketch to Scenery a Gogh</b></h2>
 <p>Powered by GauGAN and local <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/" target="_blank" rel="noopener">NVIDIA RTX GPUs</a>, NVIDIA Canvas uses AI to turn simple brushstrokes into realistic landscapes, displaying results in real time.</p>
 <p>Users can start by sketching simple lines and shapes with a palette of real-world elements like grass or clouds —- referred to in the app as “materials.”</p>
-<p><iframe title="NVIDIA Canvas: New Update | 4x Higher Resolution &amp; 5 New Materials" width="500" height="281" src="https://www.youtube.com/embed/wKztRskmsig?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="NVIDIA Canvas: New Update | 4x Higher Resolution &amp; 5 New Materials" width="500" height="281" src="https://www.youtube.com/embed/wKztRskmsig?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>The AI model then generates the enhanced image on the other half of the screen in real time. For example, a few triangular shapes sketched using the “mountain” material will appear as a stunning, photorealistic range. Or users can select the “cloud” material and with a few mouse clicks transform environments from sunny to overcast.</p>
 <p>The creative possibilities are endless — sketch a pond, and other elements in the image, like trees and rocks, will reflect in the water. Change the material from snow to grass, and the scene shifts from a cozy winter setting to a tropical paradise.</p>
 <figure id="attachment_72809" aria-describedby="caption-attachment-72809" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png"><img loading="lazy" decoding="async" class="size-large wp-image-72809" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png" alt="" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-400x219.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-768x420.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1536x840.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-823x450.png 823w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-393x215.png 393w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-183x100.png 183w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1280x700.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72809" class="wp-caption-text">Canvas offers nine different styles, each with 10 variations and 20 materials to play with.</figcaption></figure>
@@ -1141,70 +1200,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[‘Believe in Something Unconventional, Something Unexplored,’ NVIDIA CEO Tells Caltech Grads]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>NVIDIA Releases Open Synthetic Data Generation Pipeline for Training Large Language Models</title>
-		<link>https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/</link>
-		
-		<dc:creator><![CDATA[Ankit Patel]]></dc:creator>
-		<pubDate>Fri, 14 Jun 2024 15:51:33 +0000</pubDate>
-				<category><![CDATA[Deep Learning]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<category><![CDATA[Synthetic Data Generation]]></category>
-		<category><![CDATA[TensorRT]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72165</guid>
-
-					<description><![CDATA[NVIDIA today announced Nemotron-4 340B, a family of open models that developers can use to generate synthetic data for training large language models (LLMs) for commercial applications across healthcare, finance, manufacturing, retail and every other industry. High-quality training data plays a critical role in the performance, accuracy and quality of responses from a custom LLM	<a class="read-more" href="https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p dir="ltr">NVIDIA today announced Nemotron-4 340B, a family of open models that developers can use to generate synthetic data for training large language models (LLMs) for commercial applications across healthcare, finance, manufacturing, retail and every other industry.</p>
-<p dir="ltr">High-quality training data plays a critical role in the performance, accuracy and quality of responses from a custom LLM — but robust datasets can be prohibitively expensive and difficult to access.</p>
-<p dir="ltr">Through a uniquely permissive <a href="https://developer.download.nvidia.com/licenses/nvidia-open-model-license-agreement-june-2024.pdf" target="_blank" rel="noopener">open model license</a>, Nemotron-4 340B gives developers a free, scalable way to generate synthetic data that can help build powerful LLMs.</p>
-<p dir="ltr">The Nemotron-4 340B family includes base, instruct and reward models that form a pipeline to generate synthetic data used for training and refining LLMs. The models are optimized to work with <a href="https://github.com/NVIDIA/NeMo" target="_blank" rel="noopener">NVIDIA NeMo</a>, an open-source framework for end-to-end model training, including data curation, customization and evaluation. They’re also optimized for inference with the open-source <a href="https://github.com/NVIDIA/TensorRT-LLM" target="_blank" rel="noopener">NVIDIA TensorRT-LLM</a> library.</p>
-<p dir="ltr">Nemotron-4 340B can be downloaded now from the <a target="_blank" href="https://catalog.ngc.nvidia.com/models?filters=&amp;orderBy=scoreDESC&amp;query=nemotron-4-340b">NVIDIA NGC</a> catalog and from <a href="https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911" target="_blank" rel="noopener">Hugging Face</a>, where developers can also use the <a title="Original URL:
-https://huggingface.co/blog/train-dgx-cloud
-
-Click to follow link." target="_blank" href="https://huggingface.co/blog/train-dgx-cloud" data-outlook-id="5193062f-d639-42ed-b23f-b53853ee7065">Train on DGX Cloud</a> service to easily fine-tune open AI models. Developers will soon be able to access the models at <a href="http://ai.nvidia.com/" target="_blank" rel="noopener">ai.nvidia.com</a>, where they’ll be packaged as an <a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/" target="_blank" rel="noopener">NVIDIA NIM</a> microservice with a standard application programming interface that can be deployed anywhere.</p>
-<h2 dir="ltr">Navigating Nemotron to Generate Synthetic Data</h2>
-<p dir="ltr">LLMs can help developers generate synthetic training data in scenarios where access to large, diverse labeled datasets is limited.</p>
-<p dir="ltr">The <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/nemotron-4-340b-instruct" target="_blank" rel="noopener">Nemotron-4 340B Instruct</a> model creates diverse synthetic data that mimics the characteristics of real-world data, helping improve data quality to increase the performance and robustness of custom LLMs across various domains.</p>
-<p dir="ltr">Then, to boost the quality of the AI-generated data, developers can use the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/nemotron-4-340b-reward" target="_blank" rel="noopener">Nemotron-4 340B Reward</a> model to filter for high-quality responses. Nemotron-4 340B Reward grades responses on five attributes: helpfulness, correctness, coherence, complexity and verbosity. It’s currently first place on the <a target="_blank" href="https://huggingface.co/spaces/allenai/reward-bench">Hugging Face RewardBench leaderboard</a>, created by <a href="https://allenai.org/" target="_blank" rel="noopener">AI2</a>, for evaluating the capabilities, safety and pitfalls of reward models.</p>
-<figure id="attachment_72168" aria-describedby="caption-attachment-72168" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-scaled.jpg"><img loading="lazy" decoding="async" class="wp-image-72168 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-672x378.jpg" alt="nemotron synthetic data generation pipeline diagram" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Synthetic-Data-Generation-Pipeline-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72168" class="wp-caption-text">In this synthetic data generation pipeline, (1) the Nemotron-4 340B Instruct model is first used to produce synthetic text-based output. An evaluator model, (2) Nemotron-4 340B Reward, then assesses this generated text — providing feedback that guides iterative improvements and ensures the synthetic data is accurate, relevant and aligned with specific requirements.</figcaption></figure>
-<p dir="ltr">Researchers can also create their own instruct or reward models by customizing the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/models/nemotron-4-340b-base" target="_blank" rel="noopener">Nemotron-4 340B Base</a> model using their proprietary data, combined with the included <a href="https://huggingface.co/datasets/nvidia/HelpSteer2" target="_blank" rel="noopener">HelpSteer2 dataset</a>.</p>
-<h2 dir="ltr">Fine-Tuning With NeMo, Optimizing for Inference With TensorRT-LLM</h2>
-<p dir="ltr">Using open-source NVIDIA NeMo and NVIDIA TensorRT-LLM, developers can optimize the efficiency of their instruct and reward models to generate synthetic data and to score responses.</p>
-<p dir="ltr">All Nemotron-4 340B models are optimized with TensorRT-LLM to take advantage of tensor parallelism, a type of model parallelism in which individual weight matrices are split across multiple GPUs and servers, enabling efficient inference at scale.</p>
-<p dir="ltr">Nemotron-4 340B Base, trained on 9 trillion tokens, can be customized using the NeMo framework to adapt to specific use cases or domains. This fine-tuning process benefits from extensive pretraining data and yields more accurate outputs for specific downstream tasks.</p>
-<p dir="ltr">A variety of customization methods are available through the NeMo framework, including supervised fine-tuning and parameter-efficient fine-tuning methods such as low-rank adaptation, or LoRA.</p>
-<p dir="ltr">To boost model quality, developers can align their models with <a href="https://github.com/NVIDIA/NeMo-Aligner" target="_blank" rel="noopener">NeMo Aligner</a> and datasets annotated by Nemotron-4 340B Reward. Alignment is a key step in training LLMs, where a model’s behavior is fine-tuned using algorithms like reinforcement learning from human feedback (RLHF) to ensure its outputs are safe, accurate, contextually appropriate and consistent with its intended goals.</p>
-<p dir="ltr">Businesses seeking enterprise-grade support and security for production environments can also access NeMo and TensorRT-LLM through the cloud-native <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" rel="noopener">NVIDIA AI Enterprise</a> software platform, which provides accelerated and efficient runtimes for generative AI foundation models.</p>
-<h2 dir="ltr">Evaluating Model Security and Getting Started</h2>
-<p dir="ltr">The Nemotron-4 340B Instruct model underwent extensive safety evaluation, including adversarial tests, and performed well across a wide range of risk indicators. Users should still perform careful evaluation of the model’s outputs to ensure the synthetically generated data is suitable, safe and accurate for their use case.</p>
-<p dir="ltr">For more information on model security and safety evaluation, read the model card.</p>
-<p dir="ltr">Download Nemotron-4 340B models via <a target="_blank" href="https://catalog.ngc.nvidia.com/models?filters=&amp;orderBy=scoreDESC&amp;query=nemotron-4-340b">NVIDIA NGC</a> and <a href="https://huggingface.co/collections/nvidia/nemotron-4-340b-666b7ebaf1b3867caf2f1911" target="_blank" rel="noopener">Hugging Face</a>. For more details, read the <a target="_blank" href="https://research.nvidia.com/publication/2024-06_nemotron-4-340b">research papers on the model</a> and <a href="https://arxiv.org/abs/2406.08673" target="_blank" rel="noopener">dataset</a>.</p>
-<p><i>See </i><a href="https://www.nvidia.com/en-eu/about-nvidia/terms-of-service/" target="_blank" rel="noopener"><i>notice</i></a><i> regarding software product information.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/llm-blog-customization-techniques-2847735-1280x680-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/llm-blog-customization-techniques-2847735-1280x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[NVIDIA Releases Open Synthetic Data Generation Pipeline for Training Large Language Models]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
