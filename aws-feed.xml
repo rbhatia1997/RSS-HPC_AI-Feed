@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 03 Jul 2024 12:57:36 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 10 Jul 2024 17:43:14 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,91 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Running FSI workloads on AWS with YellowDog</title>
+		<link>https://aws.amazon.com/blogs/hpc/running-fsi-workloads-on-aws-with-yellowdog/</link>
+		
+		<dc:creator><![CDATA[Kirill Bogdanov]]></dc:creator>
+		<pubDate>Wed, 10 Jul 2024 14:51:21 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[Financial Services]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Amazon FSx]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[EC2 Spot]]></category>
+		<category><![CDATA[FSI]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">d573e34c0811266707460763324d754054fc016c</guid>
+
+					<description>Financial services firms: we stress-tested YellowDog's HPC environment to see if it could handle a 10m task batch at 3,000 tasks per second. Check out the results.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt; &lt;img class="alignright size-full wp-image-3913" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/24/Running-FSI-workloads-on-AWS-with-YellowDog.png" alt="Running FSI workloads on AWS with YellowDog 2" width="380" height="212"&gt;This post was contributed by Kirill Bogdanov and Alan Parry, CTO at YellowDog&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Large compute grids are critical components of any financial services industry (FSI) organisation today. They’re used in daily operations from pricing products, to risk management and monitoring, and even regulatory reporting. Historically, though, compute grids have been complex to operate and expensive to run. Even worse, some organizations’ demand for compute regularly exceeds their limited on-premises capacity. All of this has led to FSI firms exploring cloud for modernisation and as a cost effective alternative.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://yellowdog.co/"&gt;YellowDog&lt;/a&gt; is a high performance computing (HPC) environment that specializes in large-scale workloads and hybrid-cloud deployments, allowing customers to use their on-premises capacity while simultaneously taking advantage of the scale and capabilities of AWS.&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll look at YellowDog’s performance and its operational characteristics that are important for FSI customers including: scheduling latency, throughput, and integration with AWS services.&amp;nbsp;This is the second post in a series – in our &lt;a href="https://aws.amazon.com/blogs/hpc/running-a-3-2m-vcpu-hpc-workload-on-aws-with-yellowdog/"&gt;previous post&lt;/a&gt;, we showed you how YellowDog can scale up to 3.2 million vCPUs on AWS in just under 33 minutes.&lt;/p&gt; 
+&lt;h2&gt;The challenge familiar to FSIs&lt;/h2&gt; 
+&lt;p&gt;Today, new financial regulatory requirements like FRTB (the &lt;em&gt;Fundamental Review of the Trading Book&lt;/em&gt;), RWA (&lt;em&gt;Risk Weighted Assets&lt;/em&gt;), and ESG (&lt;em&gt;Environmental, Social, and Governance&lt;/em&gt;) have resulted in a significant increase (up to 10x) in computational demand, compelling FSI firms to find additional compute capacity.&lt;/p&gt; 
+&lt;p&gt;Furthermore, FSI workloads often involve large numbers of short-running tasks, requiring a variation of HPC known as high throughput computing (HTC). It’s not uncommon to process more than 100 million tasks per day, with a substantial portion of these tasks taking less than two seconds to run. These characteristics can make many ‘normal’ job schedulers ill-suited for the task.&amp;nbsp;But the ability to perform more computations, sooner, translates directly into improved quality of service and market competitiveness for an institution.&lt;/p&gt; 
+&lt;p&gt;These factors are driving FSI firms to reimagine their computing grids and to explore cloud-based modernization pathways in pursuit of improved functionality and cost efficiency.&lt;/p&gt; 
+&lt;p&gt;YellowDog is a leading cloud provisioning and job scheduling stack that enables customers across FSI to optimise their compute infrastructure and run complex workloads across multiple AWS regions, simultaneously. Today we’re evaluating the suitability of running YellowDog on AWS for FSI HTC workloads, specifically.&lt;/p&gt; 
+&lt;h2&gt;Definitions&lt;/h2&gt; 
+&lt;p&gt;For the rest of this post, let’s standardize on some terms so we don’t get tangled up:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Task&lt;/strong&gt; – A single unit of work submitted for processing.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Job&lt;/strong&gt; – A logical group of tasks that are submitted and executed together, often with interdependencies.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Workload – &lt;/strong&gt;A larger group of jobs that are executed to deliver a business outcome, for example, a complete nightly batch.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Worker&lt;/strong&gt; – A process of some kind running on EC2 that can execute a task. An EC2 instance can facilitate support multiple workers, consuming different amounts of resource, each launching processes or containers.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2&gt;Scheduling overhead&lt;/h2&gt; 
+&lt;p&gt;Scheduling overhead (or scheduling &lt;em&gt;latency&lt;/em&gt;) is the time it takes for a client application to submit a job to the grid and to receive a processing result, excluding the time for the actual computational processing itself.&lt;/p&gt; 
+&lt;p&gt;Low scheduling overhead can let traders price instruments and assess risk exposure in close to real-time, which can be critical in many situations.&amp;nbsp;Furthermore, when processing short-running jobs, low scheduling overhead ensures high grid utilisation, with most of the compute time spent on job processing rather than job scheduling and book-keeping.&lt;/p&gt; 
+&lt;p&gt;Let’s look at how YellowDog serves these near real-time intraday workloads. Figure 1 illustrates the concepts of scheduling overhead.&lt;/p&gt; 
+&lt;div id="attachment_3910" style="width: 1003px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3910" loading="lazy" class="size-full wp-image-3910" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/24/IMG-2024-06-24-15.01.14.png" alt="Figure 1: The timeline depicting events from the moment a task is submitted to a grid until results are received by the client. Scheduling overhead is the difference between the completion time perceived by the client and the actual task execution time. &amp;nbsp;" width="993" height="339"&gt;
+ &lt;p id="caption-attachment-3910" class="wp-caption-text"&gt;Figure 1: The timeline depicting events from the moment a task is submitted to a grid until results are received by the client. Scheduling overhead is the difference between the completion time perceived by the client and the actual task execution time.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;This figure presents a timeline depicting the sequence of events from the moment a task is submitted to a grid until results are received by the client. For the sake of simplicity, we’ll consider a job consisting of a single task.&lt;/p&gt; 
+&lt;p&gt;At time &lt;em&gt;T1&lt;/em&gt;, a client application prepares a job and submits it to the grid at time &lt;em&gt;T2&lt;/em&gt;.&amp;nbsp;At this stage, the task enters the scheduling queue of the grid and waits to be assigned to a worker process.&amp;nbsp;At time &lt;em&gt;T3&lt;/em&gt;, a worker picks up the task and executes it until completion at &lt;em&gt;T4&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;Finally, at time T5, using push or pull mechanisms, the client application becomes aware that the job has completed, allowing the collection of results.&amp;nbsp;At time T6, the client application collects the results (though sometimes, notification and result retrieval are combined).&lt;/p&gt; 
+&lt;p&gt;It’s important to note that while the actual execution time of the task spans from T3 to T4, the perceived time from the client’s perspective is T2 to T6. For this post, we’ll refer to the time difference between execution time &lt;em&gt;perceived&lt;/em&gt; by the client application and &lt;em&gt;actual&lt;/em&gt; job execution time as the &lt;strong&gt;scheduling overhead&lt;/strong&gt;.&lt;/p&gt; 
+&lt;p&gt;Based on these definitions, a client can submit &lt;em&gt;at most&lt;/em&gt; (1 / T2 – T6) tasks per second into the grid.&lt;/p&gt; 
+&lt;h2&gt;Testing YellowDog’s scheduling&lt;/h2&gt; 
+&lt;p&gt;We wanted to stress YellowDog’s scheduling components, so we used &lt;em&gt;zero-work tasks &lt;/em&gt;(tasks that did literally nothing), so the processing step would simply return a hard coded output. That way we minimised the T3 to T4 time interval, and focused on the scheduling overhead itself.&lt;/p&gt; 
+&lt;p&gt;Figure 2 shows the cumulative distribution functions (CDFs) of the measured scheduling overhead. In this figure, the &lt;em&gt;x&lt;/em&gt;-axis shows the end-to-end latency from the moment of submission of the job until all the results of the task are returned to the client, while the &lt;em&gt;y&lt;/em&gt;-axis shows the percentile – the fraction of jobs that completed within the indicated latency.&lt;/p&gt; 
+&lt;p&gt;We performed these measurements using jobs containing 1, 10, and 100 zero-work tasks, and plotted them using full, dashed, and dotted lines respectively in Figure 2.&lt;/p&gt; 
+&lt;p&gt;We also considered two distinct job-completion notification mechanisms. The first mechanism relies on YellowDog’s task-level REST API. This API allows us to check the status of individual tasks.&lt;/p&gt; 
+&lt;p&gt;The second mechanism is a custom extension we built with Amazon ElastiCache. This mechanism relies on the worker to mark task completion directly in the cache, with the client application pulling results from the cache. This is more consistent with how real-world tasks would usually be managed.&lt;/p&gt; 
+&lt;div id="attachment_3911" style="width: 956px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3911" loading="lazy" class="size-full wp-image-3911" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/24/IMG-2024-06-24-15.01.51.png" alt="Figure 2: End-to-end task completion time as perceived by a client. Median latency for different notification mechanisms is around 400ms." width="946" height="597"&gt;
+ &lt;p id="caption-attachment-3911" class="wp-caption-text"&gt;Figure 2: End-to-end task completion time as perceived by a client. Median latency for different notification mechanisms is around 400ms.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The results indicated that YellowDog can provide an end-to-end scheduling overhead of a few hundred milliseconds, which is sufficiently low to be unnoticeable by a user like a trader, requiring a more or less real-time response.&lt;/p&gt; 
+&lt;h2&gt;Efficiency with short duration tasks&lt;/h2&gt; 
+&lt;p&gt;For ‘long’ running tasks (that is, &lt;em&gt;minutes to hours&lt;/em&gt;) a scheduling latency of one second might not be relevant. But this changes when processing time is measured in seconds: a low scheduling overhead directly translates into efficiency when processing short running tasks.&lt;/p&gt; 
+&lt;p&gt;YellowDog’s &lt;em&gt;Worker&lt;/em&gt; polls the YellowDog &lt;em&gt;Scheduler&lt;/em&gt; for tasks to execute. If there are no tasks for a Worker to process it will sleep for a randomly chosen, but &lt;em&gt;configurable,&lt;/em&gt; duration which defaults to be between 0-60 seconds.&lt;/p&gt; 
+&lt;p&gt;Once a task becomes available, the Worker will retrieve it, execute it, and will then attempt to retrieve the next task from the queue. If there are no further tasks waiting, the Worker will sleep again until another task becomes available.&lt;/p&gt; 
+&lt;p&gt;The duration of the Worker sleep interval is only relevant when there are no tasks in the Worker’s queue, and it can be adjusted at a system-wide level if required, to reduce the average interval.&lt;/p&gt; 
+&lt;p&gt;By using a prepopulated task queue, a single YellowDog Worker can efficiently process up to 25 tasks per second, implying a base scheduling overhead of only 40 milliseconds. This processing speed translates into an efficiency rate of 98% for tasks that complete within two seconds.&lt;/p&gt; 
+&lt;p&gt;That means a single YellowDog Worker can efficiently consume short tasks from a queue and deliver results in a timely fashion.&lt;/p&gt; 
+&lt;h2&gt;Throughput&lt;/h2&gt; 
+&lt;p&gt;Throughput refers to the rate at which tasks can be processed. Throughput is particularly important for nightly batches when millions of tasks need to be processed as a part of a larger workload, as efficiently as possible. The ability to schedule a large volume of tasks quickly and efficiently is of paramount importance for a successful FSI grid scheduler.&lt;/p&gt; 
+&lt;p&gt;More importantly, a fast scheduler can scale &lt;em&gt;horizontally&lt;/em&gt; to take full advantage of the compute resources available at AWS, allowing workloads to complete faster, thereby providing an opportunity for additional computation or to re-run workloads that required correction.&lt;/p&gt; 
+&lt;p&gt;To measure YellowDog’s throughout we configured 2,000 YellowDog Workers (each with 1vCPU and 4GiB RAM), and we used 16 clients to submit zero-work jobs comprising of 5,000 to 10,000 tasks with 10,000,000 tasks in total.&lt;/p&gt; 
+&lt;p&gt;We measured the total time from the moment we initiated submission, until the last task was complete.&lt;/p&gt; 
+&lt;p&gt;Using this approach, we measured the average tasks per second (TPS) to be 3,000. This translates to 85 million tasks per typical overnight eight-hour window.&lt;/p&gt; 
+&lt;h2&gt;Integration with AWS services&lt;/h2&gt; 
+&lt;p&gt;When it comes to running large scale grids on AWS, it’s critical to follow the best practices and use the correct APIs to obtain the necessary compute capacity quickly – and cost effectively.&lt;/p&gt; 
+&lt;p&gt;YellowDog supports the Amazon Elastic Computer Cloud (Amazon EC2) Fleet API, including important options like EC2 Spot, Allocation Strategies (including the recommended ‘price-capacity-optimized’). It also supports attribute-based instance selection, which greatly simplifies finding suitable Amazon EC2 instances for your workload to include in that mix for Spot.&lt;/p&gt; 
+&lt;p&gt;Using ‘dynamic templates’ YellowDog automatically selects the best source of compute based on your requirements and preferences, especially useful when your workload characteristics can change. This automation is fed by YellowDog Insights which measures Amazon EC2 instance types across price, performance, benchmarking, location, and energy efficiency. Included in this data is a comparison of spot and on-demand pricing and YellowDog’s managed compute requirements ensure that if you experience spot interruptions, compute can be re-provisioned and tasks can be re-tried on other workers.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;We saw a median scheduling overhead of 400ms, and a throughput greater than 3,000 tasks per second. In our previous post we showed YellowDog scaling to more than 3.2 million vCPUs, and maintaining a high utilization for that fleet. Taken together, these results indicate that YellowDog has the capability to handle a wide range of FSI workloads.&lt;/p&gt; 
+&lt;p&gt;Based on these results, we think YellowDog has the necessary scale, efficiency, and low scheduling latency to handle both batch &lt;em&gt;and&lt;/em&gt; intraday jobs effectively for financial services customers. It’s also well integrated with AWS services, which allows it to take full advantage of the power of AWS when provisioning compute resources at scale.&lt;/p&gt; 
+&lt;p&gt;YellowDog’s existing FSI customers are made up of large asset managers and hedge funds running complex hybrid-cloud workloads, at scale. You can &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-q3kswq4btig6o?sr=0-1&amp;amp;ref_=beagle&amp;amp;applicationId=AWSMPContessa"&gt;access YellowDog&lt;/a&gt; through AWS Marketplace, which will include the cost of the solution in your monthly AWS bill.&lt;/p&gt; 
+&lt;p&gt;You can &lt;a href="https://yellowdog.co/get-started/"&gt;get in touch with YellowDog&lt;/a&gt; directly to arrange a discovery call, discuss your business requirements, and learn how they can support you. Alternatively, reach out to the FSI HPC experts at AWS by emailing us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Improve HPC workloads on AWS for environmental sustainability</title>
 		<link>https://aws.amazon.com/blogs/hpc/improve-hpc-workloads-on-aws-for-environmental-sustainability/</link>
 		
@@ -37,7 +122,7 @@
 		<guid isPermaLink="false">da98b13a916f8f924ea8af83da8c8373caefe598</guid>
 
 					<description>Need to cut your carbon footprint without sacrificing productivity? Migrating HPC workloads to the cloud allowed Baker Hughes to reduce emissions by 99%! Get tips for optimizing compute, storage, networking so you can do better.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3870" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/18/boofla88_a_supercomputer_sitting_in_the_middle_of_a_rainforest._013a2b55-5560-40a6-bf1e-9ee121f4dd3c.png" alt="Improve HPC workloads on AWS for environmental sustainability" width="380" height="212"&gt;HPC workloads are used across industries from finance and engineering to genomics and chemistry – all to enable opportunities for innovation and growth. Because the compute is so intensive, these systems can consume large amounts of energy and generate serious carbon emissions. Many businesses are looking to reduce their carbon footprint to meet the Paris accord, and on-premises HPC clusters constitute a noticeable portion of their total data center impact. But by migrating their HPC workloads to AWS &lt;a href="https://aws.amazon.com/solutions/case-studies/baker-hughes-case-study/"&gt;Baker Hughes&lt;/a&gt; was able to reduce their carbon footprint by 99%, setting an example for the community.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3870" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/18/boofla88_a_supercomputer_sitting_in_the_middle_of_a_rainforest._013a2b55-5560-40a6-bf1e-9ee121f4dd3c.png" alt="Improve HPC workloads on AWS for environmental sustainability" width="380" height="212"&gt;HPC workloads are used across industries from finance and engineering to genomics and chemistry – all to enable opportunities for innovation and growth. Because the compute is so intensive, these systems can consume large amounts of energy and generate serious carbon emissions. Many businesses are looking to reduce their carbon footprint to meet the Paris accord, and on-premises HPC clusters constitute a noticeable portion of their total data center impact. But by migrating their HPC workloads to AWS &lt;a href="https://aws.amazon.com/solutions/case-studies/baker-hughes-case-study/"&gt;Baker Hughes&lt;/a&gt; was able to reduce their carbon footprint by 99%, setting an example for the community.&lt;/p&gt; 
 &lt;p&gt;If you want to achieve a similar result, it’s critical to optimize your cluster for resource efficiency &lt;em&gt;and&lt;/em&gt; effectiveness. HPC architectures are built on five main pillars: compute, storage, networking, visualization and orchestration.&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll focus on each one of these pillars, and discuss tips and best practices that can help you optimize resource usage and the environmental impact of your workloads, while also keeping your productivity goals.&lt;/p&gt; 
 &lt;p&gt;To demonstrate these ideas, we’ll assume the use case of an automotive customer who needs to run computer-aided engineering (CAE). These types of jobs need large volumes of compute, so they’re representative of most simulations you’re likely to be doing in your environment, too.&lt;/p&gt; 
@@ -1957,74 +2042,6 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;In this post, we talked about the PCIe topology of hpc7a instances, how MPI applications use EFA devices and how you can make tuning changes to achieve best performance on hpc7a. If you’re using Open MPI, you can get the best performance right out of the box. If you’re using Intel MPI, we suggest upgrading to the latest 2021.12 release to achieve the same outcome, or set the environment variable &lt;code&gt;I_MPI_MULTIRAIL=1&lt;/code&gt; in your job scripts.&lt;/p&gt; 
 &lt;p&gt;We hope you get great performance from the hpc7a instances for your HPC workloads. Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; with your thoughts and questions. Happy computing!&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Build and deploy a 1 TB/s file system in under an hour</title>
-		<link>https://aws.amazon.com/blogs/hpc/build-and-deploy-a-1-tb-s-file-system-in-under-an-hour/</link>
-		
-		<dc:creator><![CDATA[Randy Seamans]]></dc:creator>
-		<pubDate>Tue, 23 Apr 2024 14:26:36 +0000</pubDate>
-				<category><![CDATA[Amazon FSx]]></category>
-		<category><![CDATA[Amazon FSx for Lustre]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Storage]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Slurm]]></category>
-		<guid isPermaLink="false">2f2bf7a37ba03c570aa2e58624876ea742c109fd</guid>
-
-					<description>Want to set up a high-speed shared file system for your #HPC or #AI workloads in under an hour? Learn how with this new blog post.</description>
-										<content:encoded>&lt;div id="attachment_3822" style="width: 390px" class="wp-caption alignright"&gt;
- &lt;a href="https://youtu.be/Nm3j5PWPFrY" target="new" rel="noopener"&gt;&lt;img aria-describedby="caption-attachment-3822" loading="lazy" class="size-full wp-image-3822" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/11/YT-Huge-tracts-of-Lustre.png" alt="" width="380" height="213"&gt;&lt;/a&gt;
- &lt;p id="caption-attachment-3822" class="wp-caption-text"&gt;You can see a demo with Randy on our HPC Tech Shorts channel on YouTube: https://youtu.be/Nm3j5PWPFrY&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;High throughput shared files systems are an essential part of any HPC or AI environment. Whether you want to train large language models (LLMs), find effective new drugs, or lead the search for new sources of energy, shared file systems are responsible for feeding compute and storing the hard-won results.&lt;/p&gt; 
-&lt;p&gt;If you manage or use an on-premise environment, you know the complexity, value, and cost of providing a high throughput persistent data repository. You probably also know it typically takes weeks or months to plan and provision a large Lustre environment from scratch.&lt;/p&gt; 
-&lt;p&gt;In this post, I’ll show how to build persistent shared file systems capable of &lt;em&gt;terabytes per second&lt;/em&gt; in AWS in under an hour.&lt;/p&gt; 
-&lt;h2&gt;Background&lt;/h2&gt; 
-&lt;p&gt;The dynamic nature of &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; enables your organization to leverage the massive scale of AWS compute, network, and storage for your HPC and AI applications while only paying for actual usage. If your organization is trying to reduce both time and cost to reach a solution, FSx for Lustre combined with &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/accelerated-computing-instances.html"&gt;AWS Accelerated Instances&lt;/a&gt; gets you off to a great start without waiting for on-premise resources.&lt;/p&gt; 
-&lt;p&gt;While live at the &lt;a href="https://sc23.supercomputing.org/"&gt;SuperComputing 2023&lt;/a&gt; AWS booth, I demonstrated a 1.1 PiB FSx for Lustre file system capable of over &lt;strong&gt;a terabyte per second&lt;/strong&gt; from a standard AWS account in the Northern Virginia region.&lt;/p&gt; 
-&lt;p&gt;Prior to building the file system, your account quotas for FSx for Lustre must be increased. There is no charge for maintaining an increased quota. But most importantly, I did not have to architect or pre-provision storage, storage servers, interconnect, nor select the proper Lustre configuration to meet my performance goals.&lt;/p&gt; 
-&lt;p&gt;As shown in figure 1, after completing a few questions, the FSx service started creating a high-throughput, persistent, SSD backed POSIX-compliant file system.&lt;/p&gt; 
-&lt;div id="attachment_3540" style="width: 1006px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3540" loading="lazy" class="size-full wp-image-3540" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/16/CleanShot-2024-04-16-at-16.56.22.png" alt="Figure 1 – Screenshot of the ease of creating a Persistent FSx for Lustre 1 TB/s file system in progress" width="996" height="454"&gt;
- &lt;p id="caption-attachment-3540" class="wp-caption-text"&gt;Figure 1 – Screenshot of the ease of creating a Persistent FSx for Lustre 1 TB/s file system in progress&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;By relieving the heavy lift of deployment, not only is there a huge savings in time, but the human effort previously used to plan, evaluate, procure, rack, build, configure, and manage can be redirected to tasks that more directly impact the time to solution.&lt;/p&gt; 
-&lt;h2&gt;How long does it take for the file system to become ready?&lt;/h2&gt; 
-&lt;p&gt;When a FSx for Lustre file system is created, you can create an empty file system, or you can import existing metadata from data repositories. &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/overview-dra-data-repo.html"&gt;Data Repositories&lt;/a&gt; are simply &lt;a href="https://aws.amazon.com/s3/"&gt;S3 buckets&lt;/a&gt; or &lt;a href="https://repost.aws/knowledge-center/s3-prefix-nested-folders-difference"&gt;S3 Prefixes&lt;/a&gt; that exist in AWS.&lt;/p&gt; 
-&lt;p&gt;When creating my 1 PiB file system at SC23, the build completed in far less than one hour – &lt;em&gt;including importing the metadata&lt;/em&gt;. You can specify one data repository association (DRA) on build, and you can add up to seven more (as needed) after initial build. Of course, the length of time to load a DRA is directly dependent upon the throughput level, and the volume of metadata.&lt;/p&gt; 
-&lt;p&gt;What sort of environments does FSx for Lustre enable? At SC23, I used a cluster of over 120 i3en.24xlarge Amazon EC2 compute-optimized instances, each with a 100 Gbit/s &lt;a href="https://aws.amazon.com/hpc/efa/"&gt;Elastic Fabric Adapter&lt;/a&gt; for network connectivity.&lt;/p&gt; 
-&lt;p&gt;Recently we introduced new &lt;a href="https://aws.amazon.com/ec2/instance-types/#HPC_Optimized"&gt;HPC optimized instances&lt;/a&gt; that support EFA bandwidth up to 300 Gb/s (Hpc7a instance). You can &lt;a href="https://www.youtube.com/watch?v=i2T7Hi2Yjoc"&gt;find out more about them&lt;/a&gt; from our HPC Tech Shorts channel on YouTube. If you need to scale your compute for heavy duty GPU workloads, FSx for Lustre also can connect to the &lt;a href="https://aws.amazon.com/ec2/ultraclusters/"&gt;EC2 UltraCluster&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;The particular instances you choose for any given workload should be tailored to your application’s requirements to keep your costs low, and speed of execution high.&lt;/p&gt; 
-&lt;p&gt;Now, once our build and/or load is complete, let’s move on to unit testing of our new file system.&lt;/p&gt; 
-&lt;h2&gt;How fast can this go?&lt;/h2&gt; 
-&lt;div id="attachment_3549" style="width: 813px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3549" loading="lazy" class="size-full wp-image-3549" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/16/CleanShot-2024-04-16-at-16.57.20-1.png" alt="Figure 2 – Screenshot of a single cluster node achieving 9.25 GByte/s of file system Read/Write throughput via fio" width="803" height="418"&gt;
- &lt;p id="caption-attachment-3549" class="wp-caption-text"&gt;Figure 2 – Screenshot of a single cluster node achieving 9.25 GByte/s of file system Read/Write throughput via fio&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;In figure 2 above, you can see the standard file benchmark &lt;a href="https://fio.readthedocs.io/en/latest/fio_doc.html"&gt;fio&lt;/a&gt; was used with a 1 megabyte IO size to drive both read and write throughput from &lt;strong&gt;a single node&lt;/strong&gt;, using most of the 100 Gbps &lt;a href="https://aws.amazon.com/hpc/efa/"&gt;Elastic Fabric Adapter (EFA)&lt;/a&gt; throughput. Note that 9.25 Gigabyte/s was achieved with absolutely no tuning for optimal block size or network settings, to get close to line speed. The SC23 demonstration was not designed to show best-case benchmarked performance, but to demonstrate non-cached, sustained performance available without any tuning, using default settings. Stay tuned to this channel for more posts explaining how to optimize FSx for Lustre performance using popular Lustre benchmarking tools.&lt;/p&gt; 
-&lt;p&gt;In the background of figure 2, you can see the &lt;a href="https://aws.amazon.com/cloudwatch/"&gt;AWS CloudWatch&lt;/a&gt; dashboard I created using a few clicks to monitor file system performance metrics. This chart shows only one node performing IO.&lt;/p&gt; 
-&lt;p&gt;Now let’s move on to look at aggregate file system throughput as shown in figure 3.&lt;/p&gt; 
-&lt;div id="attachment_3542" style="width: 814px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3542" loading="lazy" class="size-full wp-image-3542" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/16/CleanShot-2024-04-16-at-16.57.56.png" alt="Figure 3 – Screenshot of the aggregate 1TB/s of file system Read/Write throughput via fio" width="804" height="468"&gt;
- &lt;p id="caption-attachment-3542" class="wp-caption-text"&gt;Figure 3 – Screenshot of the aggregate 1TB/s of file system Read/Write throughput via fio&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 3 shows that our 120-node cluster achieved over 1 TByte/s of FSx for Lustre throughput, which is the maximum throughput we configured our file system for when we launched it. These are impressive results for a file system you can stand up or stand down &lt;em&gt;on-demand&lt;/em&gt;, and pay only as you go.&lt;/p&gt; 
-&lt;p&gt;You don’t need to amortize your storage costs for years to justify running a project anymore – you can have 1 TB/s for just the hours or days you need high-speed file level access. During off-peak times, you can stand down your FSx for Lustre file system, and it remains possible to access the data at lower speed in the underlying repositories via the S3 object protocol. This allows you to stage, de-stage or browse your content, and run FSx for Lustre only when needed for application performance.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Developing and deploying HPC and AI workloads is complex and difficult enough without fighting the headwinds of equipment availability, power and cooling issues, datacenter build out, and vendor interoperability. By leveraging FSx for Lustre, you can enable your organization to cloud burst HPC or AI workloads to AWS, or easily migrate workloads to AWS.&lt;/p&gt; 
-&lt;p&gt;But if your organization is just setting out on an HPC or AI development journey – you can instead start today and shave months or years off your project. If you want to stand on the shoulders of others you can use cluster and filesystem stacks created by experts who’ve all done this before. You can launch customizable templates from our &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-a-community-recipe-library-for-hpc-infrastructure-on-aws/"&gt;HPC Recipes Library&lt;/a&gt;, which have all been built to be interoperable, and simple to use. Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; if you have ideas for how we can make it easier for you.&lt;/p&gt;</content:encoded>
 					
 		
 		
