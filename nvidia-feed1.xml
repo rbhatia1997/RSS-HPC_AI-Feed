@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Fri, 12 Jul 2024 04:46:21 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 12 Jul 2024 15:12:08 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,95 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>Mile-High AI: NVIDIA Research to Present Advancements in Simulation and Gen AI at SIGGRAPH</title>
+		<link>https://blogs.nvidia.com/blog/siggraph-2024-ai-graphics-research/</link>
+		
+		<dc:creator><![CDATA[Aaron Lefohn]]></dc:creator>
+		<pubDate>Fri, 12 Jul 2024 13:00:28 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Pro Graphics]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[NVIDIA Research]]></category>
+		<category><![CDATA[Ray Tracing]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<category><![CDATA[SIGGRAPH]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<category><![CDATA[Synthetic Data Generation]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72914</guid>
+
+					<description><![CDATA[NVIDIA is taking an array of advancements in rendering, simulation and generative AI to SIGGRAPH 2024, the premier computer graphics conference, which will take place July 28 &#8211; Aug. 1 in Denver. More than 20 papers from NVIDIA Research introduce innovations advancing synthetic data generators and inverse rendering tools that can help train next-generation models.	<a class="read-more" href="https://blogs.nvidia.com/blog/siggraph-2024-ai-graphics-research/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA is taking an array of advancements in rendering, simulation and generative AI to <a target="_blank" href="https://s2024.siggraph.org/">SIGGRAPH 2024</a>, the premier computer graphics conference, which will take place July 28 &#8211; Aug. 1 in Denver.</p>
+<p>More than 20 papers from NVIDIA Research introduce innovations advancing synthetic data generators and inverse rendering tools that can help train next-generation models. NVIDIA’s AI research is making simulation better by boosting image quality and unlocking new ways to create 3D representations of real or imagined worlds.</p>
+<p>The papers focus on diffusion models for visual generative AI, physics-based simulation and increasingly realistic AI-powered rendering. They include two technical <a target="_blank" href="https://blog.siggraph.org/2024/06/siggraph-2024-technical-papers-awards-best-papers-honorable-mentions-and-test-of-time.html/">Best Paper Award winners</a> and collaborations with universities across the U.S., Canada, China, Israel and Japan as well as researchers at companies including Adobe and Roblox.</p>
+<p>These initiatives will help create tools that developers and businesses can use to generate complex virtual objects, characters and environments. <a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/">Synthetic data generation</a> can then be harnessed to tell powerful visual stories, aid scientists&#8217; understanding of natural phenomena or assist in simulation-based training of robots and autonomous vehicles.</p>
+<p><iframe title="NVIDIA Research at #SIGGRAPH2024 Preview" width="500" height="375" src="https://www.youtube.com/embed/UuFxTyg6RK4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>Diffusion Models Improve Texture Painting, Text-to-Image Generation</b></h2>
+<p>Diffusion models, a popular tool for transforming text prompts into images, can help artists, designers and other creators rapidly generate visuals for storyboards or production, reducing the time it takes to bring ideas to life.</p>
+<p>Two NVIDIA-authored papers are advancing the capabilities of these generative AI models.</p>
+<p><a target="_blank" href="https://research.nvidia.com/labs/par/consistory/">ConsiStory</a>, a collaboration between researchers at NVIDIA and Tel Aviv University, makes it easier to generate multiple images with a consistent main character — an essential capability for storytelling use cases such as illustrating a comic strip or developing a storyboard. The researchers’ approach introduces a technique called subject-driven shared attention, which reduces the time it takes to generate consistent imagery from 13 minutes to around 30 seconds.</p>
+<figure id="attachment_72922" aria-describedby="caption-attachment-72922" style="width: 1090px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-full wp-image-72922" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/ConsiStory.jpeg" alt="Panels of multiple AI-generated images featuring the same character" width="1090" height="613" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/ConsiStory.jpeg 1090w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ConsiStory-400x225.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ConsiStory-672x378.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ConsiStory-768x432.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ConsiStory-800x450.jpeg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ConsiStory-382x215.jpeg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ConsiStory-178x100.jpeg 178w" sizes="(max-width: 1090px) 100vw, 1090px" /><figcaption id="caption-attachment-72922" class="wp-caption-text">ConsiStory is capable of generating a series of images featuring the same character.</figcaption></figure>
+<p>NVIDIA researchers last year won the <a href="https://blogs.nvidia.com/blog/siggraph-research-generative-ai-materials-3d-scenes/">Best in Show award at SIGGRAPH’s Real-Time Live</a> event for AI models that turn text or image prompts into custom textured materials. This year, they’re presenting a paper that applies <a target="_blank" href="https://research.nvidia.com/labs/toronto-ai/DiffusionTexturePainting/">2D generative diffusion models to interactive texture painting</a> on 3D meshes, enabling artists to paint in real time with complex textures based on any reference image.</p>
+<p><iframe title="Diffusion Texture Painting | NVIDIA Research Paper" width="500" height="281" src="https://www.youtube.com/embed/lKeCta_klJ0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>Kick-Starting Developments in Physics-Based Simulation</b></h2>
+<p>Graphics researchers are narrowing the gap between physical objects and their virtual representations with physics-based simulation — a range of techniques to make digital objects and characters move the same way they would in the real world.</p>
+<p>Several NVIDIA Research papers feature breakthroughs in the field, including SuperPADL, a project that tackles the challenge of<a target="_blank" href="https://research.nvidia.com/publication/2024-07_superpadl-scaling-language-directed-physics-based-control-progressive"> simulating complex human motions based on text prompts</a> (see video at top).</p>
+<p>Using a combination of reinforcement learning and supervised learning, the researchers demonstrated how the SuperPADL framework can be trained to reproduce the motion of more than 5,000 skills — and can run in real time on a consumer-grade NVIDIA GPU.</p>
+<p>Another NVIDIA paper features a <a target="_blank" href="https://research.nvidia.com/labs/toronto-ai/simplicits/">neural physics method</a> that applies AI to learn how objects — whether represented as a 3D mesh, a NeRF or a solid object generated by a text-to-3D model — would behave as they are moved in an environment.</p>
+<div style="width: 1920px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-72914-1" width="1920" height="1080" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Simplicits.mp4?_=1" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/Simplicits.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/07/Simplicits.mp4</a></video></div>
+<p>&nbsp;</p>
+<p>A paper written in collaboration with Carnegie Mellon University researchers develops a new kind of renderer — one that, instead of modeling physical light, can <a target="_blank" href="https://research.nvidia.com/labs/prl/miller2024wost/WoStRobin.pdf">perform thermal analysis, electrostatics and fluid mechanics</a>. Named one of five best papers at SIGGRAPH, the method is easy to parallelize and doesn’t require cumbersome model cleanup, offering new opportunities for speeding up engineering design cycles.</p>
+<p><iframe loading="lazy" title="Walkin’ Robin: Walk on Stars with Robin Boundary Conditions | NVIDIA Research Paper" width="500" height="281" src="https://www.youtube.com/embed/4v9VZqOCPsU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p style="text-align: center;"><i>In the example above, the renderer performs a thermal analysis of the Mars Curiosity rover, where keeping temperatures within a specific range is critical to mission success. </i></p>
+<p>Additional simulation papers introduce a more efficient technique for <a target="_blank" href="https://research.nvidia.com/publication/2024-07_modeling-hair-strands-roving-capsules">modeling hair strands</a> and a <a target="_blank" href="https://research.nvidia.com/publication/2024-07_fluid-control-laplacian-eigenfunctions">pipeline that accelerates fluid simulation</a> by 10x.</p>
+<h2><b>Raising the Bar for Rendering Realism, Diffraction Simulation</b></h2>
+<p>Another set of NVIDIA-authored papers present new techniques to model visible light up to 25x faster and simulate diffraction effects — such as those used in radar simulation for training self-driving cars — up to 1,000x faster.</p>
+<p>A paper by NVIDIA and University of Waterloo researchers tackles <a target="_blank" href="https://research.nvidia.com/labs/rtr/publication/steinberg2024diffraction/">free-space diffraction</a>, an optical phenomenon where light spreads out or bends around the edges of objects. The team’s method can integrate with path-tracing workflows to increase the efficiency of simulating diffraction in complex scenes, offering up to 1,000x acceleration. Beyond rendering visible light, the model could also be used to simulate the longer wavelengths of radar, sound or radio waves.</p>
+<figure id="attachment_72928" aria-describedby="caption-attachment-72928" style="width: 720px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-72928" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Free-Space-Diffraction.jpg" alt="Urban scene with colors showing simulation of cellular radiation propagation around buildings" width="720" height="382" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Free-Space-Diffraction.jpg 720w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Free-Space-Diffraction-400x212.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Free-Space-Diffraction-672x357.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Free-Space-Diffraction-406x215.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Free-Space-Diffraction-188x100.jpg 188w" sizes="(max-width: 720px) 100vw, 720px" /><figcaption id="caption-attachment-72928" class="wp-caption-text">Simulation of cellular signal coverage in a city.</figcaption></figure>
+<p><a href="https://blogs.nvidia.com/blog/what-is-path-tracing/">Path tracing</a> samples numerous paths — multi-bounce light rays traveling through a scene — to create a photorealistic picture. Two SIGGRAPH papers improve sampling quality for ReSTIR, a path-tracing algorithm first introduced by NVIDIA and Dartmouth College researchers at SIGGRAPH 2020 that has been key to bringing path tracing to games and other real-time rendering products.</p>
+<p>One of these papers, a collaboration with the University of Utah, shares a new way to reuse calculated paths that <a target="_blank" href="https://research.nvidia.com/labs/rtr/publication/zhang2024area/">increases effective sample count by up to 25x</a>, significantly boosting image quality. The other <a target="_blank" href="https://research.nvidia.com/labs/rtr/publication/sawhney2022decorrelating/">improves sample quality</a> by randomly mutating a subset of the light’s path. This helps denoising algorithms perform better, producing fewer visual artifacts in the final render.</p>
+<figure id="attachment_72937" aria-describedby="caption-attachment-72937" style="width: 2048px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-72937" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-scaled.jpg" alt="Model of a sheep rendering with three different path-tracing techniques" width="2048" height="826" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-400x161.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-672x271.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-768x310.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-1536x620.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-842x340.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-406x164.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-188x76.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Area-ReSTIR-sheep-1280x517.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /><figcaption id="caption-attachment-72937" class="wp-caption-text">From L to R: Compare the visual quality of previous sampling, the 25x improvement and a reference image. Model courtesy <a target="_blank" href="https://studio.blender.org/characters/5d40511bfe6b50fb62faea7d/v2/">Blender Studio</a>.</figcaption></figure>
+<h2><b>Teaching AI to Think in 3D</b></h2>
+<p>NVIDIA researchers are also showcasing multipurpose AI tools for 3D representations and design at SIGGRAPH.</p>
+<p>One paper introduces <a target="_blank" href="https://research.nvidia.com/labs/prl/publication/williams2024fvdb/">fVDB,</a> a GPU-optimized framework for 3D deep learning that matches the scale of the real world. The fVDB framework provides AI infrastructure for the large spatial scale and high resolution of city-scale 3D models and <a href="https://blogs.nvidia.com/blog/ai-decoded-instant-nerf/">NeRFs</a>, and segmentation and reconstruction of large-scale point clouds.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-72931" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/fVDB_Cropped.gif" alt="" width="600" height="338" /></p>
+<p>A Best Technical Paper award winner written in collaboration with Dartmouth College researchers introduces a theory for <a target="_blank" href="https://research.nvidia.com/publication/2024-07_microfacets-participating-media-unified-theory-light-transport-stochastic">representing how 3D objects interact with light</a>. The theory unifies a diverse spectrum of appearances into a single model.</p>
+<p>And a collaboration with University of Tokyo, University of Toronto and Adobe Research introduces an algorithm that <a target="_blank" href="https://research.nvidia.com/publication/2024-07_surface-filling-curve-flows-implicit-medial-axes">generates smooth, space-filling curves on 3D meshes</a> in real time. While previous methods took hours, this framework runs in seconds and offers users a high degree of control over the output to enable interactive design.</p>
+<div style="width: 1920px;" class="wp-video"><video class="wp-video-shortcode" id="video-72914-2" width="1920" height="1080" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Space-Filling-Curves.mp4?_=2" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/Space-Filling-Curves.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/07/Space-Filling-Curves.mp4</a></video></div>
+<h2><b>NVIDIA at SIGGRAPH </b><b><br />
+</b></h2>
+<p>Learn more about <a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/">NVIDIA at SIGGRAPH</a>, with special events including a <a target="_blank" href="https://s2024.siggraph.org/program/keynote-presentations/#speaker-huang">fireside chat between NVIDIA founder and CEO Jensen Huang and Lauren Goode</a>, senior writer at WIRED, on the impact of robotics and AI in industrial digitalization.</p>
+<p>NVIDIA researchers will also present <a target="_blank" href="https://s2024.conference-program.org/presentation/?id=ind_101&amp;sess=sess421">OpenUSD Day by NVIDIA</a>, a full-day event showcasing how developers and industry leaders are adopting and evolving OpenUSD to build AI-enabled 3D pipelines.</p>
+<p><a target="_blank" href="https://www.nvidia.com/en-us/research/"><i>NVIDIA Research</i></a> <i>has hundreds of scientists and engineers worldwide, with teams focused on topics including AI, computer graphics, computer vision, self-driving cars and robotics.</i> <i>See</i> <a target="_blank" href="https://research.nvidia.com/publications"><i>more of their latest work</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Simplicits.mp4" length="8702625" type="video/mp4" />
+<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Space-Filling-Curves.mp4" length="3955992" type="video/mp4" />
+
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/SuperPADL_Still.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/SuperPADL_Still-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Mile-High AI: NVIDIA Research to Present Advancements in Simulation and Gen AI at SIGGRAPH]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>‘Once Human,’ Twice the Thrills on GeForce NOW</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-once-human/</link>
 		
@@ -37,12 +126,12 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Unlock new experiences every GFN Thursday. Whether post-apocalyptic survival adventures, narrative-driven games or vast, open worlds, <a target="_blank" href="http://geforcenow.com">GeForce NOW</a> always has something fresh for members to explore.</p>
 <p>This week, GeForce NOW brings the survival game <i>Once Human</i> from Starry Studio to the cloud<i>, </i>part of three new titles.</p>
 <h2><b>Survive the Stardust</b></h2>
-<figure id="attachment_72895" aria-describedby="caption-attachment-72895" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-72895" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-672x337.jpg" alt="Once Human on GeForce NOW" width="672" height="337" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-672x337.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-400x201.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-768x385.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-1536x770.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-842x422.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-406x204.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-1280x642.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72895" class="wp-caption-text"><em>We’re all just made of stardust.</em></figcaption></figure>
+<figure id="attachment_72895" aria-describedby="caption-attachment-72895" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72895" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-672x337.jpg" alt="Once Human on GeForce NOW" width="672" height="337" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-672x337.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-400x201.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-768x385.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-1536x770.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-842x422.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-406x204.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Once_Human-1280x642.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72895" class="wp-caption-text"><em>We’re all just made of stardust.</em></figcaption></figure>
 <p>Step into a post-apocalyptic world where cosmic energy has transformed humanity in <i>Once Human</i>. As a Meta-Human, survive the contamination and use the powers of Stardust to navigate a new and bizarre open-world universe.</p>
 <p>Experience elements of survival, crafting and combat while challenging players to gather resources, build shelters and fend off human and monstrous threats. Uncover the rich lore through interactions with various characters and artifacts scattered throughout the world.</p>
 <p>Delve into the truth of Stardust — discover where it came from and what it wants. Play alone or grab a squad to fight, build and explore together. Level up with an <a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/memberships/">Ultimate or Priority membership</a> to stream across devices at higher resolutions and frame rates over free members. Gaming sessions are up to six hours for Priority members and eight hours for Ultimate members, plenty of time to unravel the cosmic mysteries of <i>Once Human.</i></p>
 <h2><b>Happy New Games</b></h2>
-<figure id="attachment_72892" aria-describedby="caption-attachment-72892" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-72892" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-672x378.jpg" alt="Anger Foot on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72892" class="wp-caption-text"><em>Taking names and kicking butt.</em></figcaption></figure>
+<figure id="attachment_72892" aria-describedby="caption-attachment-72892" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72892" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-672x378.jpg" alt="Anger Foot on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Anger_Foot-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72892" class="wp-caption-text"><em>Taking names and kicking butt.</em></figcaption></figure>
 <p>Unleash the world’s deadliest feet on a colorful cast of anthropomorphic enemies in <i>Anger Foot</i> from Devolver Digital. Clear out slums, sewers and skyscrapers, grab new weapons, unlock new sneakers and upgrade powers in absurd and wonderful ways. Kick and shoot to get to the exit — and leave behind a smoldering trail of shattered doors, broken bones and crumpled energy drinks.</p>
 <p>Check out the list of new games this week:<i></i></p>
 <ul>
@@ -94,7 +183,7 @@
 <p>ABCI 3.0 is the latest iteration of Japan’s large-scale Open AI Computing Infrastructure designed to advance AI R&amp;D. This collaboration underlines Japan’s commitment to advancing its AI capabilities and fortifying its technological independence.</p>
 <p>“In August 2018, we launched ABCI, the world’s first large-scale open AI computing infrastructure,” said AIST Executive Officer Yoshio Tanaka. “Building on our experience over the past several years managing ABCI, we’re now upgrading to ABCI 3.0. In collaboration with NVIDIA and HPE we aim to develop ABCI 3.0 into a computing infrastructure that will advance further research and development capabilities for <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a> in Japan.”</p>
 <p>“As generative AI prepares to catalyze global change, it’s crucial to rapidly cultivate research and development capabilities within Japan,” said AIST Solutions Co. Producer and Head of ABCI Operations Hirotaka Ogawa. “I’m confident that this major upgrade of ABCI in our collaboration with NVIDIA and HPE will enhance ABCI’s leadership in domestic industry and academia, propelling Japan towards global competitiveness in AI development and serving as the bedrock for future innovation.”</p>
-<figure id="attachment_72881" aria-describedby="caption-attachment-72881" style="width: 659px" class="wp-caption aligncenter"><img decoding="async" class=" wp-image-72881" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1-400x267.png" alt="" width="659" height="440" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1-400x267.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1-322x215.png 322w, https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1-150x100.png 150w, https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1.png 624w" sizes="(max-width: 659px) 100vw, 659px" /><figcaption id="caption-attachment-72881" class="wp-caption-text">The ABCI 3.0 supercomputer will be housed in Kashiwa at a facility run by Japan&#8217;s National Institute of Advanced Industrial Science and Technology. Credit: Courtesy of National Institute of Advanced Industrial Science and Technology.</figcaption></figure>
+<figure id="attachment_72881" aria-describedby="caption-attachment-72881" style="width: 659px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class=" wp-image-72881" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1-400x267.png" alt="" width="659" height="440" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1-400x267.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1-322x215.png 322w, https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1-150x100.png 150w, https://blogs.nvidia.com/wp-content/uploads/2024/07/facility-1.png 624w" sizes="(max-width: 659px) 100vw, 659px" /><figcaption id="caption-attachment-72881" class="wp-caption-text">The ABCI 3.0 supercomputer will be housed in Kashiwa at a facility run by Japan&#8217;s National Institute of Advanced Industrial Science and Technology. Credit: Courtesy of National Institute of Advanced Industrial Science and Technology.</figcaption></figure>
 <h2><strong>ABCI 3.0: A New Era for Japanese AI Research and Development</strong></h2>
 <p>ABCI 3.0 is constructed and operated by AIST, its business subsidiary, AIST Solutions, and its system integrator, Hewlett Packard Enterprise (HPE).</p>
 <p>The ABCI 3.0 project follows support from Japan’s Ministry of Economy, Trade and Industry, known as METI, for strengthening its computing resources through the Economic Security Fund and is part of a broader $1 billion initiative by METI that includes both ABCI efforts and investments in cloud AI computing.</p>
@@ -1037,6 +1126,7 @@
 <h2><b>Truly Hybrid — Run AI Workloads Anywhere</b></h2>
 <p>The Hybrid-RAG Workbench Project described above is hybrid in more than one way. In addition to offering a choice of inference mode, the project can be run locally on NVIDIA RTX workstations and GeForce RTX PCs, or scaled up to remote cloud servers and data centers.</p>
 <p>The ability to run projects on systems of the user’s choice — without the overhead of setting up the infrastructure — extends to all Workbench Projects. Find more examples and instructions for fine-tuning and customization in the AI Workbench <a target="_blank" href="https://docs.nvidia.com/ai-workbench/user-guide/latest/quickstart/quickstart-basic.html">quick-start guide</a>.</p>
+<p><i><span>For a more technical perspective, read the blog </span></i><a target="_blank" href="https://developer.nvidia.com/blog/optimize-ai-model-performance-and-maintain-data-privacy-with-hybrid-rag/"><i><span>Optimize AI Model Performance and Maintain Data Privacy with Hybrid RAG</span></i></a><i><span>.</span></i></p>
 <p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
 ]]></content:encoded>
 					
@@ -1056,70 +1146,6 @@
 			/>
 			<media:title type="html"><![CDATA[Decoding How NVIDIA AI Workbench Powers App Development]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Light Bulb Moment: NVIDIA CEO Sees Bright Future for AI-Powered Electric Grid</title>
-		<link>https://blogs.nvidia.com/blog/ai-electric-grid-edison/</link>
-		
-		<dc:creator><![CDATA[Rick Merritt]]></dc:creator>
-		<pubDate>Tue, 18 Jun 2024 23:40:22 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[Energy]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[Inception]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[New GPU Uses]]></category>
-		<category><![CDATA[NVIDIA Jetson]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72246</guid>
-
-					<description><![CDATA[The electric grid and the utilities managing it have an important role to play in the next industrial revolution that’s being driven by AI and accelerated computing, said NVIDIA founder and CEO Jensen Huang Tuesday at the annual meeting of the Edison Electric Institute (EEI), an association of U.S. and international utilities. “The future of	<a class="read-more" href="https://blogs.nvidia.com/blog/ai-electric-grid-edison/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>The electric grid and the utilities managing it have an important role to play in the next industrial revolution that’s being driven by AI and accelerated computing, said NVIDIA founder and CEO Jensen Huang Tuesday at the annual meeting of the Edison Electric Institute (EEI), an association of U.S. and international utilities.</p>
-<p>“The future of digital intelligence is quite bright, and so the future of the energy sector is bright, too,” said Huang in a conversation before an audience of more than a thousand utility and energy industry executives.</p>
-<p>Like other companies, utilities will apply AI to increase employee productivity, but “the greatest impact and return is in applying AI in the delivery of energy over the grid,” said Huang, in conversation with Pedro Pizarro, the chair of EEI and president and CEO of Edison International, the parent company of Southern California Edison, one of the nation’s largest electric utilities.</p>
-<p>For example, Huang described how grids will use AI-powered smart meters to let customers sell their excess electricity to neighbors.</p>
-<p>“You will connect resources and users, just like Google, so your power grid becomes a smart network with a digital layer like an app store for energy,” he said.</p>
-<p>“My sense is, like previous industrial revolutions, [AI] will drive productivity to levels that we’ve never seen,” he added.</p>
-<h2><b>AI Lights Up Electric Grids</b></h2>
-<p>Today, electric grids are mainly one-way systems that link a few big power plants to many users. They’ll increasingly become two-way, flexible and distributed networks with solar and wind farms connecting homes and buildings that sport solar panels, batteries and electric vehicle chargers.</p>
-<p>It’s a big job that requires autonomous control systems that process and analyze in real time a massive amount of data — work well suited to AI and <a href="https://blogs.nvidia.com/blog/what-is-accelerated-computing/">accelerated computing</a>.</p>
-<p>AI is being applied to use cases across electric grids, thanks to a wide ecosystem of companies using NVIDIA’s technologies.</p>
-<p>In a recent <a target="_blank" href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61864/">GTC session</a>, utility vendor Hubbell and startup Utilidata, a member of the <a target="_blank" href="https://www.nvidia.com/en-us/startups/">NVIDIA Inception</a> program, described a new generation of smart meters using the <a target="_blank" href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/">NVIDIA Jetson</a> platform that utilities will deploy to process and analyze real-time grid data using AI models at the edge. Deloitte <a target="_blank" href="https://www.prnewswire.com/news-releases/deloitte-and-utilidata-establish-first-of-its-kind-collaboration-to-revolutionize-the-us-power-grid-for-a-sustainable-future-302175120.html">announced</a> today its support for the effort.</p>
-<p>Siemens Energy detailed in <a target="_blank" href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62524/">a separate GTC session</a> its work with AI and <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> creating digital twins of transformers in substations to improve predictive maintenance, boosting grid resilience. And <a target="_blank" href="https://resources.nvidia.com/en-us-energy-utilities/maximize-wind-energy">a video</a> reports on how Siemens Gamesa used Omniverse and accelerated computing to optimize turbine placements for a large wind farm.</p>
-<p>“Deploying AI and advanced computing technologies developed by NVIDIA enables faster and better grid modernization and we, in turn, can deliver for our customers,” said Maria Pope, CEO of Portland General Electric in Oregon.</p>
-<h2><b>NVIDIA Delivers 45,000x Gain in Energy Efficiency</b></h2>
-<p>The advances come as NVIDIA drives down the costs and energy needed to deploy AI.</p>
-<p>Over the last eight years, NVIDIA increased <a target="_blank" href="https://www.nvidia.com/en-us/glossary/energy-efficiency/">energy efficiency</a> of running AI inference on state-of-the-art large language models a whopping 45,000x, Huang said in his recent <a target="_blank" href="https://www.youtube.com/watch?v=pKXDVsWZmUU">keynote</a> at COMPUTEX.</p>
-<p><a target="_blank" href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">NVIDIA Blackwell architecture GPUs</a> will provide 20x greater energy efficiency than CPUs for AI and <a target="_blank" href="https://www.nvidia.com/en-us/glossary/high-performance-computing/">high-performance computing</a>. If all CPU servers for these jobs transitioned to GPUs, users would save 37 terawatt-hours a year, the equivalent of 25 million metric tons of carbon dioxide and the electricity use of 5 million homes.</p>
-<p>That’s why NVIDIA-powered systems swept the top six spots and took seven of the top 10 in <a href="https://blogs.nvidia.com/blog/green500-energy-efficient-supercomputers/">the latest ranking</a> of the <a target="_blank" href="https://top500.org/lists/green500/2024/06/">Green500</a>, a list of the world’s most energy-efficient supercomputers.</p>
-<p>In addition, <a href="https://blogs.nvidia.com/blog/ai-energy-study/">a recent report</a> calls for governments to accelerate adoption of AI as a significant new tool to drive energy efficiency across many industries. It cited examples of utilities adopting AI to make the electric grid more efficient.</p>
-<p>Learn more about how <a target="_blank" href="https://www.nvidia.com/en-us/industries/energy/power-utilities/">utilities are deploying AI</a> and accelerated computing to improve operations, saving cost and energy.</p>
-<p>Watch the full conversation with Huang below.</p>
-<p><iframe loading="lazy" title="EEI 2024 Opening Keynote: Jensen Huang and Outgoing EEI Chair Pedro J. Pizarro" width="500" height="281" src="https://www.youtube.com/embed/f-skM8O6xRM?start=173&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Final-Edison-fireside-chat-with-Jensen-Huang.jpg"
-			type="image/jpeg"
-			width="1461"
-			height="779"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Final-Edison-fireside-chat-with-Jensen-Huang-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Light Bulb Moment: NVIDIA CEO Sees Bright Future for AI-Powered Electric Grid]]></media:title>
-			<media:description type="html">Jensen Huang in fireside chat at the Edison Electric Institute</media:description>
 			</media:content>
 			</item>
 	</channel>
