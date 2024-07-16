@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 10 Jul 2024 17:43:14 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 16 Jul 2024 15:02:38 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,107 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Strategies for distributing executable binaries across grids in financial services</title>
+		<link>https://aws.amazon.com/blogs/hpc/strategies-for-distributing-executable-binaries-grids-financial-services/</link>
+		
+		<dc:creator><![CDATA[Kirill Bogdanov]]></dc:creator>
+		<pubDate>Tue, 16 Jul 2024 15:02:38 +0000</pubDate>
+				<category><![CDATA[Amazon Elastic Block Store (Amazon EBS)]]></category>
+		<category><![CDATA[Amazon Elastic File System (EFS)]]></category>
+		<category><![CDATA[Amazon File Cache]]></category>
+		<category><![CDATA[Amazon FSx]]></category>
+		<category><![CDATA[Amazon FSx for Lustre]]></category>
+		<category><![CDATA[Amazon FSx for NetApp ONTAP]]></category>
+		<category><![CDATA[Amazon FSx for OpenZFS]]></category>
+		<category><![CDATA[Amazon Simple Storage Service (S3)]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[Storage]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[FSI]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Lustre]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">ca9e22473e1200ab94d24f287d767e37cfaf1f73</guid>
+
+					<description>You can boost the performance of your compute grids by strategically distributing your binaries. Our experts looked at lots of strategies for fast &amp;amp; efficient compute grid operations - to save you some work.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3906" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/24/AdobeStock_852512916.png" alt="Strategies for distributing executable binaries across grids in financial services" width="380" height="212"&gt;Financial Services Institutions (FSIs) rely heavily on compute grids for their daily operations. One key challenge of operating such grids is the distribution of data, including the distribution of binaries required for computation.&lt;/p&gt; 
+&lt;p&gt;In this blog post, we’ll focus on classifying different binary distribution techniques and providing intuition and guidance for customers about when to use each technique in connection with their business objectives and requirements. We’ll also offer insights and recommendations that others can apply outside of the FSI industry.&lt;/p&gt; 
+&lt;h2&gt;The problem&lt;/h2&gt; 
+&lt;p&gt;Most customer concerns regarding data distribution revolve around business objectives, and cost. Some of these concerns include cost-effectively distributing large volumes of data regularly, and doing it quickly, to ensure the rapid start of compute instances. This helps to avoid subsequent delays throughout the execution, and often translates into cost savings, too.&lt;/p&gt; 
+&lt;p&gt;Consider a grid configured to scale to 5,000 x Amazon Elastic Compute Cloud (Amazon EC2) instances. With fluctuating demand causing frequent scaling events, each new instance has to download the binary files it needs. Assuming up to 5 scaling events daily, with a 1-minute download time, this results in over 416 hours or 17 days of wasted EC2 time – &lt;em&gt;highlighting the value of efficient binary distribution&lt;/em&gt;.&lt;/p&gt; 
+&lt;h2&gt;How to assess your options&lt;/h2&gt; 
+&lt;p&gt;Choosing the suitable data layer is not just a technical decision but a strategic one that impacts the cost efficiency of the entire computing grid. The wrong choice can lead to significant inefficiencies and increased costs. Therefore, it’s crucial to consider the options and their implications carefully.&lt;/p&gt; 
+&lt;p&gt;What factors should customers consider when evaluating their options for binary distribution based on workload requirements and characteristics?&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Size – &lt;/strong&gt;What is the total size of the &lt;em&gt;super-set of all binaries&lt;/em&gt; that must be present on the Amazon EC2 instance? What is the size of the &lt;em&gt;most commonly used&lt;/em&gt; binary files sufficient to start the workload in a lazy loading situation (i.e., waiting for the rest of the files to be delivered later)?&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Size distribution: &lt;/strong&gt;Does the binary set consist of a large number of small files, or a small number of large files?&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Scaling: &lt;/strong&gt;What’s the maximum number of instances you need to have running simultaneously? What’s the maximum scaling speed (the higher the speed, the more bandwidth necessary)?&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Semantics: &lt;/strong&gt;Does the workload require POSIX file access? Will it be necessary to have excess capacity, to allow adding to, or altering, binary sets during the production stage?&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2&gt;Options&lt;/h2&gt; 
+&lt;h3&gt;Amazon Simple Storage Service (Amazon S3)&lt;/h3&gt; 
+&lt;p&gt;&lt;a href="mailto:https://aws.amazon.com/s3/"&gt;Amazon S3&lt;/a&gt; is the AWS object storage service, allowing users to store and retrieve any data from anywhere. Amazon S3 can act as a common destination for all built and versioned binary files, and distribute these files among Amazon EC2 instances.&lt;/p&gt; 
+&lt;p&gt;To illustrate typical tradeoffs, we begin with the most intuitive approach of copying the required files from Amazon S3. A common destination could be EC2 Instance Store or an Elastic Block Service (EBS) volume attached to the EC2 instance. A grid administrator can script the copy operation at instance boot time (e.g., using &lt;code&gt;&lt;a href="https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html"&gt;aws s3 sync&lt;/a&gt;&lt;/code&gt;).&lt;/p&gt; 
+&lt;p&gt;The primary advantage is that once files are copied, the workload has the lowest latency and highest bandwidth for accessing these files. Performance isn’t impacted by the total number of EC2 instances as each instance has its own volume.&lt;/p&gt; 
+&lt;p&gt;Furthermore, Amazon S3 provides very high throughput, sufficient even for the most demanding use cases. Combined with the pay-as-you-go model, grid administrators don’t need to scale S3 to match fluctuating bandwidth demands, simplifying administration.&lt;/p&gt; 
+&lt;p&gt;Amazon S3 is a regional service with no charges for data transfers across Availability Zones (AZs) and has very low storage costs. In the context of binary distribution, the bulk of the cost will be associated with the number of files transferred, which comes from API calls. This is important to consider for binaries consisting of many small files.&lt;/p&gt; 
+&lt;p&gt;The key tradeoff is the initial delay associated with the time it takes to copy the files from S3. During this time, EC2 will have to idle until all the data is copied. You can partially mitigate this by splitting your binaries and downloading them in parts – at the expense of added complexity to manage this.&lt;/p&gt; 
+&lt;h3&gt;Amazon S3 Express One Zone (EOZ)&lt;/h3&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/s3/storage-classes/express-one-zone/"&gt;Amazon S3 Express One Zone&lt;/a&gt; (EOZ) stores data in a single Availability Zone, reducing data access latency and increasing bandwidth from within the AZ. Because FSI grids often require significant computing capacity our recommendation is to diversify EC2 instance types and use as many AZs as possible. However, this conflicts with the benefits of single AZ solutions.&lt;/p&gt; 
+&lt;p&gt;Grid administrators faced with this have two main options. They can have a single instance of the storage service running in a single AZ, which will partially alleviate latency and bandwidth advantages when instances from other AZs access data. Alternatively, grid administrators can have a separate instance of the storage in each AZ – this will increase storage costs and add complexity to the synchronization of data between S3 EOZ buckets before the start of the workload.&lt;/p&gt; 
+&lt;h3&gt;Mountpoint for Amazon S3&lt;/h3&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/s3/features/mountpoint/"&gt;Mountpoint for Amazon S3&lt;/a&gt; – an open-source file client that enables easy access to objects in an S3 bucket through standard file system APIs on your EC2 instance.&lt;/p&gt; 
+&lt;p&gt;With Mountpoint, files stay in S3, and only get locally cached when accessed, unlike the previously described technique. This makes it possible to start the workload instantaneously and load files on-demand throughout the execution process. This approach particularly useful when you don’t know beforehand which binary files you require for the workload execution, or if only a small fraction of files are likely to be needed.&lt;/p&gt; 
+&lt;p&gt;However, the first execution of the workload will still experience higher latency than subsequent executions due to the need to cache files locally.&lt;/p&gt; 
+&lt;h3&gt;Amazon Elastic File System (EFS)&lt;/h3&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/efs/"&gt;EFS&lt;/a&gt; is a fully managed, network-attached storage service that supports NFS protocols. It provides a POSIX file access API and supports up to 20 GB/sec of read throughput, up to 250,000 read IOPS, and up to 25,000 connections. The actual performance will depend on the throughput mode selected for EFS: &lt;em&gt;Elastic&lt;/em&gt;, &lt;em&gt;Provisioned&lt;/em&gt;, or &lt;em&gt;Bursting &lt;/em&gt;which you should choose after assessing your workload requirements (see more details in the &lt;a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html"&gt;EFS documentation&lt;/a&gt;).&lt;/p&gt; 
+&lt;p&gt;Unlike S3-based solutions there are no charges associated with accessing individual files stored on EFS. Instead, there is a cost associated with the amount of data transferred.&lt;/p&gt; 
+&lt;p&gt;Similarly to S3 Express One Zone, is EFS One Zone (OZ). However, in addition to tradeoffs associated with one AZ solutions (which we described earlier) EFS OZ has cross-AZ data transfer charges, thus we don’t recommend using EFS OZ for this task.&lt;/p&gt; 
+&lt;h3&gt;Amazon FSx&lt;/h3&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/fsx/"&gt;&lt;strong&gt;Amazon FSx&lt;/strong&gt;&lt;/a&gt; lets you choose between several widely-used, distributed, network-attached file systems: &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Lustre&lt;/a&gt;, &lt;a href="https://aws.amazon.com/fsx/netapp-ontap/"&gt;NetApp ONTAP&lt;/a&gt;, &lt;a href="https://aws.amazon.com/fsx/openzfs/"&gt;OpenZFS&lt;/a&gt;, and &lt;a href="https://aws.amazon.com/fsx/windows/"&gt;Windows File Server&lt;/a&gt;. Each of these file systems provides even greater throughput and lower latency than EFS. You can explore a more detailed comparison of these services &lt;a href="https://aws.amazon.com/fsx/when-to-choose-fsx/"&gt;using our published advice&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;This post focuses on FSx for Lustre (FSxL), which can scale to &lt;a href="https://aws.amazon.com/blogs/hpc/build-and-deploy-a-1-tb-s-file-system-in-under-an-hour/"&gt;provide 1TByte/sec throughput&lt;/a&gt; (or more), &lt;em&gt;millions&lt;/em&gt; of IOPs, and sub-millisecond access latency, making it the best choice for many large-scale workloads.&lt;/p&gt; 
+&lt;p&gt;FSxL also integrates with Amazon S3, allowing users POSIX-level file access to files stored on S3. When a client attempts to access a file, FSx first retrieves it from S3 and caches it at the FSxL server, making it readily available for subsequent requests by other users.&lt;/p&gt; 
+&lt;p&gt;FSxL can be configured to match target capacity and/or throughput. This is a task the admin must invoke manually. FSxL deploys into a single AZ, meaning file access across AZs will incur additional data charges.&lt;/p&gt; 
+&lt;p&gt;Both FSxL and EFS offer full POSIX file-access support, allowing writes by any Amazon EC2 instance to be available to other instances. While binary files are generally immutable and don’t need this feature, it’s beneficial for the same data layer to be used for other needs like providing computational input, storing results, or maintaining shared state.&lt;/p&gt; 
+&lt;h3&gt;Amazon File Cache&lt;/h3&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/filecache/"&gt;&lt;strong&gt;Amazon File Cache&lt;/strong&gt;&lt;/a&gt; is a high-speed caching service similar to FSxL but with a number of distinct differences.&lt;/p&gt; 
+&lt;p&gt;First, in addition to supporting Amazon S3, File Cache can support data repositories using NFSv3, which means that the source files can be located virtually anywhere, including on-premises. This can simplify the process of delivering quant libraries – especially if they are built on-premises.&lt;/p&gt; 
+&lt;p&gt;File Cache automatically loads files and metadata from the origin and releases the least recently-used cached files to ensure the most active files are available in the cache for your applications. File Cache is built using Lustre, which means effective I/O throughput can be very high.&lt;/p&gt; 
+&lt;h3&gt;Amazon EBS volumes&lt;/h3&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/ebs/"&gt;&lt;strong&gt;Amazon EBS volumes&lt;/strong&gt;&lt;/a&gt; are persistent block storage devices that can be attached to an EC2 instance. They function like HDD/SSD drives, with varying performance characteristics and costs. For example, &lt;em&gt;io2 Block Express&lt;/em&gt; volumes offer a maximum throughput of 4000 MB/s and 256,000 IOPS, per volume.&lt;/p&gt; 
+&lt;p&gt;To use EBS volumes for binary distribution, you can follow these steps:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Create a source EBS volume for the binary distributions, you can do this as part of CI/CD pipeline.&lt;/li&gt; 
+ &lt;li&gt;Create a persistent EBS snapshot, which is a point-in-time copy of an EBS volume saved in S3. You can use EBS snapshots to restore and create multiple copies of the original EBS volume.&lt;/li&gt; 
+ &lt;li&gt;Configure an EC2 Launch Template to include an EBS volume based on the newly created snapshot.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;When an EBS volume is created from a snapshot and attached to an EC2 instance, only the metadata of the volume is loaded initially. The volume’s data blocks are not loaded from S3 into the EBS block storage until they’re accessed or needed by the instance. These blocks will be lazy-loaded as they’re being accessed. As a result, the very first access to these blocks (and consequently the first workload invocation) will incur additional latency (we explain this in more detail in &lt;a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-initialize.html"&gt;our documentation&lt;/a&gt;).&lt;/p&gt; 
+&lt;p&gt;When creating EBS volumes from a snapshot within the same region, there are no additional charges for data transfer, i.e., you only pay for the GBs of storage capacity.&lt;/p&gt; 
+&lt;p&gt;For completeness, we should mention that &lt;code&gt;io1&lt;/code&gt; and &lt;code&gt;io2&lt;/code&gt; volume types enable you to attach a single EBS volume to up to 16 x EC2 instances with the same AZ, reducing the total number of EBS volumes needed. However, this comes at the tradeoff of additional management efforts – mapping volumes to EC2 instances. Also, the total IOPS performance across all the attached instances cannot exceed the volume’s maximum provisioned IOPS. Finally, you should also consider EBS &lt;em&gt;performance&lt;/em&gt; when sharing a volume among multiple concurrent workers running on a large EC2 instance.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html"&gt;&lt;strong&gt;AMIs&lt;/strong&gt;&lt;/a&gt; are a template that contains the software configuration required to launch an Amazon EC2 instance. An AMI often includes a reference to one or more EBS Snapshots. In the context of binary distribution, AMIs can be thought of as an abstraction layer on top of EBS volumes, bypassing the need to manually attach an EBS volume to an instance. There are no performance or cost benefits in prebaking binary files into AMIs over using EBS volumes. Therefore, the choice is based on the managerial overhead and the grid’s architecture. We explore this topic in an article about &lt;a href="https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/prebaking-vs.-bootstrapping-amis.html"&gt;Prebaking vs. bootstrapping AMIs&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html"&gt;Warm Pools&lt;/a&gt; in EC2 Auto Scaling let you pre-initialize EC2 instances and then stop them, &lt;em&gt;until you need to scale out&lt;/em&gt;. The EBS volume continues to hydrate in the background while the instance is stopped, saving you time and resources when you’re ready to scale, since your instances will spin up quickly and EBS volumes will be hydrated.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html"&gt;&lt;strong&gt;Fast Snapshot Restore&lt;/strong&gt; (FSR)&lt;/a&gt; is a feature of Amazon EBS that optimizes EBS snapshots for faster volume restoration. When an EBS snapshot is marked for FSR, the EBS volumes restored from this snapshot can benefit from full performance immediately as the volume is created, without the need for a lazy loading mechanism. There is a &lt;a href="https://docs.aws.amazon.com/ebs/latest/userguide/ebs-fast-snapshot-restore.html#volume-creation-credits"&gt;credit-based system&lt;/a&gt; associated with the rate at which you can create EBS volumes from an FSR-enabled snapshot. These limits might render this method unsuitable for large-scale grids.&lt;/p&gt; 
+&lt;h2&gt;Summary of options discussed&lt;/h2&gt; 
+&lt;p&gt;Let’s now summarize the relevant characteristics of these services in a table (Figure 1). The &lt;em&gt;Source&lt;/em&gt; column shows where the binaries come from, while the &lt;em&gt;Destination&lt;/em&gt; column indicates if files are relocated or accessed remotely.&lt;/p&gt; 
+&lt;p&gt;The next column indicates if &lt;em&gt;all files are accessible as soon as EC2 boots up&lt;/em&gt;. For example, if the files are stored on Amazon S3 and need to be copied to EBS before the workload can start, this step requires manual implementation. Next, some services &lt;em&gt;deliver full performance upon the first invocation&lt;/em&gt;, while other are not. For example, EFS provides full performance right away, but restoring an EBS volume from a snapshot may result in longer access times initially, due to hydration.&lt;/p&gt; 
+&lt;p&gt;The cost column indicates workload dimensions that are most likely to account for the bulk cost as your service scales horizontally. We’ve shown this column only for an indicative purpose – review the costs of each service yourself to get an accurate estimation. For example, for a workload with many small files stored on Amazon S3 and accessed via S3 Mount Point, there is a cost associated with API calls per file. In contrast, the cost of FSxL varies based on provisioned throughput and total data transferred.&lt;/p&gt; 
+&lt;p&gt;Finally, the last three &lt;em&gt;general&lt;/em&gt; columns indicate if the same service can be reused to deliver more files at runtime. For example, you can place a new version of a binary distribution on S3 and retrieve it via S3 Mount Point. But if you distribute the files using EBS or an AMI, then a new EBS needs to be mounted – or a different method needs to be used – to get the updates. The &lt;em&gt;global file system capabilities&lt;/em&gt; indicates if writes from one instance are available for reading by other instances in the grid.&lt;/p&gt; 
+&lt;div id="attachment_3897" style="width: 1238px" class="wp-caption aligncenter"&gt;
+ &lt;a href="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/27/IMG-2024-06-27-12.57.52.png" target="_new" rel="noopener"&gt;&lt;img aria-describedby="caption-attachment-3897" loading="lazy" class="size-full wp-image-3897" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/27/IMG-2024-06-27-12.57.52.png" alt="Figure 1: Comparison of the discussed binary distribution techniques in the relationship to different workload requirements. Click on the image to get a larger (more readable) version." width="1228" height="605"&gt;&lt;/a&gt;
+ &lt;p id="caption-attachment-3897" class="wp-caption-text"&gt;Figure 1: Comparison of the discussed binary distribution techniques in the relationship to different workload requirements. Click on the image to get a larger (more readable) version.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Some single AZ services have costs associated with cross-AZ network traffic, so refer to the documentation of each service for details.&lt;/p&gt; 
+&lt;h2&gt;Conclusion and recommendations&lt;/h2&gt; 
+&lt;p&gt;The purpose of this post is to provide a general guide on how to reason about the challenge of binary distribution in large FSI grids.&lt;/p&gt; 
+&lt;p&gt;Our suggestion is to begin by evaluating the problem dimensions outlined in this post, in relation to your workload. Then, consider whether binaries need to be relocated closer to the computing resources or if they can be accessed over the network. We recommend starting with the simplest solution that fits the requirements, testing it, and then determining if further improvements are necessary.&lt;/p&gt; 
+&lt;p&gt;When moving files to a compute instance, there may be a high initial overhead, but it can ensure consistent, isolated high performance. When it comes to network file systems, it’s important to keep in mind that they are shared among all compute instances that access them. Thus, NFS should be pre-provisioned for the load and scale you anticipate. Finally, you should always consider cross-AZ traffic costs and latency when making your choice.&lt;/p&gt; 
+&lt;p&gt;Complexity often requires balancing performance and costs. You can incorporate your knowledge of your workloads and some simple heuristics in how you select the distribution methods presented in this post to mitigate many trade-offs, and feel good about your decisions.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Running FSI workloads on AWS with YellowDog</title>
 		<link>https://aws.amazon.com/blogs/hpc/running-fsi-workloads-on-aws-with-yellowdog/</link>
 		
@@ -30,7 +131,7 @@
 		<guid isPermaLink="false">d573e34c0811266707460763324d754054fc016c</guid>
 
 					<description>Financial services firms: we stress-tested YellowDog's HPC environment to see if it could handle a 10m task batch at 3,000 tasks per second. Check out the results.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt; &lt;img class="alignright size-full wp-image-3913" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/24/Running-FSI-workloads-on-AWS-with-YellowDog.png" alt="Running FSI workloads on AWS with YellowDog 2" width="380" height="212"&gt;This post was contributed by Kirill Bogdanov and Alan Parry, CTO at YellowDog&lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt; &lt;img loading="lazy" class="alignright size-full wp-image-3913" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/24/Running-FSI-workloads-on-AWS-with-YellowDog.png" alt="Running FSI workloads on AWS with YellowDog 2" width="380" height="212"&gt;This post was contributed by Kirill Bogdanov and Alan Parry, CTO at YellowDog&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Large compute grids are critical components of any financial services industry (FSI) organisation today. They’re used in daily operations from pricing products, to risk management and monitoring, and even regulatory reporting. Historically, though, compute grids have been complex to operate and expensive to run. Even worse, some organizations’ demand for compute regularly exceeds their limited on-premises capacity. All of this has led to FSI firms exploring cloud for modernisation and as a cost effective alternative.&lt;/p&gt; 
 &lt;p&gt;&lt;a href="https://yellowdog.co/"&gt;YellowDog&lt;/a&gt; is a high performance computing (HPC) environment that specializes in large-scale workloads and hybrid-cloud deployments, allowing customers to use their on-premises capacity while simultaneously taking advantage of the scale and capabilities of AWS.&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll look at YellowDog’s performance and its operational characteristics that are important for FSI customers including: scheduling latency, throughput, and integration with AWS services.&amp;nbsp;This is the second post in a series – in our &lt;a href="https://aws.amazon.com/blogs/hpc/running-a-3-2m-vcpu-hpc-workload-on-aws-with-yellowdog/"&gt;previous post&lt;/a&gt;, we showed you how YellowDog can scale up to 3.2 million vCPUs on AWS in just under 33 minutes.&lt;/p&gt; 
@@ -1962,86 +2063,6 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 &lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
 &lt;h4&gt;References&lt;/h4&gt; 
 &lt;p&gt;[1] Lacy, Long and Spindler, The Circular Economy Handbook: Realizing the Circular Advantage (2019)&lt;br&gt; [2] Ellen MacArthur Foundation, Completing the Picture: How the Circular Economy Tackles Climate Change (2021)&lt;br&gt; [3]European Sustainability Reporting Standards in scope for companies with a turnover above €150 million in EU&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Optimizing MPI application performance on hpc7a by effectively using both EFA devices</title>
-		<link>https://aws.amazon.com/blogs/hpc/optimizing-mpi-application-performance-on-hpc7a-by-effectively-using-both-efa-devices/</link>
-		
-		<dc:creator><![CDATA[Sai Sunku]]></dc:creator>
-		<pubDate>Wed, 24 Apr 2024 15:04:39 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[CFD]]></category>
-		<category><![CDATA[Computational Fluid Dynamics]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[FEA]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[ML]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[MPI]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[Weather]]></category>
-		<guid isPermaLink="false">08bac8f4eb9c45d176364cc57f8dc42002333566</guid>
-
-					<description>Get the inside scoop on optimizing your MPI apps and configuration for AWS's powerful new Hpc7a instances. Dual rail gives these instances huge networking potential @ 300 Gb/s - if properly used. This post provides benchmarks, sample configs, and real speedup numbers to help you maximize network performance. Whether you run weather simulations, CFD, or other HPC workloads, you'll find practical tips for your codes.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Sai Sunku, Software Engineer, Annapurna Labs, Matt Koop, Principal Engineer and Karthik Raman, Principal Performance Engineer, HPC Engineering&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;The hpc7a instance type is the latest generation AMD-based HPC instance type offered by AWS. It’s available in multiple sizes and offers superior performance compared to the previous generation hpc6a instance type. See our &lt;a href="https://aws.amazon.com/blogs/hpc/deep-dive-into-hpc7a-the-newest-amd-powered-member-of-the-hpc-instance-family/"&gt;previous post&lt;/a&gt; for a deep dive on the hpc7a instance itself and this &lt;a href="https://aws.amazon.com/blogs/hpc/instance-sizes-in-the-amazon-ec2-hpc7-family-a-different-experience/"&gt;other post&lt;/a&gt; that describes the different instance sizes.&lt;/p&gt; 
-&lt;p&gt;If you’re an MPI user, you’ll want to know that Hpc7a’s network bandwidth of 300 Gbps is 3x higher than hpc6a. We’ve done this by using &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#network-cards"&gt;two network cards&lt;/a&gt;, where each card is exposed to the user software as a different PCIe device. Effectively using the two network cards is essential for achieving the best performance on hpc7a.&lt;/p&gt; 
-&lt;p&gt;In this post we’ll show you how to configure your application and MPI to use both network cards so you can achieve the greatest performance for your codes. We’ll also discuss some benchmarks you can look at to verify that you’re &lt;em&gt;actually&lt;/em&gt; using both network cards. Finally, we’ll dig into some application results to give you a taste of the speedup you can get in your applications.&lt;/p&gt; 
-&lt;h2&gt;Under the hood&lt;/h2&gt; 
-&lt;p&gt;Let’s start with the PCIe topology. As &lt;a href="https://aws.amazon.com/blogs/hpc/deep-dive-into-hpc7a-the-newest-amd-powered-member-of-the-hpc-instance-family/"&gt;the post on instance sizes&lt;/a&gt; described, all hpc7a instance sizes use the same underlying hardware, but with different cores enabled or disabled to make it easy to get the best memory bandwidth per core for most codes. The hardware is based on the 4th generation AMD EPYC (Genoa) processor with 192 physical cores in a 2-socket configuration with 96 physical cores per socket.&lt;/p&gt; 
-&lt;p&gt;In multi-domain NUMA systems, not all PCIe devices are created equal. Processes can be more efficient if they use the PCIe device closest to them and avoid communication across sockets. It’s no different for EFA devices. Using the network card closest to your MPI process allows for &lt;em&gt;much&lt;/em&gt; better performance. The topology for EFA devices is shown in Figure 1.&lt;/p&gt; 
-&lt;div id="attachment_3554" style="width: 899px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3554" loading="lazy" class="size-full wp-image-3554" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-11.50.35.png" alt="Figure 1 – Topology of the EFA devices in hpc7a. Each green square represents a processor core and the orange rectangle the L3 cache shared by 8 cores. There are two NUMA domains with 96 cores per domain connected by a high speed interconnect. The two EFA devices are associated with one NUMA node each." width="889" height="395"&gt;
- &lt;p id="caption-attachment-3554" class="wp-caption-text"&gt;Figure 1 – Topology of the EFA devices in hpc7a. Each green square represents a processor core and the orange rectangle the L3 cache shared by 8 cores. There are two NUMA domains with 96 cores per domain connected by a high speed interconnect. The two EFA devices are associated with one NUMA node each.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Running MPI applications&lt;/h2&gt; 
-&lt;p&gt;The good news is that the hpc7a instance is designed to work right out of the box with your MPI for a variety of expected uses.&lt;/p&gt; 
-&lt;p&gt;Many MPIs refer to using multiple network cards as “multi-rail,” where each “rail” refers to a single network card, or in our case, an EFA device. In both Open MPI and Intel MPI, when using a multi-rail configuration with EFA, each rank will be assigned a single “rail.”&lt;/p&gt; 
-&lt;p&gt;This means that in a two rail setup, half of the ranks on the instance will be assigned to one rail, and the other half to the other rail. This is generally desirable, because each rank is communicating separately – and for many applications that can lead to more efficient communication. Our tests have shown that real applications can be significantly faster when they use both EFA devices and you’ll see that in the data at the end of this post, too.&lt;/p&gt; 
-&lt;p&gt;If you run your application with 192 ranks on a hpc7a.96xlarge instance with one rank per core, then each rank should automatically use the correct network card. But if you choose to run your application with fewer ranks per instance (maybe your application is memory intensive or you’re optimizing for licensing costs) then you need to consider which process is running on which core. You can configure the process placement through your scheduler or MPI. But this is also exactly why we offer smaller hpc7a instance sizes with some of the cores disabled. For many applications, using a smaller instance size will assign the MPI ranks to the correct cores and thus provide the best performance.&lt;/p&gt; 
-&lt;p&gt;However, if you use a bandwidth benchmark that uses only &lt;em&gt;one process per instance&lt;/em&gt; (like the &lt;code&gt;osu_bw&lt;/code&gt; benchmark), you can only see the bandwidth associated with a single rail. Figure 2 shows the results of &lt;code&gt;osu_bw&lt;/code&gt; benchmark with 2 x hpc7a instances. The measured bandwidth is significantly smaller than the advertised rate of 300 Gbps. This lower bandwidth is because the benchmark is running a single rank per &lt;em&gt;node&lt;/em&gt;. Virtually all real applications run multiple ranks per node.&lt;/p&gt; 
-&lt;h3&gt;How can you make sure that different ranks are assigned to different EFA devices?&lt;/h3&gt; 
-&lt;p&gt;If you’re using Open MPI v 4.1.0 or later or the newly released Intel MPI 2021.12, &lt;strong&gt;you don’t have to do much&lt;/strong&gt;. Open MPI and the latest Intel MPI can detect the two EFA devices and use them both, exactly as you’d expect.&lt;/p&gt; 
-&lt;p&gt;However, to get the same experience with Intel MPI versions 2021.11 &lt;em&gt;or earlier&lt;/em&gt;, you need to set an environment variable &lt;code&gt;I_MPI_MULTIRAL=1&lt;/code&gt; and pass that environment variable to the &lt;code&gt;mpirun&lt;/code&gt; or &lt;code&gt;mpiexec&lt;/code&gt; command. Typically, that means running your application like this:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;mpirun -genv I_MPI_MULTIRAIL=1 -n &amp;lt;number of processes&amp;gt; &amp;lt;your application&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;Support for this environment variable was added to Intel MPI version 2021.6.&lt;/p&gt; 
-&lt;div id="attachment_3555" style="width: 546px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3555" loading="lazy" class="size-full wp-image-3555" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-11.52.00.png" alt="Figure 2 – OSU single pair bandwidth benchmark for Intel MPI and Open MPI. The measured bandwidth is significantly smaller than the maximum value of 300 Gbps for hpc7a." width="536" height="377"&gt;
- &lt;p id="caption-attachment-3555" class="wp-caption-text"&gt;Figure 2 – OSU single pair bandwidth benchmark for Intel MPI and Open MPI. The measured bandwidth is significantly smaller than the maximum value of 300 Gbps for hpc7a.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Performance measurements&lt;/h2&gt; 
-&lt;p&gt;To measure the bandwidth with both EFA devices in use, we need a multi-pair bandwidth benchmark similar to the osu_mbw_mr benchmark. In this benchmark, the MPI ranks are grouped into pairs and the ranks in each pair send data to each other.&lt;/p&gt; 
-&lt;p&gt;Figure 3a shows the results of an internally developed multi-pair bandwidth benchmark similar to &lt;code&gt;osu_mbw_mr&lt;/code&gt; for two hpc7a instances with 192 ranks on each instance. With &lt;code&gt;I_MPI_MULTIRAIL=0&lt;/code&gt;, Intel MPI was unable to take advantage of both network cards and we see a bandwidth value close to 150 Gbps. With &lt;code&gt;I_MPI_MULTIRAIL=1&lt;/code&gt;, we see the expected value close to 300 Gbps. Open MPI shows a bandwidth close to 300 Gbps out of the box.&lt;/p&gt; 
-&lt;p&gt;While bandwidth is important if your application is sending large messages, the number of messages sent, or the message rate, becomes more important for smaller messages.&lt;/p&gt; 
-&lt;p&gt;Figure 3b shows the message rate for 2kiB messages. Using both EFA devices led to a significant improvement in the message rate at small message sizes as well. So whether your application sends a few large messages or many small messages, you can improve its performance by using both EFA devices.&lt;/p&gt; 
-&lt;div id="attachment_3556" style="width: 891px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3556" loading="lazy" class="size-full wp-image-3556" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-11.52.42.png" alt="Figure 3 – Multi-pair bandwidth and message rate benchmarks for Intel MPI with I_MPI_MULTIRAIL=0, Intel MPI with I_MPI_MULTIRAIL=1 and Open MPI. The message rate is for messages 2kiB in size. Intel MPI with I_MPI_MULTIRAIL=0 is unable to take advantage of both EFA devices and shows a lower bandwidth and message rate.=" width="881" height="325"&gt;
- &lt;p id="caption-attachment-3556" class="wp-caption-text"&gt;Figure 3 – Multi-pair bandwidth and message rate benchmarks for Intel MPI with I_MPI_MULTIRAIL=0, Intel MPI with I_MPI_MULTIRAIL=1 and Open MPI. The message rate is for messages 2kiB in size. Intel MPI with I_MPI_MULTIRAIL=0 is unable to take advantage of both EFA devices and shows a lower bandwidth and message rate.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Finally, let’s look at some application benchmarks to see how setting &lt;code&gt;I_MPI_MULTIRAIL=1&lt;/code&gt; can speed up actual applications.&lt;/p&gt; 
-&lt;p&gt;Figure 4 shows the results for the &lt;a href="https://www2.mmm.ucar.edu/wrf/src/conus2.5km.tar.gz"&gt;CONUS 2.5km benchmark&lt;/a&gt; performance using WRF v4.2.2. We used the Intel compiler version 2022.1.2 and Intel MPI 2021.9.0 to compile and run WRF and calculated the speedup based on the total compute time. For 32 instances, setting &lt;code&gt;I_MPI_MULTIRAIL=1&lt;/code&gt; led to a 10% increase in the speedup. For 192 instances, the increase was over 30%.&lt;/p&gt; 
-&lt;div id="attachment_3557" style="width: 515px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3557" loading="lazy" class="size-full wp-image-3557" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-11.53.44.png" alt="Figure 4 –Speedup in runtime for WRF CONUS 2.5km benchmark. At large instance counts, we see that I_MPI_MULTIRAIL=1 shows a higher speedup." width="505" height="374"&gt;
- &lt;p id="caption-attachment-3557" class="wp-caption-text"&gt;Figure 4 –Speedup in runtime for WRF CONUS 2.5km benchmark. At large instance counts, we see that I_MPI_MULTIRAIL=1 shows a higher speedup.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Finally, figure 5 shows the results for the &lt;a href="https://www.ansys.com/en-in/it-solutions/benchmarks-overview/ansys-fluent-benchmarks/ansys-fluent-benchmarks-release-19/external-flow-over-a-formula-1-race-car"&gt;External flow over a Formula-1 race car&lt;/a&gt; test-case, running on ANSYS Fluent and Intel MPI 2021.9.0. We used the solver rating to compare performance. For 48 instances, setting &lt;code&gt;I_MPI_MULTIRAIL=1&lt;/code&gt; boosted the solver rating by &amp;gt; 15%.&lt;/p&gt; 
-&lt;div id="attachment_3558" style="width: 600px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3558" loading="lazy" class="size-full wp-image-3558" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-11.54.12.png" alt="Figure 5 –Solver rating for f1_racecar_140M test case in ANSYS Fluent. At large instance counts, we see that I_MPI_MULTIRAIL=1 provides a significant boost in solver rating." width="590" height="409"&gt;
- &lt;p id="caption-attachment-3558" class="wp-caption-text"&gt;Figure 5 –Solver rating for &lt;code&gt;f1_racecar_140M&lt;/code&gt; test case in ANSYS Fluent. At large instance counts, we see that&lt;code&gt; I_MPI_MULTIRAIL=1&lt;/code&gt; provides a significant boost in solver rating.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we talked about the PCIe topology of hpc7a instances, how MPI applications use EFA devices and how you can make tuning changes to achieve best performance on hpc7a. If you’re using Open MPI, you can get the best performance right out of the box. If you’re using Intel MPI, we suggest upgrading to the latest 2021.12 release to achieve the same outcome, or set the environment variable &lt;code&gt;I_MPI_MULTIRAIL=1&lt;/code&gt; in your job scripts.&lt;/p&gt; 
-&lt;p&gt;We hope you get great performance from the hpc7a instances for your HPC workloads. Reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt; with your thoughts and questions. Happy computing!&lt;/p&gt;</content:encoded>
 					
 		
 		
