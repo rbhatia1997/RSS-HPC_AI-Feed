@@ -20,6 +20,75 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>Decoding How AI-Powered Upscaling on NVIDIA RTX Improves Video Quality</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-upscaling/</link>
+		
+		<dc:creator><![CDATA[Brian Choi]]></dc:creator>
+		<pubDate>Wed, 17 Jul 2024 13:00:58 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[SHIELD]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72981</guid>
+
+					<description><![CDATA[Video is everywhere — nearly 80% of internet bandwidth today is used to stream video from content providers and social networks.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for RTX PC and workstation users.</i></p>
+<p>Video is everywhere — nearly 80% of internet bandwidth today is used to stream video from content providers and social networks. While screens have become bigger and support higher resolutions, nearly all video is only 1080p quality or lower.</p>
+<p>Upscalers can help sharpen streamed video and, powered by AI on the NVIDIA RTX platform, significantly enhance image quality and detail.</p>
+<h2><b>What Is an Upscaler?</b></h2>
+<p>The larger file size of videos makes it harder to compress and transmit compared to images or text. Platforms like Netflix, Vimeo and YouTube work around this limitation by encoding video — the process of compressing the raw source of a video into a smaller container format.</p>
+<p>The encoder first analyzes the video to decide what information it can remove to make it fit a target resolution and frame rate. If the target bitrate is insufficient, the video quality decreases, resulting in a loss of detail and sharpness and the presence of encoding artifacts. The smaller the file, the easier it is to share on the internet — but the worse it looks.</p>
+<p>Typically, software on the viewer’s device will upscale the video file to fit the display’s native resolution. However, these upscalers are fairly simplistic, merely multiplying pixels to meet the desired resolution. They can help sharpen the outlines of objects and scenes, but the final video typically carries encoding artifacts and sometimes looks over-sharpened and unnatural.</p>
+<h2><b>AI Know a Better Way</b></h2>
+<p>The NVIDIA RTX platform uses AI to easily de-artifact and upscale videos.</p>
+<figure id="attachment_72985" aria-describedby="caption-attachment-72985" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow.png"><img fetchpriority="high" decoding="async" class="wp-image-72985 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-672x348.png" alt="" width="672" height="348" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-672x348.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-400x207.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-768x398.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-1536x797.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-842x437.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-406x211.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-188x97.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-1280x664.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow.png 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72985" class="wp-caption-text">Easily de-artifact and upscale videos with RTX.</figcaption></figure>
+<p>The process of AI upscaling involves analyzing images and motion vectors to generate new details not present in the original video. Instead of merely multiplying pixels, it recognizes the patterns of the image and enhances them to provide greater detail and video quality.</p>
+<p>Images must be first de-artifacted before any processing begins. Artifacts — or unwanted distortions and anomalies that appear in video and image files — occur due to overcompression or data loss during transmission and storage.</p>
+<p>NVIDIA AI networks can de-artifact images, helping remove blocky areas sometimes seen in streamed video. Without this first step, AI upscalers might end up enhancing the artifacted image itself instead of the desired content.</p>
+<h2><b>Super-Sized Video</b></h2>
+<p>Just like putting on a pair of prescription glasses can instantly snap the world into focus, RTX Video Super Resolution, one of NVIDIA’s latest innovations in AI-enhanced video technology, gives users a clearer picture into the world of streamed video.</p>
+<figure id="attachment_72988" aria-describedby="caption-attachment-72988" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1.jpg"><img decoding="async" class="wp-image-72988 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72988" class="wp-caption-text">Click the image to see the differences between bicubic upscaling (left) and RTX Video Super Resolution (right).</figcaption></figure>
+<p>Available on GeForce RTX 40 and 30 Series GPUs and RTX professional GPUs, it uses AI running on dedicated Tensor Cores to remove block compression artifacts and upscale lower-resolution content up to 4K, matching the user’s native display resolution.</p>
+<p>RTX Video Super Resolution can be used to enhance all video watched on browsers. By combining de-artifacting with AI upscaling techniques, it can make even low-bitrate Twitch streams look stunningly clear. RTX Video Super Resolution is also supported in popular video apps like VLC so users can apply the same upscaling process to their offline videos.</p>
+<p>Creators can soon use RTX Video Super Resolution in editing apps like Black Magic’s Davinci Resolve, making it easier than ever to upscale lower-quality video files to 4K resolution, as well as convert standard-dynamic range source files into high-dynamic range (HDR).</p>
+<h2><b>Say Hi to High-Dynamic Range</b></h2>
+<p>RTX Video now also supports AI HDR. HDR video supports a wider range of colors, lending greater detail especially to the darker and lighter areas of images. The problem is that there isn’t that much HDR content online yet.</p>
+<p><iframe title="Introducing RTX Video HDR: AI-Upscale Video to HDR Quality" width="500" height="281" src="https://www.youtube.com/embed/FHAjydnpos8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Enter RTX Video HDR — by simply turning on the feature, the AI network will turn any standard or low-dynamic-range content into HDR, performing the correct tone mapping so the image still looks natural and retains its original colors.</p>
+<h2><b>AI Across the Board</b></h2>
+<p>RTX Video is just the latest implementation of AI upscaling powered by NVIDIA RTX.</p>
+<p>Members of the GeForce NOW cloud streaming service can play their favorite PC games on nearly any device. GeForce RTX servers located all over the world first render the game video content, encode it and then stream it to the player’s local device — just like streaming video from other content providers.</p>
+<p>Members on older NVIDIA GPU-powered devices can still use AI-enhanced upscaling to improve gameplay quality. This means they can enjoy the best of both worlds — gameplay rendered on servers powered by RTX 4080-class GPUs in the cloud and AI-enhanced streaming quality. Get more information on <a target="_blank" href="https://nvidia.custhelp.com/app/answers/detail/a_id/5250">enabling AI-enhanced upscaling on GeForce NOW</a>.</p>
+<p>The <a target="_blank" href="https://www.nvidia.com/en-us/shield/">NVIDIA SHIELD</a> TV takes this one step further, processing AI neural networks directly on its <a target="_blank" href="https://developer.nvidia.com/embedded/buy/tegra-k1-processor">NVIDIA Tegra</a> system-on-a-chip to upscale 1080p-quality or lower content from nearly any streaming platform to a display’s native resolution. That means users can improve the video quality of content streamed from Netflix, Prime Video, Max, Disney+ and more at the push of a remote button.</p>
+<p><a target="_blank" href="https://www.nvidia.com/en-us/shield/sliders/ai-upscaling/"><img loading="lazy" decoding="async" class="aligncenter wp-image-72991 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-upscaling-demo-672x368.jpg" alt="" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-upscaling-demo-672x368.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-upscaling-demo-400x219.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-upscaling-demo-768x421.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-upscaling-demo-821x450.jpg 821w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-upscaling-demo-392x215.jpg 392w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-upscaling-demo-182x100.jpg 182w, https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-upscaling-demo.jpg 1195w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>SHIELD TV is currently available for up to $30 off in North America and £30 or 35€ off in Europe as part of Amazon’s Prime Day event running July 16-17. For Prime members in Europe, eligible SHIELD TV purchases also include one month of the GeForce NOW Ultimate membership for free, enabling GeForce RTX 4080-class PC gameplay streamed directly to the living room.</p>
+<p><iframe loading="lazy" title="Nvidia Shield TV: Why it&#039;s still the BEST Android TV box!" width="500" height="281" src="https://www.youtube.com/embed/Df4j34d54WM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>AI has enabled unprecedented improvements in video quality, helping set a new standard in streaming experiences.</p>
+<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-decoded-upscaling-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-decoded-upscaling-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Decoding How AI-Powered Upscaling on NVIDIA RTX Improves Video Quality]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Next-Gen Video Editing: Wondershare Filmora Adds NVIDIA RTX Video HDR Support, RTX-Accelerated AI Features</title>
 		<link>https://blogs.nvidia.com/blog/studio-wondershare-filmora-rtx-ai-july-driver/</link>
 		
@@ -42,7 +111,7 @@
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of our </i><a href="https://blogs.nvidia.com/blog/tag/in-the-nvidia-studio/"><i>In the NVIDIA Studio</i></a><i> series, which celebrates featured artists, offers creative tips and tricks, and demonstrates how </i><a target="_blank" href="https://www.nvidia.com/en-us/studio/"><i>NVIDIA Studio</i></a><i> technology improves creative workflows. We’re also deep diving on new </i><a target="_blank" href="https://www.nvidia.com/en-us/geforce/rtx/"><i>GeForce RTX GPU</i></a><i> features, technologies and resources, and how they dramatically accelerate content creation.</i></p>
 <p>Wondershare Filmora — a video editing app with AI-powered tools — now supports NVIDIA RTX Video HDR, joining editing software like Blackmagic Design’s DaVinci Resolve and Cyberlink PowerDirector.</p>
 <p>RTX Video HDR significantly enhances video quality, ensuring the final output is suitable for the best monitors available today.</p>
-<p><iframe title="Filmora x NVIDIA Partnership" width="500" height="281" src="https://www.youtube.com/embed/I2ZUGB8JZKc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Filmora x NVIDIA Partnership" width="500" height="281" src="https://www.youtube.com/embed/I2ZUGB8JZKc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>Livestreaming software OBS Studio and XSplit Broadcaster now support Twitch Enhanced Broadcasting, giving streamers more control over video quality through client-side encoding and automatic configurations. The feature, developed in collaboration between Twitch, OBS and NVIDIA, also paves the way for more advancements, including vertical live video and advanced codecs such as HEVC and AV1.</p>
 <p>A summer’s worth of creative app updates are included in the July Studio Driver, ready for <a target="_blank" href="https://www.nvidia.com/en-us/geforce/drivers/">download</a> today. Install the <a target="_blank" href="https://www.nvidia.com/en-us/software/nvidia-app/">NVIDIA app</a> beta — the essential companion for creators and gamers — to keep GeForce RTX PCs up to date with the latest NVIDIA drivers and technology.</p>
 <p>Join NVIDIA at <a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/">SIGGRAPH</a> to learn about the latest breakthroughs in graphics and generative AI, and tune in to a fireside chat featuring NVIDIA founder and CEO Jensen Huang and Lauren Goode, senior writer at WIRED, on Monday, July 29 at 2:30 p.m. MT. <a target="_blank" href="https://s2024.siggraph.org/program/keynote-presentations/#speaker-huang">Register now</a>.</p>
@@ -56,10 +125,10 @@
 <h2><b>Maximizing AI Features in Filmora</b></h2>
 <p>Kevin Stratvert has the heart of a teacher — he’s always loved to share his technical knowledge and tips with others.</p>
 <p>One day, he thought, “Why not make a YouTube video to explain stuff directly to users?” His first big hit was a tutorial on how to get Microsoft Office for free through Office.com. The video garnered millions of views and tons of engagement — and he’s continued creating content ever since.</p>
-<p><iframe title="&#x1f3a8; Turn Your Sketches into AI Masterpieces #AIDecoded #NVIDIAPartner @NVIDIA-Studio" width="500" height="281" src="https://www.youtube.com/embed/epPczWW0ApM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="&#x1f3a8; Turn Your Sketches into AI Masterpieces #AIDecoded #NVIDIAPartner @NVIDIA-Studio" width="500" height="281" src="https://www.youtube.com/embed/epPczWW0ApM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>“The more content I created, the more questions and feedback I got from viewers, sparking this cycle of creativity and connection that I just couldn’t get enough of,” said Stratvert.</p>
 <p>Explaining the benefits of AI has been an area of particular interest for Stratvert, especially as it relates to AI-powered features in Wondershare Filmora. In one YouTube video, <a target="_blank" href="https://www.youtube.com/watch?v=IjLVHHmc76Q">Filmora Video Editor Tutorial for Beginners</a>, he breaks down the AI effects video editors can use to accelerate their workflows.</p>
-<p><iframe title="Filmora Video Editor Tutorial for Beginners" width="500" height="281" src="https://www.youtube.com/embed/IjLVHHmc76Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Filmora Video Editor Tutorial for Beginners" width="500" height="281" src="https://www.youtube.com/embed/IjLVHHmc76Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>Examples include:</p>
 <ul>
 <li><a target="_blank" href="https://www.youtube.com/watch?v=IjLVHHmc76Q&amp;t=898s">Smart Edit</a>: Edit footage-based transcripts generated automatically, including in multiple languages.</li>
@@ -1098,56 +1167,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[EvolutionaryScale Debuts With ESM3 Generative AI Model for Protein Design]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Why 3D Visualization Holds Key to Future Chip Designs</title>
-		<link>https://blogs.nvidia.com/blog/ansys-omniverse-modulus-accelerate-simulation/</link>
-		
-		<dc:creator><![CDATA[Baskar Rajagopalan]]></dc:creator>
-		<pubDate>Mon, 24 Jun 2024 19:00:44 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[NVIDIA Modulus]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72721</guid>
-
-					<description><![CDATA[Multi-die chips, known as three-dimensional integrated circuits, or 3D-ICs, represent a revolutionary step in semiconductor design. The chips are vertically stacked to create a compact structure that boosts performance without increasing power consumption. However, as chips become denser, they present more complex challenges in managing electromagnetic and thermal stresses. To understand and address this, advanced	<a class="read-more" href="https://blogs.nvidia.com/blog/ansys-omniverse-modulus-accelerate-simulation/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Multi-die chips, known as three-dimensional integrated circuits, or 3D-ICs, represent a revolutionary step in semiconductor design. The chips are vertically stacked to create a compact structure that boosts performance without increasing power consumption.</p>
-<p>However, as chips become denser, they present more complex challenges in managing electromagnetic and thermal stresses. To understand and address this, advanced 3D multiphysics visualizations become essential to design and diagnostic processes.</p>
-<p>At this week’s <a target="_blank" href="https://www.dac.com/">Design Automation Conference</a>, a global event showcasing the latest developments in chips and systems, Ansys — a company that develops engineering simulation and 3D design software — will share how it’s using NVIDIA technology to overcome these challenges to build the next generation of semiconductor systems.</p>
-<p>To enable 3D visualizations of simulation results for their users, Ansys uses <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a>, a platform of application programming interfaces, software development kits, and services that enables developers to easily integrate <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/usd/">Universal Scene Description (OpenUSD)</a> and NVIDIA RTX rendering technologies into existing software tools and simulation workflows.</p>
-<p>The platform powers visualizations of 3D-IC results from Ansys solvers so engineers can evaluate phenomena like electromagnetic fields and temperature variations to optimize chips for faster processing, increased functionality and improved reliability.</p>
-<p>With Ansys Icepak on the NVIDIA Omniverse platform, engineers can simulate temperatures across a chip according to different power profiles and floor plans. Finding chip hot-spots can lead to better design of the chips themselves, as well as auxiliary cooling devices. However, these 3D-IC simulations are computationally intensive, limiting the number of simulations and design points users can explore.</p>
-<p>Using <a target="_blank" href="https://developer.nvidia.com/modulus">NVIDIA Modulus, combined with</a> novel techniques for handling arbitrary power patterns in the Ansys RedHawk-SC electrothermal data pipeline and model training framework, the Ansys R&amp;D team is exploring the acceleration of simulation workflows with AI-based surrogate models. Modulus is an open-source AI framework for building, training and fine-tuning physics-ML models at scale with a simple Python interface.</p>
-<p>With the <a target="_blank" href="https://docs.nvidia.com/deeplearning/modulus/modulus-v2209/user_guide/theory/architectures.html">NVIDIA Modulus Fourier neural operator </a>(FNO) architecture, which can parameterize solutions for a distribution of partial differential equations, Ansys researchers created an AI surrogate model that efficiently predicts temperature profiles for any given power profile and a given floor plan defined by system parameters like heat transfer coefficient, thickness and material properties. This model offers near real-time results at significantly reduced computational costs, allowing Ansys users to explore a wider design space for new chips.</p>
-<figure id="attachment_72730" aria-describedby="caption-attachment-72730" style="width: 399px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/06/Ansys-Copy.png"><img loading="lazy" decoding="async" class="wp-image-72730 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Ansys-Copy.png" alt="" width="399" height="133" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Ansys-Copy.png 399w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Ansys-Copy-188x63.png 188w" sizes="(max-width: 399px) 100vw, 399px" /></a><figcaption id="caption-attachment-72730" class="wp-caption-text">Ansys uses a 3D FNO model to infer temperatures on a chip surface for unseen power profiles, a given die height and heat-transfer coefficient boundary condition.</figcaption></figure>
-<p>Following a successful proof of concept, the Ansys team will explore integration of such AI surrogate models for its next-generation RedHawk-SC platform using NVIDIA Modulus.</p>
-<p>As more surrogate models are developed, the team will also look to enhance model generality and accuracy through in-situ fine-tuning. This will enable RedHawk-SC users to benefit from faster simulation workflows, access to a broader design space and the ability to refine models with their own data to foster innovation and safety in product development.</p>
-<p><i>To see the joint demonstration of 3D-IC multiphysics visualization using NVIDIA Omniverse APIs, </i><a target="_blank" href="https://www.ansys.com/events/dac"><i>visit Ansys at the Design Automation Conference</i></a><i>, running June 23-27, in San Francisco at booth 1308 or watch the </i><a target="_blank" href="https://61dac.conference-program.com/presentation/?id=EF119&amp;sess=sess280"><i>presentation</i></a><i> at the Exhibitor Forum.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Ansys-Blog-Header.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Ansys-Blog-Header-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Why 3D Visualization Holds Key to Future Chip Designs]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
