@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 16 Jul 2024 15:02:38 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 18 Jul 2024 13:02:13 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -1300,7 +1300,7 @@ mpirun (Open MPI) 4.1.6&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To resolve issues regarding Cluster Validation, please refer to the “Troubleshooting” section later.&lt;/p&gt; 
 &lt;h3&gt;Step 5: Launch GPT training job&lt;/h3&gt; 
 &lt;p&gt;Use &lt;code&gt;enroot&lt;/code&gt; to import the container to local:&lt;/p&gt; 
-&lt;pre&gt;&lt;code class="lang-bash"&gt;enroot import --output nemo_megatron_training.sqsh dockerd://nvcr.io/ea-bignlp/nemofw-training:23.07-py3&lt;/code&gt;&lt;/pre&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;enroot import --output nemo_megatron_training.sqsh dockerd://nvcr.io/nvidia/nemo:dev&lt;/code&gt;&lt;/pre&gt; 
 &lt;p&gt;Next, download the vocab and merges files:&lt;/p&gt; 
 &lt;pre&gt;&lt;code class="lang-bash"&gt;wget https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-vocab.json
 wget https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-merges.txt

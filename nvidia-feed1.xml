@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 17 Jul 2024 00:22:23 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 18 Jul 2024 14:46:37 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,135 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>Mistral AI and NVIDIA Unveil Mistral NeMo 12B, a Cutting-Edge Enterprise AI Model</title>
+		<link>https://blogs.nvidia.com/blog/mistral-nvidia-ai-model/</link>
+		
+		<dc:creator><![CDATA[Kari Briski]]></dc:creator>
+		<pubDate>Thu, 18 Jul 2024 14:00:59 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73008</guid>
+
+					<description><![CDATA[Mistral AI and NVIDIA today released a new state-of-the-art language model, Mistral NeMo 12B, that developers can easily customize and deploy for enterprise applications supporting chatbots, multilingual tasks, coding and summarization. By combining Mistral AI’s expertise in training data with NVIDIA’s optimized hardware and software ecosystem, the Mistral NeMo model offers high performance for diverse	<a class="read-more" href="https://blogs.nvidia.com/blog/mistral-nvidia-ai-model/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Mistral AI and NVIDIA today released a new state-of-the-art language model, <a target="_blank" href="https://mistral.ai/news/mistral-nemo">Mistral NeMo</a> 12B, that developers can easily customize and deploy for enterprise applications supporting chatbots, multilingual tasks, coding and summarization.</p>
+<p>By combining Mistral AI’s expertise in training data with NVIDIA’s optimized hardware and software ecosystem, the Mistral NeMo model offers high performance for diverse applications.</p>
+<p>&#8220;We are fortunate to collaborate with the NVIDIA team, leveraging their top-tier hardware and software,” said Guillaume Lample, cofounder and chief scientist of Mistral AI. “Together, we have developed a model with unprecedented accuracy, flexibility, high-efficiency and enterprise-grade support and security thanks to NVIDIA AI Enterprise deployment.”</p>
+<p>Mistral NeMo was trained on the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> AI platform, which offers dedicated, scalable access to the latest NVIDIA architecture.</p>
+<p><a target="_blank" href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT-LLM</a> for accelerated inference performance on large language models and the <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> development platform for building custom generative AI models were also used to advance and optimize the process.</p>
+<p>This collaboration underscores NVIDIA’s commitment to supporting the model-builder ecosystem.</p>
+<p><b>Delivering Unprecedented Accuracy, Flexibility and Efficiency </b></p>
+<p>Excelling in multi-turn conversations, math, common sense reasoning, world knowledge and coding, this enterprise-grade AI model delivers precise, reliable performance across diverse tasks.</p>
+<p>With a 128K context length, Mistral NeMo processes extensive and complex information more coherently and accurately, ensuring contextually relevant outputs.</p>
+<p>Released under the Apache 2.0 license, which fosters innovation and supports the broader AI community, Mistral NeMo is a 12-billion-parameter model. Additionally, the model uses the FP8 data format for model inference, which reduces memory size and speeds deployment without any degradation to accuracy.</p>
+<p>That means the model learns tasks better and handles diverse scenarios more effectively, making it ideal for enterprise use cases.</p>
+<p>Mistral NeMo comes packaged as an <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> inference microservice, offering performance-optimized inference with NVIDIA TensorRT-LLM engines.</p>
+<p>This containerized format allows for easy deployment anywhere, providing enhanced flexibility for various applications.</p>
+<p>As a result, models can be deployed anywhere in minutes, rather than several days.</p>
+<p>NIM features enterprise-grade software that’s part of <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, with dedicated feature branches, rigorous validation processes, and enterprise-grade security and support.</p>
+<p>It includes comprehensive support, direct access to an NVIDIA AI expert and defined service-level agreements, delivering reliable and consistent performance.</p>
+<p>The open model license allows enterprises to integrate Mistral NeMo into commercial applications seamlessly.</p>
+<p>Designed to fit on the memory of a single NVIDIA L40S, NVIDIA GeForce RTX 4090 or NVIDIA RTX 4500 GPU, the Mistral NeMo NIM offers high efficiency, low compute cost, and enhanced security and privacy.</p>
+<p><b>Advanced Model Development and Customization </b></p>
+<p>The combined expertise of Mistral AI and NVIDIA engineers has optimized training and inference for Mistral NeMo.</p>
+<p>Trained with Mistral AI’s expertise, especially on multilinguality, code and multi-turn content, the model benefits from accelerated training on NVIDIA’s full stack.</p>
+<p>It’s designed for optimal performance, utilizing efficient model parallelism techniques, scalability and mixed precision with Megatron-LM.</p>
+<p>The model was trained using<a target="_blank" href="https://github.com/NVIDIA/Megatron-LM"> Megatron-LM</a>, part of NVIDIA <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NeMo</a>, with 3,072 H100 80GB Tensor Core GPUs on DGX Cloud, composed of NVIDIA AI architecture, including accelerated computing, network fabric and software to increase training efficiency.</p>
+<p><b>Availability and Deployment</b></p>
+<p>With the flexibility to run anywhere — cloud, data center or RTX workstation — Mistral NeMo is ready to revolutionize AI applications across various platforms.</p>
+<p>Experience Mistral NeMo as an NVIDIA NIM today via <a target="_blank" href="http://ai.nvidia.com">ai.nvidia.com</a>, with a downloadable NIM coming soon.</p>
+<p><i>See </i><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fabout-nvidia%2Flegal-info%2F&amp;data=05%7C02%7Clpham%40nvidia.com%7Cd59f2f66f51e4deaac8008dc94b3ef0f%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638548747745016311%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=dm8Os%2B4LtHW2ehZrPaxn38bsutMQBDeUdQuxrIa2y1Y%3D&amp;reserved=0"><i>notice</i></a><i> regarding software product information.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/ngc-corp-blog-community-model-confidential-model-1280x680-2.png"
+			type="image/png"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/ngc-corp-blog-community-model-confidential-model-1280x680-2-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Mistral AI and NVIDIA Unveil Mistral NeMo 12B, a Cutting-Edge Enterprise AI Model]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Hot Deal, Cool Prices: GeForce NOW Summer Sale Offers Priority and Ultimate Memberships Half Off</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2024/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 18 Jul 2024 13:00:31 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73015</guid>
+
+					<description><![CDATA[It’s time for a sweet treat — the GeForce NOW Summer Sale offers high-performance cloud gaming at half off for a limited time. And starting today, gamers can directly access supported PC games on GeForce NOW via Xbox.com game pages, enabling them to get into their favorite Xbox PC games even faster. It all comes	<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2024/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>It’s time for a sweet treat — the <a target="_blank" href="http://geforcenow.com">GeForce NOW Summer Sale</a> offers high-performance cloud gaming at half off for a limited time.</p>
+<p>And starting today, gamers can directly access supported PC games on GeForce NOW via Xbox.com game pages, enabling them to get into their favorite Xbox PC games even faster.</p>
+<p>It all comes with nine new games joining the cloud this week.</p>
+<h2><b>We Halve a Deal</b></h2>
+<figure id="attachment_73025" aria-describedby="caption-attachment-73025" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-73025" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-672x336.jpg" alt="Summer Sale on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Summer_Sale-1280x640.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-73025" class="wp-caption-text"><em>Unlock the power of cloud gaming with GeForce NOW’s sizzling summer sale.</em></figcaption></figure>
+<p>Take advantage of a special new discount — one-month and six-month GeForce NOW Priority or Ultimate memberships are now 50% off until Aug. 18. It’s perfect for members wanting to level up their gaming experience or those looking to try GeForce NOW for the first time to access and stream an ever-growing library of over 1,900 games with top-notch performance.</p>
+<p>Priority members enjoy more benefits over free users, including faster access to gaming servers and gaming sessions of up to six hours. They can also stream beautifully ray-traced graphics across multiple devices with RTX ON for the most immersive experience in supported games.</p>
+<p>For those looking for top-notch performance, the Ultimate tier provides members with exclusive access to servers and the ability to stream at up to 4K resolution and 120 frames per second, or up to 240 fps — even without upgraded hardware. Ultimate members get all the same benefits as <a target="_blank" href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">GeForce RTX 40 series GPU</a> owners, including <a target="_blank" href="https://www.nvidia.com/en-us/geforce/news/dlss3-ai-powered-neural-graphics-innovations/">NVIDIA DLSS 3</a> for the smoothest frame rates and <a target="_blank" href="https://www.nvidia.com/en-us/geforce/technologies/reflex/">NVIDIA Reflex</a> for the lowest-latency streaming from the cloud.</p>
+<p>Strike while it’s hot — this scorching summer sale ends soon.</p>
+<h2><b>Path of the Goddess</b></h2>
+<figure id="attachment_73022" aria-describedby="caption-attachment-73022" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-73022" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-672x378.jpg" alt="Kunitsu-Gami: Path of the Goddess on GeForce NOW" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Kunitsu_Gami_Path_of_the_Goddess.jpg 1920w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-73022" class="wp-caption-text"><em>Rinse and repeat.</em></figcaption></figure>
+<p>Capcom’s latest release, <i>Kunitsu-Gami: Path of the Goddess </i>is a unique Japanese-inspired, single-player Kagura Action Strategy game.</p>
+<p>The game takes place on a mountain covered in defilement. During the day, purify the villages and prepare for sundown. During the night, protect the Maiden against the hordes of the Seethe. Repeat the day-and-night cycle until the mountain has been cleansed of defilement and peace has returned to the land.</p>
+<p>Walk the path of the goddess in the cloud with extended gaming sessions for Ultimate and Priority members. Ultimate members can also enjoy seeing supernatural and human worlds collide in ultrawide resolutions for an even more immersive experience.</p>
+<h2><b>Slay New Games</b></h2>
+<figure id="attachment_73019" aria-describedby="caption-attachment-73019" style="width: 672px" class="wp-caption aligncenter"><img decoding="async" class="size-large wp-image-73019" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-672x336.jpg" alt="Dungeons of Hinterberg on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-Dungeons_of_Hunterberg.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-73019" class="wp-caption-text"><em>Having a holiday in Hinterberg.</em></figcaption></figure>
+<p>In <i>Dungeons of Hinterberg </i>from Microbird Games, play as Luisa, a burnt-out law trainee taking a break from her fast-paced corporate life. Explore the beautiful alpine village of Hinterberg armed with just a sword and a tourist guide, and uncover the magic hidden within its dungeons. Master magic, solve puzzles and slay monsters — all from the cloud.</p>
+<p>Check out the list of new games this week:</p>
+<ul>
+<li><i>The Crust </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1465470?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 15)</li>
+<li><i>Gestalt: Steam &amp; Cinder </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1231990?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 16)</li>
+<li><i>Nobody Wants to Die</i> (New release on <a target="_blank" href="https://store.steampowered.com/app/1939970?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 17)</li>
+<li><i>Dungeons of Hinterberg </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1983260?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a target="_blank" href="https://www.xbox.com/games/store/dungeons-of-hinterberg/9pgx472j0rjp?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, July 18)</li>
+<li><i>Flintlock: The Siege of Dawn  </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1832040?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a target="_blank" href="https://www.xbox.com/games/store/flintlock-the-siege-of-dawn/9PBBQHX6V3PJ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, July 18)</li>
+<li><i>Norland </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1857090?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 18)</li>
+<li><i>Kunitsu-Gami: Path of the Goddess</i> (New release on <a target="_blank" href="https://store.steampowered.com/app/2510710?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 19)</li>
+<li><i>Content Warning </i>(<a target="_blank" href="https://store.steampowered.com/app/2881650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Crime Boss: Rockay City </i>(<a target="_blank" href="https://store.steampowered.com/app/2933080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+</ul>
+<p>What are you planning to play this weekend? Let us know on <a target="_blank" href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">Come sale away this summer<img src="https://s.w.org/images/core/emoji/15.0.3/72x72/26f5.png" alt="⛵" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a target="_blank" href="https://twitter.com/NVIDIAGFN/status/1813604574835753260?ref_src=twsrc%5Etfw">July 17, 2024</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/gfn-thursday-7-18-nv-blog-1280x680-no-cta.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/gfn-thursday-7-18-nv-blog-1280x680-no-cta-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Hot Deal, Cool Prices: GeForce NOW Summer Sale Offers Priority and Ultimate Memberships Half Off]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Decoding How AI-Powered Upscaling on NVIDIA RTX Improves Video Quality</title>
 		<link>https://blogs.nvidia.com/blog/ai-decoded-upscaling/</link>
 		
@@ -44,19 +173,19 @@
 <p>Typically, software on the viewer’s device will upscale the video file to fit the display’s native resolution. However, these upscalers are fairly simplistic, merely multiplying pixels to meet the desired resolution. They can help sharpen the outlines of objects and scenes, but the final video typically carries encoding artifacts and sometimes looks over-sharpened and unnatural.</p>
 <h2><b>AI Know a Better Way</b></h2>
 <p>The NVIDIA RTX platform uses AI to easily de-artifact and upscale videos.</p>
-<figure id="attachment_72985" aria-describedby="caption-attachment-72985" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow.png"><img fetchpriority="high" decoding="async" class="wp-image-72985 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-672x348.png" alt="" width="672" height="348" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-672x348.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-400x207.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-768x398.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-1536x797.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-842x437.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-406x211.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-188x97.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-1280x664.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow.png 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72985" class="wp-caption-text">Easily de-artifact and upscale videos with RTX.</figcaption></figure>
+<figure id="attachment_72985" aria-describedby="caption-attachment-72985" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow.png"><img loading="lazy" decoding="async" class="wp-image-72985 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-672x348.png" alt="" width="672" height="348" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-672x348.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-400x207.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-768x398.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-1536x797.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-842x437.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-406x211.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-188x97.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow-1280x664.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution-signal-flow.png 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72985" class="wp-caption-text">Easily de-artifact and upscale videos with RTX.</figcaption></figure>
 <p>The process of AI upscaling involves analyzing images and motion vectors to generate new details not present in the original video. Instead of merely multiplying pixels, it recognizes the patterns of the image and enhances them to provide greater detail and video quality.</p>
 <p>Images must be first de-artifacted before any processing begins. Artifacts — or unwanted distortions and anomalies that appear in video and image files — occur due to overcompression or data loss during transmission and storage.</p>
 <p>NVIDIA AI networks can de-artifact images, helping remove blocky areas sometimes seen in streamed video. Without this first step, AI upscalers might end up enhancing the artifacted image itself instead of the desired content.</p>
 <h2><b>Super-Sized Video</b></h2>
 <p>Just like putting on a pair of prescription glasses can instantly snap the world into focus, RTX Video Super Resolution, one of NVIDIA’s latest innovations in AI-enhanced video technology, gives users a clearer picture into the world of streamed video.</p>
-<figure id="attachment_72988" aria-describedby="caption-attachment-72988" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1.jpg"><img decoding="async" class="wp-image-72988 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72988" class="wp-caption-text">Click the image to see the differences between bicubic upscaling (left) and RTX Video Super Resolution (right).</figcaption></figure>
+<figure id="attachment_72988" aria-describedby="caption-attachment-72988" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1.jpg"><img loading="lazy" decoding="async" class="wp-image-72988 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1-1280x720.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/rtx-video-super-resolution_full-size-scaled-1.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72988" class="wp-caption-text">Click the image to see the differences between bicubic upscaling (left) and RTX Video Super Resolution (right).</figcaption></figure>
 <p>Available on GeForce RTX 40 and 30 Series GPUs and RTX professional GPUs, it uses AI running on dedicated Tensor Cores to remove block compression artifacts and upscale lower-resolution content up to 4K, matching the user’s native display resolution.</p>
 <p>RTX Video Super Resolution can be used to enhance all video watched on browsers. By combining de-artifacting with AI upscaling techniques, it can make even low-bitrate Twitch streams look stunningly clear. RTX Video Super Resolution is also supported in popular video apps like VLC so users can apply the same upscaling process to their offline videos.</p>
 <p>Creators can soon use RTX Video Super Resolution in editing apps like Black Magic’s Davinci Resolve, making it easier than ever to upscale lower-quality video files to 4K resolution, as well as convert standard-dynamic range source files into high-dynamic range (HDR).</p>
 <h2><b>Say Hi to High-Dynamic Range</b></h2>
 <p>RTX Video now also supports AI HDR. HDR video supports a wider range of colors, lending greater detail especially to the darker and lighter areas of images. The problem is that there isn’t that much HDR content online yet.</p>
-<p><iframe title="Introducing RTX Video HDR: AI-Upscale Video to HDR Quality" width="500" height="281" src="https://www.youtube.com/embed/FHAjydnpos8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Introducing RTX Video HDR: AI-Upscale Video to HDR Quality" width="500" height="281" src="https://www.youtube.com/embed/FHAjydnpos8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p>Enter RTX Video HDR — by simply turning on the feature, the AI network will turn any standard or low-dynamic-range content into HDR, performing the correct tone mapping so the image still looks natural and retains its original colors.</p>
 <h2><b>AI Across the Board</b></h2>
 <p>RTX Video is just the latest implementation of AI upscaling powered by NVIDIA RTX.</p>
@@ -1039,134 +1168,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Thinking Outside the Blox: How Roblox Is Using Generative AI to Enhance User Experiences]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Cut the Noise: NVIDIA Broadcast Supercharges Livestreaming, Remote Work</title>
-		<link>https://blogs.nvidia.com/blog/ai-decoded-broadcast/</link>
-		
-		<dc:creator><![CDATA[Brian Choi]]></dc:creator>
-		<pubDate>Wed, 26 Jun 2024 13:00:19 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[AI Decoded]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[Media and Entertainment]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72735</guid>
-
-					<description><![CDATA[NVIDIA Broadcast offers AI-powered features that improve audio and video quality for a variety of use cases.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
-<p>AI has changed computing forever. The spotlight has most recently been on generative AI, but AI-accelerated, NVIDIA RTX-powered tools have also been key in improving gaming, content creation and productivity over the years.</p>
-<p>The <a target="_blank" href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast app</a> is one example, using Tensor Cores on a local RTX GPU to seamlessly improve audio and video quality. Paired with the NVIDIA encoder (<a target="_blank" href="https://developer.nvidia.com/video-codec-sdk">NVENC</a>) built into GeForce RTX and NVIDIA RTX GPUs, the app makes it easy to get started as a livestreamer or to look professional during video conference calls.</p>
-<h2><b>The Stream Dream</b></h2>
-<p><iframe loading="lazy" title="Broadcasting With NVIDIA GeForce RTX | NVENC vs x264 Quality Comparison" width="500" height="281" src="https://www.youtube.com/embed/viWuC4MMXWc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>High-quality livestreaming traditionally required expensive hardware. Many livestreamers relied on software CPU encoding using the x264 software library, which often impacted gameplay quality. This led many to use a dual-PC setup, with one PC focused on gaming and content and the other on encoding the stream. It was complicated to assemble, difficult to troubleshoot and often cost-prohibitive for budding livestreamers.</p>
-<p>NVENC is here to help. It’s a dedicated hardware video encoder on NVIDIA GPUs that processes the encoding, freeing up the rest of the system to focus on game and content performance. Industry-leading streaming apps like Open Broadcaster Software (OBS) are adding support for NVENC, paving the way for a new generation of broadcasters on popular platforms like Twitch and YouTube.</p>
-<p>Meanwhile, <a target="_blank" href="https://developer.nvidia.com/maxine">NVIDIA Maxine</a> helps solve the issue of expensive equipment. It includes free, AI-powered features like virtual green screens and webcam-based augmented reality tracking that eliminate the need for special equipment like physical green screens or motion- capture suits. Broadcasters first got to experience the technology at TwitchCon 2019, where they tested OBS live on the show floor with an AI-accelerated green screen on a GeForce RTX 2080 GPU.</p>
-<p>Maxine’s AI-powered effects debuted for RTX users in the RTX Voice beta, and moved into the <a target="_blank" href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast</a> app.</p>
-<h2><b>Now Showing: NVIDIA Broadcast</b></h2>
-<p>NVIDIA Broadcast offers AI-powered features that improve audio and video quality for a variety of use cases. It’s user-friendly, works in any app and is a <a target="_blank" href="https://www.nvidia.com/en-us/geforce/guides/broadcast-app-setup-guide/#Quick-Start-Guide">breeze to set up</a>.</p>
-<p>It includes:</p>
-<ul>
-<li><b>Noise and Acoustic Echo Removal:</b> AI eliminates unwanted background noise from both the mic and inbound audio at the touch of a button.</li>
-<li><b>Virtual Backgrounds:</b> Features like Background Removal, Replacement and Blur help customize backgrounds without the need for expensive equipment or complex lighting setups.</li>
-<li><b>Eye Contact: </b>AI helps make it appear as though a streamer is looking directly at the camera, even when they’re glancing off camera or taking notes.</li>
-<li><b>Auto Frame: </b>Dynamically tracks movements in real time, automatically cropping and zooming moving objects regardless of their position.</li>
-<li><b>Vignette:</b> AI applies a darkening effect to the corners of camera images, providing visual contrast to draw attention to the center of the video and adding stylistic flair.</li>
-<li><b>Video Noise Removal:</b> Removes visual noise from low-light situations for a cleaner picture.</li>
-</ul>
-<p>NVIDIA Broadcast works by creating a virtual camera, microphone or speaker in Windows so that users can set up their devices once and use them in any broadcasting, video conferencing or voice chat apps, including Discord, Google Meet, Microsoft Teams, OBS Studio, Slack, Webex and Zoom.</p>
-<p>Those with an NVIDIA GeForce RTX, TITAN RTX, NVIDIA RTX or Quadro RTX GPU can use their GPU’s dedicated Tensor Cores to help the app’s AI networks run in real time.</p>
-<p>The same AI-powered technology in NVIDIA Broadcast is also available to app developers as a software development kit. Audiovisual technology company Elgato includes Maxine’s AI audio noise removal technology in its <a target="_blank" href="https://help.elgato.com/hc/en-us/articles/7665204543117-Wave-Link-How-to-use-NVIDIA-Broadcast-Noise-Removal-by-Elgato">Wave Link</a> software, while VTube Studio — a popular app for connecting a 3D model to a webcam for streaming as an animated character — offers an <a target="_blank" href="https://store.steampowered.com/app/2178540/VTube_Studio__NVIDIA_Broadcast_Tracker/">RTX-accelerated model tracker</a> plug-in as a free download. Independent developer Xaymar uses NVIDIA Maxine in his <a target="_blank" href="https://www.xaymar.com/projects/voicefx/">VoiceFX</a> plug-in.</p>
-<p>Content creators can use this plug-in or Elgato’s virtual studio technology (VST) filter to clean up noise and echo from recordings in post-processing in video editing suites like Adobe Premiere Pro or in digital audio workstations like Ableton Live and Adobe Audition.</p>
-<h2><b>(Not) Hearing Is Believing</b></h2>
-<p>Since its release, NVIDIA Broadcast has been used by millions.</p>
-<p>“I’ve utilized the video noise removal and background replacement the most,” said <a target="_blank" href="https://www.twitch.tv/mr_vudoo">Mr_Vudoo</a>, a Twitch personality and broadcaster. “The eye contact feature was very interesting and quite honestly took me by surprise at how well it worked.”</p>
-<p>Unmesh Dinda, host of the YouTube channel <a target="_blank" href="https://www.youtube.com/@PiXimperfect/featured">PiXimperfect</a>, demonstrated NVIDIA Broadcast’s noise-canceling and echo-removal AI features in an extreme scenario. He set an electric fan whirring directly into his microphone and donned a helmet that was intensely hammered on. Even with these loud sounds in the background, Dinda could be heard crystal clear with Broadcast’s noise-removal feature turned on. <a target="_blank" href="https://www.instagram.com/reel/ClTp4_Hp867/?hl=en">The video</a> has racked up more than 12 million views.</p>
-<p><iframe loading="lazy" title="Remove ALL Background Noise with One Click! #Shorts" width="500" height="281" src="https://www.youtube.com/embed/bEurXLfzXfw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>NVIDIA Broadcast is also a useful tool for the growing remote workforce. In an article, Tom’s Hardware editor-in-chief Avram Piltch <a target="_blank" href="https://www.tomshardware.com/news/nvidia-broadcast-tested">detailed his testing</a> of the app’s noise reduction features against noisy air conditioners, lawn-mowing neighbors and even a robot-wielding, tantrum-throwing child. Broadcast’s AI audio filters prevailed every time:</p>
-<p>“I got my eight-year-old to fake throwing a fit right behind me and, once I enabled noise removal, every whine of ‘I’m not going to bed’ went silent (at least on the recording),” said Piltch. “To double the challenge, we had him throw a tantrum while carrying around a robot car with whirring treads. Once again, NVIDIA Broadcast removed all of the unwanted sound.”</p>
-<p>Even everyday scenarios like video calls with a medical professional benefit from NVIDIA Broadcast’s AI-powered background removal.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">Today I was video calling my doctor and she complimented me on how good the background blurring on my webcam looked.</p>
-<p>It caught me so off guard, I didn&#39;t know how to respond, so I just gave her a step by step tutorial on how to use NVIDIA Broadcast <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f629.png" alt="😩" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
-<p>&mdash; Prismatic Ash (@_Ashdown) <a target="_blank" href="https://twitter.com/_Ashdown/status/1801547934925742437?ref_src=twsrc%5Etfw">June 14, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p>Download <a target="_blank" href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast</a> for free on any RTX-powered desktop or laptop.</p>
-<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/broadcast-nv-blog-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/broadcast-nv-blog-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Cut the Noise: NVIDIA Broadcast Supercharges Livestreaming, Remote Work]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>EvolutionaryScale Debuts With ESM3 Generative AI Model for Protein Design</title>
-		<link>https://blogs.nvidia.com/blog/evolutionaryscale-esm3-generative-ai-nim-bionemo-h100/</link>
-		
-		<dc:creator><![CDATA[Anthony Costa]]></dc:creator>
-		<pubDate>Tue, 25 Jun 2024 10:00:25 +0000</pubDate>
-				<category><![CDATA[Research]]></category>
-		<category><![CDATA[BioNeMo]]></category>
-		<category><![CDATA[NVIDIA H100]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72720</guid>
-
-					<description><![CDATA[Generative AI has revolutionized software development with prompt-based code generation — protein design is next. EvolutionaryScale today announced the release of its ESM3 model, the third-generation ESM model, which simultaneously reasons over the sequence, structure and functions of proteins, giving protein discovery engineers a programmable platform. The startup, which emerged from the Meta FAIR (Fundamental	<a class="read-more" href="https://blogs.nvidia.com/blog/evolutionaryscale-esm3-generative-ai-nim-bionemo-h100/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Generative AI has revolutionized software development with prompt-based code generation — protein design is next.</p>
-<p>EvolutionaryScale today announced the release of its ESM3 model, the third-generation ESM model, which simultaneously reasons over the sequence, structure and functions of proteins, giving protein discovery engineers a programmable platform.</p>
-<p>The startup, which emerged from the Meta FAIR (Fundamental AI Research) unit, recently landed funding led by Lux Capital, Nat Friedman and Daniel Gross, with investment from NVIDIA and Amazon.</p>
-<p>At the forefront of programmable biology, EvolutionaryScale can assist researchers in engineering proteins that can help target cancer cells, find alternatives to harmful plastics, drive environmental mitigations and more.</p>
-<p>EvolutionaryScale is pioneering the frontier of programmable biology with the scale-out model development of ESM3, which used <a target="_blank" href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPUs</a> for the most compute ever put into a biological foundation model. The 98 billion parameter ESM3 model uses roughly 25x more flops and 60x more data than its predecessor, ESM2.</p>
-<p>The company, which developed a database of more than 2 billion protein sequences to train its AI model, offers technology that can provide clues applicable to drug development, disease eradication and, literally, how humans have evolved at scale as a species — as its name suggests — for drug discovery researchers.</p>
-<h2><b>Accelerating In Silico Biological Research With ESM3</b></h2>
-<p>With leaps in training data, EvolutionaryScale aims to accelerate protein discovery with ESM3.</p>
-<p>The model was trained on almost 2.8 billion protein sequences sampled from organisms and biomes, allowing scientists to prompt the model to identify and validate new proteins with increasing levels of accuracy.</p>
-<p>ESM3 offers significant updates over previous versions. The model is natively generative, and it is an “all to all” model, meaning structure and function annotations can be provided as input rather than just as output.</p>
-<p>Once it’s made publicly available, scientists can fine-tune this base model to construct purpose-built models based on their own proprietary data. The boost in protein engineering capabilities due to ESM3’s large-scale generative training across enormous amounts of data offers a time-traveling machine for in silico biological research.</p>
-<h2><b>Driving the Next Big Breakthroughs With NVIDIA BioNeMo</b></h2>
-<p>ESM3 provides biologists and protein designers with a generative AI boost, helping improve their engineering and understanding of proteins. With simple prompts, it can generate new proteins with a provided scaffold, self-improve its protein design based on feedback and design proteins based on the functionality that the user indicates. These capabilities can be used in tandem in any combination to provide chain-of-thought protein design as if the user were messaging a researcher who had memorized the intricate three-dimensional meaning of every protein sequence known to humans and had learned the language fluently, enabling users to iterate back and forth.</p>
-<p>“In our internal testing we’ve been impressed by the ability of ESM3 to creatively respond to a variety of complex prompts,” said Tom Sercu, co-founder and VP of engineering at EvolutionaryScale. “It was able to solve an extremely hard protein design problem to create a novel Green Fluorescent Protein. We expect ESM3 will help scientists accelerate their work and open up new possibilities — we’re looking forward to seeing how it will contribute to future research in the life sciences.”</p>
-<p>EvolutionaryScale will be opening an API for closed beta today and code and weights are available for a small open version of ESM3 for non-commercial use. This version is coming soon to <a target="_blank" href="https://www.nvidia.com/en-us/clara/bionemo/">NVIDIA BioNeMo</a>, a generative AI platform for drug discovery. The full ESM3 family of models will soon be available to select customers as an <a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Furl.avanan.click%2Fv2%2F___https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fai%2F%2523referrer%3Dai-subdomain%3Fncid%3Dpa-srch-goog-772333%26_bt%3D697697685508%26_bk%3Dnvidia%2520nim%26_bm%3De%26_bn%3Dg%26_bg%3D165151891361%26gad_source%3D1%26gclid%3DEAIaIQobChMI5pHT7fvjhgMVVXN_AB1KOQFuEAAYASAAEgKvWfD_BwE___.YXAzOm91dGNhc3Q6YTpvOjViNjRiMzE4MDU2MWMwZDcyNThmMmI4NWZhYTViNTJiOjY6NDI2ZTphZWVjMmY1N2JjMjFiM2NhODBiNmFmMjFiZTM2YTQyZWM1NDMwZTZhODdmZTYwOWEyZGRiODc2MWJlMGY2MzUxOmg6VA&amp;data=05%7C02%7Crkelleher%40nvidia.com%7C789b16235c954beed3a908dc8ff9ab8b%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638543549716443890%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=wD96MHFHOJjySVQjvo%2FqotZ6KMUZX7Lcr%2FMHAbyGW%2FU%3D&amp;reserved=0">NVIDIA NIM</a> microservice, run-time optimized in collaboration with NVIDIA, and supported by an <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software license for testing at ai.nvidia.com.</p>
-<p>The computing power required to train these models is growing exponentially. ESM3 was trained using the <a target="_blank" href="https://andromeda.ai/">Andromeda cluster</a>, which uses NVIDIA H100 GPUs and NVIDIA Quantum-2 InfiniBand networking.</p>
-<p>The ESM3 model will be available on select partner platforms, including Amazon Bedrock, Amazon Sagemaker, AWS HealthOMICs and NVIDIA BioNeMo.</p>
-<p><i>See </i><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fabout-nvidia%2Flegal-info%2F&amp;data=05%7C02%7Cscmartin%40nvidia.com%7C83515b5492594c57a3cb08dc94b213d0%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638548739762646477%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=KzQTSwL94NtcZYgStTWnnmHHHy53cbxt0r7LKK5pUdQ%3D&amp;reserved=0"><i>notice</i></a><i> regarding software product information.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/hc-corp-blog-evo-scale-1280x680-1.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/hc-corp-blog-evo-scale-1280x680-1-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[EvolutionaryScale Debuts With ESM3 Generative AI Model for Protein Design]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
