@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 18 Jul 2024 14:46:37 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 18 Jul 2024 21:29:33 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -38,7 +38,7 @@
 <p>Mistral NeMo was trained on the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> AI platform, which offers dedicated, scalable access to the latest NVIDIA architecture.</p>
 <p><a target="_blank" href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT-LLM</a> for accelerated inference performance on large language models and the <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> development platform for building custom generative AI models were also used to advance and optimize the process.</p>
 <p>This collaboration underscores NVIDIA’s commitment to supporting the model-builder ecosystem.</p>
-<p><b>Delivering Unprecedented Accuracy, Flexibility and Efficiency </b></p>
+<h2><b>Delivering Unprecedented Accuracy, Flexibility and Efficiency </b></h2>
 <p>Excelling in multi-turn conversations, math, common sense reasoning, world knowledge and coding, this enterprise-grade AI model delivers precise, reliable performance across diverse tasks.</p>
 <p>With a 128K context length, Mistral NeMo processes extensive and complex information more coherently and accurately, ensuring contextually relevant outputs.</p>
 <p>Released under the Apache 2.0 license, which fosters innovation and supports the broader AI community, Mistral NeMo is a 12-billion-parameter model. Additionally, the model uses the FP8 data format for model inference, which reduces memory size and speeds deployment without any degradation to accuracy.</p>
@@ -50,12 +50,12 @@
 <p>It includes comprehensive support, direct access to an NVIDIA AI expert and defined service-level agreements, delivering reliable and consistent performance.</p>
 <p>The open model license allows enterprises to integrate Mistral NeMo into commercial applications seamlessly.</p>
 <p>Designed to fit on the memory of a single NVIDIA L40S, NVIDIA GeForce RTX 4090 or NVIDIA RTX 4500 GPU, the Mistral NeMo NIM offers high efficiency, low compute cost, and enhanced security and privacy.</p>
-<p><b>Advanced Model Development and Customization </b></p>
+<h2><b>Advanced Model Development and Customization </b></h2>
 <p>The combined expertise of Mistral AI and NVIDIA engineers has optimized training and inference for Mistral NeMo.</p>
 <p>Trained with Mistral AI’s expertise, especially on multilinguality, code and multi-turn content, the model benefits from accelerated training on NVIDIA’s full stack.</p>
 <p>It’s designed for optimal performance, utilizing efficient model parallelism techniques, scalability and mixed precision with Megatron-LM.</p>
 <p>The model was trained using<a target="_blank" href="https://github.com/NVIDIA/Megatron-LM"> Megatron-LM</a>, part of NVIDIA <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NeMo</a>, with 3,072 H100 80GB Tensor Core GPUs on DGX Cloud, composed of NVIDIA AI architecture, including accelerated computing, network fabric and software to increase training efficiency.</p>
-<p><b>Availability and Deployment</b></p>
+<h2><b>Availability and Deployment</b></h2>
 <p>With the flexibility to run anywhere — cloud, data center or RTX workstation — Mistral NeMo is ready to revolutionize AI applications across various platforms.</p>
 <p>Experience Mistral NeMo as an NVIDIA NIM today via <a target="_blank" href="http://ai.nvidia.com">ai.nvidia.com</a>, with a downloadable NIM coming soon.</p>
 <p><i>See </i><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fabout-nvidia%2Flegal-info%2F&amp;data=05%7C02%7Clpham%40nvidia.com%7Cd59f2f66f51e4deaac8008dc94b3ef0f%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638548747745016311%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=dm8Os%2B4LtHW2ehZrPaxn38bsutMQBDeUdQuxrIa2y1Y%3D&amp;reserved=0"><i>notice</i></a><i> regarding software product information.</i></p>
