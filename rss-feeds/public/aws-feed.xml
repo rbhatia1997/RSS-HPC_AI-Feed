@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 18 Jul 2024 13:02:13 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 19 Jul 2024 18:46:20 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,192 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Gang scheduling pods on Amazon EKS using AWS Batch multi-node processing jobs</title>
+		<link>https://aws.amazon.com/blogs/hpc/gang-scheduling-pods-on-amazon-eks-using-aws-batch-multi-node-processing-jobs/</link>
+		
+		<dc:creator><![CDATA[Angel Pizarro]]></dc:creator>
+		<pubDate>Fri, 19 Jul 2024 18:46:20 +0000</pubDate>
+				<category><![CDATA[Amazon Elastic Kubernetes Service]]></category>
+		<category><![CDATA[Amazon Machine Learning]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[Molecular Modeling]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">28ee190df91f8c8cfafa11f91493f9f8e189961b</guid>
+
+					<description>AWS Batch multi-node parallel jobs can now run on Amazon EKS to provide gang scheduling of pods across nodes for large scale distributed computing like ML model training. More details here.</description>
+										<content:encoded>&lt;p&gt;Machine learning, weather forecasting, computational fluid dynamics, and other workloads all require distributing computation across many compute resources. These workloads are often too large for a single machine, and can benefit from scaling across multiple nodes. But with that scaling comes the need to continuously communicate with each other.&lt;/p&gt; 
+&lt;p&gt;AWS Batch &lt;a href="https://aws.amazon.com/about-aws/whats-new/2024/07/aws-batch-gang-scheduling-eks-multi-node-parallel-jobs/"&gt;now offers&lt;/a&gt; a multi-node parallel (MNP) job type for gang scheduling of pods across nodes on your Amazon Elastic Kubernetes Service (Amazon EKS) clusters, to enable just these types of workloads. Previously MNP jobs were only available if you used Amazon Elastic Container Service (Amazon ECS), so today we’re excited to bring this feature for Batch users running on Amazon EKS, too.&lt;/p&gt; 
+&lt;p&gt;In this post, we will show you how to use AWS Batch MNP jobs to set up a Dask distributed processing job on EKS.&lt;/p&gt; 
+&lt;h2&gt;Introduction to Dask and AWS Batch&lt;/h2&gt; 
+&lt;p&gt;Dask is a flexible library for parallel computing in Python, used in many data science applications including&amp;nbsp;&lt;a href="https://examples.dask.org/applications/image-processing.html"&gt;image processing&lt;/a&gt;&amp;nbsp;and&amp;nbsp;&lt;a href="https://ml.dask.org/"&gt;machine learning&lt;/a&gt;. It’s able to schedule computational tasks dynamically across data collections that can be larger than the available memory on a single Amazon Elastic Compute Cloud (Amazon EC2) instance, or distribute computation across many instances in a moderately-sized (~100s of instances) compute cluster.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;&lt;a href="https://distributed.dask.org/en/stable/"&gt;Dask.distributed&lt;/a&gt;&lt;/code&gt;&amp;nbsp;is a lightweight library within the project that creates a dynamic task scheduler coordinates the actions of workers spread across multiple machines. A script can connect to the scheduler and send work items to it for processing.&lt;/p&gt; 
+&lt;p&gt;While you can use Dask &lt;a href="https://aws.amazon.com/blogs/machine-learning/machine-learning-on-distributed-dask-using-amazon-sagemaker-and-aws-fargate/"&gt;in an interactive environment like a Jupyter Notebook&lt;/a&gt; to develop methods on example data, data scientists often want to scale their analysis on much larger datasets in an asynchronous fashion. When they do this, they’ll typically use an HPC cluster or cloud-native scheduler like AWS Batch to scale their workloads with &lt;code&gt;dask.distributed&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;If you’re new to AWS, then &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;&amp;nbsp;is a fully-managed service that adds batch-style semantics on top of our managed container orchestration services,&amp;nbsp;&lt;a href="https://aws.amazon.com/ecs"&gt;Amazon ECS&lt;/a&gt;&amp;nbsp;and&amp;nbsp;&lt;a href="https://aws.amazon.com/eks/"&gt;Amazon EKS&lt;/a&gt;. This includes price-capacity optimized scaling of Spot or On-demand AWS Fargate or EC2 instances based on the jobs in a queue, and advanced capabilities like automated job retries and fair share job scheduling.&lt;/p&gt; 
+&lt;p&gt;There are multiple ways of running Dask analysis clusters on AWS, but for this post I’ll focus on using AWS Batch&amp;nbsp;&lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-parallel-jobs.html"&gt;multi-node parallel (MNP)&lt;/a&gt;&amp;nbsp;jobs on top of a &lt;em&gt;pre-existing&lt;/em&gt; Amazon EKS cluster across a set of interconnected Amazon EC2 instances.&lt;/p&gt; 
+&lt;p&gt;When you define an MNP job, you choose what type and how many instances you want to launch. AWS Batch will launch the same instance size for all nodes, designating one of them to be the “main node”. Figure 1 illustrates the deployment strategy we used for our example distributed Dask workload, a simple print out of “Hello world!” across all workers.&lt;/p&gt; 
+&lt;p&gt;The main node hosts the Dask scheduler, along with our analysis script. Dask workers are launched on each child node. The Dask workers connect to the Dask scheduler on the main node using details encoded in the Batch environment variable. Once the analysis is complete, the application container will send a shutdown signal to the scheduler and workers, causing them to cleanly shut down.&lt;/p&gt; 
+&lt;div id="attachment_3984" style="width: 1003px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3984" class="size-full wp-image-3984" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/IMG-2024-07-10-19.24.14.png" alt="Figure 1 – Our deployment strategy for the distributed Dask workload. Dask workers are launched on each child node and connect to the Dask scheduler on the main node. When complete, the application container will send a shutdown signal to the scheduler and workers, causing them to cleanly shut down." width="993" height="600"&gt;
+ &lt;p id="caption-attachment-3984" class="wp-caption-text"&gt;Figure 1 – Our deployment strategy for the distributed Dask workload. Dask workers are launched on each child node and connect to the Dask scheduler on the main node. When complete, the application container will send a shutdown signal to the scheduler and workers, causing them to cleanly shut down.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Overview of our example&lt;/h2&gt; 
+&lt;p&gt;All of the code and steps needed to stand up this example are available in our&amp;nbsp;“&lt;a href="https://catalog.workshops.aws/running-batch-on-eks/en-US"&gt;Running batch workloads on Amazon EKS&lt;/a&gt;” workshop (the Dask-specific exercise is “&lt;a href="https://catalog.workshops.aws/running-batch-on-eks/en-US/exercises/run-mnp-job"&gt;Run a multi-node parallel job&lt;/a&gt;”). But let’s check out some specific parts of that exercise for additional context, so you can get an idea of how this all works.&lt;/p&gt; 
+&lt;h3&gt;$&amp;gt; dask_hello_world.py&lt;/h3&gt; 
+&lt;p&gt;First, we created a Python “hello world!” script with a method that returns a string with the Dask task index and hostname of the instance that the worker ran on:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-python"&gt;# Hello world! method
+def hello(task_index):
+    return "%s: Hello from worker %s" % (str(task_index), os.uname()[1])
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Next, the script connects the client to the Dask scheduler using details from a configuration file, then waits on the scheduler to report that it has all the expected workers connected &lt;em&gt;before&lt;/em&gt; sending any work.&lt;/p&gt; 
+&lt;p&gt;This is a choice you’re able to make: we &lt;em&gt;could&lt;/em&gt; have started sending tasks to workers as soon as a single worker was ready. It depends on your whether workload &lt;em&gt;requires&lt;/em&gt; all the workers to be up at the same time (&lt;em&gt;tightly-coupled&lt;/em&gt; workloads) or not (&lt;em&gt;pleasingly-parallel&lt;/em&gt; workloads). Both the scheduler configuration file &lt;em&gt;and&lt;/em&gt; the expected number of workers are provided as positional arguments at runtime.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-python"&gt;# Connect the client to the Dask scheduler service
+dask_client = Client(scheduler_file=argv[1])
+
+# Wait until the expected number of workers are ready
+# before submitting tasks to workers. 
+expected_num_workers = int(argv[2])  
+while True:
+    num_workers = len(dask_client.scheduler_info()["workers"].keys())
+    logger.info("Workers %d of %d up" % (num_workers, num_worker_nodes)) 
+    if num_workers == expected_num_workers:
+        break
+    sleep(10)
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The script then uses the &lt;code&gt;dask_client.map()&lt;/code&gt;&amp;nbsp;function to run our workload across the available workers. As a reminder – the scheduler will assign a task to a Dask worker, which will run that task, and then return the result. It may get another task if there are any left on the Dask scheduler’s queue. In our example, we submitted the same method 50 times, so we expected each worker to complete multiple tasks during its runtime.&lt;/p&gt; 
+&lt;p&gt;Results are gathered with &lt;code&gt;as_completed()&lt;/code&gt; and the return messages are printed using Python’s standard logging capabilities:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-python"&gt;# submit 50 tasks to the Dask scheduler
+futures =  dask_client.map(hello, range(50))
+# gather the results and print them out
+for f in as_completed(futures):
+    logger.info(f.result())
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Once the tasks are complete, the Dask client sends a shutdown message to the scheduler and workers. Without that message, the script would exit but the containers (and nodes) for both the Dask scheduler &lt;em&gt;and&lt;/em&gt; workers would remain running – waiting for work.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-python"&gt;dask_client.shutdown()&lt;/code&gt;&lt;/pre&gt; 
+&lt;h3&gt;Process initialization&lt;/h3&gt; 
+&lt;p&gt;In order to give the script the expected number of workers, we need to use the context that Batch provides to nodes, namely the &lt;code&gt;$AWS_BATCH_JOB_NUM_NODES&lt;/code&gt; environment variable. Kubernetes Pod specifications do not interpolate environment variables in either the &lt;code&gt;command&lt;/code&gt; or &lt;code&gt;args&lt;/code&gt; parameters, so we create an initialization shell script to interpolate any necessary environment variables and launch the script correctly. The example below showcases an initialization script that accepts the location of the dask scheduler configuration as a positional argument and leverages Batch environment variables to calculate the number of expected worker nodes. It then starts our analysis script with those values.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;#!/bin/bash
+
+SCHEDULER_FILE=${1:-"/tmp/dask-scheduler-info.json"}
+NUM_WORKER_NODES=$((${AWS_BATCH_JOB_NUM_NODES} – 1))
+SCRIPT="/usr/local/bin/dask-mnp-hello_world.py"
+
+exec $SCRIPT $SCHEDULER_FILE $NUM_WORKER_NODES
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h3&gt;Application container&lt;/h3&gt; 
+&lt;p&gt;Now that we have the Dask analysis and initialization scripts ready, it’s time to create the application container. We could build our own container from scratch, but the Dask project provides a&amp;nbsp;&lt;a href="https://docs.dask.org/en/stable/deploying-docker.html"&gt;Docker image&lt;/a&gt;&amp;nbsp;with the full Dask Conda package (including the distributed scheduler), Numpy, and Pandas. It also has several other goodies – like having an entry point that activates the proper Conda environment and the potential to define an extra set of Python modules to install on launch. For more information on what the Dask container can do, refer to the&amp;nbsp;&lt;a href="https://github.com/dask/dask-docker"&gt;dask-docker GitHub repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;We’ll use the provided container as the base Docker image and add our &lt;code&gt;dask_hello_world.py&lt;/code&gt; and initialization scripts to it. This example copies over the scripts as an executables but otherwise leaves the container be.&lt;/p&gt; 
+&lt;p&gt;&lt;code class="lang-bash"&gt;FROM ghcr.io/dask/dask:2024.6.2-py3.12&lt;br&gt; # Copy the local analysis and initialization scripts&lt;br&gt; COPY --chmod=755 src/dask-mnp-hello.py /usr/local/bin/dask-mnp-hello.py&lt;br&gt; COPY --chmod=755 src/run-dask-mnp.py /usr/local/bin/run-dask-mnp.sh&lt;br&gt; &lt;/code&gt;&lt;/p&gt; 
+&lt;p&gt;We complete this part of the exercise by building the application container image and pushing it to a private Amazon Elastic Container Registry (Amazon ECR) that’s accessible from our EKS nodes.&lt;/p&gt; 
+&lt;p&gt;Next, we create the AWS Batch job definition.&lt;/p&gt; 
+&lt;h2&gt;Creating a Batch on EKS multi-node parallel job definition&lt;/h2&gt; 
+&lt;p&gt;The AWS Batch MNP job determines the type and number of nodes that will be launched for our Dask analysis. The job definition also allows for defining other things, like the security context of the pods, but that’s outside the scope of this blog post. The documentation for EKS MNP job definitions provides all the possible configurations, so we’ll only cover the subset that are important for us.&lt;/p&gt; 
+&lt;h3&gt;Providing launch context&lt;/h3&gt; 
+&lt;p&gt;We need a way to give the Dask scheduler and workers – and our script – the context they need to launch correctly. Specifically, these processes need to know whether they’re running on the main node or a child node. In our design, the main node should host the Dask scheduler and the application script. The child nodes should only be running Dask workers.&lt;/p&gt; 
+&lt;p&gt;Batch helps us in two ways. First, it provides environment variables that define the node index number, the main node’s index number, and the private IP of the main node. Second, MNP job definitions allow you to define multiple containers so you can encapsulate a process in its own container. Third, MNP has the concept of node ranges, so you can differentially define the type and number of containers on a node, the security context (via different service accounts), and/or host data volume mounts based on the node’s index range.&lt;/p&gt; 
+&lt;p&gt;In our example, we will create two node ranges, one for the main node, and a second for the worker nodes.&lt;/p&gt; 
+&lt;p&gt;For the main node, we define the following:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Set the main node index to “0”.&lt;/li&gt; 
+ &lt;li&gt;Create a single-node node range as &lt;code&gt;"targetNodes": "0:0"&lt;/code&gt;. 
+  &lt;ul&gt; 
+   &lt;li&gt;Note that Batch uses closed interval, meaning that the latter index &lt;em&gt;is included in the range&lt;/em&gt;. Most programming languages use &lt;code&gt;[closed, open)&lt;/code&gt; intervals, meaning that the last index value will &lt;em&gt;not&lt;/em&gt; be in the range.&lt;/li&gt; 
+  &lt;/ul&gt; &lt;/li&gt; 
+ &lt;li&gt;Define two containers – one for Dask scheduler and the other for the analysis script.&lt;/li&gt; 
+ &lt;li&gt;Define host volume mount that allows the containers to share configuration information.&lt;/li&gt; 
+ &lt;li&gt;Set the number of expected workers to be one less than the number of Batch nodes, since the main node will not run a Dask worker.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;You can review the complete JSON example for the job definition in the workshop.&lt;/p&gt; 
+&lt;p&gt;For the worker nodes, we define a single container that leverages the Dask-provided container:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-json"&gt;{
+  "targetNodes": "1:",
+  "instanceTypes": [
+    "c5.xlarge"
+  ],
+  "eksProperties": {
+    "podProperties": {
+      "hostNetwork": true,
+      "containers": [
+        {
+          "name": "dask-workers",
+          "image": "ghcr.io/dask/dask:2024.6.2-py3.12",
+          "command": [
+            "/bin/sh",
+            "-c"
+          ],
+          "args": [
+            "dask worker --nworkers auto \"${AWS_BATCH_JOB_MAIN_NODE_PRIVATE_IPV4_ADDRESS}:8786\""
+          ],
+          "resources": {
+            "requests": {
+              "cpu": "3",
+              "memory": "4000Mi"
+            },
+            "limits": {
+              "cpu": "4"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;There’s a couple of things to call out here. First, AWS Batch MNP jobs only place a single pod &lt;em&gt;per node&lt;/em&gt;. The pod containers can either use the host’s network, or the &lt;a href="https://docs.aws.amazon.com/eks/latest/userguide/managing-vpc-cni.html"&gt;VPC CNI EKS add-on&lt;/a&gt; which can assign IP addresses to individual containers. Our example uses host networking since we know the individual containers will not have port clashes. Frankly, most batch processing jobs don’t need to assign individual IPs to containers, and doing so risks IP exhaustion &lt;em&gt;and&lt;/em&gt; can slow down pod placement. We recommend using host networking whenever possible for these types of workloads.&lt;/p&gt; 
+&lt;p&gt;Second, we created an ECR &lt;a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/pull-through-cache-working-pulling.html"&gt;pull-through cache rule&lt;/a&gt; to cache the public Dask container image in a private repository, accessible to nodes. This allows us to scan the container image when caching, improve download performance, and mitigate against downstream rate limits from the remote registry.&lt;/p&gt; 
+&lt;p&gt;Third, Batch provides the main node’s IP address to worker nodes via the &lt;code&gt;$AWS_BATCH_JOB_MAIN_NODE_PRIVATE_IPV4_ADDRESS&lt;/code&gt; environment variable. Dask workers can leverage that variable to connect to the Dask scheduler, but, as we mentioned previously, Pod specifications do not interpolate environment variables to pass the correct value in the &lt;code&gt;command&lt;/code&gt; or &lt;code&gt;args&lt;/code&gt; parameters. For our application container we leveraged an initialization script. For the worker containers, we opt to use a complete command line string as the args to a shell command which will do the interpolation of the variable and start the Dask worker correctly.&lt;/p&gt; 
+&lt;p&gt;Finally, we set the resource requirements for the container for CPU and memory. Batch uses the soft-limits in the &lt;code&gt;requests&lt;/code&gt; parameter for scheduling and placement of pods on nodes. We also set the hard-limits &lt;code&gt;limits&lt;/code&gt; parameter to a higher value for CPU. The reason for this is that Batch will copy over values from &lt;code&gt;requests&lt;/code&gt; if &lt;code&gt;limits&lt;/code&gt; is not set, and vice versa. By defining both, you can let Batch place a container using minimal CPU requirements, but allow the pod to scale to a higher limit if the resources are available. Note that Batch assumes memory is always a hard limit, and the values must be the same across both &lt;code&gt;requests&lt;/code&gt; and &lt;code&gt;limits&lt;/code&gt;.&lt;/p&gt; 
+&lt;h2&gt;Submitting the job and viewing results&lt;/h2&gt; 
+&lt;p&gt;Now that all the parts are in place, you can submit the job using the AWS CLI or AWS Batch console. Once you do, Batch will get busy launching instances into your EKS cluster.&lt;/p&gt; 
+&lt;p&gt;When the Nodes show as &lt;strong&gt;Ready&lt;/strong&gt;, Batch will start placing Pods on the Nodes. Batch provides Pod placement using &lt;code&gt;nodeName&lt;/code&gt; and tolerations to the Kubernetes scheduler, bypassing much of the scheduler placement logic. You can view the status of the Nodes and Pods using either the EKS console or &lt;code&gt;kubectl&lt;/code&gt;. Throughout the lifecycle of the job, Batch can provide information on its status, and any attempts that were made to run the analysis.&lt;/p&gt; 
+&lt;p&gt;The workshop exercise sets up a new EKS cluster with the &lt;a href="https://docs.aws.amazon.com/eks/latest/userguide/cloudwatch.html"&gt;CloudWatch managed add-on&lt;/a&gt; configured to send the &lt;code&gt;STDOUT&lt;/code&gt; and &lt;code&gt;STDERR&lt;/code&gt; of all containers to an AWS CloudWatch log stream, as well as the necessary &lt;a href="https://docs.aws.amazon.com/batch/latest/userguide/batch-eks-cloudwatch-logs.html"&gt;AWS Batch toleration&lt;/a&gt;. To see the output message from the workers, you can go to the CloudWatch management console and locate the right CloudWatch log stream using the pod container identifiers.&lt;/p&gt; 
+&lt;p&gt;Here’s an example message from task 6 that ran on one of the Batch managed nodes (with the relevant log message highlighted in bold):&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-json"&gt;{
+    "time": "2024-07-11T00:00:00.000000000Z",
+    "stream": "stderr",
+    "_p": "F",
+    &lt;strong&gt;"log": "2024-07-11 0:00:00,000 - distributed - INFO - 6: Hello from Worker ip-10-1-123-123.us-east-1.compute.internal",&lt;/strong&gt;
+    "kubernetes": {
+        "pod_name": "aws-batch.a1b2c3d4-1a2b-1234-a1b2d-a0123456789b1",
+        "namespace_name": "my-aws-batch-namespace",
+        "pod_id": "abcdef12-3456-7890-abcd-ef0123456789",
+        "host": "ip-10-3-133-64.us-east-1.compute.internal",
+   // . . . other JSON log attributes 
+    }
+}
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Once the workers complete all of the tasks, the script will send the shutdown signal to the scheduler and worker containers, and Batch will scale down the Nodes. Kubernetes will no longer be able to provide information on the Pods that ran, or even their exit status. This makes it difficult to find logs after the job is complete. Its a good thing, then, that Batch keeps a record of the job status.&lt;/p&gt; 
+&lt;p&gt;Given the job’s ARN you can use the AWS CLI to find the Pod’s name, and then the logs since the CloudWatch EKS add-on leverages this in its log-stream naming convention. Here is an example querying for the names of the pod and node of the main node’s index from our example run.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;# To query the main node pod name, use the main node index
+$&amp;gt; aws batch-eks-mnp --endpoint $BATCH_ENDPOINT --region $BATCH_REGION --no-cli-pager  describe-jobs --jobs $JOB_ID#0 --query "jobs[].eksAttempts[].{podName: podName, nodeName: nodeName}"
+[
+    {
+        "podName": "aws-batch.a1b2c3d4-1a2b-1234-a1b2d-a0123456789b1",
+        "nodeName": "ip-10-1-123-123.us-east-1.compute.internal"
+    }
+]
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;We can use these values to search for any relevant logs in the CloudWatch log streams management console (Figure 2).&lt;/p&gt; 
+&lt;div id="attachment_3985" style="width: 999px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3985" loading="lazy" class="size-full wp-image-3985" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/IMG-2024-07-10-19.32.01.png" alt="Figure 2 – The AWS CloudWatch management console showing the filtered log streams for applications running on the EKS cluster. The filter dialog shows using the Pod name to retrieve the individual container logs for our Batch job. The log stream name also contains the container’s name, allowing us to identify the correct log stream to view for our results." width="989" height="491"&gt;
+ &lt;p id="caption-attachment-3985" class="wp-caption-text"&gt;Figure 2 – The AWS CloudWatch management console showing the filtered log streams for applications running on the EKS cluster. The filter dialog shows using the Pod name to retrieve the individual container logs for our Batch job. The log stream name also contains the container’s name, allowing us to identify the correct log stream to view for our results.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we showed how you can leverage AWS Batch multi-node parallel (MNP) jobs to &lt;strong&gt;gang schedule&lt;/strong&gt; pods across a set of instances on your Amazon EKS cluster. We used Dask, a popular data science framework, as an example workload to launch a distributed analysis.&lt;/p&gt; 
+&lt;p&gt;You can try out this exercise by working through the exercises in the &lt;a href="https://catalog.workshops.aws/running-batch-on-eks/en-US"&gt;Running Batch workloads on Amazon EKS workshop&lt;/a&gt;. If you do, let us know what you think!&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Strategies for distributing executable binaries across grids in financial services</title>
 		<link>https://aws.amazon.com/blogs/hpc/strategies-for-distributing-executable-binaries-grids-financial-services/</link>
 		
@@ -37,7 +223,7 @@
 		<guid isPermaLink="false">ca9e22473e1200ab94d24f287d767e37cfaf1f73</guid>
 
 					<description>You can boost the performance of your compute grids by strategically distributing your binaries. Our experts looked at lots of strategies for fast &amp;amp; efficient compute grid operations - to save you some work.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3906" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/24/AdobeStock_852512916.png" alt="Strategies for distributing executable binaries across grids in financial services" width="380" height="212"&gt;Financial Services Institutions (FSIs) rely heavily on compute grids for their daily operations. One key challenge of operating such grids is the distribution of data, including the distribution of binaries required for computation.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3906" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/06/24/AdobeStock_852512916.png" alt="Strategies for distributing executable binaries across grids in financial services" width="380" height="212"&gt;Financial Services Institutions (FSIs) rely heavily on compute grids for their daily operations. One key challenge of operating such grids is the distribution of data, including the distribution of binaries required for computation.&lt;/p&gt; 
 &lt;p&gt;In this blog post, we’ll focus on classifying different binary distribution techniques and providing intuition and guidance for customers about when to use each technique in connection with their business objectives and requirements. We’ll also offer insights and recommendations that others can apply outside of the FSI industry.&lt;/p&gt; 
 &lt;h2&gt;The problem&lt;/h2&gt; 
 &lt;p&gt;Most customer concerns regarding data distribution revolve around business objectives, and cost. Some of these concerns include cost-effectively distributing large volumes of data regularly, and doing it quickly, to ensure the rapid start of compute instances. This helps to avoid subsequent delays throughout the execution, and often translates into cost savings, too.&lt;/p&gt; 
@@ -1973,96 +2159,6 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
   &lt;p&gt;Neel Patel is a drug discovery scientist at NVIDIA, who focuses on cheminformatics and computational structural biology. Before joining NVIDIA, Patel was a computational chemist at Takeda Pharmaceuticals. He holds a Ph.D. from the University of Southern California. He lives in San Diego with his family and enjoys hiking and travelling.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Data, emerging technologies, and the circular economy: how Accenture and AWS are unlocking environmental and business impact</title>
-		<link>https://aws.amazon.com/blogs/hpc/data-emerging-technologies-and-the-circular-economy-how-accenture-and-aws-are-unlocking-environmental-and-business-impact/</link>
-		
-		<dc:creator><![CDATA[Ilan Gleiser]]></dc:creator>
-		<pubDate>Tue, 30 Apr 2024 12:27:06 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Sustainability]]></category>
-		<guid isPermaLink="false">cfe27b15e171b02db52875e9424a371ce2457466</guid>
-
-					<description>Realizing the $4.5 trillion circular economy opportunity requires accurate data, scalable HPC and agile tools. Read this post to discover how AWS and Accenture partner for real progress.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright wp-image-3572 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/Data-technology-and-the-circular-economy-how-Accenture-and-AWS-are-unlocking-environmental-and-business-impact.png" alt="Data, technology, and the circular economy: how Accenture and AWS are unlocking environmental and business impact" width="380" height="212"&gt;This post was contributed by Ilan Gleiser, Principal Specialist, Emerging Technologies at AWS, Joshua Curtis, Circular Intelligence Global Lead and Patrick Ford, Circular Intelligence North America Lead, Accenture Sustainability Services&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;It is well documented that the circular economy is an opportunity for positive impact on business and society. Accenture’s analysis presents an economic opportunity of $4.5tn value is at stake for the global economy to 2030 by departing from our current ‘&lt;em&gt;take-make-waste&lt;/em&gt;’ economic system [1]. Ellen MacArthur Foundation outlines the importance of circularity as a solution to climate change, with 45% of the required carbon emission reductions to achieve a 1.5-degree world coming from how we make and consume products [2].&lt;/p&gt; 
-&lt;p&gt;It’s clear that resource use and circularity are critical to the creation of a sustainable, healthy economy. But how do we realize this value? How does a business identify where and how circular strategies can create financial and environmental impact?&lt;/p&gt; 
-&lt;p&gt;In this post, we will explore the challenges to achieving accurate and actionable data on circular economy performance and impact, and the solutions that lie in emerging technologies. Join us as we explore opportunities for kicking off and accelerating the data transformation needed to drive authentic, impact-driven progress on circularity.&lt;/p&gt; 
-&lt;h2&gt;Achieving data-driven circularity&lt;/h2&gt; 
-&lt;p&gt;The importance of transitioning to circular business models is why the European Commission is, for the first time, making measurement and disclosure of resource use and circular economy impacts mandatory for companies. The newly-launched European Sustainability Reporting Standards (ESRS) include a requirement [3] for companies – where material – to report on circular economy metrics like:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;the percentage of material used for products and packaging that are renewable, recycled or re-used&lt;/li&gt; 
- &lt;li&gt;the volume of waste by stream that is recovered by destination&lt;/li&gt; 
- &lt;li&gt;the financial effects of material risks and opportunities arising from resource use&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;But how do we calculate these metrics? How do we collect, aggregate, and analyze the data in a way that doesn’t require significant time and resources year on year? How do we not only do this to understand where we are, but also to determine where we need to go?&lt;/p&gt; 
-&lt;p&gt;While there is an increasing number of new sustainability measurement products being presented to the market, there is no one ‘tool’ to answer these questions. In fact, these questions themselves are not new — they are the essence of data-driven decision-making which is the foundation of any profitable business. The circular measurement challenge is a data challenge and must be approached as such.&lt;/p&gt; 
-&lt;p&gt;What is new – and evolving – is the potential application of digital technologies to support the transformation of circular economy data management for companies. For example, the advancement of the Internet of Things (IoT) enables tracking of product movement and health through use phases; machine learning algorithms can help companies identify patterns in circular economy data, like trends in demand for certain recycled materials; and blockchain technology can be used to create a transparent and secure ledger of circular-related transactions, enabling stakeholders to track and verify the movement of materials and products through the value chain.&lt;/p&gt; 
-&lt;p&gt;As we continue to tackle the circular measurement challenge, it is essential to approach it with a data-driven mindset. Digital technologies have the potential to revolutionize how we manage and analyze circular economy data, allowing us to create a more sustainable and efficient economy for the future. Accenture and AWS are collaborating to make these applications a reality.&lt;/p&gt; 
-&lt;h2&gt;The challenges to circular data transformation&lt;/h2&gt; 
-&lt;p&gt;To help ensure digital solutions are effective in managing circular economy performance, it’s crucial to design them to address specific challenges faced by businesses. Let’s begin by exploring these challenges.&lt;/p&gt; 
-&lt;p&gt;First, selecting the right metrics themselves is not straightforward. We mentioned the European Commission’s regulations ESRS E5 on resource use and the Circular Economy. They provide headline metrics for business disclosure. The &lt;a href="https://pacecircular.org/sites/default/files/2023-01/CEIC_Circular%20Target%20Activation%20Guides_FINAL_01182023.pdf"&gt;Circular Target-Setting Guidance&lt;/a&gt; from the Circular Economy Indicators Coalition (CEIC), a partnership between The Platform for Accelerating the Circular Economy (PACE) and Circle Economy (supported by Accenture) provides an overview of leading measurement methodologies and approaches for business implementation.&lt;/p&gt; 
-&lt;p&gt;These are important starting points for business across industries, but they don’t account for the specific value chains or functional priorities of businesses in different sectors. For example, the metrics to measure circular economy performance (and therefore the data required) vary significantly for a fashion retailer compared to an oil and gas major. Ultimately, selecting the right metrics must be led by each business, drawing on the wealth of supporting materials, best practices and market standards.&lt;/p&gt; 
-&lt;p&gt;Next comes the hard part: identifying, collecting and transforming the data. Comprehensive circular measurement relies on data from across the value chain, often not tracked in existing enterprise systems. The foundational data itself is simple enough – what materials are being used and where do they come from; what waste is being produced and where is it going – are tangible examples. The challenge is collecting that data across product lines, business units, and geographies and then transforming the data to be usable. For example, when calculating your percentage of materials that are recycled, renewable or re-used (as ESRS E5 requires), materials data must be segmented in ways not currently built into enterprise data capture. Without technology, this requires line-by-line segmentation based on data that is available e.g. through supplier declarations. The bottom line is that collecting data to measure circular performance is an arduous process, requiring time and costs, and is hindered by data gaps. To do this at the business level, in a way that enables action, is not only helped by digital technologies, it depends upon them.&lt;/p&gt; 
-&lt;p&gt;Finally, companies must transform this data into actionable insights to guide decision-making. Circularity is not an end, but a means to optimize planetary and business impact. To accelerate this impact, resource use data like the above example regarding materials that are recycled, renewable or re-used, must be connected with other internal and external data sets like sales data and emissions intensity factors. Companies must understand how different material choices impact carbon emissions, as well as procurement costs and business profitability. The true story of corporate circularity is of trade-offs and investment requirements to capture long-term value. Without a comprehensive approach to circular economy measurement and data transformation, understanding those trade-offs properly and making impact-driven decisions is impossible. This again adds complexity to data collection and analysis, with the only solution for ongoing insight generation being an automated, centralized approach, like a circular and/or sustainability data lake, which combines data sets and applies analytics solutions for calculation and visualization.&lt;/p&gt; 
-&lt;div id="attachment_3564" style="width: 867px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3564" loading="lazy" class="size-full wp-image-3564" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-13.24.08.png" alt="Figure 1. The Circular Business Hub: Illustration of data visualization for circular economy performance management. Companies must overcome challenges to achieve measurement and visualization of circularity at each pillar of the business value chain." width="857" height="537"&gt;
- &lt;p id="caption-attachment-3564" class="wp-caption-text"&gt;Figure 1. The Circular Business Hub: Illustration of data visualization for circular economy performance management. Companies must overcome challenges to achieve measurement and visualization of circularity at each pillar of the business value chain.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;The role of emerging technologies&lt;/h2&gt; 
-&lt;p&gt;Accenture and AWS are collaborating to bring the best of their combined data, technology and sustainability expertise to transform circular economy data management. AWS offers the broadest set of capabilities in artificial intelligence (AI), machine learning (ML), Internet of Things (IoT), big data analytics, and high-performance computing (HPC) in the market. Accenture is the world’s leading integrator of AWS solutions and technologies – they’ve completed over 1,100 projects with us over 15 years of partnership.&lt;/p&gt; 
-&lt;p&gt;Teaming up on the circular economy, Accenture brings its 12+ years of client experience in circular economy strategy and implementation, and 100+ global circular economy experts, to guide the application of these digital solutions to unlock value for joint customers from data-driven circularity.&lt;/p&gt; 
-&lt;p&gt;Accenture has developed core assets as part of a suite of circular intelligence solutions, powered by AWS. These include industry-specific KPI frameworks, a foundational data model and a proof-of-concept dashboard to act as a platform for client co-development and customization. Building upon these assets, a core priority of this collaboration is to enable the automation of circular data ingestion, transformation and analysis to enable ongoing performance measurement and generation of actionable insights for companies across the value chain. To do this, we’re leveraging &lt;a href="https://www.accenture.com/us-en/services/cloud/aws-business-group#block-velocity"&gt;Velocity&lt;/a&gt;, a co-funded and co-developed platform that adds new cloud innovations up to 50% faster, to develop the data architecture which pulls in resource use and circular economy-related datasets into a central circular data lake.&lt;/p&gt; 
-&lt;p&gt;A circular data lake (Figure 2) works by taking raw data from siloed sources and bringing it into a unified, organized system. This process is made possible using the AWS Transfer family, which collects data and brings it into a raw layer.&lt;/p&gt; 
-&lt;div id="attachment_3565" style="width: 835px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3565" loading="lazy" class="size-full wp-image-3565" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-13.24.48.png" alt="Figure 2. Reference Architecture of an automated circular data lake for managing circular economy measurement and insight generation" width="825" height="375"&gt;
- &lt;p id="caption-attachment-3565" class="wp-caption-text"&gt;Figure 2. Reference Architecture of an automated circular data lake for managing circular economy measurement and insight generation&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Once the data is in the raw layer, one or more &lt;em&gt;ETL&lt;/em&gt; (extract, transform, and load) workstreams are triggered. These ETL workstreams work together to clean, refine, and organize the data. To facilitate the ETL process, the reference architecture employs several AWS Glue jobs and AWS Lambda functions. These functions and jobs help to ensure that the ETL workflows are fully orchestrated and operate efficiently and effectively, to produce the refined data necessary for circular metrics and KPIs.&lt;/p&gt; 
-&lt;p&gt;Once the data is fully curated and prepared, it’s ready for business intelligence and machine learning (AWS Athena, Amazon Redshift, and Amazon SageMaker). These services enable companies to derive value from the data by analyzing it, identifying patterns and trends. By doing so, it’s possible to transform siloed data from a wide range of sources into actionable insights that can drive circular business progress.&lt;/p&gt; 
-&lt;p&gt;The circular data lake is designed to centralize all data related to a business’ resource use and subsequent impact. With this, it must be designed and implemented in connection with other environmental objectives like climate and nature-related data sources. Indeed, the circular data lake is designed to be a component of an organization’s overall sustainability data lake fabric, creating a single system of record for ESG data management.&lt;/p&gt; 
-&lt;p&gt;Building upon the circular data architecture, created and tested with joint customers, Accenture and AWS are building solutions for companies focused on creating value from data in functional areas of circular transformation. This means going beyond just measuring circular economy performance (which we refer to as ‘foundational’ use cases) to applying digital solutions for value creation from circular insights (these are ‘advanced’ use cases).&lt;/p&gt; 
-&lt;div id="attachment_3566" style="width: 836px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3566" loading="lazy" class="size-full wp-image-3566" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/17/CleanShot-2024-04-17-at-13.25.35.png" alt="Figure 3. Overview of foundational and advanced circular intelligence use cases at each stage of an industry-agnostic value chain " width="826" height="385"&gt;
- &lt;p id="caption-attachment-3566" class="wp-caption-text"&gt;Figure 3. Overview of foundational and advanced circular intelligence use cases at each stage of an industry-agnostic value chain&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 3 shows examples of circular economy use cases split between foundational and advanced. Circular intelligence helps companies measure the impact of their investments and compare results over time. For more examples of how digital technologies enable a circular economy, please see &lt;a href="https://aws.amazon.com/blogs/hpc/how-to-make-digital-technologies-for-the-circular-economy-work-for-your-business/"&gt;this&lt;/a&gt; blog post.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 3. Overview of foundational and advanced circular intelligence use cases at each stage of an industry-agnostic value chain &lt;/em&gt;&lt;/p&gt; 
-&lt;h2&gt;The circular intelligence maturity journey&lt;/h2&gt; 
-&lt;p&gt;Let’s look at an example of how AWS services and solutions are being used to enable foundational and advanced use cases in the procurement stage of the product development lifecycle.&lt;/p&gt; 
-&lt;h3&gt;Example: how to transition away from virgin, non-renewable materials to optimize for decarbonization, cost reduction and risk management?&lt;/h3&gt; 
-&lt;p&gt;The materials that companies buy for products and services are a critical component of their environmental impact, while the reliance on virgin, finite materials also presents a growing supply chain risk for many industries.&lt;/p&gt; 
-&lt;p&gt;To achieve foundational circular procurement decision-making, machine learning algorithms can analyze past procurement data and identify patterns and insights to make better purchasing decisions. For example:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;With AWS’s &lt;a href="https://aws.amazon.com/solutions/ai-ml/intelligent-document-processing/"&gt;Intelligent Document Processing&lt;/a&gt; solutions, companies can streamline the ingestion of bills of materials across product lines. By automating the procurement data ingestion process, companies can measure their circular input footprint (share of circular materials per product and/or packaging type), as well as the cost and carbon impact of circular inputs. This allows for faster and more accurate decision-making when selecting sustainable alternatives.&lt;/li&gt; 
- &lt;li&gt;Another powerful tool is &lt;a href="https://aws.amazon.com/textract/"&gt;Amazon Textract&lt;/a&gt;, which can automatically ingest supplier declarations, saving time and increasing accuracy. By digitizing these declarations, companies can easily track progress toward their circular procurement goals and identify areas that require improvement.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;These applications are a significant value add for companies in reducing the time required to assess circular performance in procurement, while enabling decisions that account for trade-offs, and can accelerate the highest value initiatives.&lt;/p&gt; 
-&lt;p&gt;The value opportunity doesn’t end there, however.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;With generative AI services, like &lt;a href="https://aws.amazon.com/bedrock/"&gt;Amazon Bedrock&lt;/a&gt;, companies can build on this foundation for predictive analytics, real-time scenario modeling and advanced forecasting – AWS Partner &lt;a href="https://www.simudyne.com/"&gt;Simudyne&lt;/a&gt;, uses high-performance computing enabled simulations, coupled with LLM powered chatbots, to provide recommendations of how companies can decarbonize their supply chains, and therefore reduce their scope 3 emissions.&lt;/li&gt; 
- &lt;li&gt;By leveraging market data and research to identify opportunities for alternative materials and supply chain risk assessment, companies can gain an edge over the competition. For example, AWS partner &lt;a href="https://goodchemistry.com/"&gt;Good Chemistry&lt;/a&gt;, uses &lt;a href="https://aws.amazon.com/hpc/"&gt;HPC clusters&lt;/a&gt;, orchestrated by AWS Batch, to &lt;a href="https://aws.amazon.com/blogs/hpc/massively-scaling-quantum-chemistry-to-support-a-circular-economy/"&gt;design new materials&lt;/a&gt; and accelerate the identification of molecules to substitute or destroy toxic chemicals from the production process and environment.&lt;/li&gt; 
- &lt;li&gt;By using SageMaker for its &lt;a href="https://aws.amazon.com/blogs/machine-learning/remote-monitoring-of-raw-material-supply-chains-for-sustainability-with-amazon-sagemaker-geospatial-capabilities/"&gt;geospatial capabilities&lt;/a&gt;, companies are proactively addressing potential environmental risks. By monitoring deforestation in real-time with satellite data, IOT sensors and drones, coupled with machine learning algorithms, regulators, insurance companies and businesses can be aware of the risk of their current material footprint.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Overall, the use of AWS emerging technologies helps companies, governments and other stakeholders, transition towards circular materials in the short and long term, making sustainability a priority in their procurement process.&lt;/p&gt; 
-&lt;h2&gt;Call to action&lt;/h2&gt; 
-&lt;p&gt;Each company’s journey on circular economy measurement will look different, depending on industry, strategic priorities, and technical maturity. At Accenture and AWS, we believe solutions must be fit-for-purpose and co-designed for the specific business context. While there are growing options for ‘plug-and-play’ sustainability solutions, specifically in carbon management, developing the data foundation for automated baselining across the value chain and moving towards value-creating technology applications requires a level of customization and co-development using existing products and repeatable solutions where available.&lt;/p&gt; 
-&lt;p&gt;The first step to get started is defining your circular economy blueprint with key metrics across each area of your business. This is the foundation for a data-driven strategy and many companies are working hard to collect data for reporting on circular performance on an annual basis. To then understand and plan for foundational and advanced circular measurement use cases, it is key to assess your current functional and technical maturity to measure and manage these metrics. Identifying where the raw data lives, how it is collected and stored, and who is responsible for it is critical to map the journey towards automation. From there, it is a case of prioritization of metrics and use cases through engaging with stakeholders across different business groups. The end-users of the data and insights must be involved in the full journey to ensure the applied solution serves the required needs.&lt;/p&gt; 
-&lt;p&gt;The next step is to design, build and test. Cross-functional teams will need to work together to integrate solutions as part of a circular data lake, and develop the user interface for practical, day-to-day business decision making. Proof-of-Concepts (POCs) are valuable in building the foundational technical architecture, illustrating the value with a tangible output, and establishing buy-in from leadership and key stakeholders. This can then prime you for rapid deployment and scale.&lt;/p&gt; 
-&lt;p&gt;From there, deployment must be thought of as a multi-generational journey. Companies should focus on their key requirements for a Minimum Viable Product (MVP) solution that supports their core business priorities. Be it cross-value chain performance management, or specific use case advancement, the MVP must also include solutions for data pipeline automation and a data governance strategy. Accenture and AWS are supporting companies across these phases of implementation, including the development of targeted POCs and MVPs to tackle the key challenges your business is facing on circular measurement and prove the value of emerging technologies applied to these challenges. This landscape is rapidly evolving and our joint assets are developing with every implementation; co-development with leading businesses is at the heart of this.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Circular economy measurement requires more than an off-the-shelf sustainability solution; it is a data and technology problem that requires a comprehensive approach. By leveraging the power of AWS and Accenture’s expertise, businesses can unlock the full potential of the circular economy. By capturing data into a purpose driven data lake and running advanced analytics, our joint approach provides businesses with actionable insights and recommendations for optimizing resource usage and reducing waste. By prioritizing sustainability and embracing greater intelligence, businesses can drive positive environmental and business impacts, paving the way for a more sustainable future.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt; 
-&lt;h4&gt;References&lt;/h4&gt; 
-&lt;p&gt;[1] Lacy, Long and Spindler, The Circular Economy Handbook: Realizing the Circular Advantage (2019)&lt;br&gt; [2] Ellen MacArthur Foundation, Completing the Picture: How the Circular Economy Tackles Climate Change (2021)&lt;br&gt; [3]European Sustainability Reporting Standards in scope for companies with a turnover above €150 million in EU&lt;/p&gt;</content:encoded>
 					
 		
 		
