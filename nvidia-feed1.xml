@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 23 Jul 2024 01:07:22 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 23 Jul 2024 15:49:13 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,161 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>How NVIDIA AI Foundry Lets Enterprises Forge Custom Generative AI Models</title>
+		<link>https://blogs.nvidia.com/blog/ai-foundry-enterprise-generative-ai/</link>
+		
+		<dc:creator><![CDATA[Kari Briski]]></dc:creator>
+		<pubDate>Tue, 23 Jul 2024 15:15:59 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[DGX Cloud]]></category>
+		<category><![CDATA[NVIDIA NIM]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73148</guid>
+
+					<description><![CDATA[Businesses seeking to harness the power of AI need customized models tailored to their specific industry needs. NVIDIA AI Foundry is a service that enables enterprises to use data, accelerated computing and software tools to create and deploy custom models that can supercharge their generative AI initiatives. Just as TSMC manufactures chips designed by other	<a class="read-more" href="https://blogs.nvidia.com/blog/ai-foundry-enterprise-generative-ai/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Businesses seeking to harness the power of AI need customized models tailored to their specific industry needs.</p>
+<p><a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-ai-foundry-custom-llama-generative-models">NVIDIA AI Foundry</a> is a service that enables enterprises to use data, accelerated computing and software tools to create and deploy custom models that can supercharge their generative AI initiatives.</p>
+<p>Just as TSMC manufactures chips designed by other companies, NVIDIA AI Foundry provides the infrastructure and tools for other companies to develop and <a target="_blank" href="https://developer.nvidia.com/blog/customize-generative-ai-models-for-enterprise-applications-with-llama-3-1/">customize AI models</a> — using DGX Cloud, foundation models, NVIDIA NeMo software, NVIDIA expertise, as well as ecosystem tools and support.</p>
+<p>The key difference is the product: TSMC produces physical semiconductor chips, while NVIDIA AI Foundry helps create custom models. Both enable innovation and connect to a vast ecosystem of tools and partners.</p>
+<p>Enterprises can use AI Foundry to customize NVIDIA and open community models, including the new <a target="_blank" href="https://ai.meta.com/blog/meta-llama-3-1/">Llama 3.1</a> collection, as well as <a href="https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/">NVIDIA Nemotron</a>, CodeGemma by Google DeepMind, CodeLlama, Gemma by Google DeepMind, Mistral, Mixtral, Phi-3, StarCoder2 and others.</p>
+<h2><b>Industry Pioneers Drive AI Innovation</b></h2>
+<p>Industry leaders <a target="_blank" href="https://www.amdocs.com/insights/press-release/amdocs-unveils-generative-ai-milestones-bringing-enhanced-efficiencies">Amdocs</a>, Capital One, Getty Images, KT, Hyundai Motor Company, SAP, ServiceNow and Snowflake are among the first using NVIDIA AI Foundry. These pioneers are setting the stage for a new era of AI-driven innovation in enterprise software, technology, communications and media.</p>
+<p>“Organizations deploying AI can gain a competitive edge with custom models that incorporate industry and business knowledge,” said Jeremy Barnes, vice president of AI Product at ServiceNow. “ServiceNow is using NVIDIA AI Foundry to fine-tune and deploy models that can integrate easily within customers’ existing workflows.”</p>
+<h2><b>The Pillars of NVIDIA AI Foundry </b></h2>
+<p>NVIDIA AI Foundry is supported by the key pillars of foundation models, enterprise software, accelerated computing, expert support and a broad partner ecosystem.</p>
+<p>Its software includes AI foundation models from NVIDIA and the AI community as well as the complete <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> software platform for fast-tracking model development.</p>
+<p>The computing muscle of NVIDIA AI Foundry is <a target="_blank" href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>, a network of accelerated compute resources co-engineered with the world’s leading public clouds — Amazon Web Services, Google Cloud and Oracle Cloud Infrastructure. With DGX Cloud, AI Foundry customers can develop and fine-tune custom generative AI applications with unprecedented ease and efficiency, and scale their AI initiatives as needed without significant upfront investments in hardware. This flexibility is crucial for businesses looking to stay agile in a rapidly changing market.</p>
+<p>If an NVIDIA AI Foundry customer needs assistance, NVIDIA AI Enterprise experts are on hand to help. NVIDIA experts can walk customers through each of the steps required to build, fine-tune and deploy their models with proprietary data, ensuring the models tightly align with their business requirements.</p>
+<p>NVIDIA AI Foundry customers have access to a global ecosystem of partners that can provide a full range of support. Accenture, Deloitte, Infosys and Wipro are among the NVIDIA partners that offer AI Foundry consulting services that encompass design, implementation and management of AI-driven digital transformation projects. <a target="_blank" href="https://newsroom.accenture.com/news/2024/accenture-pioneers-custom-llama-llm-models-with-nvidia-ai-foundry">Accenture</a> is first to offer its own AI Foundry-based offering for custom model development, the Accenture AI Refinery framework.</p>
+<p>Additionally, service delivery partners such as Data Monsters, Quantiphi, Slalom and SoftServe help enterprises navigate the complexities of integrating AI into their existing IT landscapes, ensuring that AI applications are scalable, secure and aligned with business objectives.</p>
+<p>Customers can develop NVIDIA AI Foundry models for production using AIOps and MLOps platforms from NVIDIA partners, including Cleanlab, DataDog, Dataiku, Dataloop, DataRobot, Domino Data Lab, <a target="_blank" href="https://www.fiddler.ai/blog/steer-and-observe-llms-with-nvidia-nemo-guardrails-and-fiddler">Fiddler AI</a>, New Relic, Scale and Weights &amp; Biases.</p>
+<p>Customers can output their AI Foundry models as <a target="_blank" href="http://v">NVIDIA NIM</a> inference microservices — which include the custom model, optimized engines and a standard API — to run on their preferred accelerated infrastructure.</p>
+<p>Inferencing solutions like <a target="_blank" href="https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/">NVIDIA TensorRT-LLM</a> deliver improved efficiency for Llama 3.1 models to minimize latency and maximize throughput. This enables enterprises to generate tokens faster while reducing total cost of running the models in production. Enterprise-grade support and security is provided by the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software suite.</p>
+<figure id="attachment_73149" aria-describedby="caption-attachment-73149" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-73149" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-672x362.png" alt="" width="672" height="362" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-672x362.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-400x215.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-768x414.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-836x450.png 836w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-399x215.png 399w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-186x100.png 186w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf.png 1140w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73149" class="wp-caption-text">NVIDIA NIM and TensorRT-LLM minimize inference latency and maximize throughput for Llama 3.1 models to generate tokens faster.</figcaption></figure>
+<p>The broad range of deployment options includes <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/certified-systems/">NVIDIA-Certified Systems</a> from global server manufacturing partners including Cisco, Dell Technologies, Hewlett Packard Enterprise, Lenovo and Supermicro, as well as cloud instances from Amazon Web Services, Google Cloud and Oracle Cloud Infrastructure.</p>
+<p>Additionally, Together AI, a leading AI acceleration cloud, today announced it will enable its ecosystem of over 100,000 developers and enterprises to use its NVIDIA GPU-accelerated inference stack to deploy Llama 3.1 endpoints and other open models on DGX Cloud.</p>
+<p>“Every enterprise running generative AI applications wants a faster user experience, with greater efficiency and lower cost,” said Vipul Ved Prakash, founder and CEO of Together AI. “Now, developers and enterprises using the Together Inference Engine can maximize performance, scalability and security on NVIDIA DGX Cloud.”</p>
+<h2><b>NVIDIA NeMo Speeds and Simplifies Custom Model Development</b></h2>
+<p>With <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> integrated into AI Foundry, developers have at their fingertips the tools needed to curate data, customize foundation models and evaluate performance. NeMo technologies include:</p>
+<ul>
+<li><b>NeMo Curator</b> is a GPU-accelerated data-curation library that improves generative AI model performance by preparing large-scale, high-quality datasets for pretraining and fine-tuning.</li>
+<li><b>NeMo Customizer</b> is a high-performance, scalable microservice that simplifies fine-tuning and alignment of LLMs for domain-specific use cases.</li>
+<li><b>NeMo Evaluator</b> provides automatic assessment of generative AI models across academic and custom benchmarks on any accelerated cloud or data center.</li>
+<li><b>NeMo Guardrails</b> orchestrates dialog management, supporting accuracy, appropriateness and security in smart applications with large language models to provide safeguards for generative AI applications.</li>
+</ul>
+<p>Using the NeMo platform in NVIDIA AI Foundry, businesses can create custom AI models that are precisely tailored to their needs. This customization allows for better alignment with strategic objectives, improved accuracy in decision-making and enhanced operational efficiency. For instance, companies can develop models that understand industry-specific jargon, comply with regulatory requirements and integrate seamlessly with existing workflows.</p>
+<p>“As a next step of our partnership, SAP plans to use NVIDIA’s NeMo platform to help businesses to accelerate AI-driven productivity powered by SAP Business AI,” said Philipp Herzig, chief AI officer at SAP.</p>
+<p>Enterprises can deploy their custom AI models in production with <a href="https://blogs.nvidia.com/blog/nemo-retriever-microservices">NVIDIA NeMo Retriever NIM</a> inference microservices. These help developers fetch proprietary data to generate knowledgeable responses for their AI applications with <a target="_blank" href="https://developer.nvidia.com/blog/develop-production-grade-text-retrieval-pipelines-for-rag-with-nvidia-nemo-retriever">retrieval-augmented generation </a>(<a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">RAG</a>).</p>
+<p>“Safe, trustworthy AI is a non-negotiable for enterprises harnessing generative AI, with retrieval accuracy directly impacting the relevance and quality of generated responses in RAG systems,” said Baris Gultekin, Head of AI, Snowflake. &#8220;Snowflake Cortex AI leverages NeMo Retriever, a component of NVIDIA AI Foundry, to further provide enterprises with easy, efficient, and trusted answers using their custom data.”</p>
+<h2><b>Custom Models Drive Competitive Advantage</b></h2>
+<p>One of the key advantages of NVIDIA AI Foundry is its ability to address the unique challenges faced by enterprises in adopting AI. Generic AI models can fall short of meeting specific business needs and data security requirements. Custom AI models, on the other hand, offer superior flexibility, adaptability and performance, making them ideal for enterprises seeking to gain a competitive edge.</p>
+<p><i>Learn more about how </i><a target="_blank" href="https://www.nvidia.com/en-us/ai/foundry/"><i>NVIDIA AI Foundry</i></a><i> allows enterprises to boost productivity and innovation.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-foundry.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/ai-foundry-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[How NVIDIA AI Foundry Lets Enterprises Forge Custom Generative AI Models]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>AI, Go Fetch! New NVIDIA NeMo Retriever Microservices Boost LLM Accuracy and Throughput</title>
+		<link>https://blogs.nvidia.com/blog/nemo-retriever-microservices/</link>
+		
+		<dc:creator><![CDATA[Erik Pounds]]></dc:creator>
+		<pubDate>Tue, 23 Jul 2024 15:15:16 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Data Science]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Riva]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73134</guid>
+
+					<description><![CDATA[Generative AI applications have little, or sometimes negative, value without accuracy — and accuracy is rooted in data. To help developers efficiently fetch the best proprietary data to generate knowledgeable responses for their AI applications, NVIDIA today announced four new NVIDIA NeMo Retriever NIM inference microservices. Combined with NVIDIA NIM inference microservices for the Llama	<a class="read-more" href="https://blogs.nvidia.com/blog/nemo-retriever-microservices/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-ai/">Generative AI</a> applications have little, or sometimes negative, value without accuracy — and accuracy is rooted in data.</p>
+<p>To help developers efficiently fetch the best proprietary data to generate knowledgeable responses for their AI applications, NVIDIA today announced four new <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo Retriever NIM</a> inference microservices.</p>
+<p>Combined with <a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-ai-foundry-custom-llama-generative-models">NVIDIA NIM inference microservices for the Llama 3.1</a> model collection, also announced today, <a target="_blank" href="https://developer.nvidia.com/blog/develop-production-grade-text-retrieval-pipelines-for-rag-with-nvidia-nemo-retriever">NeMo Retriever NIM microservices</a> enable enterprises to scale to <a target="_blank" href="https://developer.nvidia.com/blog/build-an-agentic-rag-pipeline-with-llama-3-1-and-nvidia-nemo-retriever-nims">agentic AI workflows</a> — where AI applications operate accurately with minimal intervention or supervision — while delivering the highest accuracy retrieval-augmented generation, or <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">RAG</a>.</p>
+<p>NeMo Retriever allows organizations to seamlessly connect custom models to diverse business data and deliver highly accurate responses for AI applications using RAG. In essence, the production-ready microservices enable highly accurate information retrieval for building highly accurate AI applications.</p>
+<p>For example, NeMo Retriever can boost model accuracy and throughput for developers creating AI agents and customer service chatbots, analyzing security vulnerabilities or extracting insights from complex supply chain information.</p>
+<p>NIM inference microservices enable high-performance, easy-to-use, enterprise-grade inferencing. And with NeMo Retriever NIM microservices, developers can benefit from all of this — superpowered by their data.</p>
+<p>These new NeMo Retriever <a target="_blank" href="https://www.nvidia.com/en-eu/glossary/vector-database/#:~:text=What%20is%20an%20Embedding%20Model%3F">embedding</a> and reranking NIM microservices are now generally available:</p>
+<ul>
+<li style="font-weight: 400;" aria-level="1">NV-EmbedQA-E5-v5, a popular community base embedding model optimized for text question-answering retrieval</li>
+<li style="font-weight: 400;" aria-level="1">NV-EmbedQA-Mistral7B-v2, a popular multilingual community base model fine-tuned for text embedding for high-accuracy question answering</li>
+<li style="font-weight: 400;" aria-level="1">Snowflake-Arctic-Embed-L, an optimized community model, and</li>
+<li style="font-weight: 400;" aria-level="1">NV-RerankQA-Mistral4B-v3, a popular community base model fine-tuned for text reranking for high-accuracy question answering.</li>
+</ul>
+<p>They join the collection of NIM microservices easily accessible through the <a target="_blank" href="https://build.nvidia.com/explore/retrieval">NVIDIA API catalog</a>.</p>
+<h2><b>Embedding and Reranking Models</b></h2>
+<p>NeMo Retriever NIM microservices comprise two model types — embedding and reranking — with open and commercial offerings that ensure transparency and reliability.</p>
+<figure id="attachment_73135" aria-describedby="caption-attachment-73135" style="width: 823px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-73135" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline.png" alt="A diagram showing a user prompt inquiring about a bill, retrieving the most accurate response. " width="823" height="413" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline.png 823w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-400x201.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-672x337.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-768x385.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-406x204.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-188x94.png 188w" sizes="(max-width: 823px) 100vw, 823px" /><figcaption id="caption-attachment-73135" class="wp-caption-text">Example RAG pipeline using NVIDIA NIM microservices for Llama 3.1 and NeMo Retriever embedding and reranking NIM microservices for a customer service AI chatbot application.</figcaption></figure>
+<p>An <a target="_blank" href="https://www.nvidia.com/en-us/glossary/vector-database/#:~:text=What%20is%20an%20Embedding%20Model%3F">embedding model</a> transforms diverse data — such as text, images, charts and video — into numerical vectors, stored in a vector database, while capturing their meaning and nuance. Embedding models are fast and computationally less expensive than traditional large language models, or LLMs.</p>
+<p>A reranking model ingests data and a query, then scores the data according to its relevance to the query. Such models offer significant accuracy improvements while being computationally complex and slower than embedding models.</p>
+<p>NeMo Retriever provides the best of both worlds. By casting a wide net of data to be retrieved with an embedding NIM, then using a reranking NIM to trim the results for relevancy, developers tapping NeMo Retriever can build a pipeline that ensures the most helpful, accurate results for their enterprise.</p>
+<p>With NeMo Retriever, developers get access to state-of-the-art open, commercial models for building text Q&amp;A retrieval pipelines that provide the highest accuracy. When compared with alternate models, NeMo Retriever NIM microservices provided 30% fewer inaccurate answers for enterprise question answering.</p>
+<figure id="attachment_73138" aria-describedby="caption-attachment-73138" style="width: 811px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-73138" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison.png" alt="Bar chart showing lexical search (45%), alternative embedder (63%), compared with NeMo Retriever embedding NIM (73%) and NeMo Retriever embedding + reranking NIM microservices (75%)." width="811" height="321" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison.png 811w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-400x158.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-672x266.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-768x304.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-406x161.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-188x74.png 188w" sizes="(max-width: 811px) 100vw, 811px" /><figcaption id="caption-attachment-73138" class="wp-caption-text">Comparison of NeMo Retriever embedding NIM and embedding plus reranking NIM microservices performance versus lexical search and an alternative embedder.</figcaption></figure>
+<h2><b>Top Use Cases</b></h2>
+<p>From RAG and AI agent solutions to data-driven analytics and more, NeMo Retriever powers a wide range of AI applications.</p>
+<p>The microservices can be used to build <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/generative-ai-chatbots/">intelligent chatbots</a> that provide accurate, context-aware responses. They can help analyze vast amounts of data to <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/security-vulnerability-analysis/">identify security vulnerabilities</a>. They can assist in extracting insights from complex <a target="_blank" href="https://www.youtube.com/watch?v=a9O0JipIrb4">supply chain information</a>. And they can boost AI-enabled <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/retail-shopping-advisor/">retail shopping advisors</a> that offer natural, personalized shopping experiences, among other tasks.</p>
+<p><a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/">NVIDIA AI workflows</a> for these use cases provide an easy, supported starting point for developing generative AI-powered technologies.</p>
+<p>Dozens of NVIDIA data platform partners are working with NeMo Retriever NIM microservices to boost their AI models’ accuracy and throughput.</p>
+<p><a target="_blank" href="https://www.datastax.com/blog/datastax-ai-paas-integrated-with-nvidia-nemo-retriever">DataStax</a> has integrated NeMo Retriever embedding NIM microservices in its Astra DB and Hyper-Converged platforms, enabling the company to bring accurate, generative AI-enhanced RAG capabilities to customers with faster time to market.</p>
+<p>Cohesity will integrate NVIDIA NeMo Retriever microservices with its AI product, Cohesity Gaia, to help customers put their data to work to power insightful, transformative generative AI applications through RAG.</p>
+<p>Kinetica will use NVIDIA NeMo Retriever to develop LLM agents that can interact with complex networks in natural language to respond more quickly to outages or breaches — turning insights into immediate action.</p>
+<p>NetApp is collaborating with NVIDIA to connect NeMo Retriever microservices to exabytes of data on its intelligent data infrastructure. Every NetApp ONTAP customer will be able to seamlessly “talk to their data” to access proprietary business insights without having to compromise the security or privacy of their data.</p>
+<p>NVIDIA global system integrator partners including Accenture, Deloitte, Infosys, LTTS, Tata Consultancy Services, Tech Mahindra and Wipro, as well as service delivery partners Data Monsters, EXLService (Ireland) Limited, Latentview, Quantiphi, Slalom, SoftServe and Tredence, are developing services to help enterprises add NeMo Retriever NIM microservices into their AI pipelines.</p>
+<h2><b>Use With Other NIM Microservices</b></h2>
+<p>NeMo Retriever NIM microservices can be used with NVIDIA Riva NIM microservices, which  supercharge <a href="https://blogs.nvidia.com/blog/speech-ai-for-industries/">speech AI</a> applications across industries — enhancing customer service and enlivening digital humans.</p>
+<p>New models that will soon be available as Riva NIM microservices include: FastPitch and HiFi-GAN for <a target="_blank" href="https://www.nvidia.com/en-us/glossary/text-to-speech/">text-to-speech</a> applications; Megatron for multilingual neural machine translation; and the record-breaking <a target="_blank" href="https://developer.nvidia.com/blog/nvidia-speech-and-translation-ai-models-set-records-for-speed-and-accuracy/">NVIDIA Parakeet</a> family of models for <a target="_blank" href="https://developer.nvidia.com/blog/essential-guide-to-automatic-speech-recognition-technology/#what_is_automatic_speech_recognition">automatic speech recognition</a>.</p>
+<p>NVIDIA NIM microservices can be used all together or separately, offering developers a modular approach to building AI applications. In addition, the microservices can be integrated with community models, NVIDIA models or users’ custom models — in the cloud, on premises or in hybrid environments — providing developers with further flexibility.</p>
+<p>NVIDIA NIM microservices are available at <a target="_blank" href="http://ai.nvidia.com">ai.nvidia.com</a>. Enterprises can deploy AI applications in production with NIM through the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software platform.</p>
+<p>NIM microservices can run on customers’ preferred accelerated infrastructure, including cloud instances from Amazon Web Services, Google Cloud, Microsoft Azure and Oracle Cloud Infrastructure, as well as <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/certified-systems/">NVIDIA-Certified Systems</a> from global server manufacturing partners including Cisco, Dell Technologies, Hewlett Packard Enterprise, Lenovo and Supermicro.</p>
+<p><a target="_blank" href="https://developer.nvidia.com/developer-program">NVIDIA Developer Program</a> members will soon be able to access NIM for free for research, development and testing on their preferred infrastructure.</p>
+<p><i>Learn more about the latest in generative AI and accelerated computing by joining </i><a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/"><i>NVIDIA at SIGGRAPH</i></a><i>, the premier computer graphics conference, running July 28-Aug. 1 in Denver. </i></p>
+<p><i>See </i><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fabout-nvidia%2Flegal-info%2F&amp;data=05%7C02%7Clpham%40nvidia.com%7Cd59f2f66f51e4deaac8008dc94b3ef0f%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638548747745016311%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=dm8Os%2B4LtHW2ehZrPaxn38bsutMQBDeUdQuxrIa2y1Y%3D&amp;reserved=0"><i>notice</i></a><i> regarding software product information.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-nim-featured.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-nim-featured-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[AI, Go Fetch! New NVIDIA NeMo Retriever Microservices Boost LLM Accuracy and Throughput]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>NVIDIA’s AI Masters Sweep KDD Cup 2024 Data Science Competition</title>
 		<link>https://blogs.nvidia.com/blog/nvidia-ai-masters-kdd-cup-2024/</link>
 		
@@ -35,7 +190,7 @@
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Team NVIDIA has triumphed at the Amazon <a href="https://kdd2024.kdd.org/" target="_blank" rel="noopener">KDD Cup 2024</a>, securing first place Friday across all five competition tracks.</p>
 <p>The team — consisting of NVIDIANs <a href="https://www.linkedin.com/in/aerdem4/&amp;sa=D&amp;source=docs&amp;ust=1721670200192732&amp;usg=AOvVaw097v0q1qfYZH3Wca9bat0d" target="_blank" rel="noopener">Ahmet Erdem</a>, <a href="https://www.linkedin.com/in/benedikt-schifferer/" target="_blank" rel="noopener">Benedikt Schifferer</a>, <a href="https://www.kaggle.com/cdeotte" target="_blank" rel="noopener">Chris Deotte</a>, <a href="https://www.linkedin.com/in/giba1/" target="_blank" rel="noopener">Gilberto Titericz</a>, <a href="https://www.linkedin.com/in/lytic/" target="_blank" rel="noopener">Ivan Sorokin</a> and <a href="https://www.linkedin.com/in/simon-jegou/" target="_blank" rel="noopener">Simon Jegou</a> — demonstrated its prowess in generative AI, winning in categories that included text generation, multiple-choice questions, name entity recognition, ranking, and retrieval.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1.png"><img fetchpriority="high" decoding="async" class="alignnone size-large wp-image-73115" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-672x156.png" alt="" width="672" height="156" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-672x156.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-400x93.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-768x178.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-1536x356.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-842x195.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-406x94.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-188x44.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-1280x296.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1.png"><img loading="lazy" decoding="async" class="alignnone size-large wp-image-73115" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-672x156.png" alt="" width="672" height="156" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-672x156.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-400x93.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-768x178.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-1536x356.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-842x195.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-406x94.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-188x44.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-1280x296.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>The competition, themed “<a href="https://www.aicrowd.com/challenges/amazon-kdd-cup-2024-multi-task-online-shopping-challenge-for-llms" target="_blank" rel="noopener">Multi-Task Online Shopping Challenge for LLMs</a>,” asked participants to solve various challenges using limited datasets.</p>
 <p>“The new trend in LLM competitions is that they don’t give you training data,” said Deotte, a senior data scientist at NVIDIA. “They give you 96 example questions — not enough to train a model — so we came up with 500,000 questions on our own.”</p>
 <p>Deotte explained that the NVIDIA team generated a variety of questions by writing some themselves, using a <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language model</a> to create others, and transforming existing e-commerce datasets.</p>
@@ -56,7 +211,7 @@
 <h2><strong>NVIDIA’s Winning Solution</strong></h2>
 <p>NVIDIA’s winning solution involved creating a single model for each track.</p>
 <p>The team fine-tuned the just-released Qwen2-72B model using eight NVIDIA A100 Tensor Core GPUs for approximately 24 hours. The GPUs provided fast and efficient processing, significantly reducing the time required for fine-tuning.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2.jpg"><img decoding="async" class="alignnone size-large wp-image-73118" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-672x191.jpg" alt="" width="672" height="191" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-672x191.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-400x114.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-768x219.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-1536x438.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-842x240.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-406x116.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-188x54.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-1280x365.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2.jpg 1811w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2.jpg"><img loading="lazy" decoding="async" class="alignnone size-large wp-image-73118" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-672x191.jpg" alt="" width="672" height="191" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-672x191.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-400x114.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-768x219.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-1536x438.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-842x240.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-406x116.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-188x54.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-1280x365.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2.jpg 1811w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>First, the team generated training datasets based on the provided examples and synthesized additional data using Llama 3 70B hosted on <a href="http://build.nvidia.com" target="_blank" rel="noopener">build.nvidia.com</a>.</p>
 <p>Next, they employed QLoRA (Quantized Low-Rank Adaptation), a training process using the data created in step one. QLoRA modifies a smaller subset of the model’s weights, allowing efficient training and fine-tuning.</p>
 <p>The model was then quantized — making it smaller and able to run on a system with a smaller hard drive and less memory — with AWQ 4-bit and used the vLLM inference library to predict the test datasets on four NVIDIA T4 Tensor Core GPUs within the time constraints.</p>
@@ -104,7 +259,7 @@
 <p>It’s progress the wider community is starting to acknowledge.</p>
 <p>“Even if the predictions that data centers will soon account for 4% of global energy consumption become a reality, AI is having a major impact on reducing the remaining 96% of energy consumption,” said a <a href="https://lisboncouncil.net/wp-content/uploads/2024/04/LISBON_COUNCIL_Research_Sustainable_Computing_For_A_Sustainable_Planet.pdf" target="_blank" rel="noopener">report</a> from Lisbon Council Research, a nonprofit formed in 2003 that studies economic and social issues.</p>
 <p>The article from the Brussels-based research group is among a handful of big-picture AI policy studies starting to emerge. It uses Italy’s <a href="https://blogs.nvidia.com/blog/supercomputing-ai-eurohpc/" target="_blank" rel="noopener">Leonardo supercomputer</a>, accelerated with nearly 14,000 NVIDIA GPUs, as an example of a system advancing work in fields from automobile design and drug discovery to weather forecasting.</p>
-<figure id="attachment_73091" aria-describedby="caption-attachment-73091" style="width: 600px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png"><img decoding="async" class="wp-image-73091 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png" alt="" width="600" height="395" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png 600w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-400x263.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-327x215.png 327w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-152x100.png 152w" sizes="(max-width: 600px) 100vw, 600px" /></a><figcaption id="caption-attachment-73091" class="wp-caption-text">Energy-efficiency gains over time for the most efficient supercomputer on the TOP500 list. Source: TOP500.org</figcaption></figure>
+<figure id="attachment_73091" aria-describedby="caption-attachment-73091" style="width: 600px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png"><img loading="lazy" decoding="async" class="wp-image-73091 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png" alt="" width="600" height="395" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png 600w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-400x263.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-327x215.png 327w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-152x100.png 152w" sizes="(max-width: 600px) 100vw, 600px" /></a><figcaption id="caption-attachment-73091" class="wp-caption-text">Energy-efficiency gains over time for the most efficient supercomputer on the TOP500 list. Source: TOP500.org</figcaption></figure>
 <h2><b>Why Accelerated Computing Is Sustainable Computing</b></h2>
 <p>Accelerated computing uses the parallel processing of NVIDIA GPUs to do more work in less time. As a result, it consumes less energy than general-purpose servers that employ CPUs built to handle one task at a time.</p>
 <p>That’s why accelerated computing is <a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/?ncid=so-link-848252-vt04" target="_blank" rel="noopener">sustainable computing</a>.</p>
@@ -1088,152 +1243,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[In It for the Long Haul: Waabi Pioneers Generative AI to Unleash Fully Driverless Autonomous Trucking]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>GeForce NOW Beats the Heat With 22 New Games in July</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-july-2024-games-list/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 04 Jul 2024 13:00:36 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72833</guid>
-
-					<description><![CDATA[GeForce NOW is bringing 22 new games to members this month. Dive into the four titles available to stream on the cloud gaming service this week to stay cool and entertained throughout the summer — whether poolside, on a long road trip or in the air-conditioned comfort of home. Plus, get great games at great	<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-july-2024-games-list/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> is bringing 22 new games to members this month.</p>
-<p>Dive into the four titles available to stream on the cloud gaming service this week to stay cool and entertained throughout the summer — whether poolside, on a long road trip or in the air-conditioned comfort of home.</p>
-<p>Plus, get great games at great deals to stream across devices during the Steam Summer Sale. In total, more than 850 titles on GeForce NOW can be found at discounts in a dedicated Steam Summer Sale row on the GeForce NOW app, from now until July 11.</p>
-<h2><b>Time to Grind</b></h2>
-<figure id="attachment_72837" aria-describedby="caption-attachment-72837" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-72837" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-672x336.jpg" alt="The First Descendant on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/GFN_Thursday-The_First_Descendant.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-72837" class="wp-caption-text"><em>Be the first Descendant with the cloud.</em></figcaption></figure>
-<p>In <i>The First Descendant</i> from NEXON, take on the role of Descendants tasked with safeguarding the powerful Iron Heart from relentless Vulgus invaders. Set in a captivating sci-fi universe, the game is a third-person co-op action role-playing shooter that seamlessly blends looting mechanics with strategic combat. Engage in intense gunplay, face off against formidable bosses and collect valuable loot while fighting to preserve humanity’s future.</p>
-<p>Check out the list of new games this week:</p>
-<ul>
-<li><i>The Falconeer </i>(Free on <a target="_blank" href="https://www.epicgames.com/store/p/the-falconeer?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store,</a> July 4)</li>
-<li><i>The First Descendant </i>(<a target="_blank" href="https://store.steampowered.com/app/2074920?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Star Traders: Frontiers </i>(<a target="_blank" href="https://store.steampowered.com/app/335620?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Wuthering Waves </i>(<a target="_blank" href="https://wutheringwaves.kurogames.com/?utm_source=nvidia&amp;utm_campaign=geforce_now">Native</a> and <a target="_blank" href="https://www.epicgames.com/store/p/wuthering-waves-76ebc5?utm_source=nvidia&amp;utm_campaign=geforce_now">Epic Games Store</a>)</li>
-</ul>
-<p>And members can look for the following later this month:</p>
-<ul>
-<li><i>Once Human </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/2139460?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 9)</li>
-<li><i>Anger Foot </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1978590?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 11)</li>
-<li><i>The Crust </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1465470?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 15)</li>
-<li><i>Gestalt: Steam &amp; Cinder </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1231990?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 16)</li>
-<li><i>Flintlock: The Siege of Dawn  </i>(New release <a target="_blank" href="https://store.steampowered.com/app/1832040?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a target="_blank" href="https://www.xbox.com/games/store/flintlock-the-siege-of-dawn/9PBBQHX6V3PJ?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, July 18)</li>
-<li><i>Dungeons of Hinterberg </i>(New release <a target="_blank" href="https://store.steampowered.com/app/1983260?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a target="_blank" href="https://www.xbox.com/games/store/dungeons-of-hinterberg/9pgx472j0rjp?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass, July 18)</li>
-<li><i>Norland </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1857090?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 18)</li>
-<li><i>Cataclismo </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1422440?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 22</li>
-<li><i>CONSCRIPT </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1286990?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 23)</li>
-<li><i>F1 Manager 2024 </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/2591280?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 23)</li>
-<li><i>EARTH DEFENSE FORCE 6 </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/2291060?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 25)</li>
-<li><i>Stormgate Early Access </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/2012510?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, July 30)</li>
-<li><i>Cyber Knights: Flashpoint </i>(<a target="_blank" href="https://store.steampowered.com/app/1021210?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Content Warning </i>(<a target="_blank" href="https://store.steampowered.com/app/2881650?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Crime Boss: Rockay City </i>(<a target="_blank" href="https://store.steampowered.com/app/2933080?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Gang Beasts </i>(<a target="_blank" href="https://store.steampowered.com/app/285900?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a target="_blank" href="https://www.xbox.com/games/store/gang-beasts/BPQZT43FWD49?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>HAWKED</i> (<a target="_blank" href="https://store.steampowered.com/app/1955960?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Kingdoms and Castles </i>(<a target="_blank" href="https://store.steampowered.com/app/569480?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-</ul>
-<h2><b>Jam-Packed June</b></h2>
-<p>In addition to the 17 games announced last month, 10 more joined the <a target="_blank" href="http://play.geforcenow.com">GeForce NOW library</a>:<i></i></p>
-<ul>
-<li><i>Killer Klowns from Outer Space: The Game </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1556100?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, June 4)</li>
-<li><i>Sneak Out </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/2410490?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, June 6)</li>
-<li><i>Beyond Good &amp; Evil &#8211; 20th Anniversary Edition </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/2556990/Beyond_Good__Evil__20th_Anniversary_Edition/">Steam</a> and <a target="_blank" href="https://www.ubisoft.com/en-us/game/beyond-good-and-evil/20th-anniversary-edition">Ubisoft</a>, June 24)</li>
-<li><i>As Dusk Falls </i>(<a target="_blank" href="https://store.steampowered.com/app/1341820?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a target="_blank" href="https://www.xbox.com/games/store/as-dusk-falls/9NR7XDNVP5SW?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Bodycam </i>(<a target="_blank" href="https://store.steampowered.com/app/2406770/Bodycam/">Steam</a>)</li>
-<li><i>Drug Dealer Simulator 2</i> (<a target="_blank" href="https://store.steampowered.com/app/1708850?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
-<li><i>Sea of Thieves </i>(<a target="_blank" href="https://store.steampowered.com/app/1172620?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a target="_blank" href="https://www.xbox.com/games/store/sea-of-thieves-2023-edition/9P2N57MC619K?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-<li><i>Skye: The Misty Isle </i>(New release on <a target="_blank" href="https://store.steampowered.com/app/1710180?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, June 19)</li>
-<li><i>XDefiant</i> (Ubisoft)</li>
-<li><i>Tell Me Why </i>(<a target="_blank" href="https://store.steampowered.com/app/1180660?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a> and <a target="_blank" href="https://www.xbox.com/games/store/tell-me-why/9NBL0XKVCN5L?utm_source=nvidia&amp;utm_campaign=geforce_now">Xbox</a>, available on PC Game Pass)</li>
-</ul>
-<p><i>Torque Drift 2 </i>didn’t make it in June due to technical issues. Stay tuned to GFN Thursday for updates.</p>
-<p>What are you planning to play this weekend? Let us know on <a target="_blank" href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
-<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
-<p lang="en" dir="ltr">Fill in the blank:</p>
-<p><img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f4c6.png" alt="📆" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Game that you&#39;ve played for over a year: _____<br /><img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f465.png" alt="👥" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Multiplayer game you can&#39;t stop playing: _____<br /><img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f621.png" alt="😡" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Game that makes you rage: _____</p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/15.0.3/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a target="_blank" href="https://twitter.com/NVIDIAGFN/status/1808531147401359480?ref_src=twsrc%5Etfw">July 3, 2024</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/gfn-thursday-7-4-nv-blog-1280x680-no-cta.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/gfn-thursday-7-4-nv-blog-1280x680-no-cta-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[GeForce NOW Beats the Heat With 22 New Games in July]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Decoding How the Generative AI Revolution BeGAN</title>
-		<link>https://blogs.nvidia.com/blog/ai-decoded-gan-canvas-app/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Wed, 03 Jul 2024 13:00:55 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[AI Decoded]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[GeForce]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72808</guid>
-
-					<description><![CDATA[Generative models have completely transformed the AI landscape — headlined by popular apps such as ChatGPT and Stable Diffusion. ]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/" target="_blank" rel="noopener"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
-<p>Generative models have completely transformed the AI landscape — headlined by popular apps such as ChatGPT and Stable Diffusion.</p>
-<p>Paving the way for this boom were foundational AI models and generative adversarial networks (GANs), which sparked a leap in productivity and creativity.</p>
-<p>NVIDIA’s <a href="https://blogs.nvidia.com/blog/gaugan-photorealistic-landscapes-nvidia-research/" target="_blank" rel="noopener">GauGAN</a>, which powers the <a href="https://www.nvidia.com/en-us/studio/canvas/" target="_blank" rel="noopener">NVIDIA Canvas app</a>, is one such model that uses AI to transform rough sketches into photorealistic artwork.</p>
-<h2><b>How It All BeGAN</b></h2>
-<p>GANs are deep learning models that involve two complementary neural networks: a generator and a discriminator.</p>
-<p>These neural networks compete against each other. The generator attempts to create realistic, lifelike imagery, while the discriminator tries to tell the difference between what’s real and what’s generated. As its neural networks keep challenging each other, GANs get better and better at making realistic-looking samples.</p>
-<p>GANs excel at understanding complex data patterns and creating high-quality results. They&#8217;re used in applications including image synthesis, style transfer, data augmentation and image-to-image translation.</p>
-<p>NVIDIA’s GauGAN, named after post-Impressionist painter Paul Gauguin, is an AI demo for photorealistic image generation. Built by NVIDIA Research, it directly led to the development of the NVIDIA Canvas app — and can be experienced for free through the <a target="_blank" href="https://www.nvidia.com/en-us/research/ai-demos/">NVIDIA AI Playground</a>.</p>
-<p>GauGAN has been wildly popular since it debuted at NVIDIA GTC in 2019 — used by art teachers, creative agencies, museums and millions more online.</p>
-<h2><b>Giving Sketch to Scenery a Gogh</b></h2>
-<p>Powered by GauGAN and local <a href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/" target="_blank" rel="noopener">NVIDIA RTX GPUs</a>, NVIDIA Canvas uses AI to turn simple brushstrokes into realistic landscapes, displaying results in real time.</p>
-<p>Users can start by sketching simple lines and shapes with a palette of real-world elements like grass or clouds —- referred to in the app as “materials.”</p>
-<p><iframe loading="lazy" title="NVIDIA Canvas: New Update | 4x Higher Resolution &amp; 5 New Materials" width="500" height="281" src="https://www.youtube.com/embed/wKztRskmsig?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>The AI model then generates the enhanced image on the other half of the screen in real time. For example, a few triangular shapes sketched using the “mountain” material will appear as a stunning, photorealistic range. Or users can select the “cloud” material and with a few mouse clicks transform environments from sunny to overcast.</p>
-<p>The creative possibilities are endless — sketch a pond, and other elements in the image, like trees and rocks, will reflect in the water. Change the material from snow to grass, and the scene shifts from a cozy winter setting to a tropical paradise.</p>
-<figure id="attachment_72809" aria-describedby="caption-attachment-72809" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png"><img loading="lazy" decoding="async" class="size-large wp-image-72809" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png" alt="" width="672" height="368" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-672x368.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-400x219.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-768x420.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1536x840.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove.png 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-823x450.png 823w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-393x215.png 393w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-183x100.png 183w, https://blogs.nvidia.com/wp-content/uploads/2024/07/beachcove-1280x700.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-72809" class="wp-caption-text">Canvas offers nine different styles, each with 10 variations and 20 materials to play with.</figcaption></figure>
-<p>Canvas features a Panorama mode that enables artists to create 360-degree images for use in 3D apps. YouTuber <a href="https://www.youtube.com/watch?v=d2O-kj5KF5w" target="_blank" rel="noopener">Greenskull AI</a> demonstrated Panorama mode by painting an ocean cove, before then importing it into Unreal Engine 5.</p>
-<p><iframe loading="lazy" title="NVIDIA Canvas Panorama - Painting in 360° with Ai" width="500" height="281" src="https://www.youtube.com/embed/d2O-kj5KF5w?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p><a href="https://www.nvidia.com/en-us/studio/canvas/" target="_blank" rel="noopener">Download</a> the NVIDIA Canvas app to get started.</p>
-<p>Consider exploring <a href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/" target="_blank" rel="noopener">NVIDIA Broadcast</a>, another AI-powered content creation app that transforms any room into a home studio. Broadcast is free for RTX GPU owners.</p>
-<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/canvas-app-nv-blog-1280x680-1.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/canvas-app-nv-blog-1280x680-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Decoding How the Generative AI Revolution BeGAN]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
