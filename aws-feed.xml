@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Fri, 19 Jul 2024 18:46:20 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 23 Jul 2024 11:46:40 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,131 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Implementing e-mail and SMS notifications in AWS ParallelCluster with Slurm</title>
+		<link>https://aws.amazon.com/blogs/hpc/implementing-e-mail-and-sms-notifications-in-aws-parallelcluster-with-slurm/</link>
+		
+		<dc:creator><![CDATA[Neil Munday]]></dc:creator>
+		<pubDate>Tue, 23 Jul 2024 11:46:40 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<category><![CDATA[Slurm]]></category>
+		<guid isPermaLink="false">11c5a3466d18240a784c1c4c99d0cbee592d5299</guid>
+
+					<description>Learn how to configure email and SMS alerts for job events to stay on top of your HPC workloads with AWS ParallelCluster using Slurm.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3938" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/boofla88_a_stream_of_airmail_envelopes_with_wings_flying_throug_d3ff59ca-fae6-4531-9a2e-476912ebd20f.png" alt="Implementing e-mail and SMS notifications in AWS ParallelCluster with Slurm" width="380" height="212"&gt;AWS ParallelCluster allows customers to deploy HPC clusters using AWS. You can select the size you need for your cluster, the operating system (OS), file systems, and CPU or GPU architectures to meet your needs – and only pay for what you use. Slurm manages jobs on the cluster, and informs the autoscaling functions in ParallelCluster.&lt;/p&gt; 
+&lt;p&gt;In this post we’ll demonstrate how you can use a post-install script to add e-mail notifications and SMS notifications to ParallelCluster for Slurm job events. And we’ll show how you can use this to interact with other AWS resources – to create your own workflows. This could be a “job completion” notification from Slurm that triggers a post-processing AWS Lambda function to run on output data that a job wrote to an Amazon Simple Storage Service (Amazon S3) bucket.&lt;/p&gt; 
+&lt;h2&gt;Enabling Slurm job notifications&lt;/h2&gt; 
+&lt;p&gt;Slurm has an option to send e-mails to users when a job changes state, for example when the job starts and ends. To do this, the server that’s running the &lt;code&gt;slurmctld&lt;/code&gt; daemon must already be configured to send e-mails using SMTP.&lt;/p&gt; 
+&lt;p&gt;In the example that follows, we’re instructing Slurm to send notifications via e-mail for all job events:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;#SBATCH --mail-user=jdoe@example.com
+#SBATCH --mail-type=ALL
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;When Slurm sends e-mails for these events, they don’t include an e-mail body – it packs everything it knows about the job in the subject of the e-mail, as we’ve shown in Figure 1. That empty e-mail body is just begging to be filled with additional job information.&lt;/p&gt; 
+&lt;div id="attachment_3927" style="width: 1006px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3927" loading="lazy" class="size-full wp-image-3927" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/IMG-2024-07-03-13.05.06.png" alt="Figure 1 - Example Slurm e-mail for a “job began” event – note that all the information about the job is in the subject line, and the body of the e-mail is left blank." width="996" height="470"&gt;
+ &lt;p id="caption-attachment-3927" class="wp-caption-text"&gt;Figure 1 – Example Slurm e-mail for a “job began” event – note that all the information about the job is in the subject line, and the body of the e-mail is left blank.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;What is Slurm-Mail?&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://github.com/neilmunday/slurm-mail"&gt;Slurm-Mail&lt;/a&gt; is an open source add-on for Slurm that allows HPC administrators to configure their Slurm installations to send HTML5 e-mails to their users about their jobs. The e-mails it generates contain additional information about users’ jobs from Slurm’s job accounting database. You can customize the e-mails using templates depending on your individual needs.&lt;/p&gt; 
+&lt;p&gt;Slurm-Mail &lt;a href="https://neilmunday.github.io/slurm-mail/repo/"&gt;provides packages&lt;/a&gt; for RHEL-based operating systems, including Amazon Linux. It also supports Ubuntu and SLES.&lt;/p&gt; 
+&lt;h2&gt;How can we use Slurm-Mail with AWS ParallelCluster?&lt;/h2&gt; 
+&lt;p&gt;The Slurm-Mail &lt;a href="https://neilmunday.github.io/slurm-mail/repo/"&gt;package repository&lt;/a&gt; provides RPMs for Amazon Linux 2. We can therefore install Slurm-Mail on the headnode of our ParallelCluster. However, we need to tell Slurm-Mail where to deliver e-mails. For this we can use &lt;a href="https://aws.amazon.com/ses/"&gt;Amazon Simple Email Service (SES)&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Amazon SES gives you the ability to send e-mails from your cloud-based resources, e.g. from Amazon Compute Cloud (Amazon EC2) hosts, Lambda functions, and more. This eliminates the need for you to set-up and operate your own mail servers. You can send messages using Amazon SES with either the &lt;a href="https://docs.aws.amazon.com/ses/latest/dg/send-email-api.html"&gt;Amazon SES API&lt;/a&gt;, or an SMTP interface. In this blog post, we’ll make use of the SMTP interface to send e-mails from the headnode on our ParallelCluster, using Slurm-Mail.&lt;/p&gt; 
+&lt;p&gt;In the Amazon SES console you can create an e-mail identity that will send the e-mails. To help prevent fraud and abuse, and to help protect your reputation as a sender, Amazon SES places all new accounts in the &lt;em&gt;SES sandbox&lt;/em&gt;. Here, you’ll only be able to send and receive e-mails to the e-mail identities you have defined in Amazon SES. If you’re only sending e-mails to yourself or e-mail addresses you are able to verify, then the sandbox will be enough for your needs. If not, you’ll have to cut a ticket to customer support to migrate out of the Amazon SES sandbox.&lt;/p&gt; 
+&lt;p&gt;Once you’ve created and verified your e-mail identity in the Amazon SES console you can create SMTP credentials (shown in Figure 1).&lt;/p&gt; 
+&lt;div id="attachment_3928" style="width: 1008px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3928" loading="lazy" class="size-full wp-image-3928" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/IMG-2024-07-03-13.05.37.png" alt="Figure 2 – Accessing AWS SES SMTP settings via the console" width="998" height="429"&gt;
+ &lt;p id="caption-attachment-3928" class="wp-caption-text"&gt;Figure 2 – Accessing AWS SES SMTP settings via the console&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The process of creating SMTP credentials will create a new IAM (Identity and Access Management) user. Take note of the credentials displayed to you when this happens, because you’ll need these to configure Slurm-Mail. Also note your SMTP server settings – they’re available in the SES console (as shown in Figure 2).&lt;/p&gt; 
+&lt;p&gt;With this information, you’re now ready to make use of the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/slurm_accounting_with_email"&gt;AWS ParallelCluster Slurm-Mail recipe&lt;/a&gt;, which is part of the &lt;a href="https://hpc.news/recipes"&gt;HPC Recipes Library&lt;/a&gt;. This is a launchable AWS CloudFormation template which will ask you for a number of input values to define your cluster. These include the SMTP settings that Slurm-Mail will use. We’ve detailed the input parameters you need in Table 1, and there’s an example of these being used, in Figure 3.&lt;/p&gt; 
+&lt;div id="attachment_3929" style="width: 816px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3929" loading="lazy" class="size-full wp-image-3929" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/IMG-2024-07-03-13.07.09.png" alt="Table 1 - Template input parameters" width="806" height="428"&gt;
+ &lt;p id="caption-attachment-3929" class="wp-caption-text"&gt;Table 1 – Template input parameters&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div id="attachment_3930" style="width: 1015px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3930" loading="lazy" class="size-full wp-image-3930" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/IMG-2024-07-03-13.07.43.png" alt="Figure 3 - SES configuration settings for CloudFormation using the Amazon SES parameters which we established in this guide." width="1005" height="510"&gt;
+ &lt;p id="caption-attachment-3930" class="wp-caption-text"&gt;Figure 3 – SES configuration settings for CloudFormation using the Amazon SES parameters which we established in this guide.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;During the creation of the headnode resource, we invoke the &lt;code&gt;&lt;a href="https://github.com/aws-samples/aws-hpc-recipes/blob/main/recipes/pcluster/slurm_accounting_with_email/assets/postinstall.sh"&gt;postinstall.sh&lt;/a&gt;&lt;/code&gt; script to install and configure Slurm-Mail. The script will create a &lt;code&gt;yum&lt;/code&gt; configuration file on the headnode to help ensure that you can keep your Slurm-Mail installation up to date.&lt;/p&gt; 
+&lt;p&gt;It will take approximately 30-40 minutes per cluster to provision the resources. Once the stack has finished deploying, you can check the output values to find the public IP address of the headnode (Figure 4).&lt;/p&gt; 
+&lt;div id="attachment_3931" style="width: 735px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3931" loading="lazy" class="size-full wp-image-3931" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/IMG-2024-07-03-13.08.24.png" alt="Figure 4 - Stack output values. This is how you find out the IP number of the headnode of the cluster." width="725" height="719"&gt;
+ &lt;p id="caption-attachment-3931" class="wp-caption-text"&gt;Figure 4 – Stack output values. This is how you find out the IP number of the headnode of the cluster.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Using the headnode IP and your SSH key you will be able to login to the headnode of your cluster to submit jobs. Slurm-Mail will then send you job notification emails. We’ve shown an example e-mail in Figure 5.&lt;/p&gt; 
+&lt;div id="attachment_3932" style="width: 672px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3932" loading="lazy" class="size-full wp-image-3932" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/IMG-2024-07-03-13.08.49.png" alt="Figure 5 - Example e-mail generated by Slurm-Mail running on AWS ParallelCluster" width="662" height="1015"&gt;
+ &lt;p id="caption-attachment-3932" class="wp-caption-text"&gt;Figure 5 – Example e-mail generated by Slurm-Mail running on AWS ParallelCluster&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Adding e-mail notifications to an existing cluster&lt;/h2&gt; 
+&lt;p&gt;Before proceeding to update an &lt;em&gt;existing&lt;/em&gt; ParallelCluster deployment, make sure you have an AWS SES e-mail identity configured along with a SMTP user and password (see the previous section).&lt;/p&gt; 
+&lt;p&gt;Now you need to login to the headnode of your ParallelCluster and execute some commands to download the post-install script:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;wget https://raw.githubusercontent.com/aws-samples/aws-hpc-recipes/main/recipes/pcluster/slurm_accounting_with_email/assets/postinstall.sh -O ./post-install.sh
+chmod +x ./post-install.sh
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Now you can execute the script with the necessary command line options to configure Slurm-Mail on your headnode. The script will perform some actions:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Determines the OS version&lt;/li&gt; 
+ &lt;li&gt;Configures the &lt;code&gt;yum&lt;/code&gt; or Ubuntu repository for Slurm-Mail based on the OS.&lt;/li&gt; 
+ &lt;li&gt;Installs the &lt;code&gt;Slurm-Mail&lt;/code&gt; package&lt;/li&gt; 
+ &lt;li&gt;Updates the &lt;code&gt;Slurm-Mail&lt;/code&gt; configuration file to use your SMTP settings from SES&lt;/li&gt; 
+ &lt;li&gt;Updates your Slurm configuration file to use Slurm-Mail for e-mail notifications&lt;/li&gt; 
+ &lt;li&gt;Restarts your Slurm controller daemon (&lt;code&gt;slurmctld&lt;/code&gt;)&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;You can then run the script as root to perform the installation and configuration – make sure you replace the &lt;code&gt;$SES_*&lt;/code&gt; variables with the values for your set-up.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;sudo ./post-install.sh -c /opt/slurm/etc/slurm.conf -d /opt/slurm/bin \
+    -e $SES_email_address -u $SES_user -p $SES_password \
+    -n $SES_port -s $SES_server
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;h2&gt;How can we take this further?&lt;/h2&gt; 
+&lt;p&gt;So far we’ve been able to receive notifications about our Slurm jobs running on AWS ParallelCluster via e-mail. But what if we wanted to receive an SMS text message – or even trigger another AWS service to perform an action? For example we could invoke an AWS Lambda function to post-process files that a Slurm job wrote to an Amazon S3 bucket.&lt;/p&gt; 
+&lt;p&gt;It turns out we can do this, thanks to the ability of SES to send a notification that includes the e-mail headers to an Amazon Simple Notification Service (SNS) topic of our choosing when the e-mails are successfully delivered.&lt;/p&gt; 
+&lt;p&gt;From here we can configure the SNS topic to invoke a Lambda function that uses the SMS sending facilities in SES. Since we include the e-mail headers in the Amazon SNS notification, we can just extract “Subject” and include this in the text message that we want to send.&lt;/p&gt; 
+&lt;p&gt;In the &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/slurm_accounting_with_email"&gt;recipe repository&lt;/a&gt; we’ve included &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/blob/main/recipes/pcluster/slurm_accounting_with_email/assets/launch-sms.yaml"&gt;a recipe&lt;/a&gt; that demonstrates this set-up. The recipe makes use of a CloudFormation custom resource to configure SES to send successful e-mail delivery notifications to a SNS &lt;em&gt;topic&lt;/em&gt; that we also create in that same template.&lt;/p&gt; 
+&lt;p&gt;Figure 6 illustrates the flow of information all the way from Slurm on the headnode, through Slurm-Mail, to Amazon SES, through to Amazon SNS to send the SMS text message (you may need to read that sentence a couple of times, but we promise this makes sense). All the resources we show in that diagram are created by the recipe.&lt;/p&gt; 
+&lt;div id="attachment_3933" style="width: 1008px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3933" loading="lazy" class="size-full wp-image-3933" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/IMG-2024-07-03-13.10.43.png" alt="Figure 6 - Generating SMS text messages with AWS ParallelCluster" width="998" height="417"&gt;
+ &lt;p id="caption-attachment-3933" class="wp-caption-text"&gt;Figure 6 – Generating SMS text messages with AWS ParallelCluster&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;This code snippet shows how we can send a SMS message using SNS in a Lambda function, using the Python runtime:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-python"&gt;import json
+import os
+import boto3
+
+def handler(event, context):          
+    message = json.loads(event['Records'][0]['Sns']['Message'])
+    if "mail" in message:
+        # send to phone number
+        sns = boto3.client("sns")
+        print(f'sending text message to {os.environ["SMS_NUMBER"]}')
+        try:
+            sns.publish(
+                PhoneNumber=os.environ["SMS_NUMBER"],
+                Message=message["mail"]["commonHeaders"]["subject"]
+            )
+        except Exception as err:
+            print(f'Unable to send message: {err}')
+            return
+        print('message sent ')
+    return
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Sending a SMS text message is only &lt;em&gt;one&lt;/em&gt; possibility, however. By using Amazon SNS to trigger an AWS Lambda function, we can interact with many other AWS services to perform tasks for us by using the &lt;a href="https://boto3.amazonaws.com"&gt;Boto3&lt;/a&gt; module for Python for example.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;We’ve shown you how you can provision a working AWS ParallelCluster with just a few mouse clicks that – once deployed – is ready and waiting to send to us job notification e-mails. We can submit our jobs without having to manually check-up on them. The content provided in the e-mails is further enhanced, thanks to Slurm-Mail.&lt;/p&gt; 
+&lt;p&gt;Finally, we’ve also shown you how to take this further and deploy a ParallelCluster capable of also sending us &lt;em&gt;SMS text messages&lt;/em&gt; when our jobs’ change state. This is just one example of how Slurm job notifications can be used to trigger – and pass information to – other AWS services.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Gang scheduling pods on Amazon EKS using AWS Batch multi-node processing jobs</title>
 		<link>https://aws.amazon.com/blogs/hpc/gang-scheduling-pods-on-amazon-eks-using-aws-batch-multi-node-processing-jobs/</link>
 		
@@ -47,7 +172,7 @@
 &lt;p&gt;When you define an MNP job, you choose what type and how many instances you want to launch. AWS Batch will launch the same instance size for all nodes, designating one of them to be the “main node”. Figure 1 illustrates the deployment strategy we used for our example distributed Dask workload, a simple print out of “Hello world!” across all workers.&lt;/p&gt; 
 &lt;p&gt;The main node hosts the Dask scheduler, along with our analysis script. Dask workers are launched on each child node. The Dask workers connect to the Dask scheduler on the main node using details encoded in the Batch environment variable. Once the analysis is complete, the application container will send a shutdown signal to the scheduler and workers, causing them to cleanly shut down.&lt;/p&gt; 
 &lt;div id="attachment_3984" style="width: 1003px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3984" class="size-full wp-image-3984" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/IMG-2024-07-10-19.24.14.png" alt="Figure 1 – Our deployment strategy for the distributed Dask workload. Dask workers are launched on each child node and connect to the Dask scheduler on the main node. When complete, the application container will send a shutdown signal to the scheduler and workers, causing them to cleanly shut down." width="993" height="600"&gt;
+ &lt;img aria-describedby="caption-attachment-3984" loading="lazy" class="size-full wp-image-3984" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/IMG-2024-07-10-19.24.14.png" alt="Figure 1 – Our deployment strategy for the distributed Dask workload. Dask workers are launched on each child node and connect to the Dask scheduler on the main node. When complete, the application container will send a shutdown signal to the scheduler and workers, causing them to cleanly shut down." width="993" height="600"&gt;
  &lt;p id="caption-attachment-3984" class="wp-caption-text"&gt;Figure 1 – Our deployment strategy for the distributed Dask workload. Dask workers are launched on each child node and connect to the Dask scheduler on the main node. When complete, the application container will send a shutdown signal to the scheduler and workers, causing them to cleanly shut down.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h2&gt;Overview of our example&lt;/h2&gt; 
@@ -2061,104 +2186,6 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 &lt;p&gt;We didn’t modify the source code of GROMACS and LAMMPS, choosing instead to leverage “auto-vectorization” implemented in the compilers.&lt;/p&gt; 
 &lt;p&gt;Arm’s compiler for Linux (ACfL) with SVE enabled SIMD boosted GROMACS performance up to 22% compared with the GNU compiler and NEON/ASIMD on Hpc7g instances. Arm compiler for Linux sped up LAMMPS simulation between 2.3% to 46%, depending on the case, compared to the GNU compiler on a single node basis. For LAMMPS, we also saw performance improvements at larger core counts with hybrid MPI + OpenMP parallelization.&lt;/p&gt; 
 &lt;p&gt;We’ve made all our build scripts – and job submission scripts – available in our GitHub samples repo, and we’d encourage you to use this if you want to build on this work for your own research workloads. If you need to discuss any of this, feel free to reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Accelerate drug discovery with NVIDIA BioNeMo Framework on Amazon EKS</title>
-		<link>https://aws.amazon.com/blogs/hpc/accelerate-drug-discovery-with-nvidia-bionemo-framework-on-amazon-eks/</link>
-		
-		<dc:creator><![CDATA[Doruk Ozturk]]></dc:creator>
-		<pubDate>Wed, 01 May 2024 15:01:56 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[ML]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">6ce72440eac8d6fda6dcdd01cb3b62a20165c5d0</guid>
-
-					<description>This post was contributed by Doruk Ozturk and Ankur Srivastava at AWS, and Neel Patel at NVIDIA. Introduction Drug discovery is a long and expensive process. Pharmaceutical companies must sift through thousands of compound possibilities to find potential new drugs to treat diseases. This process takes multiple years and costs billions of dollars, with the […]</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Doruk Ozturk and Ankur Srivastava at AWS, and Neel Patel at NVIDIA.&lt;/em&gt;&lt;/p&gt; 
-&lt;h2&gt;Introduction&lt;/h2&gt; 
-&lt;p&gt;Drug discovery is a long and expensive process. Pharmaceutical companies must sift through thousands of compound possibilities to find potential new drugs to treat diseases. This process takes multiple years and costs billions of dollars, with the majority of the candidates failing during clinical trials.&lt;/p&gt; 
-&lt;p&gt;As generative artificial intelligence (generative AI) continues to transform industries, the life sciences sector is leveraging these advanced technologies to accelerate drug discovery. Generative AI tools powered by deep learning models make it possible to analyze massive datasets, identify patterns, and generate insights to aid the search for new drug compounds. However, running these generative AI workloads requires a full-stack approach that combines robust computing infrastructure with optimized domain-specific software that can accelerate time to solution.&lt;/p&gt; 
-&lt;p&gt;In this blog post, we’ll show you how to leverage the NVIDIA BioNeMo platform on Amazon Elastic Kubernetes Service (Amazon EKS) to accelerate drug discovery by using generative AI and other machine learning technologies.&lt;/p&gt; 
-&lt;h2&gt;NVIDIA BioNeMo&lt;/h2&gt; 
-&lt;p&gt;&lt;a href="https://www.nvidia.com/en-us/clara/bionemo/"&gt;NVIDIA BioNeMo&lt;/a&gt; is a generative AI platform for drug discovery that simplifies and accelerates the training of models using your own data. BioNeMo provides researchers and developers a fast and easy way to build and integrate state-of-the-art generative AI applications across the entire drug discovery pipeline—from target identification to lead optimization—with AI workflows for 3D protein structure prediction, de novo design, virtual screening, docking, and property prediction.&lt;/p&gt; 
-&lt;p&gt;The BioNeMo framework facilitates centralized model training, optimization, fine-tuning, and inferencing for protein and molecular design. Researchers can build and train foundation models from scratch at scale, or use pre-trained model checkpoints provided with the BioNeMo Framework for fine-tuning for downstream tasks. Currently, BioNeMo supports models such as ESM1nv, ESM2nv, ProtT5nv, DNABERT, OpenFold, EquiDock, DiffDock, and MegaMolBART. To read more about BioNeMo, visit &lt;a href="https://docs.nvidia.com/bionemo-framework/latest/"&gt;the documentation page&lt;/a&gt;.&lt;/p&gt; 
-&lt;div id="attachment_3527" style="width: 1689px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3527" loading="lazy" class="wp-image-3527 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/15/HPCBlog-281-fig1-1.png" alt="Figure 1: This image shows the workflow for developing models on NVIDIA BioNeMo. The process is divided into phases for model development and customization and then fine-tuning and deployment." width="1679" height="691"&gt;
- &lt;p id="caption-attachment-3527" class="wp-caption-text"&gt;Figure 1: This image shows the workflow for developing models on NVIDIA BioNeMo. The process is divided into phases for model development and customization and then fine-tuning and deployment.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;In this post, we’ll walk through how to deploy the NVIDIA BioNeMo Framework on Amazon Elastic Kubernetes Service (Amazon EKS). Amazon EKS provides a fully managed Kubernetes service, making it simpler to run distributed, containerized generative AI workloads at scale. The process will cover:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Setting up an EKS cluster with NVIDIA GPU nodes&lt;/li&gt; 
- &lt;li&gt;Leveraging Amazon FSx for Lustre for high-performance data storage and sharing&lt;/li&gt; 
- &lt;li&gt;Downloading and ingesting Uniref-50 data in a machine learning friendly format&lt;/li&gt; 
- &lt;li&gt;Running a distributed pre-training job to train the ESM-1nv model&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h2&gt;Architecture&lt;/h2&gt; 
-&lt;div id="attachment_3528" style="width: 1145px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3528" loading="lazy" class="size-full wp-image-3528" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/15/HPCBlog-281-fig2-1.png" alt="Figure 2:&amp;nbsp; This architecture diagram shows Amazon EKS cluster with GPU nodes, Amazon FSx for Lustre filesystem, and BioNeMo containers. GPU nodes are optimized for machine learning workloads. The FSx filesystem enables fast access to data needed for distributed training. Amazon CloudWatch is used for logging and monitoring." width="1135" height="1003"&gt;
- &lt;p id="caption-attachment-3528" class="wp-caption-text"&gt;Figure 2: This architecture diagram shows Amazon EKS cluster with GPU nodes, Amazon FSx for Lustre filesystem, and BioNeMo containers. GPU nodes are optimized for machine learning workloads. The FSx filesystem enables fast access to data needed for distributed training. Amazon CloudWatch is used for logging and monitoring.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We leveraged the &lt;a href="https://github.com/aws-ia/terraform-aws-eks-blueprints"&gt;Amazon EKS Blueprints for Terraform &lt;/a&gt;and &lt;a href="https://github.com/awslabs/data-on-eks"&gt;Data on EKS&lt;/a&gt; open source projects to build a robust Kubernetes infrastructure on EKS using Infrastructure as Code best practices. These projects enabled us to quickly stand up an EKS cluster while meeting security and operational excellence requirements.&lt;/p&gt; 
-&lt;p&gt;In particular, the Terraform blueprints let us create a production-grade EKS cluster with networking, security groups, node groups, and other critical components out-of-the-box. The Data on EKS repository provided examples for running data-intensive workloads such as Apache Spark and TensorFlow on EKS. Together, these tools allowed us to launch an EKS cluster purpose-built for large-scale data processing in a reproducible and automated fashion. We can easily scale the cluster up to hundreds of nodes to handle compute-intensive jobs. Adopting these community-built modules accelerated our delivery timelines while ensuring the infrastructure remained secure, observable, and operationally robust as it scaled. The flexibility to customize the modules as needed also enabled us to tailor the infrastructure to the specific needs of our data workloads.&lt;/p&gt; 
-&lt;h1&gt;The NVIDIA BioNeMo on EKS Blueprint&lt;/h1&gt; 
-&lt;p&gt;We published all of the templates we used to deploy BioNeMo on EKS as a new Data on EKS &lt;a href="https://github.com/awslabs/data-on-eks/tree/main/ai-ml/bionemo"&gt;blueprint&lt;/a&gt; on GitHub. We’ll continue to iterate and improve on this blueprint over time, so you should bookmark and refer to the &lt;a href="https://awslabs.github.io/data-on-eks/docs/gen-ai/training/bionemo"&gt;official documentation&lt;/a&gt; on the Data on EKS website moving forward. However, we will discuss key configuration details and technical details here for reference.&lt;/p&gt; 
-&lt;p&gt;Step one, as always, is to prepare the input data as a machine learning friendly structure. Uniref50 contains over 50 million unique protein sequences clustered from UniProt at 50% identity. This comprehensive set provides a foundation for vital tasks such as gene annotation and protein family prediction.&lt;/p&gt; 
-&lt;p&gt;To leverage Uniref50’s scale, we downloaded and organized the data into training, validation, and test partitions. This layout enhances downstream machine learning by enabling effective model building, evaluation, and monitoring of overfitting. An Amazon FSx for Lustre shared filesystem provided the high-throughput storage needed for data sharing across the compute cluster nodes.&lt;/p&gt; 
-&lt;p&gt;After data preparation, we are ready to run the pretraining job. It is important to leverage all available NVIDIA GPU resources for maximum performance. P5 instances powered by NVIDIA H100 Tensor Core GPUs offer the best performance, however, in this example, we used two p3.16xlarge instances with eight GPUs each for demonstration purposes. To utilize all 16 GPUs, we configured the &lt;code&gt;PytorchJob&lt;/code&gt; &lt;a href="https://github.com/awslabs/data-on-eks/blob/main/ai-ml/bionemo/examples/training/esm1nv_pretrain-job.yaml"&gt;custom resource&lt;/a&gt; with one GPU per replica:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-yaml"&gt;resources:
-  requests:
-    nvidia.com/gpu: 1
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;We set replicas to match the total number of available GPUs across the worker nodes:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-yaml"&gt;pytorchReplicaSpecs:
-&amp;nbsp; Worker:
-&amp;nbsp;&amp;nbsp;&amp;nbsp; replicas: 16&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;To allocate 8 processes per GPU node, we set:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-yaml"&gt;nprocPerNode: "8"&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;By default, workloads that don’t require GPUs won’t be scheduled on our GPU nodes. To make sure our BioNeMo pods were scheduled on the GPU nodes, we added tolerations:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-yaml"&gt;tolerations:
--  Key: nvidia.com/gpu
-    operator: Exists
-    effect: NoSchedule
-&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;To utilize a larger cluster for BioNeMo analysis, change the above values to match the cluster size. For example, to fully leverage a cluster of 8 p3.8xlarge instances, each with 4 GPUs, you would need to change the following parameters:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Set “&lt;code&gt;nprocPerNode&lt;/code&gt;” to 4 to indicate the number of GPUs available per node.&lt;/li&gt; 
- &lt;li&gt;Set “&lt;code&gt;replicas&lt;/code&gt;” to 32 to total the number of GPUs across the 8 nodes.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;As each p3.8xlarge instance contains 4 GPUs, 8 instances x 4 GPUs per instance = 32 GPUs in the cluster.&lt;/p&gt; 
-&lt;p&gt;By properly configuring these parameters according to the resources provisioned, you can efficiently parallelize the training across the all-available GPUs in the cluster. For more information on configuring Pytorch and Kubeflow for your specific needs, read the &lt;a href="https://pytorch.org/docs/stable/distributed.html"&gt;Pytorch distributed module documentation&lt;/a&gt; and the &lt;a href="https://www.kubeflow.org/docs/components/training/"&gt;Kubeflow Training Operator’s documentation&lt;/a&gt;&lt;u&gt;,&lt;/u&gt; respectively.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In summary, leveraging technologies such as NVIDIA BioNeMo on Amazon EKS can accelerate AI-powered drug discovery by orders of magnitude. By combining the power of generative models with robust infrastructure for distributed training, researchers can rapidly analyze massive protein datasets to uncover new drug compound candidates. Automating infrastructure deployment using Terraform modules and best practices for maximum GPU utilization, storage, and monitoring enables workloads to benefit from security, scalability, and observability. Subject matter experts are a key resource for drug discover, and purpose-built generative AI platforms on cloud-native infrastructure can augment their creativity and intuition. As this technology continues maturing, we may see further breakthroughs in delivering life-saving treatments to patients faster.&lt;/p&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/15/nilkanthp-nvidia-profile.png" alt="Neel Patel" width="125"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Neel Patel&lt;/h3&gt; 
-  &lt;p&gt;Neel Patel is a drug discovery scientist at NVIDIA, who focuses on cheminformatics and computational structural biology. Before joining NVIDIA, Patel was a computational chemist at Takeda Pharmaceuticals. He holds a Ph.D. from the University of Southern California. He lives in San Diego with his family and enjoys hiking and travelling.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
 					
 		
 		
