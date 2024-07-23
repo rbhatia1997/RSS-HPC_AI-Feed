@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 22 Jul 2024 16:35:14 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 22 Jul 2024 22:59:59 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,69 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>NVIDIA’s AI Masters Sweep KDD Cup 2024 Data Science Competition</title>
+		<link>https://blogs.nvidia.com/blog/nvidia-ai-masters-kdd-cup-2024/</link>
+		
+		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
+		<pubDate>Mon, 22 Jul 2024 22:47:07 +0000</pubDate>
+				<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Data Science]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73114</guid>
+
+					<description><![CDATA[Team NVIDIA has triumphed at the Amazon KDD Cup 2024, securing first place Friday across all five competition tracks. The team — consisting of NVIDIANs Ahmet Erdem, Benedikt Schifferer, Chris Deotte, Gilberto Titericz, Ivan Sorokin and Simon Jegou — demonstrated its prowess in generative AI, winning in categories that included text generation, multiple-choice questions, name	<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-ai-masters-kdd-cup-2024/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Team NVIDIA has triumphed at the Amazon <a href="https://kdd2024.kdd.org/" target="_blank" rel="noopener">KDD Cup 2024</a>, securing first place Friday across all five competition tracks.</p>
+<p>The team — consisting of NVIDIANs <a href="https://www.linkedin.com/in/aerdem4/&amp;sa=D&amp;source=docs&amp;ust=1721670200192732&amp;usg=AOvVaw097v0q1qfYZH3Wca9bat0d" target="_blank" rel="noopener">Ahmet Erdem</a>, <a href="https://www.linkedin.com/in/benedikt-schifferer/" target="_blank" rel="noopener">Benedikt Schifferer</a>, <a href="https://www.kaggle.com/cdeotte" target="_blank" rel="noopener">Chris Deotte</a>, <a href="https://www.linkedin.com/in/giba1/" target="_blank" rel="noopener">Gilberto Titericz</a>, <a href="https://www.linkedin.com/in/lytic/" target="_blank" rel="noopener">Ivan Sorokin</a> and <a href="https://www.linkedin.com/in/simon-jegou/" target="_blank" rel="noopener">Simon Jegou</a> — demonstrated its prowess in generative AI, winning in categories that included text generation, multiple-choice questions, name entity recognition, ranking, and retrieval.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1.png"><img fetchpriority="high" decoding="async" class="alignnone size-large wp-image-73115" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-672x156.png" alt="" width="672" height="156" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-672x156.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-400x93.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-768x178.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-1536x356.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-842x195.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-406x94.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-188x44.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1-1280x296.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image1.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>The competition, themed “<a href="https://www.aicrowd.com/challenges/amazon-kdd-cup-2024-multi-task-online-shopping-challenge-for-llms" target="_blank" rel="noopener">Multi-Task Online Shopping Challenge for LLMs</a>,” asked participants to solve various challenges using limited datasets.</p>
+<p>“The new trend in LLM competitions is that they don’t give you training data,” said Deotte, a senior data scientist at NVIDIA. “They give you 96 example questions — not enough to train a model — so we came up with 500,000 questions on our own.”</p>
+<p>Deotte explained that the NVIDIA team generated a variety of questions by writing some themselves, using a <a href="https://www.nvidia.com/en-us/glossary/large-language-models/" target="_blank" rel="noopener">large language model</a> to create others, and transforming existing e-commerce datasets.</p>
+<p>“Once we had our questions, it was straightforward to use existing frameworks to fine-tune a language model,” he said.</p>
+<p>The competition organizers hid the test questions to ensure participants couldn’t exploit previously known answers. This approach encourages models that generalize well to any question about e-commerce, proving the model’s capability to handle real-world scenarios effectively.</p>
+<p>Despite these constraints, Team NVIDIA’s innovative approach outperformed all competitors by using Qwen2-72B, a just-released LLM with 72 billion parameters, fine-tuned on eight NVIDIA A100 Tensor Core GPUs, and employing QLoRA, a technique for fine-tuning models with datasets.</p>
+<h2><strong>About the KDD Cup 2024</strong></h2>
+<p>The KDD Cup, organized by the Association for Computing Machinery’s Special Interest Group on Knowledge Discovery and Data Mining, or ACM SIGKDD, is a prestigious annual competition that promotes research and development in the field.</p>
+<p>This year’s challenge, hosted by Amazon, focused on mimicking the complexities of online shopping with the goal of making it a more intuitive and satisfying experience using large language models. Organizers utilized the test dataset ShopBench — a benchmark that replicates the massive challenge for online shopping with 57 tasks and about 20,000 questions derived from real-world Amazon shopping data — to evaluate participants&#8217; models.</p>
+<p>The ShopBench benchmark focused on four key shopping skills, along with a fifth “all-in-one” challenge:</p>
+<ol>
+<li>Shopping Concept Understanding: Decoding complex shopping concepts and terminologies.</li>
+<li>Shopping Knowledge Reasoning: Making informed decisions with shopping knowledge.</li>
+<li>User Behavior Alignment: Understanding dynamic customer behavior.</li>
+<li>Multilingual Abilities: Shopping across languages.</li>
+<li>All-Around: Solving all tasks from the previous tracks in a unified solution.</li>
+</ol>
+<h2><strong>NVIDIA’s Winning Solution</strong></h2>
+<p>NVIDIA’s winning solution involved creating a single model for each track.</p>
+<p>The team fine-tuned the just-released Qwen2-72B model using eight NVIDIA A100 Tensor Core GPUs for approximately 24 hours. The GPUs provided fast and efficient processing, significantly reducing the time required for fine-tuning.</p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2.jpg"><img decoding="async" class="alignnone size-large wp-image-73118" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-672x191.jpg" alt="" width="672" height="191" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-672x191.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-400x114.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-768x219.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-1536x438.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-842x240.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-406x116.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-188x54.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2-1280x365.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image2.jpg 1811w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p>First, the team generated training datasets based on the provided examples and synthesized additional data using Llama 3 70B hosted on <a href="http://build.nvidia.com" target="_blank" rel="noopener">build.nvidia.com</a>.</p>
+<p>Next, they employed QLoRA (Quantized Low-Rank Adaptation), a training process using the data created in step one. QLoRA modifies a smaller subset of the model’s weights, allowing efficient training and fine-tuning.</p>
+<p>The model was then quantized — making it smaller and able to run on a system with a smaller hard drive and less memory — with AWQ 4-bit and used the vLLM inference library to predict the test datasets on four NVIDIA T4 Tensor Core GPUs within the time constraints.</p>
+<p>This approach secured the top spot in each individual track and the overall first place in the competition—a clean sweep for NVIDIA for the second year in a row.</p>
+<p>The team plans to submit a detailed paper on its solution next month and plans to present its findings at KDD 2024 in Barcelona.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/sigg24-llm-image-AI-Masters.png"
+			type="image/png"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/sigg24-llm-image-AI-Masters-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA’s AI Masters Sweep KDD Cup 2024 Data Science Competition]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Sustainable Strides: How AI and Accelerated Computing Are Driving Energy Efficiency</title>
 		<link>https://blogs.nvidia.com/blog/accelerated-ai-energy-efficiency/</link>
 		
@@ -41,14 +104,15 @@
 <p>It’s progress the wider community is starting to acknowledge.</p>
 <p>“Even if the predictions that data centers will soon account for 4% of global energy consumption become a reality, AI is having a major impact on reducing the remaining 96% of energy consumption,” said a <a href="https://lisboncouncil.net/wp-content/uploads/2024/04/LISBON_COUNCIL_Research_Sustainable_Computing_For_A_Sustainable_Planet.pdf" target="_blank" rel="noopener">report</a> from Lisbon Council Research, a nonprofit formed in 2003 that studies economic and social issues.</p>
 <p>The article from the Brussels-based research group is among a handful of big-picture AI policy studies starting to emerge. It uses Italy’s <a href="https://blogs.nvidia.com/blog/supercomputing-ai-eurohpc/" target="_blank" rel="noopener">Leonardo supercomputer</a>, accelerated with nearly 14,000 NVIDIA GPUs, as an example of a system advancing work in fields from automobile design and drug discovery to weather forecasting.</p>
-<figure id="attachment_73091" aria-describedby="caption-attachment-73091" style="width: 600px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png"><img fetchpriority="high" decoding="async" class="wp-image-73091 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png" alt="" width="600" height="395" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png 600w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-400x263.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-327x215.png 327w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-152x100.png 152w" sizes="(max-width: 600px) 100vw, 600px" /></a><figcaption id="caption-attachment-73091" class="wp-caption-text">Energy-efficiency gains over time for the most efficient supercomputer on the TOP500 list. Source: TOP500.org</figcaption></figure>
+<figure id="attachment_73091" aria-describedby="caption-attachment-73091" style="width: 600px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png"><img decoding="async" class="wp-image-73091 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png" alt="" width="600" height="395" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image10.png 600w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-400x263.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-327x215.png 327w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image10-152x100.png 152w" sizes="(max-width: 600px) 100vw, 600px" /></a><figcaption id="caption-attachment-73091" class="wp-caption-text">Energy-efficiency gains over time for the most efficient supercomputer on the TOP500 list. Source: TOP500.org</figcaption></figure>
 <h2><b>Why Accelerated Computing Is Sustainable Computing</b></h2>
 <p>Accelerated computing uses the parallel processing of NVIDIA GPUs to do more work in less time. As a result, it consumes less energy than general-purpose servers that employ CPUs built to handle one task at a time.</p>
 <p>That’s why accelerated computing is <a href="https://www.nvidia.com/en-us/data-center/sustainable-computing/?ncid=so-link-848252-vt04" target="_blank" rel="noopener">sustainable computing</a>.</p>
-<figure id="attachment_73075" aria-describedby="caption-attachment-73075" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph.jpg"><img decoding="async" class="wp-image-73075 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-672x297.jpg" alt="" width="672" height="297" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-672x297.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-400x177.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-768x340.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-842x373.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-406x180.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-188x83.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph.jpg 1146w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73075" class="wp-caption-text">Accelerated systems use parallel processing on GPUs to do more work in less time, consuming less energy than CPUs.</figcaption></figure>
+<figure id="attachment_73075" aria-describedby="caption-attachment-73075" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph.jpg"><img loading="lazy" decoding="async" class="wp-image-73075 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-672x297.jpg" alt="" width="672" height="297" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-672x297.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-400x177.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-768x340.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-842x373.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-406x180.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph-188x83.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/power-to-time-gpu-vs-cpu-graph.jpg 1146w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73075" class="wp-caption-text">Accelerated systems use parallel processing on GPUs to do more work in less time, consuming less energy than CPUs.</figcaption></figure>
 <p>The gains are even greater when <a href="https://blogs.nvidia.com/blog/why-gpus-are-great-for-ai/" target="_blank" rel="noopener">accelerated systems apply AI</a>, an inherently parallel form of computing that’s the most transformative technology of our time.</p>
 <p>“When it comes to frontier applications like machine learning or deep learning, the performance of GPUs is an order of magnitude better than that of CPUs,” the report said.</p>
-<figure id="attachment_73051" aria-describedby="caption-attachment-73051" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers.jpg"><img decoding="async" class="wp-image-73051 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-672x263.jpg" alt="" width="672" height="263" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-672x263.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-400x156.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-768x300.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-1536x600.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-842x329.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-406x159.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-188x73.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-1280x500.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers.jpg 1699w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73051" class="wp-caption-text">NVIDIA offers a combination of GPUs, CPUs, and DPUs tailored to maximize energy efficiency with accelerated computing.</figcaption></figure>
+<p>By transitioning from CPU-only operations to GPU-accelerated systems, HPC and AI workloads can save over 40 terawatt-hours of energy annually, equivalent to the electricity needs of nearly 5 million U.S. homes.</p>
+<figure id="attachment_73051" aria-describedby="caption-attachment-73051" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers.jpg"><img loading="lazy" decoding="async" class="wp-image-73051 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-672x263.jpg" alt="" width="672" height="263" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-672x263.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-400x156.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-768x300.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-1536x600.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-842x329.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-406x159.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-188x73.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers-1280x500.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/traditional-vs-nvidia-servers.jpg 1699w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73051" class="wp-caption-text">NVIDIA offers a combination of GPUs, CPUs, and DPUs tailored to maximize energy efficiency with accelerated computing.</figcaption></figure>
 <h2><b>User Experiences With Accelerated AI</b></h2>
 <p>Users worldwide are documenting energy-efficiency gains with AI and accelerated computing.</p>
 <p>In financial services, <a href="https://blogs.nvidia.com/blog/grace-hopper-murex-mx-3/" target="_blank" rel="noopener">Murex</a> — a Paris-based company with a trading and risk-management platform used daily by more than 60,000 people — tested the <a href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/" target="_blank" rel="noopener">NVIDIA Grace Hopper Superchip</a>. On its workloads, the CPU-GPU combo delivered a 4x reduction in energy consumption and a 7x reduction in time to completion compared with CPU-only systems (see chart below).</p>
@@ -1170,50 +1234,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Decoding How the Generative AI Revolution BeGAN]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>How an NVIDIA Engineer Unplugs to Recharge During Free Days</title>
-		<link>https://blogs.nvidia.com/blog/nvidia-life-free-days-2024/</link>
-		
-		<dc:creator><![CDATA[Haley Hirai]]></dc:creator>
-		<pubDate>Fri, 28 Jun 2024 13:00:23 +0000</pubDate>
-				<category><![CDATA[NVIDIA Life]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72785</guid>
-
-					<description><![CDATA[On a weekday afternoon, Ashwini Ashtankar sat on the bank of the Doodhpathri River, in a valley nestled in the Himalayas. Taking a deep breath, she noticed that there was no city noise, no pollution — and no work emails. Ashtankar, a senior tools development engineer in NVIDIA’s Pune, India, office, took advantage of the	<a class="read-more" href="https://blogs.nvidia.com/blog/nvidia-life-free-days-2024/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>On a weekday afternoon, Ashwini Ashtankar sat on the bank of the Doodhpathri River, in a valley nestled in the Himalayas. Taking a deep breath, she noticed that there was no city noise, no pollution — and no work emails.</p>
-<p>Ashtankar, a senior tools development engineer in NVIDIA’s Pune, India, office, took advantage of the company’s free days — two extra days off per quarter when the whole company disconnects from work — to recharge. Free days are fully paid by NVIDIA, not counted as vacation or as personal time off, and are in addition to country-specific holidays and time-away programs.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-72789" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Snow_Peak_Sonmarg-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
-<p>Free days give employees time to take an adventure, a breather — or both. Ashtankar and her husband, Dipen Sisodia — also an NVIDIAN — spent it outdoors, hiking up a mountain, playing in snow and exploring forests and lush green meadows.</p>
-<p>“My free days give me time to focus on myself and recharge,” said Ashtankar. “We didn’t take our laptops. We were able to completely disconnect, like all NVIDIANs were doing at the same time.”</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-large wp-image-72792" src="https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-672x378.jpg" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-1536x864.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-800x450.jpg 800w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/06/Mountain_top_bike-1280x720.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /></p>
-<p>Ashtankar returned to work feeling refreshed and recharged, she said. Her team tests software features of NVIDIA products, focusing on GPU display drivers and the <a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/">GeForce NOW</a> game-streaming service, to make sure bugs are found and addressed before a product reaches customers.</p>
-<p>“I take pride in tackling challenges with the highest level of quality and creativity, all in support of delivering the best products to our customers,” she said. “To do that, sometimes the most productive thing we can do is rest and let the soul catch up with the body.”</p>
-<p>Ashtankar plans to build her career at NVIDIA for many years to come.</p>
-<p>“I’ve never heard of another company that truly cares this much about its employees,” she said.</p>
-<p><i>Learn more about </i><a target="_blank" href="https://www.nvidia.com/en-us/about-nvidia/careers/life-at-nvidia/"><i>NVIDIA life, culture and careers</i></a><i>. </i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Ashwini-Ashtankar-Free-Days-Featured-Photo.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/06/Ashwini-Ashtankar-Free-Days-Featured-Photo-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[How an NVIDIA Engineer Unplugs to Recharge During Free Days]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
