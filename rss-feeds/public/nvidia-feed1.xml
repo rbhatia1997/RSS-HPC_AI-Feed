@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 23 Jul 2024 15:49:13 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 23 Jul 2024 18:43:13 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -44,7 +44,7 @@
 <p>The key difference is the product: TSMC produces physical semiconductor chips, while NVIDIA AI Foundry helps create custom models. Both enable innovation and connect to a vast ecosystem of tools and partners.</p>
 <p>Enterprises can use AI Foundry to customize NVIDIA and open community models, including the new <a target="_blank" href="https://ai.meta.com/blog/meta-llama-3-1/">Llama 3.1</a> collection, as well as <a href="https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/">NVIDIA Nemotron</a>, CodeGemma by Google DeepMind, CodeLlama, Gemma by Google DeepMind, Mistral, Mixtral, Phi-3, StarCoder2 and others.</p>
 <h2><b>Industry Pioneers Drive AI Innovation</b></h2>
-<p>Industry leaders <a target="_blank" href="https://www.amdocs.com/insights/press-release/amdocs-unveils-generative-ai-milestones-bringing-enhanced-efficiencies">Amdocs</a>, Capital One, Getty Images, KT, Hyundai Motor Company, SAP, ServiceNow and Snowflake are among the first using NVIDIA AI Foundry. These pioneers are setting the stage for a new era of AI-driven innovation in enterprise software, technology, communications and media.</p>
+<p>Industry leaders <a target="_blank" href="https://www.amdocs.com/insights/press-release/amdocs-unveils-generative-ai-milestones-bringing-enhanced-efficiencies">Amdocs</a>, Capital One, Getty Images, KT, Hyundai Motor Company, <a target="_blank" href="https://nvidianews.nvidia.com/news/sap-nvidia-generative-ai-enterprise-applications">SAP</a>, ServiceNow and Snowflake are among the first using NVIDIA AI Foundry. These pioneers are setting the stage for a new era of AI-driven innovation in enterprise software, technology, communications and media.</p>
 <p>“Organizations deploying AI can gain a competitive edge with custom models that incorporate industry and business knowledge,” said Jeremy Barnes, vice president of AI Product at ServiceNow. “ServiceNow is using NVIDIA AI Foundry to fine-tune and deploy models that can integrate easily within customers’ existing workflows.”</p>
 <h2><b>The Pillars of NVIDIA AI Foundry </b></h2>
 <p>NVIDIA AI Foundry is supported by the key pillars of foundation models, enterprise software, accelerated computing, expert support and a broad partner ecosystem.</p>
@@ -58,7 +58,7 @@
 <p>Inferencing solutions like <a target="_blank" href="https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/">NVIDIA TensorRT-LLM</a> deliver improved efficiency for Llama 3.1 models to minimize latency and maximize throughput. This enables enterprises to generate tokens faster while reducing total cost of running the models in production. Enterprise-grade support and security is provided by the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software suite.</p>
 <figure id="attachment_73149" aria-describedby="caption-attachment-73149" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-73149" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-672x362.png" alt="" width="672" height="362" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-672x362.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-400x215.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-768x414.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-836x450.png 836w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-399x215.png 399w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-186x100.png 186w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf.png 1140w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73149" class="wp-caption-text">NVIDIA NIM and TensorRT-LLM minimize inference latency and maximize throughput for Llama 3.1 models to generate tokens faster.</figcaption></figure>
 <p>The broad range of deployment options includes <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/certified-systems/">NVIDIA-Certified Systems</a> from global server manufacturing partners including Cisco, Dell Technologies, Hewlett Packard Enterprise, Lenovo and Supermicro, as well as cloud instances from Amazon Web Services, Google Cloud and Oracle Cloud Infrastructure.</p>
-<p>Additionally, Together AI, a leading AI acceleration cloud, today announced it will enable its ecosystem of over 100,000 developers and enterprises to use its NVIDIA GPU-accelerated inference stack to deploy Llama 3.1 endpoints and other open models on DGX Cloud.</p>
+<p>Additionally, <a target="_blank" href="https://www.together.ai/blog/nvidia-ai-foundry-partnership">Together AI</a>, a leading AI acceleration cloud, today announced it will enable its ecosystem of over 100,000 developers and enterprises to use its NVIDIA GPU-accelerated inference stack to deploy Llama 3.1 endpoints and other open models on DGX Cloud.</p>
 <p>“Every enterprise running generative AI applications wants a faster user experience, with greater efficiency and lower cost,” said Vipul Ved Prakash, founder and CEO of Together AI. “Now, developers and enterprises using the Together Inference Engine can maximize performance, scalability and security on NVIDIA DGX Cloud.”</p>
 <h2><b>NVIDIA NeMo Speeds and Simplifies Custom Model Development</b></h2>
 <p>With <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> integrated into AI Foundry, developers have at their fingertips the tools needed to curate data, customize foundation models and evaluate performance. NeMo technologies include:</p>
@@ -121,10 +121,10 @@
 <p>NIM inference microservices enable high-performance, easy-to-use, enterprise-grade inferencing. And with NeMo Retriever NIM microservices, developers can benefit from all of this — superpowered by their data.</p>
 <p>These new NeMo Retriever <a target="_blank" href="https://www.nvidia.com/en-eu/glossary/vector-database/#:~:text=What%20is%20an%20Embedding%20Model%3F">embedding</a> and reranking NIM microservices are now generally available:</p>
 <ul>
-<li style="font-weight: 400;" aria-level="1">NV-EmbedQA-E5-v5, a popular community base embedding model optimized for text question-answering retrieval</li>
-<li style="font-weight: 400;" aria-level="1">NV-EmbedQA-Mistral7B-v2, a popular multilingual community base model fine-tuned for text embedding for high-accuracy question answering</li>
-<li style="font-weight: 400;" aria-level="1">Snowflake-Arctic-Embed-L, an optimized community model, and</li>
-<li style="font-weight: 400;" aria-level="1">NV-RerankQA-Mistral4B-v3, a popular community base model fine-tuned for text reranking for high-accuracy question answering.</li>
+<li style="font-weight: 300;" aria-level="1">NV-EmbedQA-E5-v5, a popular community base embedding model optimized for text question-answering retrieval</li>
+<li style="font-weight: 300;" aria-level="1">NV-EmbedQA-Mistral7B-v2, a popular multilingual community base model fine-tuned for text embedding for high-accuracy question answering</li>
+<li style="font-weight: 300;" aria-level="1">Snowflake-Arctic-Embed-L, an optimized community model, and</li>
+<li style="font-weight: 300;" aria-level="1">NV-RerankQA-Mistral4B-v3, a popular community base model fine-tuned for text reranking for high-accuracy question answering.</li>
 </ul>
 <p>They join the collection of NIM microservices easily accessible through the <a target="_blank" href="https://build.nvidia.com/explore/retrieval">NVIDIA API catalog</a>.</p>
 <h2><b>Embedding and Reranking Models</b></h2>
