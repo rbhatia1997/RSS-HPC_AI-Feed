@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Tue, 23 Jul 2024 11:46:40 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 24 Jul 2024 15:56:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,234 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Deploying generative AI applications with NVIDIA NIMs on Amazon EKS</title>
+		<link>https://aws.amazon.com/blogs/hpc/deploying-generative-ai-applications-with-nvidia-nims-on-amazon-eks/</link>
+		
+		<dc:creator><![CDATA[Abhishek Sawarkar]]></dc:creator>
+		<pubDate>Wed, 24 Jul 2024 15:56:23 +0000</pubDate>
+				<category><![CDATA[Amazon Machine Learning]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Amazon FSx for Lustre]]></category>
+		<category><![CDATA[AWS Batch]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[MPI]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">864e8d92882395e358a5517106e0e927701768ae</guid>
+
+					<description>Learn how to deploy AI models at scale with @AWS using NVIDIA's NIM and Amazon EKS! This step-by-step guide shows you how to create a GPU cluster for inference. Don't miss part 1 of this 2-part blog series!</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright size-full wp-image-4072" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/24/Deploying-generative-AI-applications-with-NVIDIA-NIMs-on-Amazon-EKS-copy.png" alt="" width="380" height="212"&gt;This post was contributed by Abhishek Sawarkar (NVIDIA), Alex Iankoulski (AWS), Aman Shanbhag (AWS), Deepika Padmanabhan (NVIDIA), Jiahong Liu (NVIDIA), Joey Chou (AWS)&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Today, we’ll take you through a step-by-step -guide to help you to create a cluster of g5.48xlarge instances, accelerated by 8 x NVIDIA A10G Tensor Core GPUs, using Amazon Elastic Kubernetes Service (Amazon EKS) to host your inference solution via &lt;a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/"&gt;NVIDIA NIM&lt;/a&gt;, NVIDIA’s optimized microservices for deploying AI models at scale. This blog is part 1 of a 2-part series.&lt;/p&gt; 
+&lt;p&gt;Amazon EKS is a managed service for running Kubernetes workloads on AWS. We can use EKS to orchestrate NVIDIA NIM (plural: NIMs) pods across multiple nodes, because it automatically manages the availability and scalability of the Kubernetes control plane nodes responsible for scheduling containers, managing application availability, storing cluster data, and other key tasks. EKS also integrates with AWS networking, security, and infrastructure – leveraging all the performance, scale, reliability, &lt;em&gt;and&lt;/em&gt; availability of AWS infrastructure. You can find all the details in the &lt;a href="https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html"&gt;EKS documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;To follow along, you can find the code in our &lt;code&gt;awsome-inference&lt;/code&gt; &lt;a href="https://github.com/aws-samples/awsome-inference"&gt;GitHub repository&lt;/a&gt;. This repo contains reference architectures and test cases for inference on AWS. The examples cover a variety of models, use-cases, and frameworks for inference optimization.&lt;/p&gt; 
+&lt;h2&gt;Introducing NVIDIA NIM&lt;/h2&gt; 
+&lt;p&gt;NVIDIA NIM (or just NIM for the rest of this post) is part of the NVIDIA AI Enterprise, available on the &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-ozgjkov6vq3l6"&gt;AWS Marketplace&lt;/a&gt;. NIM is a set of easy-to-use microservices designed for secure, reliable deployment of high-performance AI model inference supporting the next generation of world-class &lt;a href="https://developer.nvidia.com/generative-ai"&gt;generative AI &lt;/a&gt;applications. NIM offers developers a number of benefits including ease of use, performance at scale, and security. For more information on NIM, check out the &lt;a href="https://docs.nvidia.com/nim/large-language-models/latest/introduction.html?nvid=nv-int-tblg-432774"&gt;NIM Documentation&lt;/a&gt; or &lt;a href="https://docs.nvidia.com/nim/large-language-models/latest/getting-started.html"&gt;Getting Started&lt;/a&gt; pages.&lt;/p&gt; 
+&lt;h3&gt;Ease of use&lt;/h3&gt; 
+&lt;p&gt;NIM speeds up time-to-market with pre-built, cloud-native containerized microservices that are continuously maintained to deliver optimized inference on NVIDIA GPU accelerated instances.&lt;/p&gt; 
+&lt;h3&gt;Performance and scale&lt;/h3&gt; 
+&lt;p&gt;NIM can improve the Total Cost of Ownership (TCO) by providing low latency, high throughput inference for AI applications, that scales on EKS depending upon the number of incoming requests. We’ll cover NIM performance and benchmarking in-depth in a future blog post. If you’re interested in learning more about the performance advantage of NIM now, you can check out &lt;a href="https://developer.nvidia.com/blog/nvidia-collaborates-with-hugging-face-to-simplify-generative-ai-model-deployments/"&gt;NVIDIA’s blog with Hugging Face&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3&gt;Security&lt;/h3&gt; 
+&lt;p&gt;By hosting NIM on EKS, you can leverage enterprise-grade software with dedicated feature branches, security patching, rigorous validation processes, and enterprise support, including access to NVIDIA AI experts. This way, you can maintain security, and control, of your generative AI applications.&lt;/p&gt; 
+&lt;p&gt;To learn more about hosting on AWS, check out &lt;a href="https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing"&gt;Amazon EC2 Accelerated Computing Instances&lt;/a&gt;, &lt;a href="https://aws.amazon.com/about-aws/whats-new/2024/03/amazon-sagemaker-integration-nvidia-nim-microservices/"&gt;Amazon SageMaker&lt;/a&gt;, and Amazon EKS. You can also explore the latest community-built AI models optimized and accelerated by NVIDIA NIM on NVIDIA AI.&lt;/p&gt; 
+&lt;p&gt;This post focuses on Amazon EKS, and walks you through deploying the Llama3-8B NIM on a single node of &lt;a href="https://aws.amazon.com/ec2/instance-types/g5/"&gt;Amazon EC2 G5 instances&lt;/a&gt;. The g5.48xlarge instance is powered by 8 x &lt;a href="https://www.nvidia.com/en-us/data-center/products/a10-gpu/"&gt;NVIDIA A10G Tensor Core GPUs&lt;/a&gt;. To learn more about g5 EC2 instances, check out &lt;a href="https://aws.amazon.com/ec2/instance-types/g5/"&gt;Amazon EC2 G5 Instances&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;You &lt;em&gt;can&lt;/em&gt; also use a smaller g5 instance (for example, the g5.12xlarge). The default profile of the Llama3-8B NIM is fp16, which means it takes up 16GB of GPU memory just for the model. If you want to follow along, we recommend having at least 24 GB of GPU memory so you can fully leverage the optimization benefits provided by NVIDIA NIM. To learn more about NIM &lt;em&gt;profiles&lt;/em&gt;, check out the &lt;a href="#_Deploying_the_NIM"&gt;Deploying the NIM&lt;/a&gt; section in this post.&lt;/p&gt; 
+&lt;h2&gt;Steps to deploy the Llama3-8B NIM onto a single g5.48xlarge instance&lt;/h2&gt; 
+&lt;h3&gt;Architecture: What you will be deploying&lt;/h3&gt; 
+&lt;div id="attachment_4063" style="width: 1106px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-4063" loading="lazy" class="size-full wp-image-4063" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/24/IMG-2024-07-24-12.25.21.png" alt="Figure 1 – This is the architecture diagram of what you will be provisioning during this 2-part-blog series. During this blog, we will provision EKS Resources (the Control Plane VPC is automatically provisioned in AWS’ account, and is fully managed), including the pods and worker node groups (g5.48xlarge in this blog). Additionally, we will also provision the Data Plane VPC and associated resources – Subnets (Public &amp;amp; Private), NAT Gateways, and the Internet Gateway. In part 2, we will cover Autoscaling (for both the cluster and pods) and Load Balancing (Ingress of type Application Load Balancer)." width="1096" height="614"&gt;
+ &lt;p id="caption-attachment-4063" class="wp-caption-text"&gt;Figure 1 – This is the architecture diagram of what you will be provisioning during this 2-part-blog series. During this blog, we will provision EKS Resources (the Control Plane VPC is automatically provisioned in AWS’ account, and is fully managed), including the pods and worker node groups (g5.48xlarge in this blog). Additionally, we will also provision the Data Plane VPC and associated resources – Subnets (Public &amp;amp; Private), NAT Gateways, and the Internet Gateway. In part 2, we will cover Autoscaling (for both the cluster and pods) and Load Balancing (Ingress of type Application Load Balancer).&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Since this post focuses on the Llama3-8B model in fp16, &lt;em&gt;we won’t need multiple instances provisioned to accommodate it&lt;/em&gt; (since the model fits on one GPU). We’ll talk about the shared file system (Amazon EFS) in a future post – when we talk about larger model NIMs.&lt;/p&gt; 
+&lt;h3&gt;Deploying into your AWS account&lt;/h3&gt; 
+&lt;h4&gt;Prerequisites&lt;/h4&gt; 
+&lt;p&gt;Before you proceed, please ensure you have the &lt;em&gt;NVIDIA AI Enterprise License (NVAIE) &lt;/em&gt;to access the NIMs. To learn more about how you can get access, go to &lt;a href="https://build.nvidia.com/explore/discover"&gt;build.nvidia.com &lt;/a&gt;and provide your corporate email address.&lt;/p&gt; 
+&lt;p&gt;To get started, clone the &lt;code&gt;awsome-inference&lt;/code&gt; &lt;a href="https://github.com/aws-samples/awsome-inference.git"&gt;GitHub Repository&lt;/a&gt;:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;git clone https://GitHub.com/aws-samples/awsome-inference.git&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Make sure that the following packages are installed:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;&lt;code&gt;aws cli&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;eksctl&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;kubectl&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;docker&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;helm&lt;/code&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;You can find shell scripts to install each one of these packages in the &lt;a href="https://github.com/aws-samples/aws-do-eks/tree/main/Container-Root/eks/ops/setup"&gt;aws-do-eks repository&lt;/a&gt; in the directory &lt;code&gt;aws-do-eks/Container-Root/eks/ops/setup/&lt;/code&gt;:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;&lt;code&gt;./install-aws-cli.sh&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;./install-eksctl.sh&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;./install-kubectl.sh&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;./install-docker.sh&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;./install-helm.sh&lt;/code&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Alternatively, you may choose to install the packages manually. You can find instructions for this in the &lt;a href="https://github.com/aws-samples/awsome-inference/blob/main/1.infrastructure/README.md"&gt;README&lt;/a&gt; file on the GitHub repo.&lt;/p&gt; 
+&lt;p&gt;Set up your &lt;a href="https://docs.nvidia.com/ngc/gpu-cloud/ngc-user-guide/index.html#generating-personal-api-key"&gt;NGC Personal API Key&lt;/a&gt;, so that you are ready to download the NIM Docker Images. Once you have that set up, export it as a command-line variable:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="lang-bash"&gt;export NGC_CLI_API_KEY=”key from ngc”&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The NGC Personal API Key is required for using the NGC Service through the Docker client – or via the NGC CLI. To learn more about the NGC Service, please check out the &lt;a href="https://catalog.ngc.nvidia.com/?filters=&amp;amp;orderBy=weightPopularDESC&amp;amp;query=&amp;amp;page=&amp;amp;pageSize="&gt;NGC catalog&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Lastly, run &lt;code&gt;aws configure&lt;/code&gt; to authenticate with AWS. The examples on GitHub – and in this post – use the region &lt;code&gt;us-east-2&lt;/code&gt; to provision resources. Feel free to change this, as required. Make sure you consistently use the same region throughout the deployment process.&lt;/p&gt; 
+&lt;h4&gt;Setting up your VPC and EKS cluster&lt;/h4&gt; 
+&lt;p&gt;You can find all the resources for this sub-section in the sub-directory:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd 1.infrastructure/&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;In this directory, you’ll find the files needed to get a &lt;a href="https://aws.amazon.com/vpc/"&gt;Virtual Private Cloud&lt;/a&gt; (VPC), and an EKS cluster, set up in your own environment.&lt;/p&gt; 
+&lt;p&gt;To set up your VPC, go to the directory:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd 0_setup_vpc/&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;In this directory, you’ll find &lt;code&gt;vpc-cf-example.yaml&lt;/code&gt;, which is an AWS CloudFormation template for deploying a VPC with a pair of public and private subnets, spread across two Availability Zones (AZ). It also includes an Internet gateway, a default route on the public subnets, a pair of NAT gateways (one in each AZ), and default routes for them in the private subnets. For more information on this CloudFormation template, check out &lt;a href="https://docs.aws.amazon.com/codebuild/latest/userguide/cloudformation-vpc-template.html"&gt;AWS CloudFormation VPC Template&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;To deploy the VPC Stack, please download the VPC Template (called &lt;code&gt;vpc-cf-example.yaml&lt;/code&gt;), and navigate to the CloudFormation console. Once there, hit &lt;strong&gt;Create Stack&lt;/strong&gt;. Under step 1, hit &lt;strong&gt;Choose an existing template&lt;/strong&gt;, and &lt;strong&gt;Upload a template file&lt;/strong&gt;. You can leave the rest of the steps as defaults.&lt;/p&gt; 
+&lt;p&gt;Note: The instructions described below walk you through setting up an EKS Cluster only if you do not use &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-blocks.html"&gt;&lt;em&gt;Capacity Blocks for ML&lt;/em&gt;&lt;/a&gt;. If you wish to use &lt;em&gt;Capacity Blocks for ML&lt;/em&gt;, please follow the instructions in the &lt;a href="https://github.com/aws-samples/awsome-inference/tree/main/1.infrastructure#capacity-blocks"&gt;Capacity Blocks section&lt;/a&gt; of the &lt;code&gt;awsome-inference/1.infrastructure&lt;/code&gt; README to set up the EKS Cluster and &lt;em&gt;self-managed node groups&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;Next, to set up your EKS Cluster, navigate back to the 1.infrastructure/ and then go to the 1_setup_cluster/ directory:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd 1_setup_cluster/&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This sub-directory contains YAML cluster configurations, templates, and examples to aid you setting up clusters for inference. Within this directory, you should find &lt;code&gt;nims-cluster-config-example.yaml&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;This cluster configuration is an example configuration that you can use to spin up a managed EKS cluster of p5.48xlarge instances that you have reserved via the &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html"&gt;On-Demand Capacity Reservation&lt;/a&gt; (ODCR). You can use this example configuration as-is, or with modifications to set up your EKS cluster.&lt;/p&gt; 
+&lt;p&gt;We’ve commented out the capacityReservation field in this example configuration. If you want to use an ODCR, please uncomment lines 63-65 on the configuration file and fill in your own details that map to &lt;em&gt;your&lt;/em&gt; ODCR.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;# Uncomment the lines below (capacityReservation) if you use an ODCR
+# capacityReservation:
+#   capacityReservationTarget:
+#     capacityReservationID: "cr-0ce6be6d411d2f43f"
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Next are some of the parameters that you may need to change in the &lt;code&gt;nims-cluster-config-example.yaml&lt;/code&gt; file:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;&lt;code&gt;$PLACEHOLDER_VPC_ID&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;$PLACEHOLDER_SUBNET_PRIVATE_1&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;$PLACEHOLDER_SUBNET_PRIVATE_2&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;$PLACEHOLDER_SUBNET_PUBLIC_1&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;$PLACEHOLDER_SUBNET_PUBLIC_2&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;$INSTANCE_TYPE&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;$PUBLIC_KEYPAIR_NAME&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;$SECURITY_GROUP_IDS&lt;/code&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Parameters 1-5 can be found using your CLI:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;aws cloudformation describe-stacks --stack-name &amp;lt;&lt;strong&gt;YOUR_VPC_STACK_NAME&lt;/strong&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Parameters 7 and 8 have to be changed if you’d like ssh access to your worker nodes. For the rest of this post, we’ll set parameter 5 (&lt;code&gt;$INSTANCE_TYPE&lt;/code&gt;) to &lt;code&gt;g5.48xlarge&lt;/code&gt;. If you’d like to make any other changes, just consult &lt;a href="https://github.com/aws-samples/awsome-inference/tree/main/1.infrastructure"&gt;README for 1.infrastructure&lt;/a&gt;.&lt;/p&gt; 
+&lt;h4&gt;Deploying the NIM&lt;/h4&gt; 
+&lt;p&gt;Before deploying the NIM, it is important to understand the different &lt;a href="https://docs.nvidia.com/nim/large-language-models/latest/support-matrix.html"&gt;profiles&lt;/a&gt; available for this. With each NIM, NVIDIA releases different profiles that you can choose based on what infrastructure you wish to run on, or what you wish to test.&lt;/p&gt; 
+&lt;p&gt;This profile is chosen by default based on your infrastructure. You can customize the infrastructure you run your NIM on with EKS – for example, you can specify how many GPUs are available per pod with the following lines in your manifest, and a NIM profile that is optimized for 1 GPU is automatically chosen.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;resources:
+  limits:
+    nvidia.com/gpu: 1
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Alternatively, you may choose to specify a profile, if multiple profiles are available. For example, you can choose an &lt;code&gt;fp8&lt;/code&gt; profile that lets you use an fp8-quantized version of the base model.&lt;/p&gt; 
+&lt;p&gt;To learn more about the NIM profiles available for you to use, follow these steps:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Ensure you have your EKS cluster up and running (following the steps described in the section above), and that you have your NIM pod(s) deployed.&lt;/li&gt; 
+ &lt;li&gt;Once your EKS cluster and pods are up and running, to execute into the pod, run:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;kubectl exec -it &amp;lt;pod name&amp;gt; -- cat /etc/nim/config/model_manifest.yaml&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="3"&gt; 
+ &lt;li&gt;If you want to use a specific profile, you can specify the profile’s SHA value in the yaml file like this:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;...
+# @param env [array] Adds arbitrary environment variables to the main container
+ env: 
+ - name: NIM_MODEL_PROFILE
+   value: 30b562864b5b1e3b236f7b6d6a0998efbed491e4917323d04590f715aa9897dc"
+... 
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Now that you have your infrastructure set up, you can start provisioning pods to host your NIM(s).&lt;/p&gt; 
+&lt;p&gt;Navigate to the &lt;code&gt;nims-inference&lt;/code&gt; directory:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd 2.projects/nims-inference&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Once there, you should see a helm example in the &lt;code&gt;nim-deploy&lt;/code&gt; directory. This directory is cloned from NVIDIA’s &lt;a href="https://github.com/NVIDIA/nim-deploy/tree/main"&gt;nim-deploy repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Before running the &lt;code&gt;helm&lt;/code&gt; command below, please ensure that you’ve set the NGC CLI API key as described in the “Prerequisites” section.&lt;/p&gt; 
+&lt;p&gt;To get your NIM up and running without any configuration changes, you may run:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd nim-deploy/helm
+helm install my-nim nim-llm/ --set model.ngcAPIKey=$NGC_CLI_API_KEY --set persistence.enabled=true
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This &lt;code&gt;helm install&lt;/code&gt; command uses the default &lt;code&gt;values.yaml&lt;/code&gt; file. You also have the option to use custom values helm files. More on this in the &lt;a href="https://github.com/NVIDIA/nim-deploy/tree/main/helm"&gt;README on NVIDIA’S nim-deploy repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;If you run into any issues here, refer to the Troubleshooting section later in this post.&lt;/p&gt; 
+&lt;p&gt;Once you deploy the pod, running &lt;code&gt;kubectl get pods&lt;/code&gt; should show something like:&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;my-nim-0&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 1/1&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Running&amp;nbsp;&amp;nbsp; 0&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 10s&lt;/code&gt;&lt;/p&gt; 
+&lt;p&gt;To test whether you can query the NIM pod, try port forwarding like this:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;kubectl port-forward service/my-nim-nim-llm 8000:8000&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Then, in another terminal, run:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;curl -X 'POST' \
+'http://localhost:8000/v1/chat/completions' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "messages": [
+    {
+      "content": "You are a polite and respectful chatbot helping people plan a vacation.",
+      "role": "system"
+    },
+    {
+      "content": "What should I do for a 4 day vacation in Spain?",
+      "role": "user"
+    }
+  ],
+  "model": "meta/llama3-8b-instruct",
+  "max_tokens": 16,
+  "top_p": 1,
+  "n": 1,
+  "stream": false,
+  "stop": "\n",
+  "frequency_penalty": 0.0
+}'
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This should return something like:&lt;/p&gt; 
+&lt;p class="Code"&gt;&lt;code&gt;{"id":"cmpl-228f8ceabea1479caff6142c33478f3b","object":"chat.completion","created":1720470045,"model":"meta/llama3-8b-instruct","choices":[{"index":0,"message":{"role":"assistant","content":"Spain is a wonderful destination! With four days, you can definitely get a taste"},"logprobs":null,"finish_reason":"length","stop_reason":null}],"usage":{"prompt_tokens":42,"total_tokens":58,"completion_tokens":16}}&lt;/code&gt;&lt;/p&gt; 
+&lt;p&gt;And: Congrats! You now have a NIM pod up and running on a single g5.48xlarge instance. You can also now stop the port forward service.&lt;/p&gt; 
+&lt;h2&gt;Troubleshooting&lt;/h2&gt; 
+&lt;p&gt;The most common issues we’ve seen relate to Kubernetes Persistent Volume Claims (PVC). This is because, by default, the helm charts provided don’t install the ebs-csi controllers for you. If you find yourself blocked by PVC errors, try this:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Check all pods with &lt;code&gt;kubectl get pods -A&lt;/code&gt;&lt;/li&gt; 
+ &lt;li&gt;Get the logs of the &lt;code&gt;aws-node-xxxx&lt;/code&gt; pod and check the three containers (with the &lt;code&gt;-c&lt;/code&gt; flag): 
+  &lt;ol&gt; 
+   &lt;li&gt;&lt;code&gt;aws-node&lt;/code&gt;&lt;/li&gt; 
+   &lt;li&gt;&lt;code&gt;aws-eks-nodeagent&lt;/code&gt;&lt;/li&gt; 
+   &lt;li&gt;&lt;code&gt;aws-vpc-cni-init&lt;/code&gt;&lt;/li&gt; 
+  &lt;/ol&gt; &lt;/li&gt; 
+ &lt;li&gt;Check the status of your PVCs with the &lt;code&gt;kubectl get pvc -A&lt;/code&gt; If the PVC controller isn’t installed – or if you see an error here – run the steps below.&lt;/li&gt; 
+ &lt;li&gt;Install the PVC controller using:&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;kubectl apply -k "GitHub.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.27"&lt;/code&gt;&lt;/pre&gt; 
+&lt;ol start="5"&gt; 
+ &lt;li&gt;Once you’ve run this, you should have the EBS CSI controller installed on your cluster, and you should be able to deploy your pod without any errors. Redeploy (using &lt;code&gt;helm install&lt;/code&gt;) your configuration &lt;em&gt;after &lt;/em&gt;making these changes.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2&gt;Benchmarking&lt;/h2&gt; 
+&lt;p&gt;The GitHub repository also contains some &lt;a href="https://github.com/aws-samples/awsome-inference/tree/main/2.projects/nims-inference/benchmark"&gt;example code&lt;/a&gt; to get you started with collecting performance metrics against your deployed NIM. To do this, we use the NVIDIA &lt;code&gt;genai-perf&lt;/code&gt; tool. &lt;code&gt;genai-perf&lt;/code&gt; is a command-line benchmarking tool for measuring inference metrics of models served through an inference server.&lt;/p&gt; 
+&lt;p&gt;Some of the metrics provided by this tool are: output token throughput, time to first token, inter token latency, and request throughput. For more on the tool, check out the &lt;a href="https://docs.nvidia.com/nim/benchmarking/llm/latest/overview.html"&gt;GenAI-Perf Documentation&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Once you’ve tested your NIM, you can set up a service of type ClusterIP to expose a port on your container.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;kubectl apply -f nim-deploy/helm/nim-llm/nodeport.yaml&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;We have a sample benchmarking script under benchmark/benchmark_concurrency.sh, that will run benchmarking with multiple concurrencies:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;cd benchmark/
+./benchmark_concurrency.sh
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You can then copy the benchmarking data from the genai-perf pod to your local:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;kubectl cp &amp;lt;POD_NAME&amp;gt;:/workspace/benchmarks &amp;lt;YOUR_LOCAL_PATH&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Once done, you should terminate the benchmark deployment:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;./terminate_benchmark.sh&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;You can directly change any of the flags used by &lt;code&gt;genai-perf&lt;/code&gt; tool in the &lt;code&gt;genai-perf.yaml&lt;/code&gt; manifest found in the same benchmark/ directory, too.&lt;/p&gt; 
+&lt;p&gt;This process saves a &lt;code&gt;.csv&lt;/code&gt; and &lt;code&gt;.json&lt;/code&gt; file onto your local system. These files contain the benchmarking metrics we mentioned. Alternatively, you can check which pod has prefix &lt;code&gt;genai-perf&lt;/code&gt;, and run:&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;kubectl logs &amp;lt;pod-name&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This is what an example output will look like:&lt;/p&gt; 
+&lt;div id="attachment_4064" style="width: 1087px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-4064" loading="lazy" class="size-full wp-image-4064" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/24/IMG-2024-07-24-12.38.30.png" alt="Figure 2 – Screenshot of an example log of running the genai-perf tool. You may safely ignore any ERROR messages that you see in these logs, and the cut off values too – the benchmarking scripts on the awsome-inference GitHub Repository get you the relevant CSV and JSON files that contain the complete benchmarking numbers." width="1077" height="1034"&gt;
+ &lt;p id="caption-attachment-4064" class="wp-caption-text"&gt;Figure 2 – Screenshot of an example log of running the genai-perf tool. You may safely ignore any ERROR messages that you see in these logs, and the cut off values too – the benchmarking scripts on the awsome-inference GitHub Repository get you the relevant CSV and JSON files that contain the complete benchmarking numbers.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;We’ll focus on benchmarking metrics in depth in a future blog post. For now, we hope this post provided you with enough to get started benchmarking your NIM deployments.&lt;/p&gt; 
+&lt;h2&gt;What’s next?&lt;/h2&gt; 
+&lt;p&gt;Now you’re able to have the Llama3-8B NIM deployed on a single g5.48xlarge instance using EKS as an orchestrator. In a future blog post, we will focus on:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Scaling your NIM with EKS&lt;/li&gt; 
+ &lt;li&gt;Load Balancing across NIM pods with EKS&lt;/li&gt; 
+ &lt;li&gt;Benchmarking: Which instance should you run on? How many NIM pods can you fit per GPU? What scale can you take this to?&lt;/li&gt; 
+ &lt;li&gt;Using other NIMs.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we’ve shown you how to leverage Amazon EKS to orchestrate the deployment of pods containing NVIDIA NIMs, to enable quick-to-setup and optimized large-scale Large Language Model (LLM) inference on AWS G5 instances.&lt;/p&gt; 
+&lt;p&gt;NVIDIA NIM can empower researchers and developers to run optimized inference in their applications, and Amazon EKS can help with the orchestration. Together, these scale NIM easily and efficiently to thousands of GPUs, resulting in accelerated time-to-market for cutting edge AI applications.&lt;/p&gt; 
+&lt;p&gt;To learn more about deploying NVIDIA NIM and the associated infrastructure, refer to &lt;a href="https://github.com/aws-samples/awsome-inference/tree/main/2.projects/nims-inference"&gt;AWS Samples&lt;/a&gt;. To learn more about Amazon EKS and NIMs, check out the &lt;a href="https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html"&gt;EKS User Guide&lt;/a&gt;, and &lt;a href="https://github.com/NVIDIA/nim-deploy/tree/main/helm"&gt;NVIDIA NIM&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Lastly, as mentioned in the “What’s Next?” section, keep on the lookout for part 2, where we dive deep into scaling, load balancing, and benchmarking.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Implementing e-mail and SMS notifications in AWS ParallelCluster with Slurm</title>
 		<link>https://aws.amazon.com/blogs/hpc/implementing-e-mail-and-sms-notifications-in-aws-parallelcluster-with-slurm/</link>
 		
@@ -31,7 +259,7 @@
 		<guid isPermaLink="false">11c5a3466d18240a784c1c4c99d0cbee592d5299</guid>
 
 					<description>Learn how to configure email and SMS alerts for job events to stay on top of your HPC workloads with AWS ParallelCluster using Slurm.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3938" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/boofla88_a_stream_of_airmail_envelopes_with_wings_flying_throug_d3ff59ca-fae6-4531-9a2e-476912ebd20f.png" alt="Implementing e-mail and SMS notifications in AWS ParallelCluster with Slurm" width="380" height="212"&gt;AWS ParallelCluster allows customers to deploy HPC clusters using AWS. You can select the size you need for your cluster, the operating system (OS), file systems, and CPU or GPU architectures to meet your needs – and only pay for what you use. Slurm manages jobs on the cluster, and informs the autoscaling functions in ParallelCluster.&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3938" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/03/boofla88_a_stream_of_airmail_envelopes_with_wings_flying_throug_d3ff59ca-fae6-4531-9a2e-476912ebd20f.png" alt="Implementing e-mail and SMS notifications in AWS ParallelCluster with Slurm" width="380" height="212"&gt;AWS ParallelCluster allows customers to deploy HPC clusters using AWS. You can select the size you need for your cluster, the operating system (OS), file systems, and CPU or GPU architectures to meet your needs – and only pay for what you use. Slurm manages jobs on the cluster, and informs the autoscaling functions in ParallelCluster.&lt;/p&gt; 
 &lt;p&gt;In this post we’ll demonstrate how you can use a post-install script to add e-mail notifications and SMS notifications to ParallelCluster for Slurm job events. And we’ll show how you can use this to interact with other AWS resources – to create your own workflows. This could be a “job completion” notification from Slurm that triggers a post-processing AWS Lambda function to run on output data that a job wrote to an Amazon Simple Storage Service (Amazon S3) bucket.&lt;/p&gt; 
 &lt;h2&gt;Enabling Slurm job notifications&lt;/h2&gt; 
 &lt;p&gt;Slurm has an option to send e-mails to users when a job changes state, for example when the job starts and ends. To do this, the server that’s running the &lt;code&gt;slurmctld&lt;/code&gt; daemon must already be configured to send e-mails using SMTP.&lt;/p&gt; 
@@ -2053,139 +2281,6 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 &lt;p&gt;The HPSF welcomes organizations from across the HPC community to become involved and help drive innovation in open-source HPC solutions.&lt;/p&gt; 
 &lt;p&gt;To learn more about the HPSF, to contribute, or to become a member, you can visit the &lt;a href="https://hpsf.io/"&gt;HPSF website&lt;/a&gt;.&lt;/p&gt; 
 &lt;p&gt;The HPSF’s commitment to supporting and nurturing these vital software packages will enable the HPC community to have access to the tools and resources necessary to push the boundaries of scientific discovery. We’re thrilled to be part of it.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Best practices for running molecular dynamics simulations on AWS Graviton3E</title>
-		<link>https://aws.amazon.com/blogs/hpc/best-practices-for-running-molecular-dynamics-simulations-on-aws-graviton3e/</link>
-		
-		<dc:creator><![CDATA[Nathaniel Ng]]></dc:creator>
-		<pubDate>Tue, 07 May 2024 13:55:18 +0000</pubDate>
-				<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[Drug Discovery]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[GROMACS]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Molecular Modeling]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<guid isPermaLink="false">1e63bf1a121b398b36fb135821ca6835db681e7f</guid>
-
-					<description>If you run molecular dynamics simulations, you need to read this. We walk through running benchmarks of popular apps like GROMACS and LAMMPS on new Hpc7g instances and Graviton3E processors. The results - up to 35% better vector performance versus Graviton3! Learn how to optimize your own workflows.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was contributed by Nathaniel Ng, Shun Utsui, and James Chen from AWS Solution Architecture&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Last year, &lt;a href="https://aws.amazon.com/blogs/aws/new-amazon-ec2-hpc7g-instances-powered-by-aws-graviton3e-processors-optimized-for-high-performance-computing-workloads/"&gt;we announced&lt;/a&gt; the general availability of Hpc7g instances, the instance type focused on HPC workloads powered by AWS Graviton3E. Graviton3E processors deliver up to 35% higher vector-instruction performance &lt;a href="https://aws.amazon.com/blogs/aws/new-amazon-ec2-hpc7g-instances-powered-by-aws-graviton3e-processors-optimized-for-high-performance-computing-workloads/"&gt;compared to Graviton3&lt;/a&gt;, providing higher performance benefits for HPC applications.&lt;/p&gt; 
-&lt;p&gt;Molecular dynamics (MD) is a domain that frequently leverages HPC resources. Previously, customers ran their MD workloads using predominantly x86 architectures, but we’ve heard that many are interested in understanding the performance they can get on Graviton3E.&lt;/p&gt; 
-&lt;p&gt;So, in this post, we’ll show how you can run MD workloads on Hpc7g instances using AWS ParallelCluster, a supported open-source cluster management tool that allows you to deploy a scalable HPC environment on AWS in a matter of minutes. We’ll use &lt;a href="https://www.gromacs.org/"&gt;GROMACS&lt;/a&gt; and &lt;a href="https://www.lammps.org/"&gt;LAMMPS&lt;/a&gt; as examples – two very popular MD applications. And we’ll highlight the best practices for the tools – and the compiler flags – we used to achieve optimal performance.&lt;/p&gt; 
-&lt;h2&gt;Architecture&lt;/h2&gt; 
-&lt;p&gt;Key to the architecture is AWS ParallelCluster. Customers can install the ParallelCluster CLI on their laptops using Python’s pip package manager, and use it to deploy a cluster in the cloud from their laptops by supplying a short configuration file.&lt;/p&gt; 
-&lt;p&gt;Through the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/pcui-using-v3.html"&gt;ParallelCluster UI&lt;/a&gt;, you can use a wizard to configure a cluster without editing a configuration file or installing anything on your laptop. Details on how to set up a ParallelCluster environment can be found in &lt;a href="https://www.hpcworkshops.com/01-hpc-overview.html"&gt;this workshop&lt;/a&gt;. You can also find a &lt;a href="https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/pcluster/try_hpc7g"&gt;one-click launchable stack&lt;/a&gt; in the HPC Recipe Library (on GitHub), which will build an Hpc7g cluster for you after asking a minimum of questions.&lt;/p&gt; 
-&lt;div id="attachment_3496" style="width: 831px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3496" loading="lazy" class="size-full wp-image-3496" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.40.13.png" alt=" Figure 1: Architecture using AWS ParallelCluster to run MD workloads with AWS Graviton 3E instances. " width="821" height="378"&gt;
- &lt;p id="caption-attachment-3496" class="wp-caption-text"&gt;&lt;br&gt;Figure 1: Architecture using AWS ParallelCluster to run MD workloads with AWS Graviton 3E instances.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;ParallelCluster uses Slurm for its job scheduler, to dynamically scale the number of Hpc7g.16xlarge compute instances, responding to the queue.&lt;/p&gt; 
-&lt;p&gt;These instances are powered by custom-built AWS Graviton3E processors. They feature the latest DDR5 memory offering 50% more bandwidth compared to DDR4, and they carry 200Gbps network interfaces with the Elastic Fabric Adapter (EFA). Graviton3E processors implement Scalable Vector Extension (SVE) of the Neoverse V1 architecture and hence can deliver up to 2x better performance for floating point codes than Graviton2.&lt;/p&gt; 
-&lt;p&gt;To achieve sufficient performance on storage I/O, we deployed 4.8 TB of Amazon FSx for Lustre – a fully-managed, high-performance Lustre file system. We selected the &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html"&gt;PERSISTENT_2&lt;/a&gt; deployment type with a disk throughput of &lt;a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/performance.html"&gt;1000 MBps/TiB of storage provisioned&lt;/a&gt;, and backed it with an Amazon Simple Storage Service (Amazon S3) bucket.&lt;/p&gt; 
-&lt;p&gt;We’ve documented all the details of our ParallelCluster configuration in our &lt;a href="https://github.com/aws-samples/aws-graviton-md-example"&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2&gt;Development tooling&lt;/h2&gt; 
-&lt;p&gt;We tested several configurations and concluded that we recommend using the following compilers and libraries for most use cases. You can check our &lt;a href="https://github.com/aws-samples/aws-graviton-md-example"&gt;GitHub repository&lt;/a&gt; to find out best practices for compiler flags when building MD applications.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Compiler&lt;/strong&gt;: Arm compiler for Linux (ACfL) version 23.04 or later&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Library&lt;/strong&gt;: Arm performance libraries (ArmPL) version 23.04 or later, included in ACfL&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;MPI&lt;/strong&gt;: Open MPI version 4.1.5 or later&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;It’s worth noting that Arm Compilers and Performance Libraries for HPC developers are &lt;a href="https://community.arm.com/arm-community-blogs/b/high-performance-computing-blog/posts/arm-compilers-and-libraries-for-hpc-now-free"&gt;now available for no cost&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;In the rest of this post, we’ll explain why we preferred these tools, by diving deeper into the performance of GROMACS and LAMMPS with different compilers, compiler options, and input files.&lt;/p&gt; 
-&lt;h2&gt;GROMACS&lt;/h2&gt; 
-&lt;p&gt;&lt;a href="https://www.gromacs.org/about.html"&gt;GROMACS&lt;/a&gt; is an open-source software suite for high-performance molecular dynamics and output analysis. It’s widely adopted in the computer simulation fields not only for biochemical molecules but also for non-biological systems like polymers and fluid dynamics. The GROMACS community have optimized it to make great use of the SIMD capabilities of many modern HPC architectures.&lt;/p&gt; 
-&lt;p&gt;For Arm architectures, the &lt;a href="https://manual.gromacs.org/current/install-guide/index.html#simd-support"&gt;code supports both NEON (ASIMD) and SVE instructions&lt;/a&gt;. In this post, we used GNU 12.2 and the Arm compiler for Linux (ACfL) 23.04 as the testing compiler suite, with Arm Performance Library (ArmPL) 23.04 for the math library, and Open MPI 4.1.5 linked with Libfabric to build different binary executables of GROMACS 2022.5.&lt;/p&gt; 
-&lt;h3&gt;Build scripts&lt;/h3&gt; 
-&lt;p&gt;Our main objective was to find out the best compiler suite – and SIMD support fit – for Graviton3E-based Hpc7g instances. We’ll discuss the build scripts, job submission scripts, and performance data here – and you can find all the scripts in our &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/tree/main/codes/GROMACS"&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;For GROMACS’s build script, there’s no difference in the CMake options for GNU and Arm compiler for Linux.&lt;/p&gt; 
-&lt;p&gt;For GNU compilers, the Open MPI 4.1.5 environment is already installed in ParallelCluster’s machine images. We recommend anyone new to the cloud to use the system default Open MPI library. However, the system default Open MPI does &lt;em&gt;not&lt;/em&gt; support ACfL, so we’ve &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/setup/2-install-openmpi-with-acfl.sh"&gt;supplied a script&lt;/a&gt; which demonstrates how to compile and install Open MPI 4.1.5 with ACfL. Once this is installed, we can use the bash module environments to switch between the GNU and Arm compiler.&lt;/p&gt; 
-&lt;p&gt;With this done, it’s now possible to build executables for GROMACS 2022.5 for both SVE or NEON/ASIMD instruction sets.&lt;/p&gt; 
-&lt;p&gt;We’ve stored the procedures for this in yet another &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/tree/main/codes/GROMACS"&gt;reference script&lt;/a&gt;. We only need to change the parameter &lt;code&gt;GMX_SIMD&lt;/code&gt; in the configuration setup. For the SVE-enable binary, the parameter is –&lt;code&gt;DGMX_SIMD=ARM_SVE&lt;/code&gt;. For building the NEON/ASIMD-enabled binary, you’ll need to switch the parameter to &lt;code&gt;-DGMX_SIMD= ARM_NEON_ASIMD&lt;/code&gt;.&lt;/p&gt; 
-&lt;h3&gt;Test cases&lt;/h3&gt; 
-&lt;p&gt;We applied three standard test cases for GROMACS from the &lt;a href="https://repository.prace-ri.eu/git/UEABS/ueabs"&gt;Unified European Application Benchmark Suite (UEABS)&lt;/a&gt;.&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;a href="https://repository.prace-ri.eu/ueabs/GROMACS/2.2/GROMACS_TestCaseA.tar.xz"&gt;Test Case A &lt;/a&gt;is the ion channel system of the membrane protein GluCl embedded in a DOPC membrane and solvated in TIP3P water. This system contains 142k atoms.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://repository.prace-ri.eu/ueabs/GROMACS/2.2/GROMACS_TestCaseB.tar.xz"&gt;Test Case B&lt;/a&gt; is a model of cellulose and lignocellulosic biomass in an aqueous solution. The system has 3.3 million atoms.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://repository.prace-ri.eu/ueabs/GROMACS/2.2/GROMACS_TestCaseC.tar.xz"&gt;Test Case C&lt;/a&gt; is the standard test case for NAMD benchmarks. The system is a 3 x 3 x 3 replica of the STMV (&lt;em&gt;Satellite Tobacco Mosaic Virus&lt;/em&gt;). The size of model is about 28 million atoms.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;For all these cases, we set the total simulation steps to 10k.&lt;/p&gt; 
-&lt;p&gt;To find out the best combination of compiler and SIMD setup, we started to test the application performance on a single Hpc7g.16xlarge instance. Figure 2 charts the performance we saw for test case A (142K atoms). ACfL with SVE-enabled generated the best performance. The binary this generated was about 9-10% faster than the one using NEON/ASIMD. The binary produced by the ACfL with SVE ran 6% faster than when we used the GNU compiler with SVE.&lt;/p&gt; 
-&lt;div id="attachment_3497" style="width: 714px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3497" loading="lazy" class="size-full wp-image-3497" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.41.42.png" alt="Figure 2: Performance of GROMACS 2022.5 for GluCl Ion Channel system (142K atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enable binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs. " width="704" height="466"&gt;
- &lt;p id="caption-attachment-3497" class="wp-caption-text"&gt;Figure 2: Performance of GROMACS 2022.5 for GluCl Ion Channel system (142K atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enable binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Figure 3 charts the performance we saw for test case B (3.3M atoms). The best setup we found – again – was to use the ACfL with SVE enabled. We measured a 28% improvement for the SVE-enabled binary, compared with the NEON/ASIMD-enable binary when we used this compiler.&lt;/p&gt; 
-&lt;div id="attachment_3498" style="width: 717px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3498" loading="lazy" class="size-full wp-image-3498" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.42.04.png" alt="Figure 3: Performance of GROMACS 2022.5 for cellulose and lignocellulosic biomass (3.3M atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enabled binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs. " width="707" height="465"&gt;
- &lt;p id="caption-attachment-3498" class="wp-caption-text"&gt;Figure 3: Performance of GROMACS 2022.5 for cellulose and lignocellulosic biomass (3.3M atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enabled binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The performance results for test case C (28M atoms) are shown in Figure 4. Again, we saw a similar pattern to before: the ACfL with SVE enabled was the best option for GROMACS running on Hpc7g instance. In this case, the performance delta was 19% compared to NEON-ASIMD. And again, the binary generated by ACfL was 6% faster than the one built by the GNU compiler.&lt;/p&gt; 
-&lt;div id="attachment_3499" style="width: 716px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3499" loading="lazy" class="size-full wp-image-3499" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.42.44.png" alt="Figure 4: Performance of GROMACS 2022.5 for Satellite Tobacco Mosaic Virus, STMV (28M atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enable binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs. " width="706" height="462"&gt;
- &lt;p id="caption-attachment-3499" class="wp-caption-text"&gt;Figure 4: Performance of GROMACS 2022.5 for Satellite Tobacco Mosaic Virus, STMV (28M atoms) with different settings of compilers and SIMD using one Hpc7g.16xlarge instance. SVE-enable binary generated by ACfL produces the best performance. All the data points are based on the average of three individual runs.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Based on the results running on single Hpc7g instance, we concluded that ACfL with SVE-enabled SIMD, generated the best performance results.&lt;/p&gt; 
-&lt;p&gt;By default, the configuration tool in GROMACS detected the CPU automatically, and selected the SIMD support correctly, too. GROMACS also detected the configuration of SIMD correctly for AWS Graviton3.&lt;/p&gt; 
-&lt;p&gt;We chose test case C to highlight the scalability for performance on Hpc7g when we ran across multiple nodes. The result charted in Figure 5 confirms this – scalability of performance is near-linear with EFA enabled.&lt;/p&gt; 
-&lt;div id="attachment_3500" style="width: 895px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3500" loading="lazy" class="size-full wp-image-3500" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.43.17.png" alt="Figure 5: Scalability of Test Case C running on the Hpc7g-based cluster with, and without, EFA. 200Gpbs EFA contributes the scalability in the cases running beyond 2 compute instances. The binary was compiled with ACfL with SVE-enabled. All the data points are based on the average of three individual runs. " width="885" height="579"&gt;
- &lt;p id="caption-attachment-3500" class="wp-caption-text"&gt;Figure 5: Scalability of Test Case C running on the Hpc7g-based cluster with, and without, EFA. 200Gpbs EFA contributes the scalability in the cases running beyond 2 compute instances. The binary was compiled with ACfL with SVE-enabled. All the data points are based on the average of three individual runs.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3&gt;Conclusion for GROMACS&lt;/h3&gt; 
-&lt;p&gt;Based on these performance results for three quite different, but well-known test cases, we found that SVE-enabled binary was faster than using ASIMD/Neon instructions. ACfL produced faster code than the GNU compiler. Specifically for Hpc7g, ACfL with SVE-enabled SIMD setting was the best configuration when paired with the latest ArmPL and Open MPI with EFA enabled.&lt;/p&gt; 
-&lt;h2&gt;LAMMPS&lt;/h2&gt; 
-&lt;p&gt;&lt;a href="https://www.lammps.org/"&gt;LAMMPS&lt;/a&gt; (Large-scale Atomic/Molecular Massively-Parallel Simulator) is a classical molecular dynamics simulator, used for particle-based modelling of materials. It was developed at Sandia National Laboratories, and is available as an open-source tool, distributed under GPLv2. You can download the source code from the &lt;a href="https://github.com/lammps/lammps/releases"&gt;LAMMPS GitHub repository&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;In terms of algorithms, LAMMPS uses parallel spatial decomposition, as well as parallel FFTs for long-range Coloumbic interactions. The computational cost of scaling with the number of atoms is O(N) for short-range interactions, and O(N log N) when computations involve Coloumbic interactions with FFT-based methods.&lt;/p&gt; 
-&lt;p&gt;To prepare for LAMMPS running on AWS, we can follow the same steps as before for GROMACS for the AWS ParallelCluster, GCC, ACfL, and Open MPI setup. The LAMMPS &lt;a href="https://docs.lammps.org/Install.html"&gt;install guide&lt;/a&gt; has several options for installation, but to use the latest version of LAMMPS, and more recent versions of GCC, ACfL, and Open MPI, LAMMPS must be compiled from source.&lt;/p&gt; 
-&lt;p&gt;LAMMPS has specific Makefiles that are optimized for Arm architecture available: &lt;a href="https://github.com/lammps/lammps/blob/develop/src/MAKE/MACHINES/Makefile.aarch64_arm_openmpi_armpl"&gt;Makefile.aarch64_arm_openmpi_armpl&lt;/a&gt; and &lt;a href="https://github.com/lammps/lammps/blob/develop/src/MAKE/MACHINES/Makefile.aarch64_g++_openmpi_armpl"&gt;Makefile.aarch64_g++_openmpi_armpl&lt;/a&gt;, for use with ACfL and GCC compilers respectively. In the case of ACfL, we used &lt;code&gt;-march=armv8-a+sve&lt;/code&gt; &lt;a href="https://developer.arm.com/documentation/102476/0100/Programming-with-SVE/Auto-vectorization"&gt;to add the SVE instructions&lt;/a&gt;, and checked that switching between &lt;code&gt;-march=armv8-a+sve&lt;/code&gt; and &lt;code&gt;-march=armv8-a+simd&lt;/code&gt; did not impact performance. For &lt;em&gt;both&lt;/em&gt; ACfL and GCC Makefiles, we added &lt;code&gt;-fopenmp&lt;/code&gt; to &lt;code&gt;CCFLAGS&lt;/code&gt; and &lt;code&gt;LINKFLAGS&lt;/code&gt; to enable OpenMP. We’ve summarized the final settings in Table 1.&lt;/p&gt; 
-&lt;div id="attachment_3501" style="width: 927px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3501" loading="lazy" class="wp-image-3501 size-full" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.44.36.png" alt="Table 1: Compiler settings for GCC and ACfL" width="917" height="247"&gt;
- &lt;p id="caption-attachment-3501" class="wp-caption-text"&gt;Table 1: Compiler settings for GCC and ACfL&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;To compile LAMMPS, the final Makefiles available in our GitHub repo, were &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/LAMMPS/2a-compile-lammps-acfl-sve.sh"&gt;2a-compile-lammps-acfl-sve.sh&lt;/a&gt; for ACfL and &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/LAMMPS/2b-compile-lammps-gcc.sh"&gt;2b-compile-lammps-gcc.sh&lt;/a&gt; for GCC.&lt;/p&gt; 
-&lt;p&gt;The key points to note in our LAMMPS compile script involve loading the correct environment modules – &lt;code&gt;libfabric-aws/1.17.1&lt;/code&gt; and &lt;code&gt;armpl/23.04.1&lt;/code&gt; for both compilers, &lt;code&gt;acfl/23.04.1&lt;/code&gt; for ACfL, and &lt;code&gt;gnu/12.2.0&lt;/code&gt; for GCC – and replacing the &lt;code&gt;CCFLAGS&lt;/code&gt; and &lt;code&gt;LINKFLAGS&lt;/code&gt; variables with those from Table 1. For ACfL, we set both &lt;code&gt;PATH&lt;/code&gt; and &lt;code&gt;LD_LIBRARY_PATH&lt;/code&gt; to the Open MPI installation folders.&lt;/p&gt; 
-&lt;p&gt;We pulled the LAMMPS source code from the git repository into the install folder (&lt;code&gt;~/software&lt;/code&gt; in our case), and checked out the 23 June 2022 branch for compilation (&lt;code&gt;git checkout stable_23Jun2022_update4&lt;/code&gt;). You can check out other releases, too. If you want the default stable branch, use &lt;code&gt;git checkout stable&lt;/code&gt;. Use &lt;code&gt;make clean-all&lt;/code&gt; to remove all the intermediate object files and executable files, and &lt;code&gt;make no-all&lt;/code&gt; to turn off all options. Next, we ran &lt;code&gt;make yes-most&lt;/code&gt; to install most of the packages, which was enough for us to test all five LAMMPS benchmarks.&lt;/p&gt; 
-&lt;p&gt;Once we compiled LAMMPS, we were able to submit jobs using Slurm. We’ve included sample job scripts &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/LAMMPS/3a-lammps-acfl-sve.sh"&gt;3a-lammps-acfl-sve.sh&lt;/a&gt; (for ACfL-compiled LAMMPS) and &lt;a href="https://github.com/aws-samples/aws-graviton-md-example/blob/main/codes/LAMMPS/3b-lammps-gcc.sh"&gt;3b-lammps-gcc.sh&lt;/a&gt; (for GCC-compiled LAMMPS) in our repo. In the final command, you should execute LAMMPS using &lt;code&gt;mpirun&lt;/code&gt;. The &lt;code&gt;-var x&lt;/code&gt;, &lt;code&gt;-var y&lt;/code&gt;, and &lt;code&gt;-var z&lt;/code&gt; flags specify the &lt;code&gt;NX&lt;/code&gt;, &lt;code&gt;NY&lt;/code&gt;, and &lt;code&gt;NZ&lt;/code&gt; parameters passed to the LAMMPS input file, and the &lt;code&gt;-in&lt;/code&gt; parameter indicates the LAMMPS input file (&lt;code&gt;in.lj&lt;/code&gt; in our example).&lt;/p&gt; 
-&lt;p&gt;For the LAMMPS test runs, we chose the five benchmark cases listed at the &lt;a href="https://www.lammps.org/bench.html"&gt;LAMMPS Benchmarks site&lt;/a&gt; as described in Table 2:&lt;/p&gt; 
-&lt;div id="attachment_3502" style="width: 638px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3502" loading="lazy" class="size-full wp-image-3502" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.48.36.png" alt="Table 2: Description of the 5 LAMMPS benchmarks" width="628" height="353"&gt;
- &lt;p id="caption-attachment-3502" class="wp-caption-text"&gt;Table 2: Description of the 5 LAMMPS benchmarks&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We ran a comparison between LAMMPS compiled with the GCC, and LAMMPS compiled with ACfL for all of the 5 input files (&lt;code&gt;in.lj&lt;/code&gt;, &lt;code&gt;in.chain&lt;/code&gt;, &lt;code&gt;in.eam&lt;/code&gt;,&lt;code&gt; in.chute&lt;/code&gt;, and &lt;code&gt;in.rhodo&lt;/code&gt;), running on a single Hpc7g.16xlarge instance.&lt;/p&gt; 
-&lt;p&gt;For each of the input files, we submitted three jobs with GCC and three jobs with ACfL, and we used the average of the runs to report the results. We took the speed from the &lt;code&gt;log.lammps&lt;/code&gt; output file, reported in tau/day for the &lt;code&gt;chain&lt;/code&gt;, &lt;code&gt;chute&lt;/code&gt;, and &lt;code&gt;lj&lt;/code&gt; test cases, and ns/day for the &lt;code&gt;eam&lt;/code&gt; and &lt;code&gt;rhodo&lt;/code&gt; test cases.&lt;/p&gt; 
-&lt;p&gt;The LAMMPS benchmarks each contain 32,000 atoms (for &lt;code&gt;NX=NY=NZ=1&lt;/code&gt;). We chose &lt;code&gt;NX=NY=NZ=8&lt;/code&gt; as a balance between &lt;code&gt;NX=NY=NZ=1&lt;/code&gt; (with high variability in performance due to the short run time) and &lt;code&gt;NX=NY=NZ=32&lt;/code&gt; (resulting in out of memory errors).&lt;/p&gt; 
-&lt;div id="attachment_3504" style="width: 896px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3504" loading="lazy" class="size-full wp-image-3504" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.51.47.png" alt="Figure 6. Performance of LAMMPS a single Hpc7g.16xlarge instance with NX=NY=NZ=8, when compiled using the GCC and ACfL compilers. Speed is in tau/day for the chain, chute, and lj test cases, and ns/day for the eam and rhodo test cases." width="886" height="562"&gt;
- &lt;p id="caption-attachment-3504" class="wp-caption-text"&gt;Figure 6. Performance of LAMMPS a single Hpc7g.16xlarge instance with NX=NY=NZ=8, when compiled using the GCC and ACfL compilers. Speed is in tau/day for the chain, chute, and lj test cases, and ns/day for the eam and rhodo test cases.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;ACfL consistently outperformed GCC for all the single-node runs, with improvements ranging from 2.3% to 46%.&lt;/p&gt; 
-&lt;div id="attachment_3503" style="width: 885px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3503" loading="lazy" class="size-full wp-image-3503" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.50.35.png" alt="Table 3: Speedups with ACfL over GCC for the 5 benchmark cases on a single Hpc7g.16xlarge instance with NX=NY=NZ=8." width="875" height="124"&gt;
- &lt;p id="caption-attachment-3503" class="wp-caption-text"&gt;Table 3: Speedups with ACfL over GCC for the 5 benchmark cases on a single Hpc7g.16xlarge instance with NX=NY=NZ=8.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;For the multi-node runs, we further increased &lt;code&gt;NX=NY=NZ&lt;/code&gt; to &lt;code&gt;32&lt;/code&gt;, to increase the runtime – and therefore reduce the variability – in the results. This brought the total number of atoms to 32,000 x 32 x 32 x 32 = ~ 1 billion atoms.&lt;/p&gt; 
-&lt;p&gt;We chose to focus only on the Lennard Jones benchmark and tested both GCC- and ACfL- compiled LAMMPS with &lt;code&gt;OMP_NUM_THREADS=1,2,4&lt;/code&gt;. For 8 nodes (512 cores) and above, we observed better results with &lt;code&gt;OMP_NUM_THREADS=2&lt;/code&gt; for both compilers. &lt;em&gt;Unlike the single node runs&lt;/em&gt;, we observed that GCC-compiled LAMMPS outperformed its ACfL-compiled counterpart. We tested the GCC-compiled version up to 128 nodes.&lt;/p&gt; 
-&lt;p&gt;We’ve plotted the results in Figure 7.&lt;/p&gt; 
-&lt;div id="attachment_3505" style="width: 906px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3505" loading="lazy" class="size-full wp-image-3505" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/09/CleanShot-2024-04-09-at-12.53.46.png" alt="Figure 7: Scalability of GCC-compiled LAMMPS for Lennard Jones benchmark case (1 billion atoms) using multiple Hpc7g.16xlarge instances. The line for linear scaling is plotted in grey." width="896" height="617"&gt;
- &lt;p id="caption-attachment-3505" class="wp-caption-text"&gt;Figure 7: Scalability of GCC-compiled LAMMPS for Lennard Jones benchmark case (1 billion atoms) using multiple Hpc7g.16xlarge instances. The line for linear scaling is plotted in grey.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we showed how you can run GROMACS and LAMMPS on Hpc7g-based instance. We discussed the ideal toolchain and SIMD setup based on the results we saw.&lt;/p&gt; 
-&lt;p&gt;We didn’t modify the source code of GROMACS and LAMMPS, choosing instead to leverage “auto-vectorization” implemented in the compilers.&lt;/p&gt; 
-&lt;p&gt;Arm’s compiler for Linux (ACfL) with SVE enabled SIMD boosted GROMACS performance up to 22% compared with the GNU compiler and NEON/ASIMD on Hpc7g instances. Arm compiler for Linux sped up LAMMPS simulation between 2.3% to 46%, depending on the case, compared to the GNU compiler on a single node basis. For LAMMPS, we also saw performance improvements at larger core counts with hybrid MPI + OpenMP parallelization.&lt;/p&gt; 
-&lt;p&gt;We’ve made all our build scripts – and job submission scripts – available in our GitHub samples repo, and we’d encourage you to use this if you want to build on this work for your own research workloads. If you need to discuss any of this, feel free to reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
 					
 		
 		
