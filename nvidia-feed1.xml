@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 23 Jul 2024 18:43:13 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 24 Jul 2024 03:08:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,156 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>Demystifying AI-Assisted Artistry With Adobe Apps Using NVIDIA RTX</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-adobe-firefly-creative-cloud-rtx/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Wed, 24 Jul 2024 13:00:56 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Creators]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73159</guid>
+
+					<description><![CDATA[Adobe Creative Cloud applications, which tap NVIDIA RTX GPUs, are designed to enhance the creativity of users, empowering them to work faster and focus on their craft.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+<p>Adobe Creative Cloud applications, which tap <a target="_blank" href="https://www.nvidia.com/en-us/design-visualization/technologies/rtx/">NVIDIA RTX GPUs</a>, are designed to enhance the creativity of users, empowering them to work faster and focus on their craft.</p>
+<p>These tools seamlessly integrate into existing creator workflows, enabling greater productivity and delivering power and precision.</p>
+<h2><b>Look to the Light</b></h2>
+<p><a target="_blank" href="https://helpx.adobe.com/creative-cloud/generative-ai-overview.html#generative-ai-with-adobe-creative-cloud">Generative AI</a> creates new data in forms such as images or text by learning from existing data. It effectively visualizes and generates content to match what a user describes and helps open up fresh avenues for creativity.</p>
+<p>Adobe Firefly is Adobe’s family of creative generative AI models that offer new ways to ideate and create while assisting creative workflows using generative AI. They’re designed to be safe for commercial use and were trained, using NVIDIA GPUs, on licensed content, like Adobe Stock Images, and public domain content where copyright has expired.</p>
+<p><iframe title="Adobe Firefly: A New Era of Creativity | Adobe" width="500" height="281" src="https://www.youtube.com/embed/f_2KsIwoV4Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Firefly features are integrated in Adobe’s most popular creative apps.</p>
+<p><iframe title="Bring Illustrations to Life with Adobe AI Effects powered by NVIDIA GPUs on PC &amp; in the Cloud" width="500" height="281" src="https://www.youtube.com/embed/7ELrpfVY4P4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Adobe Photoshop features the <a target="_blank" href="https://www.adobe.com/products/photoshop/generative-fill.html">Generative Fill tool,</a> which uses simple description prompts to easily add content from images. With the latest Reference Image feature currently in beta, users can also upload a sample image to get image results closer to their desired output.</p>
+<figure id="attachment_73163" aria-describedby="caption-attachment-73163" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees.png"><img fetchpriority="high" decoding="async" class="wp-image-73163 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees-672x259.png" alt="" width="672" height="259" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees-672x259.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees-400x154.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees-768x296.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees-842x325.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees-406x157.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees-188x73.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-ai-bees.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73163" class="wp-caption-text">Use Generative Fill to add content and Reference Image to refine it.</figcaption></figure>
+<p>Generative Expand allows artists to extend the border of their image with the Crop tool, filling in bigger canvases with new content that automatically blends in with the existing image.</p>
+<figure id="attachment_73166" aria-describedby="caption-attachment-73166" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill.png"><img loading="lazy" decoding="async" class="wp-image-73166 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/gen-background-fill.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73166" class="wp-caption-text">Bigger canvas? Not a problem.</figcaption></figure>
+<p>RTX-accelerated Neural Filters, such as Photo Restoration, enable complex adjustments such as colorizing black-and-white photos and performing style transfers using AI. The Smart Portrait filter, which allows non-destructive editing with filters, is based on work from <a target="_blank" href="https://www.nvidia.com/en-us/research/">NVIDIA Research</a>.</p>
+<p><iframe loading="lazy" title="Accelerating AI in Photoshop Neural Filters with RTX A2000" width="500" height="281" src="https://www.youtube.com/embed/WwCe9Woy1jw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>The brand-new Generative Shape Fill (beta) in Adobe Illustrator, powered by the latest Adobe Firefly Vector Model, allows users to accelerate design workflows by quickly filling shapes with detail and color in their own styles. With Generative Shape Fill, designers can easily match the style and color of their own artwork to create a wide variety of editable and scalable vector graphic options.</p>
+<figure id="attachment_73170" aria-describedby="caption-attachment-73170" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe.jpg"><img loading="lazy" decoding="async" class="wp-image-73170 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe-672x294.jpg" alt="" width="672" height="294" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe-672x294.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe-400x175.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe-768x336.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe-842x369.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe-406x178.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe-188x82.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/AI-Adobe.jpg 1000w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73170" class="wp-caption-text">Generative AI.</figcaption></figure>
+<p><a target="_blank" href="https://www.adobe.com/products/illustrator/generative-recolor.html">Adobe Illustrator’s Generative Recolor</a> feature lets creators type in a text prompt to explore custom color palettes and themes for their vector artwork in seconds.</p>
+<figure id="attachment_73173" aria-describedby="caption-attachment-73173" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color.png"><img loading="lazy" decoding="async" class="wp-image-73173 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color-672x327.png" alt="" width="672" height="327" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color-672x327.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color-400x195.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color-768x374.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color-842x410.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color-406x198.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color-188x92.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/illustrator-color.png 1109w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73173" class="wp-caption-text">Color us impressed.</figcaption></figure>
+<p>NVIDIA will continue working with Adobe to support advanced generative AI models, with a focus on deep integration into the apps the world’s leading creators use.</p>
+<h2><b>Making Moves on Video</b></h2>
+<p>Adobe Premiere Pro is one of the most popular and powerful video editing solutions.</p>
+<p>Its Enhance Speech tool, accelerated by RTX, uses AI to remove unwanted noise and improve the quality of dialogue clips so they sound professionally recorded. It’s up to 4.5x faster on RTX PCs.</p>
+<figure id="attachment_73176" aria-describedby="caption-attachment-73176" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/enhance-speech.png"><img loading="lazy" decoding="async" class="wp-image-73176 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/enhance-speech.png" alt="" width="672" height="445" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/enhance-speech.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/enhance-speech-400x265.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/enhance-speech-325x215.png 325w, https://blogs.nvidia.com/wp-content/uploads/2024/07/enhance-speech-151x100.png 151w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73176" class="wp-caption-text">Adobe Premiere Pro’s AI-powered Enhance Speech tool removes unwanted noise and improves dialogue quality.</figcaption></figure>
+<p><a target="_blank" href="https://helpx.adobe.com/premiere-pro/using/auto-reframe.html">Auto Reframe</a>, another Adobe Premiere feature, uses GPU acceleration to identify and track the most relevant elements in a video, and intelligently reframes video content for different aspect ratios. Scene Edit Detection automatically finds the original edit points in a video, a necessary step before the video editing stage begins.</p>
+<p><iframe loading="lazy" title="How to detect a cut with Scene Edit Detection in Premiere Pro" width="500" height="281" src="https://www.youtube.com/embed/DYor3a5DKBA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>Visual Effects</b></h2>
+<p>Separating a foreground object from a background is a crucial step in many visual effects and compositing workflows.</p>
+<p>Adobe After Effects has a new feature that uses a matte to isolate an object, enabling capabilities including background replacement and the selective application of effects to the foreground.</p>
+<p>Using the <a target="_blank" href="https://helpx.adobe.com/after-effects/using/roto-brush-refine-matte.html">Roto Brush</a> tool, artists can draw strokes on representative areas of the foreground and background elements. After Effects uses that information to create a segmentation boundary between the foreground and background elements, delivering cleaner cutouts with fewer clicks.</p>
+<p><iframe loading="lazy" title="How to use Next-Gen Rotobrush 3 in Adobe After Effects" width="500" height="281" src="https://www.youtube.com/embed/VJ3cNt0yEhQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>Creating 3D Product Shots</b></h2>
+<p>The Substance 3D Collection is Adobe’s solution for 3D material authoring, texturing and rendering, enabling users to rapidly create stunningly photorealistic 3D content, including models, materials and lighting.</p>
+<p>Visualizing products and designs in the context of a space is compelling, but it can be time-consuming to find the right environment for the objects to live in. Substance 3D Stager’s<a target="_blank" href="https://helpx.adobe.com/substance-3d-stager/features/generative-background.html"> Generative Background</a> feature, powered by Adobe Firefly, solves this issue by letting artists quickly explore generated backgrounds to composite 3D models.</p>
+<p>Once an environment is selected, Stager can automatically match the perspective and lighting to the generated background.</p>
+<p><iframe loading="lazy" title="Generate Background Images Fast in Substance 3D Stager &amp; Firefly | Adobe Substance 3D" width="500" height="281" src="https://www.youtube.com/embed/woUUPrSiVPc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>Material Authoring With AI</b></h2>
+<p>Adobe Substance 3D Sampler, also part of the Substance 3D Collection, is designed to transform images of surfaces and objects into photorealistic physically based rendering (PBR) materials, 3D models and high-dynamic range environment lights. With the recent introduction of<a target="_blank" href="https://helpx.adobe.com/substance-3d-sampler/release-notes/version-4-4---substance-3d-sampler.html"> new generative workflows powered by Adobe Firefly</a>, Sampler is making it easier than ever for artists to explore variations when creating materials for everything from product visualization projects to the latest AAA games.</p>
+<p>Sampler’s Text-to-Texture feature allows users to generate tiled images from detailed text prompts. These generated images can then be edited and transformed into photorealistic PBR materials using the machine learning-powered Image-to-Material feature or any Sampler filter.</p>
+<p><iframe loading="lazy" title="How to Use Generative Tools in Sampler for Fast Iterations | Adobe Substance 3D" width="500" height="281" src="https://www.youtube.com/embed/YD3tPlO5h3g?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Image-to-Texture similarly enables the creation of tiled textures from reference images, providing an alternate way to prompt and generate variations from existing visual content.</p>
+<figure id="attachment_73179" aria-describedby="caption-attachment-73179" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture.png"><img loading="lazy" decoding="async" class="wp-image-73179 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture-801x450.png 801w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture-383x215.png 383w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image-to-texture.png 975w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73179" class="wp-caption-text">Adobe 3D Sampler’s Image-to-Texture feature.</figcaption></figure>
+<p>Sampler’s Text-to-Pattern feature uses text prompts to generate tiling patterns, which can be used as base colors or inputs for various filters, such as the Cloth Weave filter for creating original fabric materials.</p>
+<p>All of these generative AI features in the Substance 3D Collection, supercharged with RTX GPUs, are designed to help 3D creators ideate and create faster.</p>
+<h2><b>Photo-tastic Features</b></h2>
+<p>Adobe Lightroom’s AI-powered <a target="_blank" href="https://helpx.adobe.com/lightroom-cc/using/enhance-details.html">Raw Details</a> feature produces crisp detail and more accurate renditions of edges, improves color rendering and reduces artifacts, enhancing the image without changing its original resolution. This feature is handy for large displays and prints, where fine details are visible.</p>
+<figure id="attachment_73182" aria-describedby="caption-attachment-73182" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance.png"><img loading="lazy" decoding="async" class="wp-image-73182 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance-672x412.png" alt="" width="672" height="412" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance-672x412.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance-400x245.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance-768x471.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance-734x450.png 734w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance-351x215.png 351w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance-163x100.png 163w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Enhance.png 926w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73182" class="wp-caption-text">Enhance, enhance, enhance.</figcaption></figure>
+<p><a target="_blank" href="https://helpx.adobe.com/lightroom-cc/using/enhance-details.html">Super Resolution</a> helps create an enhanced image with similar results as Raw Details but with 2x the linear resolution. This means that the enhanced image will have 2x the width and height of the original image — or 4x the total pixel count. This is especially useful for increasing the resolution of cropped imagery.</p>
+<p><iframe loading="lazy" title="NVIDIA RTX Accelerates AI Super Resolution in Adobe Photoshop" width="500" height="281" src="https://www.youtube.com/embed/UURFgE43PUg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>For faster editing, AI-powered, RTX-accelerated masking tools like Select Subject, which isolates people from an image, and Select Sky, which captures skies, enable users to create complex masks with the click of a button.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-73188" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/magic.mask_.gif" alt="" width="640" height="360" /></p>
+<p>Visit Adobe’s <a target="_blank" href="https://www.adobe.com/ai/overview/features.html">AI features page</a> for a complete list of AI features using RTX.</p>
+<p><i>Looking for more AI-powered content creation apps? Consider </i><a target="_blank" href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/"><i>NVIDIA Broadcast</i></a><i>, which transforms any room into a home studio, free for RTX GPU owners. </i></p>
+<p><i>Generative AI is transforming gaming, videoconferencing and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/adobe-apps-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/adobe-apps-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Demystifying AI-Assisted Artistry With Adobe Apps Using NVIDIA RTX]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>How Georgia Tech’s AI Makerspace Is Preparing the Future Workforce for AI</title>
+		<link>https://blogs.nvidia.com/blog/georgia-tech-ai-makerspace-supercomputer/</link>
+		
+		<dc:creator><![CDATA[Kristen Yee]]></dc:creator>
+		<pubDate>Wed, 24 Jul 2024 13:00:41 +0000</pubDate>
+				<category><![CDATA[The AI Podcast]]></category>
+		<category><![CDATA[Education]]></category>
+		<category><![CDATA[Supercomputing]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72874</guid>
+
+					<description><![CDATA[AI is set to transform the workforce — and the Georgia Institute of Technology’s new AI Makerspace is helping tens of thousands of students get ahead of the curve. In this episode of NVIDIA’s AI Podcast, host Noah Kravitz speaks with Arijit Raychowdhury, a professor and Steve W. Cedex school chair of electrical engineering at	<a class="read-more" href="https://blogs.nvidia.com/blog/georgia-tech-ai-makerspace-supercomputer/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>AI is set to transform the workforce — and the Georgia Institute of Technology’s new <a target="_blank" href="https://coe.gatech.edu/academics/ai-for-engineering/ai-makerspace">AI Makerspace</a> is helping tens of thousands of students get ahead of the curve. In this episode of NVIDIA’s <a target="_blank" href="https://soundcloud.com/theaipodcast">AI Podcast</a>, host Noah Kravitz speaks with Arijit Raychowdhury, a professor and Steve W. Cedex school chair of electrical engineering at Georgia Tech’s college of engineering, about the supercomputer hub, which provides students with the computing resources to reinforce their coursework and gain hands-on experience with AI. Built in collaboration with NVIDIA, the AI Makerspace underscores Georgia Tech’s commitment to preparing students for an AI-driven future, while fostering collaboration with local schools and universities.</p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1868252172%3Fsecret_token%3Ds-cUoOc3SNE6g&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="How Georgia Tech’s AI Makerspace Is Preparing the Future Workforce for AI - Ep. 229" href="https://soundcloud.com/theaipodcast/georgia-tech/s-cUoOc3SNE6g" target="_blank" rel="noopener">How Georgia Tech’s AI Makerspace Is Preparing the Future Workforce for AI &#8211; Ep. 229</a></div>
+<h2><strong>Time Stamps</strong></h2>
+<p>1:45: What is the AI Makerspace?</p>
+<p>5:57: What computing resources are included in the AI Makerspace?</p>
+<p>7:23: What is the aim of the AI Makerspace?</p>
+<p>14:47: Georgia Tech’s AI-focused minor and coursework</p>
+<p>19:25: Raychowdhury’s insight on the intersection of AI and higher education</p>
+<p>23:33: How have industries and jobs already changed as a result of AI?</p>
+<p>27:44: What can younger students do to prepare to get a spot in Georgia Tech’s engineering program?</p>
+<h2><b>You Might Also Like…</b></h2>
+<p><a target="_blank" href="https://soundcloud.com/theaipodcast/household-robots">How Two Students Are Building Robots for Handling Houeshold Chores &#8211; Ep. 224<br />
+</a>Imagine having a robot that could help you clean up after a party — or fold heaps of laundry. Chengshu Eric Li and Josiah David Wong, two Stanford University Ph.D. students advised by renowned computer science professor <a href="https://blogs.nvidia.com/blog/smart-hospital-ai-reduces-medical-errors/">Fei-Fei Li</a>, are making that a ‌dream come true with BEHAVIOR-1K, a project that aims to enable robots to perform 1,000 household chores, including picking up fallen objects or cooking.</p>
+<p><a target="_blank" href="https://soundcloud.com/theaipodcast/making-machines-mindful">Making Machines Mindful: NYU Professor Talks Responsible AI &#8211; Ep. 205</a></p>
+<p>Artificial intelligence is now a household term. Responsible AI is hot on its heels. Julia Stoyanovich, associate professor of computer science and engineering at NYU and director of the university’s Center for Responsible AI, wants to make the terms “AI” and “responsible AI” synonymous, sharing her advocacy efforts and how people can help.</p>
+<p><a target="_blank" href="https://soundcloud.com/theaipodcast/replit-ceo-amjad-masad">Replit CEO Amjad Masad on Empowering the Next Billion Software Creators &#8211; Ep. 201</a></p>
+<p>Replit aims to empower the next billion software creators. Replit CEO Amjad Masad aims to bridge the gap between ideas and software, a task simplified by advances in generative AI. The company’s suite of technologies help make software creation accessible to all, even those with no coding experience.</p>
+<p><a target="_blank" href="https://soundcloud.com/theaipodcast/edtech">MIT’s Anant Agarwal on AI in Education &#8211; Ep. 197</a></p>
+<p>Anant Agarwal, founder of edX and chief platform officer at 2U, shares his vision for the future of online education and the impact of AI in revolutionizing the learning experience, emphasizing the importance of accessibility and quality in education.</p>
+<h2><strong>Subscribe to the AI Podcast</strong></h2>
+<p>Get the <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a> through <a target="_blank" href="https://itunes.apple.com/us/podcast/the-ai-podcast/id1186480811?mt=2&amp;adbsc=social_20161220_68874946&amp;adbid=811257941365882882&amp;adbpl=tw&amp;adbpr=61559439">iTunes</a>, <a target="_blank" href="https://play.google.com/music/listen?u=0#/ps/I4kyn74qfrsdhrm35mcrf3igxzm">Google Play</a>, <a target="_blank" href="https://music.amazon.com/podcasts/956857d0-9461-4496-a07e-24be0539ee82/the-ai-podcast">Amazon Music,</a> <a target="_blank" href="https://castbox.fm/channel/The-AI-Podcast-id433488?country=us">Castbox</a>, DoggCatcher,<a target="_blank" href="https://overcast.fm/itunes1186480811/the-ai-podcast"> Overcast</a>, <a target="_blank" href="https://player.fm/series/the-ai-podcast">PlayerFM</a>, Pocket Casts, <a target="_blank" href="http://www.podbay.fm/show/1186480811">Podbay</a>, <a target="_blank" href="https://www.podbean.com/podcast-detail/cjgnp-4a6e0/The-AI-Podcast">PodBean</a>, PodCruncher, PodKicker, <a target="_blank" href="https://soundcloud.com/theaipodcast">Soundcloud</a>,<a target="_blank" href="https://open.spotify.com/show/4TB4pnynaiZ6YHoKmyVN0L"> Spotify</a>, <a target="_blank" href="http://www.stitcher.com/s?fid=130629&amp;refid=stpr">Stitcher</a> and <a target="_blank" href="https://tunein.com/podcasts/Technology-Podcasts/The-AI-Podcast-p940829/">TuneIn</a>.</p>
+<p>Make the AI Podcast better: Have a few minutes to spare? Fill out <a target="_blank" href="http://survey.podtrac.com/start-survey.aspx?pubid=I5V0tOQFNS8j&amp;ver=short">this listener survey</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1159"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2021/08/ai-podcast-2600x1472_-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[How Georgia Tech’s AI Makerspace Is Preparing the Future Workforce for AI]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>How NVIDIA AI Foundry Lets Enterprises Forge Custom Generative AI Models</title>
 		<link>https://blogs.nvidia.com/blog/ai-foundry-enterprise-generative-ai/</link>
 		
@@ -56,7 +206,7 @@
 <p>Customers can develop NVIDIA AI Foundry models for production using AIOps and MLOps platforms from NVIDIA partners, including Cleanlab, DataDog, Dataiku, Dataloop, DataRobot, Domino Data Lab, <a target="_blank" href="https://www.fiddler.ai/blog/steer-and-observe-llms-with-nvidia-nemo-guardrails-and-fiddler">Fiddler AI</a>, New Relic, Scale and Weights &amp; Biases.</p>
 <p>Customers can output their AI Foundry models as <a target="_blank" href="http://v">NVIDIA NIM</a> inference microservices — which include the custom model, optimized engines and a standard API — to run on their preferred accelerated infrastructure.</p>
 <p>Inferencing solutions like <a target="_blank" href="https://developer.nvidia.com/blog/optimizing-inference-on-llms-with-tensorrt-llm-now-publicly-available/">NVIDIA TensorRT-LLM</a> deliver improved efficiency for Llama 3.1 models to minimize latency and maximize throughput. This enables enterprises to generate tokens faster while reducing total cost of running the models in production. Enterprise-grade support and security is provided by the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a> software suite.</p>
-<figure id="attachment_73149" aria-describedby="caption-attachment-73149" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf.png"><img fetchpriority="high" decoding="async" class="size-large wp-image-73149" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-672x362.png" alt="" width="672" height="362" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-672x362.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-400x215.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-768x414.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-836x450.png 836w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-399x215.png 399w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-186x100.png 186w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf.png 1140w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73149" class="wp-caption-text">NVIDIA NIM and TensorRT-LLM minimize inference latency and maximize throughput for Llama 3.1 models to generate tokens faster.</figcaption></figure>
+<figure id="attachment_73149" aria-describedby="caption-attachment-73149" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf.png"><img loading="lazy" decoding="async" class="size-large wp-image-73149" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-672x362.png" alt="" width="672" height="362" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-672x362.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-400x215.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-768x414.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-836x450.png 836w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-399x215.png 399w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf-186x100.png 186w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Llama-3.1-Perf.png 1140w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73149" class="wp-caption-text">NVIDIA NIM and TensorRT-LLM minimize inference latency and maximize throughput for Llama 3.1 models to generate tokens faster.</figcaption></figure>
 <p>The broad range of deployment options includes <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/certified-systems/">NVIDIA-Certified Systems</a> from global server manufacturing partners including Cisco, Dell Technologies, Hewlett Packard Enterprise, Lenovo and Supermicro, as well as cloud instances from Amazon Web Services, Google Cloud and Oracle Cloud Infrastructure.</p>
 <p>Additionally, <a target="_blank" href="https://www.together.ai/blog/nvidia-ai-foundry-partnership">Together AI</a>, a leading AI acceleration cloud, today announced it will enable its ecosystem of over 100,000 developers and enterprises to use its NVIDIA GPU-accelerated inference stack to deploy Llama 3.1 endpoints and other open models on DGX Cloud.</p>
 <p>“Every enterprise running generative AI applications wants a faster user experience, with greater efficiency and lower cost,” said Vipul Ved Prakash, founder and CEO of Together AI. “Now, developers and enterprises using the Together Inference Engine can maximize performance, scalability and security on NVIDIA DGX Cloud.”</p>
@@ -129,12 +279,12 @@
 <p>They join the collection of NIM microservices easily accessible through the <a target="_blank" href="https://build.nvidia.com/explore/retrieval">NVIDIA API catalog</a>.</p>
 <h2><b>Embedding and Reranking Models</b></h2>
 <p>NeMo Retriever NIM microservices comprise two model types — embedding and reranking — with open and commercial offerings that ensure transparency and reliability.</p>
-<figure id="attachment_73135" aria-describedby="caption-attachment-73135" style="width: 823px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-73135" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline.png" alt="A diagram showing a user prompt inquiring about a bill, retrieving the most accurate response. " width="823" height="413" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline.png 823w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-400x201.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-672x337.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-768x385.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-406x204.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-188x94.png 188w" sizes="(max-width: 823px) 100vw, 823px" /><figcaption id="caption-attachment-73135" class="wp-caption-text">Example RAG pipeline using NVIDIA NIM microservices for Llama 3.1 and NeMo Retriever embedding and reranking NIM microservices for a customer service AI chatbot application.</figcaption></figure>
+<figure id="attachment_73135" aria-describedby="caption-attachment-73135" style="width: 823px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-73135" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline.png" alt="A diagram showing a user prompt inquiring about a bill, retrieving the most accurate response. " width="823" height="413" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline.png 823w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-400x201.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-672x337.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-768x385.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-406x204.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-rag-example-pipeline-188x94.png 188w" sizes="(max-width: 823px) 100vw, 823px" /><figcaption id="caption-attachment-73135" class="wp-caption-text">Example RAG pipeline using NVIDIA NIM microservices for Llama 3.1 and NeMo Retriever embedding and reranking NIM microservices for a customer service AI chatbot application.</figcaption></figure>
 <p>An <a target="_blank" href="https://www.nvidia.com/en-us/glossary/vector-database/#:~:text=What%20is%20an%20Embedding%20Model%3F">embedding model</a> transforms diverse data — such as text, images, charts and video — into numerical vectors, stored in a vector database, while capturing their meaning and nuance. Embedding models are fast and computationally less expensive than traditional large language models, or LLMs.</p>
 <p>A reranking model ingests data and a query, then scores the data according to its relevance to the query. Such models offer significant accuracy improvements while being computationally complex and slower than embedding models.</p>
 <p>NeMo Retriever provides the best of both worlds. By casting a wide net of data to be retrieved with an embedding NIM, then using a reranking NIM to trim the results for relevancy, developers tapping NeMo Retriever can build a pipeline that ensures the most helpful, accurate results for their enterprise.</p>
 <p>With NeMo Retriever, developers get access to state-of-the-art open, commercial models for building text Q&amp;A retrieval pipelines that provide the highest accuracy. When compared with alternate models, NeMo Retriever NIM microservices provided 30% fewer inaccurate answers for enterprise question answering.</p>
-<figure id="attachment_73138" aria-describedby="caption-attachment-73138" style="width: 811px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-73138" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison.png" alt="Bar chart showing lexical search (45%), alternative embedder (63%), compared with NeMo Retriever embedding NIM (73%) and NeMo Retriever embedding + reranking NIM microservices (75%)." width="811" height="321" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison.png 811w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-400x158.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-672x266.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-768x304.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-406x161.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-188x74.png 188w" sizes="(max-width: 811px) 100vw, 811px" /><figcaption id="caption-attachment-73138" class="wp-caption-text">Comparison of NeMo Retriever embedding NIM and embedding plus reranking NIM microservices performance versus lexical search and an alternative embedder.</figcaption></figure>
+<figure id="attachment_73138" aria-describedby="caption-attachment-73138" style="width: 811px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-73138" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison.png" alt="Bar chart showing lexical search (45%), alternative embedder (63%), compared with NeMo Retriever embedding NIM (73%) and NeMo Retriever embedding + reranking NIM microservices (75%)." width="811" height="321" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison.png 811w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-400x158.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-672x266.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-768x304.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-406x161.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nemo-retriever-embedding-reranking-comparison-188x74.png 188w" sizes="(max-width: 811px) 100vw, 811px" /><figcaption id="caption-attachment-73138" class="wp-caption-text">Comparison of NeMo Retriever embedding NIM and embedding plus reranking NIM microservices performance versus lexical search and an alternative embedder.</figcaption></figure>
 <h2><b>Top Use Cases</b></h2>
 <p>From RAG and AI agent solutions to data-driven analytics and more, NeMo Retriever powers a wide range of AI applications.</p>
 <p>The microservices can be used to build <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/generative-ai-chatbots/">intelligent chatbots</a> that provide accurate, context-aware responses. They can help analyze vast amounts of data to <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/security-vulnerability-analysis/">identify security vulnerabilities</a>. They can assist in extracting insights from complex <a target="_blank" href="https://www.youtube.com/watch?v=a9O0JipIrb4">supply chain information</a>. And they can boost AI-enabled <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/ai-workflows/retail-shopping-advisor/">retail shopping advisors</a> that offer natural, personalized shopping experiences, among other tasks.</p>
@@ -1137,112 +1287,6 @@
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Mission NIMpossible: Decoding the Microservices That Accelerate Generative AI]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Widescreen Wonder: Las Vegas Sphere Delivers Dazzling Displays</title>
-		<link>https://blogs.nvidia.com/blog/sphere-las-vegas/</link>
-		
-		<dc:creator><![CDATA[Isha Salian]]></dc:creator>
-		<pubDate>Tue, 09 Jul 2024 16:00:39 +0000</pubDate>
-				<category><![CDATA[Pro Graphics]]></category>
-		<category><![CDATA[Art]]></category>
-		<category><![CDATA[Media and Entertainment]]></category>
-		<category><![CDATA[NVIDIA BlueField]]></category>
-		<category><![CDATA[NVIDIA RTX]]></category>
-		<category><![CDATA[Rendering]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72849</guid>
-
-					<description><![CDATA[Sphere, a new kind of entertainment medium in Las Vegas, is joining the ranks of legendary circular performance spaces such as the Roman Colosseum and Shakespeare’s Globe Theater — captivating audiences with eye-popping LED displays that cover nearly 750,000 square feet inside and outside the venue. Behind the screens, around 150 NVIDIA RTX A6000 GPUs	<a class="read-more" href="https://blogs.nvidia.com/blog/sphere-las-vegas/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Sphere, a new kind of entertainment medium in Las Vegas, is joining the ranks of legendary circular performance spaces such as the Roman Colosseum and Shakespeare’s Globe Theater — captivating audiences with eye-popping LED displays that cover nearly 750,000 square feet inside and outside the venue.</p>
-<p>Behind the screens, around 150 <a target="_blank" href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">NVIDIA RTX A6000 GPUs</a> help power stunning visuals on floor-to-ceiling, 16x16K displays across the Sphere’s interior, as well as 1.2 million programmable LED pucks on the venue’s exterior — the Exosphere, which is the world’s largest LED screen.</p>
-<p>Delivering robust network connectivity, <a target="_blank" href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/">NVIDIA BlueField DPUs</a> and <a target="_blank" href="https://www.nvidia.com/en-us/networking/ethernet-adapters/">NVIDIA ConnectX-6 Dx NICs</a> — along with the <a target="_blank" href="https://docs.nvidia.com/doca/sdk/doca-firefly-service/index.html">NVIDIA DOCA Firefly Service</a> and <a target="_blank" href="https://developer.nvidia.com/networking/rivermax">NVIDIA Rivermax software</a> for media streaming — ensure that all the display panels act as one synchronized canvas.</p>
-<p>“Sphere is captivating audiences not only in Las Vegas, but also around the world on social media, with immersive LED content delivered at a scale and clarity that has never been done before,” said Alex Luthwaite, senior vice president of show systems technology at Sphere Entertainment. “This would not be possible without the expertise and innovation of companies such as NVIDIA that are critical to helping power our vision, working closely with our team to redefine what is possible with cutting-edge display technology.”</p>
-<p>Named <a href="https://time.com/collection/best-inventions-2023/6324099/sphere/" target="_blank" rel="noopener">one of TIME’s Best Inventions of 2023</a>, Sphere hosts original Sphere Experiences, concerts and residencies from the world’s biggest artists, and premier marquee and corporate events.</p>
-<p>Rock band U2 opened Sphere with a 40-show run that concluded in March. Other shows include The Sphere Experience featuring Darren Aronofsky’s <i>Postcard From Earth</i>, a specially created multisensory cinematic experience that showcases all of the venue’s immersive technologies, including high-resolution visuals, advanced concert-grade sound, haptic seats and atmospheric effects such as wind and scents.</p>
-<figure id="attachment_72853" aria-describedby="caption-attachment-72853" style="width: 2048px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-72853" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-scaled.jpg" alt="image of the Earth from space displayed in Sphere" width="2048" height="1365" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-400x267.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-672x448.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-768x512.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-1536x1024.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-675x450.jpg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-323x215.jpg 323w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-150x100.jpg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere_092823_2323-2-1280x853.jpg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /><figcaption id="caption-attachment-72853" class="wp-caption-text">“Postcard From Earth” is a multisensory immersive experience. Image courtesy of Sphere Entertainment.</figcaption></figure>
-<h2><b>Behind the Screens: Visual Technology Fueling the Sphere</b></h2>
-<p>Sphere Studios creates video content in its Burbank, Calif., facility, then transfers it digitally to Sphere in Las Vegas. The content is then streamed in real time to rack-mounted workstations equipped with NVIDIA RTX A6000 GPUs, achieving unprecedented performance capable of delivering three layers of 16K resolution at 60 frames per second.</p>
-<p>The NVIDIA Rivermax software helps provide media streaming acceleration, enabling direct data transfers to and from the GPU. Combined, the software and hardware acceleration eliminates jitter and optimizes latency.</p>
-<p>NVIDIA BlueField DPUs also facilitate precision timing through the DOCA Firefly Service, which is used to synchronize clocks in a network with sub-microsecond accuracy.</p>
-<p>“The integration of NVIDIA RTX GPUs, BlueField DPUs and Rivermax software creates a powerful trifecta of advantages for modern accelerated computing, supporting the unique high-resolution video streams and strict timing requirements needed at Sphere and setting a new standard for media processing capabilities,” said Nir Nitzani, senior product director for networking software at NVIDIA. “This collaboration results in remarkable performance gains, culminating in the extraordinary experiences guests have at Sphere.”<i> </i></p>
-<h2><b>Well-Rounded: From Simulation to Sphere Stage</b></h2>
-<p>To create new immersive content exclusively for Sphere, Sphere Entertainment launched Sphere Studios, which is dedicated to developing the next generation of original immersive entertainment. The Burbank campus consists of numerous development facilities, including a quarter-sized version of Sphere screen in Las Vegas, dubbed Big Dome, which serves as a specialized screening, production facility and lab for content.</p>
-<figure id="attachment_72856" aria-describedby="caption-attachment-72856" style="width: 2048px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-72856" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-scaled.jpeg" alt="dome-shaped building flanked by palm trees" width="2048" height="1366" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-scaled.jpeg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-400x267.jpeg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-672x448.jpeg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-768x512.jpeg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-1536x1024.jpeg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-675x450.jpeg 675w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-322x215.jpeg 322w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-150x100.jpeg 150w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Big-Dome-Exterior-Credit-Sphere-Entertainment-1280x854.jpeg 1280w" sizes="(max-width: 2048px) 100vw, 2048px" /><figcaption id="caption-attachment-72856" class="wp-caption-text">The Big Dome is 100 feet high and 28,000 square feet. Image courtesy of Sphere Entertainment.</figcaption></figure>
-<p>Sphere Studios also developed the Big Sky camera system, which captures uncompressed, 18K images from a single camera, so that the studio can film content for Sphere without needing to stitch multiple camera feeds together. The studio’s custom image processing software runs on Lenovo servers powered by <a target="_blank" href="https://www.nvidia.com/en-us/data-center/a40/">NVIDIA A40 GPUs</a>.</p>
-<p>The A40 GPUs also fuel creative work, including 3D video, virtualization and ray tracing. To develop visuals for different kinds of shows, the team works with apps including Unreal Engine, Unity, Touch Designer and Notch.</p>
-<p><i>For more, explore upcoming sessions in </i><a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/"><i>NVIDIA’s room at SIGGRAPH</i></a><i> and watch the panel discussion “</i><a target="_blank" href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s63135/"><i>Immersion in Sphere: Redefining Live Entertainment Experiences</i></a><i>” on NVIDIA On-Demand.</i></p>
-<p><i>All images courtesy of Sphere Entertainment.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere-Exosphere.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Sphere-Exosphere-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Widescreen Wonder: Las Vegas Sphere Delivers Dazzling Displays]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>In It for the Long Haul: Waabi Pioneers Generative AI to Unleash Fully Driverless Autonomous Trucking</title>
-		<link>https://blogs.nvidia.com/blog/waabi-autonomous-trucking/</link>
-		
-		<dc:creator><![CDATA[Norm Marks]]></dc:creator>
-		<pubDate>Mon, 08 Jul 2024 15:00:00 +0000</pubDate>
-				<category><![CDATA[Driving]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[NVIDIA DRIVE]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=72803</guid>
-
-					<description><![CDATA[Artificial intelligence is transforming the transportation industry, helping drive advances in autonomous vehicle (AV) technology. Waabi, a Toronto-based startup, is embracing generative AI to deliver self-driving vehicles at scale — starting with the long-haul trucking sector. At GTC in March, Waabi announced that it will use the NVIDIA DRIVE Thor centralized car computer to bring	<a class="read-more" href="https://blogs.nvidia.com/blog/waabi-autonomous-trucking/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Artificial intelligence is transforming the transportation industry, helping drive advances in autonomous vehicle (AV) technology.</p>
-<p>Waabi, a Toronto-based startup, is embracing generative AI to deliver self-driving vehicles at scale — starting with the long-haul trucking sector.</p>
-<p>At GTC in March, <a href="https://waabi.ai/nvidia-drivethor/" target="_blank" rel="noopener">Waabi announced that it will use the NVIDIA DRIVE Thor</a> centralized car computer to bring a safe, generative AI-powered autonomous trucking solution — the Waabi Driver —  to market.</p>
-<p>As the company plans the launch of fully driverless operations next year, Waabi is reinvigorating the industry with a self-driving solution that’s capital-efficient, can safely handle new scenarios on the road and ultimately scales commercially.</p>
-<p>Waabi is developing on <a href="https://developer.nvidia.com/drive/os" target="_blank" rel="noopener">NVIDIA DRIVE OS</a>, the company’s operating system for safe, AI-defined autonomous vehicles.</p>
-<p>The innovative startup has pioneered an approach that centers on the combination of two generative AI systems: a “teacher,” called Waabi World, an advanced simulator that trains and validates a “student,” called Waabi Driver, a single, end-to-end AI system that’s capable of human-like reasoning and is fully interpretable.</p>
-<p>When paired together, these systems reduce the need for extensive on-road testing and enable a safer, more efficient solution that is highly performant and scalable.</p>
-<p>“We are excited to have a deep collaboration with NVIDIA to bring generative AI to the edge, on our vehicles, at scale,” said Raquel Urtasun, founder and CEO of Waabi.</p>
-<p><iframe loading="lazy" title="Waabi and NVIDIA: Bringing Generative AI to the Edge" width="500" height="281" src="https://www.youtube.com/embed/iDGwP45B_GA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-<p>Generative AI accelerates the development of AVs by “providing an end-to-end system where, instead of requiring hundreds of engineers to develop a system by hand, it provides the ability to learn foundation models that can run unsupervised by observing and acting on the world,” Urtasun added.</p>
-<p>Waabi’s collaboration with NVIDIA is one in a series of milestones, including the company’s <a href="https://waabi.ai/waabi-series-b-announcement/" target="_blank" rel="noopener">$200 million Series B round</a> with participation from NVIDIA, its <a href="https://waabi.ai/waabi-uber-freight/" target="_blank" rel="noopener">work with logistics company Uber Freight</a>, the launch of its first commercial autonomous trucking routes in the U.S., and the opening of a trucking terminal near Dallas to serve as the center of the company’s operations in the Lone Star state.</p>
-<p>“What we’re building for autonomous vehicles — combining generative AI-powered simulation with a foundation AI model purpose-built for acting in the physical world — will enable faster, safer and more scalable deployment of this transformative technology around the world,” Urtasun noted on the company’s website.</p>
-<p><i>Listen to Urtasun’s </i><a href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s62621/" target="_blank" rel="noopener"><i>talk at GTC</i></a><i> for more on the company’s work on using generative AI to develop autonomous vehicles.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/waabi.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/waabi-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[In It for the Long Haul: Waabi Pioneers Generative AI to Unleash Fully Driverless Autonomous Trucking]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
