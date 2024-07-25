@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Wed, 24 Jul 2024 15:56:23 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 25 Jul 2024 17:23:40 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,80 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Guided multi-objective generative AI for drug design</title>
+		<link>https://aws.amazon.com/blogs/hpc/guided-multi-objective-generative-ai-for-drug-design/</link>
+		
+		<dc:creator><![CDATA[Kevin Ryczko]]></dc:creator>
+		<pubDate>Thu, 25 Jul 2024 14:46:30 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[ML]]></category>
+		<category><![CDATA[Molecular Modeling]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">ffa78039537c6c5870e621706f15f01713cb1ac8</guid>
+
+					<description>Transforming computer-aided drug design: see how SandboxAQ leverages AWS and generative AI to explore chemical space, more intelligently generating drug candidates.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3977" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/Firefly-scientist-in-a-lab-coat-staring-at-a-model-of-a-molecule-on-a-large-wall-size-computer-scree.png" alt="" width="380" height="217"&gt;This post was contributed by &lt;em&gt;Kevin Ryczko, Amit Kadan, Takeshi Yamazaki, Arman Zaribafiyan, Ross Pivovar, and Ilan Gleiser&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;In this post, we’ll discuss how &lt;a href="https://www.sandboxaq.com/"&gt;SandboxAQ&lt;/a&gt; is transforming computer-aided drug design (CADD) by deploying their workloads in the cloud on AWS. CADD is a field with the potential to accelerate the drug discovery process – something that otherwise generally takes more than &lt;a href="https://www.technologyreview.com/2023/02/15/1067904/ai-automation-drug-development/"&gt;a decade&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Identifying compounds with a high binding affinity (&lt;em&gt;ligands&lt;/em&gt;) to a target protein is one of the most crucial steps in &lt;a href="https://www.cell.com/cell-chemical-biology/pdf/S1074-5521(03)00194-7.pdf"&gt;CADD&lt;/a&gt; for designing drugs that bind their targets selectively and specifically. But this is an extremely challenging task because of the large chemical space we need to explore.&lt;/p&gt; 
+&lt;p&gt;The traditional approach has been to virtually screen &lt;a href="https://pubs.acs.org/doi/10.1021/ci300415d"&gt;billions of compounds&lt;/a&gt; from a large pre-enumerated dataset with various methodologies that evaluate and filter the compounds, leaving only tens to hundreds for experimental testing and validation. This has a high computational cost, and success isn’t certain if an optimal ligand exists &lt;a href="https://www.nature.com/articles/s41589-022-01234-w"&gt;outside of the data&lt;/a&gt; being examined.&lt;/p&gt; 
+&lt;h2&gt;Enter artificial intelligence&lt;/h2&gt; 
+&lt;p&gt;Based on it’s remarkable success in text and image generation, generative artificial intelligence has recently emerged in the scientific community to perform &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7915729/#:~:text=De%20novo%20drug%20design%20is%20a%20methodology%20that%20creates%20novel,12%2C13%2C14%5D."&gt;&lt;em&gt;de novo &lt;/em&gt;&lt;/a&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7915729/#:~:text=De%20novo%20drug%20design%20is%20a%20methodology%20that%20creates%20novel,12%2C13%2C14%5D."&gt;drug discovery&lt;/a&gt;. At a high level, a generative machine learning (ML) model learns the underlying distribution of a data set and encodes it into a high-dimensional latent space. The latent space allows the model to represent chemical space numerically, encoding molecules as vectors. By encoding discrete data points from a molecular dataset into a continuous numerical space, the model must extrapolate thereby exploring &lt;a href="https://www.nature.com/articles/s42256-021-00368-1"&gt;uncharted chemical space&lt;/a&gt; not captured in the data.&lt;/p&gt; 
+&lt;p&gt;A generative model proposes new compounds by sampling the latent space and transforming a latent vector into a molecular representation via the decoding layers of a neural network. Conventionally, it samples the vector from the latent space randomly. But, there’s no guarantee that a generative model produces an optimal ligand when performing random sampling. The hurdle of reducing the computational cost to produce a molecule with desired properties is still present.&lt;/p&gt; 
+&lt;div id="attachment_3970" style="width: 510px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3970" loading="lazy" class="size-full wp-image-3970" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/IMG-2024-07-10-10.37.18.png" alt="Figure 1: Our generative AI, IDOLPro, utilizes gradient information from differentiable scores to efficiently traverse the latent space of a generative model. Optimized points in the latent space yield molecules with desired properties." width="500" height="480"&gt;
+ &lt;p id="caption-attachment-3970" class="wp-caption-text"&gt;Figure 1: Our generative AI, IDOLPro, utilizes gradient information from differentiable scores to efficiently traverse the latent space of a generative model. Optimized points in the latent space yield molecules with desired properties.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Our approach to de novo drug design&lt;/h2&gt; 
+&lt;p&gt;We developed &lt;a href="https://arxiv.org/abs/2405.11785"&gt;IDOLpro&lt;/a&gt; (Inverse Design of Optimal Ligands for Protein pockets), a guided multi-objective generative AI to ensure that optimal ligands are produced. IDOLpro incorporates feedback (gradients) from a scoring function to update the latent vectors (Figure 1). Standard machine learning libraries like Pytorch and Tensorflow &lt;a href="https://pytorch.org/blog/computational-graphs-constructed-in-pytorch/"&gt;automatically generate a computational graph&lt;/a&gt; so that the model weights can be efficiently updated to optimize a particular loss function. We take advantage of this computational graph during inference to find a latent space vector optimizing an objective function which quantifies a set of desired attributes. Doing this allows us to use robust optimization algorithms to traverse the latent space, quickly and efficiently finding novel ligands with optimal expected properties.&lt;/p&gt; 
+&lt;p&gt;In the case of &lt;em&gt;in silico &lt;/em&gt;drug discovery, one of the most important objectives is to find ligands with high binding affinities to a target protein. However, optimizing binding affinity alone produces ligands that are useless in practice due to overlooking &lt;a href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.0c00174"&gt;other important criteria&lt;/a&gt; like synthesizability, toxicity, and solubility. To address this issue, we build guided multi-objective generative AI for structure-based drug discovery, optimizing both binding affinity and synthesizability simultaneously, producing synthesizable compounds that bind well to the target protein.&lt;/p&gt; 
+&lt;p&gt;To validate our approach, we used the &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041641/"&gt;Vina score&lt;/a&gt; to approximate the binding affinity and &lt;a href="https://jcheminf.biomedcentral.com/articles/10.1186/1758-2946-1-8"&gt;synthetic accessibility (SA) score&lt;/a&gt; to approximate the synthesizability of the generated molecules, while guiding the latent variables of a state-of-the-art generative model for protein-conditioned ligand generation – &lt;a href="https://openreview.net/forum?id=uKmuzIuVl8z"&gt;DiffSBDD&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2&gt;Building guided multi-objective generative AI for drug design with cloud computing&lt;/h2&gt; 
+&lt;p&gt;AWS was essential for us to develop our optimization pipeline. Development of the pipeline, model training and testing, and experimentation (inference) were all performed on Amazon Elastic Compute Cloud (Amazon EC2) instances that &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; spun up for us (Figure 2 shows the architecture). The open-source Slurm scheduling software built into AWS ParallelCluster allowed us to request hundreds of GPU-based Amazon EC2 instances in parallel, enabling rapid experimentation of our optimization pipeline.&lt;/p&gt; 
+&lt;p&gt;Our optimization process requires defining a computational graph that begins with the latent vectors of the generative model and ends with the scores of &lt;em&gt;interest&lt;/em&gt;. These computational graphs can become large and we need to store them in GPU memory for maximum efficiency. For this reason, we chose NVIDIA A10G Tensor Core GPUs with 24 GB of VRAM (g5.2xlarge).&lt;/p&gt; 
+&lt;p&gt;To have a differentiable synthesizability score, we trained an ensemble of equivariant neural networks (each on a different random split of data) to predict the synthetic accessibility given a molecular structure. To train, validate, and test our ensemble, we used NVIDIA Tesla V100 GPUs (p3.2xlarge). We tracked all our training runs using &lt;a href="https://mlflow.org/"&gt;MLFlow&lt;/a&gt;, which we set up on a t2.large EC2 instance. We also configured the MLFlow backend store to use a PostgreSQL relational database, which ran on a db.t3.medium instance in Amazon Relational Database Service (Amazon RDS). And we stored the datasets and training metrics in an Amazon Simple Storage Service (Amazon S3) bucket, all managed by MLFlow.&lt;/p&gt; 
+&lt;p&gt;With this combination, when running IDOLpro on AWS, we efficiently generated 100 novel ligands per protein pocket in an hour using just a single GPU.&lt;/p&gt; 
+&lt;div id="attachment_3971" style="width: 596px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3971" loading="lazy" class="size-full wp-image-3971" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/IMG-2024-07-10-10.38.19.png" alt="Fig. 2: Outline of AWS technologies used in our generative AI pipeline. We used AWS ParallelCluster to launch training and inference tasks, with artifacts stored in AWS S3. We used an MLFlow server set up on an AWS EC2 instance to track experiments, with data stored in an AWS RDS instance." width="586" height="670"&gt;
+ &lt;p id="caption-attachment-3971" class="wp-caption-text"&gt;Fig. 2: Outline of AWS technologies used in our generative AI pipeline. We used AWS ParallelCluster to launch training and inference tasks, with artifacts stored in AWS S3. We used an MLFlow server set up on an AWS EC2 instance to track experiments, with data stored in an AWS RDS instance.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Surpassing the binding affinity of experimentally verified molecules&lt;/h2&gt; 
+&lt;p&gt;We investigated the performance of our pipeline on two commonly used benchmark datasets, &lt;a href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.0c00411"&gt;CrossDocked&lt;/a&gt; and &lt;a href="http://www.bindingmoad.org/"&gt;Binding MOAD&lt;/a&gt;. The CrossDocked dataset contains the computationally-docked protein-ligand pair structures. The Binding MOAD dataset contains experimentally determined pocket-ligand pairs. We compared the results of our tool to other existing tools in the literature that also perform &lt;em&gt;de novo &lt;/em&gt;ligand generation.&lt;/p&gt; 
+&lt;p&gt;Both datasets contain the structural information for a large number of protein-ligand interactions. The ligands in these interactions are useful to identify a binding pocket within the protein target and hence serve as the input to a generative model that generates ligands directly into the protein pocket.&lt;/p&gt; 
+&lt;div id="attachment_3972" style="width: 975px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3972" loading="lazy" class="size-full wp-image-3972" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/IMG-2024-07-10-10.39.07.png" alt="Fig. 3: IDOLpro produces molecules with better binding affinity than other generative tools on two benchmark sets -&amp;nbsp; CrossDocked (left) and the Binding MOAD (right). IDOLpro also yields average Vina scores that are better than those of the reference molecules found in each dataset. For CrossDocked these reference molecules were from virtual screening, while for the Binding MOAD, these reference molecules are from experiments." width="965" height="450"&gt;
+ &lt;p id="caption-attachment-3972" class="wp-caption-text"&gt;Fig. 3: IDOLpro produces molecules with better binding affinity than other generative tools on two benchmark sets – CrossDocked (left) and the Binding MOAD (right). IDOLpro also yields average Vina scores that are better than those of the reference molecules found in each dataset. For CrossDocked these reference molecules were from virtual screening, while for the Binding MOAD, these reference molecules are from experiments.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Our generative AI, IDOLpro, outperformed all other generative models in these benchmark sets as we show in Figure 3. For CrossDocked, we found a 10% (0.73 kcal/mol) improvement compared to state-of-the-art (DiffSBDD) and a 17% improvement compared to the ligands in the test set (labeled &lt;em&gt;Test-set&lt;/em&gt;).&lt;/p&gt; 
+&lt;p&gt;To put these energy differences into perspective, we can use them to estimate the IC50 value, which directly informs the efficacy of an inhibitor drug. When considering the performance of our tool compared to the next-best tool, this difference in Vina scores corresponds to a &lt;em&gt;3.4x improvement in the IC50 value&lt;/em&gt;.&lt;/p&gt; 
+&lt;p&gt;Amongst generative ML tools, IDOLpro is producing – to the best of our knowledge – the best binding affinity ligands to date. With our pipeline, for the first time, we can generate ligands with better binding affinities than the experimentally verified ligands. Relative to those same experimentally verified ligands, when optimizing both binding affinity and synthesizability, we were able to produce more easily synthesizable ligands with better binding affinity 95% of the time.&lt;/p&gt; 
+&lt;h2&gt;Fine-tuning reference ligands with generative AI&lt;/h2&gt; 
+&lt;div id="attachment_3973" style="width: 1023px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3973" loading="lazy" class="size-full wp-image-3973" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/IMG-2024-07-10-10.39.41.png" alt="Fig. 4: Example of using IDOLpro for performing lead optimization. IDOLpro produces molecules that have slight changes in their scaffold and functional groups relative to the reference molecules. IDOLpro is able to produce many molecules with better binding affinity and synthetic accessibility scores." width="1013" height="424"&gt;
+ &lt;p id="caption-attachment-3973" class="wp-caption-text"&gt;Fig. 4: Example of using IDOLpro for performing lead optimization. IDOLpro produces molecules that have slight changes in their scaffold and functional groups relative to the reference molecules. IDOLpro is able to produce many molecules with better binding affinity and synthetic accessibility scores.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;In addition to &lt;em&gt;de novo &lt;/em&gt;generation, our pipeline can perform &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3058157/"&gt;lead optimization&lt;/a&gt; in which the initial ligand is optimized towards having more optimal properties. In this case, we start with a reference ligand, identify its place in the latent space in the generative model, and then begin the optimization procedure. Lead optimization often fixes a large part of the molecule, i.e., the scaffold while optimizing the rest of the molecule. As a simple demonstration, we performed optimization without holding any of the molecules fixed in the present work. However, as seen in Fig. 4 our optimization also produces ligands with a similar scaffold.&lt;/p&gt; 
+&lt;p&gt;When performing lead optimization on the reference ligands from a testing subset of CrossDocked, we found that 95% of the ligands produced from our pipeline have better binding affinity and synthesizability scores than the references. If we compare this to our &lt;em&gt;de novo &lt;/em&gt;generation strategy, only 76% of the ligands have both better binding affinity and synthesizability scores.&lt;/p&gt; 
+&lt;p&gt;We found that &lt;em&gt;de novo&lt;/em&gt; generation produces the lowest binding affinity scores, and lead optimization produces more synthesizable ligands. Performing lead optimization with our pipeline strikes a fine balance between binding affinity and synthesizability, producing viable, next-generation drug molecules.&lt;/p&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;IDOLpro, is a guided multi-objective generative AI to accelerate structure-based drug design with AWS. Our method outperformed all other generative models on two commonly used benchmark datasets for protein-ligand binding. In addition, for the first time, we generated ligands with better binding affinities than experimentally verified ligands.&lt;/p&gt; 
+&lt;p&gt;Our future work is to integrate other important metrics into IDOLpro such as toxicity and solubility to ensure the generation of more suitable ligands, along with the consideration of more accurate binding affinity metrics such as &lt;a href="https://chemrxiv.org/engage/chemrxiv/article-details/6583785e66c1381729ac86f5"&gt;free energy perturbation (FEP) based affinity&lt;/a&gt;. The modular architecture of our guided multi-objective generative AI is general and allows us to expand it to other industry-relevant applications like catalyst and battery material discovery.&lt;/p&gt; 
+&lt;p&gt;We think that guided multi-objective generative AI will become the foundation for many drug and material discovery activities. We’ve made IDOLpro available on &lt;a href="https://www.sandboxaq.com/solutions/quantum-simulation"&gt;QEMIST Cloud&lt;/a&gt;. This is SandboxAQ’s cloud-based simulation package and it includes several methods to compute different properties of molecules and materials.&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;The content and opinions in this blog are those of the third-party author and AWS is not responsible for the content or accuracy of this blog.&lt;/em&gt;&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Deploying generative AI applications with NVIDIA NIMs on Amazon EKS</title>
 		<link>https://aws.amazon.com/blogs/hpc/deploying-generative-ai-applications-with-nvidia-nims-on-amazon-eks/</link>
 		
@@ -34,7 +108,7 @@
 		<guid isPermaLink="false">864e8d92882395e358a5517106e0e927701768ae</guid>
 
 					<description>Learn how to deploy AI models at scale with @AWS using NVIDIA's NIM and Amazon EKS! This step-by-step guide shows you how to create a GPU cluster for inference. Don't miss part 1 of this 2-part blog series!</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img class="alignright size-full wp-image-4072" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/24/Deploying-generative-AI-applications-with-NVIDIA-NIMs-on-Amazon-EKS-copy.png" alt="" width="380" height="212"&gt;This post was contributed by Abhishek Sawarkar (NVIDIA), Alex Iankoulski (AWS), Aman Shanbhag (AWS), Deepika Padmanabhan (NVIDIA), Jiahong Liu (NVIDIA), Joey Chou (AWS)&lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="alignright size-full wp-image-4072" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/24/Deploying-generative-AI-applications-with-NVIDIA-NIMs-on-Amazon-EKS-copy.png" alt="" width="380" height="212"&gt;This post was contributed by Abhishek Sawarkar (NVIDIA), Alex Iankoulski (AWS), Aman Shanbhag (AWS), Deepika Padmanabhan (NVIDIA), Jiahong Liu (NVIDIA), Joey Chou (AWS)&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;Today, we’ll take you through a step-by-step -guide to help you to create a cluster of g5.48xlarge instances, accelerated by 8 x NVIDIA A10G Tensor Core GPUs, using Amazon Elastic Kubernetes Service (Amazon EKS) to host your inference solution via &lt;a href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/"&gt;NVIDIA NIM&lt;/a&gt;, NVIDIA’s optimized microservices for deploying AI models at scale. This blog is part 1 of a 2-part series.&lt;/p&gt; 
 &lt;p&gt;Amazon EKS is a managed service for running Kubernetes workloads on AWS. We can use EKS to orchestrate NVIDIA NIM (plural: NIMs) pods across multiple nodes, because it automatically manages the availability and scalability of the Kubernetes control plane nodes responsible for scheduling containers, managing application availability, storing cluster data, and other key tasks. EKS also integrates with AWS networking, security, and infrastructure – leveraging all the performance, scale, reliability, &lt;em&gt;and&lt;/em&gt; availability of AWS infrastructure. You can find all the details in the &lt;a href="https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html"&gt;EKS documentation&lt;/a&gt;.&lt;/p&gt; 
 &lt;p&gt;To follow along, you can find the code in our &lt;code&gt;awsome-inference&lt;/code&gt; &lt;a href="https://github.com/aws-samples/awsome-inference"&gt;GitHub repository&lt;/a&gt;. This repo contains reference architectures and test cases for inference on AWS. The examples cover a variety of models, use-cases, and frameworks for inference optimization.&lt;/p&gt; 
@@ -2229,58 +2303,6 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 &lt;p&gt;Instead of reviewing results from prior runs, engineers can solicit feedback from their peers real-time0, and get the results in 20-60 seconds, avoiding costly wait times. This will require engineers to think differently about product design reviews and meetings. Engineers will need to set expectations accordingly and be prepared to guide conversations. But this enables engineers to explore a greater design space than they otherwise could – especially given budget or time constraints. We’re confident this approach will lead to new innovations.&lt;/p&gt; 
 &lt;h2&gt;Conclusion&lt;/h2&gt; 
 &lt;p&gt;With the right combination of machine-learning and process change, automakers can use the architecture explained here to build tailored solutions to speed up the product engineering process, reduce the cost of compute, and explore a greater number of design options in a shorter period of time. If you or your team want to discuss the business case, a recommended implementation path with our Professional Services team, or technical solution blueprint in more detail, you can reach out to us at ask-hpc@amazon.com.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Announcing the High Performance Software Foundation (HPSF)</title>
-		<link>https://aws.amazon.com/blogs/hpc/announcing-the-high-performance-software-foundation/</link>
-		
-		<dc:creator><![CDATA[Brendan Bouffler]]></dc:creator>
-		<pubDate>Mon, 13 May 2024 05:55:13 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[Open Source]]></category>
-		<category><![CDATA[Uncategorized]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[Sustainability]]></category>
-		<guid isPermaLink="false">e91b47faf0b755001ca4998fd17206fcbdaf12f6</guid>
-
-					<description>We're excited to share how we’re involved in launching the High Performance Software Foundation to increase access to and adoption of HPC. By bringing together key players to collaborate, we can lower barriers and accelerate development of portable HPC software stacks.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;&lt;img loading="lazy" class="size-full wp-image-3644 alignright" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/05/09/AdobeStock_144582125-resized.png" alt="Announcing the High Performance Software Foundation" width="380" height="253"&gt;&lt;/em&gt;In high performance computing (HPC), where speed and efficiency are paramount, open-source software provides the load-bearing, structural support. Our community has long recognized the immense potential of collaborative development, sharing of resources, and the power of community-driven innovation.&lt;/p&gt; 
-&lt;p&gt;So we’re excited to announce that we’re a Premier founding member of the new &lt;strong&gt;High Performance Software Foundation&lt;/strong&gt; (HPSF). The HPSF was launched today in Hamburg at &lt;a href="https://www.isc-hpc.com/"&gt;ISC’24&lt;/a&gt;, by the Linux Foundation, the nonprofit organization that enables mass innovation through open-source. The HPSF has strong support across the HPC landscape.&lt;/p&gt; 
-&lt;p&gt;Through a series of technical projects, the HPSF aims to build, promote, and advance a portable core software stack for HPC to increase adoption by lowering barriers to contribution, supporting open-source development efforts, and making HPC more accessible to all of us. We’ve seen from our work with RIKEN to &lt;a href="https://aws.amazon.com/blogs/publicsector/why-fugaku-japans-fastest-supercomputer-went-virtual-on-aws/"&gt;extend Fugaku to the cloud&lt;/a&gt;&amp;nbsp;how impactful this can be.&lt;/p&gt; 
-&lt;p&gt;Recent years have seen extraordinary demand for HPC across domains which are critical to all of us, from climate modeling and genomics to drug-discovery and engineering design. With the emergence of machine learning and AI, there’s never been a more important task than to reinforce the structures which have made all of this possible.&lt;/p&gt; 
-&lt;h2&gt;How can HPSF help?&lt;/h2&gt; 
-&lt;p&gt;The HPSF aims to make life easier for HPC developers through a number of focused initiatives, including:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Continuous Integration (CI) resources tailored for HPC projects&lt;/li&gt; 
- &lt;li&gt;Continuously built, turnkey software stacks&lt;/li&gt; 
- &lt;li&gt;Architecture support&lt;/li&gt; 
- &lt;li&gt;Performance regression testing and benchmarking&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;AWS has been supporting many of these efforts for the &lt;a href="https://spack.io/"&gt;Spack&lt;/a&gt; community since 2021, leading to the launch of the &lt;a href="https://aws.amazon.com/blogs/hpc/introducing-the-spack-rolling-binary-cache/"&gt;Spack Rolling Binary Cache&lt;/a&gt; two years ago. We’ve all learned a lot from this relationship, which we hope the wider HPC open-source community will be able to benefit from, through the foundation.&lt;/p&gt; 
-&lt;h2&gt;First steps&lt;/h2&gt; 
-&lt;p&gt;One of HPSF’s first jobs is to set up the technical advisory committee (TAC) which will manage working groups tackling a variety of HPC topics. Drawing from member organizations and community participants, the TAC will follow a governance model based on the &lt;a href="https://www.cncf.io/"&gt;Cloud Native Computing Foundation&lt;/a&gt; (CNCF).&lt;/p&gt; 
-&lt;p&gt;The HPSF launches today with the following technical projects:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Spack&lt;/strong&gt;: the HPC package manager&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Kokkos&lt;/strong&gt;: a performance-portable programming model for writing modern C++ applications in a hardware-agnostic way&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Viskores (formerly VTK-m)&lt;/strong&gt;: a toolkit of scientific visualization algorithms for accelerator architectures&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;HPCToolkit&lt;/strong&gt;: performance measurement and analysis tools for computers ranging from laptops to GPU-accelerated supercomputers.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Apptainer&lt;/strong&gt;: Formerly known as Singularity, Apptainer is a Linux Foundation project providing a high performance, full featured HPC and computing optimized container subsystem&lt;/li&gt; 
- &lt;li&gt;&lt;b&gt;E4S: &lt;/b&gt;a curated, hardened distribution of scientific software packages.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Getting involved&lt;/h2&gt; 
-&lt;p&gt;The HPSF welcomes organizations from across the HPC community to become involved and help drive innovation in open-source HPC solutions.&lt;/p&gt; 
-&lt;p&gt;To learn more about the HPSF, to contribute, or to become a member, you can visit the &lt;a href="https://hpsf.io/"&gt;HPSF website&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;The HPSF’s commitment to supporting and nurturing these vital software packages will enable the HPC community to have access to the tools and resources necessary to push the boundaries of scientific discovery. We’re thrilled to be part of it.&lt;/p&gt;</content:encoded>
 					
 		
 		
