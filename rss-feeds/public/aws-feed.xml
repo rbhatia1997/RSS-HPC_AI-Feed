@@ -5,7 +5,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/hpc/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/hpc/</link>
 	<description>Just another Amazon Web Services site</description>
-	<lastBuildDate>Thu, 25 Jul 2024 17:23:40 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 30 Jul 2024 13:59:04 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -13,6 +13,151 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>HPC Ops: DevOps for HPC workloads in the cloud</title>
+		<link>https://aws.amazon.com/blogs/hpc/hpc-ops-devops-for-hpc-workloads-in-the-cloud/</link>
+		
+		<dc:creator><![CDATA[Scott Ma]]></dc:creator>
+		<pubDate>Tue, 30 Jul 2024 13:59:04 +0000</pubDate>
+				<category><![CDATA[AWS ParallelCluster]]></category>
+		<category><![CDATA[Compute]]></category>
+		<category><![CDATA[High Performance Computing]]></category>
+		<category><![CDATA[Amazon FSx for Lustre]]></category>
+		<category><![CDATA[EFA]]></category>
+		<category><![CDATA[Elastic Fabric Adapter]]></category>
+		<category><![CDATA[HPC]]></category>
+		<category><![CDATA[Research Computing]]></category>
+		<category><![CDATA[Scientific Computing]]></category>
+		<category><![CDATA[simulations]]></category>
+		<guid isPermaLink="false">3f67a6b874e6dcad4dcab169096dfa757d03f723</guid>
+
+					<description>Interested in boosting productivity for HPC users and admins? Read this post to learn how HPC Ops (infrastructure as code + CI/CD) delivers faster, more consistent infrastructure deployments and pain free experiences for your users.</description>
+										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3957" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/09/boofla88_automation_as_a_concept_d506d308-80b8-4d44-bc73-f3b60829d6a3.png" alt="HPC Ops - DevOps for HPC workloads in the cloud.png" width="380" height="212"&gt;HPC environments are known for their computational complexity and resource-intensive workloads. Just setting up robust infrastructure for HPC applications can be a daunting task, often requiring extensive manual effort and specialized expertise.&lt;/p&gt; 
+&lt;p&gt;This is where HPC Operations (HPC Ops) comes into play It combines DevOps practices, Infrastructure as Code (IaC), cloud computing, and CI/CD (continuous integration and continuous deployment) to streamline and automate the entire lifecycle of HPC applications.&lt;/p&gt; 
+&lt;p&gt;In this post we’ll introduce you to the key concepts of HPC Ops. CI/CD is an integral part of the story because it helps admins to provision, deploy, and manage compute resources automatically, so you get consistent and reproducible setups every time. This doesn’t just reduce the risk of human error – it can mean faster iterations, and of course: more experimentation. All of this lets you keep pace with the changing needs of your users’ workloads – boosting everyone’s productivity.&lt;/p&gt; 
+&lt;h2&gt;Solution overview&lt;/h2&gt; 
+&lt;p&gt;For this exercise, we’ll use several services, some of which you might not be familiar with.&lt;/p&gt; 
+&lt;p&gt;We’ll use &lt;a href="https://aws.amazon.com/hpc/parallelcluster/"&gt;AWS ParallelCluster&lt;/a&gt; to create our clusters using blueprints expressed in a simple text configuration file. ParallelCluster is an open-source tool that makes it easy to deploy and manage HPC clusters.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/cloudformation/"&gt;AWS CloudFormation&lt;/a&gt; is our primary infrastructure as code (IaC) service, because it allows you to conjure nearly anything in AWS from a recipe file (or “stack”), by defining what you want and how it relates to other resources. This is a great way of baking many of the details about your preferred environment into text files that you can manage in a source-code repo.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/codecommit/"&gt;AWS CodeCommit&lt;/a&gt; – a fully-managed source control service that hosts secure Git-based repositories in the AWS Cloud. &lt;a href="https://aws.amazon.com/codepipeline/"&gt;AWS CodePipeline&lt;/a&gt; – a fully managed continuous delivery service that automates the release pipeline for applications.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"&gt;Amazon Simple Storage Service (Amazon S3)&lt;/a&gt; will store the deployment artifacts. And we’ll lean on &lt;a href="https://aws.amazon.com/lambda/"&gt;AWS Lambda&lt;/a&gt;, which lets you run code without provisioning or managing actual servers (it’s part of our “serverless” suite of tools).&lt;/p&gt; 
+&lt;h2&gt;Architecture of the solution&lt;/h2&gt; 
+&lt;div id="attachment_3944" style="width: 1024px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3944" loading="lazy" class="size-full wp-image-3944" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/09/IMG-2024-07-09-09.39.08.png" alt="Figure 1 - The diagram illustrates the overall architecture of the CI/CD environment and the HPC Cluster environment. The work nodes in the HPC Cluster environment generate output, which is subsequently saved in the ArtifactBucket, a storage resource created during the deployment of the CI/CD environment." width="1014" height="388"&gt;
+ &lt;p id="caption-attachment-3944" class="wp-caption-text"&gt;Figure 1 – The diagram illustrates the overall architecture of the CI/CD environment and the HPC Cluster environment. The work nodes in the HPC Cluster environment generate output, which is subsequently saved in the ArtifactBucket, a storage resource created during the deployment of the CI/CD environment.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;In our solution, we’ll initially deploy using CloudFormation.&lt;/p&gt; 
+&lt;p&gt;Integrating CI/CD practices into your workflow is crucial to make all this work. The &lt;code&gt;hpc-ops-ci-cd.yaml&lt;/code&gt; CloudFormation template that you’ll download later simplifies this task by automating the deployment of CI/CD pipelines. This template sets up the necessary pipelines and provisions an S3 bucket, populated with essential files for initializing a CodeCommit repository.&lt;/p&gt; 
+&lt;p&gt;It also creates some Identity and Access Manager (IAM) roles to support this:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;code&gt;CodeBuildPipelineRole&lt;/code&gt; – used by the code build pipeline to manage builds and build artifacts&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;HPCDeploymentServiceRole&lt;/code&gt; – used by CloudFormation, triggered through CodePipeline, to create the HPC cluster, including the SSH key pair, Virtual Private Cloud (VPC), subnets, head node, and worker nodes.&lt;/li&gt; 
+ &lt;li&gt;&lt;code&gt;HPCCloudFormationStackTerminationRole&lt;/code&gt; – enables the worker-node-test-script.sh script to terminate the cluster and associated resources, including the VPC and subnets.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Using this template will eliminate the need for manual intervention and will handle the deployment of the HPC cluster. Once the cluster is up and running, it will automatically execute your workloads. When those workloads finish, the pipeline will terminate the cluster – saving on your costs, and automatically eliminating waste.&lt;/p&gt; 
+&lt;h2&gt;How does this work?&lt;/h2&gt; 
+&lt;p&gt;The &lt;code&gt;hpc-ops-ci-cd.yaml&lt;/code&gt; template deploys the CI/CD pipeline and creates a CodeCommit repository. The repository stores the &lt;code&gt;Cluster-launch.yaml&lt;/code&gt; CloudFormation launch template which (using IaC principles) defines the actual HPC cluster and workload.&lt;/p&gt; 
+&lt;p&gt;When the CI/CD pipeline is kicked off (by you, or by some automation), it creates all the necessary HPC cluster infrastructure – SSH keys, networking, a head node, and cluster worker nodes. Figure 2 illustrates the responsibility of each CloudFormation template.&lt;/p&gt; 
+&lt;div id="attachment_3962" style="width: 2104px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3962" loading="lazy" class="size-full wp-image-3962" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/Figure-2-fixed@2x.png" alt="Figure 2 - The diagram illustrates the two distinct components of the HPC operations setup. The hpc-ops-ci-cd.yaml template is responsible for deploying the CI/CD infrastructure, which enables automated workflows. The Cluster-launch.yaml template handles the deployment of the actual HPC cluster environment, including the provisioning of computational resources and the execution of workloads." width="2094" height="1086"&gt;
+ &lt;p id="caption-attachment-3962" class="wp-caption-text"&gt;Figure 2 – The diagram illustrates the two distinct components of the HPC operations setup. The hpc-ops-ci-cd.yaml template is responsible for deploying the CI/CD infrastructure, which enables automated workflows. The Cluster-launch.yaml template handles the deployment of the actual HPC cluster environment, including the provisioning of computational resources and the execution of workloads.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;To get a better understanding of what &lt;code&gt;Cluster-launch.yaml&lt;/code&gt; does, Figure 3 illustrates the sequence of steps once the pipeline is kicked off&lt;strong&gt;&lt;em&gt;.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt; 
+&lt;div id="attachment_3946" style="width: 328px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3946" loading="lazy" class="size-full wp-image-3946" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/09/IMG-2024-07-09-09.41.41.png" alt="Figure 3 - By using the Cluster-launch.yaml template initiated by the CI/CD pipeline, you can automatically deploy your cluster to have workloads executed and monitored. Then, when the jobs are complete, it terminates the cluster - &amp;nbsp;streamlining the entire process." width="318" height="706"&gt;
+ &lt;p id="caption-attachment-3946" class="wp-caption-text"&gt;Figure 3 – By using the Cluster-launch.yaml template initiated by the CI/CD pipeline, you can automatically deploy your cluster to have workloads executed and monitored. Then, when the jobs are complete, it terminates the cluster – streamlining the entire process.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The cluster configuration itself is located inside the&lt;code&gt; Cluster-launch.yaml&lt;/code&gt; template under &lt;code&gt;Resources/PclusterCluster/Properties/ClusterConfiguration,&lt;/code&gt; as you can see in this snippet from the stack.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-yaml"&gt;ClusterConfiguration:
+       . . .
+        HeadNode:
+          CustomActions:
+            OnNodeConfigured:
+              Sequence:
+                - Script: https://raw.githubusercontent.com/aws-samples/hpcops-automation/main/cluster-automation/job-submission.sh
+                  Args:
+                    - !Sub ${AWS::StackName}
+                    - !Sub ${AWS::Region}
+                    - !Ref CloudFormationManagementRole
+        . . .
+        Scheduling:
+          Scheduler: slurm
+          . . .
+            CustomActions:
+              OnNodeConfigured:
+                Sequence:
+                  - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/install.sh
+                  - Script: https://aws-hpc-recipes.s3.us-east-1.amazonaws.com/main/recipes/storage/mountpoint_s3/assets/mount.sh
+                    Args:
+                      - !Ref ArtifactBucketName
+                      - /ArtifactBucket
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;This section allows you to customize configuration settings (and you can find more details about your options in the &lt;a href="https://docs.aws.amazon.com/parallelcluster/latest/ug/cluster-configuration-file-v3.html"&gt;ParallelCluster configuration documentation&lt;/a&gt;).&lt;/p&gt; 
+&lt;p&gt;In this case, we also used &lt;a href="https://aws.amazon.com/blogs/storage/the-inside-story-on-mountpoint-for-amazon-s3-a-high-performance-open-source-file-client/"&gt;Mountpoint for Amazon S3&lt;/a&gt; to mount an Amazon S3 bucket like a POSIX folder on the worker nodes. The &lt;code&gt;worker-node-test-script.sh&lt;/code&gt; script then just writes output to this folder, like normal. Mounting the Amazon S3 Bucket enables the output to persist beyond the lifetime of the cluster. You can also use other AWS persistent storages like &lt;a href="https://aws.amazon.com/efs/"&gt;Amazon EFS&lt;/a&gt; or &lt;a href="https://aws.amazon.com/fsx/lustre/"&gt;Amazon FSx for Lustre&lt;/a&gt; that may work better for your workload – depending on your I/O requirements.&lt;/p&gt; 
+&lt;p&gt;Customizing your cluster setup and workloads is a breeze with this solution. You have the flexibility to tailor the configuration to suit your local needs and preferences – just by editing the template. This lets you create a truly personalized computing environment that caters to your users’ workloads.&lt;/p&gt; 
+&lt;p&gt;When setting up your ParallelCluster environment, the &lt;code&gt;job-submission.sh&lt;/code&gt; script plays a crucial role to initiate your workloads on the worker nodes. ParallelCluster automatically executes this after the head node configuration completes – this is in the &lt;code&gt;OnNodeConfigured&lt;/code&gt; section in the sample config we just showed you. The script use Slurm to schedule jobs on the worker nodes. This gets your code running across multiple nodes and – since Slurm influences how ParallelCluster scales the compute fleet – optimizes your compute utilization by scaling the fleet down when jobs are done.&lt;/p&gt; 
+&lt;p&gt;To see how simple this is for running your workloads, let’s look at an example &lt;code&gt;worker-node-test-script.sh&lt;/code&gt;. This script writes log messages to the designated S3 bucket, which we mounted using Mountpoint for S3. However, the real power lies in your ability to replace the content of this script with your own workloads, which doesn’t take much work.&lt;/p&gt; 
+&lt;pre&gt;&lt;code class="lang-bash"&gt;#!/bin/bash
+echo `date +'%F %R:%S'` "INFO: Logging Setup" &amp;gt;&amp;amp;2
+set -u
+
+echo "Cluster Stack Name $1. Workload ran at $(date)" &amp;gt; /ArtifactBucket/output-"`date +"%d-%m-%Y-%H-%M-%S"`".txt
+
+aws cloudformation delete-stack --stack-name $1 --region $2
+
+exit 0
+&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Once you deploy the solution and the workload runs, the cluster will be automatically terminated in the last step of the &lt;code&gt;worker-node-test-script.sh&lt;/code&gt; script. If you wanted to preserve the cluster, you could simply remove the line that calls the command &lt;code&gt;aws cloudformation delete-stack&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;The script makes use of a role called &lt;code&gt;HPCCloudFormationStackTerminationRole&lt;/code&gt; (which the deployment process created) to terminate the cluster after completing the workload execution. This approach follows the principle of provisioning the cluster &lt;em&gt;on-demand&lt;/em&gt;, spinning it up only when required and decommissioning it when the workload is finished – again ensuring efficient resource use and controlling your costs.&lt;/p&gt; 
+&lt;p&gt;From a security standpoint, we specifically designed this role to be assumed by the &lt;code&gt;ComputeNode&lt;/code&gt; only, ensuring strict access control. Furthermore, its permissions are limited to deleting the CloudFormation stack created by the &lt;em&gt;deployed&lt;/em&gt; stack. This approach adheres to the &lt;em&gt;principle of least privilege&lt;/em&gt; – promoting best security practices by granting &lt;em&gt;only&lt;/em&gt; the necessary access required for a function.&lt;/p&gt; 
+&lt;h3&gt;Deployment steps&lt;/h3&gt; 
+&lt;p&gt;If you want to follow along, you can find the CloudFormation template in our &lt;a href="https://github.com/aws-samples/hpcops-automation/blob/main/cluster-automation/hpc-ops-ci-cd.yaml"&gt;GitHub repo&lt;/a&gt;.&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;Go to your &lt;a href="https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create"&gt;CloudFormation console&lt;/a&gt; to create a Stack.&lt;/li&gt; 
+ &lt;li&gt;Select &lt;strong&gt;Upload a template File&lt;/strong&gt; under &lt;strong&gt;Specify template&lt;/strong&gt;, and then click on &lt;strong&gt;Choose file&lt;/strong&gt; to upload the file you downloaded from GitHub. Click on the &lt;strong&gt;Next&lt;/strong&gt; button to continue.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Follow the instructions in the AWS CloudFormation console.&lt;/strong&gt; Select a &lt;strong&gt;Unique Name&lt;/strong&gt; for the bucket or use an &lt;strong&gt;existing bucket&lt;/strong&gt; that this account has access to. You can leave the rest of the parameters to their defaults, as shown in Figure 4.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div id="attachment_3947" style="width: 977px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3947" loading="lazy" class="size-full wp-image-3947" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/09/IMG-2024-07-09-09.44.19.png" alt="Figure 4 – The CloudFormation parameters used to create the CI/CD stack. These parameters allow the customization of various aspects of the deployment, like the artifact bucket and CodeCommit parameters." width="967" height="609"&gt;
+ &lt;p id="caption-attachment-3947" class="wp-caption-text"&gt;Figure 4 – The CloudFormation parameters used to create the CI/CD stack. These parameters allow the customization of various aspects of the deployment, like the artifact bucket and CodeCommit parameters.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;ol start="4"&gt; 
+ &lt;li&gt;&lt;strong&gt;Check the CloudFormation deployment&lt;/strong&gt; – On you &lt;a href="https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1"&gt;CloudFormation console home&lt;/a&gt;, you’ll see several stacks that have been deployed for you similar to Figure 5. The last stack on the list is the CI/CD stack (for example, the &lt;code&gt;hpcopscicd&lt;/code&gt; stack). The other stacks, which have names starting with &lt;code&gt;hpcdevops&lt;/code&gt; are the ParallelCluster deployments. Go to each stack to inspect the resources it has created.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div id="attachment_3963" style="width: 1450px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3963" loading="lazy" class="size-full wp-image-3963" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/stacks_720@2x.png" alt="Figure 5 - The stack status for the main stack and nested stacks deployed by the hpc-ops-ci-cd.yaml and cluster-launch.yaml files in the AWS CloudFormation console." width="1440" height="1136"&gt;
+ &lt;p id="caption-attachment-3963" class="wp-caption-text"&gt;Figure 5 – The stack status for the main stack and nested stacks deployed by the hpc-ops-ci-cd.yaml and cluster-launch.yaml files in the AWS CloudFormation console.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;ol start="5"&gt; 
+ &lt;li&gt;&lt;strong&gt;Check the processing result output&lt;/strong&gt; – Once the deployment completes, the worker node will run a simple workload and output the result to a file in the bucket you provided as an input parameter to the CloudFormation template in Step 2. The output filename will be &lt;code&gt;output-&amp;lt;date and time of the run&amp;gt;.txt&lt;/code&gt; in the root of the &lt;code&gt;ArtifactBucket&lt;/code&gt;.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div id="attachment_3949" style="width: 1009px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3949" loading="lazy" class="size-full wp-image-3949" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/09/IMG-2024-07-09-09.45.46.png" alt="Figure 6 - the image shows the result of deploying the cluster-launch.yaml template, which is responsible for deploying the HPC cluster and running the workload. The workload output generated during the process is stored in the Artifact Bucket." width="999" height="344"&gt;
+ &lt;p id="caption-attachment-3949" class="wp-caption-text"&gt;Figure 6 – the image shows the result of deploying the cluster-launch.yaml template, which is responsible for deploying the HPC cluster and running the workload. The workload output generated during the process is stored in the Artifact Bucket.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Once the workload has successfully run, the run script will shut down the cluster, as we previously described – it will delete the cluster CloudFormation stack. You can view the shutdown and deletion process in the &lt;a href="https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1"&gt;CloudFormation console home&lt;/a&gt; after triggers. CloudFormation will delete the cluster stacks in order.&lt;/p&gt; 
+&lt;p&gt;We’ve designed our clusters to be ephemeral to minimize the waiting time between jobs. If you need more processing power, you can add more to spin up in parallel. Then you can provide each job the exact resources it needs to run quickly.&lt;/p&gt; 
+&lt;div id="attachment_3950" style="width: 1002px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3950" loading="lazy" class="size-full wp-image-3950" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/09/IMG-2024-07-09-09.46.34.png" alt="Figure 7 - The image illustrates the state of the CloudFormation stacks after the workload has been executed, and the HPC cluster is being decommissioned. The CloudFormation Console displays the stack status as &amp;quot;DELETE_IN_PROGRESS&amp;quot; for the relevant cluster stacks, indicating that the automatic termination process has been initiated." width="992" height="760"&gt;
+ &lt;p id="caption-attachment-3950" class="wp-caption-text"&gt;Figure 7 – The image illustrates the state of the CloudFormation stacks after the workload has been executed, and the HPC cluster is being decommissioned. The CloudFormation Console displays the stack status as “DELETE_IN_PROGRESS” for the relevant cluster stacks, indicating that the automatic termination process has been initiated.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3&gt;Spinning up another cluster&lt;/h3&gt; 
+&lt;p&gt;To create a new cluster to process additional workloads, you can use the deployment pipeline that was set up for you. In the &lt;a href="https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=us-east-1"&gt;AWS CodePipeline console&lt;/a&gt;, you’ll see a pipeline that starts with the name you specified for your stack in step 2 (see Figure 8). To build a new cluster and rerun your workload on it, go to the CodePipeline page and select &lt;strong&gt;Release change&lt;/strong&gt; (see Figure 8). This will trigger the pipeline to spin up a fresh cluster that you can then use for further processing.&lt;/p&gt; 
+&lt;p&gt;If you want to set up an additional HPC cluster with different parameters or workloads, you can &lt;strong&gt;clone&lt;/strong&gt; the existing pipeline. Cloning the pipeline lets you to run multiple clusters in parallel, each configured for different purposes or workloads with different datasets.&lt;/p&gt; 
+&lt;div id="attachment_3951" style="width: 1008px" class="wp-caption aligncenter"&gt;
+ &lt;img aria-describedby="caption-attachment-3951" loading="lazy" class="size-full wp-image-3951" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/09/IMG-2024-07-09-09.47.09.png" alt="Figure 8 - By clicking on the &amp;quot;Release Change&amp;quot; button in the AWS CodePipeline created by this solution, the CI/CD pipeline will initiate a series of automated actions, including the redeployment of the HPC cluster, the execution of the desired workload, and the subsequent decommissioning of the cluster resources upon completion." width="998" height="212"&gt;
+ &lt;p id="caption-attachment-3951" class="wp-caption-text"&gt;Figure 8 – By clicking on the “Release Change” button in the AWS CodePipeline created by this solution, the CI/CD pipeline will initiate a series of automated actions, including the redeployment of the HPC cluster, the execution of the desired workload, and the subsequent decommissioning of the cluster resources upon completion.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;AWS enables automated deployment of HPC environments. This allows teams to quickly use managed services to build and access powerful capabilities. By automating environments like this, organizations can greatly reduce the time and expense they previously carried for on-premises HPC investments.&lt;/p&gt; 
+&lt;p&gt;This makes robust HPC accessible for a greater number of industries and workloads that need complex computations.&lt;/p&gt; 
+&lt;p&gt;Embracing automation also brings new agility to HPC teams. Instead of lengthy planning cycles, groups can spin up HPC resources quickly. If their needs change (which they almost always will), flexible AWS services allow adjusting resources up or down precisely.&lt;/p&gt; 
+&lt;p&gt;By combining ease-of-use with expertise, accessibility and scalability barriers can be lowered. Cloud automation applied to HPC lets groups keep pace with shifting demands.&lt;/p&gt; 
+&lt;p&gt;You can use this AWS HPC solution for your own workloads and tailor the environment specifically for your needs. you can find this blueprint in our &lt;a href="https://github.com/aws-samples/hpcops-automation/tree/main"&gt;GitHub repo&lt;/a&gt;.&lt;/p&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Guided multi-objective generative AI for drug design</title>
 		<link>https://aws.amazon.com/blogs/hpc/guided-multi-objective-generative-ai-for-drug-design/</link>
 		
@@ -35,7 +180,7 @@
 		<guid isPermaLink="false">ffa78039537c6c5870e621706f15f01713cb1ac8</guid>
 
 					<description>Transforming computer-aided drug design: see how SandboxAQ leverages AWS and generative AI to explore chemical space, more intelligently generating drug candidates.</description>
-										<content:encoded>&lt;p&gt;&lt;img class="alignright size-full wp-image-3977" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/Firefly-scientist-in-a-lab-coat-staring-at-a-model-of-a-molecule-on-a-large-wall-size-computer-scree.png" alt="" width="380" height="217"&gt;This post was contributed by &lt;em&gt;Kevin Ryczko, Amit Kadan, Takeshi Yamazaki, Arman Zaribafiyan, Ross Pivovar, and Ilan Gleiser&lt;/em&gt;&lt;/p&gt; 
+										<content:encoded>&lt;p&gt;&lt;img loading="lazy" class="alignright size-full wp-image-3977" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/07/10/Firefly-scientist-in-a-lab-coat-staring-at-a-model-of-a-molecule-on-a-large-wall-size-computer-scree.png" alt="" width="380" height="217"&gt;This post was contributed by &lt;em&gt;Kevin Ryczko, Amit Kadan, Takeshi Yamazaki, Arman Zaribafiyan, Ross Pivovar, and Ilan Gleiser&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;In this post, we’ll discuss how &lt;a href="https://www.sandboxaq.com/"&gt;SandboxAQ&lt;/a&gt; is transforming computer-aided drug design (CADD) by deploying their workloads in the cloud on AWS. CADD is a field with the potential to accelerate the drug discovery process – something that otherwise generally takes more than &lt;a href="https://www.technologyreview.com/2023/02/15/1067904/ai-automation-drug-development/"&gt;a decade&lt;/a&gt;.&lt;/p&gt; 
 &lt;p&gt;Identifying compounds with a high binding affinity (&lt;em&gt;ligands&lt;/em&gt;) to a target protein is one of the most crucial steps in &lt;a href="https://www.cell.com/cell-chemical-biology/pdf/S1074-5521(03)00194-7.pdf"&gt;CADD&lt;/a&gt; for designing drugs that bind their targets selectively and specifically. But this is an extremely challenging task because of the large chemical space we need to explore.&lt;/p&gt; 
 &lt;p&gt;The traditional approach has been to virtually screen &lt;a href="https://pubs.acs.org/doi/10.1021/ci300415d"&gt;billions of compounds&lt;/a&gt; from a large pre-enumerated dataset with various methodologies that evaluate and filter the compounds, leaving only tens to hundreds for experimental testing and validation. This has a high computational cost, and success isn’t certain if an optimal ligand exists &lt;a href="https://www.nature.com/articles/s41589-022-01234-w"&gt;outside of the data&lt;/a&gt; being examined.&lt;/p&gt; 
@@ -2195,114 +2340,6 @@ srun --container-image=dcgm.sqsh bash -c "dcgmi diag -r 3"
 &lt;p&gt;We think today’s announcement pushes containers, and bioinformatics one step further, by making it dramatically easier to get your hands on containers in the right shape, size, and form-factor to meet the needs of your pipelines. Batch users will definitely enjoy using this. But, we’re pretty sure this will be a community resource everyone will love, and AWS is thrilled to be able to support the Seqera team to deliver this for the entire community.&lt;/p&gt; 
 &lt;p&gt;If you still need convincing, try it out yourself now – head to &lt;a href="https://seqera.io/containers/"&gt;https://seqera.io/containers/&lt;/a&gt; and type in some of your favorite bioinformatics tool names before clicking “Build”. Pull your Docker image and get to work.&lt;/p&gt; 
 &lt;p&gt;And if you have ideas for Seqera or AWS, don’t hesitate to reach out to us at &lt;a href="mailto:ask-hpc@amazon.com"&gt;ask-hpc@amazon.com&lt;/a&gt;.&lt;/p&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Using machine learning to drive faster automotive design cycles</title>
-		<link>https://aws.amazon.com/blogs/hpc/using-machine-learning-to-drive-faster-automotive-design-cycles/</link>
-		
-		<dc:creator><![CDATA[Steven Miller]]></dc:creator>
-		<pubDate>Mon, 13 May 2024 14:40:10 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[High Performance Computing]]></category>
-		<category><![CDATA[AI]]></category>
-		<category><![CDATA[Amazon FSx for Lustre]]></category>
-		<category><![CDATA[AWS Batch]]></category>
-		<category><![CDATA[AWS ParallelCluster]]></category>
-		<category><![CDATA[CFD]]></category>
-		<category><![CDATA[Computational Fluid Dynamics]]></category>
-		<category><![CDATA[EFA]]></category>
-		<category><![CDATA[Elastic Fabric Adapter]]></category>
-		<category><![CDATA[HPC]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[ML]]></category>
-		<category><![CDATA[Research Computing]]></category>
-		<category><![CDATA[Scientific Computing]]></category>
-		<category><![CDATA[simulations]]></category>
-		<category><![CDATA[visualization]]></category>
-		<guid isPermaLink="false">2c1df43a0e4299fe6554a7b7f672836e27c25a46</guid>
-
-					<description>Aerospace and automotive companies are speeding up their product design using AI. In this post we'll discuss how they're using machine learning to shift design cycles from hours to seconds using surrogate models.</description>
-										<content:encoded>&lt;p&gt;The automotive product engineering process involves months or years of iterative design reviews and refinement, with back-and-forth feedback between stakeholders regularly to adjust designs and evaluate the impact of design changes on engineering metrics like the coefficient of drag. Between each design iteration, engineers wait hours or days for simulations to complete, which means they can only execute a handful of design decisions each week.&lt;/p&gt; 
-&lt;p&gt;In this post, we’ll show how automakers can reduce cycle times from hours to seconds by leveraging surrogate machine-learning (ML) models in place of HPC, physics-based simulations and create subtle design variations for non-parametric geometries.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;In short&lt;/strong&gt;: automotive engineers can use emerging ML methodologies to speed up the product engineering process.&lt;/p&gt; 
-&lt;h2&gt;Background&lt;/h2&gt; 
-&lt;p&gt;Typically, the automotive product design process involves conceptualization, computer-aided design (CAD) geometry creation, and engineering simulations for validating the designs to ensure aerodynamic efficiency and desired structural stability.&lt;/p&gt; 
-&lt;p&gt;Recent advances in AI/ML and Generative AI technology including algorithms such as MeshGraphNets, U-Nets and Variational Autoencoders, have provided a path towards accelerating the design process through fast ML inferences which allow us to run fewer full-fidelity physics-based HPC simulations, which can take hours, while gathering insight into large design spaces.&lt;/p&gt; 
-&lt;p&gt;In this work, we’ll focus on computational fluid dynamics (CFD) simulations for intelligent aerodynamic surface design, though there are often other design considerations like impact response, noise, vibration and harshness.&lt;/p&gt; 
-&lt;p&gt;The goal of this work is &lt;em&gt;not&lt;/em&gt; to develop a comprehensive toolkit for aerodynamic design – we want to present a simple user experience to show how engineers can use scientific ML methods, together with AWS services to deliver business value. We’ll mainly use &lt;a href="https://aws.amazon.com/batch/"&gt;AWS Batch&lt;/a&gt;, &lt;a href="https://aws.amazon.com/hpc/dcv/"&gt;Nice DCV&lt;/a&gt;, &lt;a href="https://aws.amazon.com/pm/serv-s3/"&gt;Amazon S3&lt;/a&gt; and &lt;a href="https://aws.amazon.com/pm/sagemaker/"&gt;Amazon SageMaker&lt;/a&gt;. We’ll also explain how to build a web application that uses ML and generative design to enhance these development processes.&lt;/p&gt; 
-&lt;div id="attachment_3604" style="width: 857px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3604" loading="lazy" class="size-full wp-image-3604" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.33.24.png" alt="Figure 1 – Overview of Workflow Structure incorporating Web Application UI overview, AI/ML Methodology and AWS Implementation" width="847" height="433"&gt;
- &lt;p id="caption-attachment-3604" class="wp-caption-text"&gt;Figure 1 – Overview of Workflow Structure incorporating Web Application UI overview, AI/ML Methodology and AWS Implementation&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Roadmap for this post&lt;/h2&gt; 
-&lt;p&gt;Much like the workflow chart in Figure 1, we’ll divide this post into three parts.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;First&lt;/strong&gt;, we’ll start by explaining how to build a minimally viable web application including the end user experience and core components starting from an AWS architecture blueprint, highlighting some key components.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Next&lt;/strong&gt;, we’ll dive deep into the underlying ML models including the training methodology and inference deployment.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Finally&lt;/strong&gt;, we’ll wrap up with a brief discussion about how we imagine automakers using workflows like this in practice to augment and accelerate the product design lifecycles.&lt;/p&gt; 
-&lt;h2&gt;Cloud implementation and AWS architecture&lt;/h2&gt; 
-&lt;p&gt;Let’s look at how to quickly and securely implement a minimally-viable web application. Using that, we’ll generate ground truth meshes, run OpenFOAM simulations, and train the machine learning models using AWS HPC services.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;AWS architecture.&lt;/strong&gt; We don’t want to completely replace HPC simulations – these are necessary for verification and validation. We want to enable engineers to quickly build a web application inside their environment, access it securely, and store all their related artifacts. For this reason, we’ve chosen a minimalist architecture and we’ll leave it up to the automaker to decide how to integrate this into their existing environment.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 2: AWS Architecture diagram for deployment on a g5 instance using DCV, with endpoints to retrieve data or optionally submit compute jobs on self-managed ML endpoints (AWS Batch) or Amazon SageMaker&lt;/em&gt;&lt;/p&gt; 
-&lt;div id="attachment_3605" style="width: 665px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3605" loading="lazy" class="size-full wp-image-3605" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.34.05.png" alt="Figure 2: AWS Architecture diagram for deployment on a g5 instance using DCV, with endpoints to retrieve data or optionally submit compute jobs on self-managed ML endpoints (AWS Batch) or Amazon SageMaker" width="655" height="345"&gt;
- &lt;p id="caption-attachment-3605" class="wp-caption-text"&gt;Figure 2: AWS Architecture diagram for deployment on a g5 instance using DCV, with endpoints to retrieve data or optionally submit compute jobs on self-managed ML endpoints (AWS Batch) or Amazon SageMaker&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;We’re hosting the web application on a g5.12xlarge Amazon Elastic Compute Cloud (Amazon EC2) instance. The &lt;a href="https://aws.amazon.com/ec2/instance-types/g5/"&gt;G5&lt;/a&gt; has 4 x A10G NVIDIA GPUs to serve the machine learning models and we’re using the &lt;a href="https://aws.amazon.com/hpc/dcv/"&gt;NICE DCV&lt;/a&gt; streaming protocol to securely stream the desktop to the end.&lt;/p&gt; 
-&lt;p&gt;We’re also keeping the EC2 instance secure inside of a VPC and we only allow TCP traffic to flow from the instance to a single end user.&lt;/p&gt; 
-&lt;p&gt;We train drag prediction models using Amazon SageMaker, and we securely store the inputs and outputs (including model artifacts) in Amazon Simple Storage Service (Amazon S3).&lt;/p&gt; 
-&lt;p&gt;We use AWS Batch to launch the CFD simulations to create the ground truth data.&lt;/p&gt; 
-&lt;p&gt;To keep all communications secure, we use VPC endpoints for all key services.&lt;/p&gt; 
-&lt;h2&gt;Application workflow and user experience&lt;/h2&gt; 
-&lt;p&gt;Now we can build the minimally viable application to show this new workflow. The web application layer consists of five main modules: application, inference configuration, pretrained models, processed meshes, and utilities.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Application.&lt;/strong&gt; The core application, built on the open-source &lt;a href="https://streamlit.io/"&gt;Streamlit&lt;/a&gt; library, serves the user interface and all the orchestration to deliver the user experience. We used a 3D plotting library (&lt;a href="https://docs.pyvista.org/version/stable/"&gt;PyVista&lt;/a&gt;) to display 3D visualizations and enable user interaction with STL meshes (original and design targets) and ML and physics-based computational fluid dynamics results, including pressure cross-sections and 3D streamlines.&lt;/p&gt; 
-&lt;p&gt;In this example, we’ll begin with a choice of a base car model (coupe or estate/station-wagon), and then provide the user with design modification options. In this case, some features of the car (like front bumper shape, windscreen angle, trunk depth, and cabin height) are provided, but we could easily extend this to other design features we’re interested in.&lt;/p&gt; 
-&lt;p&gt;For each of these combinations, the design variations are produced through non-parametric “morphing” of the base meshes using &lt;em&gt;radial basis function (RBF) interpolation&lt;/em&gt;. If we wanted to explore parametric design, and the base CAD geometries were available, we could potentially incorporate them into the workflow. The user interface is shown in Figure 3.&lt;/p&gt; 
-&lt;p&gt;&lt;iframe loading="lazy" title="Figure3 - Using machine learning to drive faster automotive design cycles." width="500" height="375" src="https://www.youtube-nocookie.com/embed/2Z06wjAPVkA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Radial basis function (RBF) – &lt;/strong&gt;RBF interpolation lets us distort meshes at specific parts of the car, while keeping other features constant – including the chassis platform and tire radius. RBF relies on the concept of a deformation map between the original mesh and the deformed mesh and we get to control the extent of deformation using the slider in the user interface.&lt;/p&gt; 
-&lt;p&gt;To enable engineers to show specifically how the mesh has been deformed, we’ve provided a side-by-side comparison of the original mesh and the new mesh in the UI (which you can see in Figure 4) before we pass the deformed mesh along to the ML model for inference.&lt;/p&gt; 
-&lt;div id="attachment_3607" style="width: 831px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3607" loading="lazy" class="size-full wp-image-3607" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.34.57.png" alt="Figure 4 – Deformed geometry (left) with a wireframe overlay of original mesh highlighting change and original mesh (right)" width="821" height="348"&gt;
- &lt;p id="caption-attachment-3607" class="wp-caption-text"&gt;Figure 4 – Deformed geometry (left) with a wireframe overlay of original mesh highlighting change and original mesh (right)&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Inference configuration.&lt;/strong&gt; We trained a hierarchical machine learning model for a CFD flow field and drag predictions – we’ll explain that more soon. At runtime, we hosted these on different GPUs which allowed us to parallelize the inference of individual sub-models. To get inferences from the ML model, we specify the key inputs and parameters using inference configurations. These inputs include the decimated surface meshes of the car and a geometry for volume calculations. Additional input parameters include the batch size for inference, number of workers and other neural network associated hyperparameters.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Processed mesh.&lt;/strong&gt; When a user requests an inference, the application generates a processed &lt;a href="https://www.hdfgroup.org/solutions/hdf5/"&gt;HDF5&lt;/a&gt; file which contains the new mesh and the corresponding flow fields. These HDF5 files are then exposed to the end user via an interactive 3D visualization. There are some extra components that support the application: a function to convert meshes to HDF5 files, another function to apply the RBF to morph meshes based on user inputs, and finally a function to run inferences and gather outputs.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Deployment.&lt;/strong&gt; Since this application is meant for demonstration purposes only, we designed it to run on a single compute instance, and chose a g5.12xlarge that includes 4 x GPUs that’s able to run the entire application. To speed the application, we distribute individual ML sub-models across the GPUs. To keep it all secure, we isolate the instances from the public internet in a private VPC. And we used NICE DCV to access the instance for an easier remote desktop experience.&lt;/p&gt; 
-&lt;p&gt;Geometric and ML models&lt;/p&gt; 
-&lt;p&gt;To enable engineers to rapidly iterate, potentially even &lt;em&gt;during&lt;/em&gt; design conversations, our web application predicts the &lt;em&gt;coefficient of drag&lt;/em&gt; (Cd) and the flow fields on unseen geometries. We used a hierarchy of ML models for the flow fields and drag predictions.&lt;/p&gt; 
-&lt;p&gt;In both cases, we trained our models using synthetic data that we generated by morphing the open source &lt;a href="https://www.epc.ed.tum.de/en/aer/research-groups/automotive/drivaer/"&gt;DrivAer&lt;/a&gt; data set, and then ran full-fidelity CFD simulations on all these geometries using AWS Batch with the open-source &lt;a href="https://github.com/aws-samples/twingraph"&gt;TwinGraph framework&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Synthetic data generation&lt;/strong&gt;. To create training data for this project, we used the RBF to strategically morph the underlying mesh of both the coupe and the SUV. This method has broad applicability and can be generically applied to many parametric and non-parametric STL meshes.&lt;/p&gt; 
-&lt;p&gt;For each area of the car, we specified points in an overlayed 1000-point (10x10x10) cubic lattice, bounded by the dimensions of the car. This allowed us to create 400 variations (100 for each of the area of the car) that we used as the basis for ground-truth simulations. Figure 5 shows how we used the RBF to deform the mesh &lt;em&gt;and&lt;/em&gt; create the training data for the ML model. Each time frame in the video corresponds to a different deformed mesh.&lt;/p&gt; 
-&lt;p&gt;&lt;iframe loading="lazy" title="Using machine learning to drive faster automotive design cycles - Figure5" width="500" height="281" src="https://www.youtube-nocookie.com/embed/aBcO03OBTm0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;&lt;/p&gt; 
-&lt;p style="text-align: left"&gt;&lt;em&gt;Figure 5 – Synthetic mesh generation using morphing of individual features of a car shown in sequence&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;After we created 400 variations of the base meshes, we used OpenFOAM to create CFD simulations with steady-state RANS simulations using the k-ω steady-state turbulence model with a fixed inlet velocity of 20m/s.&lt;/p&gt; 
-&lt;p&gt;We ran these simulations in parallel using AWS Batch on c5.24xlarge instances using MPI for parallelism – this took around 7 hours to run. We could have chosen larger mesh sizes, but we settled on a mesh size that allowed resolving fine geometry – in a reasonable compute time.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Coefficient of drag with MeshGraphNets (MGN) –&lt;/strong&gt; MGN is a deep-learning framework for learning mesh-based simulations which represents the mesh as a graph where information is propagated across the graph’s nodes and edges. MGN excels at efficiently capturing unstructured mesh topologies and it’s a great fit for predicting Cd values. To train the MGN model, we used the synthetic data that we generated using the RBF, and OpenFOAM. During training, we provided the underlying mesh and the Coefficient of Drag (Cd) metrics as inputs.&lt;/p&gt; 
-&lt;p&gt;We then trained a model on 320 samples, with each mesh decimated while preserving topological features for computational efficiency, containing approximately 6,000 nodes. We used a p3.2xlarge instance for 500 epochs, with a total training time of 46 minutes.&lt;/p&gt; 
-&lt;p&gt;The model achieved a MAPE (&lt;em&gt;mean absolute percentage error&lt;/em&gt;) of 2.5% in drag coefficient (Cd) when predicting on unseen data, with an average inference time of 0.028 seconds per sample. Figure 6 shows the predicted vs. actual drag coefficient (Cd) plot for train, validation, and unseen test data (car meshes).&lt;/p&gt; 
-&lt;div id="attachment_3609" style="width: 718px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3609" loading="lazy" class="size-full wp-image-3609" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.36.06.png" alt="Figure 6: Predicted vs. actual drag coefficient (Cd) plot for train, validation, and unseen test data (i.e. car meshes)." width="708" height="426"&gt;
- &lt;p id="caption-attachment-3609" class="wp-caption-text"&gt;Figure 6: Predicted vs. actual drag coefficient (Cd) plot for train, validation, and unseen test data (i.e. car meshes).&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Although the model didn’t match the ground truth CFD simulations exactly, this level of agreement from the MGN surrogate model may prove acceptable during the initial design iterations leading up to a final, high-fidelity simulation. After that comes real-world wind tunnel testing, which has an inherent uncertainty in measurements.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Flow Fields using deep convolutional neural networks (CNNs).&lt;/strong&gt; To predict pressure distributions and velocity fields for full 3D flow, we used a CNN architecture called &lt;a href="https://github.com/wolny/pytorch-3dunet"&gt;U-Net&lt;/a&gt; which has shown promise in high-resolution volume segmentation and regression tasks. This architecture included encoding and decoding convolutional layers with skip connections. We trained individual U-Nets for each of the pressure and velocity primary variables.&lt;/p&gt; 
-&lt;p&gt;We converted the 3D volume outputs from 400 x OpenFOAM simulations into the training (375) and validation (25) ground-truth datasets. We used a p5.48xlarge instance with 8 x H100 GPUs for approximately 28 hours. We saw a volume RSME (&lt;em&gt;root-mean-square-error&lt;/em&gt;) of around 3% for pressure, and 5% for combined velocity magnitudes, for unseen data not in the training or validation sets – although this is dependent on the degree of mesh warping away from the initial baseline mesh. Figure 7 shows the differences in velocity slices an unseen mesh.&lt;/p&gt; 
-&lt;div id="attachment_3610" style="width: 680px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3610" loading="lazy" class="size-full wp-image-3610" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.36.52.png" alt="Figure 7: ML Predicted (Top) vs Ground Truth OpenFOAM (Bottom) X-Component Velocity" width="670" height="516"&gt;
- &lt;p id="caption-attachment-3610" class="wp-caption-text"&gt;Figure 7: ML Predicted (Top) vs Ground Truth OpenFOAM (Bottom) X-Component Velocity&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2&gt;Business value creation&lt;/h2&gt; 
-&lt;p&gt;We’ve now shown how to rapidly build a minimally viable web interface that engineers can use to take advantage of these ML models to speed up the product engineering process. But now we need to couple this with a new business process so automakers can realize actual business value.&lt;/p&gt; 
-&lt;div id="attachment_3611" style="width: 855px" class="wp-caption aligncenter"&gt;
- &lt;img aria-describedby="caption-attachment-3611" loading="lazy" class="size-full wp-image-3611" src="https://d2908q01vomqb2.cloudfront.net/e6c3dd630428fd54834172b8fd2735fed9416da4/2024/04/18/CleanShot-2024-04-18-at-13.37.12.png" alt="Figure 8: Overall product design iterations using machine learning surrogate models to accelerate the cycles" width="845" height="168"&gt;
- &lt;p id="caption-attachment-3611" class="wp-caption-text"&gt;Figure 8: Overall product design iterations using machine learning surrogate models to accelerate the cycles&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Using the speed of the ML surrogate models, it’s possible to explore hundreds of designs per week, and we can now make meetings more collaborative.&lt;/p&gt; 
-&lt;p&gt;Instead of reviewing results from prior runs, engineers can solicit feedback from their peers real-time0, and get the results in 20-60 seconds, avoiding costly wait times. This will require engineers to think differently about product design reviews and meetings. Engineers will need to set expectations accordingly and be prepared to guide conversations. But this enables engineers to explore a greater design space than they otherwise could – especially given budget or time constraints. We’re confident this approach will lead to new innovations.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;With the right combination of machine-learning and process change, automakers can use the architecture explained here to build tailored solutions to speed up the product engineering process, reduce the cost of compute, and explore a greater number of design options in a shorter period of time. If you or your team want to discuss the business case, a recommended implementation path with our Professional Services team, or technical solution blueprint in more detail, you can reach out to us at ask-hpc@amazon.com.&lt;/p&gt;</content:encoded>
 					
 		
 		
