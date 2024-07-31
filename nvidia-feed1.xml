@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 31 Jul 2024 00:02:24 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 31 Jul 2024 17:00:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,231 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>NVIDIA Researchers Harness Real-Time Gen AI to Build Immersive Desert World</title>
+		<link>https://blogs.nvidia.com/blog/real-time-3d-generative-ai-research-siggraph-2024/</link>
+		
+		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
+		<pubDate>Wed, 31 Jul 2024 17:00:31 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Research]]></category>
+		<category><![CDATA[3D]]></category>
+		<category><![CDATA[Art]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<category><![CDATA[Rendering]]></category>
+		<category><![CDATA[SIGGRAPH 2024]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<category><![CDATA[Synthetic Data Generation]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73428</guid>
+
+					<description><![CDATA[NVIDIA researchers used NVIDIA Edify, a multimodal architecture for visual generative AI, to build a detailed 3D desert landscape within a few minutes in a live demo at SIGGRAPH’s Real-Time Live event on Tuesday. During the event — one of the prestigious graphics conference’s top sessions — NVIDIA researchers showed how, with the support of	<a class="read-more" href="https://blogs.nvidia.com/blog/real-time-3d-generative-ai-research-siggraph-2024/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>NVIDIA researchers used <a target="_blank" href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">NVIDIA Edify</a>, a multimodal architecture for visual generative AI, to build a detailed 3D desert landscape within a few minutes in a live demo at SIGGRAPH’s <a target="_blank" href="https://s2024.siggraph.org/program/real-time-live/">Real-Time Live</a> event on Tuesday.</p>
+<p>During the event — one of the prestigious graphics conference’s top sessions — NVIDIA researchers showed how, with the support of an AI agent, they could build and edit a desert landscape from scratch within five minutes. The live demo highlighted how generative AI can act as an assistant to artists by accelerating ideation and generating custom secondary assets that would otherwise have been sourced from a repository.</p>
+<p>By drastically decreasing ideation time, these AI technologies will empower 3D artists to be more productive and creative — giving them the tools to explore concepts faster and expedite parts of their workflows. They could, for example, generate the background assets or 360 HDRi environments that the scene needs in minutes, instead of spending hours finding or creating them.</p>
+<h2><b>From Idea to 3D Scene in Three Minutes</b></h2>
+<p>Creating a full 3D scene is a complex, time-consuming task. Artists must support their hero asset with plenty of background objects to create a rich scene, then find an appropriate background and an environment map to light it. Due to time constraints, they’ve often had to make a trade-off between rapid results and creative exploration.</p>
+<p>With the support of AI agents, creative teams can achieve both goals: quickly bring concepts to life and continue iterating to achieve the right look.</p>
+<p>In the Real-Time Live demo, the researchers used an AI agent to instruct an NVIDIA Edify-powered model to generate dozens of 3D assets, including cacti, rocks and the skull of a bull — with previews produced in just seconds.</p>
+<p>They next directed the agent to harness other models to create potential backgrounds and a layout of how the objects would be placed in the scene — and showcased how the agent could adapt to last-minute changes in creative direction by quickly swapping the rocks for gold nuggets.</p>
+<p>With a design plan in place, they prompted the agent to create full-quality assets and render the scene as a photorealistic image in <a target="_blank" href="https://docs.omniverse.nvidia.com/composer/latest/index.html">NVIDIA Omniverse USD Composer</a>, an app for virtual world-building.</p>
+<p><iframe title="Immersive Desert World -- From Idea to 3D Scene in Three Minutes | NVIDIA Research" width="500" height="281" src="https://www.youtube.com/embed/AJWTUvXA0Wc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>NVIDIA Edify Accelerates Environment Generation </b></h2>
+<p>NVIDIA Edify models can help creators focus on hero assets while accelerating the creation of background environments and objects using AI-powered scene generation tools. The Real-Time Live demo showcased two Edify models: <b></b></p>
+<ul>
+<li aria-level="1"><b>Edify 3D</b> generates ready-to-edit 3D meshes from text or image prompts. Within seconds, the model can generate previews, including rotating animations of each object, to help creators rapidly prototype before committing to a specific design.</li>
+<li aria-level="1"><b>Edify 360 HDRi</b> uses text or image prompts to generate up to 16K high-dynamic range images (HDRi) of nature landscapes, which can be used as backgrounds and to light scenes.</li>
+</ul>
+<p>During the demo, the researchers also showcased an AI agent powered by a large language model, and <b>USD Layout</b>, an AI model that generates scene layouts using OpenUSD, a platform for 3D workflows.</p>
+<p>At SIGGRAPH, NVIDIA also announced that two leading creative content companies are giving designers and artists new ways to boost productivity with generative AI using <a href="https://blogs.nvidia.com/blog/edify-shutterstock-getty-images/">tools powered by NVIDIA Edify</a>.</p>
+<p>Shutterstock has launched in commercial beta its <a target="_blank" href="https://www.shutterstock.com/discover/generative-ai-3d">Generative 3D</a> service, which lets creators quickly prototype and generate 3D assets using text or image prompts. Its 360 HDRi generator based on Edify also entered early access.</p>
+<p>Getty Images updated its <a target="_blank" href="https://www.gettyimages.com/ai/generation/about">Generative AI by Getty Images</a> service with the latest version of NVIDIA Edify. Users can now create images twice as fast, with improved output quality and prompt adherence, and advanced controls and fine-tuning.</p>
+<h2><b>Harnessing Universal Scene Description in NVIDIA Omniverse</b></h2>
+<p>The 3D objects, environment maps and layouts generated using Edify models are structured with USD, a standard format for describing and composing 3D worlds. This compatibility allows artists to immediately import Edify-powered creations into Omniverse USD Composer.</p>
+<p>Within Composer, they can use popular digital content creation tools to further modify the scene by, for example, changing the position of objects, modifying their appearance or adjusting lighting.</p>
+<p>Real-Time Live is one of the most anticipated events at SIGGRAPH, featuring about a dozen real-time applications including generative AI, virtual reality and live performance capture technology. Watch the replay below.</p>
+<p><iframe title="SIGGRAPH 2024 Real-Time Live!" width="500" height="281" src="https://www.youtube.com/embed/Gm1B5DT8kE0?start=1752&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Edify_3D_Generative_AI_Real_Time_Live.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Edify_3D_Generative_AI_Real_Time_Live-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[NVIDIA Researchers Harness Real-Time Gen AI to Build Immersive Desert World]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Oracle Cloud Infrastructure Expands NVIDIA GPU-Accelerated Instances for AI, Digital Twins and More</title>
+		<link>https://blogs.nvidia.com/blog/oracle-cloud-infrastructure-ai-gpu-digital-twins/</link>
+		
+		<dc:creator><![CDATA[Rohil Bhargava]]></dc:creator>
+		<pubDate>Wed, 31 Jul 2024 16:15:14 +0000</pubDate>
+				<category><![CDATA[Data Center]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Networking]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Digital Twin]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[SIGGRAPH 2024]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73309</guid>
+
+					<description><![CDATA[Enterprises are rapidly adopting generative AI, large language models (LLMs), advanced graphics and digital twins to increase operational efficiencies, reduce costs and drive innovation. However, to adopt these technologies effectively, enterprises need access to state-of-the-art, full-stack accelerated computing platforms. To meet this demand, Oracle Cloud Infrastructure (OCI) today announced NVIDIA L40S GPU bare-metal instances available	<a class="read-more" href="https://blogs.nvidia.com/blog/oracle-cloud-infrastructure-ai-gpu-digital-twins/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Enterprises are rapidly adopting <a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>, large language models (<a target="_blank" href="https://www.nvidia.com/en-us/glossary/large-language-models/">LLMs</a>), advanced graphics and <a href="https://blogs.nvidia.com/blog/what-is-a-digital-twin/">digital twins</a> to increase operational efficiencies, reduce costs and drive innovation.</p>
+<p>However, to adopt these technologies effectively, enterprises need access to state-of-the-art, full-stack accelerated computing platforms. To meet this demand, Oracle Cloud Infrastructure (OCI) today announced <a target="_blank" href="https://www.nvidia.com/en-us/data-center/l40s/">NVIDIA L40S GPU</a> bare-metal instances available to order and the upcoming availability of a new virtual machine accelerated by a single <a target="_blank" href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPU</a>. This new VM expands OCI’s existing H100 portfolio, which includes an NVIDIA HGX H100 8-GPU bare-metal instance.</p>
+<p>Paired with NVIDIA networking and running the NVIDIA software stack, these platforms deliver powerful performance and efficiency, enabling enterprises to advance generative AI.</p>
+<h2><b>NVIDIA L40S Now Available to Order on OCI</b></h2>
+<p>The NVIDIA L40S is a universal data center GPU designed to deliver breakthrough multi-workload acceleration for generative AI, graphics and video applications. Equipped with fourth-generation Tensor Cores and support for the FP8 data format, the L40S GPU excels in training and fine-tuning small- to mid-size LLMs and in inference across a wide range of generative AI use cases.</p>
+<p>For example, a single L40S GPU (FP8) can generate up to <a target="_blank" href="https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/performance/perf-overview.md">1.4x more tokens per second</a> than a single <a target="_blank" href="https://www.nvidia.com/en-us/data-center/a100/">NVIDIA A100 Tensor Core GPU</a> (FP16) for Llama 3 8B with <a target="_blank" href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT-LLM</a> at an input and output sequence length of 128.</p>
+<p>The L40S GPU also has best-in-class graphics and media acceleration. Its third-generation NVIDIA Ray Tracing Cores (RT Cores) and multiple encode/decode engines make it ideal for advanced visualization and digital twin applications.</p>
+<p>The L40S GPU delivers up to 3.8x the real-time ray-tracing performance of its predecessor, and supports NVIDIA DLSS 3 for faster rendering and smoother frame rates. This makes the GPU ideal for developing applications on the <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> platform, enabling real-time, photorealistic 3D simulations and AI-enabled digital twins. With Omniverse on the L40S GPU, enterprises can develop advanced 3D applications and workflows for industrial digitalization that will allow them to design, simulate and optimize products, processes and facilities in real time before going into production.</p>
+<p>OCI will offer the L40S GPU in its BM.GPU.L40S.4 bare-metal compute shape, featuring four NVIDIA L40S GPUs, each with 48GB of GDDR6 memory. This shape includes local NVMe drives with 7.38TB capacity, 4th Generation Intel Xeon CPUs with 112 cores and 1TB of system memory.</p>
+<p>These shapes eliminate the overhead of any virtualization for high-throughput and latency-sensitive AI or machine learning workloads with OCI’s bare-metal compute architecture. The accelerated compute shape features the <a target="_blank" href="https://www.nvidia.com/en-us/networking/products/data-processing-unit/">NVIDIA BlueField-3 DPU</a> for improved server efficiency, offloading data center tasks from CPUs to accelerate networking, storage and security workloads. The use of BlueField-3 DPUs furthers OCI’s strategy of off-box virtualization across its entire fleet.</p>
+<p><a target="_blank" href="https://www.oracle.com/ai-infrastructure/">OCI Supercluster</a> with NVIDIA L40S enables ultra-high performance with 800Gbps of internode bandwidth and low latency for up to 3,840 GPUs. OCI’s cluster network uses <a target="_blank" href="https://www.nvidia.com/en-us/networking/ethernet-adapters/">NVIDIA ConnectX-7 NICs</a> over RoCE v2 to support high-throughput and latency-sensitive workloads, including AI training.</p>
+<p>“We chose OCI AI infrastructure with bare-metal instances and NVIDIA L40S GPUs for 30% more efficient video encoding,” said Sharon Carmel, CEO of Beamr Cloud. “Videos processed with Beamr Cloud on OCI will have up to 50% reduced storage and network bandwidth consumption, speeding up file transfers by 2x and increasing productivity for end users. Beamr will provide OCI customers video AI workflows, preparing them for the future of video.”</p>
+<h2><b>Single-GPU H100 VMs Coming Soon on OCI </b></h2>
+<p>The VM.GPU.H100.1 compute virtual machine shape, accelerated by a single <a target="_blank" href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA H100 Tensor Core GPU</a>, is coming soon to OCI. This will provide cost-effective, on-demand access for enterprises looking to use the power of NVIDIA H100 GPUs for their generative AI and HPC workloads.</p>
+<p>A single H100 provides a good platform for smaller workloads and LLM inference. For example, one H100 GPU can generate more than <a target="_blank" href="https://github.com/NVIDIA/TensorRT-LLM/blob/main/docs/source/performance/perf-overview.md">27,000 tokens per second</a> for Llama 3 8B (up to 4x more throughput than a single A100 GPU at FP16 precision) with <a target="_blank" href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT-LLM</a> at an input and output sequence length of 128 and FP8 precision.</p>
+<p>The VM.GPU.H100.1 shape includes 2&#215;3.4TB of NVMe drive capacity, 13 cores of 4th Gen Intel Xeon processors and 246GB of system memory, making it well-suited for a range of AI tasks.</p>
+<p>“Oracle Cloud’s bare-metal compute with NVIDIA H100 and A100 GPUs, low-latency Supercluster and high-performance storage delivers up to 20% better price-performance for Altair’s computational fluid dynamics and structural mechanics solvers,” said Yeshwant Mummaneni, chief engineer of data management analytics at Altair. “We look forward to leveraging these GPUs with virtual machines for the Altair Unlimited virtual appliance.”</p>
+<h2><b>GH200 Bare-Metal Instances Available for Validation</b></h2>
+<p>OCI has also made available the BM.GPU.GH200 compute shape for customer testing. It features the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/">NVIDIA Grace Hopper Superchip</a> and <a target="_blank" href="https://www.nvidia.com/en-us/data-center/nvlink-c2c/">NVLink-C2C</a>, a high-bandwidth, cache-coherent 900GB/s connection between the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/grace-cpu/">NVIDIA Grace CPU</a> and <a target="_blank" href="https://www.nvidia.com/en-us/data-center/technologies/hopper-architecture/">NVIDIA Hopper </a>GPU. This provides over 600GB of accessible memory, enabling up to 10x higher performance for applications running terabytes of data compared to the NVIDIA A100 GPU.</p>
+<h2><b>Optimized Software for Enterprise AI </b></h2>
+<p>Enterprises have a wide variety of NVIDIA GPUs to accelerate their AI, HPC and data analytics workloads on OCI. However, maximizing the full potential of these GPU-accelerated compute instances requires an optimized software layer.</p>
+<p><a target="_blank" href="https://developer.nvidia.com/blog/nvidia-nim-offers-optimized-inference-microservices-for-deploying-ai-models-at-scale/">NVIDIA NIM</a>, part of the <a target="_blank" href="https://cloudmarketplace.oracle.com/marketplace/en_US/listing/155314141">NVIDIA AI Enterprise software platform available on the OCI Marketplace</a>, is a set of easy-to-use microservices designed for secure, reliable deployment of high-performance AI model inference to deploy world-class generative AI applications.</p>
+<p>Optimized for NVIDIA GPUs, NIM pre-built containers offer developers improved cost of ownership, faster time to market and security. NIM microservices for popular community models, found on the <a target="_blank" href="https://build.nvidia.com/explore/discover">NVIDIA API Catalog</a>, can be deployed easily on OCI.</p>
+<p>Performance will continue to improve over time with upcoming GPU-accelerated instances, including NVIDIA H200 Tensor Core GPUs and NVIDIA Blackwell GPUs.</p>
+<p>Order the L40S GPU and test the GH200 Superchip by <a target="_blank" href="https://www.oracle.com/cloud/contact-form.html">reaching out to OCI</a>. To learn more, join <a target="_blank" href="https://go.oracle.com/LP=143193">Oracle and NVIDIA at SIGGRAPH</a>, the world’s premier graphics conference, running through Aug. 1.</p>
+<p><i>See </i><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fabout-nvidia%2Flegal-info%2F&amp;data=05%7C02%7Clpham%40nvidia.com%7Cd59f2f66f51e4deaac8008dc94b3ef0f%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638548747745016311%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=dm8Os%2B4LtHW2ehZrPaxn38bsutMQBDeUdQuxrIa2y1Y%3D&amp;reserved=0"><i>notice</i></a><i> regarding software product information.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2022/10/Copy-of-oracle-blog-logo-lockup-promo-package-2508744-1260x680-r3.png"
+			type="image/png"
+			width="1260"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2022/10/Copy-of-oracle-blog-logo-lockup-promo-package-2508744-1260x680-r3-842x450.png"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Oracle Cloud Infrastructure Expands NVIDIA GPU-Accelerated Instances for AI, Digital Twins and More]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>Taking AI to Warp Speed: Decoding How NVIDIA’s Latest RTX-Powered Tools and Apps Help Developers Accelerate AI on PCs and Workstations</title>
+		<link>https://blogs.nvidia.com/blog/ai-decoded-siggraph-chat-rtx-update/</link>
+		
+		<dc:creator><![CDATA[Jesse Clayton]]></dc:creator>
+		<pubDate>Wed, 31 Jul 2024 13:00:24 +0000</pubDate>
+				<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[AI Decoded]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GeForce]]></category>
+		<category><![CDATA[NVIDIA RTX]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73418</guid>
+
+					<description><![CDATA[NVIDIA is spotlighting the latest NVIDIA RTX-powered tools and apps at SIGGRAPH, an annual trade show at the intersection of graphics and AI.]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i>Editor’s note: This post is part of the </i><a href="https://blogs.nvidia.com/blog/tag/ai-decoded/"><i>AI Decoded series</i></a><i>, which demystifies AI by making the technology more accessible, and showcases new hardware, software, tools and accelerations for RTX PC users.</i></p>
+<p>NVIDIA is spotlighting the latest <a target="_blank" href="https://www.nvidia.com/en-us/design-visualization/desktop-graphics/">NVIDIA RTX</a>-powered tools and apps at <a target="_blank" href="https://www.siggraph.org/">SIGGRAPH</a>, an annual trade show at the intersection of graphics and AI.</p>
+<p>These AI technologies provide advanced ray-tracing and rendering techniques, enabling highly realistic graphics and immersive experiences in gaming, <a href="https://blogs.nvidia.com/blog/what-is-extended-reality/">virtual reality, animation and</a> cinematic special effects. RTX AI PCs and workstations are helping drive the future of interactive digital media, content creation, productivity and development.</p>
+<h2><b>ACE’s AI Magic</b></h2>
+<p>During a SIGGRAPH <a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/">fireside chat</a>, NVIDIA founder and CEO Jensen Huang introduced “<a href="https://blogs.nvidia.com/blog/digital-humans-siggraph-2024/">James</a>” — an interactive digital human built on <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> microservices — that showcases the potential of AI-driven customer interactions.</p>
+<p>Using <a target="_blank" href="https://developer.nvidia.com/ace">NVIDIA ACE</a> technology and based on a customer-service workflow, James is a virtual assistant that can connect with people using emotions, humor and contextually accurate responses. Soon, users will be able to interact with James in real time at <a target="_blank" href="http://ai.nvidia.com">ai.nvidia.com</a>.</p>
+<figure id="attachment_73425" aria-describedby="caption-attachment-73425" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-73425" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/nvidia-ace-james-virtual-assistant.png 1775w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-73425" class="wp-caption-text">James is a virtual assistant in NVIDIA ACE.</figcaption></figure>
+<p>NVIDIA also introduced the latest advancements in the <a target="_blank" href="https://developer.nvidia.com/maxine">NVIDIA Maxine</a> AI platform for telepresence, as well as companies adopting NVIDIA ACE, a suite of technologies for bringing digital humans to life with <a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a>. These technologies enable digital human development with AI models for speech and translation, vision, intelligence, realistic animation and behavior, and lifelike appearance.</p>
+<p>Maxine features two AI technologies that enhance the digital human experience in telepresence scenarios: Maxine 3D and Audio2Face-2D.</p>
+<p>Developers can harness Maxine and ACE technologies to drive more engaging and natural interactions for people using digital interfaces across customer service, gaming and other interactive experiences.</p>
+<p>Tapping advanced AI, NVIDIA ACE technologies allow developers to design avatars that can respond to users in real time with lifelike animations, speech and emotions. RTX GPUs provide the necessary computational power and graphical fidelity to render ACE avatars with stunning detail and fluidity.</p>
+<p>With ongoing advancements and increasing adoption, ACE is setting new benchmarks for building virtual worlds and sparking innovation across industries. Developers tapping into the power of ACE with RTX GPUs can build more immersive applications and advanced, AI-based, interactive digital media experiences.</p>
+<h2><b>RTX Updates Unleash AI-rtistry for Creators</b></h2>
+<p><a target="_blank" href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/">NVIDIA GeForce RTX</a> PCs and NVIDIA RTX workstations are getting an upgrade with GPU accelerations that provide users with enhanced AI content-creation experiences.</p>
+<p>For video editors, <a href="https://blogs.nvidia.com/blog/rtx-video-hdr-remix-studio-driver/">RTX Video HDR</a> is now available through <a href="https://blogs.nvidia.com/blog/studio-wondershare-filmora-rtx-ai-july-driver/">Wondershare Filmora</a> and DaVinci Resolve. With this technology, users can transform any content into high dynamic range video with richer colors and greater detail in light and dark scenes — making it ideal for gaming videos, travel vlogs or event filmmaking. Combining RTX Video HDR with <a href="https://blogs.nvidia.com/blog/rtx-video-super-resolution/">RTX Video Super Resolution</a> further improves visual quality by removing encoding artifacts and enhancing details.</p>
+<p><iframe loading="lazy" title="Filmora x NVIDIA Partnership" width="500" height="281" src="https://www.youtube.com/embed/I2ZUGB8JZKc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>RTX Video HDR requires an RTX GPU connected to an HDR10-compatible monitor or TV. Users with an RTX GPU-powered PC can send files to the Filmora desktop app and continue to edit with local RTX acceleration, doubling the speed of the export process with dual encoders on GeForce RTX 4070 Ti or above GPUs. Popular media player VLC in June added support for RTX Video Super Resolution and RTX Video HDR, adding AI-enhanced video playback.</p>
+<p>Read <a href="https://blogs.nvidia.com/blog/studio-wondershare-filmora-rtx-ai-july-driver/">this blog on RTX-powered video editing</a> and the <a target="_blank" href="https://nvidia.custhelp.com/app/answers/detail/a_id/5448/~/rtx-video-super-resolution-faq">RTX Video FAQ</a> for more information. Learn more about <a target="_blank" href="https://filmora.wondershare.net/ai-features.html?gad_source=1&amp;gclid=CjwKCAjwnK60BhA9EiwAmpHZw62RpoOFbNoF1rHGVNbssHFgXqQygDzHwp_isBqCFRmYHx-0xE5gwxoCsUQQAvD_BwE">Wondershare Filmora’s AI-powered features</a>.</p>
+<p>In addition, 3D artists are gaining more AI applications and tools that simplify and enhance workflows, including Replikant, Adobe, Topaz and Getty Images.</p>
+<p><a target="_blank" href="https://www.replikant.com/">Replikant</a>, an AI-assisted 3D animation platform, is integrating <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/audio2face/">NVIDIA Audio2Face</a>, an ACE technology, to enable improved lip sync and facial animation. By taking advantage of NVIDIA-accelerated generative models, users can enjoy real-time visuals enhanced by RTX and <a target="_blank" href="https://www.nvidia.com/en-us/geforce/technologies/dlss/">NVIDIA DLSS</a> technology. Replikant is now available on Steam.</p>
+<p>Adobe Substance 3D Modeler has added Search Asset Library by Shape, an AI-powered feature designed to streamline the replacement and enhancement of complex shapes using existing 3D models. This new capability significantly accelerates prototyping and enhances design workflows.</p>
+<p>New AI features in Adobe Substance 3D integrate advanced generative AI capabilities, enhancing its texturing and material-creation tools. Adobe has launched the first integration of its Firefly generative AI capabilities into Substance 3D Sampler and Stager, making 3D workflows more seamless and productive for industrial designers, game developers and visual effects professionals.</p>
+<p>For tasks like text-to-texture generation and prompt descriptions, Substance 3D users can generate photorealistic or stylized textures. These textures can then be applied directly to 3D models. The new Text to Texture and Generative Background features significantly accelerate traditionally time-consuming and intricate 3D texturing and staging tasks.</p>
+<p>Powered by NVIDIA RTX Tensor Cores, Substance 3D can significantly accelerate computations and allows for more intuitive and creative design processes. This development builds on Adobe’s innovation with Firefly-powered Creative Cloud upgrades in Substance 3D workflows.</p>
+<p>Topaz AI has added <a target="_blank" href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT</a> acceleration for multi-GPU workflows, enabling parallelization across multiple GPUs for supercharged rendering speeds — up to 2x faster with two GPUs over a single GPU system, and scaling further with additional GPUs.</p>
+<p>Getty Images has updated its Generative AI by iStock service with new features to enhance image generation and quality. Powered by NVIDIA Edify models, the latest enhancement delivers generation speeds set to reach around six seconds for four images, doubling the performance of the previous model, with speeds at the forefront of the industry. The improved Text-2-Image and Image-2-Image functionalities provide higher-quality results and greater adherence to user prompts.</p>
+<p>Generative AI by iStock users can now also designate camera settings such as focal length (narrow, standard or wide) and depth of field (near or far). Improvements to generative AI super-resolution enhances image quality by using AI to create new pixels, significantly improving resolution without over-sharpening the image.</p>
+<h2><b>LLM-azing AI</b></h2>
+<p>ChatRTX — a tech demo that connects a <a target="_blank" href="https://www.nvidia.com/en-us/glossary/large-language-models/">large language model</a> (LLM), like Meta’s Llama, to a user’s data for quickly querying notes, documents or images — is getting a user interface (UI) makeover, offering a cleaner, more polished experience.</p>
+<p>ChatRTX also serves as an open-source reference project that shows developers how to build powerful, local, <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/">retrieval-augmented applications</a> (RAG) applications accelerated by RTX.</p>
+<figure id="attachment_73419" aria-describedby="caption-attachment-73419" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-73419" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-672x442.png" alt="" width="672" height="442" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-672x442.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-400x263.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-768x506.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-1536x1011.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-684x450.png 684w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-327x215.png 327w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-152x100.png 152w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image3-1280x843.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/image3.png 1999w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-73419" class="wp-caption-text">ChatRTX is getting a interface (UI) makeover.</figcaption></figure>
+<p>The latest version of ChatRTX, released today, uses the Electron + Material UI framework, which lets developers more easily add their own UI elements or extend the technology’s functionality. The update also includes a new architecture that simplifies the integration of different UIs and streamlines the building of new chat and RAG applications on top of the ChatRTX backend application programming interface.</p>
+<p>End users can download the latest version of ChatRTX from the <a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/chatrtx/">ChatRTX web page</a>. Developers can find the source code for the new release on the <a target="_blank" href="https://github.com/NVIDIA/ChatRTX">ChatRTX GitHub repository</a>.</p>
+<p><a target="_blank" href="https://developer.nvidia.com/blog/supercharging-llama-3-1-across-nvidia-platforms/">Meta Llama 3.1-8B models</a> are now optimized for inference on NVIDIA GeForce RTX PCs and NVIDIA RTX workstations. These models are natively supported with <a target="_blank" href="https://github.com/NVIDIA/TensorRT-LLM">NVIDIA TensorRT-LLM</a>, open-source software that accelerates LLM inference performance.</p>
+<h2><b>Dell’s AI Chatbots: Harnessing RTX Rocket Fuel</b></h2>
+<p>Dell is presenting how enterprises can boost AI development with an optimized RAG chatbot using NVIDIA AI Workbench and an NVIDIA NIM microservice for Llama 3. Using the <a target="_blank" href="https://github.com/NVIDIA/workbench-example-hybrid-rag">NVIDIA AI Workbench Hybrid RAG Project</a>, Dell is demonstrating how the chatbot can be used to converse with enterprise data that’s embedded in a local vector database, with inference running in one of three ways:</p>
+<ul>
+<li>Locally on a Hugging Face TGI server</li>
+<li>In the cloud using NVIDIA inference endpoints</li>
+<li>On self-hosted NVIDIA NIM microservices</li>
+</ul>
+<p>Learn more about the <a target="_blank" href="https://developer.nvidia.com/blog/optimize-ai-model-performance-and-maintain-data-privacy-with-hybrid-rag/">AI Workbench Hybrid RAG Project</a>. SIGGRAPH attendees can experience this technology firsthand at Dell Technologies’ booth 301.</p>
+<h2><b>HP AI Studio: Innovate Faster With CUDA-X and Galileo</b></h2>
+<p>At SIGGRAPH, HP is presenting the Z by HP AI Studio, a centralized data science platform. Announced in October 2023, AI Studio has now been enhanced with the latest NVIDIA CUDA-X libraries as well as HP’s recent partnership with Galileo, a generative AI trust-layer company. Key benefits include:</p>
+<ul>
+<li>Deploy projects faster: Configure, connect and share local and remote projects quickly.</li>
+<li>Collaborate with ease: Access and share data, templates and experiments effortlessly.</li>
+<li>Work your way: Choose where to work on your data, easily switching between online and offline modes.</li>
+</ul>
+<p>Designed to enhance productivity and streamline AI development, AI Studio allows data science teams to focus on innovation. Visit HP’s booth 501 to see how AI Studio with <a target="_blank" href="https://developer.nvidia.com/blog/accelerated-data-analytics-speed-up-data-exploration-with-rapids-cudf/">RAPIDS cuDF</a> can boost data preprocessing to accelerate AI pipelines. Apply for <a target="_blank" href="https://reinvent.hp.com/LP=10935">early access to AI Studio</a>.</p>
+<h2><b>An RTX Speed Surge for Stable Diffusion</b></h2>
+<p>Stable Diffusion 3.0, the latest model from Stability AI, has been optimized with TensorRT to provide a 60% speedup.</p>
+<p><iframe loading="lazy" title="Accelerate Stable Diffusion with RTX GPUs" width="500" height="281" src="https://www.youtube.com/embed/KA8kOsooDcw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>A NIM microservice for Stable Diffusion 3 with optimized performance is available for preview on <a target="_blank" href="http://ai.nvidia.com">ai.nvidia.com</a>.</p>
+<p>There’s still time to <a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/">join NVIDIA at SIGGRAPH</a> to see how RTX AI is transforming the future of content creation and visual media experiences. The conference runs through Aug. 1.</p>
+<p><i>Generative AI is transforming graphics and interactive experiences of all kinds. Make sense of what’s new and what’s next by subscribing to the </i><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/?modal=subscribe-ai"><i>AI Decoded newsletter</i></a><i>.</i></p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/siggraph-ai-nv-blog-1280x680-1.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/siggraph-ai-nv-blog-1280x680-1-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Taking AI to Warp Speed: Decoding How NVIDIA’s Latest RTX-Powered Tools and Apps Help Developers Accelerate AI on PCs and Workstations]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Creators to Have Personalized AI Assistants, Meta CEO Mark Zuckerberg Tells NVIDIA CEO Jensen Huang</title>
 		<link>https://blogs.nvidia.com/blog/zuckerberg-huang/</link>
 		
@@ -40,7 +265,7 @@
 <p>“&#8230;just like every business has an email address and a website and a social media account, I think, in the future, every business is going to have an AI,” Zuckerberg responded.</p>
 <p>Zuckerberg has gotten it right before. Huang credited Zuckerberg and Meta with being leaders in AI, even if only some have noticed until recently.</p>
 <p>“You guys have done amazing AI work,” Huang said, citing advancements from Meta in computer vision, language models, real-time translation. “We all use Pytorch, that comes out of Meta.”</p>
-<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/w-cmMcMZoZ4?si=n6m8GTto3u69RW1_" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br />
+<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/w-cmMcMZoZ4?si=n6m8GTto3u69RW1_" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><br />
 <b>The Importance of Open Source in Advancing AI</b><b><br />
 </b><br />
 Zuckerberg highlighted the importance of open source in advancing AI — with the two business leaders emphasizing the importance of open platforms for innovation. <b><br />
@@ -102,7 +327,7 @@ Meta has rapidly emerged as a leader in AI, putting it to work throughout its bu
 <p>“Everybody will have an AI assistant,” Huang said. “Every single company, every single job within the company, will have AI assistance.”</p>
 <p>But even as generative AI promises to amplify human productivity, Huang said the accelerated computing technology that underpins it promises to make computing more energy efficient.</p>
 <p>“Accelerated computing helps you save so much energy, 20 times, 50 times, and doing the same processing,” Huang said. “The first thing we have to do, as a society, is accelerate every application we can: this reduces the amount of energy being used all over the world.”</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1.png"><img fetchpriority="high" decoding="async" class="alignnone size-large wp-image-73389" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1.png"><img loading="lazy" decoding="async" class="alignnone size-large wp-image-73389" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_A0151-blog-press-1280x680-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>The conversation follows a spate of announcements from NVIDIA today.</p>
 <p><a href="https://nvidianews.nvidia.com/news/nvidia-announces-generative-ai-models-and-nim-microservices-for-openusd" target="_blank" rel="noopener">NVIDIA introduced a new suite of NIM microservices</a> tailored for diverse workflows, including OpenUSD, 3D modeling, physics, materials, robotics, industrial digital twins and physical AI.<br />
 These advancements aim to enhance developer capabilities, particularly with the <a href="https://blogs.nvidia.com/blog/hugging-face-inference-nim-microservices-dgx-cloud/" target="_blank" rel="noopener">integration of Hugging Face Inference-as-a-Service on DGX Cloud</a>.</p>
@@ -116,7 +341,7 @@ These advancements aim to enhance developer capabilities, particularly with the 
 <p>“Just about every industry is going to be affected by this, whether it’s scientific computing trying to do a better job predicting the weather with a lot less energy, to augmenting and collaborating with creators to generate images, or generating virtual scenes for industrial visualization,” Huang said. “Robotic self-driving cars are all going to be transformed by generative AI.”</p>
 <p>Likewise, <a href="https://www.nvidia.com/en-us/omniverse/" target="_blank" rel="noopener">NVIDIA Omniverse systems</a> — built around the OpenUSD standard — will also be key to harnessing generative AI to create assets that the world’s largest brands can use.</p>
 <p>By pulling from brand assets that live in Omniverse, which can capture brand assets, these systems can capture and replicate carefully curated brand magic.</p>
-<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1.png"><img decoding="async" class="alignnone size-large wp-image-73392" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
+<p><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1.png"><img loading="lazy" decoding="async" class="alignnone size-large wp-image-73392" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-672x357.png" alt="" width="672" height="357" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-672x357.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-400x213.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-768x408.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-842x447.png 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-406x215.png 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1-188x100.png 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/PJ_B0494-blog-press-1280x680-1.png 1280w" sizes="(max-width: 672px) 100vw, 672px" /></a></p>
 <p>Finally, all these systems — visual computing, simulation and large-language models — will come together to create digital humans who can help people interact with digital systems of all kinds.</p>
 <p>“One of the things that we’re announcing here this week is the concept of digital agents, digital AIs that will augment every single job in the company,” Huang said.</p>
 <p>“And so one of the most important use cases that people are discovering is customer service,” Huang said. “In the future, my guess is that it’s going to be human still, but AI in the loop.”</p>
@@ -1092,186 +1317,6 @@ These advancements aim to enhance developer capabilities, particularly with the 
 			height="450"
 			/>
 			<media:title type="html"><![CDATA[Sustainable Strides: How AI and Accelerated Computing Are Driving Energy Efficiency]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Byte-Sized Courses: NVIDIA Offers Self-Paced Career Development in AI and Data Science</title>
-		<link>https://blogs.nvidia.com/blog/ai-data-science-career-development/</link>
-		
-		<dc:creator><![CDATA[Andy Bui]]></dc:creator>
-		<pubDate>Fri, 19 Jul 2024 16:00:14 +0000</pubDate>
-				<category><![CDATA[Corporate]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Deep Learning Institute]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73041</guid>
-
-					<description><![CDATA[AI has seen unprecedented growth — spurring the need for new training and education resources for students and industry professionals. NVIDIA’s latest on-demand webinar, Essential Training and Tips to Accelerate Your Career in AI, featured a panel discussion with industry experts on fostering career growth and learning in AI and other advanced technologies. Over 1,800	<a class="read-more" href="https://blogs.nvidia.com/blog/ai-data-science-career-development/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>AI has seen unprecedented growth — spurring the need for new training and education resources for students and industry professionals.</p>
-<p>NVIDIA’s latest on-demand webinar, <a href="https://nvidia.com/en-us/on-demand/session/other2024-aicareer" target="_blank" rel="noopener">Essential Training and Tips to Accelerate Your Career in AI</a>, featured a panel discussion with industry experts on fostering career growth and learning in AI and other advanced technologies.</p>
-<p>Over 1,800 attendees gained insights on how to kick-start their careers and use NVIDIA’s technologies and resources to accelerate their professional development.</p>
-<h2><b>Opportunities in AI</b></h2>
-<p>AI’s impact is touching nearly every industry, presenting new career opportunities for professionals of all backgrounds.</p>
-<p>Lauren Silveira, a university recruiting program manager at NVIDIA, challenged attendees to take their unique education and experience and apply it in the AI field.</p>
-<p>“You don’t have to work directly in AI to impact the industry,” said Silveira. “I knew I wouldn’t be a doctor or engineer — that wasn’t in my career path — but I could create opportunities for those that wanted to pursue those dreams.”</p>
-<p>Kevin McFall, a principal instructor for the <a href="https://learn.nvidia.com/" target="_blank" rel="noopener">NVIDIA Deep Learning Institute</a>, offered some advice for those looking to navigate a career in AI and advanced technologies but finding themselves overwhelmed or unsure of where to start.</p>
-<p>“Don’t try to do it all by yourself,” he said. “Don’t get focused on building everything from scratch — the best skill that you can have is being able to take pieces of code or inspiration from different resources and plug them together to make a whole.”</p>
-<p>A main takeaway from the panelists was that students and industry professionals can significantly enhance their capabilities by leveraging tools and resources in addition to their networks.</p>
-<p>Every individual can access a variety of free software development kits, community resources and specialized courses in areas like robotics, CUDA and OpenUSD through the <a href="https://developer.nvidia.com/" target="_blank" rel="noopener">NVIDIA Developer Program</a>. Additionally, they can kick off projects with the <a href="https://developer.nvidia.com/cuda-code-samples" target="_blank" rel="noopener">CUDA code sample library</a> and explore specialized guides such as “<a href="https://developer.nvidia.com/blog/a-simple-guide-to-deploying-generative-ai-with-nvidia-nim/" target="_blank" rel="noopener">A Simple Guide to Deploying Generative AI With NVIDIA NIM</a>”.</p>
-<h2><b>Spinning a Network</b></h2>
-<p>Staying up to date on the rapidly expanding technology industry involves more than just keeping up with the latest education and certifications.</p>
-<p>Sabrina Koumoin, a senior software engineer at NVIDIA, spoke on the importance of networking. She believes people can find like-minded peers and mentors to gain inspiration from by sharing their <a href="https://blogs.nvidia.com/blog/sabrina-koumoin/?dysig_tid=7040046f2624437aa2bf3105f501a6a5" target="_blank" rel="noopener">personal learning journeys</a> or projects on social platforms like LinkedIn.</p>
-<p>A self-taught coder, Koumoin also advocates for active engagement and education accessibility. Outside of work, she hosted multiple coding bootcamps for people looking to break into tech.</p>
-<p>“It’s a way to show that learning technical skills can be engaging, not intimidating,” she said.</p>
-<p>David Ajoku, founder and CEO at Demystifyd and Aware.ai, also emphasized the importance of using LinkedIn to build connections, demonstrate key accomplishments and show passion.</p>
-<p>He outlined a three-step strategy to enhance your LinkedIn presence, designed to help you stand out, gain deeper insights into your preferred companies and boldly share your aspirations and interests:</p>
-<ol>
-<li>Think about a company you’d like to work for and what draws you to it.</li>
-<li>Research thoroughly, focusing on its main activities, mission and goals.</li>
-<li>Be bold — create a series of posts informing your network about your career journey and what advancements interest you in the chosen company.</li>
-</ol>
-<p>One attendee asked about how AI might evolve over the next decade and what skills professionals should focus on to stay relevant. Louis Stewart, head of strategic initiatives at NVIDIA, replied that crafting a personal narrative and growth journey is just as important as ensuring certifications and skills are up to date.</p>
-<p>“Be intentional and purposeful — have an end in mind,” he said. “That’s how you connect with future potential companies and people — it’s a skill you have to develop to stay ahead.”</p>
-<h2><b>Deep Dive Into Learning</b></h2>
-<p>NVIDIA offers a variety of programs and resources to equip the next generation of AI professionals with the skills and training needed to excel in a career in AI.</p>
-<p>NVIDIA’s <a href="https://www.nvidia.com/en-us/learn/ai-learning-essentials/" target="_blank" rel="noopener">AI Learning Essentials</a> is designed to give individuals the knowledge, skills and certifications they need to be prepared for the workforce and the fast moving field of AI. It includes free access to self-paced introductory courses and webinars on topics such as <a href="https://www.nvidia.com/en-us/glossary/generative-ai/" target="_blank" rel="noopener">generative AI</a>, <a href="https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/" target="_blank" rel="noopener">retrieval-augmented generation</a> (RAG) and <a href="https://blogs.nvidia.com/blog/what-is-cuda-2/" target="_blank" rel="noopener">CUDA</a>.</p>
-<p>The <a href="https://www.nvidia.com/en-us/training/" target="_blank" rel="noopener">NVIDIA Deep Learning Institute</a> (DLI) provides a diverse range of resources, including learning materials, self-paced and live trainings, and educator programs spanning AI, accelerated computing and data science, graphics simulation and more. They also offer technical workshops for students currently enrolled in universities.</p>
-<p>DLI provides comprehensive training for generative AI, RAG, <a href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener">NVIDIA NIM inference microservices</a> and large language models. Offerings also include certifications for <a href="https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/" target="_blank" rel="noopener">generative AI LLMs</a> and <a href="https://www.nvidia.com/en-us/learn/certification/generative-ai-multimodal-associate/" target="_blank" rel="noopener">generative AI multimodal</a> that help learners showcase their expertise and stand out from the crowd.</p>
-<p><i>Get started with </i><a href="https://www.nvidia.com/en-us/learn/ai-learning-essentials/" target="_blank" rel="noopener"><i>AI Learning Essentials</i></a><i>, the </i><a href="https://www.nvidia.com/en-us/training/" target="_blank" rel="noopener"><i>NVIDIA Deep Learning Institute</i></a><i> and </i><a href="https://www.nvidia.com/en-us/on-demand/" target="_blank" rel="noopener"><i>on-demand resources</i></a><i>. </i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/IMG_7082-1.jpg"
-			type="image/jpeg"
-			width="1268"
-			height="712"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/IMG_7082-1-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Byte-Sized Courses: NVIDIA Offers Self-Paced Career Development in AI and Data Science]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Magnetic Marvels: NVIDIA&#8217;s Supercomputers Spin a Quantum Tale</title>
-		<link>https://blogs.nvidia.com/blog/quantum-research-gpus/</link>
-		
-		<dc:creator><![CDATA[Esperanza Cuenca Gómez]]></dc:creator>
-		<pubDate>Fri, 19 Jul 2024 15:00:10 +0000</pubDate>
-				<category><![CDATA[Research]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73003</guid>
-
-					<description><![CDATA[Groundbreaking research underlines NVIDIA’s critical role in advancing quantum computing. ]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Research published earlier this month in the science journal <i>Nature </i>used NVIDIA-powered supercomputers to validate a pathway toward the commercialization of <a target="_blank" href="https://www.nvidia.com/en-us/solutions/quantum-computing/">quantum computing</a>.</p>
-<p>The research, led by Nobel laureate Giorgio Parisi and Massimo Bernaschi, director of technology at the National Research Council of Italy and a CUDA Fellow, focuses on quantum annealing, a method that may one day tackle complex optimization problems that are extraordinarily challenging to conventional computers.</p>
-<p>To conduct their research, the team utilized 2 million GPU computing hours at the Leonardo facility (Cineca, in Bologna, Italy), nearly 160,000 GPU computing hours on the Meluxina-GPU cluster, in Luxembourg, and 10,000 GPU hours from the Spanish Supercomputing Network. Additionally, they accessed the Dariah cluster, in Lecce, Italy.</p>
-<p>They used these state-of-the-art resources to simulate the behavior of a certain kind of quantum computing system known as a quantum annealer.</p>
-<p>Quantum computers fundamentally rethink how information is computed to enable entirely new solutions.</p>
-<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/7D1Toq1hhJU?si=ZmKsNJuDWubQujg-" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
-<p>Unlike classical computers, which process information in binary — 0s and 1s — quantum computers use quantum bits or qubits that can allow information to be processed in entirely new ways.</p>
-<p>Quantum annealers are a special type of quantum computer that, though not universally useful, may have advantages for solving certain types of optimization problems.</p>
-<p>The paper, “<a target="_blank" href="https://www.nature.com/articles/s41586-024-07647-y">The Quantum Transition of the Two-Dimensional Ising Spin Glass</a>,” represents a significant step in understanding the phase transition — a change in the properties of a quantum system — of Ising spin glass, a disordered magnetic material in a two-dimensional plane, a critical problem in computational physics.</p>
-<p>The paper addresses the problem of how the properties of magnetic particles arranged in a two-dimensional plane can abruptly change their behavior.</p>
-<p>The study also shows how GPU-powered systems play a key role in developing approaches to quantum computing.</p>
-<p>GPU-accelerated simulations allow researchers to understand the complex systems&#8217; behavior in developing quantum computers, illuminating the most promising paths forward.</p>
-<p>Quantum annealers, like the systems developed by the pioneering quantum computing company D-Wave, operate by methodically decreasing a magnetic field that is applied to a set of magnetically susceptible particles.</p>
-<p>When strong enough, the applied field will act to align the magnetic orientation of the particles — similar to how iron filings will uniformly stand to attention near a bar magnet.</p>
-<p>If the strength of the field is varied slowly enough, the magnetic particles will arrange themselves to minimize the energy of the final arrangement.</p>
-<p>Finding this stable, minimum-energy state is crucial in a particularly complex and disordered magnetic system known as a spin glass since quantum annealers can encode certain kinds of problems into the spin glass’s minimum-energy configuration.</p>
-<p>Finding the stable arrangement of the spin glass then solves the problem.</p>
-<p>Understanding these systems helps scientists develop better algorithms for solving difficult problems by mimicking how nature deals with complexity and disorder.</p>
-<p>That’s crucial for advancing quantum annealing and its applications in solving extremely difficult computational problems that currently have no known efficient solution — problems that are pervasive in fields ranging from logistics to cryptography.</p>
-<p>Unlike gate-model quantum computers, which operate by applying a sequence of quantum gates, quantum annealers allow a quantum system to evolve freely in time.</p>
-<p>This is not a universal computer — a device capable of performing any computation given sufficient time and resources — but may have advantages for solving particular sets of optimization problems in application areas such as vehicle routing, portfolio optimization and protein folding.</p>
-<p>Through extensive simulations performed on NVIDIA GPUs, the researchers learned how key parameters of the spin glasses making up quantum annealers change during their operation, allowing a better understanding of how to use these systems to achieve a quantum speedup on important problems.</p>
-<p>Much of the work for this groundbreaking paper was <a target="_blank" href="https://www.nvidia.com/en-us/on-demand/session/gtc24-s61293/.">first presented</a> at NVIDIA’s GTC 2024 technology conference. <a target="_blank" href="https://www.nature.com/articles/s41586-024-07647-y">Read the full paper</a> and learn more about <a target="_blank" href="https://www.youtube.com/watch?v=7D1Toq1hhJU">NVIDIA’s work in quantum computing</a>.</p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/quantum-computing-press-isc24-pr-1-1920x1080-3282051.jpg"
-			type="image/jpeg"
-			width="1920"
-			height="1080"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/quantum-computing-press-isc24-pr-1-1920x1080-3282051-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Magnetic Marvels: NVIDIA’s Supercomputers Spin a Quantum Tale]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>Mistral AI and NVIDIA Unveil Mistral NeMo 12B, a Cutting-Edge Enterprise AI Model</title>
-		<link>https://blogs.nvidia.com/blog/mistral-nvidia-ai-model/</link>
-		
-		<dc:creator><![CDATA[Kari Briski]]></dc:creator>
-		<pubDate>Thu, 18 Jul 2024 14:00:59 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73008</guid>
-
-					<description><![CDATA[Mistral AI and NVIDIA today released a new state-of-the-art language model, Mistral NeMo 12B, that developers can easily customize and deploy for enterprise applications supporting chatbots, multilingual tasks, coding and summarization. By combining Mistral AI’s expertise in training data with NVIDIA’s optimized hardware and software ecosystem, the Mistral NeMo model offers high performance for diverse	<a class="read-more" href="https://blogs.nvidia.com/blog/mistral-nvidia-ai-model/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Mistral AI and NVIDIA today released a new state-of-the-art language model, <a target="_blank" href="https://mistral.ai/news/mistral-nemo">Mistral NeMo</a> 12B, that developers can easily customize and deploy for enterprise applications supporting chatbots, multilingual tasks, coding and summarization.</p>
-<p>By combining Mistral AI’s expertise in training data with NVIDIA’s optimized hardware and software ecosystem, the Mistral NeMo model offers high performance for diverse applications.</p>
-<p>&#8220;We are fortunate to collaborate with the NVIDIA team, leveraging their top-tier hardware and software,” said Guillaume Lample, cofounder and chief scientist of Mistral AI. “Together, we have developed a model with unprecedented accuracy, flexibility, high-efficiency and enterprise-grade support and security thanks to NVIDIA AI Enterprise deployment.”</p>
-<p>Mistral NeMo was trained on the <a target="_blank" href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a> AI platform, which offers dedicated, scalable access to the latest NVIDIA architecture.</p>
-<p><a target="_blank" href="https://developer.nvidia.com/tensorrt">NVIDIA TensorRT-LLM</a> for accelerated inference performance on large language models and the <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NVIDIA NeMo</a> development platform for building custom generative AI models were also used to advance and optimize the process.</p>
-<p>This collaboration underscores NVIDIA’s commitment to supporting the model-builder ecosystem.</p>
-<h2><b>Delivering Unprecedented Accuracy, Flexibility and Efficiency </b></h2>
-<p>Excelling in multi-turn conversations, math, common sense reasoning, world knowledge and coding, this enterprise-grade AI model delivers precise, reliable performance across diverse tasks.</p>
-<p>With a 128K context length, Mistral NeMo processes extensive and complex information more coherently and accurately, ensuring contextually relevant outputs.</p>
-<p>Released under the Apache 2.0 license, which fosters innovation and supports the broader AI community, Mistral NeMo is a 12-billion-parameter model. Additionally, the model uses the FP8 data format for model inference, which reduces memory size and speeds deployment without any degradation to accuracy.</p>
-<p>That means the model learns tasks better and handles diverse scenarios more effectively, making it ideal for enterprise use cases.</p>
-<p>Mistral NeMo comes packaged as an <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a> inference microservice, offering performance-optimized inference with NVIDIA TensorRT-LLM engines.</p>
-<p>This containerized format allows for easy deployment anywhere, providing enhanced flexibility for various applications.</p>
-<p>As a result, models can be deployed anywhere in minutes, rather than several days.</p>
-<p>NIM features enterprise-grade software that’s part of <a target="_blank" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/">NVIDIA AI Enterprise</a>, with dedicated feature branches, rigorous validation processes, and enterprise-grade security and support.</p>
-<p>It includes comprehensive support, direct access to an NVIDIA AI expert and defined service-level agreements, delivering reliable and consistent performance.</p>
-<p>The open model license allows enterprises to integrate Mistral NeMo into commercial applications seamlessly.</p>
-<p>Designed to fit on the memory of a single NVIDIA L40S, NVIDIA GeForce RTX 4090 or NVIDIA RTX 4500 GPU, the Mistral NeMo NIM offers high efficiency, low compute cost, and enhanced security and privacy.</p>
-<h2><b>Advanced Model Development and Customization </b></h2>
-<p>The combined expertise of Mistral AI and NVIDIA engineers has optimized training and inference for Mistral NeMo.</p>
-<p>Trained with Mistral AI’s expertise, especially on multilinguality, code and multi-turn content, the model benefits from accelerated training on NVIDIA’s full stack.</p>
-<p>It’s designed for optimal performance, utilizing efficient model parallelism techniques, scalability and mixed precision with Megatron-LM.</p>
-<p>The model was trained using<a target="_blank" href="https://github.com/NVIDIA/Megatron-LM"> Megatron-LM</a>, part of NVIDIA <a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">NeMo</a>, with 3,072 H100 80GB Tensor Core GPUs on DGX Cloud, composed of NVIDIA AI architecture, including accelerated computing, network fabric and software to increase training efficiency.</p>
-<h2><b>Availability and Deployment</b></h2>
-<p>With the flexibility to run anywhere — cloud, data center or RTX workstation — Mistral NeMo is ready to revolutionize AI applications across various platforms.</p>
-<p>Experience Mistral NeMo as an NVIDIA NIM today via <a target="_blank" href="http://ai.nvidia.com">ai.nvidia.com</a>, with a downloadable NIM coming soon.</p>
-<p><i>See </i><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fabout-nvidia%2Flegal-info%2F&amp;data=05%7C02%7Clpham%40nvidia.com%7Cd59f2f66f51e4deaac8008dc94b3ef0f%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638548747745016311%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=dm8Os%2B4LtHW2ehZrPaxn38bsutMQBDeUdQuxrIa2y1Y%3D&amp;reserved=0"><i>notice</i></a><i> regarding software product information.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/ngc-corp-blog-community-model-confidential-model-1280x680-2.png"
-			type="image/png"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/ngc-corp-blog-community-model-confidential-model-1280x680-2-842x450.png"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[Mistral AI and NVIDIA Unveil Mistral NeMo 12B, a Cutting-Edge Enterprise AI Model]]></media:title>
 			<media:description type="html"></media:description>
 			</media:content>
 			</item>
