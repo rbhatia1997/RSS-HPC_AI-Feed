@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Wed, 07 Aug 2024 05:29:13 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 08 Aug 2024 16:59:30 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,122 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.5.5</generator>
 	<item>
+		<title>Figure Unveils Next-Gen Conversational Humanoid Robot With 3x AI Computing for Fully Autonomous Tasks</title>
+		<link>https://blogs.nvidia.com/blog/figure-humanoid-robot-autonomous/</link>
+		
+		<dc:creator><![CDATA[Scott Martin]]></dc:creator>
+		<pubDate>Thu, 08 Aug 2024 13:00:07 +0000</pubDate>
+				<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[GPU]]></category>
+		<category><![CDATA[Inception]]></category>
+		<category><![CDATA[NVIDIA Isaac Sim]]></category>
+		<category><![CDATA[Omniverse]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73555</guid>
+
+					<description><![CDATA[Silicon Valley’s Figure has taken the wraps off of its next-generation Figure 02 conversational humanoid robot that taps into NVIDIA Omniverse and NVIDIA GPUs for fully autonomous tasks. Figure said it recently tested Figure 02 for data collection and use-case training at BMW Group’s Spartanburg, South Carolina, production line. Figure 02 comes just 10 months	<a class="read-more" href="https://blogs.nvidia.com/blog/figure-humanoid-robot-autonomous/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Silicon Valley’s Figure has taken the wraps off of its next-generation Figure 02 conversational humanoid robot that taps into <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/">NVIDIA Omniverse</a> and NVIDIA GPUs for fully autonomous tasks.</p>
+<p>Figure said it recently tested Figure 02 for data collection and use-case training at BMW Group’s Spartanburg, South Carolina, production line.</p>
+<p>Figure 02 comes just 10 months after Figure launched the first version of its general-purpose humanoid robot. The company has accelerated its development timeline using <a target="_blank" href="https://developer.nvidia.com/isaac/sim">NVIDIA Isaac Sim</a> — a reference application built on the NVIDIA Omniverse platform — to design, train and test AI-based robots using <a target="_blank" href="https://www.nvidia.com/en-us/use-cases/synthetic-data/">synthetic data</a>, as well as <a target="_blank" href="https://www.nvidia.com/en-us/data-center/h100/">NVIDIA GPUs</a> to train <a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> models.</p>
+<p>“Our rapid progress, marked by advances in speech, vision, dexterity and computational power, brings us closer to delivering humanoid robots to address labor shortages for many industries,” said Brett Adcock, CEO of Figure.</p>
+<p>The company added a second NVIDIA RTX GPU-based module on board Figure 02, which supplies 3x inference gains for handling fully autonomous real-world AI tasks compared with the robot’s first iteration.</p>
+<p><iframe title="Introducing Figure 02" width="500" height="281" src="https://www.youtube.com/embed/0SRVJaOg9Co?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>Figure aims to commercialize industrial humanoid robots to address labor shortages, and it plans to produce consumer versions.</p>
+<p>Founded in 2022, the startup is partnered with OpenAI to develop custom AI models, trained on NVIDIA H100 GPUs, that drive the robots’ conversational AI capabilities. Figure recently raised $675 million in funding from leading technology companies including NVIDIA.</p>
+<p>“Developing autonomous humanoid robots requires the fusion of three computers: NVIDIA DGX for AI training, NVIDIA Omniverse for simulation and NVIDIA Jetson in the robot,” said Deepu Talla, vice president of robotics and edge computing at NVIDIA. “Leading companies, including  Figure, are tapping into the NVIDIA robotics stack, from edge to cloud, to drive innovation in humanoid robotics.”</p>
+<p><iframe title="Advancing Humanoid Robot Development" width="500" height="281" src="https://www.youtube.com/embed/Bhg3uOx9ZPw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2><b>Robotic Hands Capable of Handling Real-World Tasks</b></h2>
+<p>New human-scale hands, six RGB cameras, and perception AI models trained with synthetic data generated in Isaac Sim enable Figure 02 to perform high-precision pick-and-place tasks required for smart manufacturing applications.</p>
+<p>Figure is among the initial members to join the new <a target="_blank" href="https://developer.nvidia.com/humanoid-robot-program/">NVIDIA Humanoid Robot Developer Program</a>, which provides early access to <a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-accelerates-worldwide-humanoid-robotics-development">the latest tools and computing technologies</a> for humanoid robot development. This includes the latest releases of NVIDIA Isaac Sim, <a target="_blank" href="https://isaac-sim.github.io/IsaacLab/">Isaac Lab</a>,<a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-accelerates-worldwide-humanoid-robotics-development"> NIM microservices (RoboCasa and MimicGen)</a>, <a target="_blank" href="https://developer.nvidia.com/osmo">OSMO</a>, <a target="_blank" href="https://nvidianews.nvidia.com/news/foundation-model-isaac-robotics-platform">Jetson Thor</a> and <a target="_blank" href="https://developer.nvidia.com/project-gr00t">Project GR00T</a> general-purpose humanoid foundation models.</p>
+<p>Figure is a member of the <a href="https://www.nvidia.com/startups/?nvid=nv-int-tblg-295718-vt33" target="_blank" rel="noopener">NVIDIA Inception</a> program for cutting-edge startups.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/08/BMW_Factory_View-scaled.jpg"
+			type="image/jpeg"
+			width="2048"
+			height="1152"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/08/BMW_Factory_View-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[Figure Unveils Next-Gen Conversational Humanoid Robot With 3x AI Computing for Fully Autonomous Tasks]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
+		<title>GeForce NOW Celebrates 2,000 Games in the Cloud</title>
+		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-2000-games/</link>
+		
+		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
+		<pubDate>Thu, 08 Aug 2024 13:00:04 +0000</pubDate>
+				<category><![CDATA[Gaming]]></category>
+		<category><![CDATA[Cloud Gaming]]></category>
+		<category><![CDATA[GeForce NOW]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73556</guid>
+
+					<description><![CDATA[Editor&#8217;s note: An earlier version of this article included ‘Warhammer 40:000 Speed Freeks.’ The game will not be available this week. This GFN Thursday marks 2,000 games in the GeForce NOW library, with four new games joining this week, alongside a demo for Square Enix’s Visions of Mana and a new reward for members playing Elder	<a class="read-more" href="https://blogs.nvidia.com/blog/geforce-now-thursday-2000-games/">
+		Read Article		<span data-icon="y"></span>
+	</a>
+	]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><i data-stringify-type="italic">Editor&#8217;s note: An earlier version of this article included ‘Warhammer 40:000 Speed Freeks.</i>’ <i data-stringify-type="italic">The game will not be available this week.</i></p>
+<p>This GFN Thursday marks 2,000 games in the <a target="_blank" href="http://play.geforcenow.com">GeForce NOW</a> library, with four new games joining this week, alongside a demo for Square Enix’s <i>Visions of Mana</i> and a new reward for members playing <i>Elder Scrolls Online.</i></p>
+<p>From epic role-playing games (RPGs) to heart-pounding shooters, the GeForce NOW library offers a variety of adventures for members to dive into anytime, anywhere.</p>
+<p>There’s more to come — the highly anticipated action RPG <i>Black Myth: Wukong</i> from Game Science will soon be available for members to stream when it comes to the cloud at launch on Tuesday, Aug. 20.</p>
+<p>Plus, gamers looking to try GeForce NOW can lock in a one- or six-month Priority or Ultimate membership at half price with the limited-time <a href="https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2024">summer sale</a>.</p>
+<h2><b>More Choices Than a Buffet</b></h2>
+<p>GeForce NOW has achieved the remarkable milestone of over 2,000 games supported in the cloud.</p>
+<p>They’re all playable across devices, including PCs, Macs, <a target="_blank" href="https://www.nvidia.com/en-us/shield/">NVIDIA SHIELD TVs</a>, select Samsung and LG Smart TVs, mobile devices and handheld consoles like the ROG Ally and Steam Deck. Visually stunning games like <i>Cyberpunk 2077</i> and <i>Alan Wake 2 </i>can be played at max settings — all from the comfort of the couch or while on the go.</p>
+<figure id="attachment_73560" aria-describedby="caption-attachment-73560" style="width: 672px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-large wp-image-73560" src="https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-672x378.jpg" alt="2,000 games library on GeForce NOW." width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-672x378.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-400x225.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-768x432.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-1536x865.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-799x450.jpg 799w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-382x215.jpg 382w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-178x100.jpg 178w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-2000_game_library-1280x721.jpg 1280w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-73560" class="wp-caption-text"><em>2,000 reasons to game on.</em></figcaption></figure>
+<p>Thanks to collaborations with renowned publishers like Blizzard, Capcom, Epic Games and Square Enix, as well as indie studios including Coffee Stain Studios, Re-Logic and Team 17, GeForce NOW is opening the door for more gamers to enjoy incredible gaming experiences in new ways, streaming across their favorite devices.</p>
+<p>Since GeForce NOW supports games that members already own, there’s no need to repurchase titles to enjoy them in the cloud. And features like game library-syncing with Steam and Ubisoft Connect make it seamless to jump into gameplay without the hassle of installation or updates.</p>
+<figure id="attachment_73569" aria-describedby="caption-attachment-73569" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-73569 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-672x336.jpg" alt="" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-social-post-2048x1024-no-branding.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-73569" class="wp-caption-text"><em>2,000 games on GeForce NOW.</em></figcaption></figure>
+<p>The GeForce NOW library continues to expand each week with titles from popular digital stores like Battle.net, Epic Games Store, GOG.com, Steam, Ubisoft Connect and Xbox, and supports over 120 PC Game Pass titles — so gear up and game on.</p>
+<h2><b>Khajiit Has Wares … in the Cloud</b></h2>
+<figure id="attachment_73563" aria-describedby="caption-attachment-73563" style="width: 672px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-73563" src="https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-672x336.jpg" alt="ESO member reward on GeForce NOW" width="672" height="336" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/08/GFN_Thursday-Elder_Scrolls_Online_GeForceNOW_Member_Reward.jpg 2048w" sizes="(max-width: 672px) 100vw, 672px" /><figcaption id="caption-attachment-73563" class="wp-caption-text"><em>It’s not just a snack — it’s a statement.</em></figcaption></figure>
+<p>It’s time for a new reward. GeForce NOW members playing <i>Elder Scrolls Online</i> can add a touch of sophistication to their journeys with a free Noble Snack emote, letting their character savor a regal treat in the heart of Tamriel.</p>
+<p>Members who’ve opted in to <a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/rewards/">GeForce NOW’s Rewards program</a> can check their email for instructions on how to redeem the reward. Ultimate and Priority members can redeem the reward today, while free members can claim it starting on Friday, Aug. 9. It’s available through Sunday, Sept. 8 — first come, first served.</p>
+<h2><b>Here Come the Games</b></h2>
+<p><iframe loading="lazy" title="Visions of Mana | Demo Announce Trailer" width="500" height="281" src="https://www.youtube.com/embed/AHIJtLufSsM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>GeForce NOW members can today play a demo of Square Enix’s upcoming action RPG <i>Visions of Mana</i> before it launches in the cloud on Thursday, Aug. 29. Experience snippets of the story, the battles and the game’s focus on elemental powers — hallmarks of the <i>Mana </i>series. Though the title’s bonus items can’t be obtained through the demo in the cloud, members can get the items later by playing the full game when it launches on GeForce NOW.</p>
+<p>Members can also look for the following this week:</p>
+<ul>
+<li><i>Prince of Persia: The Lost Crown</i> (New release on <a target="_blank" href="https://store.steampowered.com/app/2751000?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Aug. 8)</li>
+<li><i>Ratten Reich</i> (New release on <a target="_blank" href="https://store.steampowered.com/app/1717250?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>, Aug. 9)</li>
+<li><i>Nine Sols </i>(<a target="_blank" href="https://store.steampowered.com/app/1809540?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+<li><i>Visions of Mana Demo </i>(<a target="_blank" href="https://store.steampowered.com/app/2490990?utm_source=nvidia&amp;utm_campaign=geforce_now">Steam</a>)</li>
+</ul>
+<p>What are you planning to play this weekend? Let us know on <a target="_blank" href="https://www.twitter.com/nvidiagfn">X</a> or in the comments below.</p>
+]]></content:encoded>
+					
+		
+		
+		
+			<media:content
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-nv-blog-1280x680-no-copy.jpg"
+			type="image/jpeg"
+			width="1280"
+			height="680"
+			>
+			<media:thumbnail
+			url="https://blogs.nvidia.com/wp-content/uploads/2024/08/gfn-thursday-8-8-nv-blog-1280x680-no-copy-842x450.jpg"
+			width="842"
+			height="450"
+			/>
+			<media:title type="html"><![CDATA[GeForce NOW Celebrates 2,000 Games in the Cloud]]></media:title>
+			<media:description type="html"></media:description>
+			</media:content>
+			</item>
+		<item>
 		<title>Recursion CEO Chris Gibson on Accelerating the Biopharmaceutical Industry With AI</title>
 		<link>https://blogs.nvidia.com/blog/recursion-ceo-chris-gibson-on-accelerating-the-biopharmaceutical-industry-with-ai/</link>
 		
@@ -33,7 +149,7 @@
 	</a>
 	]]></description>
 										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Techbio is a field combining data, technology and biology to enhance scientific processes — and AI has the potential to supercharge the biopharmaceutical industry further.  In this episode of NVIDIA’s <a href="https://blogs.nvidia.com/ai-podcast/">AI Podcast</a>, host Noah Kravitz speaks with Chris Gibson, cofounder and CEO of Recursion, about how the company uses AI and machine learning to accelerate drug discovery and development at scale. Tune in to hear Gibson discuss how AI is transforming the biopharmaceutical industry by increasing efficiency and lowering discovery costs.</p>
-<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1879973706%3Fsecret_token%3Ds-aJboDqeJfKE&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
+<p><iframe loading="lazy" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1879973706%3Fsecret_token%3Ds-aJboDqeJfKE&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe></p>
 <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a style="color: #cccccc; text-decoration: none;" title="The AI Podcast" href="https://soundcloud.com/theaipodcast" target="_blank" rel="noopener">The AI Podcast</a> · <a style="color: #cccccc; text-decoration: none;" title="Recursion CEO Chris Gibson on Accelerating the Biopharmaceutical Industry With AI - Ep. 230" href="https://soundcloud.com/theaipodcast/recursion-ceo-chris-gibson/s-aJboDqeJfKE" target="_blank" rel="noopener">Recursion CEO Chris Gibson on Accelerating the Biopharmaceutical Industry With AI &#8211; Ep. 230</a>|</div>
 <h2><b>Time Stamps</b></h2>
 <p>0:58: Background on Recursion<br />
@@ -94,7 +210,7 @@
 <p>AI powered by NVIDIA GPUs is accelerating nearly every industry, creating high demand for graduates, especially from STEM fields, who are proficient in using the technology. Millions of students worldwide are participating in university STEM programs to learn skills that will set them up for career success.</p>
 <p>To prepare students for the future job market, NVIDIA has worked with top universities to develop a GPU-accelerated AI curriculum that’s now taught in more than 5,000 schools globally. Students can get a jumpstart outside of class with NVIDIA’s <a target="_blank" href="https://www.nvidia.com/en-us/learn/ai-learning-essentials/">AI Learning Essentials</a>, a set of resources that equips individuals with the necessary knowledge, skills and certifications for the rapidly evolving AI workforce.</p>
 <p>NVIDIA GPUs — whether running in university data centers, GeForce RTX laptops or NVIDIA RTX workstations — are accelerating studies, helping enhance the learning experience and enabling students to gain hands-on experience with hardware used widely in real-world applications.</p>
-<p><iframe title="Accelerate Your STEM Studies with GeForce RTX 40 Series Laptops" width="500" height="281" src="https://www.youtube.com/embed/qIg-JLI06no?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="Accelerate Your STEM Studies with GeForce RTX 40 Series Laptops" width="500" height="281" src="https://www.youtube.com/embed/qIg-JLI06no?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <h2><b>Supercharged AI Studies</b></h2>
 <p>NVIDIA provides several tools to help students accelerate their studies.</p>
 <p>The <a target="_blank" href="https://developer.nvidia.com/rtx/ai-toolkit">RTX AI Toolkit</a> is a powerful resource for students looking to develop and customize AI models for projects in computer science, data science, and other STEM fields. It allows students to train and fine-tune the latest generative AI models, including Gemma, Llama 3 and Phi 3, up to 30x faster — enabling them to iterate and innovate more efficiently, advancing their studies and research projects.</p>
@@ -111,7 +227,7 @@
 </ul>
 <h2><b>Beyond STEM</b></h2>
 <p>Students, hobbyists and aspiring artists use the <a target="_blank" href="https://www.nvidia.com/en-us/studio/">NVIDIA Studio</a> platform to supercharge their creative processes with RTX and AI. RTX GPUs power creative apps such as Adobe Creative Cloud, Autodesk, Unity and <a target="_blank" href="https://www.nvidia.com/en-us/studio/software/">more</a>, accelerating a variety of processes such as exporting videos and rendering art.</p>
-<p><iframe title="NVIDIA Studio | Your Creative Platform" width="500" height="281" src="https://www.youtube.com/embed/lq7UMMzvZy0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe loading="lazy" title="NVIDIA Studio | Your Creative Platform" width="500" height="281" src="https://www.youtube.com/embed/lq7UMMzvZy0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
 <p><a target="_blank" href="https://www.nvidia.com/en-us/ai-on-rtx/chatrtx/">ChatRTX</a> is a demo app that lets students create a personalized GPT <a target="_blank" href="https://www.nvidia.com/en-us/glossary/large-language-models/#:~:text=Large%20language%20models%20largely%20represent,the%20words%20in%20this%20sentence.">large language model</a> connected to their own content and study materials, including text, images or other data. Powered by advanced AI, ChatRTX functions like a personalized chatbot that can quickly provide students relevant answers to questions based on their connected content. The app runs locally on a Windows RTX PC or workstation, meaning students can get fast, secure results personalized to their needs.</p>
 <figure id="attachment_73536" aria-describedby="caption-attachment-73536" style="width: 672px" class="wp-caption aligncenter"><a href="https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX.jpg"><img loading="lazy" decoding="async" class="size-large wp-image-73536" src="https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-672x442.jpg" alt="" width="672" height="442" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-672x442.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-400x263.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-768x506.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-1536x1011.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-684x450.jpg 684w, https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-327x215.jpg 327w, https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-152x100.jpg 152w, https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX-1280x843.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/08/NVIDIA-ChatRTX.jpg 1999w" sizes="(max-width: 672px) 100vw, 672px" /></a><figcaption id="caption-attachment-73536" class="wp-caption-text">NVIDIA ChatRTX user interface.</figcaption></figure>
 <p>Schools are increasingly adopting remote learning as a teaching modality. <a target="_blank" href="https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/">NVIDIA Broadcast</a> — a free application that delivers professional-level audio and video with AI-powered features on RTX PCs and workstations — integrates seamlessly with remote learning applications including BlueJeans, Discord, Google Meet, Microsoft Teams, Webex and Zoom. It uses AI to enhance remote learning experiences by removing background noise, improving image quality in low-light scenarios, and enabling background blur and background replacement.</p>
@@ -1106,156 +1222,6 @@ These advancements aim to enhance developer capabilities, particularly with the 
 			/>
 			<media:title type="html"><![CDATA[Hugging Face Offers Developers Inference-as-a-Service Powered by NVIDIA NIM]]></media:title>
 			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>AI Gets Physical: New NVIDIA NIM Microservices Bring Generative AI to Digital Environments</title>
-		<link>https://blogs.nvidia.com/blog/generative-physical-ai-nim-microservices/</link>
-		
-		<dc:creator><![CDATA[Adam Scraba]]></dc:creator>
-		<pubDate>Mon, 29 Jul 2024 20:30:23 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[Robotics]]></category>
-		<category><![CDATA[Computer Vision]]></category>
-		<category><![CDATA[Digital Twin]]></category>
-		<category><![CDATA[Industrial and Manufacturing]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<category><![CDATA[Omniverse]]></category>
-		<category><![CDATA[SIGGRAPH 2024]]></category>
-		<category><![CDATA[Smart Spaces]]></category>
-		<category><![CDATA[Synthetic Data Generation]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73301</guid>
-
-					<description><![CDATA[Millions of people already use generative AI to assist in writing and learning. Now, the technology can also help them more effectively navigate the physical world. NVIDIA announced at SIGGRAPH generative physical AI advancements including the NVIDIA Metropolis reference workflow for building interactive visual AI agents and new NVIDIA NIM microservices that will help developers	<a class="read-more" href="https://blogs.nvidia.com/blog/generative-physical-ai-nim-microservices/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Millions of people already use <a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-ai/">generative AI</a> to assist in writing and learning. Now, the technology can also help them more effectively navigate the physical world.</p>
-<p>NVIDIA announced at SIGGRAPH <a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-physical-ai">generative physical AI</a> advancements including the <a target="_blank" href="https://www.nvidia.com/en-us/use-cases/visual-ai-agents/">NVIDIA Metropolis reference workflow</a> for building interactive visual AI agents and new NVIDIA NIM microservices that will help developers train physical machines and improve how they handle complex tasks.</p>
-<p>These include <a href="https://blogs.nvidia.com/blog/fvdb-bigger-digital-models/">three fVDB NIM microservices</a> that support NVIDIA’s new deep learning framework for 3D worlds, as well as the <a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-expands-openusd-to-generative-ai-for-robotics-industrial-digitalization-markets">USD Code, USD Search and USD Validate NIM microservices</a> for working with Universal Scene Description (aka <a target="_blank" href="https://aousd.org/blog/explainer-series-what-is-openusd/">OpenUSD</a>).</p>
-<p>The NVIDIA OpenUSD NIM microservices work together with the world’s first generative AI models for OpenUSD development — also developed by NVIDIA — to enable developers to <a target="_blank" href="https://developer.nvidia.com/blog/integrate-generative-ai-into-openusd-workflows-using-new-nvidia-omniverse-developer-tools/">incorporate generative AI copilots and agents into USD workflows</a> and broaden the possibilities of 3D worlds.</p>
-<h2><b>NVIDIA NIM Microservices Transform Physical AI Landscapes</b></h2>
-<p>Physical AI uses advanced simulations and learning methods to help robots and other industrial automation more effectively perceive, reason and navigate their surroundings. The technology is transforming industries like manufacturing and healthcare, and advancing smart spaces with robots, factory and warehouse technologies, surgical AI agents and cars that can operate more autonomously and precisely.</p>
-<p>NVIDIA offers a broad range of <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NIM microservices</a> customized for specific models and industry domains. NVIDIA’s suite of NIM microservices tailored for physical AI supports capabilities for speech and translation, vision and intelligence, and realistic animation and behavior.</p>
-<h2><b>Turning Visual AI Agents Into Visionaries With NVIDIA NIM</b></h2>
-<p><a target="_blank" href="https://www.nvidia.com/en-us/use-cases/visual-ai-agents/">Visual AI agents</a> use computer vision capabilities to perceive and interact with the physical world and perform reasoning tasks.</p>
-<p>Highly perceptive and interactive visual AI agents are powered by a new class of generative AI models called <a target="_blank" href="https://build.nvidia.com/explore/vision">vision language models (VLMs)</a>, which bridge digital perception and real-world interaction in physical AI workloads to enable enhanced decision-making, accuracy, interactivity and performance. With VLMs, developers can build vision AI agents that can more effectively handle challenging tasks, even in complex environments.</p>
-<p>Generative AI-powered visual AI agents are rapidly being deployed across hospitals, factories, warehouses, retail stores, airports, traffic intersections and more.</p>
-<p>To help physical AI developers more easily build high-performing, custom visual AI agents, NVIDIA offers NIM microservices and reference workflows for physical AI. The NVIDIA Metropolis reference workflow provides a simple, structured approach for customizing, building and deploying visual AI agents, as detailed in <a target="_blank" href="https://developer.nvidia.com/blog/build-vlm-powered-visual-ai-agents-using-nvidia-nim-and-nvidia-via-microservices/">the blog</a>.</p>
-<h2><b>NVIDIA NIM Helps</b><b> K2K </b><b>Make Palermo More Efficient, Safe and Secure</b></h2>
-<p>City traffic managers in Palermo, Italy, deployed visual AI agents using NVIDIA NIM to uncover physical insights that help them better manage roadways.</p>
-<p>K2K, an <a target="_blank" href="https://nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/">NVIDIA Metropolis</a> partner, is leading the effort, integrating NVIDIA NIM microservices and VLMs into AI agents that analyze the city’s live traffic cameras in real time. City officials can ask the agents questions in natural language and receive fast, accurate insights on street activity and suggestions on how to improve the city’s operations, like adjusting traffic light timing.</p>
-<p><img loading="lazy" decoding="async" class="alignnone wp-image-73295 size-large" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-672x378.png" alt="" width="672" height="378" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-672x378.png 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-400x225.png 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-768x432.png 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-1536x864.png 1536w, https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-800x450.png 800w, https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-382x215.png 382w, https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-178x100.png 178w, https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui-1280x720.png 1280w, https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceui.png 1600w" sizes="(max-width: 672px) 100vw, 672px" /></p>
-<p>Leading global electronics giants <a href="https://blogs.nvidia.com/blog/foxconn-digital-twin-ai/">Foxconn</a> and <a href="https://blogs.nvidia.com/blog/computex-metropolis-nim/">Pegatron</a> have adopted physical AI, NIM microservices and Metropolis reference workflows to more efficiently design and run their massive manufacturing operations.</p>
-<p>The companies are building <a target="_blank" href="https://www.nvidia.com/en-us/use-cases/ai-for-virtual-factory-solutions/">virtual factories</a> in simulation to save significant time and costs. They’re also running more thorough tests and refinements for their physical AI — including AI multi-camera and visual AI agents — in digital twins before real-world deployment, improving worker safety and leading to operational efficiencies.</p>
-<h2><b>Bridging the Simulation-to-Reality Gap With Synthetic Data Generation</b></h2>
-<p>Many AI-driven businesses are now adopting a “simulation-first” approach for generative physical AI projects involving real-world industrial automation.</p>
-<p>Manufacturing, factory logistics and robotics companies need to manage intricate human-worker interactions, advanced facilities and expensive equipment. NVIDIA physical AI software, tools and platforms — including physical AI and VLM NIM microservices, reference workflows and <a target="_blank" href="https://developer.nvidia.com/fVDB">fVDB</a> — can help them streamline the highly complex engineering required to create digital representations or virtual environments that accurately mimic real-world conditions.</p>
-<p>VLMs are seeing widespread adoption across industries because of their ability to generate highly realistic imagery. However, these models can be challenging to train because of the immense volume of data required to create an accurate physical AI model.</p>
-<p><a href="https://blogs.nvidia.com/blog/what-is-synthetic-data/">Synthetic data</a> generated from <a target="_blank" href="https://www.nvidia.com/en-us/omniverse/solutions/digital-twins/">digital twins</a> using computer simulations offers a powerful alternative to real-world datasets, which can be expensive — and sometimes impossible — to acquire for model training, depending on the use case.</p>
-<p>Tools like NVIDIA NIM microservices and <a target="_blank" href="https://docs.omniverse.nvidia.com/extensions/latest/ext_replicator.html">Omniverse Replicator</a> let developers <a target="_blank" href="https://developer.nvidia.com/blog/how-to-build-a-generative-ai-enabled-synthetic-data-pipeline-with-openusd/">build generative AI-enabled synthetic data pipelines</a> to accelerate the creation of robust, diverse datasets for training physical AI. This enhances the adaptability and performance of models such as VLMs, enabling them to generalize more effectively across industries and use cases.</p>
-<h2><b>Availability</b></h2>
-<p>Developers can access state-of-the-art, open and NVIDIA-built foundation AI models and NIM microservices at <a target="_blank" href="http://ai.nvidia.com">ai.nvidia.com</a>. The Metropolis NIM reference workflow is available in the <a target="_blank" href="https://github.com/NVIDIA/metropolis-nim-workflows/tree/main">GitHub repository</a>, and Metropolis VIA microservices are available for download in <a target="_blank" href="https://developer.nvidia.com/visual-insight-agent-early-access">developer preview</a>.</p>
-<p>OpenUSD NIM microservices are available in preview through the <a target="_blank" href="http://ai.nvidia.com">NVIDIA API catalog</a>.</p>
-<p>Watch how accelerated computing and generative AI are transforming industries and creating new opportunities for innovation and growth in NVIDIA founder and CEO Jensen Huang’s <a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/">fireside chats</a> at SIGGRAPH.</p>
-<p><i>See </i><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.nvidia.com%2Fen-us%2Fabout-nvidia%2Flegal-info%2F&amp;data=05%7C02%7Clpham%40nvidia.com%7Cd59f2f66f51e4deaac8008dc94b3ef0f%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C638548747745016311%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=dm8Os%2B4LtHW2ehZrPaxn38bsutMQBDeUdQuxrIa2y1Y%3D&amp;reserved=0"><i>notice</i></a><i> regarding software product information.</i></p>
-]]></content:encoded>
-					
-		
-		
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceblog.jpg"
-			type="image/jpeg"
-			width="1280"
-			height="680"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/physicalaimicroserviceblog-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[AI Gets Physical: New NVIDIA NIM Microservices Bring Generative AI to Digital Environments]]></media:title>
-			<media:description type="html"></media:description>
-			</media:content>
-			</item>
-		<item>
-		<title>For Your Edification: Shutterstock Releases Generative 3D, Getty Images Upgrades Service Powered by NVIDIA</title>
-		<link>https://blogs.nvidia.com/blog/edify-shutterstock-getty-images/</link>
-		
-		<dc:creator><![CDATA[Gerardo Delgado]]></dc:creator>
-		<pubDate>Mon, 29 Jul 2024 20:30:04 +0000</pubDate>
-				<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[3D]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Creators]]></category>
-		<category><![CDATA[Customer Stories]]></category>
-		<category><![CDATA[DGX Cloud]]></category>
-		<category><![CDATA[Events]]></category>
-		<category><![CDATA[Machine Learning]]></category>
-		<category><![CDATA[NVIDIA NIM]]></category>
-		<category><![CDATA[SIGGRAPH 2024]]></category>
-		<category><![CDATA[Simulation and Design]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=73113</guid>
-
-					<description><![CDATA[Designers and artists have new and improved ways to boost their productivity with generative AI trained on licensed data. Shutterstock, a leading platform for creative content, launched its Generative 3D service in commercial beta. It lets creators quickly prototype 3D assets and generate 360 HDRi backgrounds that light scenes, using just text or image prompts.	<a class="read-more" href="https://blogs.nvidia.com/blog/edify-shutterstock-getty-images/">
-		Read Article		<span data-icon="y"></span>
-	</a>
-	]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p>Designers and artists have new and improved ways to boost their productivity with generative AI trained on licensed data.</p>
-<p>Shutterstock, a leading platform for creative content, launched its <a target="_blank" href="https://www.shutterstock.com/discover/generative-ai-3d">Generative 3D service</a> in commercial beta. It lets creators quickly prototype 3D assets and generate 360 HDRi backgrounds that light scenes, using just text or image prompts.</p>
-<p>Getty Images, a premier visual content creator and marketplace, turbocharged its <a target="_blank" href="https://www.gettyimages.com/ai/generation/about">Generative AI by Getty Images</a> service so it creates images twice as fast, improves output quality, brings advanced controls and enables fine-tuning.</p>
-<p>The services are built with NVIDIA’s visual AI foundry using <a target="_blank" href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">NVIDIA Edify</a>, a multimodal generative AI architecture. The AI models are then optimized and packaged for maximum performance with <a target="_blank" href="https://www.nvidia.com/en-us/ai/">NVIDIA NIM</a>, a set of accelerated microservices for AI inference.</p>
-<p>Edify enables service providers to train responsible generative models on their licensed data and scale them quickly with <a target="_blank" href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>, the cloud-first way to get the best of NVIDIA AI.</p>
-<h2><b>Generative AI Speeds 3D Modeling</b></h2>
-<p>Available now for enterprises in commercial beta, Shutterstock’s service lets designers and artists quickly create 3D objects that help them prototype or populate virtual environments. For example, tapping generative AI, they can quickly create the silverware and plates on a dining room table so they can focus on designing the characters around it.</p>
-<p>The 3D assets the service generates are ready to edit using digital content creation tools, and available in a variety of popular file formats. Their clean geometry and layout gives artists an advanced starting point for adding their own flair.</p>
-<div class="mceTemp"></div>
-<figure id="attachment_73330" aria-describedby="caption-attachment-73330" style="width: 1080px" class="wp-caption alignnone"><img loading="lazy" decoding="async" class="wp-image-73330 size-full" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/chairmesh.gif" alt="" width="1080" height="608" /><figcaption id="caption-attachment-73330" class="wp-caption-text">An example of a 3D mesh from Shutterstock Generative 3D.</figcaption></figure>
-<p>The AI model first delivers a preview of a single asset in as little as 10 seconds. If users like it, the preview can be turned into a higher-quality 3D asset, complete with physically based rendering materials like concrete, wood or leather.</p>
-<p>At this year’s <a target="_blank" href="https://s2024.siggraph.org/">SIGGRAPH</a> computer graphics conference, designers will see just how fast they can make their ideas come to life.</p>
-<p>Shutterstock will demo a workflow in Blender that lets artists generate objects directly within their 3D environment. In the Shutterstock booth at SIGGRAPH, HP will show 3D prints and physical prototypes of the kinds of assets attendees can design on the show floor using Generative 3D.</p>
-<p>Shutterstock is also working with global marketing and communications services company <a target="_blank" href="https://www.nvidia.com/en-us/industries/media-and-entertainment/wpp/">WPP</a> to bring ideas to life with Edify 3D generation for virtual production (see video below).</p>
-<p><iframe loading="lazy" title="NVIDIA Shutterstock Gen3D" src="https://player.vimeo.com/video/983328464?h=2a6e6255af&amp;dnt=1&amp;app_id=122963" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"></iframe></p>
-<p>Explore Generative 3D by Shutterstock on the company’s <a target="_blank" href="https://www.shutterstock.com/discover/generative-ai-3d">website</a>, or test-drive the application programming interface (API) at <a target="_blank" href="https://build.nvidia.com/shutterstock/edify-3d">build.nvidia.com</a>.</p>
-<h2><b>Virtual Lighting Gets Real</b></h2>
-<p>Lighting a virtual scene with accurate reflections can be a complicated task. Creatives need to operate expensive 360-degree camera rigs and go on set to create backgrounds from scratch, or search vast libraries for something that approximates what they want.</p>
-<p>With Shutterstock’s Generative 3D service, users can now simply describe the exact environment they need in text or with an image, and out comes a high-dynamic-range panoramic image, aka 360 HDRi, in brilliant 16K resolution. (See video below.)</p>
-<div style="width: 960px;" class="wp-video"><video class="wp-video-shortcode" id="video-73113-4" width="960" height="540" loop="1" autoplay="1" preload="metadata" controls="controls"><source type="video/mp4" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/3_HDRi_SD_30fps_fast.mp4?_=4" /><a href="https://blogs.nvidia.com/wp-content/uploads/2024/07/3_HDRi_SD_30fps_fast.mp4">https://blogs.nvidia.com/wp-content/uploads/2024/07/3_HDRi_SD_30fps_fast.mp4</a></video></div>
-<p>Want that beautiful new sports car shown in a desert, a tropical beach or maybe on a winding mountain road? With generative AI, designers can shift gears fast.</p>
-<p>Three companies plan to integrate Shutterstock’s 360 HDRi APIs directly into their workflows — WPP, CGI studio Katana and Dassault Systèmes, developer of the 3DEXCITE applications for creating high-end visualizations and 3D content for virtual worlds.</p>
-<figure id="attachment_73327" aria-describedby="caption-attachment-73327" style="width: 1400px" class="wp-caption alignnone"><img loading="lazy" decoding="async" class="size-full wp-image-73327" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/genaibygettyimages.gif" alt="" width="1400" height="700" /><figcaption id="caption-attachment-73327" class="wp-caption-text">Examples from Generative AI by Getty Images.</figcaption></figure>
-<h2><b>Great Images Get a Custom Fit</b></h2>
-<p>Generative AI by Getty Images has upgraded to a more powerful Edify AI model with a portfolio of new features that let artists control image composition and style.</p>
-<p>Want a red beach ball floating above that perfect shot of a coral reef in Fiji? Getty Images’ service can get it done in a snap.</p>
-<p>The new model is twice as fast, boosts image quality and prompt accuracy, and lets users control camera settings like the depth of field or focal length of a shot. Users can generate four images in about six seconds and scale them up to 4K resolution.</p>
-<figure id="attachment_73324" aria-describedby="caption-attachment-73324" style="width: 1400px" class="wp-caption alignnone"><img loading="lazy" decoding="async" class="size-full wp-image-73324" src="https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls.jpg" alt="An example of the camera controls in Generative AI by Getty Images." width="1400" height="700" srcset="https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls.jpg 1400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls-400x200.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls-672x336.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls-768x384.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls-842x421.jpg 842w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls-406x203.jpg 406w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls-188x94.jpg 188w, https://blogs.nvidia.com/wp-content/uploads/2024/07/Gen-AI-by-Getty-Images-2-camera-controls-1280x640.jpg 1280w" sizes="(max-width: 1400px) 100vw, 1400px" /><figcaption id="caption-attachment-73324" class="wp-caption-text">An example of the camera controls in Generative AI by Getty Images.</figcaption></figure>
-<p>In addition, the commercially safe <a href="https://blogs.nvidia.com/blog/what-are-foundation-models/">foundational model</a> now serves as the basis for a fine-tuning capability that lets companies customize the AI with their own data. That lets them generate images tailored to the creative style of their specific brands.</p>
-<p>New controls in the service support the use of a sketch or depth map to guide the composition or structure of an image.</p>
-<p>Creatives at Omnicom, a global leader in marketing and sales solutions, are using Getty Images’ service to streamline advertising workflows and safely create on-brand content. The collaboration with Getty Images is part of Omnicom’s strategy to infuse generative AI into every facet of its business, helping teams move from ideas to outcomes faster.</p>
-<p>Generative AI by Getty Images is available through the <a target="_blank" href="https://www.gettyimages.com/">Getty Images </a>and <a target="_blank" href="https://www.istockphoto.com/">iStock</a> websites, and <a target="_blank" href="https://www.gettyimages.com/enterprise/contact-sales?form=GI_NVIDIAStrategicParnership">via an API</a>.</p>
-<p>For more about NVIDIA’s offerings, read about the <a target="_blank" href="https://www.nvidia.com/en-us/gpu-cloud/picasso/">AI foundry</a> for visual generative AI built on <a target="_blank" href="https://www.nvidia.com/en-us/data-center/dgx-cloud/">NVIDIA DGX Cloud</a>, and try it on <a target="_blank" href="https://build.nvidia.com/explore/visual-design">ai.nvidia.com</a>.</p>
-<p>To get the big picture, listen to NVIDIA founder and CEO Jensen Huang in two <a target="_blank" href="https://www.nvidia.com/en-us/events/siggraph/">fireside chats</a> at SIGGRAPH.</p>
-<p><i>See </i><a target="_blank" href="https://www.nvidia.com/en-eu/about-nvidia/terms-of-service/"><i>notice</i></a><i> regarding software product information.</i></p>
-]]></content:encoded>
-					
-		
-		<enclosure url="https://blogs.nvidia.com/wp-content/uploads/2024/07/3_HDRi_SD_30fps_fast.mp4" length="9811620" type="video/mp4" />
-
-		
-			<media:content
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Key-visual-of-Shutterstock-Getty-Images-Gen-AI-servcies.jpg"
-			type="image/jpeg"
-			width="1920"
-			height="1028"
-			>
-			<media:thumbnail
-			url="https://blogs.nvidia.com/wp-content/uploads/2024/07/Key-visual-of-Shutterstock-Getty-Images-Gen-AI-servcies-842x450.jpg"
-			width="842"
-			height="450"
-			/>
-			<media:title type="html"><![CDATA[For Your Edification: Shutterstock Releases Generative 3D, Getty Images Upgrades Service Powered by NVIDIA]]></media:title>
-			<media:description type="html">Image of generative AI services from Shutterstock and Getty Images</media:description>
 			</media:content>
 			</item>
 	</channel>
